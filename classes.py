@@ -34,7 +34,7 @@ def import_pickle() -> list:
             return players
     except FileNotFoundError:
         print('No pickle file found. Creating a new one.')
-        players = {}
+        players = []
         return players
     
 def export_pickle(players):
@@ -44,9 +44,13 @@ def export_pickle(players):
 
 players = import_pickle()
 
-# We'll attempt to import soft reserve data from the CSV file. 
-with open("soft-reserves.csv", "r") as sr_file: 
-    sr_data = sr_file.readlines()
+# We'll attempt to import soft reserve data from the CSV file. If no such CSV file exists, then we'll print out an error message and exit. 
+try:
+    with open("soft_reserves.csv", "r") as f: 
+        sr_data = f.readlines()
+except FileNotFoundError:
+    print("No soft reserve data found. Please go to our soft-reserve list [https://softres.it/raid/xceyr2], and export it as a CSV file, called \'soft_reserves.csv\'.")
+    exit()
 
 # Parse the data. 
 for soft_res in sr_data: 
@@ -76,7 +80,7 @@ for soft_res in sr_data:
             break
     
     if not player_exists: 
-        # Create a new player object.
+        # Create a new player object and append it the list. 
         players.append(Player(name, pclass, spec, []))
         current_player = players[-1]
 
@@ -130,8 +134,7 @@ def award_loot(item_name, player_name, roll_type):
             return
         
     # If we get here, the player wasn't found in the list of players.
-    print("Player not found.")
-    return
+    print("Player not found. Please create the player manually before trying again.")
 
 def export_loot(): 
     """
@@ -174,3 +177,51 @@ def export_loot():
 
         # Print a newline.
         print()
+
+import requests
+url = "https://www.wowhead.com/wotlk/zone=4273/ulduar#drops;mode:n25"
+
+# Get the HTML from the URL, and then write it to a file, called "ulduar.html". Ignore all errors. 
+html = requests.get(url).text
+
+# Parse the data. 
+# Example string: 
+# "level":238,"name":"Rising Sun","quality":4
+# We want to extract the level, the name, and the quality. 
+
+import re
+
+# Create a list to store the items.
+all_items = []
+
+# Open the file, and read it line by line.
+with open("ulduar.html", "r", errors="ignore") as f:
+    # use a regular expression to search for the name of each item, using re.findall(). 
+    pattern = r'"level":(\d+),"name":"(.+?)","quality":(\d+)'
+    matches = re.findall(pattern, f.read())
+
+    # Add each item to the list of items, but only if the level is >= 80 and the quality is 4 or higher (epic and legendary).
+    for m in matches:
+        if int(m[0]) >= 80 and int(m[2]) >= 4:
+            all_items.append(m[1])
+
+# We'll print out the list of items, to make sure it worked.
+for i in all_items:
+    print(i)
+
+# Main loop.
+while(__name__ == "__main__"): 
+    break
+
+    print("Asylum of the Immortals Loot Tracker")
+    print("1) Award loot")
+    print("2) Manually add a new player")
+    print("3) Clear ALL plusses")
+    print("4) Log a trade")
+    print("5) Export loot")
+    print("6) Exit")
+    
+    try: sel = int(input("Select an option: "))
+    except: sel = 0 
+    
+    print("")
