@@ -151,6 +151,10 @@ def award_loot(item_name, player_name, roll_type):
                 # Add a plus to the player's soft-reserve plusses.
                 p._soft_reserve_plusses += 1
 
+            elif roll_type.lower() == "etc" or roll_type.lower() == "other":
+                # Add this to the log, using the Log class.
+                p._log.append(Log(player_name, item_name, "ETC"))
+
             else:
                 print("Invalid roll type.")
                 
@@ -193,6 +197,10 @@ def export_loot():
             if l.roll == "SR":
                 print(f"- {l.item} (SR)")
 
+        for l in p._log: 
+            if l.roll == "ETC": 
+                print(f"- {l.item} (ETC)")
+
 url = "https://www.wowhead.com/wotlk/zone=4273/ulduar#drops;mode:n25"
 
 
@@ -211,20 +219,26 @@ else:
 
 # Parse the data. 
 # Example string: 
-# "level":238,"name":"Rising Sun","quality":4
-# We want to extract the level, the name, and the quality. 
+# "name":"Rising Sun","quality":4
+# We want to extract the name and the quality. 
 
 # Create a list to store the items.
 all_items = []
 
 # use a regular expression to search for the name of each item, using re.findall(). 
-pattern = r'"level":(\d+),"name":"(.+?)","quality":(\d+)'
+pattern = r'"name":"(.+?)","quality":(\d+)'
 matches = re.findall(pattern, html)
 
 # Add each item to the list of items, but only if the level is >= 80 and the quality is 4 or higher (epic and legendary).
 for m in matches:
-    if int(m[0]) >= 80 and int(m[2]) >= 4:
-        all_items.append(m[1])
+    if int(m[1]) >= 4:
+        all_items.append(m[0])
+
+# If the debug flag is set, write the list of items to a file.
+if args.debug:
+    with open("debug-items.txt", "w") as f:
+        for i in all_items:
+            f.write(i + "\n")
 
 # Main loop.
 while(True): 
@@ -245,12 +259,7 @@ while(True):
 
     if sel == 1: 
         item_name = input("Enter the name of the item to be awarded. Partial matching and case insensitivity are supported: ")
-        player_name = input("Enter the name of the player to be awarded the item. Partial matching and case insensitivity are supported: ")
-        offspec = input("Is this an off-spec item? (y/n): ")
-
-        # If any of the given fields are empty, do nothing and continue. 
-        if item_name == "" or player_name == "" or offspec == "":
-            continue
+        if item_name == "": continue
 
         print("")
 
@@ -288,7 +297,8 @@ while(True):
                 print("Invalid selection.")
                 continue
 
-        print()
+        player_name = input("Enter the name of the player to be awarded the item. Partial matching and case insensitivity are supported: ")
+        if player_name == "": continue
 
         # Go through the list of players and check if there is a matching player. If so, print out the player's name.
         # If there are no matches, print out an error message.
@@ -325,18 +335,26 @@ while(True):
                 print("Invalid selection.")
                 continue
 
-        print()
-
         # At this point, we've got the item name and the player name.
         # We'll get the player object from the list of players.
         for p in players:
             if p.name == player_name:
                 player_name = p
 
+        # We'll check if this item is a pattern, or the Fragment of Val'anyr. If so, we'll call award_loot with the loot type set to "ETC".
+        # It's a pattern if it starts with "Plans: ", "Schematic: ", "Pattern: ", or "Formula: ".
+        # It's the Fragment of Val'anyr if it's "Fragment of Val'anyr".
+        if item_name.startswith("Plans: ") or item_name.startswith("Schematic: ") or item_name.startswith("Pattern: ") or item_name.startswith("Formula: ") or item_name == "Fragment of Val'anyr":
+            award_loot(item_name, player_name.name, "ETC")
+            print(f"{player_name.name} has been awarded {item_name} as an ETC item.")
+            continue
+
         # First, we'll check if this is an off-spec item. If so, we'll call award_loot with the loot type set to "OS". 
+        offspec = input("Is this an off-spec item? (y/n): ")
         if offspec.lower() == "y":
             award_loot(item_name, player_name.name, "OS")
             print(f"{player_name.name} has been awarded {item_name} as an off-spec item.")
+
         else:
             # If not, we'll check the corresponding soft-reserve list to see if the player has soft-reserved the item.
             # If so, we'll call award_loot with the loot type set to "SR".
@@ -365,7 +383,7 @@ while(True):
         # If not, create a new player object and add it to the list of players.
         players.append(Player(new_player, []))
         print(f"{new_player} has been added to the list of players.")
-        
+
     elif sel == 3: 
         # Ask for confirmation, as this is irreversible.
         confirm = input("Are you sure you want to clear ALL plusses? This is irreversible. (y/n): ")
