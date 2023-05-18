@@ -3,6 +3,7 @@ from typing import List,Union
 import requests
 import re
 import argparse
+import os
 
 parser = argparse.ArgumentParser()
 
@@ -196,13 +197,21 @@ def export_loot():
             if l.roll == "SR":
                 print(f"- {l.item} (SR)")
 
-        # Print a newline.
-        print()
-
 url = "https://www.wowhead.com/wotlk/zone=4273/ulduar#drops;mode:n25"
 
-# Get the HTML from the URL 
-html = requests.get(url).text
+
+# If the file called "ulduar.html" exists, read it. Otherwise, access the site and download it. 
+# Ignore errors. 
+if not os.path.exists("ulduar.html") or os.path.getsize("ulduar.html") == 0 or args.force_new:
+    # Get the HTML from the URL 
+    html = requests.get(url).text
+
+    with open("ulduar.html", "w", errors="ignore") as f:
+        f.write(html)
+
+else:
+    with open("ulduar.html", "r", errors="ignore") as f:
+        html = f.read()
 
 # Parse the data. 
 # Example string: 
@@ -221,11 +230,10 @@ for m in matches:
     if int(m[0]) >= 80 and int(m[2]) >= 4:
         all_items.append(m[1])
 
-print("")
-
 # Main loop.
 while(True): 
     export_pickle(players)
+    print("")
     print("Asylum of the Immortals Loot Tracker")
     print("1) Award loot")
     print("2) Manually add a new player")
@@ -243,6 +251,10 @@ while(True):
         item_name = input("Enter the name of the item to be awarded. Partial matching and case insensitivity are supported: ")
         player_name = input("Enter the name of the player to be awarded the item. Partial matching and case insensitivity are supported: ")
         offspec = input("Is this an off-spec item? (y/n): ")
+
+        # If any of the given fields are empty, do nothing and continue. 
+        if item_name == "" or player_name == "" or offspec == "":
+            continue
 
         print("")
 
@@ -280,6 +292,8 @@ while(True):
                 print("Invalid selection.")
                 continue
 
+        print()
+
         # Go through the list of players and check if there is a matching player. If so, print out the player's name.
         # If there are no matches, print out an error message.
 
@@ -315,6 +329,8 @@ while(True):
                 print("Invalid selection.")
                 continue
 
+        print()
+
         # At this point, we've got the item name and the player name.
         # We'll get the player object from the list of players.
         for p in players:
@@ -337,10 +353,159 @@ while(True):
                 award_loot(item_name, player_name.name, "MS")
                 print(f"{player_name.name} has been awarded {item_name} as a main-spec item.")
 
+    elif sel == 3: 
+        # Ask for confirmation, as this is irreversible.
+        confirm = input("Are you sure you want to clear ALL plusses? This is irreversible. (y/n): ")
+        if confirm.lower() == "y": 
+            for p in players: 
+                p._regular_plusses = 0
+                p._soft_reserve_plusses = 0
+                p._log = []
+            print("All plusses have been cleared.")
+
+    elif sel == 4: 
+        # Ask the user to enter the name of the sending player. 
+        sending_player = input("Enter the name of the player who is trading the item. Partial matching and case insensitivity are supported: ")
+
+        # Go through the list of players and check if there is a matching player. If so, print out the player's name.
+        # If there are no matches, print out an error message.
+
+        # Create a list to store the matches.
+        matches = []
+
+        # Go through the list of players and check if there is a matching player. If so, add it to the list of matches.
+        # Use partial matching and case insensitivity.
+
+        for p in players:
+            if sending_player.lower() in p.name.lower():
+                matches.append(p)
+
+        # If there are no matches, print out an error message.
+        if len(matches) == 0:
+            print("No matches found. Please double-check the player name and try again.")
+            continue
+
+        # If there is only one match, we'll use that player.
+        elif len(matches) == 1:
+            sending_player = matches[0].name
+
+        # If there are multiple matches, we'll print out the list of matches and ask the user to select one, using a numbered list.
+        else:
+            print("Multiple matches found.") 
+            for ind,val in enumerate(matches):
+                print(f"{ind+1}) {val.name}")
+
+            # Ask the user to select one.
+            try:
+                sel = int(input("Select a player: "))
+                sending_player = matches[sel-1].name
+            except:
+                print("Invalid selection.")
+                continue
+        
+        # At this point, we've got the name of the sending player.
+        # We'll get the player object from the list of players.
+        # First, we'll check if the player has any items in the log. 
+        # If not, we'll print out an error message and return to the main menu.
+
+        for p in players:
+            if p.name == sending_player:
+                sending_player = p
+
+        if len(sending_player._log) == 0:
+            print(f"No items have been awarded to {sending_player.name} yet.")
+            continue
+
+        # If so, we'll print out the list of items in the log and ask the user to select one, using a numbered list.
+        else:
+            print(f"Items awarded to {sending_player.name}:")
+            for ind,val in enumerate(sending_player._log):
+                print(f"{ind+1}) {val.item}")
+
+            # Ask the user to select one.
+            try:
+                sel = int(input("Select an item: "))
+                item_name = sending_player._log[sel-1]
+            except:
+                print("Invalid selection.")
+                continue
+
+        # First, check if the item is a main-spec item. If so, decrement regular plusses. 
+        if item_name.roll == "MS":
+            sending_player._regular_plusses -= 1
+
+        # If not, check if the item is a soft-reserve item. If so, decrement soft-reserve plusses.
+        elif item_name.roll == "SR":
+            sending_player._soft_reserve_plusses -= 1
+
+        # Remove the item from the player's log.
+        sending_player._log.remove(item_name)
+
+        # Now, we'll ask the user to enter the name of the receiving player.
+        receiving_player = input("Enter the name of the player who is receiving the item. Partial matching and case insensitivity are supported: ")
+
+        # Go through the list of players and check if there is a matching player. If so, print out the player's name.
+        # If there are no matches, print out an error message.
+
+        # Create a list to store the matches.
+        matches = []
+
+        # Go through the list of players and check if there is a matching player. If so, add it to the list of matches.
+        # Use partial matching and case insensitivity.
+
+        for p in players:
+            if receiving_player.lower() in p.name.lower():
+                matches.append(p)
+
+        # If there are no matches, print out an error message.
+        if len(matches) == 0:
+            print("No matches found. Please double-check the player name and try again.")
+            continue
+
+        # If there is only one match, we'll use that player.
+        elif len(matches) == 1:
+            receiving_player = matches[0].name
+
+        # If there are multiple matches, we'll print out the list of matches and ask the user to select one, using a numbered list.
+        else:
+            print("Multiple matches found.") 
+            for ind,val in enumerate(matches):
+                print(f"{ind+1}) {val.name}")
+
+            # Ask the user to select one.
+            try:
+                sel = int(input("Select a player: "))
+                receiving_player = matches[sel-1].name
+            except:
+                print("Invalid selection.")
+                continue
+
+        # At this point, we've got the name of the receiving player.
+        # We'll get the player object from the list of players.
+
+        for p in players:
+            if p.name == receiving_player:
+                receiving_player = p
+
+        # First, we'll check if this is an off-spec item. If so, we'll call award_loot with the loot type set to "OS". 
+        offspec = input("Is this an off-spec item? (y/n): ")
+        if offspec.lower() == "y":
+            award_loot(item_name.item, receiving_player.name, "OS")
+            print(f"{receiving_player.name} has been awarded {item_name.item} as an off-spec item.")
+        else:
+            # If not, we'll check the corresponding soft-reserve list to see if the player has soft-reserved the item.
+            # If so, we'll call award_loot with the loot type set to "SR".
+            # Otherwise, we'll call award_loot with the loot type set to "MS".
+
+            if item_name.item in receiving_player.soft_reserve: 
+                award_loot(item_name.item, receiving_player.name, "SR")
+                print(f"{receiving_player.name} has been awarded {item_name.item} as a soft-reserve item.")
+            else:
+                award_loot(item_name.item, receiving_player.name, "MS")
+                print(f"{receiving_player.name} has been awarded {item_name.item} as a main-spec item.")
+
     elif sel == 5: 
         export_loot()
 
     elif sel == 6:
         break
-
-    print("")
