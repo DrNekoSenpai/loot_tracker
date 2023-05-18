@@ -29,10 +29,8 @@ class Log:
         self.roll = roll_type
 
 class Player: 
-    def __init__(self, name:str, pclass:str, spec:str, soft_reserve:List[str]):
+    def __init__(self, name:str,  soft_reserve:List[str]):
         self.name = name
-        self.pclass = pclass
-        self.spec = spec
         self.soft_reserve = soft_reserve
 
         self._regular_plusses = 0
@@ -95,8 +93,6 @@ for soft_res in sr_data:
     # Item
     item = soft_res[0]
     name = soft_res[3]
-    pclass = soft_res[4]
-    spec = soft_res[5]
 
     # Exception: If the name is "Annathalcyon", skip it. 
     if name == "Annathalcyon":
@@ -115,7 +111,7 @@ for soft_res in sr_data:
     
     if not player_exists: 
         # Create a new player object and append it the list. 
-        players.append(Player(name, pclass, spec, []))
+        players.append(Player(name, []))
         current_player = players[-1]
 
     # Add the item to the player's soft reserve list.
@@ -353,6 +349,23 @@ while(True):
                 award_loot(item_name, player_name.name, "MS")
                 print(f"{player_name.name} has been awarded {item_name} as a main-spec item.")
 
+    elif sel == 2:
+        # Ask the user to enter the name of the new player. This can be done in any case; but partial matching is not supported.
+        new_player = input("Enter the name of the new player: ")
+
+        # Convert to sentence case. 
+        new_player = new_player.title()
+
+        # Check if the player already exists. If so, print out an error message and continue.
+        for p in players:
+            if p.name == new_player:
+                print("That player already exists.")
+                continue
+
+        # If not, create a new player object and add it to the list of players.
+        players.append(Player(new_player, []))
+        print(f"{new_player} has been added to the list of players.")
+        
     elif sel == 3: 
         # Ask for confirmation, as this is irreversible.
         confirm = input("Are you sure you want to clear ALL plusses? This is irreversible. (y/n): ")
