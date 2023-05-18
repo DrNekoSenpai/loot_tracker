@@ -205,14 +205,8 @@ with open("ulduar.html", "r", errors="ignore") as f:
         if int(m[0]) >= 80 and int(m[2]) >= 4:
             all_items.append(m[1])
 
-# We'll print out the list of items, to make sure it worked.
-for i in all_items:
-    print(i)
-
 # Main loop.
 while(__name__ == "__main__"): 
-    break
-
     print("Asylum of the Immortals Loot Tracker")
     print("1) Award loot")
     print("2) Manually add a new player")
