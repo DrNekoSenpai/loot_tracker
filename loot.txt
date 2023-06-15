@@ -12,20 +12,24 @@ Ferrousblade (+2 MS, +0 SR)
 - Worldcarver (MS)
 - Sigil of Deflection (OS)
 
+Dwiffles (+2 MS, +0 SR)
+- Breastplate of the Wayward Vanquisher (MS)
+- Crown of the Wayward Vanquisher (MS)
+
 Pacratt (+1 MS, +0 SR)
 - Unblinking Eye (MS)
 
 Mettybee (+1 MS, +0 SR)
 - Frozen Loop (MS)
 
-Dwiffles (+1 MS, +0 SR)
-- Breastplate of the Wayward Vanquisher (MS)
-
 Charlotann (+1 MS, +0 SR)
 - Bladebearer's Signet (MS)
 
 Catreene (+1 MS, +0 SR)
 - Greaves of the Rockmender (MS)
+
+Miatotems (+0 MS, +0 SR)
+- Belt of the Betrayed (OS)
 
 Medulla (+0 MS, +0 SR)
 - Stormrune Edge (OS)
@@ -35,6 +39,9 @@ Kelorlyn (+0 MS, +0 SR)
 
 Flambeau (+0 MS, +0 SR)
 - Thunderfall Totem (OS)
+
+Bigraider (+0 MS, +0 SR)
+- Crown of the Wayward Conqueror (OS)
 
 _disenchanted
 - Embrace of the Leviathan (DE)
