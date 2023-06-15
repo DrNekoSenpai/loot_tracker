@@ -60,6 +60,10 @@ if not args.force_new:
 else:
     players = []
 
+    # Create a special player called "_disenchanted", for items that were not awarded to anyone.
+    # This is used when no one rolls. 
+    players.append(Player("_disenchanted", []))
+
 # We'll attempt to import soft reserve data from the CSV file. 
 with open("soft_reserves.csv", "r") as f: 
     sr_data = f.readlines()
@@ -117,6 +121,11 @@ for soft_res in sr_data:
     # Add the item to the player's soft reserve list.
     current_player.soft_reserve.append(item)
 
+def print_write(string, file=None):
+    print(string)
+    if file:
+        file.write(string + "\n")
+
 def award_loot(item_name, player_name, roll_type):
     # First, we'll check the list of players. 
     # This function assumes the roll has already been done; we're just awarding the loot and keeping track of plusses. 
@@ -155,6 +164,10 @@ def award_loot(item_name, player_name, roll_type):
                 # Add this to the log, using the Log class.
                 p._log.append(Log(player_name, item_name, "ETC"))
 
+            elif roll_type.lower() == "disenchant" or roll_type.lower() == "de":
+                # Add this to the log, using the Log class.
+                p._log.append(Log(player_name, item_name, "DE"))
+
             else:
                 print("Invalid roll type.")
                 
@@ -172,34 +185,75 @@ def export_loot():
     """
 
     # Sort the list of players by soft-reserve plusses, then by regular plusses. 
+    # We will sort in descending order; so higher plusses should come first. 
     # If there is a tie, we will sort alphabetically by name. 
-    players.sort(key=lambda x: (x._soft_reserve_plusses, x._regular_plusses, x.name))
+    # Names should be sorted alphabetically. 
+    players.sort(key=lambda x: (x._soft_reserve_plusses, x._regular_plusses, x.name), reverse=True)
+    with open("loot.txt", "w") as f:
 
-    # Print out the list of players.
-    for p in players: 
-        # First, check if the player has not won any items; that is, their log is empty. 
-        # If so, we'll skip them.
-        if len(p._log) == 0:
-            continue
+        # Print out the list of players.
+        for p in players: 
+            # First, check if the player has not won any items; that is, their log is empty. 
+            # If so, we'll skip them.
+            if len(p._log) == 0:
+                continue
 
-        # Print out the player's name, and then the number of plusses they have; of both types. 
-        print(f"{p.name} (+{p._regular_plusses} MS, +{p._soft_reserve_plusses} SR)")
+            # We'll print out the disenchanted player last. 
+            if p.name == "_disenchanted": 
+                continue
 
-        for l in p._log: 
-            if l.roll == "MS":
-                print(f"- {l.item} (MS)")
+            # Print out the player's name, and then the number of plusses they have; of both types. 
+            print_write(f"{p.name} (+{p._regular_plusses} MS, +{p._soft_reserve_plusses} SR)", f)
 
-        for l in p._log: 
-            if l.roll == "OS":
-                print(f"- {l.item} (OS)")
+            for l in p._log: 
+                if l.roll == "MS":
+                    print_write(f"- {l.item} (MS)", f)
 
-        for l in p._log: 
-            if l.roll == "SR":
-                print(f"- {l.item} (SR)")
+            for l in p._log: 
+                if l.roll == "OS":
+                    print_write(f"- {l.item} (OS)", f)
 
-        for l in p._log: 
-            if l.roll == "ETC": 
-                print(f"- {l.item} (ETC)")
+            for l in p._log: 
+                if l.roll == "SR":
+                    print_write(f"- {l.item} (SR)", f)
+
+            for l in p._log: 
+                if l.roll == "ETC": 
+                    print_write(f"- {l.item} (ETC)", f)
+
+            for l in p._log:
+                if l.roll == "DE":
+                    print_write(f"- {l.item} (DE)", f)
+
+            print_write("", f)
+
+        # Print out "_disenchanted" last.
+        for p in players:
+            if p.name == "_disenchanted":
+                # Print out the player's name. 
+                print_write(f"{p.name}", f)
+
+                for l in p._log: 
+                    if l.roll == "MS":
+                        print_write(f"- {l.item} (MS)", f)
+
+                for l in p._log: 
+                    if l.roll == "OS":
+                        print_write(f"- {l.item} (OS)", f)
+
+                for l in p._log: 
+                    if l.roll == "SR":
+                        print_write(f"- {l.item} (SR)", f)
+
+                for l in p._log: 
+                    if l.roll == "ETC": 
+                        print_write(f"- {l.item} (ETC)", f)
+
+                for l in p._log:
+                    if l.roll == "DE":
+                        print_write(f"- {l.item} (DE)", f)
+
+                print_write("", f)
 
 url = "https://www.wowhead.com/wotlk/zone=4273/ulduar#drops;mode:n25"
 
@@ -299,6 +353,15 @@ while(True):
 
         player_name = input("Enter the name of the player to be awarded the item. Partial matching and case insensitivity are supported: ")
         if player_name == "": continue
+        elif player_name.lower() in "_disenchanted":
+            # Award the item to the "_disenchanted" player.
+            # Find the player with the name "_disenchanted" and award the item to them.
+            # Starts with and case insensitivity are supported.
+            for p in players:
+                if p.name.lower().startswith("_disenchanted"):
+                    # award_loot(item_name, player_name.name, "ETC")
+                    award_loot(item_name, p.name, "DE")
+                    print(f"No one rolled; {item_name} has been disenchanted.")
 
         # Go through the list of players and check if there is a matching player. If so, print out the player's name.
         # If there are no matches, print out an error message.
@@ -347,6 +410,10 @@ while(True):
         if item_name.startswith("Plans: ") or item_name.startswith("Schematic: ") or item_name.startswith("Pattern: ") or item_name.startswith("Formula: ") or item_name == "Fragment of Val'anyr":
             award_loot(item_name, player_name.name, "ETC")
             print(f"{player_name.name} has been awarded {item_name} as an ETC item.")
+            continue
+
+        # If the player name is "_disenchanted", we'll do nothing. 
+        if player_name.name == "_disenchanted":
             continue
 
         # First, we'll check if this is an off-spec item. If so, we'll call award_loot with the loot type set to "OS". 
