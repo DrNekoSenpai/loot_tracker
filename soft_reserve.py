@@ -253,8 +253,6 @@ def export_loot():
                     if l.roll == "DE":
                         print_write(f"- {l.item} (DE)", f)
 
-                print_write("", f)
-
 url = "https://www.wowhead.com/wotlk/zone=4273/ulduar#drops;mode:n25"
 
 
