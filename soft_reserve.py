@@ -253,8 +253,7 @@ def export_loot():
                     if l.roll == "DE":
                         print_write(f"- {l.item} (DE)", f)
 
-url = "https://www.wowhead.com/wotlk/zone=4273/ulduar#drops;mode:n25"
-
+url = "https://www.wowhead.com/wotlk/zone=4273/ulduar"
 
 # If the file called "ulduar.html" exists, read it. Otherwise, access the site and download it. 
 # Ignore errors. 
@@ -278,6 +277,43 @@ else:
 all_items = []
 
 # use a regular expression to search for the name of each item, using re.findall(). 
+pattern = r'"name":"(.+?)","quality":(\d+)'
+matches = re.findall(pattern, html)
+
+# Add each item to the list of items, but only if the level is >= 80 and the quality is 4 or higher (epic and legendary).
+for m in matches:
+    if int(m[1]) >= 4:
+        all_items.append(m[0])
+
+# If the debug flag is set, write the list of items to a file.
+if args.debug:
+    with open("debug-items.txt", "w") as f:
+        for i in all_items:
+            f.write(i + "\n")
+
+url = "https://www.wowhead.com/wotlk/zone=4722/trial-of-the-crusader"
+
+# If the file called "trial-of-the-crusader.html" exists, read it. Otherwise, access the site and download it.
+# Ignore errors.
+
+if not os.path.exists("trial-of-the-crusader.html") or os.path.getsize("trial-of-the-crusader.html") == 0 or args.force_new:
+    # Get the HTML from the URL
+    html = requests.get(url).text
+
+    with open("trial-of-the-crusader.html", "w", errors="ignore") as f:
+        f.write(html)
+
+else:
+    with open("trial-of-the-crusader.html", "r", errors="ignore") as f:
+        html = f.read()
+
+# Parse the data.
+# Example string:
+# "name":"Rising Sun","quality":4
+
+# We want to extract the name and the quality.
+
+# use a regular expression to search for the name of each item, using re.findall().
 pattern = r'"name":"(.+?)","quality":(\d+)'
 matches = re.findall(pattern, html)
 
