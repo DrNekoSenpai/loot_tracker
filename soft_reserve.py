@@ -10,6 +10,9 @@ parser = argparse.ArgumentParser()
 # Add an argument called "--force-new", "-f" to force the script to create a new pickle file.
 parser.add_argument("--force-new", "-f", help="Force the script to create a new pickle file.", action="store_true")
 
+# Add an argument called "--force-manual", "-m" to force the script to create a new manual file. 
+parser.add_argument("--force-manual", "-m", help="Force the script to create a new manual file.", action="store_true")
+
 # Add an argument called "--debug", "-d" to enable debug mode.
 parser.add_argument("--debug", "-d", help="Enable debug mode.", action="store_true")
 
@@ -43,16 +46,31 @@ def import_pickle() -> list:
     try: 
         with open('players.pickle', 'rb') as f:
             players = pickle.load(f)
-            return players
+
     except FileNotFoundError:
         print('No pickle file found. Creating a new one.')
         players = []
-        return players
+
+    return players
+
+def import_manual() -> list: 
+    try: 
+        with open('manual.pickle', 'rb') as f: 
+            manual = pickle.load(f)
+
+    except FileNotFoundError:
+        print('No manual file found. Skipping.')
+        manual = []
+
+    return manual
     
-def export_pickle(players):
+def export_pickle(players, manual):
     # Export the pickle file
     with open('players.pickle', 'wb') as f:
         pickle.dump(players, f)
+
+    with open('manual.pickle', 'wb') as f:
+        pickle.dump(manual, f)
 
 # We'll import the pickle if the "--force-new" argument is not present.
 if not args.force_new:
@@ -63,6 +81,25 @@ else:
     # Create a special player called "_disenchanted", for items that were not awarded to anyone.
     # This is used when no one rolls. 
     players.append(Player("_disenchanted", []))
+
+# We'll import the manual if the "--force-manual" argument is not present.
+if not args.force_manual:
+    manual = import_manual()
+else:
+    manual = []
+
+# In either case, we'll append the manual onto the end of the players list, but only if they don't already exist.
+for m in manual:
+    # Check if the player is in the list of players.
+    player_exists = False
+    for p in players: 
+        if p.name == m.name: 
+            player_exists = True
+            break
+    
+    if not player_exists: 
+        # Create a new player object and append it the list. 
+        players.append(Player(m.name, []))
 
 # We'll attempt to import soft reserve data from the CSV file. 
 with open("soft_reserves.csv", "r") as f: 
@@ -101,6 +138,14 @@ for soft_res in sr_data:
     # Exception: If the name is "Annathalcyon", skip it. 
     if name == "Annathalcyon":
         continue
+
+    # Exception: If the name is "Class", skip it.
+    if name == "Class":
+        continue
+
+    # Exception: If the name is "KÃ­llit", change it to "Killit". Special characters are not allowed.
+    if name == "KÃ­llit":
+        name = "Killit"
 
     # Search for an existing player object. Create it if it doesn't exist. 
 
@@ -227,31 +272,19 @@ def export_loot():
 
             print_write("", f)
 
-        # Print out "_disenchanted" last.
+        # Print out "_disenchanted" last, but only if they have items.
         for p in players:
             if p.name == "_disenchanted":
+                # Check if the player has not won any items; that is, their log is empty.
+                # If so, we'll skip them.
+                if len(p._log) == 0:
+                    continue
+
                 # Print out the player's name. 
                 print_write(f"{p.name}", f)
 
-                for l in p._log: 
-                    if l.roll == "MS":
-                        print_write(f"- {l.item} (MS)", f)
-
-                for l in p._log: 
-                    if l.roll == "OS":
-                        print_write(f"- {l.item} (OS)", f)
-
-                for l in p._log: 
-                    if l.roll == "SR":
-                        print_write(f"- {l.item} (SR)", f)
-
-                for l in p._log: 
-                    if l.roll == "ETC": 
-                        print_write(f"- {l.item} (ETC)", f)
-
                 for l in p._log:
-                    if l.roll == "DE":
-                        print_write(f"- {l.item} (DE)", f)
+                    print_write(f"- {l.item}", f)
 
 url = "https://www.wowhead.com/wotlk/zone=4273/ulduar"
 
@@ -284,12 +317,6 @@ matches = re.findall(pattern, html)
 for m in matches:
     if int(m[1]) >= 4:
         all_items.append(m[0])
-
-# If the debug flag is set, write the list of items to a file.
-if args.debug:
-    with open("debug-items.txt", "w") as f:
-        for i in all_items:
-            f.write(i + "\n")
 
 url = "https://www.wowhead.com/wotlk/zone=4722/trial-of-the-crusader"
 
@@ -330,7 +357,7 @@ if args.debug:
 
 # Main loop.
 while(True): 
-    export_pickle(players)
+    export_pickle(players, manual)
     print("")
     print("Asylum of the Immortals Loot Tracker")
     print("1) Award loot")
@@ -338,7 +365,9 @@ while(True):
     print("3) Clear ALL plusses")
     print("4) Log a trade")
     print("5) Export loot")
-    print("6) Exit")
+    print("6) Remove a piece of loot")
+    print("7) Print out all players in the database")
+    print("8) Exit")
     
     try: sel = int(input("Select an option: "))
     except: break
@@ -483,6 +512,7 @@ while(True):
 
         # If not, create a new player object and add it to the list of players.
         players.append(Player(new_player, []))
+        manual.append(Player(new_player, []))
         print(f"{new_player} has been added to the list of players.")
 
     elif sel == 3: 
@@ -639,5 +669,12 @@ while(True):
     elif sel == 5: 
         export_loot()
 
-    elif sel == 6:
+    elif sel == 7: 
+        # Print out all players in the database; their name, number of plusses, and total number of items awarded.
+        for p in players:
+            print(f"{p.name} (+{p._regular_plusses} MS, +{p._soft_reserve_plusses} SR)")
+            print(f"Total items awarded: {len(p._log)}")
+            print("")
+
+    elif sel == 8:
         break
