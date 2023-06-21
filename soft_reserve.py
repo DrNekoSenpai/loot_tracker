@@ -32,12 +32,12 @@ class Log:
         self.roll = roll_type
 
 class Player: 
-    def __init__(self, name:str,  soft_reserve:List[str]):
+    def __init__(self, name:str,  soft_reserve:List[str], regular_plusses:int=0, soft_reserve_plusses:int=0):
         self.name = name
         self.soft_reserve = soft_reserve
 
-        self._regular_plusses = 0
-        self._soft_reserve_plusses = 0
+        self._regular_plusses = regular_plusses
+        self._soft_reserve_plusses = soft_reserve_plusses
 
         self._log = []
 
@@ -101,70 +101,77 @@ for m in manual:
         # Create a new player object and append it the list. 
         players.append(Player(m.name, []))
 
-# We'll attempt to import soft reserve data from the CSV file. 
-with open("soft_reserves.csv", "r") as f: 
-    sr_data = f.readlines()
+def import_softreserve(players): 
+    # We'll attempt to import soft reserve data from the CSV file. 
+    with open("soft_reserves.csv", "r") as f: 
+        sr_data = f.readlines()
 
-# We'll truncate the debug-sr.txt file, but only if debug mode is enabled. 
-if args.debug:
-    with open("debug-sr.txt", "w") as f:
-        f.truncate()
-
-# Parse the data. 
-for soft_res in sr_data: 
-    # Split the string into a list.
-    soft_res = soft_res.split(",")
-
-    # We'll check if the second column is a number. If it's not, then this item has a comma in it; and we'll join the first two elements together with a comma. 
-    if not soft_res[1].isdigit():
-        soft_res[0:2] = [",".join(soft_res[0:2])]
-
-    # We'll remove all the quotes from the string. 
-    soft_res = [x.replace('"', "") for x in soft_res]
-
-    # Write this to debug-sr.txt, but only if debug mode is enabled.
+    # We'll truncate the debug-sr.txt file, but only if debug mode is enabled. 
     if args.debug:
-        with open("debug-sr.txt", "a") as f:
-            f.write(f"{soft_res}\n")
+        with open("debug-sr.txt", "w") as f:
+            f.truncate()
 
-    # Format the strings.
-    # Item,ItemId,From,Name,Class,Spec,Note,Plus,Date
-    # We care about: Item, Name, Class, Spec
-    
-    # Item
-    item = soft_res[0]
-    name = soft_res[3]
+    # Parse the data. 
+    for soft_res in sr_data: 
+        # Split the string into a list.
+        soft_res = soft_res.split(",")
 
-    # Exception: If the name is "Annathalcyon", skip it. 
-    if name == "Annathalcyon":
-        continue
+        # We'll check if the second column is a number. If it's not, then this item has a comma in it; and we'll join the first two elements together with a comma. 
+        if not soft_res[1].isdigit():
+            soft_res[0:2] = [",".join(soft_res[0:2])]
 
-    # Exception: If the name is "Class", skip it.
-    if name == "Class":
-        continue
+        # We'll remove all the quotes from the string. 
+        soft_res = [x.replace('"', "") for x in soft_res]
 
-    # Exception: If the name is "KÃ­llit", change it to "Killit". Special characters are not allowed.
-    if name == "KÃ­llit":
-        name = "Killit"
+        # Write this to debug-sr.txt, but only if debug mode is enabled.
+        if args.debug:
+            with open("debug-sr.txt", "a") as f:
+                f.write(f"{soft_res}\n")
 
-    # Search for an existing player object. Create it if it doesn't exist. 
+        # Format the strings.
+        # Item,ItemId,From,Name,Class,Spec,Note,Plus,Date
+        # We care about: Item, Name, Class, Spec
+        
+        # Item
+        item = soft_res[0]
+        name = soft_res[3]
 
-    # Check if the player is in the list of players.
-    player_exists = False
-    current_player = None
-    for p in players: 
-        if p.name == name: 
-            player_exists = True
-            current_player = p
-            break
-    
-    if not player_exists: 
-        # Create a new player object and append it the list. 
-        players.append(Player(name, []))
-        current_player = players[-1]
+        # Exception: If the name is "Annathalcyon", skip it. 
+        if name == "Annathalcyon":
+            continue
 
-    # Add the item to the player's soft reserve list.
-    current_player.soft_reserve.append(item)
+        # Exception: If the name is "Class", skip it.
+        if name == "Class":
+            continue
+
+        # Exception: If the name is "KÃ­llit", change it to "Killit". Special characters are not allowed.
+        if name == "KÃ­llit":
+            name = "Killit"
+
+        # Search for an existing player object. Create it if it doesn't exist. 
+
+        # Check if the player is in the list of players. 
+        # If so, wipe their soft reserve. 
+        player_exists = False
+        current_player = None
+        for p in players: 
+            if p.name == name: 
+                player_exists = True
+                current_player = p
+                current_player.soft_reserve = []
+                break
+        
+        if not player_exists: 
+            # Create a new player object and append it the list. 
+            players.append(Player(name, []))
+            current_player = players[-1]
+
+        # Add the item to the player's soft reserve list.
+        current_player.soft_reserve.append(item)
+
+    return players
+
+players = import_softreserve(players)
 
 def print_write(string, file=None):
     print(string)
@@ -221,7 +228,7 @@ def award_loot(item_name, player_name, roll_type):
     # If we get here, the player wasn't found in the list of players.
     print("Player not found. Please create the player manually before trying again.")
 
-def export_loot(): 
+def export_loot(mode="console"): 
     """
     Export loot received as console output. 
     We will sort players by soft-reserve plusses, then by regular plusses. 
@@ -233,58 +240,109 @@ def export_loot():
     # We will sort in descending order; so higher plusses should come first. 
     # If there is a tie, we will sort alphabetically by name. 
     # Names should be sorted alphabetically. 
+
+    # If the mode is "console", output to both console and file.
+    # If the mode is "file", output to file only.
+
     players.sort(key=lambda x: (x._soft_reserve_plusses, x._regular_plusses, x.name), reverse=True)
-    with open("loot.txt", "w") as f:
 
-        # Print out the list of players.
-        for p in players: 
-            # First, check if the player has not won any items; that is, their log is empty. 
-            # If so, we'll skip them.
-            if len(p._log) == 0:
-                continue
+    if mode == "console":
+        with open("loot.txt", "w") as f:
 
-            # We'll print out the disenchanted player last. 
-            if p.name == "_disenchanted": 
-                continue
-
-            # Print out the player's name, and then the number of plusses they have; of both types. 
-            print_write(f"{p.name} (+{p._regular_plusses} MS, +{p._soft_reserve_plusses} SR)", f)
-
-            for l in p._log: 
-                if l.roll == "MS":
-                    print_write(f"- {l.item} (MS)", f)
-
-            for l in p._log: 
-                if l.roll == "OS":
-                    print_write(f"- {l.item} (OS)", f)
-
-            for l in p._log: 
-                if l.roll == "SR":
-                    print_write(f"- {l.item} (SR)", f)
-
-            for l in p._log: 
-                if l.roll == "ETC": 
-                    print_write(f"- {l.item} (ETC)", f)
-
-            for l in p._log:
-                if l.roll == "DE":
-                    print_write(f"- {l.item} (DE)", f)
-
-            print_write("", f)
-
-        # Print out "_disenchanted" last, but only if they have items.
-        for p in players:
-            if p.name == "_disenchanted":
-                # Check if the player has not won any items; that is, their log is empty.
+            # Print out the list of players.
+            for p in players: 
+                # First, check if the player has not won any items; that is, their log is empty. 
                 # If so, we'll skip them.
                 if len(p._log) == 0:
                     continue
 
-                # Print out the player's name. 
-                print_write(f"{p.name}", f)
+                # We'll print out the disenchanted player last. 
+                if p.name == "_disenchanted": 
+                    continue
+
+                # Print out the player's name, and then the number of plusses they have; of both types. 
+                print_write(f"{p.name} (+{p._regular_plusses} MS, +{p._soft_reserve_plusses} SR)", f)
+
+                for l in p._log: 
+                    if l.roll == "MS":
+                        print_write(f"- {l.item} (MS)", f)
+
+                for l in p._log: 
+                    if l.roll == "OS":
+                        print_write(f"- {l.item} (OS)", f)
+
+                for l in p._log: 
+                    if l.roll == "SR":
+                        print_write(f"- {l.item} (SR)", f)
+
+                for l in p._log: 
+                    if l.roll == "ETC": 
+                        print_write(f"- {l.item} (ETC)", f)
+
+                print_write("", f)
+
+            # Print out "_disenchanted" last, but only if they have items.
+            for p in players:
+                if p.name == "_disenchanted":
+                    # Check if the player has not won any items; that is, their log is empty.
+                    # If so, we'll skip them.
+                    if len(p._log) == 0:
+                        continue
+
+                    # Print out the player's name. 
+                    print_write(f"{p.name}", f)
+
+                    for l in p._log:
+                        print_write(f"- {l.item}", f)
+
+    # If the mode is "file", output to file only, using the same format as above, but using f.write() instead of print_write().
+    elif mode == "file":
+        with open("loot.txt", "w") as f:
+            # Print out the list of players.
+            for p in players:
+                # First, check if the player has not won any items; that is, their log is empty.
+                # If so, we'll skip them.
+                if len(p._log) == 0:
+                    continue
+
+                # We'll print out the disenchanted player last.
+                if p.name == "_disenchanted":
+                    continue
+
+                # Print out the player's name, and then the number of plusses they have; of both types.
+                f.write(f"{p.name} (+{p._regular_plusses} MS, +{p._soft_reserve_plusses} SR)\n")
 
                 for l in p._log:
-                    print_write(f"- {l.item}", f)
+                    if l.roll == "MS":
+                        f.write(f"- {l.item} (MS)\n")
+
+                for l in p._log:
+                    if l.roll == "OS":
+                        f.write(f"- {l.item} (OS)\n")
+
+                for l in p._log:
+                    if l.roll == "SR":
+                        f.write(f"- {l.item} (SR)\n")
+
+                for l in p._log:
+                    if l.roll == "ETC":
+                        f.write(f"- {l.item} (ETC)\n")
+
+                f.write("\n")
+
+            # Print out "_disenchanted" last, but only if they have items.
+            for p in players:
+                if p.name == "_disenchanted":
+                    # Check if the player has not won any items; that is, their log is empty.
+                    # If so, we'll skip them.
+                    if len(p._log) == 0:
+                        continue
+
+                    # Print out the player's name.
+                    f.write(f"{p.name}\n")
+
+                    for l in p._log:
+                        f.write(f"- {l.item}\n")
 
 url = "https://www.wowhead.com/wotlk/zone=4273/ulduar"
 
@@ -358,6 +416,7 @@ if args.debug:
 # Main loop.
 while(True): 
     export_pickle(players, manual)
+    export_loot("file")
     print("")
     print("Asylum of the Immortals Loot Tracker")
     print("1) Award loot")
@@ -367,7 +426,8 @@ while(True):
     print("5) Export loot")
     print("6) Remove a piece of loot")
     print("7) Print out all players in the database")
-    print("8) Exit")
+    print("8) Manual input from loot text file")
+    print("9) Exit")
     
     try: sel = int(input("Select an option: "))
     except: break
@@ -667,7 +727,85 @@ while(True):
                 print(f"{receiving_player.name} has been awarded {item_name.item} as a main-spec item.")
 
     elif sel == 5: 
-        export_loot()
+        export_loot("console")
+
+    elif sel == 6: 
+        # Ask the user to enter the name of the sending player. 
+        sending_player = input("Enter the name of the player who we need to remove the item from. Partial matching and case insensitivity are supported: ")
+
+        # Go through the list of players and check if there is a matching player. If so, print out the player's name.
+        # If there are no matches, print out an error message.
+
+        # Create a list to store the matches.
+        matches = []
+
+        # Go through the list of players and check if there is a matching player. If so, add it to the list of matches.
+        # Use partial matching and case insensitivity.
+
+        for p in players:
+            if sending_player.lower() in p.name.lower():
+                matches.append(p)
+
+        # If there are no matches, print out an error message.
+        if len(matches) == 0:
+            print("No matches found. Please double-check the player name and try again.")
+            continue
+
+        # If there is only one match, we'll use that player.
+        elif len(matches) == 1:
+            sending_player = matches[0].name
+
+        # If there are multiple matches, we'll print out the list of matches and ask the user to select one, using a numbered list.
+        else:
+            print("Multiple matches found.") 
+            for ind,val in enumerate(matches):
+                print(f"{ind+1}) {val.name}")
+
+            # Ask the user to select one.
+            try:
+                sel = int(input("Select a player: "))
+                sending_player = matches[sel-1].name
+            except:
+                print("Invalid selection.")
+                continue
+        
+        # At this point, we've got the name of the sending player.
+        # We'll get the player object from the list of players.
+        # First, we'll check if the player has any items in the log. 
+        # If not, we'll print out an error message and return to the main menu.
+
+        for p in players:
+            if p.name == sending_player:
+                sending_player = p
+
+        if len(sending_player._log) == 0:
+            print(f"No items have been awarded to {sending_player.name} yet.")
+            continue
+
+        # If so, we'll print out the list of items in the log and ask the user to select one, using a numbered list.
+        else:
+            print(f"Items awarded to {sending_player.name}:")
+            for ind,val in enumerate(sending_player._log):
+                print(f"{ind+1}) {val.item}")
+
+            # Ask the user to select one.
+            try:
+                sel = int(input("Select an item: "))
+                item_name = sending_player._log[sel-1]
+            except:
+                print("Invalid selection.")
+                continue
+
+        # First, check if the item is a main-spec item. If so, decrement regular plusses. 
+        if item_name.roll == "MS":
+            sending_player._regular_plusses -= 1
+
+        # If not, check if the item is a soft-reserve item. If so, decrement soft-reserve plusses.
+        elif item_name.roll == "SR":
+            sending_player._soft_reserve_plusses -= 1
+
+        # Remove the item from the player's log.
+        sending_player._log.remove(item_name)
 
     elif sel == 7: 
         # Print out all players in the database; their name, number of plusses, and total number of items awarded.
@@ -676,5 +814,71 @@ while(True):
             print(f"Total items awarded: {len(p._log)}")
             print("")
 
-    elif sel == 8:
+    elif sel == 8: 
+        # First, confirm that the user does want to overwrite all entries in the database, as this cannot be undone. 
+        # If not, return to the main menu.
+
+        confirm = input("Are you sure you want to overwrite the database? This cannot be undone. (y/n): ")
+        if confirm.lower() != "y":
+            continue
+
+        # Read in from "loot_raw.txt" file, and print to console. This is not the same file as "loot.txt", which is the output file. 
+        # This is done to prevent against accidental overwrites. 
+        # If the file doesn't exist, print out an error message.
+
+        try:
+            with open("loot_raw.txt", "r") as f:
+                loot_raw = f.read()
+            loot_raw = loot_raw.split("\n\n")
+
+        except:
+            print("Error: loot_raw.txt does not exist.")
+            continue
+
+        for line in loot_raw:
+            name = line.split("\n")[0].split(' ')[0]
+
+            # Split plusses by this following regular expression, capturing both numbers: 
+            # (+1 MS, +1 SR)
+            # If the pattern is not present, continue instead of throwing an error.
+            
+            try:
+                plusses = re.findall(r'\(\+(\d+) MS, \+(\d+) SR\)', line)[0]
+                print(f"{name} (+{plusses[0]} MS, +{plusses[1]} SR)")
+            except:
+                print(f"{name}")
+                continue
+
+            # Find the corresponding Player object in the list of players.
+            # If the player does not exist, create it and add it to the list of players.
+            # If the player does exist, update the player's plusses.
+
+            player_exists = False
+            for p in players:
+                if p.name == name:
+                    p._regular_plusses = int(plusses[0])
+                    p._soft_reserve_plusses = int(plusses[1])
+                    player_exists = True
+                    break
+
+            if not player_exists:
+                p = Player(name, int(plusses[0]), int(plusses[1]))
+                players.append(p)
+        
+            # Split the rest of the line, capturing the item name and roll type.
+            # Regular expression: 
+            # Item name (MS/OS/SR)
+
+            # Reset the player's item log 
+            p._log = []
+            
+            items = line.split("\n")[1:]
+            for item in items:
+                item_name = re.findall(r'- (.*) \((MS|OS|SR)\)', item)
+                # Add the item to the log 
+                p._log.append(Log(p.name, item_name[0][0], item_name[0][1]))
+
+        print("") # Move onto next person
+
+    elif sel == 9:
         break
