@@ -423,7 +423,7 @@ def up_to_date():
     data = response.json()
 
     # Get the date of the latest commit.
-    last_commit_date = datetime.datetime.strptime(data['updated_at'], "%Y-%m-%dT%H:%M:%SZ")
+    last_commit_date = datetime.datetime.strptime(data['pushed_at'], "%Y-%m-%dT%H:%M:%SZ")
 
     # Compare the last commit date to the current date. 
     current_date = datetime.datetime.now()
