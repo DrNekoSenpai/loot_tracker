@@ -413,32 +413,26 @@ if args.debug:
         for i in all_items:
             f.write(i + "\n")
 
-from git import Repo
+import requests
+import datetime
 
-def up_to_date(repo_path): 
-    # Assume the default remote is called 'origin'
-    DEFAULT_REMOTE = 'origin'
+def up_to_date(): 
+    # Get repository details from the GitHub API.
+    url = "https://api.github.com/repos/DrNekoSenpai/loot_tracker"
+    response = requests.get(url)
+    data = response.json()
 
-    # Assume the default branch is called 'master'
-    DEFAULT_BRANCH = 'main'
+    # Get the date of the latest commit.
+    last_commit_date = datetime.datetime.strptime(data['updated_at'], "%Y-%m-%dT%H:%M:%SZ")
 
-    # Get the repo object
-    repo = Repo(repo_path)
+    # Compare the last commit date to the current date. 
+    current_date = datetime.datetime.now()
+    if last_commit_date > current_date:
+        return False
+    else:
+        return True
 
-    # Get the remote object
-    repo.remotes.origin.fetch()
-
-    # Check if the current branch is up to date
-    commits_behind = repo.iter_commits(f'{DEFAULT_REMOTE}/{DEFAULT_BRANCH}..HEAD')
-    return sum(1 for c in commits_behind) == 0
-
-# path to local git repository
-repo_path = os.path.dirname(os.path.realpath(__file__))
-
-# If the repo is not up to date, print an error message saying the user should first pull. Then, exit. 
-# If it is, print only if the debug flag is triggered. 
-
-if not up_to_date(repo_path):
+if not up_to_date():
     print("Error: the local repository is not up to date. Please pull the latest changes before running this script.")
     exit(1)
 
