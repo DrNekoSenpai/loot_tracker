@@ -413,6 +413,38 @@ if args.debug:
         for i in all_items:
             f.write(i + "\n")
 
+from git import Repo
+
+def up_to_date(repo_path): 
+    # Assume the default remote is called 'origin'
+    DEFAULT_REMOTE = 'origin'
+
+    # Assume the default branch is called 'master'
+    DEFAULT_BRANCH = 'main'
+
+    # Get the repo object
+    repo = Repo(repo_path)
+
+    # Get the remote object
+    repo.remotes.origin.fetch()
+
+    # Check if the current branch is up to date
+    commits_behind = repo.iter_commits(f'{DEFAULT_REMOTE}/{DEFAULT_BRANCH}..HEAD')
+    return sum(1 for c in commits_behind) == 0
+
+# path to local git repository
+repo_path = os.path.dirname(os.path.realpath(__file__))
+
+# If the repo is not up to date, print an error message saying the user should first pull. Then, exit. 
+# If it is, print only if the debug flag is triggered. 
+
+if not up_to_date(repo_path):
+    print("Error: the local repository is not up to date. Please pull the latest changes before running this script.")
+    exit(1)
+
+if args.debug:
+    print("The local repository is up to date.")
+
 # Main loop.
 while(True): 
     export_pickle(players, manual)
