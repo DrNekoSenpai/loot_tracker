@@ -434,6 +434,7 @@ def up_to_date():
 
 if not up_to_date():
     print("Error: the local repository is not up to date. Please pull the latest changes before running this script.")
+    print("To pull the latest changes, simply run the command 'git pull' in this terminal.")
     exit(1)
 
 if args.debug:
