@@ -244,7 +244,7 @@ def export_loot(mode="console"):
     # If the mode is "console", output to both console and file.
     # If the mode is "file", output to file only.
 
-    players.sort(key=lambda x: (x._soft_reserve_plusses, x._regular_plusses, x.name), reverse=True)
+    players.sort(key=lambda x: (-x._soft_reserve_plusses, -x._regular_plusses, x.name))
 
     if mode == "console":
         with open("loot.txt", "w") as f:
@@ -402,9 +402,10 @@ else:
 pattern = r'"name":"(.+?)","quality":(\d+)'
 matches = re.findall(pattern, html)
 
-# Add each item to the list of items, but only if the level is >= 80 and the quality is 4 or higher (epic and legendary).
+# Add each item to the list of items, but only if the quality is 4 or higher (epic and legendary).
+# In addition, only add items that are not in the list already.
 for m in matches:
-    if int(m[1]) >= 4:
+    if m[0] not in all_items:
         all_items.append(m[0])
 
 # If the debug flag is set, write the list of items to a file.
@@ -427,10 +428,12 @@ def up_to_date():
 
     # Compare the last commit date to the current date. 
     current_date = datetime.datetime.now()
-    if last_commit_date > current_date:
-        return False
-    else:
-        return True
+
+    if args.debug: 
+        print(last_commit_date)
+        print(current_date)
+
+    return last_commit_date < current_date
 
 if not up_to_date():
     print("Error: the local repository is not up to date. Please pull the latest changes before running this script.")
