@@ -426,8 +426,8 @@ def up_to_date():
     # Get the date of the latest commit.
     last_commit_date = datetime.datetime.strptime(data['pushed_at'], "%Y-%m-%dT%H:%M:%SZ")
 
-    # Compare the last commit date to the current date. 
-    current_date = datetime.datetime.now()
+    # Grab the current date, and adjust for UTC time. 
+    current_date = datetime.datetime.utcnow()
 
     if args.debug: 
         print("Last commit date", last_commit_date)
