@@ -430,8 +430,8 @@ def up_to_date():
     current_date = datetime.datetime.now()
 
     if args.debug: 
-        print(last_commit_date)
-        print(current_date)
+        print("Last commit date", last_commit_date)
+        print("Current date", current_date)
 
     return last_commit_date < current_date
 
