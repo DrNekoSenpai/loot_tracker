@@ -103,6 +103,10 @@ for m in manual:
 
 def import_softreserve(players): 
     # We'll attempt to import soft reserve data from the CSV file. 
+    if not os.path.exists("soft_reserves.csv"):
+        print("No soft reserve file found. Skipping.")
+        return players
+
     with open("soft_reserves.csv", "r") as f: 
         sr_data = f.readlines()
 
@@ -261,7 +265,7 @@ def export_loot(mode="console"):
                     continue
 
                 # Print out the player's name, and then the number of plusses they have; of both types. 
-                print_write(f"{p.name} (+{p._regular_plusses} MS, +{p._soft_reserve_plusses} SR)", f)
+                print_write(f"{p.name} (+{p._regular_plusses} MS)", f)
 
                 for l in p._log: 
                     if l.roll == "MS":
@@ -310,7 +314,7 @@ def export_loot(mode="console"):
                     continue
 
                 # Print out the player's name, and then the number of plusses they have; of both types.
-                f.write(f"{p.name} (+{p._regular_plusses} MS, +{p._soft_reserve_plusses} SR)\n")
+                f.write(f"{p.name} (+{p._regular_plusses} MS)\n")
 
                 for l in p._log:
                     if l.roll == "MS":
@@ -450,14 +454,15 @@ while(True):
     print("")
     print("Asylum of the Immortals Loot Tracker")
     print("1) Award loot")
-    print("2) Manually add a new player")
+    print("2) Manually add new players")
     print("3) Clear ALL plusses")
     print("4) Log a trade")
     print("5) Export loot")
     print("6) Remove a piece of loot")
     print("7) Print out all players in the database")
     print("8) Manual input from loot text file")
-    print("9) Exit")
+    print("9) Export Gargul")
+    print("10) Exit")
     
     try: sel = int(input("Select an option: "))
     except: break
@@ -589,21 +594,34 @@ while(True):
 
     elif sel == 2:
         # Ask the user to enter the name of the new player. This can be done in any case; but partial matching is not supported.
-        new_player = input("Enter the name of the new player: ")
+        new_players = input("Enter the names of up to 25 new players: ")
+        
+        # We'll check to see how many players there are, by splitting with spaces. 
+        if ' ' in new_players: new_players = new_players.split(" ")
+        else: new_players = [new_players]
 
-        # Convert to sentence case. 
-        new_player = new_player.title()
-
-        # Check if the player already exists. If so, print out an error message and continue.
-        for p in players:
-            if p.name == new_player:
-                print("That player already exists.")
+        for new_player in new_players: 
+            # Convert to sentence case. 
+            new_player = new_player.title()
+            if len(new_player) > 12: 
+                print(f"ERROR: {new_player} is too long. Please enter a name that is 12 characters or less.")
                 continue
 
-        # If not, create a new player object and add it to the list of players.
-        players.append(Player(new_player, []))
-        manual.append(Player(new_player, []))
-        print(f"{new_player} has been added to the list of players.")
+            # Check if the player already exists. If so, print out an error message and continue.
+            found = False
+            for p in players:
+                if p.name == new_player:
+                    found = True
+                    continue
+            
+            if not found: 
+                # If not, create a new player object and add it to the list of players.
+                players.append(Player(new_player, []))
+                manual.append(Player(new_player, []))
+                print(f"ADDED: {new_player}")
+
+            else: 
+                print(f"ERROR: {new_player} already exists.")
 
     elif sel == 3: 
         # Ask for confirmation, as this is irreversible.
@@ -873,8 +891,9 @@ while(True):
             # If the pattern is not present, continue instead of throwing an error.
             
             try:
-                plusses = re.findall(r'\(\+(\d+) MS, \+(\d+) SR\)', line)[0]
-                print(f"{name} (+{plusses[0]} MS, +{plusses[1]} SR)")
+                # plusses = re.findall(r'\(\+(\d+) MS, \+(\d+) SR\)', line)[0]
+                plusses = re.findall(r'\(\+(\d+) MS\)', line)[0]
+                print(f"{name} (+{plusses[0]} MS")
             except:
                 print(f"{name}")
                 continue
@@ -910,5 +929,12 @@ while(True):
 
         print("") # Move onto next person
 
-    elif sel == 9:
+    elif sel == 9: 
+        # Loop through each player in the list of players.
+        for p in players: 
+            # Print out their name, then the number of main-spec plusses. Ignore soft-reserve plusses.
+            if p._regular_plusses > 0: 
+                print(f"{p.name} {p._regular_plusses}")
+
+    elif sel == 10:
         break
