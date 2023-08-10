@@ -461,7 +461,7 @@ while(True):
     print("6) Remove a piece of loot")
     print("7) Print out all players in the database")
     print("8) Manual input from loot text file")
-    print("9) Export Gargul")
+    print("9) Export plusses in Gargul style")
     print("10) Exit")
     
     try: sel = int(input("Select an option: "))
