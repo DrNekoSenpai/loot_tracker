@@ -459,10 +459,11 @@ while(True):
     print("4) Log a trade")
     print("5) Export loot")
     print("6) Remove a piece of loot")
-    print("7) Print out all players in the database")
-    print("8) Manual input from loot text file")
-    print("9) Export plusses in Gargul style")
-    print("10) Exit")
+    print("7) Remove a player from the database")
+    print("8) Print out all players in the database")
+    print("9) Manual input from loot text file")
+    print("10) Export plusses in Gargul style")
+    print("11) Exit")
     
     try: sel = int(input("Select an option: "))
     except: break
@@ -856,13 +857,66 @@ while(True):
         sending_player._log.remove(item_name)
 
     elif sel == 7: 
+        # Ask the user to enter the name of the player to be removed. 
+        remove_player = input("Enter the name of the player to be removed. Partial matching and case insensitivity are supported: ")
+
+        # Go through the list of players and check if there is a matching player. If so, print out the player's name.
+        # If there are no matches, print out an error message.
+
+        # Create a list to store the matches.
+        matches = []
+
+        # Go through the list of players and check if there is a matching player. If so, add it to the list of matches.
+        # Use partial matching and case insensitivity.
+
+        for p in players:
+            if remove_player.lower() in p.name.lower():
+                matches.append(p)
+
+        # If there are no matches, print out an error message.
+        if len(matches) == 0:
+            print("No matches found. Please double-check the player name and try again.")
+            continue
+
+        # If there is only one match, we'll use that player.
+        elif len(matches) == 1:
+            remove_player = matches[0].name
+
+        # If there are multiple matches, we'll print out the list of matches and ask the user to select one, using a numbered list.
+        else:
+            print("Multiple matches found.") 
+            for ind,val in enumerate(matches):
+                print(f"{ind+1}) {val.name}")
+
+            # Ask the user to select one.
+            try:
+                sel = int(input("Select a player: "))
+                remove_player = matches[sel-1].name
+            except:
+                print("Invalid selection.")
+                continue
+
+        # At this point, we've got the name of the player to be removed.
+        # Now, we'll confirm that we want to remove this specific player. 
+        # If not, return to the main menu.
+
+        confirm = input(f"Are you sure you want to remove {remove_player}? This cannot be undone. (y/n): ")
+        if confirm.lower() != "y":
+            continue
+
+        # If so, we'll remove the player from the list of players.
+        for p in players:
+            if p.name == remove_player:
+                players.remove(p)
+
+    elif sel == 8: 
         # Print out all players in the database; their name, number of plusses, and total number of items awarded.
         for p in players:
             print(f"{p.name} (+{p._regular_plusses} MS, +{p._soft_reserve_plusses} SR)")
             print(f"Total items awarded: {len(p._log)}")
             print("")
 
-    elif sel == 8: 
+    elif sel == 9: 
         # First, confirm that the user does want to overwrite all entries in the database, as this cannot be undone. 
         # If not, return to the main menu.
 
@@ -929,12 +983,12 @@ while(True):
 
         print("") # Move onto next person
 
-    elif sel == 9: 
+    elif sel == 10: 
         # Loop through each player in the list of players.
         for p in players: 
             # Print out their name, then the number of main-spec plusses. Ignore soft-reserve plusses.
             if p._regular_plusses > 0: 
                 print(f"{p.name} {p._regular_plusses}")
 
-    elif sel == 10:
+    elif sel == 11:
         break

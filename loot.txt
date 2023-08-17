@@ -1,52 +1,58 @@
-Catreene (+2 MS)
-- Solace of the Defeated (MS)
-- Belt of the Forgotten Martyr (MS)
+Prunejuuce (+3 MS)
+- Trophy of the Crusade (MS)
+- Girdle of Bloodied Scars (MS)
+- Signet of the Traitor King (MS)
 
-Dareaver (+2 MS)
-- Cuirass of Calamitous Fate (MS)
-- Lupine Longstaff (MS)
-
-Sighanama (+2 MS)
-- Ring of Callous Aggression (MS)
-- Sabatons of Ruthless Judgment (MS)
-
-Axsel (+1 MS)
-- Shawl of the Refreshing Winds (MS)
+Killadin (+2 MS)
+- Bracers of Cloudy Omen (MS)
+- Bastion of Purity (MS)
+- Dawnbreaker Greaves (OS)
 
 Bunniful (+1 MS)
-- Trophy of the Crusade (MS)
+- Shawl of the Refreshing Winds (MS)
+- Pattern: Lunar Eclipse Robes (ETC)
 
-Charlitta (+1 MS)
-- Ring of the Darkmender (MS)
+Catreene (+1 MS)
+- Wail of the Val'kyr (MS)
+
+Elisesolis (+1 MS)
+- Pride of the Eredar (MS)
+
+Ferrousblade (+1 MS)
+- Band of the Violent Temperment (MS)
 
 Flambeau (+1 MS)
 - Trophy of the Crusade (MS)
 
-Jwizard (+1 MS)
+Gnoya (+1 MS)
 - Trophy of the Crusade (MS)
-- Pattern: Merlin's Robe (ETC)
+
+Jwizard (+1 MS)
+- Blade of Tarasque (MS)
 
 Meemeemeemee (+1 MS)
 - Trophy of the Crusade (MS)
 
-Prunejuuce (+1 MS)
+Pastiry (+1 MS)
 - Trophy of the Crusade (MS)
-- Plans: Sunforged Bracers (ETC)
 
-Snedpie (+1 MS)
-- Cord of Biting Cold (MS)
+Sighanama (+1 MS)
+- Lupine Longstaff (MS)
 
 Soulreaverr (+1 MS)
-- Greaves of the 7th Legion (MS)
+- Strength of the Nerub (MS)
 
-Abletu (+0 MS)
-- Boots of the Unrelenting Storm (OS)
+Charlitta (+0 MS)
+- Chestguard of Flowing Elements (OS)
 
-Elisesolis (+0 MS)
-- Boneshatter Armplates (OS)
-- Gloves of Bitter Reprisal (OS)
+Poisolyn (+0 MS)
+- Twin Spike (OS)
+
+Skippitypaps (+0 MS)
+- Archon Glaive (OS)
+
+Snedpie (+0 MS)
+- Pattern: Royal Moonshroud Robe (ETC)
 
 _disenchanted
-- Vambraces of the Broken Bond
-- Breastplate of the Frozen Lake
-- Legguards of the Lurking Threat
+- Vestments of the Shattered Fellowship
