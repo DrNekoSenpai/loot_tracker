@@ -988,7 +988,7 @@ while(True):
         for p in players: 
             # Print out their name, then the number of main-spec plusses. Ignore soft-reserve plusses.
             if p._regular_plusses > 0: 
-                print(f"{p.name} {p._regular_plusses}")
+                print(f"{p.name},{p._regular_plusses}")
 
     elif sel == 11:
         break
