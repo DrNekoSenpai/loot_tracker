@@ -412,6 +412,38 @@ for m in matches:
     if m[0] not in all_items:
         all_items.append(m[0])
 
+url = "https://www.wowhead.com/wotlk/zone=4812/icecrown-citadel"
+
+# If the file called "icecrown-citadel.html" exists, read it. Otherwise, access the site and download it.
+# Ignore errors.
+
+if not os.path.exists("icecrown-citadel.html") or os.path.getsize("icecrown-citadel.html") == 0 or args.force_new:
+    # Get the HTML from the URL
+    html = requests.get(url).text
+
+    with open("icecrown-citadel.html", "w", errors="ignore") as f:
+        f.write(html)
+
+else:
+    with open("icecrown-citadel.html", "r", errors="ignore") as f:
+        html = f.read()
+
+# Parse the data.
+# Example string:
+# "name":"Rising Sun","quality":4
+
+# We want to extract the name and the quality.
+
+# use a regular expression to search for the name of each item, using re.findall().
+pattern = r'"name":"(.+?)","quality":(\d+)'
+matches = re.findall(pattern, html)
+
+# Add each item to the list of items, but only if the quality is 4 or higher (epic and legendary).
+# In addition, only add items that are not in the list already.
+for m in matches:
+    if m[0] not in all_items:
+        all_items.append(m[0])
+
 # If the debug flag is set, write the list of items to a file.
 if args.debug:
     with open("debug-items.txt", "w") as f:
