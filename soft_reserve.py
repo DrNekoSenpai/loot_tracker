@@ -450,34 +450,9 @@ if args.debug:
         for i in all_items:
             f.write(i + "\n")
 
-import requests
-import datetime
-
-def up_to_date(): 
-    # Get repository details from the GitHub API.
-    url = "https://api.github.com/repos/DrNekoSenpai/loot_tracker"
-    response = requests.get(url)
-    data = response.json()
-
-    # Get the date of the latest commit.
-    last_commit_date = datetime.datetime.strptime(data['pushed_at'], "%Y-%m-%dT%H:%M:%SZ")
-
-    # Grab the current date, and adjust for UTC time. 
-    current_date = datetime.datetime.utcnow()
-
-    if args.debug: 
-        print("Last commit date", last_commit_date)
-        print("Current date", current_date)
-
-    return last_commit_date < current_date
-
-if not up_to_date():
-    print("Error: the local repository is not up to date. Please pull the latest changes before running this script.")
-    print("To pull the latest changes, simply run the command 'git pull' in this terminal.")
-    exit(1)
-
-if args.debug:
-    print("The local repository is up to date.")
+def regular_keyboard(input_string): 
+    pattern = r"^[A-Za-z0-9 !@#$%^&*()\-=\[\]{}|;:'\",.<>/?\\_+]*$"
+    return re.match(pattern, input_string) is not None 
 
 # Main loop.
 while(True): 
@@ -634,6 +609,11 @@ while(True):
         else: new_players = [new_players]
 
         for new_player in new_players: 
+            
+            if not regular_keyboard(new_player):
+                print(f"Player name {new_player} is not valid. Please input the name manually.")
+                new_player = input("Name: ")
+
             # Convert to sentence case. 
             new_player = new_player.title()
             if len(new_player) > 12: 

@@ -1,58 +1,46 @@
-Prunejuuce (+3 MS)
-- Trophy of the Crusade (MS)
-- Girdle of Bloodied Scars (MS)
-- Signet of the Traitor King (MS)
+Abletu (+1 MS)
+- Boots of the Mourning Widow (MS)
+- Skyweaver Robes (OS)
 
-Killadin (+2 MS)
-- Bracers of Cloudy Omen (MS)
-- Bastion of Purity (MS)
-- Dawnbreaker Greaves (OS)
+Artaz (+1 MS)
+- The Executioner's Malice (MS)
 
-Bunniful (+1 MS)
-- Shawl of the Refreshing Winds (MS)
-- Pattern: Lunar Eclipse Robes (ETC)
-
-Catreene (+1 MS)
-- Wail of the Val'kyr (MS)
-
-Elisesolis (+1 MS)
-- Pride of the Eredar (MS)
+Fadetheheat (+1 MS)
+- Steel Bladebreaker (MS)
 
 Ferrousblade (+1 MS)
-- Band of the Violent Temperment (MS)
+- Trophy of the Crusade (MS)
 
 Flambeau (+1 MS)
 - Trophy of the Crusade (MS)
+- Belt of the Ice Burrower (OS)
 
-Gnoya (+1 MS)
+Gnoraa (+1 MS)
+- Symbol of Transgression (MS)
+
+Killit (+1 MS)
 - Trophy of the Crusade (MS)
 
-Jwizard (+1 MS)
-- Blade of Tarasque (MS)
+Medulla (+1 MS)
+- Satrina's Impeding Scarab (MS)
 
-Meemeemeemee (+1 MS)
-- Trophy of the Crusade (MS)
-
-Pastiry (+1 MS)
-- Trophy of the Crusade (MS)
+Poisolyn (+1 MS)
+- Treads of the Icewalker (MS)
 
 Sighanama (+1 MS)
-- Lupine Longstaff (MS)
+- Charge of the Demon Lord (MS)
+- Pattern: Moonshadow Armguards (ETC)
+- Pattern: Black Chitin Bracers (ETC)
 
-Soulreaverr (+1 MS)
-- Strength of the Nerub (MS)
+Snedpie (+1 MS)
+- Trophy of the Crusade (MS)
+- Cord of the Tenebrous Mist (OS)
 
-Charlitta (+0 MS)
-- Chestguard of Flowing Elements (OS)
-
-Poisolyn (+0 MS)
-- Twin Spike (OS)
-
-Skippitypaps (+0 MS)
-- Archon Glaive (OS)
-
-Snedpie (+0 MS)
+Mettybee (+0 MS)
 - Pattern: Royal Moonshroud Robe (ETC)
 
+Skippitypaps (+0 MS)
+- Dawnbreaker Greaves (OS)
+
 _disenchanted
-- Vestments of the Shattered Fellowship
+- Cord of Pale Thorns
