@@ -1,3 +1,8 @@
+Fadetheheat (+3 MS)
+- Steel Bladebreaker (MS)
+- Belt of Deathly Dominion (MS)
+- Archon Glaive (MS)
+
 Abletu (+1 MS)
 - Boots of the Mourning Widow (MS)
 - Skyweaver Robes (OS)
@@ -5,8 +10,8 @@ Abletu (+1 MS)
 Artaz (+1 MS)
 - The Executioner's Malice (MS)
 
-Fadetheheat (+1 MS)
-- Steel Bladebreaker (MS)
+Catreene (+1 MS)
+- Trophy of the Crusade (MS)
 
 Ferrousblade (+1 MS)
 - Trophy of the Crusade (MS)
@@ -24,6 +29,10 @@ Killit (+1 MS)
 Medulla (+1 MS)
 - Satrina's Impeding Scarab (MS)
 
+Mettybee (+1 MS)
+- Footpads of the Icy Floe (MS)
+- Pattern: Royal Moonshroud Robe (ETC)
+
 Poisolyn (+1 MS)
 - Treads of the Icewalker (MS)
 
@@ -31,16 +40,15 @@ Sighanama (+1 MS)
 - Charge of the Demon Lord (MS)
 - Pattern: Moonshadow Armguards (ETC)
 - Pattern: Black Chitin Bracers (ETC)
+- Pattern: Ensorcelled Nerubian Breastplate (ETC)
+
+Skippitypaps (+1 MS)
+- Strength of the Nerub (MS)
+- Dawnbreaker Greaves (OS)
 
 Snedpie (+1 MS)
 - Trophy of the Crusade (MS)
 - Cord of the Tenebrous Mist (OS)
-
-Mettybee (+0 MS)
-- Pattern: Royal Moonshroud Robe (ETC)
-
-Skippitypaps (+0 MS)
-- Dawnbreaker Greaves (OS)
 
 _disenchanted
 - Cord of Pale Thorns
