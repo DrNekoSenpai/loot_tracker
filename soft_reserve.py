@@ -348,84 +348,22 @@ def export_loot(mode="console"):
                     for l in p._log:
                         f.write(f"- {l.item}\n")
 
-url = "https://www.wowhead.com/wotlk/zone=4273/ulduar"
-
-# If the file called "ulduar.html" exists, read it. Otherwise, access the site and download it. 
-# Ignore errors. 
-if not os.path.exists("ulduar.html") or os.path.getsize("ulduar.html") == 0 or args.force_new:
-    # Get the HTML from the URL 
-    html = requests.get(url).text
-
-    with open("ulduar.html", "w", errors="ignore") as f:
-        f.write(html)
-
-else:
-    with open("ulduar.html", "r", errors="ignore") as f:
-        html = f.read()
-
-# Parse the data. 
-# Example string: 
-# "name":"Rising Sun","quality":4
-# We want to extract the name and the quality. 
-
-# Create a list to store the items.
 all_items = []
 
-# use a regular expression to search for the name of each item, using re.findall(). 
-pattern = r'"name":"(.+?)","quality":(\d+)'
-matches = re.findall(pattern, html)
+url = "https://www.wowhead.com/wotlk/items"
 
-# Add each item to the list of items, but only if the level is >= 80 and the quality is 4 or higher (epic and legendary).
-for m in matches:
-    if int(m[1]) >= 4:
-        all_items.append(m[0])
-
-url = "https://www.wowhead.com/wotlk/zone=4722/trial-of-the-crusader"
-
-# If the file called "trial-of-the-crusader.html" exists, read it. Otherwise, access the site and download it.
+# If the file called "items.html" exists, read it. Otherwise, access the site and download it.
 # Ignore errors.
 
-if not os.path.exists("trial-of-the-crusader.html") or os.path.getsize("trial-of-the-crusader.html") == 0 or args.force_new:
+if not os.path.exists("items.html") or os.path.getsize("items.html") == 0 or args.force_new:
     # Get the HTML from the URL
     html = requests.get(url).text
 
-    with open("trial-of-the-crusader.html", "w", errors="ignore") as f:
+    with open("items.html", "w", errors="ignore") as f:
         f.write(html)
 
 else:
-    with open("trial-of-the-crusader.html", "r", errors="ignore") as f:
-        html = f.read()
-
-# Parse the data.
-# Example string:
-# "name":"Rising Sun","quality":4
-
-# We want to extract the name and the quality.
-
-# use a regular expression to search for the name of each item, using re.findall().
-pattern = r'"name":"(.+?)","quality":(\d+)'
-matches = re.findall(pattern, html)
-
-# Add each item to the list of items, but only if the quality is 4 or higher (epic and legendary).
-# In addition, only add items that are not in the list already.
-for m in matches:
-    if m[0] not in all_items:
-        all_items.append(m[0])
-
-url = "https://www.wowhead.com/wotlk/zone=4812/icecrown-citadel"
-
-# If the file called "icecrown-citadel.html" exists, read it. Otherwise, access the site and download it.
-# Ignore errors.
-
-if not os.path.exists("icecrown-citadel.html") or os.path.getsize("icecrown-citadel.html") == 0 or args.force_new:
-    # Get the HTML from the URL
-    html = requests.get(url).text
-
-    with open("icecrown-citadel.html", "w", errors="ignore") as f:
-        f.write(html)
-
-else:
-    with open("icecrown-citadel.html", "r", errors="ignore") as f:
+    with open("items.html", "r", errors="ignore") as f:
         html = f.read()
 
 # Parse the data.
