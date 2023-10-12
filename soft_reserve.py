@@ -140,10 +140,6 @@ def import_softreserve(players):
         item = soft_res[0]
         name = soft_res[3]
 
-        # Exception: If the name is "Annathalcyon", skip it. 
-        if name == "Annathalcyon":
-            continue
-
         # Exception: If the name is "Class", skip it.
         if name == "Class":
             continue
@@ -398,15 +394,15 @@ while(True):
     export_loot("file")
     print("")
     print("Asylum of the Immortals Loot Tracker")
-    print("1) Award loot")
-    print("2) Manually add new players")
-    print("3) Clear ALL plusses")
+    print("1) Award loot") # 
+    print("2) Manually add new players") # 
+    print("3) Clear ALL plusses") # 
     print("4) Log a trade")
-    print("5) Export loot")
-    print("6) Remove a piece of loot")
-    print("7) Remove a player from the database")
-    print("8) Print out all players in the database")
-    print("9) Manual input from loot text file")
+    print("5) Export loot") # 
+    print("6) Remove a piece of loot") # 
+    print("7) Remove a player from the database") # 
+    print("8) Print out all players in the database") # not needed
+    print("9) Manual input from loot text file") # 
     print("10) Export plusses in Gargul style")
     print("11) Exit")
     
