@@ -48,7 +48,7 @@ class Log:
 class Player: 
     def __init__(self, name:str,  soft_reserve:List[str]):
         self.name = name
-        self.soft_reserve = soft_reserve
+        self._soft_reserve = soft_reserve
 
         self._regular_plusses = 0
         self._soft_reserve_plusses = 0
@@ -218,7 +218,7 @@ def import_softreserve(players):
             if p.name == name: 
                 player_exists = True
                 current_player = p
-                current_player.soft_reserve = []
+                current_player._soft_reserve = []
                 break
         
         if not player_exists: 
@@ -227,7 +227,7 @@ def import_softreserve(players):
             current_player = players[-1]
 
         # Add the item to the player's soft reserve list.
-        current_player.soft_reserve.append(item)
+        current_player._soft_reserve.append(item)
 
     return players
 
@@ -246,6 +246,7 @@ def award_loot(players):
     print("----------------------------------------")
     # First, we'll ask what item we're rolling off; supporting both case insensitivity and partial matching. 
     item = input("What item are we rolling off? ").lower()
+    if item == "": return players
     print("")
     # Then, we'll cross check this with our item database.
     item_matches = []
@@ -295,7 +296,7 @@ def award_loot(players):
 
     reserves = []
     for p in players: 
-        if item_match.name in p.soft_reserve and not any([item_match.name == log.item.name and item_match.ilvl == log.item.ilvl for log in p._history[slot_names[int(item_match.slot)]]]): 
+        if item_match.name in p._soft_reserve and not any([item_match.name == log.item.name and item_match.ilvl == log.item.ilvl for log in p._history[slot_names[int(item_match.slot)]]]): 
             reserves.append((p.name, p._soft_reserve_plusses))
     
     if len(reserves) > 0:
@@ -353,49 +354,44 @@ def award_loot(players):
     # We'll ask the user whether or not this is an off-spec roll, but only if the player is not on the reserves list.
     # If they are, it's a soft-reserve roll. 
     if player.name in [r[0] for r in reserves]: 
-        log = Log(player.name, item_match, "SR", datetime.now().strftime("%Y-%m-%d"))
+        roll_type = "SR"
+        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
         player._soft_reserve_plusses += 1
 
         if not raiding: 
             confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-            if confirm == "y":
-                player._history[slot_names[int(item_match.slot)]].append(log)
-                # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-                if item_match.ilvl == 277: 
-                    if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-                        player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), "SR", datetime.now().strftime("%Y-%m-%d"), "auto"))
-
         else: 
+            confirm = "y"
+        
+        if confirm == "y":
             player._history[slot_names[int(item_match.slot)]].append(log)
             # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
             if item_match.ilvl == 277: 
                 if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
                     player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), "SR", datetime.now().strftime("%Y-%m-%d"), "auto"))
+
     else: 
-        off_spec = input("Is this an off-spec roll? (y/n) ").lower()
+        off_spec = input("Is this an off-spec roll? (y/n): ").lower()
         if off_spec == "y": roll_type = "OS"
         else: roll_type = "MS"
     
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
-        if not off_spec: player._regular_plusses += 1
+        if not off_spec == "y": player._regular_plusses += 1
 
         if not raiding: 
             confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-            if confirm == "y":
-                player._history[slot_names[int(item_match.slot)]].append(log)
-                # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-                if item_match.ilvl == 277: 
-                    if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-                        player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
-
         else: 
-            player._history[slot_names[int(item_match.slot)]].append(log)
-            # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-            if item_match.ilvl == 277: 
-                if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+            confirm = "y"
+            
+        player._history[slot_names[int(item_match.slot)]].append(log)
+        # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
+        if item_match.ilvl == 277: 
+            if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
+                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+
+    print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
         
     return players
         
@@ -704,6 +700,8 @@ def remove_loot(players):
     index = player._history[slot_names[int(item.item.slot)]].index(item)
     player._history[slot_names[int(item.item.slot)]].pop(index)
 
+    return players
+
 def weekly_reset(players):
     confirm = input("Are you sure you want to reset the weekly loot? (y/n) ").lower()
     if confirm != "y":
@@ -716,6 +714,180 @@ def weekly_reset(players):
         p._soft_reserve_plusses = 0
 
     return players 
+
+def log_trade(players):
+    sending_player = input("Enter the name of the player who is trading the item: ").lower()
+
+    sending_matches = []
+    for p in players:
+        if sending_player in p.name.lower(): 
+            sending_matches.append(p)
+    
+    if len(sending_matches) == 0:
+        print("No matches found. Please double-check the player name and try again.")
+        return players
+    
+    elif len(sending_matches) == 1:
+        # We'll select this match, and then move on.
+        sending_player = sending_matches[0]
+
+    elif len(sending_matches) > 1:
+        # We'll print all of the matches, and ask them to select one.
+        print("Multiple matches found. Please select one of the following:")
+        for i in range(len(sending_matches)):
+            print(f"{i+1}. {sending_matches[i].name}")
+
+        # We'll ask the user to select a number.
+        sel = input("Select a number: ")
+        try:
+            sel = int(sel)
+            if sel < 1 or sel > len(sending_matches):
+                print("Invalid integer input.")
+                return players
+            
+        except:
+            print("Invalid non-convertible input.")
+            return players
+
+        # We'll select this match, and then move on.
+        sending_player = sending_matches[sel-1]
+
+    # We'll check the sending player's log to see if they have any items to trade.
+    if len(sending_player._raid_log) == 0:
+        print(f"{sending_player.name} has no items to trade.")
+        return players
+    
+    # We'll ask the user to select the item they want to trade.
+    # We'll print out the list of items they've won, and ask them to select one.
+    print("")
+    print("Select an item to trade:")
+    for i in range(len(sending_player._raid_log)):
+        print(f"{i+1}. {sending_player._raid_log[i].item.name} ({sending_player._raid_log[i].item.ilvl}) ({sending_player._raid_log[i].roll})")
+
+    item_index = input("Select a number: ")
+    try:
+        item_index = int(item_index)
+        if item_index < 1 or item_index > len(sending_player._raid_log):
+            print("Invalid integer input.")
+            return players
+        
+    except:
+        print("Invalid non-convertible input.")
+        return players
+    
+    item = sending_player._raid_log[item_index-1]
+
+    receiving_player = input("Enter the name of the player who is receiving the item: ").lower()
+
+    receiving_matches = []
+    for p in players:
+        if receiving_player in p.name.lower(): 
+            receiving_matches.append(p)
+
+    if len(receiving_matches) == 0:
+        print("No matches found. Please double-check the player name and try again.")
+        return players
+    
+    elif len(receiving_matches) == 1:
+        # We'll select this match, and then move on.
+        receiving_player = receiving_matches[0]
+
+    elif len(receiving_matches) > 1:
+        # We'll print all of the matches, and ask them to select one.
+        print("Multiple matches found. Please select one of the following:")
+        for i in range(len(receiving_matches)):
+            print(f"{i+1}. {receiving_matches[i].name}")
+
+        # We'll ask the user to select a number.
+        sel = input("Select a number: ")
+        try:
+            sel = int(sel)
+            if sel < 1 or sel > len(receiving_matches):
+                print("Invalid integer input.")
+                return players
+            
+        except:
+            print("Invalid non-convertible input.")
+            return players
+
+        # We'll select this match, and then move on.
+        receiving_player = receiving_matches[sel-1]
+
+    # We'll ask the user to confirm that they want to log this trade.
+    confirm = input(f"Are you sure you want to log a trade between {sending_player.name} and {receiving_player.name}? (y/n): ").lower()
+    if confirm != "y":
+        print("Aborting.")
+        return players
+    
+    # We'll remove the item from the sending player's log, as well as their history. 
+
+    sending_player._raid_log.pop(item_index-1)
+
+    # If it was a soft-reserve or a main-spec, we'll decrement the number of plusses. 
+    if item.roll == "SR": sending_player._soft_reserve_plusses -= 1
+    elif item.roll == "MS": sending_player._regular_plusses -= 1
+
+    # We'll check if the item is 277. If so, we'll remove the 264 version as well.
+    if item.item.ilvl == 277:
+        # First, check if there exists a 264 version of the item in the history; and if so, if the note is "auto". 
+
+        if any([item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in sending_player._history[slot_names[int(item.item.slot)]]]):
+            # If so, find the index of the 264 version, and use that to remove it. 
+            index = [item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in sending_player._history[slot_names[int(item.item.slot)]]].index(True)
+            sending_player._history[slot_names[int(item.item.slot)]].pop(index)
+
+    index = sending_player._history[slot_names[int(item.item.slot)]].index(item)
+    sending_player._history[slot_names[int(item.item.slot)]].pop(index)
+
+    # Once the item has been removed, we'll add it to the receiving player's log and history.
+
+    reserves = []
+    for p in players: 
+        if item.item.name in p._soft_reserve and not any([item.item.name == log.item.name and item.item.ilvl == log.item.ilvl for log in p._history[slot_names[int(item.item.slot)]]]):
+            reserves.append((p.name, p._soft_reserve_plusses))
+
+    if receiving_player.name in [r[0] for r in reserves]:
+        log = Log(receiving_player.name, item.item, "SR", datetime.now().strftime("%Y-%m-%d"))
+        receiving_player._raid_log.append(log)
+        receiving_player._soft_reserve_plusses += 1
+        roll_type = "SR"
+
+        if not raiding:
+            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
+        else: 
+            confirm = "y"
+
+        if confirm == "y":
+            receiving_player._history[slot_names[int(item.item.slot)]].append(log)
+            # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
+            if item.item.ilvl == 277: 
+                if not any([item.item.name == log.item.name and log.item.ilvl == 264 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
+                    receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 264, item.item.slot), "SR", datetime.now().strftime("%Y-%m-%d"), "auto"))
+
+    else:
+        off_spec = input("Is this an off-spec roll? (y/n): ").lower()
+        if off_spec == "y": roll_type = "OS"
+        else: roll_type = "MS"
+    
+        log = Log(receiving_player.name, item.item, roll_type, datetime.now().strftime("%Y-%m-%d"))
+        receiving_player._raid_log.append(log)
+        if not off_spec == "y": receiving_player._regular_plusses += 1
+
+        if not raiding:
+            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
+        else: 
+            confirm = "y"
+
+        if confirm == "y":
+            receiving_player._history[slot_names[int(item.item.slot)]].append(log)
+            # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
+            if item.item.ilvl == 277: 
+                if not any([item.item.name == log.item.name and log.item.ilvl == 264 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
+                    receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 264, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+
+    print(f"{receiving_player.name} has been awarded {item.item.name} ({item.item.ilvl}) as an {roll_type} item.")
+
+    return players
 
 while(True): 
     print("----------------------------------------")
@@ -750,10 +922,12 @@ while(True):
         print("Choose an option: ")
         print("a) Remove one piece of loot from a player")
         print("b) Weekly reset (clear plusses and raid logs, but not history)")
+        sel = input("Select an option: ").lower()
 
         if sel == "a": remove_loot(players)
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
+    elif sel == 7: players = log_trade(players)
     else: break
 
     export_pickle(players)
