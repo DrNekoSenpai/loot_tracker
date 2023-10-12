@@ -890,6 +890,8 @@ def log_trade(players):
     return players
 
 while(True): 
+    export_pickle(players)
+    
     print("----------------------------------------")
     print("Asylum of the Immortals Loot Tracker")
     print("1) Award loot")
@@ -929,5 +931,3 @@ while(True):
         else: print("Invalid option.")
     elif sel == 7: players = log_trade(players)
     else: break
-
-    export_pickle(players)
