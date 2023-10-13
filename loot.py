@@ -9,19 +9,6 @@ parser.add_argument("--force-new", "-f", help="Force the script to create a new 
 
 args = parser.parse_args()
 
-# Raid times: Wednesday, 6:00pm to 9:00pm; Sunday, 4:00pm to 7:00pm. 
-# We'll use the current date and time to determine whether or not we're currently raiding. If we are NOT, we'll use debug mode. 
-if datetime.now().weekday() == 2 and datetime.now().hour >= 18 and datetime.now().hour < 21: 
-    raiding = True
-
-elif datetime.now().weekday() == 6 and datetime.now().hour >= 16 and datetime.now().hour < 19:
-    raiding = True
-
-else:
-    raiding = False
-
-# print("Raiding:", raiding)
-
 class Item: 
     def __init__(self, name:str, ilvl:int, slot:int): 
         self.name = name
@@ -460,26 +447,20 @@ def award_loot(players):
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
         player._reserve_plusses += 1
-
-        if not raiding: 
-            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-        else: 
-            confirm = "y"
         
-        if confirm == "y":
-            if guild_name == "Dark Rising ": roll_type = "TMB"
-            else: roll_type = "SR"
+        if guild_name == "Dark Rising ": roll_type = "TMB"
+        else: roll_type = "SR"
 
-            player._history[slot_names[int(item_match.slot)]].append(log)
-            # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-            if item_match.ilvl == 277: 
-                if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+        player._history[slot_names[int(item_match.slot)]].append(log)
+        # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
+        if item_match.ilvl == 277: 
+            if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
+                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
-            # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
-            elif item_match.ilvl == 264: 
-                if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
-                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+        # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
+        elif item_match.ilvl == 264: 
+            if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
+                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
     else: 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
@@ -489,11 +470,6 @@ def award_loot(players):
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
         if not off_spec == "y": player._regular_plusses += 1
-
-        if not raiding: 
-            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-        else: 
-            confirm = "y"
             
         player._history[slot_names[int(item_match.slot)]].append(log)
         # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
@@ -1016,26 +992,20 @@ def log_trade(players):
         log = Log(receiving_player.name, item.item, roll_type, datetime.now().strftime("%Y-%m-%d"))
         receiving_player._raid_log.append(log)
         receiving_player._reserve_plusses += 1
-
-        if not raiding: 
-            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-        else: 
-            confirm = "y"
         
-        if confirm == "y":
-            if guild_name == "Dark Rising ": roll_type = "TMB"
-            else: roll_type = "SR"
+        if guild_name == "Dark Rising ": roll_type = "TMB"
+        else: roll_type = "SR"
 
-            receiving_player._history[slot_names[int(item.item.slot)]].append(log)
-            # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-            if item.item.ilvl == 277: 
-                if not any([item.item.name == log.item.name and log.item.ilvl == 264 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
-                    receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 264, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+        receiving_player._history[slot_names[int(item.item.slot)]].append(log)
+        # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
+        if item.item.ilvl == 277: 
+            if not any([item.item.name == log.item.name and log.item.ilvl == 264 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
+                receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 264, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
-            # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
-            elif item.item.ilvl == 264: 
-                if not any([item.item.name == log.item.name and log.item.ilvl == 251 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
-                    receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 251, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+        # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
+        elif item.item.ilvl == 264: 
+            if not any([item.item.name == log.item.name and log.item.ilvl == 251 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
+                receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 251, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
     else:
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
@@ -1045,11 +1015,6 @@ def log_trade(players):
         log = Log(receiving_player.name, item.item, roll_type, datetime.now().strftime("%Y-%m-%d"))
         receiving_player._raid_log.append(log)
         if not off_spec == "y": receiving_player._regular_plusses += 1
-
-        if not raiding: 
-            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-        else: 
-            confirm = "y"
             
         receiving_player._history[slot_names[int(item.item.slot)]].append(log)
         # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
