@@ -138,34 +138,39 @@ slot_names = {
     28: "Relic"
 }
 
-def import_pickle() -> list: 
+def import_pickle(): 
     # Import the pickle file
     try: 
         with open('players.pickle', 'rb') as f:
-            players = pickle.load(f)
+            players = list(pickle.load(f))
+
+        with open("guild_name.pickle", "rb") as f:
+            guild_name = pickle.load(f)
 
     except FileNotFoundError:
         print('No pickle file found. Creating a new one.')
         players = []
+        guild_name = ""
 
-    return players
+    return players, guild_name
 
-def export_pickle(players):
+def export_pickle(players, guild_name):
     # Export the pickle file
     with open('players.pickle', 'wb') as f:
         pickle.dump(players, f)
 
+    with open("guild_name.pickle", "wb") as f: 
+        pickle.dump(guild_name, f)
+
 # We'll import the pickle if the "--force-new" argument is not present.
 if not args.force_new:
-    players = import_pickle()
+    players, guild_name = import_pickle()
 else:
-    players = []
+    players, guild_name = []
 
     # Create a special player called "_disenchanted", for items that were not awarded to anyone.
     # This is used when no one rolls. 
     players.append(Player("_disenchanted", []))
-
-guild_name = ""
 
 def import_softreserve(players): 
     # We'll attempt to import reserve data from the CSV file. 
@@ -226,9 +231,9 @@ def import_softreserve(players):
             players.append(Player(name, guild_name, []))
             current_player = players[-1]
 
-        # Add the item to the player's reserve list.
-        current_player._reserves.append(item)
-        print(f'Added "{item}" to {name}\'s soft-reserve list.')
+        # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
+        if item not in current_player._reserves:
+            current_player._reserves.append(item)
 
     return players
 
@@ -268,8 +273,6 @@ def import_tmb(players):
         if name == "SÃµÃ§kÃ¶": name = "Socko"
         if name == "TÃ«l": name = "Tel"
 
-        # Check if the player is in the list of players. 
-        # If so, wipe their reserve. 
         player_exists = False
         current_player = None
         for p in players: 
@@ -283,9 +286,9 @@ def import_tmb(players):
             players.append(Player(name, guild_name, []))
             current_player = players[-1]
 
-        # Add the item to the player's reserve list.
-        current_player._reserves.append(item)
-        print(f'Added "{item}" to {name}\'s TMB list.')
+        # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
+        if item not in current_player._reserves:
+            current_player._reserves.append(item)
 
     return players
 
@@ -1070,47 +1073,242 @@ def sudo_mode(players):
         print("Aborting.")
         return players
     
-    print("---- SUDO MODE ----")
-    print("a) COMPLETELY wipe the pickle file")
-    print("b) Add or remove items from a player's raid log")
-    print("c) Add or remove items from a player's history")
-    print("d) Add or remove plusses from a player")
-    sel = input("Select an option: ").lower()
-    print("")
-
-    if sel == "a": 
-        print("WARNING: This will completely wipe the pickle file. This cannot be undone.")
-        print("Removing the pickle file will affect: ")
-        print("  - The loot history")
-        print("  - The reserve lists of ALL players, in BOTH guilds")
-        print("  - The names of ALL players, in BOTH guilds")
-        print("  - The plusses of ALL players, in BOTH guilds")
-
-        confirm = input("Are you sure you want to wipe the pickle file? (y/n): ").lower()
-        if confirm != "y": 
-            print("Aborting.")
-            return players
-
-        os.remove("players.pickle")
-        players = []
-
-    elif sel == "b":
-        print("Are we adding or removing items?")
-        print(" i) Adding")
-        print("ii) Removing")
+    while(True): 
+        print("---- SUDO MODE ----")
+        print("a. COMPLETELY wipe the pickle file")
+        print("b. Add or remove items from a player's history")
+        print("c. Add or remove plusses from a player")
+        print("d. Exit sudo mode")
         sel = input("Select an option: ").lower()
         print("")
 
-        if sel == "i":
-            pass
+        if sel == "a": 
+            print("WARNING: This will completely wipe the pickle file. This cannot be undone.")
+            print("Removing the pickle file will affect: ")
+            print("  - The loot history")
+            print("  - The reserve lists of ALL players, in BOTH guilds")
+            print("  - The names of ALL players, in BOTH guilds")
+            print("  - The plusses of ALL players, in BOTH guilds")
 
-        elif sel == "ii":
-            pass
+            confirm = input("Are you sure you want to wipe the pickle file? (y/n): ").lower()
+            if confirm == "y":
+                os.remove("players.pickle")
 
+            players = []
+
+        elif sel == "b": 
+            print("Who are we modifying?")
+            name = input("Name: ").lower()
+
+            player_matches = []
+            for p in players:
+                if name in p.name.lower(): 
+                    player_matches.append(p)
+
+            if len(player_matches) == 0:
+                print("No matches found. Please double-check the player name and try again.")
+            
+            elif len(player_matches) == 1:
+                # We'll select this match, and then move on.
+                player = player_matches[0]
+
+            elif len(player_matches) > 1:
+                # We'll print all of the matches, and ask them to select one.
+                print("Multiple matches found. Please select one of the following:")
+                for i in range(len(player_matches)):
+                    print(f"{i+1}. {player_matches[i].name}")
+
+                # We'll ask the user to select a number.
+                sel = input("Select a number: ")
+                try:
+                    sel = int(sel)
+                    if sel < 1 or sel > len(player_matches):
+                        print("Invalid integer input.")
+                    
+                except:
+                    print("Invalid non-convertible input.")
+
+                # We'll select this match, and then move on.
+                player = player_matches[sel-1]
+
+            print("Are we adding or removing items?")
+            print(" i. Adding")
+            print("ii. Removing")
+            sel = input("Select an option: ").lower()
+            print("")
+
+            if sel == "i":
+                item_name = input("Enter the name of the item: ").lower()
+
+                item_matches = []
+                for item in all_items.values():
+                    if item_name in item.name.lower(): 
+                        item_matches.append(item)
+
+                if len(item_matches) == 0:
+                    print("No matches found. Please double-check the item name and try again.")
+
+                elif len(item_matches) == 1:
+                    # We'll select this match, and then move on.
+                    item = item_matches[0]
+
+                elif len(item_matches) > 1:
+                    # We'll print all of the matches, and ask them to select one.
+                    print("Multiple matches found. Please select one of the following:")
+                    for i in range(len(item_matches)):
+                        print(f"{i+1}. {item_matches[i].name} ({item_matches[i].ilvl})")
+
+                    # We'll ask the user to select a number.
+                    sel = input("Select a number: ")
+                    try:
+                        sel = int(sel)
+                        if sel < 1 or sel > len(item_matches):
+                            print("Invalid integer input.")
+                        
+                    except:
+                        print("Invalid non-convertible input.")
+                        continue
+
+                    # We'll select this match, and then move on.
+                    item = item_matches[sel-1]
+
+                    # Check the player's reserve list to see if they have this item reserved.
+                    if player._guild == guild_name: 
+                        if item.name in player._reserves:
+                            if guild_name == "Dark Rising ": roll_type = "TMB"
+                            else: roll_type = "SR"
+                            print(f"{player.name} has {item.name} reserved. Roll-type auto-selected as {roll_type}.")
+
+                    else: 
+                        # Add this item to their history. 
+                        print("What type of roll was this?")
+                        print("a. Main-spec")
+                        print("b. Off-spec")
+                        print("c. ETC")
+
+                        sel = input("Select an option: ").lower()
+
+                        if sel == "a": roll_type = "MS"
+                        elif sel == "b": roll_type = "OS"
+                        elif sel == "c": roll_type = "ETC"
+
+                    print("What date was this item received? (YYYY-MM-DD)")
+                    date = input("Date: ")
+                    pattern = re.compile(r"^\d{4}-\d{1,2}-\d{1,2}$")
+                    if not pattern.match(date):
+                        print("Invalid date format.")
+
+                    note = input("Enter a note for this item (optional): ")
+
+                    player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date, note))
+            
+            elif sel == "ii":
+                # First, we must check if the player has any items in their history. If not, we'll tell them this player isn't a valid target. 
+                count = 0
+                for slot in player._history:
+                    if len(player._history[slot]) == 0: continue
+                    count += len(player._history[slot])
+                
+                if count == 0: 
+                    print("This player has no items in their history. Please select another player.")
+                    continue
+
+                # Print out the list of items they've won, and ask them to select one.
+                print("Select an item to remove:")
+                ind = 0
+                for slot in player._history:
+                    if len(player._history[slot]) == 0: continue
+                    for item in player._history[slot]: 
+                        print(f"{ind+1}. {item.item.name} ({item.item.ilvl}) ({item.roll}) ({item.date})")
+                        ind += 1
+
+                sel = input("Select a number: ")
+                try:
+                    sel = int(sel)
+                    if sel < 1 or sel > len(player._history[slot_names[int(item.item.slot)]]):
+                        print("Invalid integer input.")
+                    
+                except:
+                    print("Invalid non-convertible input.")
+                    
+                ind = 0
+                for slot in player._history:
+                    if len(player._history[slot]) == 0: continue
+                    for item in player._history[slot]: 
+                        if ind != sel-1: 
+                            ind += 1
+                            continue 
+                        item = player._history[slot][ind]
+
+                confirm = input("Are you sure you want to remove this item? (y/n): ").lower()
+                if confirm != "y":
+                    print("Aborting.")
+                    continue
+
+                player._history[slot_names[int(item.item.slot)]].remove(item)
+
+        elif sel == "c":
+            print("Who are we modifying?")
+            name = input("Name: ").lower()
+
+            player_matches = []
+            for p in players:
+                if name in p.name.lower(): 
+                    player_matches.append(p)
+
+            if len(player_matches) == 0:
+                print("No matches found. Please double-check the player name and try again.")
+            
+            elif len(player_matches) == 1:
+                # We'll select this match, and then move on.
+                player = player_matches[0]
+
+            elif len(player_matches) > 1:
+                # We'll print all of the matches, and ask them to select one.
+                print("Multiple matches found. Please select one of the following:")
+                for i in range(len(player_matches)):
+                    print(f"{i+1}. {player_matches[i].name}")
+
+                # We'll ask the user to select a number.
+                sel = input("Select a number: ")
+                try:
+                    sel = int(sel)
+                    if sel < 1 or sel > len(player_matches):
+                        print("Invalid integer input.")
+                    
+                except:
+                    print("Invalid non-convertible input.")
+
+                # We'll select this match, and then move on.
+                player = player_matches[sel-1]
+
+            reserve_type = "TMB" if guild_name == "Dark Rising " else "SR"
+            print(f"This player has {player._regular_plusses} regular plusses and {player._reserve_plusses} {reserve_type} plusses.") 
+
+            regular_plusses = input("How many regular plusses should they have? ")
+            try: regular_plusses = int(regular_plusses)
+            except:
+                print("Invalid integer input.")
+                continue
+
+            reserve_plusses = input(f"How many {reserve_type} plusses should they have? ")
+            try: reserve_plusses = int(reserve_plusses)
+            except:
+                print("Invalid integer input.")
+                continue
+
+            player._regular_plusses = regular_plusses
+            player._reserve_plusses = reserve_plusses
+
+        elif sel == "d":
+            print("Exiting sudo mode.")
+            return players 
+
+def sort(players): 
     return players 
 
 while(True): 
-    export_pickle(players)
+    export_pickle(players, guild_name)
     
     print("----------------------------------------")
     print(f"{guild_name}Loot Tracker")
@@ -1122,7 +1320,7 @@ while(True):
     print("6) Export THIS RAID's loot to a file")
     print("7) Remove loot, or weekly reset")
     print("8) Log a trade")
-    # print("9) Enter sudo mode")
+    print("9) Enter sudo mode (edit history, etc)")
 
     print("")
 
@@ -1131,7 +1329,6 @@ while(True):
 
     if sel == 1: players = award_loot(players)
     elif sel == 2: 
-        print("Choose an option: ")
         print("a) Import soft-reserve, for Asylum of the Immortals")
         print("b) Import TMB, for Dark Rising")
         sel = input("Select an option: ").lower()
@@ -1140,7 +1337,6 @@ while(True):
         elif sel == "b": players = import_tmb(players)
         else: print("Invalid option.")
     elif sel == 3: 
-        print("Choose an option: ")
         print("a) Add one or more players manually")
         print("b) Add all players from the details.txt file")
         sel = input("Select an option: ").lower()
@@ -1161,5 +1357,5 @@ while(True):
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
     elif sel == 8: players = log_trade(players)
-    # elif sel == 9: players = sudo_mode(players)
+    elif sel == 9: players = sudo_mode(players)
     else: break
