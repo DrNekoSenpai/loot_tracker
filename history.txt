@@ -1,10 +1,5 @@
 Snedpie: 1 items.
 
 Ring:
-  - Ring of Rapid Ascent (277) (SR) (2023-10-12)
-----------------------------------------
-Killiandra: 1 items.
-
-Ring:
-  - Ring of Rapid Ascent (264) (MS) (2023-10-12)
+  - Ring of Rapid Ascent (264) (SR) (2023-10-12)
 ----------------------------------------

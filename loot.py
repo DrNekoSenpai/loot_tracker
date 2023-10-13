@@ -1,5 +1,6 @@
-import pickle, requests, re, argparse, os, random
+import pickle, re, argparse, os
 from typing import List, Union
+from datetime import datetime
 
 parser = argparse.ArgumentParser()
 
@@ -7,8 +8,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--force-new", "-f", help="Force the script to create a new pickle file.", action="store_true")
 
 args = parser.parse_args()
-
-from datetime import datetime
 
 # Raid times: Wednesday, 6:00pm to 9:00pm; Sunday, 4:00pm to 7:00pm. 
 # We'll use the current date and time to determine whether or not we're currently raiding. If we are NOT, we'll use debug mode. 
@@ -21,7 +20,7 @@ elif datetime.now().weekday() == 6 and datetime.now().hour >= 16 and datetime.no
 else:
     raiding = False
 
-print("Raiding:", raiding)
+# print("Raiding:", raiding)
 
 class Item: 
     def __init__(self, name:str, ilvl:int, slot:int): 
@@ -35,7 +34,7 @@ class Log:
         Create a log entry.
         - Name: The name of the player
         - Item: The Item object of what was awarded
-        - Roll: Roll type (MS, OS, soft reserve)
+        - Roll: Roll type (MS, OS, reserve)
         - Date: The date the item was awarded
         """
 
@@ -46,12 +45,13 @@ class Log:
         self.note = note
 
 class Player: 
-    def __init__(self, name:str,  soft_reserve:List[str]):
+    def __init__(self, name:str, guild:str, reserves:List[str]):
         self.name = name
-        self._soft_reserve = soft_reserve
+        self._reserves = reserves
+        self._guild = guild
 
         self._regular_plusses = 0
-        self._soft_reserve_plusses = 0
+        self._reserve_plusses = 0
 
         self._raid_log = []
         self._history = {
@@ -99,7 +99,7 @@ for item in items:
         item_level = int(match.group(4))
         inventory_type = int(match.group(3))
 
-        if item_level < 200: continue
+        if item_level < 251: continue
 
         all_items[item_id] = Item(name, item_level, inventory_type)
 
@@ -138,12 +138,6 @@ slot_names = {
     28: "Relic"
 }
 
-with open("slots.txt", "w") as file: 
-    for slot in slot_names: 
-        file.write(f"{slot}: {slot_names[slot]}\n")
-        for item in slots[slot]: 
-            file.write(f"  - {item.name} ({item.ilvl})\n")
-
 def import_pickle() -> list: 
     # Import the pickle file
     try: 
@@ -171,17 +165,27 @@ else:
     # This is used when no one rolls. 
     players.append(Player("_disenchanted", []))
 
+guild_name = ""
+
 def import_softreserve(players): 
-    # We'll attempt to import soft reserve data from the CSV file. 
+    # We'll attempt to import reserve data from the CSV file. 
     if not os.path.exists("soft_reserves.csv"):
-        print("No soft reserve file found. Skipping.")
+        print("No reserve file found. Skipping.")
         return players
+    
+    global guild_name
+    guild_name = "Asylum of the Immortals "
+
+    # Go through the list of players, and wipe all reserves. 
+    for p in players: 
+        p._reserve = []
 
     with open("soft_reserves.csv", "r") as f: 
         sr_data = f.readlines()
 
     # Parse the data. 
-    for soft_res in sr_data: 
+    for ind,soft_res in enumerate(sr_data):
+        if ind == 0: continue # Header row 
         # Split the string into a list.
         soft_res = soft_res.split(",")
 
@@ -199,39 +203,91 @@ def import_softreserve(players):
         # Item
         item = soft_res[0]
         name = soft_res[3]
-
-        # Exception: If the name is "Class", skip it.
-        if name == "Class":
-            continue
-
-        # Exception: If the name is "KÃ­llit", change it to "Killit". Special characters are not allowed.
-        if name == "KÃ­llit":
-            name = "Killit"
+        
+        # Check if the player's name can be typed using the English keyboard. 
+        if not regular_keyboard(name):
+            print(f"Player name {name} is not valid. Please input the name manually.")
+            name = input("Name: ")
 
         # Search for an existing player object. Create it if it doesn't exist. 
 
         # Check if the player is in the list of players. 
-        # If so, wipe their soft reserve. 
+        # If so, wipe their reserve. 
         player_exists = False
         current_player = None
         for p in players: 
             if p.name == name: 
                 player_exists = True
                 current_player = p
-                current_player._soft_reserve = []
                 break
         
         if not player_exists: 
             # Create a new player object and append it the list. 
-            players.append(Player(name, []))
+            players.append(Player(name, guild_name, []))
             current_player = players[-1]
 
-        # Add the item to the player's soft reserve list.
-        current_player._soft_reserve.append(item)
+        # Add the item to the player's reserve list.
+        current_player._reserves.append(item)
+        print(f'Added "{item}" to {name}\'s soft-reserve list.')
 
     return players
 
-players = import_softreserve(players)
+def import_tmb(players): 
+    if not os.path.exists("thatsmybis.csv"): 
+        print("No TMB file found. Skipping.")
+        return players
+    
+    global guild_name
+    guild_name = "Dark Rising "
+
+    # Go through the list of players, and wipe all reserves. 
+    for p in players: 
+        p._reserve = []
+    
+    # type,raid_group_name,member_name,character_name,character_class,character_is_alt,character_inactive_at,character_note,sort_order,item_name,item_id,is_offspec,note,received_at,import_id,item_note,item_prio_note,officer_note,item_tier,item_tier_label,created_at,updated_at,instance_name,source_name
+    # wishlist,,Leytuhwee,Leytuhwee,Druid,0,,,1,"Vanquisher's Mark of Sanctification",52025,0,,,,,,,,,"2023-10-05 01:04:20","2023-10-05 01:04:20","Icecrown Citadel N10",Lana'thel
+
+    with open("thatsmybis.csv", "r") as f: 
+        tmb_data = f.readlines()
+
+    for ind,tmb_res in enumerate(tmb_data):
+        if ind == 0: continue # Header row
+        tmb_res = tmb_res.split(",")
+
+        if not tmb_res[10].isdigit():
+            tmb_res[9:11] = [",".join(tmb_res[9:11])]
+
+        # We'll remove all the quotes from the string. 
+        tmb_res = [x.replace('"', "") for x in tmb_res]
+
+        item = tmb_res[9]
+        name = tmb_res[3]
+
+        if name == "FlambeaÃ¼": name = "Flambeau"
+        if name == "KabÃ¨n": name = "Kaben"
+        if name == "SÃµÃ§kÃ¶": name = "Socko"
+        if name == "TÃ«l": name = "Tel"
+
+        # Check if the player is in the list of players. 
+        # If so, wipe their reserve. 
+        player_exists = False
+        current_player = None
+        for p in players: 
+            if p.name == name: 
+                player_exists = True
+                current_player = p
+                break
+        
+        if not player_exists: 
+            # Create a new player object and append it the list. 
+            players.append(Player(name, guild_name, []))
+            current_player = players[-1]
+
+        # Add the item to the player's reserve list.
+        current_player._reserves.append(item)
+        print(f'Added "{item}" to {name}\'s TMB list.')
+
+    return players
 
 def print_write(string, file=None):
     print(string)
@@ -290,21 +346,62 @@ def award_loot(players):
     print(f"Item: {item_match.name} ({item_match.ilvl})")
     print(f"Slot: {slot_names[int(item_match.slot)]}")
 
-    # We'll check the soft-reserves to see if anyone has this item soft-reserved, excluding anyone who has already won the same item, with the same item level. 
-    # For example, Ring of Rapid Ascent (264) and Ring of Rapid Ascent (277) are considered different items.
-    # We need to check the corresponding _history list, which is categorized based on slot. 
+    # We'll check the guild name, to see if it's an empty string. If so, we will completely skip soft-reserves. 
+    if guild_name != "": 
 
-    reserves = []
-    for p in players: 
-        if item_match.name in p._soft_reserve and not any([item_match.name == log.item.name and item_match.ilvl == log.item.ilvl for log in p._history[slot_names[int(item_match.slot)]]]): 
-            reserves.append((p.name, p._soft_reserve_plusses))
-    
-    if len(reserves) > 0:
-        print("")
-        print("The following people have soft-reserved this item:")
-        for r in reserves: 
-            print(f"  - {r[0]} (SR +{r[1]})")
+        # We'll check the soft-reserves to see if anyone has this item soft-reserved, excluding anyone who has already won the same item, with the same item level. 
+        # For example, Ring of Rapid Ascent (264) and Ring of Rapid Ascent (277) are considered different items.
+        # We need to check the corresponding _history list, which is categorized based on slot. 
+
+        reserves = []
+        downgrade = []
+
+        for p in players: 
+            # Skip this person if they're in the other guild. That is, if we're currently raiding with Asylum, and this person is in DR; or vice versa.
+            if p._guild != guild_name: continue
+
+            if item_match.name in p._reserves: 
+                # Only append the player to the reserves list if they have not already won the same item, with the same item level.
+                if not any([item_match.name == log.item.name and item_match.ilvl == log.item.ilvl for log in p._history[slot_names[int(item_match.slot)]]]):
+                    reserves.append((p.name, p._reserve_plusses, ""))
             
+            # If the item is 277, we'll check if the player p, has received the 264 version of the item.
+            # If so, we'll add them to the downgrade list.
+
+            if item_match.ilvl == 277:
+                if any([item_match.name == log.item.name and log.item.ilvl == 264 for log in p._history[slot_names[int(item_match.slot)]]]):
+                    downgrade.append((p.name, p._reserve_plusses, 264))
+
+            # If the item is 264, we'll check if there exists a corresponding 251 version of the item; and if they have received it. 
+            # If so, we'll add them to the downgrade list.
+
+            elif item_match.ilvl == 264:
+                if any([item_match.name == log.item.name and log.item.ilvl == 251 for log in p._history[slot_names[int(item_match.slot)]]]):
+                    downgrade.append((p.name, p._reserve_plusses, 251))
+        
+        if len(reserves) > 0:
+            # Sort the reserves list by reserve plusses, then by name.
+            reserves.sort(key=lambda x: (-x[1], x[0]))
+
+            print("")
+            if guild_name == "Dark Rising ": 
+                print("The following people have this item on their TMB list: ")
+                roll_type = "TMB"
+            
+            else: 
+                print("The following people have soft-reserved this item:")
+                roll_type = "SR"
+
+            for r in reserves: 
+                downgrade_exists = ""
+
+                for d in downgrade: 
+                    if r[0] == d[0]:
+                        downgrade_exists = f" (has {d[2]} version)" 
+                        break
+
+                print(f"  - {r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
+                
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
     name = input("Who won the roll? ").lower()
@@ -346,7 +443,7 @@ def award_loot(players):
 
     # If the player isn't on the reserves list, we'll ask to confirm that this is intentional. 
     if len(reserves) > 0 and player.name not in [r[0] for r in reserves]: 
-        confirm = input("This person is not on the reserves list. Are you sure this is intentional? (y/n) ").lower()
+        confirm = input("This person is not on the reserves list. Are you sure this is intentional? (y/n): ").lower()
         if confirm != "y": 
             print("Aborting.")
             return players
@@ -354,10 +451,12 @@ def award_loot(players):
     # We'll ask the user whether or not this is an off-spec roll, but only if the player is not on the reserves list.
     # If they are, it's a soft-reserve roll. 
     if player.name in [r[0] for r in reserves]: 
-        roll_type = "SR"
+        if guild_name == "Dark Rising ": roll_type = "TMB"
+        else: roll_type = "SR"
+
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
-        player._soft_reserve_plusses += 1
+        player._reserve_plusses += 1
 
         if not raiding: 
             confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
@@ -365,11 +464,19 @@ def award_loot(players):
             confirm = "y"
         
         if confirm == "y":
+            if guild_name == "Dark Rising ": roll_type = "TMB"
+            else: roll_type = "SR"
+
             player._history[slot_names[int(item_match.slot)]].append(log)
             # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
             if item_match.ilvl == 277: 
                 if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), "SR", datetime.now().strftime("%Y-%m-%d"), "auto"))
+                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+
+            # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
+            elif item_match.ilvl == 264: 
+                if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
+                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
     else: 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
@@ -391,6 +498,11 @@ def award_loot(players):
             if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
                 player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
+        # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
+        elif item_match.ilvl == 264: 
+            if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
+                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+
     print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
         
     return players
@@ -411,9 +523,6 @@ def add_players_manual(players):
 
         # Convert to sentence case. 
         new_player = new_player.title()
-        if len(new_player) > 12: 
-            print(f"ERROR: {new_player} is too long. Please enter a name that is 12 characters or less.")
-            continue
 
         # Check if the player already exists. If so, print out an error message and continue.
         found = False
@@ -437,7 +546,6 @@ def add_players_details(players):
     with open("details.txt", "r") as file: 
         lines = file.readlines()
 
-    import re
     new_players = []
 
     for ind,val in enumerate(lines):
@@ -464,7 +572,7 @@ def add_players_details(players):
                 continue
         
         if not found: 
-            players.append(Player(new_player, []))
+            players.append(Player(new_player, "", []))
             print(f"ADDED: {new_player}")
 
         else: 
@@ -473,6 +581,9 @@ def add_players_details(players):
     return players
 
 def print_history(): 
+    for p in players: 
+        for slot in p._history:
+            p._history[slot].sort(key=lambda x: (x.date, x.roll, -x.item.ilvl, x.item.name))
     print("----------------------------------------")
     # Ask the user to input the name of the player.
     name = input("Whose history are we checking? ").lower()
@@ -535,6 +646,10 @@ def print_history():
             print(f"  - {item.item.name} ({item.item.ilvl}) ({item.roll}) ({item.date})")
 
 def export_history(): 
+    for p in players: 
+        for slot in p._history:
+            p._history[slot].sort(key=lambda x: (x.date, x.roll, -x.item.ilvl, x.item.name))
+
     with open("history.txt", "w") as file:
         for player in players: 
             if sum([len(player._history[x]) for x in player._history]) == 0: 
@@ -573,7 +688,7 @@ def export_loot():
     # If the mode is "console", output to both console and file.
     # If the mode is "file", output to file only.
 
-    players.sort(key=lambda x: (-x._soft_reserve_plusses, -x._regular_plusses, x.name))
+    players.sort(key=lambda x: (-x._reserve_plusses, -x._regular_plusses, x.name))
 
     with open("loot.txt", "w") as f:
         # Print out the list of players.
@@ -588,7 +703,7 @@ def export_loot():
                 continue
 
             # Print out the player's name, and then the number of plusses they have; of both types.
-            f.write(f"{p.name} (+{p._regular_plusses} MS) (+{p._soft_reserve_plusses} SR)\n")
+            f.write(f"{p.name} (+{p._regular_plusses} MS) (+{p._reserve_plusses} {'TMB' if guild_name == 'Dark Rising ' else 'SR'})\n")
 
             for l in p._raid_log:
                 if l.roll == "MS":
@@ -601,6 +716,10 @@ def export_loot():
             for l in p._raid_log:
                 if l.roll == "SR":
                     f.write(f"- {l.item.name} (SR)\n")
+
+            for l in p._raid_log:
+                if l.roll == "TMB":
+                    f.write(f"- {l.item.name} (TMB)\n")
 
             for l in p._raid_log:
                 if l.roll == "ETC":
@@ -677,10 +796,21 @@ def remove_loot(players):
         return players 
     
     # We want to confirm that the user wants to remove this item.
-    confirm = input(f"Are you sure you want to remove {player._raid_log[sel-1].item.name} ({player._raid_log[sel-1].item.ilvl}) ({player._raid_log[sel-1].roll}) from {player.name}'s log? (y/n) ").lower()
+    confirm = input(f"Are you sure you want to remove {player._raid_log[sel-1].item.name} ({player._raid_log[sel-1].item.ilvl}) ({player._raid_log[sel-1].roll}) from {player.name}'s log? (y/n): ").lower()
     if confirm != "y": 
         print("Aborting.")
         return players
+    
+    # We'll check if the item was won through a main-spec roll. If so, we'll decrement regular plusses. 
+    # Similarly, if it's through a reserve roll, we'll decrement reserve plusses. 
+    if player._raid_log[sel-1].roll == "MS":
+        player._regular_plusses -= 1
+
+    elif player._raid_log[sel-1].roll == "SR":
+        player._reserve_plusses -= 1
+
+    elif player._raid_log[sel-1].roll == "TMB":
+        player._reserve_plusses -= 1
     
     # Remove the item from the player's log.
     item = player._raid_log[sel-1]
@@ -697,13 +827,22 @@ def remove_loot(players):
             index = [item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
             player._history[slot_names[int(item.item.slot)]].pop(index)
 
+    # We'll check if the item is 264. If so, we'll remove the 251 version as well.
+    elif item.item.ilvl == 264:
+        # First, check if there exists a 251 version of the item in the history; and if so, if the note is "auto". 
+
+        if any([item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
+            # If so, find the index of the 251 version, and use that to remove it. 
+            index = [item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
+            player._history[slot_names[int(item.item.slot)]].pop(index)
+
     index = player._history[slot_names[int(item.item.slot)]].index(item)
     player._history[slot_names[int(item.item.slot)]].pop(index)
 
     return players
 
 def weekly_reset(players):
-    confirm = input("Are you sure you want to reset the weekly loot? (y/n) ").lower()
+    confirm = input("Are you sure you want to reset the weekly loot? (y/n): ").lower()
     if confirm != "y":
         print("Aborting.")
         return players
@@ -711,7 +850,7 @@ def weekly_reset(players):
     for p in players: 
         p._raid_log = []
         p._regular_plusses = 0
-        p._soft_reserve_plusses = 0
+        p._reserve_plusses = 0
 
     return players 
 
@@ -819,13 +958,21 @@ def log_trade(players):
         print("Aborting.")
         return players
     
-    # We'll remove the item from the sending player's log, as well as their history. 
+    # We'll check if the item was won through a main-spec roll. If so, we'll decrement regular plusses. 
+    # Similarly, if it's through a reserve roll, we'll decrement reserve plusses. 
+    if sending_player._raid_log[sel-1].roll == "MS":
+        sending_player._regular_plusses -= 1
 
-    sending_player._raid_log.pop(item_index-1)
+    elif sending_player._raid_log[sel-1].roll == "SR":
+        sending_player._reserve_plusses -= 1
 
-    # If it was a soft-reserve or a main-spec, we'll decrement the number of plusses. 
-    if item.roll == "SR": sending_player._soft_reserve_plusses -= 1
-    elif item.roll == "MS": sending_player._regular_plusses -= 1
+    elif sending_player._raid_log[sel-1].roll == "TMB":
+        sending_player._reserve_plusses -= 1
+    
+    item = sending_player._raid_log[sel-1]
+    sending_player._raid_log.remove(item)
+
+    # Remove the item from the player's history. If it's a 277 item, remove the 264 version as well -- but only if the note is "auto".
 
     # We'll check if the item is 277. If so, we'll remove the 264 version as well.
     if item.item.ilvl == 277:
@@ -836,33 +983,56 @@ def log_trade(players):
             index = [item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in sending_player._history[slot_names[int(item.item.slot)]]].index(True)
             sending_player._history[slot_names[int(item.item.slot)]].pop(index)
 
+    # We'll check if the item is 264. If so, we'll remove the 251 version as well.
+    elif item.item.ilvl == 264:
+        # First, check if there exists a 251 version of the item in the history; and if so, if the note is "auto". 
+
+        if any([item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in sending_player._history[slot_names[int(item.item.slot)]]]):
+            # If so, find the index of the 251 version, and use that to remove it. 
+            index = [item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in sending_player._history[slot_names[int(item.item.slot)]]].index(True)
+            sending_player._history[slot_names[int(item.item.slot)]].pop(index)
+
     index = sending_player._history[slot_names[int(item.item.slot)]].index(item)
     sending_player._history[slot_names[int(item.item.slot)]].pop(index)
 
-    # Once the item has been removed, we'll add it to the receiving player's log and history.
-
     reserves = []
-    for p in players: 
-        if item.item.name in p._soft_reserve and not any([item.item.name == log.item.name and item.item.ilvl == log.item.ilvl for log in p._history[slot_names[int(item.item.slot)]]]):
-            reserves.append((p.name, p._soft_reserve_plusses))
+    for p in players:
+        if p.name == receiving_player.name: continue
+        if item.item.name in p._reserves: 
+            # Only append the player to the reserves list if they have not already won the same item, with the same item level.
+            if not any([item.item.name == log.item.name and item.item.ilvl == log.item.ilvl for log in p._history[slot_names[int(item.item.slot)]]]):
+                reserves.append((p.name, p._reserve_plusses, ""))
 
-    if receiving_player.name in [r[0] for r in reserves]:
-        log = Log(receiving_player.name, item.item, "SR", datetime.now().strftime("%Y-%m-%d"))
+    # Sort the reserves list by reserve plusses, then by name.
+    reserves.sort(key=lambda x: (-x[1], x[0]))
+
+    if receiving_player.name in [r[0] for r in reserves]: 
+        if guild_name == "Dark Rising ": roll_type = "TMB"
+        else: roll_type = "SR"
+
+        log = Log(receiving_player.name, item.item, roll_type, datetime.now().strftime("%Y-%m-%d"))
         receiving_player._raid_log.append(log)
-        receiving_player._soft_reserve_plusses += 1
-        roll_type = "SR"
+        receiving_player._reserve_plusses += 1
 
-        if not raiding:
+        if not raiding: 
             confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
         else: 
             confirm = "y"
-
+        
         if confirm == "y":
+            if guild_name == "Dark Rising ": roll_type = "TMB"
+            else: roll_type = "SR"
+
             receiving_player._history[slot_names[int(item.item.slot)]].append(log)
             # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
             if item.item.ilvl == 277: 
                 if not any([item.item.name == log.item.name and log.item.ilvl == 264 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
-                    receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 264, item.item.slot), "SR", datetime.now().strftime("%Y-%m-%d"), "auto"))
+                    receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 264, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+
+            # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
+            elif item.item.ilvl == 264: 
+                if not any([item.item.name == log.item.name and log.item.ilvl == 251 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
+                    receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 251, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
     else:
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
@@ -873,34 +1043,86 @@ def log_trade(players):
         receiving_player._raid_log.append(log)
         if not off_spec == "y": receiving_player._regular_plusses += 1
 
-        if not raiding:
+        if not raiding: 
             confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
         else: 
             confirm = "y"
+            
+        receiving_player._history[slot_names[int(item.item.slot)]].append(log)
+        # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
+        if item.item.ilvl == 277: 
+            if not any([item.item.name == log.item.name and log.item.ilvl == 264 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
+                receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 264, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
-        if confirm == "y":
-            receiving_player._history[slot_names[int(item.item.slot)]].append(log)
-            # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-            if item.item.ilvl == 277: 
-                if not any([item.item.name == log.item.name and log.item.ilvl == 264 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
-                    receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 264, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
-
-    print(f"{receiving_player.name} has been awarded {item.item.name} ({item.item.ilvl}) as an {roll_type} item.")
+        # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
+        elif item.item.ilvl == 264: 
+            if not any([item.item.name == log.item.name and log.item.ilvl == 251 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
+                receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 251, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
     return players
+
+def sudo_mode(players):
+    print("----------------------------------------")
+    print("WARNING: Sudo mode is a dangerous mode that allows you to modify a lot of things directly. Use with caution.")
+    
+    confirm = input("Are you sure you want to enter sudo mode? (y/n): ").lower()
+    if confirm != "y":
+        print("Aborting.")
+        return players
+    
+    print("---- SUDO MODE ----")
+    print("a) COMPLETELY wipe the pickle file")
+    print("b) Add or remove items from a player's raid log")
+    print("c) Add or remove items from a player's history")
+    print("d) Add or remove plusses from a player")
+    sel = input("Select an option: ").lower()
+    print("")
+
+    if sel == "a": 
+        print("WARNING: This will completely wipe the pickle file. This cannot be undone.")
+        print("Removing the pickle file will affect: ")
+        print("  - The loot history")
+        print("  - The reserve lists of ALL players, in BOTH guilds")
+        print("  - The names of ALL players, in BOTH guilds")
+        print("  - The plusses of ALL players, in BOTH guilds")
+
+        confirm = input("Are you sure you want to wipe the pickle file? (y/n): ").lower()
+        if confirm != "y": 
+            print("Aborting.")
+            return players
+
+        os.remove("players.pickle")
+        players = []
+
+    elif sel == "b":
+        print("Are we adding or removing items?")
+        print(" i) Adding")
+        print("ii) Removing")
+        sel = input("Select an option: ").lower()
+        print("")
+
+        if sel == "i":
+            pass
+
+        elif sel == "ii":
+            pass
+
+    return players 
 
 while(True): 
     export_pickle(players)
     
     print("----------------------------------------")
-    print("Asylum of the Immortals Loot Tracker")
+    print(f"{guild_name}Loot Tracker")
     print("1) Award loot")
-    print("2) Add players, manually or from details.txt")
-    print("3) Print out the history of a given player")
-    print("4) Export the loot history to a file")
-    print("5) Export THIS RAID's loot to a file")
-    print("6) Remove loot, or weekly reset")
-    print("7) Log a trade")
+    print("2) Import soft-reserve or TMB (or change guild)")
+    print("3) Add players, manually or from details.txt")
+    print("4) Print out the history of a given player")
+    print("5) Export the loot history to a file")
+    print("6) Export THIS RAID's loot to a file")
+    print("7) Remove loot, or weekly reset")
+    print("8) Log a trade")
+    # print("9) Enter sudo mode")
 
     print("")
 
@@ -910,6 +1132,15 @@ while(True):
     if sel == 1: players = award_loot(players)
     elif sel == 2: 
         print("Choose an option: ")
+        print("a) Import soft-reserve, for Asylum of the Immortals")
+        print("b) Import TMB, for Dark Rising")
+        sel = input("Select an option: ").lower()
+
+        if sel == "a": players = import_softreserve(players)
+        elif sel == "b": players = import_tmb(players)
+        else: print("Invalid option.")
+    elif sel == 3: 
+        print("Choose an option: ")
         print("a) Add one or more players manually")
         print("b) Add all players from the details.txt file")
         sel = input("Select an option: ").lower()
@@ -917,10 +1148,10 @@ while(True):
         if sel == "a": players = add_players_manual(players)
         elif sel == "b": players = add_players_details(players)
         else: print("Invalid option.")
-    elif sel == 3: print_history()
-    elif sel == 4: export_history()
-    elif sel == 5: export_loot()
-    elif sel == 6: 
+    elif sel == 4: print_history()
+    elif sel == 5: export_history()
+    elif sel == 6: export_loot()
+    elif sel == 7: 
         print("Choose an option: ")
         print("a) Remove one piece of loot from a player")
         print("b) Weekly reset (clear plusses and raid logs, but not history)")
@@ -929,5 +1160,6 @@ while(True):
         if sel == "a": remove_loot(players)
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
-    elif sel == 7: players = log_trade(players)
+    elif sel == 8: players = log_trade(players)
+    # elif sel == 9: players = sudo_mode(players)
     else: break
