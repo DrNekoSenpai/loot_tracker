@@ -1067,7 +1067,8 @@ def sudo_mode(players):
         print("a. COMPLETELY wipe the pickle file")
         print("b. Add or remove items from a player's history")
         print("c. Add or remove plusses from a player")
-        print("d. Exit sudo mode")
+        print(f"d. {'Enter' if not raiding else 'Exit'} raiding mode")
+        print("e. Exit sudo mode")
         sel = input("Select an option: ").lower()
         print("")
 
@@ -1289,7 +1290,12 @@ def sudo_mode(players):
             player._regular_plusses = regular_plusses
             player._reserve_plusses = reserve_plusses
 
-        elif sel == "d":
+        elif sel == "d": 
+            if raiding: print("Exiting raiding mode.")
+            else: print("Entering raiding mode.")
+            raiding = not raiding
+
+        elif sel == "e":
             print("Exiting sudo mode.")
             return players 
 
