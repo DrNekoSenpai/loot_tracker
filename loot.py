@@ -98,6 +98,8 @@ for item in items:
         item_level = int(match.group(4))
         inventory_type = int(match.group(3))
 
+        if item_level <= 251 and not "Mark of Sanctification" in name: continue
+
         if item_id == 52025: name += " (N25)"
         elif item_id == 52026: name += " (N25)"
         elif item_id == 52027: name += " (N25)"
@@ -155,6 +157,7 @@ def import_pickle():
         print('No pickle file found. Creating a new one.')
         players = []
         guild_name = ""
+        players.append(Player("_disenchanted", "", []))
 
     return players, guild_name
 
@@ -170,11 +173,11 @@ def export_pickle(players, guild_name):
 if not args.force_new:
     players, guild_name = import_pickle()
 else:
-    players, guild_name = []
+    players, guild_name = [], ""
 
     # Create a special player called "_disenchanted", for items that were not awarded to anyone.
     # This is used when no one rolls. 
-    players.append(Player("_disenchanted", []))
+    players.append(Player("_disenchanted", "", []))
 
 def import_softreserve(players): 
     # We'll attempt to import reserve data from the CSV file. 
@@ -353,6 +356,8 @@ def award_loot(players):
     print(f"Item: {item_match.name} ({item_match.ilvl})")
     print(f"Slot: {slot_names[int(item_match.slot)]}")
 
+    reserves = []
+
     # We'll check the guild name, to see if it's an empty string. If so, we will completely skip soft-reserves. 
     if guild_name != "": 
 
@@ -360,7 +365,6 @@ def award_loot(players):
         # For example, Ring of Rapid Ascent (264) and Ring of Rapid Ascent (277) are considered different items.
         # We need to check the corresponding _history list, which is categorized based on slot. 
 
-        reserves = []
         downgrade = []
 
         for p in players: 
@@ -453,6 +457,22 @@ def award_loot(players):
 
         # We'll select this match, and then move on.
         player = player_matches[sel-1]
+
+    if player.name == "_disenchanted":
+        if len(reserves) > 0: 
+            confirm = input("This item is reserved. Are you sure it should be disenchanted instead? (y/n): ").lower()
+            if confirm != "y":
+                print("Aborting.")
+                return players
+            
+        print(f"{item_match.name} ({item_match.ilvl}) has been disenchanted.")
+        # Find the disenchanted player. 
+        for p in players:
+            if p.name == "_disenchanted":
+                # Add the item to the player's history list.
+                p._raid_log.append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
+                p._history[slot_names[int(item_match.slot)]].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
+                return players
 
     # If the player isn't on the reserves list, we'll ask to confirm that this is intentional. 
     if len(reserves) > 0 and player.name not in [r[0] for r in reserves]: 
@@ -1124,6 +1144,7 @@ def sudo_mode(players, raiding):
                 os.remove("players.pickle")
 
             players = []
+            players.append(Player("_disenchanted", "", []))
 
         elif sel == "b": 
             print("Who are we modifying?")
@@ -1338,7 +1359,7 @@ def sudo_mode(players, raiding):
             print("Exiting sudo mode.")
             return players, raiding
 
-def export_gargul(): 
+def export_gargul(players): 
     with open("gargul.txt", "w") as file: 
         for p in players: 
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
@@ -1394,6 +1415,6 @@ while(True):
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
     elif sel == 8: players = log_trade(players)
-    elif sel == 9: export_gargul()
+    elif sel == 9: export_gargul(players)
     elif sel == 10: players, raiding = sudo_mode(players, raiding)
     else: break
