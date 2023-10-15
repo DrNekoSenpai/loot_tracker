@@ -1341,7 +1341,7 @@ def sudo_mode(players, raiding):
 def export_gargul(): 
     with open("gargul.txt", "w") as file: 
         for p in players: 
-            file.write(f"{p.name},{p._regular_plusses}\n")
+            if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
 
 while(True): 
     export_pickle(players, guild_name)
@@ -1351,9 +1351,9 @@ while(True):
     print(" 1) Award loot")
     print(" 2) Import soft-reserve or TMB (or change guild)")
     print(" 3) Add players, manually or from details.txt")
-    print(" 4) Print out the history of a given player")
-    print(" 5) Export the loot history to a file")
-    print(" 6) Export THIS RAID's loot to a file")
+    print(" 4) Export the loot history to a file")
+    print(" 5) Export THIS RAID's loot to a file")
+    print(" 6) Print out the history of a given player")
     print(" 7) Remove loot, or weekly reset")
     print(" 8) Log a trade")
     print(" 9) Export plusses in Gargul style")
@@ -1381,9 +1381,9 @@ while(True):
         if sel == "a": players = add_players_manual(players)
         elif sel == "b": players = add_players_details(players)
         else: print("Invalid option.")
-    elif sel == 4: print_history()
-    elif sel == 5: export_history()
-    elif sel == 6: export_loot()
+    elif sel == 4: export_history()
+    elif sel == 5: export_loot()
+    elif sel == 6: print_history()
     elif sel == 7: 
         print("Choose an option: ")
         print("a) Remove one piece of loot from a player")
