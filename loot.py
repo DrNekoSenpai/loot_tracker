@@ -44,6 +44,7 @@ class Player:
 
         self._raid_log = []
         self._history = {
+            "ETC": [], 
             "Head": [],
             "Neck": [],
             "Shoulder": [],
@@ -61,7 +62,6 @@ class Player:
             "Two-Hand": [],
             "Ranged": [], 
             "Relic": [],
-            "ETC": []
         }
 
 with open('items.sql') as items_file: 
@@ -69,6 +69,16 @@ with open('items.sql') as items_file:
     items = items.replace("'", '"')
     items = items.replace('\\"', "'")
     items = items.splitlines()
+
+    # NORMAL 25
+    # (52025,'Vanquisher\'s Mark of Sanctification',64877,4,0,1192,80,80,0),
+    # (52026,'Protector\'s Mark of Sanctification',64877,4,0,69,80,80,0),
+    # (52027,'Conqueror\'s Mark of Sanctification',64877,4,0,274,80,80,0),
+
+    # HEROIC 25
+    # (52028,'Vanquisher\'s Mark of Sanctification',64878,4,0,1192,80,80,0),
+    # (52029,'Protector\'s Mark of Sanctification',64878,4,0,69,80,80,0),
+    # (52030,'Conqueror\'s Mark of Sanctification',64878,4,0,274,80,80,0),
 
     with open("all_items.txt", 'w') as file: 
         for item in items: 
@@ -88,7 +98,12 @@ for item in items:
         item_level = int(match.group(4))
         inventory_type = int(match.group(3))
 
-        if item_level < 251: continue
+        if item_id == 52025: name += " (N25)"
+        elif item_id == 52026: name += " (N25)"
+        elif item_id == 52027: name += " (N25)"
+        elif item_id == 52028: name += " (H25)"
+        elif item_id == 52029: name += " (H25)"
+        elif item_id == 52030: name += " (H25)"
 
         all_items[item_id] = Item(name, item_level, inventory_type)
 
@@ -354,7 +369,13 @@ def award_loot(players):
 
             if item_match.name in p._reserves: 
                 # Only append the player to the reserves list if they have not already won the same item, with the same item level.
-                if not any([item_match.name == log.item.name and item_match.ilvl == log.item.ilvl for log in p._history[slot_names[int(item_match.slot)]]]):
+                already_received = False
+                for log in p._history[slot_names[int(item_match.slot)]]: 
+                    if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
+                        already_received = True
+                        break
+
+                if not already_received: 
                     reserves.append((p.name, p._reserve_plusses, ""))
             
             # If the item is 277, we'll check if the player p, has received the 264 version of the item.
@@ -465,12 +486,12 @@ def award_loot(players):
                 if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
                     player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
-            # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
+            # If the item level is 264, w e'll also add the 251 version to the history, but only if it's not already there.
             elif item_match.ilvl == 264: 
                 if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
                     player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
-    else: 
+    elif slot_names[int(item_match.slot)] != "ETC" or "Mark of Sanctification" in item_match.name: 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
         if off_spec == "y": roll_type = "OS"
         else: roll_type = "MS"
@@ -483,17 +504,31 @@ def award_loot(players):
             confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
         else: 
             confirm = "y"
-            
-        player._history[slot_names[int(item_match.slot)]].append(log)
-        # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-        if item_match.ilvl == 277: 
-            if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
-        # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
-        elif item_match.ilvl == 264: 
-            if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
-                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+        if confirm == "y": 
+            player._history[slot_names[int(item_match.slot)]].append(log)
+            # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
+            if item_match.ilvl == 277: 
+                if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
+                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+
+            # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
+            elif item_match.ilvl == 264: 
+                if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
+                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+
+    else: 
+        roll_type = "ETC"
+        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
+        player._raid_log.append(log)
+
+        if not raiding: 
+            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
+        else:
+            confirm = "y"
+
+        if confirm == "y":
+            player._history[slot_names[int(item_match.slot)]].append(log)
 
     print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
         
@@ -571,6 +606,9 @@ def add_players_details(players):
             print(f"ERROR: {new_player} already exists.")
     print("")
     return players
+
+def sort_loot(player): 
+    pass
 
 def print_history(): 
     for p in players: 
@@ -1039,21 +1077,22 @@ def log_trade(players):
             confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
         else: 
             confirm = "y"
-            
-        receiving_player._history[slot_names[int(item.item.slot)]].append(log)
-        # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-        if item.item.ilvl == 277: 
-            if not any([item.item.name == log.item.name and log.item.ilvl == 264 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
-                receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 264, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
-        # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
-        elif item.item.ilvl == 264: 
-            if not any([item.item.name == log.item.name and log.item.ilvl == 251 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
-                receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 251, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+        if confirm == "y": 
+            receiving_player._history[slot_names[int(item.item.slot)]].append(log)
+            # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
+            if item.item.ilvl == 277: 
+                if not any([item.item.name == log.item.name and log.item.ilvl == 264 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
+                    receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 264, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+
+            # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
+            elif item.item.ilvl == 264: 
+                if not any([item.item.name == log.item.name and log.item.ilvl == 251 for log in receiving_player._history[slot_names[int(item.item.slot)]]]):
+                    receiving_player._history[slot_names[int(item.item.slot)]].append(Log(receiving_player.name, Item(item.item.name, 251, item.item.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
     return players
 
-def sudo_mode(players):
+def sudo_mode(players, raiding):
     print("----------------------------------------")
     print("WARNING: Sudo mode is a dangerous mode that allows you to modify a lot of things directly. Use with caution.")
     
@@ -1297,10 +1336,12 @@ def sudo_mode(players):
 
         elif sel == "e":
             print("Exiting sudo mode.")
-            return players 
+            return players, raiding
 
-def sort(players): 
-    return players 
+def export_gargul(): 
+    with open("gargul.txt", "w") as file: 
+        for p in players: 
+            file.write(f"{p.name},{p._regular_plusses}\n")
 
 while(True): 
     export_pickle(players, guild_name)
@@ -1353,5 +1394,6 @@ while(True):
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
     elif sel == 8: players = log_trade(players)
-    elif sel == 9: players = sudo_mode(players)
+    elif sel == 9: export_gargul()
+    elif sel == 10: players, raiding = sudo_mode(players, raiding)
     else: break
