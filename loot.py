@@ -179,6 +179,19 @@ else:
     # This is used when no one rolls. 
     players.append(Player("_disenchanted", "", []))
 
+if guild_name == "": raiding = False 
+elif guild_name == "Asylum of the Immortals ": 
+    # Our raid times are: Sunday 4pm to 7pm, Wednesday 6pm to 8pm. If the CURRENT time is between these times, we are raiding. Otherwise, we are not.
+    if datetime.now().weekday() == 6 and datetime.now().hour >= 16 and datetime.now().hour < 19: raiding = True
+    elif datetime.now().weekday() == 2 and datetime.now().hour >= 18 and datetime.now().hour < 20: raiding = True
+    else: raiding = False
+
+elif guild_name == "Dark Rising ":
+    # Our raid times are: Tuesday 6pm to 8pm, Saturday 6pm to 10pm. If the CURRENT time is between these times, we are raiding. Otherwise, we are not.
+    if datetime.now().weekday() == 1 and datetime.now().hour >= 18 and datetime.now().hour < 20: raiding = True
+    elif datetime.now().weekday() == 5 and datetime.now().hour >= 18 and datetime.now().hour < 22: raiding = True
+    else: raiding = False
+
 def import_softreserve(players): 
     # We'll attempt to import reserve data from the CSV file. 
     if not os.path.exists("soft_reserves.csv"):
@@ -432,27 +445,9 @@ def award_loot(players):
                             downgrade_exists = f" (has {d[2]} version)" 
                             break
                     print(f"  - {r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
-                    
-                pyautogui.hotkey("alt", "tab")
 
-                pyautogui.write("/")
-                time.sleep(0.1)
-                pyautogui.write("rw")
-                time.sleep(0.1)
-                pyautogui.press("space")
-
-                pyautogui.write(f"The following people have soft-reserved this item, {item_match.name}:")
-
-                time.sleep(0.25)
-                pyautogui.press("enter")
-                time.sleep(0.25)
-
-                for r in reserves:
-                    downgrade_exists = ""
-                    for d in downgrade: 
-                        if r[0] == d[0]:
-                            downgrade_exists = f" (has {d[2]} version)" 
-                            break
+                if raiding: 
+                    pyautogui.hotkey("alt", "tab")
 
                     pyautogui.write("/")
                     time.sleep(0.1)
@@ -460,10 +455,29 @@ def award_loot(players):
                     time.sleep(0.1)
                     pyautogui.press("space")
 
-                    pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
+                    pyautogui.write(f"The following people have soft-reserved this item, {item_match.name}:")
+
                     time.sleep(0.25)
                     pyautogui.press("enter")
                     time.sleep(0.25)
+
+                    for r in reserves:
+                        downgrade_exists = ""
+                        for d in downgrade: 
+                            if r[0] == d[0]:
+                                downgrade_exists = f" (has {d[2]} version)" 
+                                break
+
+                        pyautogui.write("/")
+                        time.sleep(0.1)
+                        pyautogui.write("rw")
+                        time.sleep(0.1)
+                        pyautogui.press("space")
+
+                        pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
+                        time.sleep(0.25)
+                        pyautogui.press("enter")
+                        time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -1438,7 +1452,7 @@ while(True):
     export_pickle(players, guild_name)
     
     print("----------------------------------------")
-    print(f"{guild_name}Loot Tracker")
+    print(f"{guild_name}Loot Tracker{'' if raiding else ' (Debug Mode)'}")
     print(" 1) Award loot")
     print(" 2) Import soft-reserve or TMB (or change guild)")
     print(" 3) Add players, manually or from details.txt")
