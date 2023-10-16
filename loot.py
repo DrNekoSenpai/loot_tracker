@@ -434,7 +434,6 @@ def award_loot(players):
                     print(f"  - {r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
                     
                 pyautogui.hotkey("alt", "tab")
-                message = f"The following people have soft-reserved this item, {item_match.name}:"
 
                 pyautogui.write("/")
                 time.sleep(0.1)
@@ -442,7 +441,7 @@ def award_loot(players):
                 time.sleep(0.1)
                 pyautogui.press("space")
 
-                pyautogui.write(message)
+                pyautogui.write(f"The following people have soft-reserved this item, {item_match.name}:")
 
                 time.sleep(0.25)
                 pyautogui.press("enter")
