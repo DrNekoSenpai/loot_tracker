@@ -1,4 +1,4 @@
-import pickle, re, argparse, os
+import pickle, re, argparse, os, time, pyautogui
 from typing import List, Union
 from datetime import datetime
 
@@ -98,7 +98,7 @@ for item in items:
         item_level = int(match.group(4))
         inventory_type = int(match.group(3))
 
-        if item_level <= 251 and not "Mark of Sanctification" in name: continue
+        if item_level <= 251 and not "Mark of Sanctification" in name and not name == "Shadowfrost Shard": continue
 
         if item_id == 52025: name += " (N25)"
         elif item_id == 52026: name += " (N25)"
@@ -215,6 +215,8 @@ def import_softreserve(players):
         # Item
         item = soft_res[0]
         name = soft_res[3]
+
+        if name == "Swiftblades": name = "Swiftbladess"
         
         # Check if the player's name can be typed using the English keyboard. 
         if not regular_keyboard(name):
@@ -398,27 +400,72 @@ def award_loot(players):
         
         if len(reserves) > 0:
             # Sort the reserves list by reserve plusses, then by name.
-            reserves.sort(key=lambda x: (-x[1], x[0]))
+            reserves.sort(key=lambda x: (x[1], x[0]))
 
             print("")
             if guild_name == "Dark Rising ": 
                 print("The following people have this item on their TMB list: ")
                 roll_type = "TMB"
+
+                for r in reserves: 
+                    downgrade_exists = ""
+                    for d in downgrade: 
+                        if r[0] == d[0]:
+                            downgrade_exists = f" (has {d[2]} version)" 
+                            break
+                    print(f"  - {r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
+
+                for r in reserves:
+                    downgrade_exists = ""
+                    for d in downgrade: 
+                        if r[0] == d[0]:
+                            downgrade_exists = f" (has {d[2]} version)" 
+                            break
             
             else: 
                 print("The following people have soft-reserved this item:")
                 roll_type = "SR"
+                for r in reserves: 
+                    downgrade_exists = ""
+                    for d in downgrade: 
+                        if r[0] == d[0]:
+                            downgrade_exists = f" (has {d[2]} version)" 
+                            break
+                    print(f"  - {r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
+                    
+                pyautogui.hotkey("alt", "tab")
+                message = f"The following people have soft-reserved this item, {item_match.name}:"
 
-            for r in reserves: 
-                downgrade_exists = ""
+                pyautogui.write("/")
+                time.sleep(0.1)
+                pyautogui.write("rw")
+                time.sleep(0.1)
+                pyautogui.press("space")
 
-                for d in downgrade: 
-                    if r[0] == d[0]:
-                        downgrade_exists = f" (has {d[2]} version)" 
-                        break
+                pyautogui.write(message)
 
-                print(f"  - {r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
-                
+                time.sleep(0.25)
+                pyautogui.press("enter")
+                time.sleep(0.25)
+
+                for r in reserves:
+                    downgrade_exists = ""
+                    for d in downgrade: 
+                        if r[0] == d[0]:
+                            downgrade_exists = f" (has {d[2]} version)" 
+                            break
+
+                    pyautogui.write("/")
+                    time.sleep(0.1)
+                    pyautogui.write("rw")
+                    time.sleep(0.1)
+                    pyautogui.press("space")
+
+                    pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
+                    time.sleep(0.25)
+                    pyautogui.press("enter")
+                    time.sleep(0.25)
+
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
     name = input("Who won the roll? ").lower()
@@ -580,7 +627,7 @@ def add_players_manual(players):
         
         if not found: 
             # If not, create a new player object and add it to the list of players.
-            players.append(Player(new_player, []))
+            players.append(Player(new_player, "", []))
             print(f"ADDED: {new_player}")
 
         else: 
@@ -703,23 +750,47 @@ def export_history():
     with open("history.txt", "w") as file:
         for player in players: 
             if sum([len(player._history[x]) for x in player._history]) == 0: 
-                continue
+                continue          
             
+            shards = []
             num_items = []
+
+            # Shards are always in the ETC slot. 
+            for item in player._history["ETC"]:
+                if item.item.name == "Shadowfrost Shard": 
+                    shards.append(item)
+
             for slot in player._history:
                 if len(player._history[slot]) == 0: continue
                 for item in player._history[slot]: 
                     if item.note == "auto": continue
+                    if item.item.name == "Shadowfrost Shard": continue
                     num_items.append(item)
             file.write(f"{player.name}: {len(num_items)} items.\n")
 
             file.write("\n")
+            shards_written = False 
             for slot in player._history:
                 if len(player._history[slot]) == 0: continue
                 file.write(f"{slot}:\n")
                 for item in player._history[slot]: 
                     if item.note == "auto": continue
-                    file.write(f"  - {item.item.name} ({item.item.ilvl}) ({item.roll}) ({item.date})\n")
+                    # print(item.item.name)
+                    if item.item.name == "Shadowfrost Shard" and not shards_written:
+                        # Find the item id, this is the key of the item in the dictionary
+                        for key, value in all_items.items():
+                            if value.name == item.item.name:
+                                link = f"https://www.wowhead.com/wotlk/item={key}"
+                                break
+                        file.write(f"  \- [{item.item.name} **{len(shards)}x**]({link})\n")
+                        shards_written = True
+                    elif not item.item.name == "Shadowfrost Shard": 
+                        # Find the item id, this is the key of the item in the dictionary
+                        for key, value in all_items.items():
+                            if value.name == item.item.name:
+                                link = f"https://www.wowhead.com/wotlk/item={key}"
+                                break
+                        file.write(f"  \- [{item.item.name}]({link}) ({item.item.ilvl}) ({item.roll}) ({item.date})\n")
             file.write("----------------------------------------\n")
 
 def export_loot(): 

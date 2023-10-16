@@ -1,0 +1,61 @@
+Bunniful: 1 items.
+
+Ring:
+  \- [Loop of the Endless Labyrinth](https://www.wowhead.com/wotlk/item=49977) (264) (SR) (2023-10-15)
+----------------------------------------
+Ferrousblade: 1 items.
+
+Ring:
+  \- [Skeleton Lord's Circle](https://www.wowhead.com/wotlk/item=49999) (264) (SR) (2023-10-15)
+----------------------------------------
+Killiandra: 1 items.
+
+Two-Hand:
+  \- [Nibelung](https://www.wowhead.com/wotlk/item=49992) (264) (SR) (2023-10-15)
+----------------------------------------
+Lorniras: 1 items.
+
+Hands:
+  \- [Gunship Captain's Mittens](https://www.wowhead.com/wotlk/item=50011) (264) (SR) (2023-10-15)
+----------------------------------------
+Soulreaverr: 1 items.
+
+Trinket:
+  \- [Deathbringer's Will](https://www.wowhead.com/wotlk/item=50362) (264) (SR) (2023-10-15)
+----------------------------------------
+Strixien: 1 items.
+
+Main-Hand:
+  \- [Frozen Bonespike](https://www.wowhead.com/wotlk/item=49968) (264) (SR) (2023-10-15)
+----------------------------------------
+Swiftbladess: 1 items.
+
+Ring:
+  \- [Band of the Bone Colossus](https://www.wowhead.com/wotlk/item=49949) (264) (SR) (2023-10-15)
+----------------------------------------
+Artaz: 1 items.
+
+ETC:
+  \- [Shadowfrost Shard **3x**](https://www.wowhead.com/wotlk/item=50274)
+  \- [Vanquisher's Mark of Sanctification (N25)](https://www.wowhead.com/wotlk/item=52025) (80) (MS) (2023-10-15)
+----------------------------------------
+Darkfern: 1 items.
+
+ETC:
+  \- [Vanquisher's Mark of Sanctification (N25)](https://www.wowhead.com/wotlk/item=52025) (80) (MS) (2023-10-15)
+----------------------------------------
+Elisesolis: 1 items.
+
+Trinket:
+  \- [Corpse Tongue Coin](https://www.wowhead.com/wotlk/item=50352) (264) (MS) (2023-10-15)
+----------------------------------------
+Miatotems: 1 items.
+
+Ring:
+  \- [Ring of Maddening Whispers](https://www.wowhead.com/wotlk/item=49990) (264) (MS) (2023-10-15)
+----------------------------------------
+Sighanama: 1 items.
+
+Ranged:
+  \- [Zod's Repeating Longbow](https://www.wowhead.com/wotlk/item=50034) (264) (MS) (2023-10-15)
+----------------------------------------
