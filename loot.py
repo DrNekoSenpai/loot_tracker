@@ -588,6 +588,7 @@ def award_loot(players):
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
         player._reserve_plusses += 1
+        player._regular_plusses += 1
 
         if not raiding: 
             confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
@@ -923,9 +924,11 @@ def remove_loot(players):
 
     elif player._raid_log[sel-1].roll == "SR":
         player._reserve_plusses -= 1
+        player._regular_plusses -= 1
 
     elif player._raid_log[sel-1].roll == "TMB":
         player._reserve_plusses -= 1
+        player._regular_plusses -= 1
     
     # Remove the item from the player's log.
     item = player._raid_log[sel-1]
@@ -1080,9 +1083,11 @@ def log_trade(players):
 
     elif sending_player._raid_log[sel-1].roll == "SR":
         sending_player._reserve_plusses -= 1
+        sending_player._regular_plusses -= 1
 
     elif sending_player._raid_log[sel-1].roll == "TMB":
         sending_player._reserve_plusses -= 1
+        sending_player._regular_plusses -= 1
     
     item = sending_player._raid_log[sel-1]
     sending_player._raid_log.remove(item)
@@ -1128,6 +1133,7 @@ def log_trade(players):
         log = Log(receiving_player.name, item.item, roll_type, datetime.now().strftime("%Y-%m-%d"))
         receiving_player._raid_log.append(log)
         receiving_player._reserve_plusses += 1
+        receiving_player._regular_plusses += 1
 
         if not raiding: 
             confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
