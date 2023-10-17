@@ -1,6 +1,9 @@
 import pickle, re, argparse, os, time, pyautogui, subprocess
 from typing import List, Union
 from datetime import datetime
+# import redirect_stdout
+from contextlib import redirect_stdout as redirect
+from io import StringIO
 
 parser = argparse.ArgumentParser()
 
@@ -16,7 +19,9 @@ def up_to_date():
     # Return TRUE if the version is up to date.
     try:
         # Fetch the latest changes from the remote repository without merging or pulling
-        subprocess.check_output("git fetch", shell=True)
+        # Redirect output, because we don't want to see it.
+        with redirect(StringIO()):
+            subprocess.check_output("git fetch", shell=True)
 
         # Compare the local HEAD with the remote HEAD
         local_head = subprocess.check_output("git rev-parse HEAD", shell=True).decode().strip()
@@ -29,7 +34,7 @@ def up_to_date():
         return False
     
 if not up_to_date():
-    print("Error: Updates available for pulling. Please pull the latest changes and try again.")
+    print("Error: Updates available for pulling. Please pull the latest changes (using 'git pull') and try again.")
     exit()
 
 class Item: 
