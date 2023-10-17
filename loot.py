@@ -280,8 +280,7 @@ def import_softreserve(players):
             current_player = players[-1]
 
         # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
-        if item not in current_player._reserves:
-            current_player._reserves.append(item)
+        current_player._reserves.append(item)
 
     return players
 
@@ -406,36 +405,46 @@ def award_loot(players):
         # For example, Ring of Rapid Ascent (264) and Ring of Rapid Ascent (277) are considered different items.
         # We need to check the corresponding _history list, which is categorized based on slot. 
 
-        downgrade = []
-
         for p in players: 
             # Skip this person if they're in the other guild. That is, if we're currently raiding with Asylum, and this person is in DR; or vice versa.
             if p._guild != guild_name: continue
 
             if item_match.name in p._reserves: 
-                # Only append the player to the reserves list if they have not already won the same item, with the same item level.
-                already_received = False
-                for log in p._history[slot_names[int(item_match.slot)]]: 
-                    if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
-                        already_received = True
-                        break
+                # First, we should check if the player has double-reserved this item; that is, if they want two.
+                if p._reserves.count(item_match.name) > 1:
+                    num_received = 0
+                    for log in p._history[slot_names[int(item_match.slot)]]: 
+                        if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
+                            num_received += 1
+                    
+                    if num_received != 2: 
+                        if item_match.ilvl == 277: 
+                            # We want to check if the player has already won the 264 version of this item. If so, we'll add a note to the reserves list.
+                            num_received_264 = 0
+                            for log in p._history[slot_names[int(item_match.slot)]]: 
+                                if log.item.name == item_match.name and log.item.ilvl == 264: 
+                                    num_received_264 += 1
+                            
+                            reserves.append((p.name, p._reserve_plusses, f" (ilvl 277: {num_received}/2, ilvl 264: {num_received_264}/2)"))
+                                
+                        else: 
+                            reserves.append((p.name, p._reserve_plusses, f" (ilvl 264: {num_received}/2)"))
 
-                if not already_received: 
-                    reserves.append((p.name, p._reserve_plusses, ""))
-            
-            # If the item is 277, we'll check if the player p, has received the 264 version of the item.
-            # If so, we'll add them to the downgrade list.
+                else: 
+                    # Only append the player to the reserves list if they have not already won the same item, with the same item level.
+                    already_received = False
+                    for log in p._history[slot_names[int(item_match.slot)]]: 
+                        if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
+                            already_received = True
+                            break
 
-            if item_match.ilvl == 277:
-                if any([item_match.name == log.item.name and log.item.ilvl == 264 for log in p._history[slot_names[int(item_match.slot)]]]):
-                    downgrade.append((p.name, p._reserve_plusses, 264))
+                    if not already_received: 
+                        if item_match.ilvl == 277: 
+                            if any([item_match.name == log.item.name and log.item.ilvl == 264 for log in p._history[slot_names[int(item_match.slot)]]]):
+                                reserves.append((p.name, p._reserve_plusses, f" (has 264 version)"))
 
-            # If the item is 264, we'll check if there exists a corresponding 251 version of the item; and if they have received it. 
-            # If so, we'll add them to the downgrade list.
-
-            elif item_match.ilvl == 264:
-                if any([item_match.name == log.item.name and log.item.ilvl == 251 for log in p._history[slot_names[int(item_match.slot)]]]):
-                    downgrade.append((p.name, p._reserve_plusses, 251))
+                        else: 
+                            reserves.append((p.name, p._reserve_plusses, ""))
         
         if len(reserves) > 0:
             # Sort the reserves list by reserve plusses, then by name.
@@ -443,34 +452,43 @@ def award_loot(players):
 
             print("")
             if guild_name == "Dark Rising ": 
-                print("The following people have this item on their TMB list: ")
+                print(f"The following people have this item, {item_match.name}, on their TMB list: ")
                 roll_type = "TMB"
-
                 for r in reserves: 
-                    downgrade_exists = ""
-                    for d in downgrade: 
-                        if r[0] == d[0]:
-                            downgrade_exists = f" (has {d[2]} version)" 
-                            break
-                    print(f"  - {r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
+                    print(f"  - {r[0]} ({roll_type} +{r[1]}){r[2]}")
 
-                for r in reserves:
-                    downgrade_exists = ""
-                    for d in downgrade: 
-                        if r[0] == d[0]:
-                            downgrade_exists = f" (has {d[2]} version)" 
-                            break
-            
+                # if raiding: 
+                #     pyautogui.hotkey("alt", "tab")
+
+                #     pyautogui.write("/")
+                #     time.sleep(0.1)
+                #     pyautogui.write("rw")
+                #     time.sleep(0.1)
+                #     pyautogui.press("space")
+
+                #     pyautogui.write(f"The following people have this item, {item_match.name}, on their TMB list: ")
+
+                #     time.sleep(0.25)
+                #     pyautogui.press("enter")
+                #     time.sleep(0.25)
+
+                #     for r in reserves:
+                #         pyautogui.write("/")
+                #         time.sleep(0.1)
+                #         pyautogui.write("rw")
+                #         time.sleep(0.1)
+                #         pyautogui.press("space")
+
+                #         pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){r[2]}")
+                #         time.sleep(0.25)
+                #         pyautogui.press("enter")
+                #         time.sleep(0.25)
+
             else: 
                 print("The following people have soft-reserved this item:")
                 roll_type = "SR"
                 for r in reserves: 
-                    downgrade_exists = ""
-                    for d in downgrade: 
-                        if r[0] == d[0]:
-                            downgrade_exists = f" (has {d[2]} version)" 
-                            break
-                    print(f"  - {r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
+                    print(f"  - {r[0]} ({roll_type} +{r[1]}){r[2]}")
 
                 if raiding: 
                     pyautogui.hotkey("alt", "tab")
@@ -488,19 +506,13 @@ def award_loot(players):
                     time.sleep(0.25)
 
                     for r in reserves:
-                        downgrade_exists = ""
-                        for d in downgrade: 
-                            if r[0] == d[0]:
-                                downgrade_exists = f" (has {d[2]} version)" 
-                                break
-
                         pyautogui.write("/")
                         time.sleep(0.1)
                         pyautogui.write("rw")
                         time.sleep(0.1)
                         pyautogui.press("space")
 
-                        pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){downgrade_exists}")
+                        pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){r[2]}")
                         time.sleep(0.25)
                         pyautogui.press("enter")
                         time.sleep(0.25)
@@ -713,74 +725,6 @@ def add_players_details(players):
     print("")
     return players
 
-def sort_loot(player): 
-    pass
-
-def print_history(): 
-    for p in players: 
-        for slot in p._history:
-            p._history[slot].sort(key=lambda x: (x.date, x.roll, -x.item.ilvl, x.item.name))
-    print("----------------------------------------")
-    # Ask the user to input the name of the player.
-    name = input("Whose history are we checking? ").lower()
-
-    player_matches = []
-    for p in players:
-        if name in p.name.lower(): 
-            player_matches.append(p)
-    
-    if len(player_matches) == 0:
-        print("No matches found. Please double-check the player name and try again.")
-        return
-    
-    elif len(player_matches) == 1:
-        # We'll select this match, and then move on.
-        player = player_matches[0]
-
-    elif len(player_matches) > 1:
-        # We'll print all of the matches, and ask them to select one.
-        print("Multiple matches found. Please select one of the following:")
-        for i in range(len(player_matches)):
-            print(f"{i+1}. {player_matches[i].name}")
-
-        # We'll ask the user to select a number.
-        sel = input("Select a number: ")
-        try:
-            sel = int(sel)
-            if sel < 1 or sel > len(player_matches):
-                print("Invalid integer input.")
-                return
-            
-        except:
-            print("Invalid non-convertible input.")
-            return
-
-        # We'll select this match, and then move on.
-        player = player_matches[sel-1]
-
-    # First, check if the player has received ANY items. Check the number of items in all their different _history lists. If not, print a message and exit.
-    if sum([len(player._history[x]) for x in player._history]) == 0: 
-        print(f"{player.name} has not received any items.")
-        return
-    
-    # Otherwise, print out the history of the player. Print out the total number of items they've received, and then print out the items in each slot. Skip slots that are empty, or items that have the note "auto" attached to them. 
-
-    num_items = []
-    for slot in player._history:
-        if len(player._history[slot]) == 0: continue
-        for item in player._history[slot]: 
-            # if item.note == "auto": continue
-            num_items.append(item)
-    print(f"{player.name} has received {len(num_items)} items.")
-
-    print("")
-    for slot in player._history:
-        if len(player._history[slot]) == 0: continue
-        print(f"{slot}:")
-        for item in player._history[slot]: 
-            # if item.note == "auto": continue
-            print(f"  - {item.item.name} ({item.item.ilvl}) ({item.roll}) ({item.date})")
-
 def export_history(): 
     # Sort the players by alphabetical order.
     players.sort(key=lambda x: x.name)
@@ -814,10 +758,10 @@ def export_history():
                     num_items.append(item)
             file.write(f"{player.name}: {len(num_items)} items.\n")
 
-            file.write("\n")
             shards_written = False 
             for slot in player._history:
                 if len(player._history[slot]) == 0: continue
+                file.write("\n")
                 file.write(f"{slot}:\n")
                 for item in player._history[slot]: 
                     if item.note == "auto": continue
@@ -1492,16 +1436,15 @@ while(True):
     
     print("----------------------------------------")
     print(f"{guild_name}Loot Tracker{'' if raiding else ' (Debug Mode)'}")
-    print(" 1) Award loot")
-    print(" 2) Import soft-reserve or TMB (or change guild)")
-    print(" 3) Add players, manually or from details.txt")
-    print(" 4) Export the loot history to a file")
-    print(" 5) Export THIS RAID's loot to a file")
-    print(" 6) Print out the history of a given player")
-    print(" 7) Remove loot, or weekly reset")
-    print(" 8) Log a trade")
-    print(" 9) Export plusses in Gargul style")
-    print("10) Enter sudo mode (edit history, plusses, enter debug mode)")
+    print("1) Award loot")
+    print("2) Import soft-reserve or TMB (or change guild)")
+    print("3) Add players, manually or from details.txt")
+    print("4) Export the loot history to a file")
+    print("5) Export THIS RAID's loot to a file")
+    print("6) Remove loot, or weekly reset")
+    print("7) Log a trade")
+    print("8) Export plusses in Gargul style")
+    print("9) Enter sudo mode (edit history, plusses, enter debug mode)")
 
     print("")
 
@@ -1527,8 +1470,7 @@ while(True):
         else: print("Invalid option.")
     elif sel == 4: export_history()
     elif sel == 5: export_loot()
-    elif sel == 6: print_history()
-    elif sel == 7: 
+    elif sel == 6: 
         print("Choose an option: ")
         print("a) Remove one piece of loot from a player")
         print("b) Weekly reset (clear plusses and raid logs, but not history)")
@@ -1537,7 +1479,7 @@ while(True):
         if sel == "a": remove_loot(players)
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
-    elif sel == 8: players = log_trade(players)
-    elif sel == 9: export_gargul(players)
-    elif sel == 10: players, raiding = sudo_mode(players, raiding)
+    elif sel == 7: players = log_trade(players)
+    elif sel == 8: export_gargul(players)
+    elif sel == 9: players, raiding = sudo_mode(players, raiding)
     else: break
