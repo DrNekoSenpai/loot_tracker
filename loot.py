@@ -174,7 +174,7 @@ def import_pickle():
     # Import the pickle file
     try: 
         with open('players.pickle', 'rb') as f:
-            players = list(pickle.load(f))
+            players = pickle.load(f)
 
         with open("guild_name.pickle", "rb") as f:
             guild_name = pickle.load(f)
@@ -782,9 +782,16 @@ def print_history():
             print(f"  - {item.item.name} ({item.item.ilvl}) ({item.roll}) ({item.date})")
 
 def export_history(): 
+    # Sort the players by alphabetical order.
+    players.sort(key=lambda x: x.name)
+
     for p in players: 
         for slot in p._history:
-            p._history[slot].sort(key=lambda x: (x.date, x.roll, -x.item.ilvl, x.item.name))
+            # If the slot is ETC, sort it so that shards are first. 
+            if slot == "ETC":
+                p._history[slot].sort(key=lambda x: (x.item.name != "Shadowfrost Shard", x.date, x.roll, -x.item.ilvl, x.item.name))
+            else: 
+                p._history[slot].sort(key=lambda x: (x.date, x.roll, -x.item.ilvl, x.item.name))
 
     with open("history.txt", "w") as file:
         for player in players: 
@@ -823,6 +830,7 @@ def export_history():
                                 break
                         file.write(f"  \- [{item.item.name} ({len(shards)}x)]({link})\n")
                         shards_written = True
+
                     elif not item.item.name == "Shadowfrost Shard": 
                         # Find the item id, this is the key of the item in the dictionary
                         for key, value in all_items.items():
@@ -830,7 +838,7 @@ def export_history():
                                 link = f"https://www.wowhead.com/wotlk/item={key}"
                                 break
                         if not "Mark of Sanctification" in item.item.name: 
-                            file.write(f"  \- [{item.item.name}]({link}) ({item.item.ilvl}) ({item.roll}) ({item.date})\n")
+                            file.write(f"  \- [{item.item.name} ({item.item.ilvl})]({link}) ({item.roll}) ({item.date})\n")
                         else: 
                             file.write(f"  \- [{item.item.name}]({link}) ({item.roll}) ({item.date})\n")
             file.write("----------------------------------------\n")
