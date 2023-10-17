@@ -36,10 +36,9 @@ def up_to_date():
         print(f"Error: {e}")
         return False
     
-if up_to_date:
-    print("No updates available.")
-else:
-    print("Updates available for pulling.")
+if not up_to_date():
+    print("Error: Updates available for pulling. Please pull the latest changes and try again.")
+    exit()
 
 class Item: 
     def __init__(self, name:str, ilvl:int, slot:int): 
