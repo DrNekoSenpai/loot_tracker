@@ -14,7 +14,7 @@ raiding = True
 def up_to_date(): 
     # Return FALSE if there is a new version available.
     # Return TRUE if the version is up to date.
-    repo_path = "https://github.com/DrNekoSenpai/loot_tracker"
+    repo_path = "https://github.com/DrNekoSenpai/loot_tracker.git"
     try:
         # Navigate to the repo's directory
         original_dir = subprocess.check_output("pwd", shell=True).decode().strip()
