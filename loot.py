@@ -14,7 +14,6 @@ raiding = True
 def up_to_date(): 
     # Return FALSE if there is a new version available.
     # Return TRUE if the version is up to date.
-    repo_path = "."
     try:
         # Fetch the latest changes from the remote repository without merging or pulling
         subprocess.check_output("git fetch", shell=True)
