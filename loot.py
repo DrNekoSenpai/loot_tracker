@@ -1,4 +1,4 @@
-import pickle, re, argparse, os, time, pyautogui
+import pickle, re, argparse, os, time, pyautogui, subprocess
 from typing import List, Union
 from datetime import datetime
 
@@ -10,6 +10,36 @@ parser.add_argument("--force-new", "-f", help="Force the script to create a new 
 args = parser.parse_args()
 
 raiding = True
+
+def up_to_date(): 
+    # Return FALSE if there is a new version available.
+    # Return TRUE if the version is up to date.
+    repo_path = "https://github.com/DrNekoSenpai/loot_tracker"
+    try:
+        # Navigate to the repo's directory
+        original_dir = subprocess.check_output("pwd", shell=True).decode().strip()
+        subprocess.check_output(f"cd {repo_path}", shell=True)
+
+        # Fetch the latest changes from the remote repository without merging or pulling
+        subprocess.check_output("git fetch", shell=True)
+
+        # Compare the local HEAD with the remote HEAD
+        local_head = subprocess.check_output("git rev-parse HEAD", shell=True).decode().strip()
+        remote_head = subprocess.check_output("git rev-parse @{u}", shell=True).decode().strip()
+
+        # Return to the original directory
+        subprocess.check_output(f"cd {original_dir}", shell=True)
+
+        return local_head == remote_head
+
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
+        return False
+    
+if up_to_date:
+    print("No updates available.")
+else:
+    print("Updates available for pulling.")
 
 class Item: 
     def __init__(self, name:str, ilvl:int, slot:int): 
@@ -795,7 +825,7 @@ def export_history():
                             if value.name == item.item.name:
                                 link = f"https://www.wowhead.com/wotlk/item={key}"
                                 break
-                        file.write(f"  \- [{item.item.name} **{len(shards)}x**]({link})\n")
+                        file.write(f"  \- [{item.item.name} ({len(shards)}x)]({link})\n")
                         shards_written = True
                     elif not item.item.name == "Shadowfrost Shard": 
                         # Find the item id, this is the key of the item in the dictionary
@@ -803,7 +833,10 @@ def export_history():
                             if value.name == item.item.name:
                                 link = f"https://www.wowhead.com/wotlk/item={key}"
                                 break
-                        file.write(f"  \- [{item.item.name}]({link}) ({item.item.ilvl}) ({item.roll}) ({item.date})\n")
+                        if not "Mark of Sanctification" in item.item.name: 
+                            file.write(f"  \- [{item.item.name}]({link}) ({item.item.ilvl}) ({item.roll}) ({item.date})\n")
+                        else: 
+                            file.write(f"  \- [{item.item.name}]({link}) ({item.roll}) ({item.date})\n")
             file.write("----------------------------------------\n")
 
 def export_loot(): 
