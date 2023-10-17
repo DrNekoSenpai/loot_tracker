@@ -14,21 +14,14 @@ raiding = True
 def up_to_date(): 
     # Return FALSE if there is a new version available.
     # Return TRUE if the version is up to date.
-    repo_path = "https://github.com/DrNekoSenpai/loot_tracker.git"
+    repo_path = "."
     try:
-        # Navigate to the repo's directory
-        original_dir = subprocess.check_output("pwd", shell=True).decode().strip()
-        subprocess.check_output(f"cd {repo_path}", shell=True)
-
         # Fetch the latest changes from the remote repository without merging or pulling
         subprocess.check_output("git fetch", shell=True)
 
         # Compare the local HEAD with the remote HEAD
         local_head = subprocess.check_output("git rev-parse HEAD", shell=True).decode().strip()
         remote_head = subprocess.check_output("git rev-parse @{u}", shell=True).decode().strip()
-
-        # Return to the original directory
-        subprocess.check_output(f"cd {original_dir}", shell=True)
 
         return local_head == remote_head
 
