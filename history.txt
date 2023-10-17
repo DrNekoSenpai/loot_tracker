@@ -1,7 +1,23 @@
+Artaz: 1 items.
+
+ETC:
+  \- [Shadowfrost Shard (3x)](https://www.wowhead.com/wotlk/item=50274)
+  \- [Vanquisher's Mark of Sanctification (N25)](https://www.wowhead.com/wotlk/item=52025) (MS) (2023-10-15)
+----------------------------------------
 Bunniful: 1 items.
 
 Ring:
   \- [Loop of the Endless Labyrinth](https://www.wowhead.com/wotlk/item=49977) (264) (SR) (2023-10-15)
+----------------------------------------
+Darkfern: 1 items.
+
+ETC:
+  \- [Vanquisher's Mark of Sanctification (N25)](https://www.wowhead.com/wotlk/item=52025) (MS) (2023-10-15)
+----------------------------------------
+Elisesolis: 1 items.
+
+Trinket:
+  \- [Corpse Tongue Coin](https://www.wowhead.com/wotlk/item=50352) (264) (MS) (2023-10-15)
 ----------------------------------------
 Ferrousblade: 1 items.
 
@@ -18,6 +34,16 @@ Lorniras: 1 items.
 Hands:
   \- [Gunship Captain's Mittens](https://www.wowhead.com/wotlk/item=50011) (264) (SR) (2023-10-15)
 ----------------------------------------
+Miatotems: 1 items.
+
+Ring:
+  \- [Ring of Maddening Whispers](https://www.wowhead.com/wotlk/item=49990) (264) (MS) (2023-10-15)
+----------------------------------------
+Sighanama: 1 items.
+
+Ranged:
+  \- [Zod's Repeating Longbow](https://www.wowhead.com/wotlk/item=50034) (264) (MS) (2023-10-15)
+----------------------------------------
 Soulreaverr: 1 items.
 
 Trinket:
@@ -32,30 +58,4 @@ Swiftbladess: 1 items.
 
 Ring:
   \- [Band of the Bone Colossus](https://www.wowhead.com/wotlk/item=49949) (264) (SR) (2023-10-15)
-----------------------------------------
-Artaz: 1 items.
-
-ETC:
-  \- [Shadowfrost Shard **3x**](https://www.wowhead.com/wotlk/item=50274)
-  \- [Vanquisher's Mark of Sanctification (N25)](https://www.wowhead.com/wotlk/item=52025) (80) (MS) (2023-10-15)
-----------------------------------------
-Darkfern: 1 items.
-
-ETC:
-  \- [Vanquisher's Mark of Sanctification (N25)](https://www.wowhead.com/wotlk/item=52025) (80) (MS) (2023-10-15)
-----------------------------------------
-Elisesolis: 1 items.
-
-Trinket:
-  \- [Corpse Tongue Coin](https://www.wowhead.com/wotlk/item=50352) (264) (MS) (2023-10-15)
-----------------------------------------
-Miatotems: 1 items.
-
-Ring:
-  \- [Ring of Maddening Whispers](https://www.wowhead.com/wotlk/item=49990) (264) (MS) (2023-10-15)
-----------------------------------------
-Sighanama: 1 items.
-
-Ranged:
-  \- [Zod's Repeating Longbow](https://www.wowhead.com/wotlk/item=50034) (264) (MS) (2023-10-15)
 ----------------------------------------

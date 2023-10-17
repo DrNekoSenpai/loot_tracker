@@ -1010,10 +1010,10 @@ def weekly_reset(players):
         print("Aborting.")
         return players
 
-    for p in players: 
-        p._raid_log = []
-        p._regular_plusses = 0
-        p._reserve_plusses = 0
+    for i in range(len(players)): 
+        players[i]._raid_log = []
+        players[i]._regular_plusses = 0
+        players[i]._reserve_plusses = 0
 
     return players 
 
@@ -1270,6 +1270,7 @@ def sudo_mode(players, raiding):
 
             if len(player_matches) == 0:
                 print("No matches found. Please double-check the player name and try again.")
+                continue
             
             elif len(player_matches) == 1:
                 # We'll select this match, and then move on.
@@ -1287,9 +1288,11 @@ def sudo_mode(players, raiding):
                     sel = int(sel)
                     if sel < 1 or sel > len(player_matches):
                         print("Invalid integer input.")
+                        continue
                     
                 except:
                     print("Invalid non-convertible input.")
+                    continue
 
                 # We'll select this match, and then move on.
                 player = player_matches[sel-1]
@@ -1310,6 +1313,7 @@ def sudo_mode(players, raiding):
 
                 if len(item_matches) == 0:
                     print("No matches found. Please double-check the item name and try again.")
+                    continue
 
                 elif len(item_matches) == 1:
                     # We'll select this match, and then move on.
@@ -1327,6 +1331,7 @@ def sudo_mode(players, raiding):
                         sel = int(sel)
                         if sel < 1 or sel > len(item_matches):
                             print("Invalid integer input.")
+                            continue
                         
                     except:
                         print("Invalid non-convertible input.")
@@ -1335,35 +1340,32 @@ def sudo_mode(players, raiding):
                     # We'll select this match, and then move on.
                     item = item_matches[sel-1]
 
-                    # Check the player's reserve list to see if they have this item reserved.
-                    if player._guild == guild_name: 
-                        if item.name in player._reserves:
-                            if guild_name == "Dark Rising ": roll_type = "TMB"
-                            else: roll_type = "SR"
-                            print(f"{player.name} has {item.name} reserved. Roll-type auto-selected as {roll_type}.")
+                # Check the player's reserve list to see if they have this item reserved.
+                if player._guild == guild_name and item.name in player._reserves:
+                    if guild_name == "Dark Rising ": roll_type = "TMB"
+                    else: roll_type = "SR"
+                    print(f"{player.name} has {item.name} reserved. Roll-type auto-selected as {roll_type}.")
 
-                    else: 
-                        # Add this item to their history. 
-                        print("What type of roll was this?")
-                        print("a. Main-spec")
-                        print("b. Off-spec")
-                        print("c. ETC")
+                elif item.slot == "ETC" and not "Mark of Sanctification" in item.name: 
+                    print(f"{item.name} is an ETC item. Roll-type auto-selected as ETC.")
+                    roll_type = "ETC"
 
-                        sel = input("Select an option: ").lower()
+                else: 
+                    # Add this item to their history. 
+                    off_spec = input("Was this an off-spec roll? (y/n): ").lower()
+                    if off_spec == "y": roll_type = "OS"
+                    else: roll_type = "MS"
 
-                        if sel == "a": roll_type = "MS"
-                        elif sel == "b": roll_type = "OS"
-                        elif sel == "c": roll_type = "ETC"
+                print("What date was this item received? (YYYY-MM-DD)")
+                date = input("Date: ")
+                pattern = re.compile(r"^\d{4}-\d{1,2}-\d{1,2}$")
+                if not pattern.match(date):
+                    print("Invalid date format.")
+                    continue
 
-                    print("What date was this item received? (YYYY-MM-DD)")
-                    date = input("Date: ")
-                    pattern = re.compile(r"^\d{4}-\d{1,2}-\d{1,2}$")
-                    if not pattern.match(date):
-                        print("Invalid date format.")
+                note = input("Enter a note for this item (optional): ")
 
-                    note = input("Enter a note for this item (optional): ")
-
-                    player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date, note))
+                player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date, note))
             
             elif sel == "ii":
                 # First, we must check if the player has any items in their history. If not, we'll tell them this player isn't a valid target. 
