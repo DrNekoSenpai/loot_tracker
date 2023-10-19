@@ -1,6 +1,7 @@
 import pickle, re, argparse, os, time, pyautogui, subprocess
 from typing import List, Union
 from datetime import datetime
+from datetime import timedelta
 # import redirect_stdout
 from contextlib import redirect_stdout as redirect
 from io import StringIO
@@ -67,6 +68,7 @@ class Player:
 
         self._regular_plusses = 0
         self._reserve_plusses = 0
+        self._attendance = False
 
         self._raid_log = []
         self._history = {
@@ -229,7 +231,7 @@ def import_softreserve(players):
 
     # Go through the list of players, and wipe all reserves. 
     for p in players: 
-        p._reserve = []
+        p._reserves = []
 
     with open("soft_reserves.csv", "r") as f: 
         sr_data = f.readlines()
@@ -281,6 +283,7 @@ def import_softreserve(players):
 
         # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
         current_player._reserves.append(item)
+        print(f"{current_player.name} has reserved {item}.")
 
     return players
 
@@ -334,8 +337,7 @@ def import_tmb(players):
             current_player = players[-1]
 
         # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
-        if item not in current_player._reserves:
-            current_player._reserves.append(item)
+        current_player._reserves.append(item)
 
     return players
 
@@ -408,10 +410,15 @@ def award_loot(players):
         for p in players: 
             # Skip this person if they're in the other guild. That is, if we're currently raiding with Asylum, and this person is in DR; or vice versa.
             if p._guild != guild_name: continue
+            if p._attendance == False: continue
 
             if item_match.name in p._reserves: 
+                print(f"{p.name} has soft-reserved this item ({item_match.name}).")
                 # First, we should check if the player has double-reserved this item; that is, if they want two.
-                if p._reserves.count(item_match.name) > 1:
+                # count = len([i for i in p._reserves if i == item_match.name])
+                print(p._reserves)
+                print([i for i in p._reserves if i == item_match.name])
+                if False: #  count > 1:
                     num_received = 0
                     for log in p._history[slot_names[int(item_match.slot)]]: 
                         if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
@@ -436,6 +443,7 @@ def award_loot(players):
                     for log in p._history[slot_names[int(item_match.slot)]]: 
                         if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
                             already_received = True
+                            print(f"{p.name} has already won this item ({item_match.name} {item_match.ilvl}).")
                             break
 
                     if not already_received: 
@@ -652,42 +660,10 @@ def award_loot(players):
     print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
         
     return players
-        
-def add_players_manual(players):
-    # Ask the user to enter the name of the new player. This can be done in any case; but partial matching is not supported.
-    new_players = input("Enter the names of up to 25 new players: ")
-    
-    # We'll check to see how many players there are, by splitting with spaces. 
-    if ' ' in new_players: new_players = new_players.split(" ")
-    else: new_players = [new_players]
-
-    for new_player in new_players: 
-        
-        if not regular_keyboard(new_player):
-            print(f"Player name {new_player} is not valid. Please input the name manually.")
-            new_player = input("Name: ")
-
-        # Convert to sentence case. 
-        new_player = new_player.title()
-
-        # Check if the player already exists. If so, print out an error message and continue.
-        found = False
-        for p in players:
-            if p.name == new_player:
-                found = True
-                continue
-        
-        if not found: 
-            # If not, create a new player object and add it to the list of players.
-            players.append(Player(new_player, "", []))
-            print(f"ADDED: {new_player}")
-
-        else: 
-            print(f"ERROR: {new_player} already exists.")
-    
-    return players
 
 def add_players_details(players):
+    for p in players: 
+        p._attendance = False
     print("")
     with open("details.txt", "r") as file: 
         lines = file.readlines()
@@ -723,6 +699,13 @@ def add_players_details(players):
 
         else: 
             print(f"ERROR: {new_player} already exists.")
+
+        # Find the player in the list of players, and change their _attendance to True. 
+        for p in players:
+            if p.name == new_player:
+                p._attendance = True
+                break
+
     print("")
     return players
 
@@ -771,7 +754,7 @@ def export_history():
                         # Find the item id, this is the key of the item in the dictionary
                         for key, value in all_items.items():
                             if value.name == item.item.name:
-                                link = f"https://www.wowhead.com/wotlk/item={key}"
+                                link = f"<https://www.wowhead.com/wotlk/item={key}>"
                                 break
                         file.write(f"  \- [{item.item.name} ({len(shards)}x)]({link})\n")
                         shards_written = True
@@ -780,7 +763,7 @@ def export_history():
                         # Find the item id, this is the key of the item in the dictionary
                         for key, value in all_items.items():
                             if value.name == item.item.name:
-                                link = f"https://www.wowhead.com/wotlk/item={key}"
+                                link = f"<https://www.wowhead.com/wotlk/item={key}>"
                                 break
                         if not "Mark of Sanctification" in item.item.name: 
                             file.write(f"  \- [{item.item.name} ({item.item.ilvl})]({link}) ({item.roll}) ({item.date})\n")
@@ -1190,15 +1173,16 @@ def sudo_mode(players, raiding):
     confirm = input("Are you sure you want to enter sudo mode? (y/n): ").lower()
     if confirm != "y":
         print("Aborting.")
-        return players
+        return players, raiding
     
     while(True): 
         print("---- SUDO MODE ----")
         print("a. COMPLETELY wipe the pickle file")
         print("b. Add or remove items from a player's history")
         print("c. Add or remove plusses from a player")
-        print(f"d. {'Enter' if not raiding else 'Exit'} raiding mode")
-        print("e. Exit sudo mode")
+        print("d. Restore history from Gargul export")
+        print(f"e. {'Enter' if not raiding else 'Exit'} raiding mode")
+        print("f. Exit sudo mode")
         sel = input("Select an option: ").lower()
         print("")
 
@@ -1423,17 +1407,78 @@ def sudo_mode(players, raiding):
             player._regular_plusses = regular_plusses
             player._reserve_plusses = reserve_plusses
 
-        elif sel == "d": 
+        elif sel == "d":
+            with open("gargul-export.txt", "r") as file: 
+                lines = file.readlines()
+
+            for p in players: 
+                for slot in p._history: 
+                    p._history[slot] = []
+                p._raid_log = []
+                p._regular_plusses = 0
+                p._reserve_plusses = 0
+
+            for ind,line in enumerate(lines):
+                if ind == 0: continue
+                line = line.strip().split(";")
+
+                item_id = int(line[0])
+                item_name = line[1]
+                ilvl = int(line[2])
+                reserved = True if line[3] == "1" else False 
+                offspec = True if line[4] == "1" else False
+                winner = line[5]
+                date = line[6]
+
+                player = None
+                for p in players:
+                    if p.name == winner: 
+                        player = p
+                        break
+
+                if item_id == 52025: item_name += " (N25)"
+                elif item_id == 52026: item_name += " (N25)"
+                elif item_id == 52027: item_name += " (N25)"
+                elif item_id == 52028: item_name += " (H25)"
+                elif item_id == 52029: item_name += " (H25)"
+                elif item_id == 52030: item_name += " (H25)"
+
+                item = None
+                for i in all_items.values():
+                    if i.name == item_name: 
+                        item = i
+                        break
+
+                player._history[slot_names[int(item.slot)]].append(Log(player.name, item, "SR" if reserved else "OS" if offspec else "MS", date))
+                print(f"Added {item.name} ({item.ilvl}) to {player.name}'s history.")
+
+                # Check if the date is after the last weekly reset, on Tuesday. If so, we must also add this item to their raid log.
+                date = datetime.strptime(date, "%Y-%m-%d")
+                
+                # Take today's date, and subtract the number of days that have elapsed since Tuesday. 
+                today = datetime.today()
+                days_since_tuesday = (today.weekday() - 1) % 7
+                last_tuesday = today - timedelta(days=days_since_tuesday)
+                
+                if date >= last_tuesday:
+                    player._raid_log.append(Log(player.name, item, "SR" if reserved else "OS" if offspec else "MS", date))
+                    if reserved: 
+                        player._reserve_plusses += 1
+                        player._regular_plusses += 1
+                    elif not offspec: 
+                        player._regular_plusses += 1
+
+        elif sel == "e": 
             if raiding: print("Exiting raiding mode.")
             else: print("Entering raiding mode.")
             raiding = not raiding
 
-        elif sel == "e":
+        elif sel == "f":
             print("Exiting sudo mode.")
             return players, raiding
 
 def export_gargul(players): 
-    with open("gargul.txt", "w") as file: 
+    with open("plusses.txt", "w") as file: 
         for p in players: 
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
 
@@ -1444,13 +1489,13 @@ while(True):
     print(f"{guild_name}Loot Tracker{'' if raiding else ' (Debug Mode)'}")
     print("1) Award loot")
     print("2) Import soft-reserve or TMB (or change guild)")
-    print("3) Add players, manually or from details.txt")
+    print("3) Mark attendance using details.txt")
     print("4) Export the loot history to a file")
     print("5) Export THIS RAID's loot to a file")
     print("6) Remove loot, or weekly reset")
     print("7) Log a trade")
     print("8) Export plusses in Gargul style")
-    print("9) Enter sudo mode (edit history, plusses, enter debug mode)")
+    print(f"9) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
 
     print("")
 
@@ -1466,14 +1511,7 @@ while(True):
         if sel == "a": players = import_softreserve(players)
         elif sel == "b": players = import_tmb(players)
         else: print("Invalid option.")
-    elif sel == 3: 
-        print("a) Add one or more players manually")
-        print("b) Add all players from the details.txt file")
-        sel = input("Select an option: ").lower()
-
-        if sel == "a": players = add_players_manual(players)
-        elif sel == "b": players = add_players_details(players)
-        else: print("Invalid option.")
+    elif sel == 3: players = add_players_details(players)
     elif sel == 4: export_history()
     elif sel == 5: export_loot()
     elif sel == 6: 
