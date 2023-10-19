@@ -14,13 +14,16 @@ Lumosbringer (+1 MS) (+1 SR)
 Meemeemeemee (+1 MS) (+1 SR)
 - Shadowvault Slayer's Cloak (SR)
 
+Artaz (+4 MS) (+0 SR)
+- Wrathful Gladiator's Bracers of Triumph (MS)
+- Shadowfrost Shard (ETC)
+- Shadowfrost Shard (ETC)
+- Shadowfrost Shard (ETC)
+
 Strixien (+2 MS) (+0 SR)
 - Boots of Unnatural Growth (MS)
 - Sanctified Lasherweave Gauntlets (MS)
 - Deathwhisper Raiment (OS)
-
-Artaz (+1 MS) (+0 SR)
-- Wrathful Gladiator's Bracers of Triumph (MS)
 
 Elisesolis (+1 MS) (+0 SR)
 - Conqueror's Mark of Sanctification (N25) (MS)

@@ -9,6 +9,7 @@ Main-Hand:
 Artaz: 2 items.
 
 ETC:
+  \- [Shadowfrost Shard (6x)](<https://www.wowhead.com/wotlk/item=50274>)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-15)
 
 Wrist:

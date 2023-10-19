@@ -27,3 +27,9 @@
 49968;Frozen Bonespike;264;1;0;Strixien;2023-10-15
 49977;Loop of the Endless Labyrinth;264;1;0;Bunniful;2023-10-15
 50362;Deathbringer's Will;264;1;0;Soulreaverr;2023-10-15
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-15
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-15
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-15
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-18
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-18
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-18

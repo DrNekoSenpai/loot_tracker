@@ -1446,9 +1446,15 @@ def sudo_mode(players, raiding):
                     if i.name == item_name: 
                         item = i
                         break
+                
+                if item_id == 50274: 
+                    roll_type = "ETC"
 
-                player._history[slot_names[int(item.slot)]].append(Log(player.name, item, "SR" if reserved else "OS" if offspec else "MS", date))
-                print(f"Added {item.name} ({item.ilvl}) to {player.name}'s history.")
+                else: 
+                    roll_type = "SR" if reserved else "OS" if offspec else "MS"
+
+                player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date))
+                print(f"Added {item.name} ({item.ilvl}) [{roll_type}] to {player.name}'s history.")
 
                 # Check if the date is after the last weekly reset, on Tuesday. If so, we must also add this item to their raid log.
                 date = datetime.strptime(date, "%Y-%m-%d")
@@ -1459,7 +1465,7 @@ def sudo_mode(players, raiding):
                 last_tuesday = today - timedelta(days=days_since_tuesday)
                 
                 if date >= last_tuesday:
-                    player._raid_log.append(Log(player.name, item, "SR" if reserved else "OS" if offspec else "MS", date))
+                    player._raid_log.append(Log(player.name, item, roll_type, date))
                     if reserved: 
                         player._reserve_plusses += 1
                         player._regular_plusses += 1
