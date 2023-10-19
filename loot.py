@@ -415,10 +415,8 @@ def award_loot(players):
             if item_match.name in p._reserves: 
                 print(f"{p.name} has soft-reserved this item ({item_match.name}).")
                 # First, we should check if the player has double-reserved this item; that is, if they want two.
-                # count = len([i for i in p._reserves if i == item_match.name])
-                print(p._reserves)
-                print([i for i in p._reserves if i == item_match.name])
-                if False: #  count > 1:
+                count = len([i for i in p._reserves if i == item_match.name])
+                if count > 1:
                     num_received = 0
                     for log in p._history[slot_names[int(item_match.slot)]]: 
                         if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
