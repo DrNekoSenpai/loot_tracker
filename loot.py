@@ -501,8 +501,6 @@ def award_loot(players):
                 if raiding: 
                     ready = input("Ready to announce? (y/n): ").lower()
                     if ready == "y": 
-                        print("Aborting.")
-
                         pyautogui.hotkey("alt", "tab")
 
                         pyautogui.write("/")
@@ -510,10 +508,9 @@ def award_loot(players):
                         pyautogui.write("rw")
                         time.sleep(0.1)
                         pyautogui.press("space")
-
+                        time.sleep(0.1)
                         pyautogui.write(f"The following people have soft-reserved this item, {item_match.name}:")
-
-                        time.sleep(0.25)
+                        time.sleep(0.1)
                         pyautogui.press("enter")
                         time.sleep(0.25)
 
@@ -523,9 +520,9 @@ def award_loot(players):
                             pyautogui.write("rw")
                             time.sleep(0.1)
                             pyautogui.press("space")
-
+                            time.sleep(0.1)
                             pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){r[2]}")
-                            time.sleep(0.25)
+                            time.sleep(0.1)
                             pyautogui.press("enter")
                             time.sleep(0.25)
 
@@ -1501,7 +1498,11 @@ def export_chat(players):
         # Announce in raid chat. 
         pyautogui.typewrite("/")
         time.sleep(0.1)
-        pyautogui.typewrite(f"raid {p.name}: (+{p._regular_plusses} MS) (+{p._reserve_plusses} SR)")
+        pyautogui.typewrite(f"raid")
+        time.sleep(0.1)
+        pyautogui.press("space")
+        time.sleep(0.1)
+        pyautogui.typewrite(f"{p.name}: (+{p._regular_plusses} MS) (+{p._reserve_plusses} SR)")
         time.sleep(0.1)
         pyautogui.press("enter")
         time.sleep(0.25)
