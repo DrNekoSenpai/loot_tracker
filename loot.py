@@ -1502,6 +1502,9 @@ def export_chat(players):
         pyautogui.typewrite("/")
         time.sleep(0.1)
         pyautogui.typewrite(f"raid {p.name}: (+{p._regular_plusses} MS) (+{p._reserve_plusses} SR)")
+        time.sleep(0.1)
+        pyautogui.press("enter")
+        time.sleep(0.25)
     
     pass
 
