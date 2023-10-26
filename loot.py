@@ -1505,8 +1505,6 @@ def export_chat(players):
         time.sleep(0.1)
         pyautogui.press("enter")
         time.sleep(0.25)
-    
-    pass
 
 while(True): 
     export_pickle(players, guild_name)
