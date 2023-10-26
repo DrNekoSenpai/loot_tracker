@@ -1,4 +1,7 @@
-Abletu: 2 items.
+Abletu: 3 items.
+
+Neck:
+  \- [Amulet of the Silent Eulogy (277)](<https://www.wowhead.com/wotlk/item=50005>) (SR) (2023-10-25)
 
 Hands:
   \- [Handguards of Winter's Respite (264)](<https://www.wowhead.com/wotlk/item=49979>) (MS) (2023-10-18)
@@ -6,14 +9,17 @@ Hands:
 Main-Hand:
   \- [Frozen Bonespike (264)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2023-10-18)
 ----------------------------------------
-Artaz: 2 items.
+Artaz: 3 items.
 
 ETC:
-  \- [Shadowfrost Shard (6x)](<https://www.wowhead.com/wotlk/item=50274>)
+  \- [Shadowfrost Shard (8x)](<https://www.wowhead.com/wotlk/item=50274>)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-15)
 
 Wrist:
   \- [Wrathful Gladiator's Bracers of Triumph (264)](<https://www.wowhead.com/wotlk/item=51364>) (MS) (2023-10-18)
+
+Trinket:
+  \- [Deathbringer's Will (264)](<https://www.wowhead.com/wotlk/item=50362>) (SR) (2023-10-25)
 ----------------------------------------
 Axsel: 1 items.
 
@@ -24,6 +30,19 @@ Bunniful: 1 items.
 
 Ring:
   \- [Loop of the Endless Labyrinth (264)](<https://www.wowhead.com/wotlk/item=49977>) (SR) (2023-10-15)
+----------------------------------------
+Bzorder: 1 items.
+
+ETC:
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-25)
+----------------------------------------
+Catreene: 2 items.
+
+Hands:
+  \- [Fallen Lord's Handguards (264)](<https://www.wowhead.com/wotlk/item=49995>) (OS) (2023-10-25)
+
+Waist:
+  \- [Waistband of Righteous Fury (277)](<https://www.wowhead.com/wotlk/item=50010>) (MS) (2023-10-25)
 ----------------------------------------
 Darkfern: 1 items.
 
@@ -38,7 +57,10 @@ ETC:
 Trinket:
   \- [Corpse Tongue Coin (264)](<https://www.wowhead.com/wotlk/item=50352>) (MS) (2023-10-15)
 ----------------------------------------
-Ferrousblade: 2 items.
+Ferrousblade: 3 items.
+
+ETC:
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (OS) (2023-10-25)
 
 Ring:
   \- [Skeleton Lord's Circle (264)](<https://www.wowhead.com/wotlk/item=49999>) (SR) (2023-10-15)
@@ -71,6 +93,11 @@ Meemeemeemee: 1 items.
 Back:
   \- [Shadowvault Slayer's Cloak (264)](<https://www.wowhead.com/wotlk/item=49998>) (SR) (2023-10-18)
 ----------------------------------------
+Mettybeans: 1 items.
+
+Off-Hand:
+  \- [Bulwark of Smouldering Steel (264)](<https://www.wowhead.com/wotlk/item=49976>) (SR) (2023-10-25)
+----------------------------------------
 Miatotems: 1 items.
 
 Ring:
@@ -81,17 +108,32 @@ Prunejuuce: 1 items.
 Legs:
   \- [Sanctified Ymirjar Lord's Legguards (264)](<https://www.wowhead.com/wotlk/item=51216>) (MS) (2023-10-18)
 ----------------------------------------
-Sighanama: 1 items.
+Sighanama: 2 items.
+
+Ring:
+  \- [Band of the Bone Colossus (264)](<https://www.wowhead.com/wotlk/item=49949>) (MS) (2023-10-25)
 
 Ranged:
   \- [Zod's Repeating Longbow (264)](<https://www.wowhead.com/wotlk/item=50034>) (MS) (2023-10-15)
 ----------------------------------------
-Soulreaverr: 1 items.
+Soulreaverr: 4 items.
+
+Neck:
+  \- [Ahn'kahar Onyx Neckguard (264)](<https://www.wowhead.com/wotlk/item=49989>) (SR) (2023-10-25)
+
+Feet:
+  \- [Blood-Soaked Saronite Stompers (264)](<https://www.wowhead.com/wotlk/item=49983>) (SR) (2023-10-25)
 
 Trinket:
   \- [Deathbringer's Will (264)](<https://www.wowhead.com/wotlk/item=50362>) (SR) (2023-10-15)
+
+Main-Hand:
+  \- [Scourgeborne Waraxe (277)](<https://www.wowhead.com/wotlk/item=50411>) (MS) (2023-10-25)
 ----------------------------------------
-Strixien: 4 items.
+Strixien: 5 items.
+
+Neck:
+  \- [Bone Sentinel's Amulet (264)](<https://www.wowhead.com/wotlk/item=49975>) (SR) (2023-10-25)
 
 Chest:
   \- [Deathwhisper Raiment (264)](<https://www.wowhead.com/wotlk/item=49996>) (OS) (2023-10-18)
@@ -118,7 +160,10 @@ Tinyraider: 1 items.
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-18)
 ----------------------------------------
-_disenchanted: 1 items.
+_disenchanted: 2 items.
+
+Hands:
+  \- [Fallen Lord's Handguards (264)](<https://www.wowhead.com/wotlk/item=49995>) (DE) (2023-10-25)
 
 Ranged:
   \- [Zod's Repeating Longbow (264)](<https://www.wowhead.com/wotlk/item=50034>) (MS) (2023-10-18)

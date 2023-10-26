@@ -448,6 +448,8 @@ def award_loot(players):
                         if item_match.ilvl == 277: 
                             if any([item_match.name == log.item.name and log.item.ilvl == 264 for log in p._history[slot_names[int(item_match.slot)]]]):
                                 reserves.append((p.name, p._reserve_plusses, f" (has 264 version)"))
+                            else: 
+                                reserves.append((p.name, p._reserve_plusses, ""))
 
                         else: 
                             reserves.append((p.name, p._reserve_plusses, ""))
@@ -497,31 +499,35 @@ def award_loot(players):
                     print(f"  - {r[0]} ({roll_type} +{r[1]}){r[2]}")
 
                 if raiding: 
-                    pyautogui.hotkey("alt", "tab")
+                    ready = input("Ready to announce? (y/n): ").lower()
+                    if ready == "y": 
+                        print("Aborting.")
 
-                    pyautogui.write("/")
-                    time.sleep(0.1)
-                    pyautogui.write("rw")
-                    time.sleep(0.1)
-                    pyautogui.press("space")
+                        pyautogui.hotkey("alt", "tab")
 
-                    pyautogui.write(f"The following people have soft-reserved this item, {item_match.name}:")
-
-                    time.sleep(0.25)
-                    pyautogui.press("enter")
-                    time.sleep(0.25)
-
-                    for r in reserves:
                         pyautogui.write("/")
                         time.sleep(0.1)
                         pyautogui.write("rw")
                         time.sleep(0.1)
                         pyautogui.press("space")
 
-                        pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){r[2]}")
+                        pyautogui.write(f"The following people have soft-reserved this item, {item_match.name}:")
+
                         time.sleep(0.25)
                         pyautogui.press("enter")
                         time.sleep(0.25)
+
+                        for r in reserves:
+                            pyautogui.write("/")
+                            time.sleep(0.1)
+                            pyautogui.write("rw")
+                            time.sleep(0.1)
+                            pyautogui.press("space")
+
+                            pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){r[2]}")
+                            time.sleep(0.25)
+                            pyautogui.press("enter")
+                            time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -662,6 +668,7 @@ def award_loot(players):
 def add_players_details(players):
     for p in players: 
         p._attendance = False
+
     print("")
     with open("details.txt", "r") as file: 
         lines = file.readlines()
@@ -917,26 +924,29 @@ def remove_loot(players):
 
     # Remove the item from the player's history. If it's a 277 item, remove the 264 version as well -- but only if the note is "auto". 
 
-    # We'll check if the item is 277. If so, we'll remove the 264 version as well.
-    if item.item.ilvl == 277:
-        # First, check if there exists a 264 version of the item in the history; and if so, if the note is "auto". 
+    # We can only check the logs if the item was not disenchanted. 
+    if not player.name == "_disenchanted": 
 
-        if any([item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
-            # If so, find the index of the 264 version, and use that to remove it. 
-            index = [item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
-            player._history[slot_names[int(item.item.slot)]].pop(index)
+        # We'll check if the item is 277. If so, we'll remove the 264 version as well.
+        if item.item.ilvl == 277:
+            # First, check if there exists a 264 version of the item in the history; and if so, if the note is "auto". 
 
-    # We'll check if the item is 264. If so, we'll remove the 251 version as well.
-    elif item.item.ilvl == 264:
-        # First, check if there exists a 251 version of the item in the history; and if so, if the note is "auto". 
+            if any([item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
+                # If so, find the index of the 264 version, and use that to remove it. 
+                index = [item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
+                player._history[slot_names[int(item.item.slot)]].pop(index)
 
-        if any([item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
-            # If so, find the index of the 251 version, and use that to remove it. 
-            index = [item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
-            player._history[slot_names[int(item.item.slot)]].pop(index)
+        # We'll check if the item is 264. If so, we'll remove the 251 version as well.
+        elif item.item.ilvl == 264:
+            # First, check if there exists a 251 version of the item in the history; and if so, if the note is "auto". 
 
-    index = player._history[slot_names[int(item.item.slot)]].index(item)
-    player._history[slot_names[int(item.item.slot)]].pop(index)
+            if any([item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
+                # If so, find the index of the 251 version, and use that to remove it. 
+                index = [item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
+                player._history[slot_names[int(item.item.slot)]].pop(index)
+
+        index = player._history[slot_names[int(item.item.slot)]].index(item)
+        player._history[slot_names[int(item.item.slot)]].pop(index)
 
     return players
 
@@ -1486,20 +1496,30 @@ def export_gargul(players):
         for p in players: 
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
 
+def export_chat(players): 
+    for p in players: 
+        # Announce in raid chat. 
+        pyautogui.typewrite("/")
+        time.sleep(0.1)
+        pyautogui.typewrite(f"raid {p.name}: (+{p._regular_plusses} MS) (+{p._reserve_plusses} SR)")
+    
+    pass
+
 while(True): 
     export_pickle(players, guild_name)
     
     print("----------------------------------------")
     print(f"{guild_name}Loot Tracker{'' if raiding else ' (Debug Mode)'}")
-    print("1) Award loot")
-    print("2) Import soft-reserve or TMB (or change guild)")
-    print("3) Mark attendance using details.txt")
-    print("4) Export the loot history to a file")
-    print("5) Export THIS RAID's loot to a file")
-    print("6) Remove loot, or weekly reset")
-    print("7) Log a trade")
-    print("8) Export plusses in Gargul style")
-    print(f"9) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
+    print(" 1) Award loot")
+    print(" 2) Import soft-reserve or TMB (or change guild)")
+    print(" 3) Mark attendance using details.txt")
+    print(" 4) Export the loot history to a file")
+    print(" 5) Export THIS RAID's loot to a file")
+    print(" 6) Remove loot, or weekly reset")
+    print(" 7) Log a trade")
+    print(" 8) Export plusses in Gargul style")
+    print(" 9) Export plusses to be pasted into chat")
+    print(f"10) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
 
     print("")
 
@@ -1529,5 +1549,6 @@ while(True):
         else: print("Invalid option.")
     elif sel == 7: players = log_trade(players)
     elif sel == 8: export_gargul(players)
-    elif sel == 9: players, raiding = sudo_mode(players, raiding)
+    elif sel == 9: export_chat(players)
+    elif sel == 10: players, raiding = sudo_mode(players, raiding)
     else: break

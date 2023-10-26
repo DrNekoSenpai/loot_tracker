@@ -1,44 +1,32 @@
-Abletu (+2 MS) (+1 SR)
-- Handguards of Winter's Respite (MS)
-- Frozen Bonespike (SR)
-
-Axsel (+1 MS) (+1 SR)
-- Amulet of the Silent Eulogy (SR)
-
-Kelorlyn (+1 MS) (+1 SR)
-- Toskk's Maximized Wristguards (SR)
-
-Lumosbringer (+1 MS) (+1 SR)
+Soulreaverr (+3 MS) (+2 SR)
+- Scourgeborne Waraxe (MS)
+- Blood-Soaked Saronite Stompers (SR)
 - Ahn'kahar Onyx Neckguard (SR)
 
-Meemeemeemee (+1 MS) (+1 SR)
-- Shadowvault Slayer's Cloak (SR)
+Abletu (+1 MS) (+1 SR)
+- Amulet of the Silent Eulogy (SR)
 
-Artaz (+4 MS) (+0 SR)
-- Wrathful Gladiator's Bracers of Triumph (MS)
+Artaz (+1 MS) (+1 SR)
+- Deathbringer's Will (SR)
 - Shadowfrost Shard (ETC)
 - Shadowfrost Shard (ETC)
-- Shadowfrost Shard (ETC)
 
-Strixien (+2 MS) (+0 SR)
-- Boots of Unnatural Growth (MS)
-- Sanctified Lasherweave Gauntlets (MS)
-- Deathwhisper Raiment (OS)
+Mettybeans (+1 MS) (+1 SR)
+- Bulwark of Smouldering Steel (SR)
 
-Elisesolis (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS)
+Strixien (+1 MS) (+1 SR)
+- Bone Sentinel's Amulet (SR)
 
-Ferrousblade (+1 MS) (+0 SR)
-- Bryntroll, the Bone Arbiter (MS)
-
-Prunejuuce (+1 MS) (+0 SR)
-- Sanctified Ymirjar Lord's Legguards (MS)
-
-Swiftbladess (+1 MS) (+0 SR)
-- Wodin's Lucky Necklace (MS)
-
-Tinyraider (+1 MS) (+0 SR)
+Bzorder (+1 MS) (+0 SR)
 - Vanquisher's Mark of Sanctification (N25) (MS)
 
-_disenchanted
-- Zod's Repeating Longbow
+Catreene (+1 MS) (+0 SR)
+- Waistband of Righteous Fury (MS)
+- Fallen Lord's Handguards (OS)
+
+Sighanama (+1 MS) (+0 SR)
+- Band of the Bone Colossus (MS)
+
+Ferrousblade (+0 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (OS)
+

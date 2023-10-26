@@ -1,4 +1,24 @@
 @ID;@ITEM;@ILVL;@SR;@OS;@WINNER;@YEAR-@MONTH-@DAY
+50654;Scourgeborne Waraxe;277;0;0;Artaz;2023-10-25
+50362;Deathbringer's Will;264;1;0;Artaz;2023-10-25
+49976;Bulwark of Smouldering Steel;264;1;0;Mettybeans;2023-10-25
+49975;Bone Sentinel's Amulet;264;1;0;Strixien;2023-10-25
+45114;Steamcaller's Totem;232;0;0;_disenchanted;2023-10-25
+52025;Vanquisher's Mark of Sanctification;80;0;0;Bzorder;2023-10-25
+45108;Mechanist's Bindings;232;0;0;_disenchanted;2023-10-25
+49995;Fallen Lord's Handguards;264;0;0;_disenchanted;2023-10-25
+49989;Ahn'kahar Onyx Neckguard;264;1;0;Soulreaverr;2023-10-25
+51493;Wrathful Gladiator's Leather Gloves;270;0;0;Swiftbladess;2023-10-25
+51374;Wrathful Gladiator's Waistguard of Dominance;264;0;0;Miatotems;2023-10-25
+49949;Band of the Bone Colossus;264;0;0;Sighanama;2023-10-25
+50658;Amulet of the Silent Eulogy;277;1;0;Abletu;2023-10-25
+49983;Blood-Soaked Saronite Stompers;264;1;0;Soulreaverr;2023-10-25
+50667;Waistband of Righteous Fury;277;0;0;Catreene;2023-10-25
+52025;Vanquisher's Mark of Sanctification;80;0;0;Ferrousblade;2023-10-25
+51361;Wrathful Gladiator's Bracers of Salvation;264;0;0;_disenchanted;2023-10-25
+45119;Embrace of the Leviathan;232;0;0;_disenchanted;2023-10-25
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-25
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-25
 49968;Frozen Bonespike;264;1;0;Abletu;2023-10-18
 51364;Wrathful Gladiator's Bracers of Triumph;264;0;0;Artaz;2023-10-18
 49979;Handguards of Winter's Respite;264;0;0;Abletu;2023-10-18
@@ -15,6 +35,9 @@
 50005;Amulet of the Silent Eulogy;264;1;0;Axsel;2023-10-18
 50452;Wodin's Lucky Necklace;264;0;0;Swiftbladess;2023-10-18
 49996;Deathwhisper Raiment;264;0;1;Strixien;2023-10-18
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-18
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-18
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-18
 49990;Ring of Maddening Whispers;264;0;0;Miatotems;2023-10-15
 50352;Corpse Tongue Coin;264;0;0;Elisesolis;2023-10-15
 52025;Vanquisher's Mark of Sanctification;80;0;0;Artaz;2023-10-15
@@ -30,6 +53,3 @@
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-15
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-15
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-15
-50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-18
-50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-18
-50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-18
