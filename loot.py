@@ -697,16 +697,18 @@ def add_players_details(players):
         
         if not found: 
             players.append(Player(new_player, "", []))
-            print(f"ADDED: {new_player}")
-
-        else: 
-            print(f"ERROR: {new_player} already exists.")
 
         # Find the player in the list of players, and change their _attendance to True. 
         for p in players:
             if p.name == new_player:
                 p._attendance = True
+                print(f"HERE: {p.name}")
                 break
+
+    print("")
+    for p in players: 
+        if p._attendance == False and not p.name == "_disenchanted": 
+            print(f"ABSENT: {p.name}")
 
     print("")
     return players
