@@ -258,6 +258,7 @@ def import_softreserve(players):
         name = soft_res[3]
 
         if name == "Swiftblades": name = "Swiftbladess"
+        if name == "SÃµÃ§kÃ¶": name = "Socko"
         
         # Check if the player's name can be typed using the English keyboard. 
         if not regular_keyboard(name):
@@ -728,52 +729,83 @@ def export_history():
     with open("history.txt", "w") as file:
         for player in players: 
             if sum([len(player._history[x]) for x in player._history]) == 0: 
-                continue          
-            
-            shards = []
-            num_items = []
+                continue      
 
-            # Shards are always in the ETC slot. 
-            for item in player._history["ETC"]:
-                if item.item.name == "Shadowfrost Shard": 
-                    shards.append(item)
+            if player.name != "_disenchanted":     
+                shards = []
+                num_items = []
 
-            for slot in player._history:
-                if len(player._history[slot]) == 0: continue
-                for item in player._history[slot]: 
-                    if item.note == "auto": continue
-                    if item.item.name == "Shadowfrost Shard": continue
-                    num_items.append(item)
-            file.write(f"{player.name}: {len(num_items)} items.\n")
+                # Shards are always in the ETC slot. 
+                for item in player._history["ETC"]:
+                    if item.item.name == "Shadowfrost Shard": 
+                        shards.append(item)
 
-            shards_written = False 
-            for slot in player._history:
-                if len(player._history[slot]) == 0: continue
-                file.write("\n")
-                file.write(f"{slot}:\n")
-                for item in player._history[slot]: 
-                    if item.note == "auto": continue
-                    # print(item.item.name)
-                    if item.item.name == "Shadowfrost Shard" and not shards_written:
-                        # Find the item id, this is the key of the item in the dictionary
-                        for key, value in all_items.items():
-                            if value.name == item.item.name:
-                                link = f"<https://www.wowhead.com/wotlk/item={key}>"
-                                break
-                        file.write(f"  \- [{item.item.name} ({len(shards)}x)]({link})\n")
-                        shards_written = True
+                for slot in player._history:
+                    if len(player._history[slot]) == 0: continue
+                    for item in player._history[slot]: 
+                        if item.note == "auto": continue
+                        if item.item.name == "Shadowfrost Shard": continue
+                        num_items.append(item)
+                file.write(f"{player.name}: {len(num_items)} items.\n")
 
-                    elif not item.item.name == "Shadowfrost Shard": 
+                shards_written = False 
+                for slot in player._history:
+                    if len(player._history[slot]) == 0: continue
+                    file.write("\n")
+                    file.write(f"{slot}:\n")
+                    for item in player._history[slot]: 
+                        if item.note == "auto": continue
+                        # print(item.item.name)
+                        if item.item.name == "Shadowfrost Shard" and not shards_written:
+                            # Find the item id, this is the key of the item in the dictionary
+                            for key, value in all_items.items():
+                                if value.name == item.item.name:
+                                    link = f"<https://www.wowhead.com/wotlk/item={key}>"
+                                    break
+                            file.write(f"  \- [{item.item.name} ({len(shards)}x)]({link})\n")
+                            shards_written = True
+
+                        elif not item.item.name == "Shadowfrost Shard": 
+                            # Find the item id, this is the key of the item in the dictionary
+                            for key, value in all_items.items():
+                                if value.name == item.item.name:
+                                    link = f"<https://www.wowhead.com/wotlk/item={key}>"
+                                    break
+                            if not "Mark of Sanctification" in item.item.name: 
+                                file.write(f"  \- [{item.item.name} ({item.item.ilvl})]({link}) ({item.roll}) ({item.date})\n")
+                            else: 
+                                file.write(f"  \- [{item.item.name}]({link}) ({item.roll}) ({item.date})\n")
+                file.write("----------------------------------------\n")
+
+            else:  
+                num_items = []
+
+                for slot in player._history:
+                    if len(player._history[slot]) == 0: continue
+                    for item in player._history[slot]: 
+                        if item.note == "auto": continue
+                        num_items.append(item)
+                file.write(f"{player.name}: {len(num_items)} items.\n")
+
+                for slot in player._history:
+                    if len(player._history[slot]) == 0: continue
+                    file.write("\n")
+                    file.write(f"{slot}:\n")
+                    for item in player._history[slot]: 
+                        if item.note == "auto": continue
+                        # print(item.item.name)
+
                         # Find the item id, this is the key of the item in the dictionary
                         for key, value in all_items.items():
                             if value.name == item.item.name:
                                 link = f"<https://www.wowhead.com/wotlk/item={key}>"
                                 break
                         if not "Mark of Sanctification" in item.item.name: 
-                            file.write(f"  \- [{item.item.name} ({item.item.ilvl})]({link}) ({item.roll}) ({item.date})\n")
+                            file.write(f"  \- [{item.item.name} ({item.item.ilvl})]({link}) ({item.date})\n")
                         else: 
-                            file.write(f"  \- [{item.item.name}]({link}) ({item.roll}) ({item.date})\n")
-            file.write("----------------------------------------\n")
+                            file.write(f"  \- [{item.item.name}]({link})  ({item.date})\n")
+
+                file.write("----------------------------------------\n")
 
 def export_loot(): 
     """
@@ -1437,6 +1469,12 @@ def sudo_mode(players, raiding):
                 winner = line[5]
                 date = line[6]
 
+                if ilvl <= 263 and not "Shadowfrost Shard" in item_name and not "Mark of Sanctification" in item_name: continue
+
+                if not regular_keyboard(winner):
+                    print(f"Player name {winner} is not valid. Please input the name manually.")
+                    winner = input("Name: ")
+
                 player = None
                 for p in players:
                     if p.name == winner: 
@@ -1461,6 +1499,10 @@ def sudo_mode(players, raiding):
 
                 else: 
                     roll_type = "SR" if reserved else "OS" if offspec else "MS"
+                    
+                if player is None: 
+                    print(f"Could not find player {winner}.")
+                    continue
 
                 player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date))
                 print(f"Added {item.name} ({item.ilvl}) [{roll_type}] to {player.name}'s history.")
@@ -1496,7 +1538,23 @@ def export_gargul(players):
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
 
 def export_chat(players): 
+    # Hit alt tab
+    pyautogui.hotkey("alt", "tab")
+    time.sleep(0.1)
+    
+    pyautogui.typewrite("/")
+    time.sleep(0.1)
+    pyautogui.typewrite(f"raid")
+    time.sleep(0.1)
+    pyautogui.press("space")
+    time.sleep(0.1)
+    pyautogui.typewrite(f"Plusses: ")
+    time.sleep(0.1)
+    pyautogui.press("enter")
+    time.sleep(0.25)
+    
     for p in players: 
+        if p._regular_plusses == 0 and p._reserve_plusses == 0: continue
         # Announce in raid chat. 
         pyautogui.typewrite("/")
         time.sleep(0.1)
@@ -1504,10 +1562,21 @@ def export_chat(players):
         time.sleep(0.1)
         pyautogui.press("space")
         time.sleep(0.1)
-        pyautogui.typewrite(f"{p.name}: (+{p._regular_plusses} MS) (+{p._reserve_plusses} SR)")
+        pyautogui.typewrite(f"- {p.name}: (+{p._regular_plusses} MS) (+{p._reserve_plusses} SR)")
         time.sleep(0.1)
         pyautogui.press("enter")
         time.sleep(0.25)
+
+    pyautogui.typewrite("/")
+    time.sleep(0.1)
+    pyautogui.typewrite(f"raid")
+    time.sleep(0.1)
+    pyautogui.press("space")
+    time.sleep(0.1)
+    pyautogui.typewrite(f"If your name is not on this list, you don't have any plusses.")
+    time.sleep(0.1)
+    pyautogui.press("enter")
+    time.sleep(0.25)
 
 while(True): 
     export_pickle(players, guild_name)
@@ -1520,7 +1589,7 @@ while(True):
     print(" 4) Export the loot history to a file")
     print(" 5) Export THIS RAID's loot to a file")
     print(" 6) Remove loot, or weekly reset")
-    print(" 7) Log a trade")
+    print(" 7) Log a trade -- deprecated")
     print(" 8) Export plusses in Gargul style")
     print(" 9) Export plusses to be pasted into chat")
     print(f"10) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
@@ -1551,7 +1620,7 @@ while(True):
         if sel == "a": remove_loot(players)
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
-    elif sel == 7: players = log_trade(players)
+    # elif sel == 7: players = log_trade(players)
     elif sel == 8: export_gargul(players)
     elif sel == 9: export_chat(players)
     elif sel == 10: players, raiding = sudo_mode(players, raiding)

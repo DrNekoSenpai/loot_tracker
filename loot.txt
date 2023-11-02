@@ -1,32 +1,52 @@
-Soulreaverr (+3 MS) (+2 SR)
-- Scourgeborne Waraxe (MS)
-- Blood-Soaked Saronite Stompers (SR)
-- Ahn'kahar Onyx Neckguard (SR)
+Catreene (+1 MS) (+1 SR)
+- Marrowgar's Frigid Eye (SR)
 
-Abletu (+1 MS) (+1 SR)
-- Amulet of the Silent Eulogy (SR)
+Gnoya (+1 MS) (+1 SR)
+- Greatcloak of the Turned Champion (SR)
 
-Artaz (+1 MS) (+1 SR)
-- Deathbringer's Will (SR)
+Killiandra (+1 MS) (+1 SR)
+- Crushing Coldwraith Belt (SR)
+
+Lumosbringer (+1 MS) (+1 SR)
+- Shadowvault Slayer's Cloak (SR)
+
+Pastiry (+1 MS) (+1 SR)
+- Bryntroll, the Bone Arbiter (SR)
+
+Artaz (+4 MS) (+0 SR)
+- Ring of Rotting Sinew (MS)
 - Shadowfrost Shard (ETC)
 - Shadowfrost Shard (ETC)
+- Shadowfrost Shard (ETC)
 
-Mettybeans (+1 MS) (+1 SR)
-- Bulwark of Smouldering Steel (SR)
+Swiftbladess (+2 MS) (+0 SR)
+- Sanctified Shadowblade Legplates (MS)
+- Heartpierce (MS)
 
-Strixien (+1 MS) (+1 SR)
-- Bone Sentinel's Amulet (SR)
+Axsel (+1 MS) (+0 SR)
+- Nibelung (MS)
 
 Bzorder (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS)
+- Boots of Unnatural Growth (MS)
 
-Catreene (+1 MS) (+0 SR)
-- Waistband of Righteous Fury (MS)
-- Fallen Lord's Handguards (OS)
+Ferrousblade (+1 MS) (+0 SR)
+- Corpse Tongue Coin (MS)
+
+Gnoraa (+1 MS) (+0 SR)
+- Shoulders of Mercy Killing (MS)
+
+Lilypalooza (+1 MS) (+0 SR)
+- Sanctified Crimson Acolyte Leggings (MS)
 
 Sighanama (+1 MS) (+0 SR)
-- Band of the Bone Colossus (MS)
+- Wodin's Lucky Necklace (MS)
 
-Ferrousblade (+0 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (OS)
+Socko (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS)
+
+Soulreaverr (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS)
+
+Abletu (+0 MS) (+0 SR)
+- Wrathful Gladiator's Kodohide Gloves (OS)
 

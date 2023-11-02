@@ -53,3 +53,32 @@
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-15
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-15
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-10-15
+51186;Sanctified Shadowblade Legplates;264;0;0;Swiftbladess;2023-11-01
+46985;Boots of the Courageous;245;0;0;_disenchanted;2023-11-01
+47056;Bracers of Cloudy Omen;245;0;0;Medulla;2023-11-01
+47052;Legguards of Feverish Dedication;245;0;0;_disenchanted;2023-11-01
+50415;Bryntroll, the Bone Arbiter;264;1;0;Pastiry;2023-11-01
+47654;Pattern: Bejeweled Wizard's Bracers;85;0;0;Gnoraa;2023-11-01
+52025;Vanquisher's Mark of Sanctification;80;0;0;Sõçkö;2023-11-01
+50349;Corpse Tongue Coin;277;0;0;Ferrousblade;2023-11-01
+50452;Wodin's Lucky Necklace;264;0;0;Sighanama;2023-11-01
+46963;Crystal Plated Vanguard;245;0;1;Pastiry;2023-11-01
+47623;Plans: Saronite Swordbreakers;85;0;0;Pastiry;2023-11-01
+51420;Wrathful Gladiator's Kodohide Gloves;270;0;1;Abletu;2023-11-01
+50453;Ring of Rotting Sinew;264;0;0;Artaz;2023-11-01
+50014;Greatcloak of the Turned Champion;264;1;0;Gnoya;2023-11-01
+49967;Marrowgar's Frigid Eye;264;1;0;Catreene;2023-11-01
+50665;Boots of Unnatural Growth;277;0;0;Bzorder;2023-11-01
+47000;Cuirass of Calamitous Fate;245;0;0;_disenchanted;2023-11-01
+49991;Shoulders of Mercy Killing;264;0;0;Gnoraa;2023-11-01
+49982;Heartpierce;264;0;0;Swiftbladess;2023-11-01
+47242;Trophy of the Crusade;80;0;0;Pacratt;2023-11-01
+49978;Crushing Coldwraith Belt;264;1;0;Killiandra;2023-11-01
+49992;Nibelung;264;0;0;Axsel;2023-11-01
+52025;Vanquisher's Mark of Sanctification;80;0;0;Soulreaverr;2023-11-01
+47242;Trophy of the Crusade;80;0;0;Mettybee;2023-11-01
+51177;Sanctified Crimson Acolyte Leggings;264;0;0;Lilypalooza;2023-11-01
+50653;Shadowvault Slayer's Cloak;277;1;0;Lumosbringer;2023-11-01
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-01
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-01
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-01
