@@ -1,52 +1,55 @@
-Catreene (+1 MS) (+1 SR)
-- Marrowgar's Frigid Eye (SR)
+Soulreaverr (+3 MS) (+2 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2023-11-01
+- Coldwraith Links (SR) -- received on **2023-11-05**
+- Scourge Reaver's Legplates (SR) -- received on **2023-11-05**
+
+Catreene (+2 MS) (+1 SR)
+- Boots of the Funeral March (MS) -- received on **2023-11-05**
+- Marrowgar's Frigid Eye (SR) -- received on 2023-11-01
 
 Gnoya (+1 MS) (+1 SR)
-- Greatcloak of the Turned Champion (SR)
+- Greatcloak of the Turned Champion (SR) -- received on 2023-11-01
 
 Killiandra (+1 MS) (+1 SR)
-- Crushing Coldwraith Belt (SR)
+- Crushing Coldwraith Belt (SR) -- received on 2023-11-01
 
 Lumosbringer (+1 MS) (+1 SR)
-- Shadowvault Slayer's Cloak (SR)
+- Shadowvault Slayer's Cloak (SR) -- received on 2023-11-01
 
 Pastiry (+1 MS) (+1 SR)
-- Bryntroll, the Bone Arbiter (SR)
+- Bryntroll, the Bone Arbiter (SR) -- received on 2023-11-01
 
 Artaz (+4 MS) (+0 SR)
-- Ring of Rotting Sinew (MS)
-- Shadowfrost Shard (ETC)
-- Shadowfrost Shard (ETC)
-- Shadowfrost Shard (ETC)
+- Ring of Rotting Sinew (MS) -- received on 2023-11-01
+- Shadowfrost Shard (ETC) -- received on 2023-11-01
+- Shadowfrost Shard (ETC) -- received on 2023-11-01
+- Shadowfrost Shard (ETC) -- received on 2023-11-01
 
 Swiftbladess (+2 MS) (+0 SR)
-- Sanctified Shadowblade Legplates (MS)
-- Heartpierce (MS)
+- Sanctified Shadowblade Legplates (MS) -- received on 2023-11-01
+- Heartpierce (MS) -- received on 2023-11-01
 
 Axsel (+1 MS) (+0 SR)
-- Nibelung (MS)
+- Nibelung (MS) -- received on 2023-11-01
 
 Bzorder (+1 MS) (+0 SR)
-- Boots of Unnatural Growth (MS)
+- Boots of Unnatural Growth (MS) -- received on 2023-11-01
 
 Ferrousblade (+1 MS) (+0 SR)
-- Corpse Tongue Coin (MS)
+- Corpse Tongue Coin (MS) -- received on 2023-11-01
 
 Gnoraa (+1 MS) (+0 SR)
-- Shoulders of Mercy Killing (MS)
+- Shoulders of Mercy Killing (MS) -- received on 2023-11-01
 
 Lilypalooza (+1 MS) (+0 SR)
-- Sanctified Crimson Acolyte Leggings (MS)
+- Sanctified Crimson Acolyte Leggings (MS) -- received on 2023-11-01
 
 Sighanama (+1 MS) (+0 SR)
-- Wodin's Lucky Necklace (MS)
+- Wodin's Lucky Necklace (MS) -- received on 2023-11-01
 
 Socko (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS)
-
-Soulreaverr (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2023-11-01
 
 Abletu (+0 MS) (+0 SR)
-- Wrathful Gladiator's Kodohide Gloves (OS)
+- Wrathful Gladiator's Kodohide Gloves (OS) -- received on 2023-11-01
 

@@ -49,10 +49,13 @@ ETC:
 Feet:
   \- [Boots of Unnatural Growth (264)](<https://www.wowhead.com/wotlk/item=50009>) (MS) (2023-11-01)
 ----------------------------------------
-Catreene: 2 items.
+Catreene: 3 items.
 
 Waist:
   \- [Waistband of Righteous Fury (264)](<https://www.wowhead.com/wotlk/item=50010>) (MS) (2023-10-25)
+
+Feet:
+  \- [Boots of the Funeral March (264)](<https://www.wowhead.com/wotlk/item=50416>) (MS) (2023-11-05)
 
 Ring:
   \- [Marrowgar's Frigid Eye (264)](<https://www.wowhead.com/wotlk/item=49967>) (SR) (2023-11-01)
@@ -169,13 +172,19 @@ Socko: 1 items.
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-01)
 ----------------------------------------
-Soulreaverr: 4 items.
+Soulreaverr: 6 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-01)
 
 Neck:
   \- [Ahn'kahar Onyx Neckguard (264)](<https://www.wowhead.com/wotlk/item=49989>) (SR) (2023-10-25)
+
+Waist:
+  \- [Coldwraith Links (264)](<https://www.wowhead.com/wotlk/item=50187>) (SR) (2023-11-05)
+
+Legs:
+  \- [Scourge Reaver's Legplates (264)](<https://www.wowhead.com/wotlk/item=50192>) (SR) (2023-11-05)
 
 Feet:
   \- [Blood-Soaked Saronite Stompers (264)](<https://www.wowhead.com/wotlk/item=49983>) (SR) (2023-10-25)

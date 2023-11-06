@@ -82,3 +82,6 @@
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-01
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-01
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-01
+50187;Coldwraith Links;264;1;0;Soulreaverr;2023-11-05
+50192;Scourge Reaver's Legplates;264;1;0;Soulreaverr;2023-11-05
+50416;Boots of the Funeral March;264;0;0;Catreene;2023-11-05
