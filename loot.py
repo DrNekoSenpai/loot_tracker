@@ -582,6 +582,8 @@ def award_loot(players):
                 p._history[slot_names[int(item_match.slot)]].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
                 return players
 
+    confirm = ""
+    
     # If the player isn't on the reserves list, we'll ask to confirm that this is intentional. 
     if len(reserves) > 0 and player.name not in [r[0] for r in reserves]: 
         confirm = input("This person is not on the reserves list. Are you sure this is intentional? (y/n/sr): ").lower()

@@ -1,4 +1,4 @@
-Abletu: 4 items.
+Abletu: 5 items.
 
 Neck:
   \- [Amulet of the Silent Eulogy (264)](<https://www.wowhead.com/wotlk/item=50005>) (SR) (2023-10-25)
@@ -6,6 +6,7 @@ Neck:
 Hands:
   \- [Handguards of Winter's Respite (264)](<https://www.wowhead.com/wotlk/item=49979>) (MS) (2023-10-18)
   \- [Wrathful Gladiator's Kodohide Gloves (270)](<https://www.wowhead.com/wotlk/item=51420>) (OS) (2023-11-01)
+  \- [Sanctified Lasherweave Gauntlets (264)](<https://www.wowhead.com/wotlk/item=51138>) (OS) (2023-11-08)
 
 Main-Hand:
   \- [Frozen Bonespike (264)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2023-10-18)
@@ -102,10 +103,13 @@ Kelorlyn: 1 items.
 Wrist:
   \- [Toskk's Maximized Wristguards (264)](<https://www.wowhead.com/wotlk/item=50333>) (SR) (2023-10-18)
 ----------------------------------------
-Killiandra: 2 items.
+Killiandra: 3 items.
 
 Waist:
   \- [Crushing Coldwraith Belt (264)](<https://www.wowhead.com/wotlk/item=49978>) (SR) (2023-11-01)
+
+Legs:
+  \- [Wrathful Gladiator's Silk Trousers (270)](<https://www.wowhead.com/wotlk/item=51466>) (OS) (2023-11-08)
 
 Two-Hand:
   \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (SR) (2023-10-15)
@@ -120,13 +124,16 @@ Lorniras: 1 items.
 Hands:
   \- [Gunship Captain's Mittens (264)](<https://www.wowhead.com/wotlk/item=50011>) (SR) (2023-10-15)
 ----------------------------------------
-Lumosbringer: 2 items.
+Lumosbringer: 3 items.
 
 Neck:
   \- [Ahn'kahar Onyx Neckguard (264)](<https://www.wowhead.com/wotlk/item=49989>) (SR) (2023-10-18)
 
 Back:
   \- [Shadowvault Slayer's Cloak (264)](<https://www.wowhead.com/wotlk/item=49998>) (SR) (2023-11-01)
+
+Legs:
+  \- [Sanctified Lightsworn Legplates (264)](<https://www.wowhead.com/wotlk/item=51278>) (MS) (2023-11-08)
 ----------------------------------------
 Meemeemeemee: 1 items.
 
