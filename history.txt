@@ -68,13 +68,16 @@ Feet:
 Ring:
   \- [Marrowgar's Frigid Eye (264)](<https://www.wowhead.com/wotlk/item=49967>) (SR) (2023-11-01)
 ----------------------------------------
-Darkfern: 2 items.
+Darkfern: 3 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-15)
 
 Neck:
   \- [Ahn'kahar Onyx Neckguard (264)](<https://www.wowhead.com/wotlk/item=49989>) (MS) (2023-11-12)
+
+Ring:
+  \- [Ring of Rotting Sinew (264)](<https://www.wowhead.com/wotlk/item=50453>) (SR) (2023-11-12)
 ----------------------------------------
 Elisesolis: 2 items.
 

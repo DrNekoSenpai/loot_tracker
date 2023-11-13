@@ -104,6 +104,7 @@
 49992;Nibelung;264;0;0;Wamili;2023-11-12
 49989;Ahn'kahar Onyx Neckguard;264;0;0;Darkfern;2023-11-12
 50349;Corpse Tongue Coin;277;0;0;Prunejuuce;2023-11-12
+50453;Ring of Rotting Sinew;264;1;0;Darkfern;2023-11-12
 50412;Bloodvenom Blade;264;1;0;Artaz;2023-11-12
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-12
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-12
