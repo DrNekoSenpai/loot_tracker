@@ -85,3 +85,27 @@
 50187;Coldwraith Links;264;1;0;Soulreaverr;2023-11-05
 50192;Scourge Reaver's Legplates;264;1;0;Soulreaverr;2023-11-05
 50416;Boots of the Funeral March;264;0;0;Catreene;2023-11-05
+51278;Sanctified Lightsworn Legplates;264;0;0;Lumosbringer;2023-11-08
+51138;Sanctified Lasherweave Gauntlets;264;0;1;Abletu;2023-11-08
+51466;Wrathful Gladiator's Silk Trousers;270;0;1;Killiandra;2023-11-08
+49978;Crushing Coldwraith Belt;264;1;0;Tinyraider;2023-11-12
+52025;Vanquisher's Mark of Sanctification;80;0;0;Killiandra;2023-11-12
+50034;Zod's Repeating Longbow;264;0;0;_disenchanted;2023-11-12
+49950;Frostbitten Fur Boots;264;1;0;Kelorlyn;2023-11-12
+50205;Frostbinder's Shredded Cape;264;1;0;Lorniras;2023-11-12
+50452;Wodin's Lucky Necklace;264;0;0;Kelorlyn;2023-11-12
+50664;Ring of Rapid Ascent;277;1;0;Axsel;2023-11-12
+49989;Ahn'kahar Onyx Neckguard;264;0;0;Artaz;2023-11-12
+49968;Frozen Bonespike;264;1;0;Tinyraider;2023-11-12
+50653;Shadowvault Slayer's Cloak;277;1;0;Swiftbladess;2023-11-12
+50185;Devium's Eternally Cold Ring;264;1;0;Ferrousblade;2023-11-12
+50192;Scourge Reaver's Legplates;264;0;1;Ferrousblade;2023-11-12
+52027;Conqueror's Mark of Sanctification;80;0;0;Lumosbringer;2023-11-12
+49992;Nibelung;264;0;0;Wamili;2023-11-12
+49989;Ahn'kahar Onyx Neckguard;264;0;0;Darkfern;2023-11-12
+50349;Corpse Tongue Coin;277;0;0;Prunejuuce;2023-11-12
+50412;Bloodvenom Blade;264;1;0;Artaz;2023-11-12
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-12
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-12
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-12
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-12

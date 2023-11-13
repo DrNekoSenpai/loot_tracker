@@ -1,9 +1,46 @@
+Tinyraider (+2 MS) (+2 SR)
+- Crushing Coldwraith Belt (SR) -- received on **2023-11-12**
+- Frozen Bonespike (SR) -- received on **2023-11-12**
+
+Darkfern (+2 MS) (+1 SR)
+- Ahn'kahar Onyx Neckguard (MS) -- received on **2023-11-12**
+- Ring of Rotting Sinew (SR) -- received on **2023-11-12**
+
+Kelorlyn (+2 MS) (+1 SR)
+- Wodin's Lucky Necklace (MS) -- received on **2023-11-12**
+- Frostbitten Fur Boots (SR) -- received on **2023-11-12**
+
+Artaz (+1 MS) (+1 SR)
+- Bloodvenom Blade (SR) -- received on **2023-11-12**
+- Shadowfrost Shard (ETC) -- received on **2023-11-12**
+- Shadowfrost Shard (ETC) -- received on **2023-11-12**
+- Shadowfrost Shard (ETC) -- received on **2023-11-12**
+- Shadowfrost Shard (ETC) -- received on **2023-11-12**
+
+Axsel (+1 MS) (+1 SR)
+- Ring of Rapid Ascent (SR) -- received on **2023-11-12**
+
+Ferrousblade (+1 MS) (+1 SR)
+- Scourge Reaver's Legplates (OS) -- received on **2023-11-12**
+- Devium's Eternally Cold Ring (SR) -- received on **2023-11-12**
+
+Lorniras (+1 MS) (+1 SR)
+- Frostbinder's Shredded Cape (SR) -- received on **2023-11-12**
+
+Swiftbladess (+1 MS) (+1 SR)
+- Shadowvault Slayer's Cloak (SR) -- received on **2023-11-12**
+
+Killiandra (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2023-11-12**
+
 Lumosbringer (+1 MS) (+0 SR)
-- Sanctified Lightsworn Legplates (MS) -- received on **2023-11-08**
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2023-11-12**
 
-Abletu (+0 MS) (+0 SR)
-- Sanctified Lasherweave Gauntlets (OS) -- received on **2023-11-08**
+Prunejuuce (+1 MS) (+0 SR)
+- Corpse Tongue Coin (MS) -- received on **2023-11-12**
 
-Killiandra (+0 MS) (+0 SR)
-- Wrathful Gladiator's Silk Trousers (OS) -- received on **2023-11-08**
+Wamili (+1 MS) (+0 SR)
+- Nibelung (MS) -- received on **2023-11-12**
 
+_disenchanted
+- Zod's Repeating Longbow

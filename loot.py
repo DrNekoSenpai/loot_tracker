@@ -668,7 +668,7 @@ def award_loot(players):
         
     return players
 
-def add_players_details(players):
+def mark_attendance(players):
     for p in players: 
         p._attendance = False
 
@@ -685,6 +685,7 @@ def add_players_details(players):
             new_players.append(name)
 
     for new_player in new_players: 
+        if new_player == "KillÃ¤din": new_player = "Killadin"
         
         if not regular_keyboard(new_player):
             print(f"Player name {new_player} is not valid. Please input the name manually.")
@@ -1144,6 +1145,11 @@ def remove_loot(players):
     return players
 
 def weekly_reset(players):
+    players_with_plusses = [p for p in players if p._regular_plusses > 0 or p._reserve_plusses > 0]
+    if len(players_with_plusses) == 0: 
+        print("There's nothing to clear!")
+        return players
+
     confirm = input("Are you sure you want to reset the weekly loot? (y/n): ").lower()
     if confirm != "y":
         print("Aborting.")
@@ -1666,7 +1672,7 @@ while(True):
         if sel == "a": players = import_softreserve(players)
         elif sel == "b": players = import_tmb(players)
         else: print("Invalid option.")
-    elif sel == 3: players = add_players_details(players)
+    elif sel == 3: players = mark_attendance(players)
     elif sel == 4: export_history()
     elif sel == 5: export_loot()
     elif sel == 6: 
