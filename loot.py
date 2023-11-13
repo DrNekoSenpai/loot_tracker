@@ -673,7 +673,7 @@ def add_players_details(players):
         p._attendance = False
 
     print("")
-    with open("details.txt", "r") as file: 
+    with open("attendance.txt", "r") as file: 
         lines = file.readlines()
 
     new_players = []
@@ -1643,7 +1643,7 @@ while(True):
     print(f"{guild_name}Loot Tracker{'' if raiding else ' (Debug Mode)'}")
     print(" 1) Award loot")
     print(" 2) Import soft-reserve or TMB (or change guild)")
-    print(" 3) Mark attendance using details.txt")
+    print(" 3) Mark attendance")
     print(" 4) Export the loot history to a file")
     print(" 5) Export THIS RAID's loot to a file")
     print(" 6) Remove loot, or weekly reset")
