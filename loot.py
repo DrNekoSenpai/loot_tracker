@@ -843,6 +843,16 @@ def export_loot():
     last_raid = (last_wednesday if last_wednesday > last_sunday else last_sunday).strftime("%Y-%m-%d")
 
     with open("loot.txt", "w") as f:
+        
+        # If last_raid is WEDNESDAY, print WEDNESDAY's date. Bold the date.
+        # If last raid is SUNDAY, print both WEDNESDAY and SUNDAY's date. Bold only Sunday's date. 
+
+        if last_raid == last_wednesday.strftime("%Y-%m-%d"):
+            f.write(f"Loot log for **Wednesday, {last_wednesday.strftime('%Y/%m/%d')}**:\n\n")
+
+        elif last_raid == last_sunday.strftime("%Y-%m-%d"):
+            f.write(f"Loot log for Wednesday, {last_wednesday.strftime('%Y/%m/%d')} and **Sunday, {last_sunday.strftime('%Y/%m/%d')}**:\n\n")
+
         # Print out the list of players.
         for p in players:
             # First, check if the player has not won any items; that is, their log is empty.
