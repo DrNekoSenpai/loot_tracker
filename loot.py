@@ -1594,7 +1594,7 @@ def sudo_mode(players, raiding):
                     if reserved: 
                         player._reserve_plusses += 1
                         player._regular_plusses += 1
-                    elif not offspec: 
+                    elif not offspec and not roll_type == "ETC": 
                         player._regular_plusses += 1
 
         elif sel == "e": 
