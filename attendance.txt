@@ -19,7 +19,7 @@ Details!: Buff Uptime for Trash Cleanup [1:00 EF]
 18. Tinyraider ....... 339 (3.1%)
 19. Wamili ............. 333 (3.0%)
 20. Swiftbladess ... 290 (2.6%)
-21. Axsel ................ 271 (2.5%)
+21. Axsel ................ 271 (2.5%)e
 22. Sighanama ...... 250 (2.3%)
 23. Catreene .......... 244 (2.2%)
 24. Prunejuuce ...... 227 (2.1%)
