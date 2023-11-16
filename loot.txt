@@ -1,54 +1,48 @@
-Loot log for Wednesday, 2023/11/08 and **Sunday, 2023/11/12**:
+Loot log for **Wednesday, 2023/11/15**:
 
-Tinyraider (+2 MS) (+2 SR)
-- Crushing Coldwraith Belt (SR) -- received on **2023-11-12**
-- Frozen Bonespike (SR) -- received on **2023-11-12**
+Miatotems (+3 MS) (+2 SR)
+- Sanctified Frost Witch's Legguards (MS) -- received on **2023-11-15**
+- Bulwark of Smouldering Steel (SR) -- received on **2023-11-15**
+- Necrophotic Greaves (SR) -- received on **2023-11-15**
 
-Artaz (+2 MS) (+1 SR)
-- Ahn'kahar Onyx Neckguard (MS) -- received on **2023-11-12**
-- Bloodvenom Blade (SR) -- received on **2023-11-12**
-- Shadowfrost Shard (ETC) -- received on **2023-11-12**
-- Shadowfrost Shard (ETC) -- received on **2023-11-12**
-- Shadowfrost Shard (ETC) -- received on **2023-11-12**
-- Shadowfrost Shard (ETC) -- received on **2023-11-12**
+Gnoya (+1 MS) (+1 SR)
+- Bone Sentinel's Amulet (SR) -- received on **2023-11-15**
 
-Darkfern (+2 MS) (+1 SR)
-- Ahn'kahar Onyx Neckguard (MS) -- received on **2023-11-12**
-- Ring of Rotting Sinew (SR) -- received on **2023-11-12**
-
-Kelorlyn (+2 MS) (+1 SR)
-- Wodin's Lucky Necklace (MS) -- received on **2023-11-12**
-- Frostbitten Fur Boots (SR) -- received on **2023-11-12**
-
-Axsel (+1 MS) (+1 SR)
-- Ring of Rapid Ascent (SR) -- received on **2023-11-12**
-
-Ferrousblade (+1 MS) (+1 SR)
-- Scourge Reaver's Legplates (OS) -- received on **2023-11-12**
-- Devium's Eternally Cold Ring (SR) -- received on **2023-11-12**
+Lilypalooza (+1 MS) (+1 SR)
+- Greatcloak of the Turned Champion (SR) -- received on **2023-11-15**
 
 Lorniras (+1 MS) (+1 SR)
-- Frostbinder's Shredded Cape (SR) -- received on **2023-11-12**
+- Corp'rethar Ceremonial Crown (SR) -- received on **2023-11-15**
 
-Swiftbladess (+1 MS) (+1 SR)
-- Shadowvault Slayer's Cloak (SR) -- received on **2023-11-12**
+Socko (+1 MS) (+1 SR)
+- Scourgeborne Waraxe (SR) -- received on **2023-11-15**
 
-Lumosbringer (+2 MS) (+0 SR)
-- Sanctified Lightsworn Legplates (MS) -- received on 2023-11-08
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2023-11-12**
+Tinyraider (+1 MS) (+1 SR)
+- Ring of Maddening Whispers (SR) -- received on **2023-11-15**
+
+Abletu (+1 MS) (+0 SR)
+- Sanctified Lasherweave Gloves (MS) -- received on **2023-11-15**
+- Boots of Unnatural Growth (OS) -- received on **2023-11-15**
 
 Killiandra (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2023-11-12**
-- Wrathful Gladiator's Silk Trousers (OS) -- received on 2023-11-08
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2023-11-15**
 
-Prunejuuce (+1 MS) (+0 SR)
-- Corpse Tongue Coin (MS) -- received on **2023-11-12**
+Lumosbringer (+1 MS) (+0 SR)
+- Gendarme's Cuirass (MS) -- received on **2023-11-15**
 
-Wamili (+1 MS) (+0 SR)
-- Nibelung (MS) -- received on **2023-11-12**
+Pacratt (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2023-11-15**
 
-Abletu (+0 MS) (+0 SR)
-- Sanctified Lasherweave Gauntlets (OS) -- received on 2023-11-08
+Artaz (+0 MS) (+0 SR)
+- Shadowfrost Shard (ETC) -- received on **2023-11-15**
+- Shadowfrost Shard (ETC) -- received on **2023-11-15**
+- Shadowfrost Shard (ETC) -- received on **2023-11-15**
+
+Elisesolis (+0 MS) (+0 SR)
+- Ring of Rotting Sinew (OS) -- received on **2023-11-15**
+
+Meemeemeemee (+0 MS) (+0 SR)
+- Heartpierce (OS) -- received on **2023-11-15**
 
 _disenchanted
-- Zod's Repeating Longbow
+- Wrathful Gladiator's Armwraps of Dominance

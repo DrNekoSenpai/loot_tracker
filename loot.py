@@ -1,8 +1,7 @@
-import pickle, re, argparse, os, time, pyautogui, subprocess
-from typing import List, Union
+import pickle, re, argparse, os, time, pyautogui, subprocess, pytesseract, cv2
+from typing import List
 from datetime import datetime
 from datetime import timedelta
-# import redirect_stdout
 from contextlib import redirect_stdout as redirect
 from io import StringIO
 
@@ -394,10 +393,50 @@ def award_loot(players):
         
         # We'll select this match, and then move on.
         item_match = item_matches[sel-1]
-    print("")
+        print("")
     # Now, we'll print out the item name; the corresponding category; and the item level.
     print(f"Item: {item_match.name} ({item_match.ilvl})")
     print(f"Slot: {slot_names[int(item_match.slot)]}")
+
+    # If the item's name is "Shadowfrost Shard"... 
+    if item_match.name == "Shadowfrost Shard":
+        # first, check if Artaz has already won 50 of these. 
+
+        artaz = next((p for p in players if p.name == "Artaz"), None)
+        shards = len([x for x in artaz._history["ETC"] if x.item.name == "Shadowfrost Shard"])
+
+        if shards < 50: winner = "Artaz"
+        else: 
+            ferrousblade = next((p for p in players if p.name == "Ferrousblade"), None)
+            shards = len([x for x in ferrousblade._history["ETC"] if x.item.name == "Shadowfrost Shard"])
+
+            if shards < 50: winner = "Ferrousblade"
+
+            else:
+                pastiry = next((p for p in players if p.name == "Pastiry"), None)
+                shards = len([x for x in pastiry._history["ETC"] if x.item.name == "Shadowfrost Shard"])
+
+                if shards < 50: winner = "Pastiry"
+                else: winner = None
+
+        if winner is None: 
+            print("All three players have already won 50 Shadowfrost Shards.")
+            winner = input("Who's next on the priority list? ")
+
+        roll_type = "ETC"
+        log = Log(winner.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
+        winner._raid_log.append(log)
+
+        if not raiding: 
+            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
+        else:
+            confirm = "y"
+
+        if confirm == "y":
+            winner._history[slot_names[int(item_match.slot)]].append(log)
+
+        print(f"{winner.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
+        return players
 
     reserves = []
 
@@ -526,6 +565,25 @@ def award_loot(players):
                             time.sleep(0.1)
                             pyautogui.press("enter")
                             time.sleep(0.25)
+
+        elif len(reserves) == 0 and not slot_names[int(item_match.slot)] == "ETC": 
+            print(f"The following item, {item_match.name}, is an open roll -- no one has reserved it.")
+
+            if raiding: 
+                ready = input("Ready to announce? (y/n): ").lower()
+                if ready == "y": 
+                    pyautogui.hotkey("alt", "tab")
+
+                    pyautogui.write("/")
+                    time.sleep(0.1)
+                    pyautogui.write("rw")
+                    time.sleep(0.1)
+                    pyautogui.press("space")
+                    time.sleep(0.1)
+                    pyautogui.write(f"The following item, {item_match.name}, is an open roll  -- no one has reserved it.")
+                    time.sleep(0.1)
+                    pyautogui.press("enter")
+                    time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -719,6 +777,14 @@ def mark_attendance(players):
 
     print("")
     return players
+
+def attendance_screenshot(): 
+    pyautogui.screenshot("attendance.png")
+    img = cv2.imread("attendance.png")
+    left, right, up, down = 0, 515, 0, 300
+    names = img[up:down, left:right]
+    names = pytesseract.image_to_string(names, lang="eng", config="--psm 6")
+    print(names)
 
 def export_history(): 
     # Sort the players by alphabetical order.

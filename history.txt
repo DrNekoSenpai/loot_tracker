@@ -1,4 +1,4 @@
-Abletu: 5 items.
+Abletu: 7 items.
 
 Neck:
   \- [Amulet of the Silent Eulogy (264)](<https://www.wowhead.com/wotlk/item=50005>) (SR) (2023-10-25)
@@ -7,6 +7,10 @@ Hands:
   \- [Handguards of Winter's Respite (264)](<https://www.wowhead.com/wotlk/item=49979>) (MS) (2023-10-18)
   \- [Wrathful Gladiator's Kodohide Gloves (270)](<https://www.wowhead.com/wotlk/item=51420>) (OS) (2023-11-01)
   \- [Sanctified Lasherweave Gauntlets (264)](<https://www.wowhead.com/wotlk/item=51138>) (OS) (2023-11-08)
+  \- [Sanctified Lasherweave Gloves (264)](<https://www.wowhead.com/wotlk/item=51148>) (MS) (2023-11-15)
+
+Feet:
+  \- [Boots of Unnatural Growth (277)](<https://www.wowhead.com/wotlk/item=50009>) (OS) (2023-11-15)
 
 Main-Hand:
   \- [Frozen Bonespike (264)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2023-10-18)
@@ -14,7 +18,7 @@ Main-Hand:
 Artaz: 7 items.
 
 ETC:
-  \- [Shadowfrost Shard (15x)](<https://www.wowhead.com/wotlk/item=50274>)
+  \- [Shadowfrost Shard (18x)](<https://www.wowhead.com/wotlk/item=50274>)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-15)
 
 Neck:
@@ -79,10 +83,13 @@ Neck:
 Ring:
   \- [Ring of Rotting Sinew (264)](<https://www.wowhead.com/wotlk/item=50453>) (SR) (2023-11-12)
 ----------------------------------------
-Elisesolis: 2 items.
+Elisesolis: 3 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2023-10-18)
+
+Ring:
+  \- [Ring of Rotting Sinew (264)](<https://www.wowhead.com/wotlk/item=50453>) (OS) (2023-11-15)
 
 Trinket:
   \- [Corpse Tongue Coin (264)](<https://www.wowhead.com/wotlk/item=50352>) (MS) (2023-10-15)
@@ -110,7 +117,10 @@ Gnoraa: 1 items.
 Shoulder:
   \- [Shoulders of Mercy Killing (264)](<https://www.wowhead.com/wotlk/item=49991>) (MS) (2023-11-01)
 ----------------------------------------
-Gnoya: 1 items.
+Gnoya: 2 items.
+
+Neck:
+  \- [Bone Sentinel's Amulet (264)](<https://www.wowhead.com/wotlk/item=49975>) (SR) (2023-11-15)
 
 Back:
   \- [Greatcloak of the Turned Champion (264)](<https://www.wowhead.com/wotlk/item=50014>) (SR) (2023-11-01)
@@ -126,10 +136,11 @@ Wrist:
 Feet:
   \- [Frostbitten Fur Boots (264)](<https://www.wowhead.com/wotlk/item=49950>) (SR) (2023-11-12)
 ----------------------------------------
-Killiandra: 4 items.
+Killiandra: 5 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-12)
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-15)
 
 Waist:
   \- [Crushing Coldwraith Belt (264)](<https://www.wowhead.com/wotlk/item=49978>) (SR) (2023-11-01)
@@ -140,12 +151,18 @@ Legs:
 Two-Hand:
   \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (SR) (2023-10-15)
 ----------------------------------------
-Lilypalooza: 1 items.
+Lilypalooza: 2 items.
+
+Back:
+  \- [Greatcloak of the Turned Champion (264)](<https://www.wowhead.com/wotlk/item=50014>) (SR) (2023-11-15)
 
 Legs:
   \- [Sanctified Crimson Acolyte Leggings (264)](<https://www.wowhead.com/wotlk/item=51177>) (MS) (2023-11-01)
 ----------------------------------------
-Lorniras: 2 items.
+Lorniras: 3 items.
+
+Head:
+  \- [Corp'rethar Ceremonial Crown (277)](<https://www.wowhead.com/wotlk/item=50006>) (SR) (2023-11-15)
 
 Back:
   \- [Frostbinder's Shredded Cape (264)](<https://www.wowhead.com/wotlk/item=50205>) (SR) (2023-11-12)
@@ -153,7 +170,7 @@ Back:
 Hands:
   \- [Gunship Captain's Mittens (264)](<https://www.wowhead.com/wotlk/item=50011>) (SR) (2023-10-15)
 ----------------------------------------
-Lumosbringer: 4 items.
+Lumosbringer: 5 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2023-11-12)
@@ -164,26 +181,46 @@ Neck:
 Back:
   \- [Shadowvault Slayer's Cloak (264)](<https://www.wowhead.com/wotlk/item=49998>) (SR) (2023-11-01)
 
+Chest:
+  \- [Gendarme's Cuirass (264)](<https://www.wowhead.com/wotlk/item=49951>) (MS) (2023-11-15)
+
 Legs:
   \- [Sanctified Lightsworn Legplates (277)](<https://www.wowhead.com/wotlk/item=51278>) (MS) (2023-11-08)
 ----------------------------------------
-Meemeemeemee: 1 items.
+Meemeemeemee: 2 items.
 
 Back:
   \- [Shadowvault Slayer's Cloak (264)](<https://www.wowhead.com/wotlk/item=49998>) (SR) (2023-10-18)
+
+Main-Hand:
+  \- [Heartpierce (264)](<https://www.wowhead.com/wotlk/item=49982>) (OS) (2023-11-15)
 ----------------------------------------
 Mettybeans: 1 items.
 
 Off-Hand:
   \- [Bulwark of Smouldering Steel (264)](<https://www.wowhead.com/wotlk/item=49976>) (SR) (2023-10-25)
 ----------------------------------------
-Miatotems: 2 items.
+Miatotems: 5 items.
 
 Waist:
   \- [Wrathful Gladiator's Waistguard of Dominance (264)](<https://www.wowhead.com/wotlk/item=51374>) (MS) (2023-10-25)
 
+Legs:
+  \- [Sanctified Frost Witch's Legguards (264)](<https://www.wowhead.com/wotlk/item=51193>) (MS) (2023-11-15)
+
+Feet:
+  \- [Necrophotic Greaves (264)](<https://www.wowhead.com/wotlk/item=49993>) (SR) (2023-11-15)
+
 Ring:
   \- [Ring of Maddening Whispers (264)](<https://www.wowhead.com/wotlk/item=49990>) (MS) (2023-10-15)
+
+Off-Hand:
+  \- [Bulwark of Smouldering Steel (264)](<https://www.wowhead.com/wotlk/item=49976>) (SR) (2023-11-15)
+----------------------------------------
+Pacratt: 1 items.
+
+ETC:
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-15)
 ----------------------------------------
 Pastiry: 1 items.
 
@@ -209,10 +246,13 @@ Ring:
 Ranged:
   \- [Zod's Repeating Longbow (264)](<https://www.wowhead.com/wotlk/item=50034>) (MS) (2023-10-15)
 ----------------------------------------
-Socko: 1 items.
+Socko: 2 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-01)
+
+Main-Hand:
+  \- [Scourgeborne Waraxe (277)](<https://www.wowhead.com/wotlk/item=50411>) (SR) (2023-11-15)
 ----------------------------------------
 Soulreaverr: 6 items.
 
@@ -271,7 +311,7 @@ Ring:
 Main-Hand:
   \- [Heartpierce (264)](<https://www.wowhead.com/wotlk/item=49982>) (MS) (2023-11-01)
 ----------------------------------------
-Tinyraider: 3 items.
+Tinyraider: 4 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-18)
@@ -279,18 +319,17 @@ ETC:
 Waist:
   \- [Crushing Coldwraith Belt (264)](<https://www.wowhead.com/wotlk/item=49978>) (SR) (2023-11-12)
 
+Ring:
+  \- [Ring of Maddening Whispers (264)](<https://www.wowhead.com/wotlk/item=49990>) (SR) (2023-11-15)
+
 Main-Hand:
   \- [Frozen Bonespike (264)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2023-11-12)
 ----------------------------------------
-Wamili: 1 items.
-
-Two-Hand:
-  \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (MS) (2023-11-12)
-----------------------------------------
-_disenchanted: 4 items.
+_disenchanted: 5 items.
 
 Wrist:
   \- [Wrathful Gladiator's Bracers of Salvation (264)](<https://www.wowhead.com/wotlk/item=51361>) (2023-10-25)
+  \- [Wrathful Gladiator's Armwraps of Dominance (264)](<https://www.wowhead.com/wotlk/item=51345>) (2023-11-15)
 
 Hands:
   \- [Fallen Lord's Handguards (264)](<https://www.wowhead.com/wotlk/item=49995>) (2023-10-25)
