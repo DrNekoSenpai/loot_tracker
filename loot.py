@@ -398,47 +398,48 @@ def award_loot(players):
     print(f"Item: {item_match.name} ({item_match.ilvl})")
     print(f"Slot: {slot_names[int(item_match.slot)]}")
 
-    # If the item's name is "Shadowfrost Shard"... 
-    if item_match.name == "Shadowfrost Shard":
-        # first, check if Artaz has already won 50 of these. 
+    # # If the item's name is "Shadowfrost Shard"... 
+    # if item_match.name == "Shadowfrost Shard":
+    #     # first, check if Artaz has already won 50 of these. 
 
-        artaz = next((p for p in players if p.name == "Artaz"), None)
-        shards = len([x for x in artaz._history["ETC"] if x.item.name == "Shadowfrost Shard"])
+    #     artaz = next((p for p in players if p.name == "Artaz"), None)
+    #     shards = len([x for x in artaz._history["ETC"] if x.item.name == "Shadowfrost Shard"])
 
-        if shards < 50: winner = "Artaz"
-        else: 
-            ferrousblade = next((p for p in players if p.name == "Ferrousblade"), None)
-            shards = len([x for x in ferrousblade._history["ETC"] if x.item.name == "Shadowfrost Shard"])
+    #     if shards < 50: winner = "Artaz"
+    #     else: 
+    #         ferrousblade = next((p for p in players if p.name == "Ferrousblade"), None)
+    #         shards = len([x for x in ferrousblade._history["ETC"] if x.item.name == "Shadowfrost Shard"])
 
-            if shards < 50: winner = "Ferrousblade"
+    #         if shards < 50: winner = "Ferrousblade"
 
-            else:
-                pastiry = next((p for p in players if p.name == "Pastiry"), None)
-                shards = len([x for x in pastiry._history["ETC"] if x.item.name == "Shadowfrost Shard"])
+    #         else:
+    #             pastiry = next((p for p in players if p.name == "Pastiry"), None)
+    #             shards = len([x for x in pastiry._history["ETC"] if x.item.name == "Shadowfrost Shard"])
 
-                if shards < 50: winner = "Pastiry"
-                else: winner = None
+    #             if shards < 50: winner = "Pastiry"
+    #             else: winner = None
 
-        if winner is None: 
-            print("All three players have already won 50 Shadowfrost Shards.")
-            winner = input("Who's next on the priority list? ")
+    #     if winner is None: 
+    #         print("All three players have already won 50 Shadowfrost Shards.")
+    #         winner = input("Who's next on the priority list? ")
 
-        roll_type = "ETC"
-        log = Log(winner.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-        winner._raid_log.append(log)
+    #     roll_type = "ETC"
+    #     log = Log(winner.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
+    #     winner._raid_log.append(log)
 
-        if not raiding: 
-            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-        else:
-            confirm = "y"
+    #     if not raiding: 
+    #         confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
+    #     else:
+    #         confirm = "y"
 
-        if confirm == "y":
-            winner._history[slot_names[int(item_match.slot)]].append(log)
+    #     if confirm == "y":
+    #         winner._history[slot_names[int(item_match.slot)]].append(log)
 
-        print(f"{winner.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
-        return players
+    #     print(f"{winner.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
+    #     return players
 
     reserves = []
+    ineligible = 0
 
     # We'll check the guild name, to see if it's an empty string. If so, we will completely skip soft-reserves. 
     if guild_name != "": 
@@ -474,6 +475,10 @@ def award_loot(players):
                                 
                         else: 
                             reserves.append((p.name, p._reserve_plusses, f" (ilvl 264: {num_received}/2)"))
+                    
+                    else: 
+                        print(f"{p.name} has already won both copies of this item ({item_match.name} {item_match.ilvl}).")
+                        ineligible += 1
 
                 else: 
                     # Only append the player to the reserves list if they have not already won the same item, with the same item level.
@@ -482,6 +487,7 @@ def award_loot(players):
                         if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
                             already_received = True
                             print(f"{p.name} has already won this item ({item_match.name} {item_match.ilvl}).")
+                            ineligible += 1
                             break
 
                     if not already_received: 
@@ -567,7 +573,8 @@ def award_loot(players):
                             time.sleep(0.25)
 
         elif len(reserves) == 0 and not slot_names[int(item_match.slot)] == "ETC": 
-            print(f"The following item, {item_match.name}, is an open roll -- no one has reserved it.")
+            if ineligible == 0: print(f"The following item, {item_match.name}, is an open roll -- no one has reserved it.")
+            else: print(f"The following item, {item_match.name}, is an open roll -- ALL those who have reserved it have already won this item.")
 
             if raiding: 
                 ready = input("Ready to announce? (y/n): ").lower()
@@ -580,7 +587,8 @@ def award_loot(players):
                     time.sleep(0.1)
                     pyautogui.press("space")
                     time.sleep(0.1)
-                    pyautogui.write(f"The following item, {item_match.name}, is an open roll  -- no one has reserved it.")
+                    if ineligible == 0: pyautogui.write(f"The following item, {item_match.name}, is an open roll  -- no one has reserved it.")
+                    else: pyautogui.write(f"The following item, {item_match.name}, is an open roll  -- ALL those who have reserved it have already won this item.")
                     time.sleep(0.1)
                     pyautogui.press("enter")
                     time.sleep(0.25)
@@ -778,14 +786,6 @@ def mark_attendance(players):
     print("")
     return players
 
-def attendance_screenshot(): 
-    pyautogui.screenshot("attendance.png")
-    img = cv2.imread("attendance.png")
-    left, right, up, down = 0, 515, 0, 300
-    names = img[up:down, left:right]
-    names = pytesseract.image_to_string(names, lang="eng", config="--psm 6")
-    print(names)
-
 def export_history(): 
     # Sort the players by alphabetical order.
     players.sort(key=lambda x: x.name)
@@ -980,6 +980,130 @@ def export_loot():
                     f.write(f"- {l.item.name}\n")
 
 def remove_loot(players):
+    player = input("Enter the name of the player who is sending loot: ").lower()
+    player_matches = []
+    for p in players:
+        if player in p.name.lower(): 
+            player_matches.append(p)
+
+    if len(player_matches) == 0:
+        print("No matches found. Please double-check the player name and try again.")
+        return players
+    
+    elif len(player_matches) == 1:
+        # We'll select this match, and then move on.
+        player = player_matches[0]
+
+    elif len(player_matches) > 1:
+        # We'll print all of the matches, and ask them to select one.
+        print("Multiple matches found. Please select one of the following:")
+        for i in range(len(player_matches)):
+            print(f"{i+1}. {player_matches[i].name}")
+
+        # We'll ask the user to select a number.
+        sel = input("Please select a number: ")
+        try: 
+            sel = int(sel)
+            if sel < 1 or sel > len(player_matches):
+                print("Invalid integer input.")
+                return players
+            
+        except:
+            print("Invalid non-convertible input.")
+            return players
+
+        # We'll select this match, and then move on.
+        player = player_matches[sel-1]
+
+    # Now, we'll ask the user to select the item they want to remove.
+    # We'll print out the list of items they've won, and ask them to select one.
+
+    print("")
+    print("Select an item to remove:")
+    for i in range(len(player._raid_log)):
+        print(f"{i+1}. {player._raid_log[i].item.name} ({player._raid_log[i].item.ilvl}) ({player._raid_log[i].roll})")
+
+    sel = input("Select a number: ")
+    try:
+        sel = int(sel)
+        if sel < 1 or sel > len(player._raid_log):
+            print("Invalid integer input.")
+            return players
+        
+    except:
+        print("Invalid non-convertible input.")
+        return players
+    
+    # We want to confirm that this is the item that is to be traded. 
+    confirm = input(f"Are you sure you want to remove {player._raid_log[sel-1].item.name} ({player._raid_log[sel-1].item.ilvl}) ({player._raid_log[sel-1].roll}) from {player.name}? (y/n): ").lower()
+    if confirm != "y": 
+        print("Aborting.")
+        return players
+    
+    # We'll check if the item was won through a main-spec roll. If so, we'll decrement regular plusses. 
+    # Similarly, if it's through a reserve roll, we'll decrement reserve plusses. 
+    if player._raid_log[sel-1].roll == "MS":
+        player._regular_plusses -= 1
+
+    elif player._raid_log[sel-1].roll == "SR":
+        player._reserve_plusses -= 1
+        player._regular_plusses -= 1
+
+    elif player._raid_log[sel-1].roll == "TMB":
+        player._reserve_plusses -= 1
+        player._regular_plusses -= 1
+    
+    # Remove the item from the player's log.
+    item = player._raid_log[sel-1]
+    player._raid_log.remove(item)
+
+    # Remove the item from the player's history. If it's a 277 item, remove the 264 version as well -- but only if the note is "auto". 
+
+    # We can only check the logs if the item was not disenchanted. 
+    if not player.name == "_disenchanted": 
+
+        # We'll check if the item is 277. If so, we'll remove the 264 version as well.
+        if item.item.ilvl == 277:
+            # First, check if there exists a 264 version of the item in the history; and if so, if the note is "auto". 
+
+            if any([item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
+                # If so, find the index of the 264 version, and use that to remove it. 
+                index = [item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
+                player._history[slot_names[int(item.item.slot)]].pop(index)
+
+        # We'll check if the item is 264. If so, we'll remove the 251 version as well.
+        elif item.item.ilvl == 264:
+            # First, check if there exists a 251 version of the item in the history; and if so, if the note is "auto". 
+
+            if any([item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
+                # If so, find the index of the 251 version, and use that to remove it. 
+                index = [item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
+                player._history[slot_names[int(item.item.slot)]].pop(index)
+
+        index = player._history[slot_names[int(item.item.slot)]].index(item)
+        player._history[slot_names[int(item.item.slot)]].pop(index)
+
+    return players
+
+def weekly_reset(players):
+    players_with_plusses = [p for p in players if p._regular_plusses > 0 or p._reserve_plusses > 0]
+    if len(players_with_plusses) == 0: 
+        print("There's nothing to clear!")
+        return players
+
+    confirm = input("Are you sure you want to reset the weekly loot? (y/n): ").lower()
+    if confirm != "y":
+        print("Aborting.")
+        return players
+
+    for i in range(len(players)): 
+        players[i]._raid_log = []
+        players[i]._regular_plusses = 0
+        players[i]._reserve_plusses = 0
+
+    return players 
+
+def log_trade(players):
     sending_player = input("Enter the name of the player who is sending loot: ").lower()
     sending_player_matches = []
     for p in players:
@@ -1091,255 +1215,6 @@ def remove_loot(players):
     for p in players:
         if receiving_player in p.name.lower(): 
             receiving_player_matches.append(p)
-    
-
-
-    # if len(player_matches) == 0:
-    #     print("No matches found. Please double-check the player name and try again.")
-    #     return players
-    
-    # elif len(player_matches) == 1:
-    #     # We'll select this match, and then move on.
-    #     player = player_matches[0]
-
-    # elif len(player_matches) > 1:
-    #     # We'll print all of the matches, and ask them to select one.
-    #     print("Multiple matches found. Please select one of the following:")
-    #     for i in range(len(player_matches)):
-    #         print(f"{i+1}. {player_matches[i].name}")
-
-    #     # We'll ask the user to select a number.
-    #     sel = input("Select a number: ")
-    #     try:
-    #         sel = int(sel)
-    #         if sel < 1 or sel > len(player_matches):
-    #             print("Invalid integer input.")
-    #             return players
-            
-    #     except:
-    #         print("Invalid non-convertible input.")
-    #         return players
-
-    #     # We'll select this match, and then move on.
-    #     player = player_matches[sel-1]
-
-    # if player.name == "_disenchanted":
-    #     if len(reserves) > 0: 
-    #         confirm = input("This item is reserved. Are you sure it should be disenchanted instead? (y/n): ").lower()
-    #         if confirm != "y":
-    #             print("Aborting.")
-    #             return players
-            
-    #     print(f"{item_match.name} ({item_match.ilvl}) has been disenchanted.")
-    #     # Find the disenchanted player. 
-    #     for p in players:
-    #         if p.name == "_disenchanted":
-    #             # Add the item to the player's history list.
-    #             p._raid_log.append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
-    #             p._history[slot_names[int(item_match.slot)]].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
-    #             return players
-
-    # # If the player isn't on the reserves list, we'll ask to confirm that this is intentional. 
-    # if len(reserves) > 0 and player.name not in [r[0] for r in reserves]: 
-    #     confirm = input("This person is not on the reserves list. Are you sure this is intentional? (y/n/sr): ").lower()
-    #     if confirm != "y" and confirm != "sr": 
-    #         print("Aborting.")
-    #         return players
-        
-    # # We'll ask the user whether or not this is an off-spec roll, but only if the player is not on the reserves list.
-    # # If they are, it's a soft-reserve roll. 
-    # if player.name in [r[0] for r in reserves] or confirm == "sr": 
-    #     if guild_name == "Dark Rising ": roll_type = "TMB"
-    #     else: roll_type = "SR"
-
-    #     log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-    #     player._raid_log.append(log)
-    #     player._reserve_plusses += 1
-    #     player._regular_plusses += 1
-
-    #     if not raiding: 
-    #         confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-    #     else: 
-    #         confirm = "y"
-        
-    #     if confirm == "y":
-    #         if guild_name == "Dark Rising ": roll_type = "TMB"
-    #         else: roll_type = "SR"
-
-    #         player._history[slot_names[int(item_match.slot)]].append(log)
-    #         # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-    #         if item_match.ilvl == 277: 
-    #             if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-    #                 player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
-
-    #         # If the item level is 264, w e'll also add the 251 version to the history, but only if it's not already there.
-    #         elif item_match.ilvl == 264: 
-    #             if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
-    #                 player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
-
-    # elif slot_names[int(item_match.slot)] != "ETC" or "Mark of Sanctification" in item_match.name: 
-    #     off_spec = input("Is this an off-spec roll? (y/n): ").lower()
-    #     if off_spec == "y": roll_type = "OS"
-    #     else: roll_type = "MS"
-    
-    #     log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-    #     player._raid_log.append(log)
-    #     if not off_spec == "y": player._regular_plusses += 1
-
-    #     if not raiding: 
-    #         confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-    #     else: 
-    #         confirm = "y"
-
-    #     if confirm == "y": 
-    #         player._history[slot_names[int(item_match.slot)]].append(log)
-    #         # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-    #         if item_match.ilvl == 277: 
-    #             if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-    #                 player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
-
-    #         # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
-    #         elif item_match.ilvl == 264: 
-    #             if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
-    #                 player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
-
-    # else: 
-    #     roll_type = "ETC"
-    #     log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-    #     player._raid_log.append(log)
-
-    #     if not raiding: 
-    #         confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-    #     else:
-    #         confirm = "y"
-
-    #     if confirm == "y":
-    #         player._history[slot_names[int(item_match.slot)]].append(log)
-
-    # print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
-
-    return players
-
-def weekly_reset(players):
-    players_with_plusses = [p for p in players if p._regular_plusses > 0 or p._reserve_plusses > 0]
-    if len(players_with_plusses) == 0: 
-        print("There's nothing to clear!")
-        return players
-
-    confirm = input("Are you sure you want to reset the weekly loot? (y/n): ").lower()
-    if confirm != "y":
-        print("Aborting.")
-        return players
-
-    for i in range(len(players)): 
-        players[i]._raid_log = []
-        players[i]._regular_plusses = 0
-        players[i]._reserve_plusses = 0
-
-    return players 
-
-def log_trade(players):
-    sending_player = input("Enter the name of the player who is sending the item: ").lower()
-    player_matches = []
-    for p in players:
-        if player in p.name.lower(): 
-            player_matches.append(p)
-
-    if len(player_matches) == 0:
-        print("No matches found. Please double-check the player name and try again.")
-        return players
-    
-    elif len(player_matches) == 1:
-        # We'll select this match, and then move on.
-        player = player_matches[0]
-
-    elif len(player_matches) > 1:
-        # We'll print all of the matches, and ask them to select one.
-        print("Multiple matches found. Please select one of the following:")
-        for i in range(len(player_matches)):
-            print(f"{i+1}. {player_matches[i].name}")
-
-        # We'll ask the user to select a number.
-        sel = input("Select a number: ")
-        try:
-            sel = int(sel)
-            if sel < 1 or sel > len(player_matches):
-                print("Invalid integer input.")
-                return players 
-            
-        except:
-            print("Invalid non-convertible input.")
-            return players 
-
-        # We'll select this match, and then move on.
-        player = player_matches[sel-1]
-
-    # Now, we'll ask the user to select the item they want to remove.
-    # We'll print out the list of items they've won, and ask them to select one.
-    print("")
-    print("Select an item to remove:")
-    for i in range(len(player._raid_log)):
-        print(f"{i+1}. {player._raid_log[i].item.name} ({player._raid_log[i].item.ilvl}) ({player._raid_log[i].roll})")
-
-    sel = input("Select a number: ")
-    try:
-        sel = int(sel)
-        if sel < 1 or sel > len(player._raid_log):
-            print("Invalid integer input.")
-            return players
-        
-    except:
-        print("Invalid non-convertible input.")
-        return players 
-    
-    # We want to confirm that the user wants to remove this item.
-    confirm = input(f"Are you sure you want to remove {player._raid_log[sel-1].item.name} ({player._raid_log[sel-1].item.ilvl}) ({player._raid_log[sel-1].roll}) from {player.name}'s log? (y/n): ").lower()
-    if confirm != "y": 
-        print("Aborting.")
-        return players
-    
-    # We'll check if the item was won through a main-spec roll. If so, we'll decrement regular plusses. 
-    # Similarly, if it's through a reserve roll, we'll decrement reserve plusses. 
-    if player._raid_log[sel-1].roll == "MS":
-        player._regular_plusses -= 1
-
-    elif player._raid_log[sel-1].roll == "SR":
-        player._reserve_plusses -= 1
-        player._regular_plusses -= 1
-
-    elif player._raid_log[sel-1].roll == "TMB":
-        player._reserve_plusses -= 1
-        player._regular_plusses -= 1
-    
-    # Remove the item from the player's log.
-    item = player._raid_log[sel-1]
-    player._raid_log.remove(item)
-
-    # Remove the item from the player's history. If it's a 277 item, remove the 264 version as well -- but only if the note is "auto". 
-
-    # We can only check the logs if the item was not disenchanted. 
-    if not player.name == "_disenchanted": 
-
-        # We'll check if the item is 277. If so, we'll remove the 264 version as well.
-        if item.item.ilvl == 277:
-            # First, check if there exists a 264 version of the item in the history; and if so, if the note is "auto". 
-
-            if any([item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
-                # If so, find the index of the 264 version, and use that to remove it. 
-                index = [item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
-                player._history[slot_names[int(item.item.slot)]].pop(index)
-
-        # We'll check if the item is 264. If so, we'll remove the 251 version as well.
-        elif item.item.ilvl == 264:
-            # First, check if there exists a 251 version of the item in the history; and if so, if the note is "auto". 
-
-            if any([item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
-                # If so, find the index of the 251 version, and use that to remove it. 
-                index = [item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
-                player._history[slot_names[int(item.item.slot)]].pop(index)
-
-        index = player._history[slot_names[int(item.item.slot)]].index(item)
-        player._history[slot_names[int(item.item.slot)]].pop(index)
 
     return players
 
@@ -1359,7 +1234,7 @@ def sudo_mode(players, raiding):
         print("c. Add or remove plusses from a player")
         print("d. Restore history from Gargul export")
         print(f"e. {'Enter' if not raiding else 'Exit'} raiding mode")
-        print("f. Exit sudo mode")
+        print("g. Exit sudo mode")
         sel = input("Select an option: ").lower()
         print("")
 
@@ -1668,7 +1543,7 @@ def sudo_mode(players, raiding):
             else: print("Entering raiding mode.")
             raiding = not raiding
 
-        elif sel == "f":
+        elif sel == "g":
             print("Exiting sudo mode.")
             return players, raiding
 

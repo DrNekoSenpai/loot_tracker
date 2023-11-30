@@ -1,48 +1,46 @@
-Loot log for **Wednesday, 2023/11/15**:
+Loot log for **Wednesday, 2023/11/29**:
 
-Miatotems (+3 MS) (+2 SR)
-- Sanctified Frost Witch's Legguards (MS) -- received on **2023-11-15**
-- Bulwark of Smouldering Steel (SR) -- received on **2023-11-15**
-- Necrophotic Greaves (SR) -- received on **2023-11-15**
+Ferrousblade (+2 MS) (+1 SR)
+- Sanctified Scourgelord Handguards (MS) -- received on **2023-11-29**
+- Broken Ram Skull Helm (SR) -- received on **2023-11-29**
 
-Gnoya (+1 MS) (+1 SR)
-- Bone Sentinel's Amulet (SR) -- received on **2023-11-15**
+Prunejuuce (+1 MS) (+1 SR)
+- Boneguard Commander's Pauldrons (SR) -- received on **2023-11-29**
 
-Lilypalooza (+1 MS) (+1 SR)
-- Greatcloak of the Turned Champion (SR) -- received on **2023-11-15**
+Sighanama (+1 MS) (+1 SR)
+- Snowserpent Mail Helm (SR) -- received on **2023-11-29**
 
-Lorniras (+1 MS) (+1 SR)
-- Corp'rethar Ceremonial Crown (SR) -- received on **2023-11-15**
+Snedpie (+1 MS) (+1 SR)
+- Ring of Rapid Ascent (SR) -- received on **2023-11-29**
 
-Socko (+1 MS) (+1 SR)
-- Scourgeborne Waraxe (SR) -- received on **2023-11-15**
+Artaz (+1 MS) (+0 SR)
+- Ahn'kahar Onyx Neckguard (MS) -- received on **2023-11-29**
+- Shadowfrost Shard (ETC) -- received on **2023-11-29**
+- Shadowfrost Shard (ETC) -- received on **2023-11-29**
+- Shadowfrost Shard (ETC) -- received on **2023-11-29**
 
-Tinyraider (+1 MS) (+1 SR)
-- Ring of Maddening Whispers (SR) -- received on **2023-11-15**
+Catreene (+1 MS) (+0 SR)
+- Rusted Bonespike Pauldrons (MS) -- received on **2023-11-29**
 
-Abletu (+1 MS) (+0 SR)
-- Sanctified Lasherweave Gloves (MS) -- received on **2023-11-15**
-- Boots of Unnatural Growth (OS) -- received on **2023-11-15**
+Meemeemeemee (+1 MS) (+0 SR)
+- Protector's Mark of Sanctification (N25) (MS) -- received on **2023-11-29**
 
-Killiandra (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2023-11-15**
-
-Lumosbringer (+1 MS) (+0 SR)
-- Gendarme's Cuirass (MS) -- received on **2023-11-15**
+Miatotems (+1 MS) (+0 SR)
+- Greatcloak of the Turned Champion (MS) -- received on **2023-11-29**
 
 Pacratt (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2023-11-15**
+- Frozen Bonespike (MS) -- received on **2023-11-29**
 
-Artaz (+0 MS) (+0 SR)
-- Shadowfrost Shard (ETC) -- received on **2023-11-15**
-- Shadowfrost Shard (ETC) -- received on **2023-11-15**
-- Shadowfrost Shard (ETC) -- received on **2023-11-15**
+Pastiry (+1 MS) (+0 SR)
+- Protector's Mark of Sanctification (N25) (MS) -- received on **2023-11-29**
 
-Elisesolis (+0 MS) (+0 SR)
-- Ring of Rotting Sinew (OS) -- received on **2023-11-15**
+Soulreaverr (+1 MS) (+0 SR)
+- Skeleton Lord's Circle (MS) -- received on **2023-11-29**
+- Wrathful Gladiator's Pendant of Triumph (OS) -- received on **2023-11-29**
 
-Meemeemeemee (+0 MS) (+0 SR)
-- Heartpierce (OS) -- received on **2023-11-15**
+Killiandra (+0 MS) (+0 SR)
+- Wrathful Gladiator's Silk Handguards (OS) -- received on **2023-11-29**
 
 _disenchanted
-- Wrathful Gladiator's Armwraps of Dominance
+- Belt of the Lonely Noble
+- Fallen Lord's Handguards
