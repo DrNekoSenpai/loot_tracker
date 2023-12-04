@@ -110,3 +110,54 @@
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-12
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-12
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-12
+51345;Wrathful Gladiator's Armwraps of Dominance;264;0;0;_disenchanted;2023-11-15
+45259;Quartz-studded Harness;232;0;0;_disenchanted;2023-11-15
+49951;Gendarme's Cuirass;264;0;0;Lumosbringer;2023-11-15
+45250;Crazed Construct Ring;232;0;0;_disenchanted;2023-11-15
+49975;Bone Sentinel's Amulet;264;1;0;Gnoya;2023-11-15
+45119;Embrace of the Leviathan;232;0;0;_disenchanted;2023-11-15
+45108;Mechanist's Bindings;232;0;0;_disenchanted;2023-11-15
+50453;Ring of Rotting Sinew;264;0;1;Elisesolis;2023-11-15
+52025;Vanquisher's Mark of Sanctification;80;0;0;Killiandra;2023-11-15
+49976;Bulwark of Smouldering Steel;264;1;0;Miatotems;2023-11-15
+51193;Sanctified Frost Witch's Legguards;264;0;0;Miatotems;2023-11-15
+45251;Shoulderplates of the Deconstructor;232;0;0;_disenchanted;2023-11-15
+46027;Formula: Enchant Weapon - Blade Ward;75;0;0;Killiandra;2023-11-15
+45114;Steamcaller's Totem;232;0;0;_disenchanted;2023-11-15
+49990;Ring of Maddening Whispers;264;1;0;Tinyraider;2023-11-15
+50654;Scourgeborne Waraxe;277;0;0;Sõçkö;2023-11-15
+51148;Sanctified Lasherweave Gloves;264;0;0;Abletu;2023-11-15
+52025;Vanquisher's Mark of Sanctification;80;0;0;Pacratt;2023-11-15
+49982;Heartpierce;264;0;1;Meemeemeemee;2023-11-15
+50665;Boots of Unnatural Growth;277;0;0;Abletu;2023-11-15
+49993;Necrophotic Greaves;264;1;0;Miatotems;2023-11-15
+50661;Corp'rethar Ceremonial Crown;277;1;0;Lorniras;2023-11-15
+50014;Greatcloak of the Turned Champion;264;1;0;Lilypalooza;2023-11-15
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-15
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-15
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-15
+49952;Snowserpent Mail Helm;264;1;0;Sighanama;2023-11-29
+51464;Wrathful Gladiator's Silk Handguards;270;0;1;Killiandra;2023-11-29
+50657;Skeleton Lord's Circle;277;0;0;Soulreaverr;2023-11-29
+52026;Protector's Mark of Sanctification;80;0;0;Meemeemeemee;2023-11-29
+39703;Rescinding Grips;213;0;0;_disenchanted;2023-11-29
+49980;Rusted Bonespike Pauldrons;264;0;0;Catreene;2023-11-29
+50451;Belt of the Lonely Noble;264;0;0;_disenchanted;2023-11-29
+50014;Greatcloak of the Turned Champion;264;0;0;Miatotems;2023-11-29
+39722;Swarm Bindings;213;0;0;_disenchanted;2023-11-29
+39712;Gemmed Wand of the Nerubians;213;0;0;_disenchanted;2023-11-29
+40080;Lost Jewel;213;0;0;_disenchanted;2023-11-29
+43507;Recipe: Tasty Cupcake;75;0;0;Lorniras;2023-11-29
+49968;Frozen Bonespike;264;0;0;Pacratt;2023-11-29
+52026;Protector's Mark of Sanctification;80;0;0;Flambeaü;2023-11-29
+49986;Broken Ram Skull Helm;264;1;0;Ferrousblade;2023-11-29
+49989;Ahn'kahar Onyx Neckguard;264;0;0;Artaz;2023-11-29
+40064;Thunderstorm Amulet;213;0;0;_disenchanted;2023-11-29
+51132;Sanctified Scourgelord Handguards;264;0;0;Ferrousblade;2023-11-29
+50660;Boneguard Commander's Pauldrons;277;1;0;Prunejuuce;2023-11-29
+51355;Wrathful Gladiator's Pendant of Triumph;264;0;0;Soulreaverr;2023-11-29
+49995;Fallen Lord's Handguards;264;0;0;_disenchanted;2023-11-29
+50664;Ring of Rapid Ascent;277;1;0;Snedpie;2023-11-29
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-29
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-29
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-29

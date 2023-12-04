@@ -15,11 +15,12 @@ Feet:
 Main-Hand:
   \- [Frozen Bonespike (264)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2023-10-18)
 ----------------------------------------
-Artaz: 8 items.
+Artaz: 9 items.
 
 ETC:
-  \- [Shadowfrost Shard (21x)](<https://www.wowhead.com/wotlk/item=50274>)
+  \- [Shadowfrost Shard (22x)](<https://www.wowhead.com/wotlk/item=50274>)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-15)
+  \- [Rotface's Acidic Blood (0)](<https://www.wowhead.com/wotlk/item=50231>) (ETC) (2023-12-03)
 
 Neck:
   \- [Ahn'kahar Onyx Neckguard (264)](<https://www.wowhead.com/wotlk/item=49989>) (MS) (2023-11-12)
@@ -172,7 +173,7 @@ Back:
 Legs:
   \- [Sanctified Crimson Acolyte Leggings (264)](<https://www.wowhead.com/wotlk/item=51177>) (MS) (2023-11-01)
 ----------------------------------------
-Lorniras: 3 items.
+Lorniras: 4 items.
 
 Head:
   \- [Corp'rethar Ceremonial Crown (277)](<https://www.wowhead.com/wotlk/item=50006>) (SR) (2023-11-15)
@@ -182,6 +183,9 @@ Back:
 
 Hands:
   \- [Gunship Captain's Mittens (264)](<https://www.wowhead.com/wotlk/item=50011>) (SR) (2023-10-15)
+
+Ranged:
+  \- [Corpse-Impaling Spike (264)](<https://www.wowhead.com/wotlk/item=50033>) (SR) (2023-12-03)
 ----------------------------------------
 Lumosbringer: 5 items.
 
@@ -199,6 +203,11 @@ Chest:
 
 Legs:
   \- [Sanctified Lightsworn Legplates (277)](<https://www.wowhead.com/wotlk/item=51278>) (MS) (2023-11-08)
+----------------------------------------
+Medulla: 1 items.
+
+Chest:
+  \- [Blightborne Warplate (264)](<https://www.wowhead.com/wotlk/item=50024>) (MS) (2023-12-03)
 ----------------------------------------
 Meemeemeemee: 3 items.
 
@@ -263,13 +272,16 @@ Legs:
 Trinket:
   \- [Corpse Tongue Coin (264)](<https://www.wowhead.com/wotlk/item=50352>) (MS) (2023-11-12)
 ----------------------------------------
-Sighanama: 4 items.
+Sighanama: 5 items.
 
 Head:
   \- [Snowserpent Mail Helm (264)](<https://www.wowhead.com/wotlk/item=49952>) (SR) (2023-11-29)
 
 Neck:
   \- [Wodin's Lucky Necklace (264)](<https://www.wowhead.com/wotlk/item=50452>) (MS) (2023-11-01)
+
+Shoulder:
+  \- [Dual-Bladed Pauldrons (264)](<https://www.wowhead.com/wotlk/item=50022>) (SR) (2023-12-03)
 
 Ring:
   \- [Band of the Bone Colossus (264)](<https://www.wowhead.com/wotlk/item=49949>) (MS) (2023-10-25)

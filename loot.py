@@ -117,6 +117,15 @@ all_items = {}
 pattern = re.compile(r'\((\d+),\"(.+)\",\d+,\d+,(\d+),-?\d+,(\d+),\d+,\d+\),?')
 slots = {}
 
+exceptions = [
+    "Vanquisher's Mark of Sanctification",
+    "Protector's Mark of Sanctification",
+    "Conqueror's Mark of Sanctification",
+    "Shadowfrost Shard",
+    "Rotface's Acidic Blood", 
+    "Festergut's Acidic Blood"
+]
+
 for item in items:
     match = pattern.match(item)
     if match: 
@@ -125,7 +134,7 @@ for item in items:
         item_level = int(match.group(4))
         inventory_type = int(match.group(3))
 
-        if item_level <= 251 and not "Mark of Sanctification" in name and not name == "Shadowfrost Shard": continue
+        if item_level <= 251 and not name in exceptions: continue
 
         if item_id == 52025: name += " (N25)"
         elif item_id == 52026: name += " (N25)"
@@ -1484,7 +1493,7 @@ def sudo_mode(players, raiding):
 
                 if winner == "SÃµÃ§kÃ¶": winner = "Socko"
 
-                if ilvl <= 263 and not "Shadowfrost Shard" in item_name and not "Mark of Sanctification" in item_name: continue
+                if ilvl <= 263 and not name in exceptions: continue
 
                 if not regular_keyboard(winner):
                     print(f"Player name {winner} is not valid. Please input the name manually.")
