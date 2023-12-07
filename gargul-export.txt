@@ -161,3 +161,28 @@
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-29
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-29
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-11-29
+49967;Marrowgar's Frigid Eye;264;1;0;Lilypalooza;2023-12-06
+49992;Nibelung;264;0;1;Tinyraider;2023-12-06
+50654;Scourgeborne Waraxe;277;0;0;Meemeemeemee;2023-12-06
+40630;Gauntlets of the Lost Vanquisher;80;0;0;_disenchanted;2023-12-06
+49988;Leggings of Northern Lights;264;1;0;Sighanama;2023-12-06
+52027;Conqueror's Mark of Sanctification;80;0;0;Axsel;2023-12-06
+40451;Hyaline Helm of the Sniper;213;0;0;_disenchanted;2023-12-06
+49983;Blood-Soaked Saronite Stompers;264;1;0;Pastiry;2023-12-06
+52025;Vanquisher's Mark of Sanctification;80;0;0;Strixien;2023-12-06
+49980;Rusted Bonespike Pauldrons;264;0;0;_disenchanted;2023-12-06
+51346;Wrathful Gladiator's Cloak of Salvation;264;0;0;Lorniras;2023-12-06
+40433;Wyrmrest Band;213;0;0;_disenchanted;2023-12-06
+43346;Large Satchel of Spoils;1;0;0;Kelorlyn;2023-12-06
+40629;Gauntlets of the Lost Protector;80;0;0;_disenchanted;2023-12-06
+51346;Wrathful Gladiator's Cloak of Salvation;264;0;0;_disenchanted;2023-12-06
+51186;Sanctified Shadowblade Legplates;264;0;0;_disenchanted;2023-12-06
+50415;Bryntroll, the Bone Arbiter;264;1;0;Pastiry;2023-12-06
+50366;Althor's Abacus;277;1;0;Gnoya;2023-12-06
+51370;Wrathful Gladiator's Armwraps of Triumph;264;0;1;Strixien;2023-12-06
+40446;Dragon Brood Legguards;213;0;0;_disenchanted;2023-12-06
+43345;Dragon Hide Bag;80;0;0;Catreene;2023-12-06
+50412;Bloodvenom Blade;264;1;0;Artaz;2023-12-06
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-12-06
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-12-06
+50274;Shadowfrost Shard;0;0;0;Artaz;2023-12-06
