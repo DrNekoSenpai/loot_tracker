@@ -1,4 +1,4 @@
-import pickle, re, argparse, os, time, pyautogui, subprocess, pytesseract, cv2
+import pickle, re, argparse, os, time, pyautogui, subprocess
 from typing import List
 from datetime import datetime
 from datetime import timedelta
@@ -944,25 +944,25 @@ def export_loot():
 
             for l in p._raid_log:
                 if l.roll == "MS":
-                    f.write(f"- {l.item.name} (MS) -- received on")
+                    f.write(f"- {l.item.name} ({l.item.ilvl}) (MS) -- received on")
                     date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                     f.write(f" {date_string}\n")
 
             for l in p._raid_log:
                 if l.roll == "OS":
-                    f.write(f"- {l.item.name} (OS) -- received on")
+                    f.write(f"- {l.item.name} ({l.item.ilvl}) (OS) -- received on")
                     date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                     f.write(f" {date_string}\n")
 
             for l in p._raid_log:
                 if l.roll == "SR":
-                    f.write(f"- {l.item.name} (SR) -- received on")
+                    f.write(f"- {l.item.name} ({l.item.ilvl}) (SR) -- received on")
                     date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                     f.write(f" {date_string}\n")
 
             for l in p._raid_log:
                 if l.roll == "TMB":
-                    f.write(f"- {l.item.name} (TMB) -- received on")
+                    f.write(f"- {l.item.name} ({l.item.ilvl}) (TMB) -- received on")
                     date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                     f.write(f" {date_string}\n")
 
@@ -989,7 +989,7 @@ def export_loot():
                     f.write(f"- {l.item.name}\n")
 
 def remove_loot(players):
-    player = input("Enter the name of the player who is sending loot: ").lower()
+    player = input("Enter the name of the player who we are removing from: ").lower()
     player_matches = []
     for p in players:
         if player in p.name.lower(): 
@@ -1112,121 +1112,6 @@ def weekly_reset(players):
 
     return players 
 
-def log_trade(players):
-    sending_player = input("Enter the name of the player who is sending loot: ").lower()
-    sending_player_matches = []
-    for p in players:
-        if sending_player in p.name.lower(): 
-            sending_player_matches.append(p)
-
-    if len(sending_player_matches) == 0:
-        print("No matches found. Please double-check the player name and try again.")
-        return players
-    
-    elif len(sending_player_matches) == 1:
-        # We'll select this match, and then move on.
-        sending_player = sending_player_matches[0]
-
-    elif len(sending_player_matches) > 1:
-        # We'll print all of the matches, and ask them to select one.
-        print("Multiple matches found. Please select one of the following:")
-        for i in range(len(sending_player_matches)):
-            print(f"{i+1}. {sending_player_matches[i].name}")
-
-        # We'll ask the user to select a number.
-        sel = input("Please select a number: ")
-        try: 
-            sel = int(sel)
-            if sel < 1 or sel > len(sending_player_matches):
-                print("Invalid integer input.")
-                return players
-            
-        except:
-            print("Invalid non-convertible input.")
-            return players
-
-        # We'll select this match, and then move on.
-        sending_player = sending_player_matches[sel-1]
-
-    # Now, we'll ask the user to select the item they want to remove.
-    # We'll print out the list of items they've won, and ask them to select one.
-
-    print("")
-    print("Select an item to remove:")
-    for i in range(len(sending_player._raid_log)):
-        print(f"{i+1}. {sending_player._raid_log[i].item.name} ({sending_player._raid_log[i].item.ilvl}) ({sending_player._raid_log[i].roll})")
-
-    sel = input("Select a number: ")
-    try:
-        sel = int(sel)
-        if sel < 1 or sel > len(sending_player._raid_log):
-            print("Invalid integer input.")
-            return players
-        
-    except:
-        print("Invalid non-convertible input.")
-        return players
-    
-    # We want to confirm that this is the item that is to be traded. 
-    confirm = input(f"Are you sure you want to trade {sending_player._raid_log[sel-1].item.name} ({sending_player._raid_log[sel-1].item.ilvl}) ({sending_player._raid_log[sel-1].roll})? (y/n): ").lower()
-    if confirm != "y": 
-        print("Aborting.")
-        return players
-    
-    # We'll check if the item was won through a main-spec roll. If so, we'll decrement regular plusses. 
-    # Similarly, if it's through a reserve roll, we'll decrement reserve plusses. 
-    if sending_player._raid_log[sel-1].roll == "MS":
-        sending_player._regular_plusses -= 1
-
-    elif sending_player._raid_log[sel-1].roll == "SR":
-        sending_player._reserve_plusses -= 1
-        sending_player._regular_plusses -= 1
-
-    elif sending_player._raid_log[sel-1].roll == "TMB":
-        sending_player._reserve_plusses -= 1
-        sending_player._regular_plusses -= 1
-    
-    # Remove the item from the player's log.
-    item = sending_player._raid_log[sel-1]
-    sending_player._raid_log.remove(item)
-
-    # Remove the item from the player's history. If it's a 277 item, remove the 264 version as well -- but only if the note is "auto". 
-
-    # We can only check the logs if the item was not disenchanted. 
-    if not sending_player.name == "_disenchanted": 
-
-        # We'll check if the item is 277. If so, we'll remove the 264 version as well.
-        if item.item.ilvl == 277:
-            # First, check if there exists a 264 version of the item in the history; and if so, if the note is "auto". 
-
-            if any([item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in sending_player._history[slot_names[int(item.item.slot)]]]):
-                # If so, find the index of the 264 version, and use that to remove it. 
-                index = [item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in sending_player._history[slot_names[int(item.item.slot)]]].index(True)
-                sending_player._history[slot_names[int(item.item.slot)]].pop(index)
-
-        # We'll check if the item is 264. If so, we'll remove the 251 version as well.
-        elif item.item.ilvl == 264:
-            # First, check if there exists a 251 version of the item in the history; and if so, if the note is "auto". 
-
-            if any([item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in sending_player._history[slot_names[int(item.item.slot)]]]):
-                # If so, find the index of the 251 version, and use that to remove it. 
-                index = [item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in sending_player._history[slot_names[int(item.item.slot)]]].index(True)
-                sending_player._history[slot_names[int(item.item.slot)]].pop(index)
-
-        index = sending_player._history[slot_names[int(item.item.slot)]].index(item)
-        sending_player._history[slot_names[int(item.item.slot)]].pop(index)
-
-    # We'll ask the user to input the name of the person who is receiving the item. 
-    receiving_player = input("Who is receiving the item? ").lower()
-    if receiving_player == "": return players
-
-    receiving_player_matches = []
-    for p in players:
-        if receiving_player in p.name.lower(): 
-            receiving_player_matches.append(p)
-
-    return players
-
 def sudo_mode(players, raiding):
     print("----------------------------------------")
     print("WARNING: Sudo mode is a dangerous mode that allows you to modify a lot of things directly. Use with caution.")
@@ -1243,7 +1128,7 @@ def sudo_mode(players, raiding):
         print("c. Add or remove plusses from a player")
         print("d. Restore history from Gargul export")
         print(f"e. {'Enter' if not raiding else 'Exit'} raiding mode")
-        print("g. Exit sudo mode")
+        print("f. Exit sudo mode")
         sel = input("Select an option: ").lower()
         print("")
 
@@ -1492,8 +1377,9 @@ def sudo_mode(players, raiding):
                 date = line[6]
 
                 if winner == "SÃµÃ§kÃ¶": winner = "Socko"
+                if winner == "FlambeaÃ¼": winner = "Flambeau"
 
-                if ilvl <= 263 and not name in exceptions: continue
+                if ilvl <= 263 and not item_name in exceptions: continue
 
                 if not regular_keyboard(winner):
                     print(f"Player name {winner} is not valid. Please input the name manually.")
@@ -1514,7 +1400,7 @@ def sudo_mode(players, raiding):
 
                 item = None
                 for i in all_items.values():
-                    if i.name == item_name: 
+                    if i.name == item_name and i.ilvl == ilvl: 
                         item = i
                         break
                 
@@ -1552,7 +1438,7 @@ def sudo_mode(players, raiding):
             else: print("Entering raiding mode.")
             raiding = not raiding
 
-        elif sel == "g":
+        elif sel == "f":
             print("Exiting sudo mode.")
             return players, raiding
 
@@ -1607,16 +1493,15 @@ while(True):
     
     print("----------------------------------------")
     print(f"{guild_name}Loot Tracker{'' if raiding else ' (Debug Mode)'}")
-    print(" 1) Award loot")
-    print(" 2) Import soft-reserve or TMB (or change guild)")
-    print(" 3) Mark attendance")
-    print(" 4) Export the loot history to a file")
-    print(" 5) Export THIS RAID's loot to a file")
-    print(" 6) Remove loot, or weekly reset")
-    print(" 7) Log a trade -- deprecated")
-    print(" 8) Export plusses in Gargul style")
-    print(" 9) Export plusses to be pasted into chat")
-    print(f"10) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
+    print("1) Award loot")
+    print("2) Import soft-reserve or TMB (or change guild)")
+    print("3) Mark attendance")
+    print("4) Export the loot history to a file")
+    print("5) Export THIS RAID's loot to a file")
+    print("6) Remove loot, or weekly reset")
+    print("7) Export plusses in Gargul style")
+    print("8) Export plusses to be pasted into chat")
+    print(f"9) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
 
     print("")
 
@@ -1644,8 +1529,7 @@ while(True):
         if sel == "a": remove_loot(players)
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
-    # elif sel == 7: players = log_trade(players)
-    elif sel == 8: export_gargul(players)
-    elif sel == 9: export_chat(players)
-    elif sel == 10: players, raiding = sudo_mode(players, raiding)
+    elif sel == 7: export_gargul(players)
+    elif sel == 8: export_chat(players)
+    elif sel == 9: players, raiding = sudo_mode(players, raiding)
     else: break

@@ -1,55 +1,43 @@
-Loot log for Wednesday, 2023/11/29 and **Sunday, 2023/12/03**:
+Loot log for **Wednesday, 2023/12/06**:
 
-Sighanama (+2 MS) (+2 SR)
-- Snowserpent Mail Helm (SR) -- received on 2023-11-29
-- Dual-Bladed Pauldrons (SR) -- received on **2023-12-03**
+Pastiry (+2 MS) (+1 SR)
+- Bryntroll, the Bone Arbiter (264) (MS) -- received on **2023-12-06**
+- Blood-Soaked Saronite Stompers (264) (SR) -- received on **2023-12-06**
 
-Ferrousblade (+2 MS) (+1 SR)
-- Sanctified Scourgelord Handguards (MS) -- received on 2023-11-29
-- Broken Ram Skull Helm (SR) -- received on 2023-11-29
+Artaz (+1 MS) (+1 SR)
+- Bloodvenom Blade (264) (SR) -- received on **2023-12-06**
+- Shadowfrost Shard (ETC) -- received on **2023-12-06**
+- Shadowfrost Shard (ETC) -- received on **2023-12-06**
+- Shadowfrost Shard (ETC) -- received on **2023-12-06**
 
-Lorniras (+1 MS) (+1 SR)
-- Corpse-Impaling Spike (SR) -- received on **2023-12-03**
+Elisesolis (+1 MS) (+1 SR)
+- Boneguard Commander's Pauldrons (277) (SR) -- received on **2023-12-06**
 
-Prunejuuce (+1 MS) (+1 SR)
-- Boneguard Commander's Pauldrons (SR) -- received on 2023-11-29
+Gnoya (+1 MS) (+1 SR)
+- Althor's Abacus (277) (SR) -- received on **2023-12-06**
 
-Snedpie (+1 MS) (+1 SR)
-- Ring of Rapid Ascent (SR) -- received on 2023-11-29
+Lilypalooza (+1 MS) (+1 SR)
+- Marrowgar's Frigid Eye (264) (SR) -- received on **2023-12-06**
 
-Artaz (+1 MS) (+0 SR)
-- Ahn'kahar Onyx Neckguard (MS) -- received on 2023-11-29
-- Shadowfrost Shard (ETC) -- received on 2023-11-29
-- Shadowfrost Shard (ETC) -- received on 2023-11-29
-- Shadowfrost Shard (ETC) -- received on 2023-11-29
-- Shadowfrost Shard (ETC) -- received on **2023-12-03**
-- Rotface's Acidic Blood (ETC) -- received on **2023-12-03**
+Sighanama (+1 MS) (+1 SR)
+- Leggings of Northern Lights (264) (SR) -- received on **2023-12-06**
 
-Catreene (+1 MS) (+0 SR)
-- Rusted Bonespike Pauldrons (MS) -- received on 2023-11-29
-
-Medulla (+1 MS) (+0 SR)
-- Blightborne Warplate (MS) -- received on **2023-12-03**
+Axsel (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (80) (MS) -- received on **2023-12-06**
 
 Meemeemeemee (+1 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on 2023-11-29
+- Scourgeborne Waraxe (277) (MS) -- received on **2023-12-06**
 
-Miatotems (+1 MS) (+0 SR)
-- Greatcloak of the Turned Champion (MS) -- received on 2023-11-29
+Strixien (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (80) (MS) -- received on **2023-12-06**
+- Wrathful Gladiator's Armwraps of Triumph (264) (OS) -- received on **2023-12-06**
 
-Pacratt (+1 MS) (+0 SR)
-- Frozen Bonespike (MS) -- received on 2023-11-29
+Lorniras (+0 MS) (+0 SR)
+- Wrathful Gladiator's Cloak of Salvation (264) (OS) -- received on **2023-12-06**
 
-Pastiry (+1 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on 2023-11-29
-
-Soulreaverr (+1 MS) (+0 SR)
-- Skeleton Lord's Circle (MS) -- received on 2023-11-29
-- Wrathful Gladiator's Pendant of Triumph (OS) -- received on 2023-11-29
-
-Killiandra (+0 MS) (+0 SR)
-- Wrathful Gladiator's Silk Handguards (OS) -- received on 2023-11-29
+Tinyraider (+0 MS) (+0 SR)
+- Nibelung (264) (OS) -- received on **2023-12-06**
 
 _disenchanted
-- Belt of the Lonely Noble
-- Fallen Lord's Handguards
+- Rusted Bonespike Pauldrons
+- Sanctified Shadowblade Legplates

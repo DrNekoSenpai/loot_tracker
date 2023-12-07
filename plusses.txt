@@ -1,11 +1,6 @@
-Ferrousblade,2
-Prunejuuce,1
+Pastiry,2
+Lilypalooza,1
 Sighanama,1
-Snedpie,1
-Artaz,1
-Catreene,1
+Elisesolis,1
+Gnoya,1
 Meemeemeemee,1
-Miatotems,1
-Pacratt,1
-Pastiry,1
-Soulreaverr,1
