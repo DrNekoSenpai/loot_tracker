@@ -1,43 +1,64 @@
-Loot log for **Wednesday, 2023/12/06**:
+Loot log for Wednesday, 2023/12/13 and **Sunday, 2023/12/17**:
 
-Pastiry (+2 MS) (+1 SR)
-- Bryntroll, the Bone Arbiter (264) (MS) -- received on **2023-12-06**
-- Blood-Soaked Saronite Stompers (264) (SR) -- received on **2023-12-06**
+Killiandra (+2 MS) (+1 SR)
+- Plaguebringer's Stained Pants (264) (SR) -- received on **2023-12-17**
+- Holiday's Grace (264) (MS) -- received on **2023-12-17**
 
 Artaz (+1 MS) (+1 SR)
-- Bloodvenom Blade (264) (SR) -- received on **2023-12-06**
-- Shadowfrost Shard (ETC) -- received on **2023-12-06**
-- Shadowfrost Shard (ETC) -- received on **2023-12-06**
-- Shadowfrost Shard (ETC) -- received on **2023-12-06**
+- Might of Blight (264) (SR) -- received on **2023-12-17**
 
 Elisesolis (+1 MS) (+1 SR)
-- Boneguard Commander's Pauldrons (277) (SR) -- received on **2023-12-06**
+- Bile-Encrusted Medallion (264) (SR) -- received on **2023-12-17**
+- Blood-Soaked Saronite Stompers (264) (OS) -- received on 2023-12-13
+- Ahn'kahar Onyx Neckguard (264) (OS) -- received on 2023-12-13
+
+Ferrousblade (+1 MS) (+1 SR)
+- Grinning Skull Greatboots (264) (SR) -- received on **2023-12-17**
+
+Gnoraa (+1 MS) (+1 SR)
+- Amulet of the Silent Eulogy (277) (SR) -- received on 2023-12-13
 
 Gnoya (+1 MS) (+1 SR)
-- Althor's Abacus (277) (SR) -- received on **2023-12-06**
+- Corpse-Impaling Spike (264) (SR) -- received on **2023-12-17**
+
+Jwizard (+1 MS) (+1 SR)
+- Bone Sentinel's Amulet (264) (SR) -- received on 2023-12-13
 
 Lilypalooza (+1 MS) (+1 SR)
-- Marrowgar's Frigid Eye (264) (SR) -- received on **2023-12-06**
+- Nightmare Ender (264) (SR) -- received on **2023-12-17**
 
-Sighanama (+1 MS) (+1 SR)
-- Leggings of Northern Lights (264) (SR) -- received on **2023-12-06**
+Pacratt (+1 MS) (+1 SR)
+- Ring of Rapid Ascent (277) (SR) -- received on 2023-12-13
+
+Swiftbladess (+1 MS) (+1 SR)
+- Deathbringer's Will (264) (SR) -- received on 2023-12-13
+
+Tinyraider (+1 MS) (+1 SR)
+- The Lady's Brittle Bracers (264) (SR) -- received on 2023-12-13
+- Wrathful Gladiator's Silk Handguards (270) (OS) -- received on 2023-12-13
+- Wrathful Gladiator's Silk Handguards (270) (OS) -- received on 2023-12-13
+
+Prunejuuce (+2 MS) (+0 SR)
+- Protector's Mark of Sanctification (N25) (80) (MS) -- received on 2023-12-13
+- Devium's Eternally Cold Ring (264) (MS) -- received on **2023-12-17**
 
 Axsel (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (80) (MS) -- received on **2023-12-06**
+- Crushing Coldwraith Belt (264) (MS) -- received on 2023-12-13
+
+Catreene (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (80) (MS) -- received on 2023-12-13
+
+Darkfern (+1 MS) (+0 SR)
+- Scourgeborne Waraxe (277) (MS) -- received on 2023-12-13
 
 Meemeemeemee (+1 MS) (+0 SR)
-- Scourgeborne Waraxe (277) (MS) -- received on **2023-12-06**
+- Rib Spreader (264) (MS) -- received on **2023-12-17**
+- Sanctified Frost Witch's Legguards (264) (OS) -- received on 2023-12-13
 
-Strixien (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (80) (MS) -- received on **2023-12-06**
-- Wrathful Gladiator's Armwraps of Triumph (264) (OS) -- received on **2023-12-06**
+Miatotems (+1 MS) (+0 SR)
+- Holiday's Grace (264) (MS) -- received on **2023-12-17**
+- Snowserpent Mail Helm (264) (OS) -- received on 2023-12-13
 
-Lorniras (+0 MS) (+0 SR)
-- Wrathful Gladiator's Cloak of Salvation (264) (OS) -- received on **2023-12-06**
+Sighanama (+0 MS) (+0 SR)
+- Wrathful Gladiator's Chain Gauntlets (270) (OS) -- received on 2023-12-13
 
-Tinyraider (+0 MS) (+0 SR)
-- Nibelung (264) (OS) -- received on **2023-12-06**
-
-_disenchanted
-- Rusted Bonespike Pauldrons
-- Sanctified Shadowblade Legplates

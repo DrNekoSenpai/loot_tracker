@@ -943,18 +943,6 @@ def export_loot():
             f.write(f"{p.name} (+{p._regular_plusses} MS) (+{p._reserve_plusses} {'TMB' if guild_name == 'Dark Rising ' else 'SR'})\n")
 
             for l in p._raid_log:
-                if l.roll == "MS":
-                    f.write(f"- {l.item.name} ({l.item.ilvl}) (MS) -- received on")
-                    date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
-                    f.write(f" {date_string}\n")
-
-            for l in p._raid_log:
-                if l.roll == "OS":
-                    f.write(f"- {l.item.name} ({l.item.ilvl}) (OS) -- received on")
-                    date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
-                    f.write(f" {date_string}\n")
-
-            for l in p._raid_log:
                 if l.roll == "SR":
                     f.write(f"- {l.item.name} ({l.item.ilvl}) (SR) -- received on")
                     date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
@@ -963,6 +951,18 @@ def export_loot():
             for l in p._raid_log:
                 if l.roll == "TMB":
                     f.write(f"- {l.item.name} ({l.item.ilvl}) (TMB) -- received on")
+                    date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                    f.write(f" {date_string}\n")
+
+            for l in p._raid_log:
+                if l.roll == "MS":
+                    f.write(f"- {l.item.name} ({l.item.ilvl}) (MS) -- received on")
+                    date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                    f.write(f" {date_string}\n")
+
+            for l in p._raid_log:
+                if l.roll == "OS":
+                    f.write(f"- {l.item.name} ({l.item.ilvl}) (OS) -- received on")
                     date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                     f.write(f" {date_string}\n")
 
@@ -1407,6 +1407,9 @@ def sudo_mode(players, raiding):
                 if item_id == 50274: 
                     roll_type = "ETC"
 
+                elif "Wrathful Gladiator's" in item_name: 
+                    roll_type = "OS"
+
                 else: 
                     roll_type = "SR" if reserved else "OS" if offspec else "MS"
                     
@@ -1430,7 +1433,7 @@ def sudo_mode(players, raiding):
                     if reserved: 
                         player._reserve_plusses += 1
                         player._regular_plusses += 1
-                    elif not offspec and not roll_type == "ETC": 
+                    elif not offspec and not roll_type == "ETC" and not roll_type == "OS": 
                         player._regular_plusses += 1
 
         elif sel == "e": 

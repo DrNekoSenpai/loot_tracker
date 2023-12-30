@@ -186,3 +186,37 @@
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-12-06
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-12-06
 50274;Shadowfrost Shard;0;0;0;Artaz;2023-12-06
+51464;Wrathful Gladiator's Silk Handguards;270;0;1;Tinyraider;2023-12-13
+49983;Blood-Soaked Saronite Stompers;264;0;1;Elisesolis;2023-12-13
+50654;Scourgeborne Waraxe;277;0;0;Darkfern;2023-12-13
+49978;Crushing Coldwraith Belt;264;0;0;Axsel;2023-12-13
+40189;Angry Dread;213;0;0;_disenchanted;2023-12-13
+40189;Angry Dread;213;0;0;_disenchanted;2023-12-13
+51459;Wrathful Gladiator's Chain Gauntlets;270;0;0;Sighanama;2023-12-13
+50664;Ring of Rapid Ascent;277;1;0;Pacratt;2023-12-13
+49975;Bone Sentinel's Amulet;264;1;0;Jwizard;2023-12-13
+40193;Tunic of Masked Suffering;213;0;0;_disenchanted;2023-12-13
+49989;Ahn'kahar Onyx Neckguard;264;0;1;Elisesolis;2023-12-13
+52026;Protector's Mark of Sanctification;80;0;0;Prunejuuce;2023-12-13
+50362;Deathbringer's Will;264;1;0;Swiftbladess;2023-12-13
+51464;Wrathful Gladiator's Silk Handguards;270;0;1;Tinyraider;2023-12-13
+51193;Sanctified Frost Witch's Legguards;264;0;1;Meemeemeemee;2023-12-13
+49952;Snowserpent Mail Helm;264;0;1;Miatotems;2023-12-13
+52027;Conqueror's Mark of Sanctification;80;0;0;Catreene;2023-12-13
+50658;Amulet of the Silent Eulogy;277;1;0;Gnoraa;2023-12-13
+40065;Fool's Trial;213;0;0;_disenchanted;2023-12-13
+40108;Seized Beauty;213;0;0;_disenchanted;2023-12-13
+49994;The Lady's Brittle Bracers;264;1;0;Tinyraider;2023-12-13
+36063;Coldwraith Cowl;182;0;0;_disenchanted;2023-12-13
+40198;Bands of Impurity;213;0;0;_disenchanted;2023-12-13
+50016;Rib Spreader;264;0;0;Meemeemeemee;2023-12-17
+50414;Might of Blight;264;1;0;Artaz;2023-12-17
+50061;Holiday's Grace;264;0;0;Miatotems;2023-12-17
+50185;Devium's Eternally Cold Ring;264;0;0;Prunejuuce;2023-12-17
+36281;Spiderlord Spaulders;178;0;0;_disenchanted;2023-12-17
+50023;Bile-Encrusted Medallion;264;1;0;Elisesolis;2023-12-17
+50190;Grinning Skull Greatboots;264;1;0;Ferrousblade;2023-12-17
+50472;Nightmare Ender;264;1;0;Lilypalooza;2023-12-17
+50056;Plaguebringer's Stained Pants;264;1;0;Killiandra;2023-12-17
+50033;Corpse-Impaling Spike;264;1;0;Gnoya;2023-12-17
+50061;Holiday's Grace;264;0;0;Killiandra;2023-12-17
