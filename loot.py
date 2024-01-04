@@ -60,10 +60,9 @@ class Log:
         self.note = note
 
 class Player: 
-    def __init__(self, name:str, guild:str, reserves:List[str]):
+    def __init__(self, name:str, reserves:List[str]):
         self.name = name
         self._reserves = reserves
-        self._guild = guild
 
         self._regular_plusses = 0
         self._reserve_plusses = 0
@@ -186,56 +185,37 @@ def import_pickle():
         with open('players.pickle', 'rb') as f:
             players = pickle.load(f)
 
-        with open("guild_name.pickle", "rb") as f:
-            guild_name = pickle.load(f)
-
     except FileNotFoundError:
         print('No pickle file found. Creating a new one.')
         players = []
-        guild_name = ""
-        players.append(Player("_disenchanted", "", []))
+        players.append(Player("_disenchanted", []))
 
-    return players, guild_name
+    return players
 
-def export_pickle(players, guild_name):
+def export_pickle(players):
     # Export the pickle file
     with open('players.pickle', 'wb') as f:
         pickle.dump(players, f)
 
-    with open("guild_name.pickle", "wb") as f: 
-        pickle.dump(guild_name, f)
-
 # We'll import the pickle if the "--force-new" argument is not present.
 if not args.force_new:
-    players, guild_name = import_pickle()
+    players = import_pickle()
 else:
-    players, guild_name = [], ""
+    players = [], ""
 
     # Create a special player called "_disenchanted", for items that were not awarded to anyone.
     # This is used when no one rolls. 
-    players.append(Player("_disenchanted", "", []))
+    players.append(Player("_disenchanted", []))
 
-if guild_name == "": raiding = False 
-elif guild_name == "Asylum of the Immortals ": 
-    # Our raid times are: Sunday 4pm to 7pm, Wednesday 6pm to 8pm. If the CURRENT time is between these times, we are raiding. Otherwise, we are not.
-    if datetime.now().weekday() == 6 and datetime.now().hour >= 16 and datetime.now().hour < 19: raiding = True
-    elif datetime.now().weekday() == 2 and datetime.now().hour >= 18 and datetime.now().hour < 20: raiding = True
-    else: raiding = False
-
-elif guild_name == "Dark Rising ":
-    # Our raid times are: Tuesday 6pm to 8pm, Saturday 6pm to 10pm. If the CURRENT time is between these times, we are raiding. Otherwise, we are not.
-    if datetime.now().weekday() == 1 and datetime.now().hour >= 18 and datetime.now().hour < 20: raiding = True
-    elif datetime.now().weekday() == 5 and datetime.now().hour >= 18 and datetime.now().hour < 22: raiding = True
-    else: raiding = False
+if datetime.now().weekday() == 6 and datetime.now().hour >= 16 and datetime.now().hour < 19: raiding = True
+elif datetime.now().weekday() == 2 and datetime.now().hour >= 18 and datetime.now().hour < 20: raiding = True
+else: raiding = False
 
 def import_softreserve(players): 
     # We'll attempt to import reserve data from the CSV file. 
     if not os.path.exists("soft_reserves.csv"):
         print("No reserve file found. Skipping.")
         return players
-    
-    global guild_name
-    guild_name = "Asylum of the Immortals "
 
     # Go through the list of players, and wipe all reserves. 
     for p in players: 
@@ -287,66 +267,12 @@ def import_softreserve(players):
         
         if not player_exists: 
             # Create a new player object and append it the list. 
-            players.append(Player(name, guild_name, []))
+            players.append(Player(name, []))
             current_player = players[-1]
 
         # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
         current_player._reserves.append(item)
         print(f"{current_player.name} has reserved {item}.")
-
-    return players
-
-def import_tmb(players): 
-    if not os.path.exists("thatsmybis.csv"): 
-        print("No TMB file found. Skipping.")
-        return players
-    
-    global guild_name
-    guild_name = "Dark Rising "
-
-    # Go through the list of players, and wipe all reserves. 
-    for p in players: 
-        p._reserve = []
-    
-    # type,raid_group_name,member_name,character_name,character_class,character_is_alt,character_inactive_at,character_note,sort_order,item_name,item_id,is_offspec,note,received_at,import_id,item_note,item_prio_note,officer_note,item_tier,item_tier_label,created_at,updated_at,instance_name,source_name
-    # wishlist,,Leytuhwee,Leytuhwee,Druid,0,,,1,"Vanquisher's Mark of Sanctification",52025,0,,,,,,,,,"2023-10-05 01:04:20","2023-10-05 01:04:20","Icecrown Citadel N10",Lana'thel
-
-    with open("thatsmybis.csv", "r") as f: 
-        tmb_data = f.readlines()
-
-    for ind,tmb_res in enumerate(tmb_data):
-        if ind == 0: continue # Header row
-        tmb_res = tmb_res.split(",")
-
-        if not tmb_res[10].isdigit():
-            tmb_res[9:11] = [",".join(tmb_res[9:11])]
-
-        # We'll remove all the quotes from the string. 
-        tmb_res = [x.replace('"', "") for x in tmb_res]
-
-        item = tmb_res[9]
-        name = tmb_res[3]
-
-        if name == "FlambeaÃ¼": name = "Flambeau"
-        if name == "KabÃ¨n": name = "Kaben"
-        if name == "SÃµÃ§kÃ¶": name = "Socko"
-        if name == "TÃ«l": name = "Tel"
-
-        player_exists = False
-        current_player = None
-        for p in players: 
-            if p.name == name: 
-                player_exists = True
-                current_player = p
-                break
-        
-        if not player_exists: 
-            # Create a new player object and append it the list. 
-            players.append(Player(name, guild_name, []))
-            current_player = players[-1]
-
-        # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
-        current_player._reserves.append(item)
 
     return players
 
@@ -450,157 +376,120 @@ def award_loot(players):
     reserves = []
     ineligible = 0
 
-    # We'll check the guild name, to see if it's an empty string. If so, we will completely skip soft-reserves. 
-    if guild_name != "": 
+    # We'll check the soft-reserves to see if anyone has this item soft-reserved, excluding anyone who has already won the same item, with the same item level. 
+    # For example, Ring of Rapid Ascent (264) and Ring of Rapid Ascent (277) are considered different items.
+    # We need to check the corresponding _history list, which is categorized based on slot. 
 
-        # We'll check the soft-reserves to see if anyone has this item soft-reserved, excluding anyone who has already won the same item, with the same item level. 
-        # For example, Ring of Rapid Ascent (264) and Ring of Rapid Ascent (277) are considered different items.
-        # We need to check the corresponding _history list, which is categorized based on slot. 
+    for p in players: 
+        # Skip this person if they're not here.
+        if p._attendance == False: continue
 
-        for p in players: 
-            # Skip this person if they're in the other guild. That is, if we're currently raiding with Asylum, and this person is in DR; or vice versa.
-            if p._guild != guild_name: continue
-            if p._attendance == False: continue
-
-            if item_match.name in p._reserves: 
-                print(f"{p.name} has soft-reserved this item ({item_match.name}).")
-                # First, we should check if the player has double-reserved this item; that is, if they want two.
-                count = len([i for i in p._reserves if i == item_match.name])
-                if count > 1:
-                    num_received = 0
-                    for log in p._history[slot_names[int(item_match.slot)]]: 
-                        if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
-                            num_received += 1
-                    
-                    if num_received != 2: 
-                        if item_match.ilvl == 277: 
-                            # We want to check if the player has already won the 264 version of this item. If so, we'll add a note to the reserves list.
-                            num_received_264 = 0
-                            for log in p._history[slot_names[int(item_match.slot)]]: 
-                                if log.item.name == item_match.name and log.item.ilvl == 264: 
-                                    num_received_264 += 1
+        if item_match.name in p._reserves: 
+            print(f"{p.name} has soft-reserved this item ({item_match.name}).")
+            # First, we should check if the player has double-reserved this item; that is, if they want two.
+            count = len([i for i in p._reserves if i == item_match.name])
+            if count > 1:
+                num_received = 0
+                for log in p._history[slot_names[int(item_match.slot)]]: 
+                    if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
+                        num_received += 1
+                
+                if num_received != 2: 
+                    if item_match.ilvl == 277: 
+                        # We want to check if the player has already won the 264 version of this item. If so, we'll add a note to the reserves list.
+                        num_received_264 = 0
+                        for log in p._history[slot_names[int(item_match.slot)]]: 
+                            if log.item.name == item_match.name and log.item.ilvl == 264: 
+                                num_received_264 += 1
+                        
+                        reserves.append((p.name, p._reserve_plusses, f" (ilvl 277: {num_received}/2, ilvl 264: {num_received_264}/2)"))
                             
-                            reserves.append((p.name, p._reserve_plusses, f" (ilvl 277: {num_received}/2, ilvl 264: {num_received_264}/2)"))
-                                
-                        else: 
-                            reserves.append((p.name, p._reserve_plusses, f" (ilvl 264: {num_received}/2)"))
-                    
                     else: 
-                        print(f"{p.name} has already won both copies of this item ({item_match.name} {item_match.ilvl}).")
-                        ineligible += 1
-
+                        reserves.append((p.name, p._reserve_plusses, f" (ilvl 264: {num_received}/2)"))
+                
                 else: 
-                    # Only append the player to the reserves list if they have not already won the same item, with the same item level.
-                    already_received = False
-                    for log in p._history[slot_names[int(item_match.slot)]]: 
-                        if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
-                            already_received = True
-                            print(f"{p.name} has already won this item ({item_match.name} {item_match.ilvl}).")
-                            ineligible += 1
-                            break
-
-                    if not already_received: 
-                        if item_match.ilvl == 277: 
-                            if any([item_match.name == log.item.name and log.item.ilvl == 264 for log in p._history[slot_names[int(item_match.slot)]]]):
-                                reserves.append((p.name, p._reserve_plusses, f" (has 264 version)"))
-                            else: 
-                                reserves.append((p.name, p._reserve_plusses, ""))
-
-                        else: 
-                            reserves.append((p.name, p._reserve_plusses, ""))
-        
-        if len(reserves) > 0:
-            # Sort the reserves list by reserve plusses, then by name.
-            reserves.sort(key=lambda x: (x[1], x[0]))
-
-            print("")
-            if guild_name == "Dark Rising ": 
-                print(f"The following people have this item, {item_match.name}, on their TMB list: ")
-                roll_type = "TMB"
-                for r in reserves: 
-                    print(f"  - {r[0]} ({roll_type} +{r[1]}){r[2]}")
-
-                # if raiding: 
-                #     pyautogui.hotkey("alt", "tab")
-
-                #     pyautogui.write("/")
-                #     time.sleep(0.1)
-                #     pyautogui.write("rw")
-                #     time.sleep(0.1)
-                #     pyautogui.press("space")
-
-                #     pyautogui.write(f"The following people have this item, {item_match.name}, on their TMB list: ")
-
-                #     time.sleep(0.25)
-                #     pyautogui.press("enter")
-                #     time.sleep(0.25)
-
-                #     for r in reserves:
-                #         pyautogui.write("/")
-                #         time.sleep(0.1)
-                #         pyautogui.write("rw")
-                #         time.sleep(0.1)
-                #         pyautogui.press("space")
-
-                #         pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){r[2]}")
-                #         time.sleep(0.25)
-                #         pyautogui.press("enter")
-                #         time.sleep(0.25)
+                    print(f"{p.name} has already won both copies of this item ({item_match.name} {item_match.ilvl}).")
+                    ineligible += 1
 
             else: 
-                print("The following people have soft-reserved this item:")
-                roll_type = "SR"
-                for r in reserves: 
-                    print(f"  - {r[0]} ({roll_type} +{r[1]}){r[2]}")
+                # Only append the player to the reserves list if they have not already won the same item, with the same item level.
+                already_received = False
+                for log in p._history[slot_names[int(item_match.slot)]]: 
+                    if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
+                        already_received = True
+                        print(f"{p.name} has already won this item ({item_match.name} {item_match.ilvl}).")
+                        ineligible += 1
+                        break
 
-                if raiding: 
-                    ready = input("Ready to announce? (y/n): ").lower()
-                    if ready == "y": 
-                        pyautogui.hotkey("alt", "tab")
+                if not already_received: 
+                    if item_match.ilvl == 277: 
+                        if any([item_match.name == log.item.name and log.item.ilvl == 264 for log in p._history[slot_names[int(item_match.slot)]]]):
+                            reserves.append((p.name, p._reserve_plusses, f" (has 264 version)"))
+                        else: 
+                            reserves.append((p.name, p._reserve_plusses, ""))
 
-                        pyautogui.write("/")
-                        time.sleep(0.1)
-                        pyautogui.write("rw")
-                        time.sleep(0.1)
-                        pyautogui.press("space")
-                        time.sleep(0.1)
-                        pyautogui.write(f"The following people have soft-reserved this item, {item_match.name}:")
-                        time.sleep(0.1)
-                        pyautogui.press("enter")
-                        time.sleep(0.25)
+                    else: 
+                        reserves.append((p.name, p._reserve_plusses, ""))
+    
+    if len(reserves) > 0:
+        # Sort the reserves list by reserve plusses, then by name.
+        reserves.sort(key=lambda x: (x[1], x[0]))
 
-                        for r in reserves:
-                            pyautogui.write("/")
-                            time.sleep(0.1)
-                            pyautogui.write("rw")
-                            time.sleep(0.1)
-                            pyautogui.press("space")
-                            time.sleep(0.1)
-                            pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){r[2]}")
-                            time.sleep(0.1)
-                            pyautogui.press("enter")
-                            time.sleep(0.25)
+        print("")
 
-        elif len(reserves) == 0 and not slot_names[int(item_match.slot)] == "ETC": 
-            if ineligible == 0: print(f"The following item, {item_match.name}, is an open roll -- no one has reserved it.")
-            else: print(f"The following item, {item_match.name}, is an open roll -- ALL those who have reserved it have already won this item.")
+        print("The following people have soft-reserved this item:")
+        roll_type = "SR"
+        for r in reserves: 
+            print(f"  - {r[0]} ({roll_type} +{r[1]}){r[2]}")
 
-            if raiding: 
-                ready = input("Ready to announce? (y/n): ").lower()
-                if ready == "y": 
-                    pyautogui.hotkey("alt", "tab")
+        if raiding: 
+            ready = input("Ready to announce? (y/n): ").lower()
+            if ready == "y": 
+                pyautogui.hotkey("alt", "tab")
 
+                pyautogui.write("/")
+                time.sleep(0.1)
+                pyautogui.write("rw")
+                time.sleep(0.1)
+                pyautogui.press("space")
+                time.sleep(0.1)
+                pyautogui.write(f"The following people have soft-reserved this item, {item_match.name}:")
+                time.sleep(0.1)
+                pyautogui.press("enter")
+                time.sleep(0.25)
+
+                for r in reserves:
                     pyautogui.write("/")
                     time.sleep(0.1)
                     pyautogui.write("rw")
                     time.sleep(0.1)
                     pyautogui.press("space")
                     time.sleep(0.1)
-                    if ineligible == 0: pyautogui.write(f"The following item, {item_match.name}, is an open roll  -- no one has reserved it.")
-                    else: pyautogui.write(f"The following item, {item_match.name}, is an open roll  -- ALL those who have reserved it have already won this item.")
+                    pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){r[2]}")
                     time.sleep(0.1)
                     pyautogui.press("enter")
                     time.sleep(0.25)
+
+    elif len(reserves) == 0 and not slot_names[int(item_match.slot)] == "ETC": 
+        if ineligible == 0: print(f"The following item, {item_match.name}, is an open roll -- no one has reserved it.")
+        else: print(f"The following item, {item_match.name}, is an open roll -- ALL those who have reserved it have already won this item.")
+
+        if raiding: 
+            ready = input("Ready to announce? (y/n): ").lower()
+            if ready == "y": 
+                pyautogui.hotkey("alt", "tab")
+
+                pyautogui.write("/")
+                time.sleep(0.1)
+                pyautogui.write("rw")
+                time.sleep(0.1)
+                pyautogui.press("space")
+                time.sleep(0.1)
+                if ineligible == 0: pyautogui.write(f"The following item, {item_match.name}, is an open roll  -- no one has reserved it.")
+                else: pyautogui.write(f"The following item, {item_match.name}, is an open roll  -- ALL those who have reserved it have already won this item.")
+                time.sleep(0.1)
+                pyautogui.press("enter")
+                time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -672,8 +561,7 @@ def award_loot(players):
     # We'll ask the user whether or not this is an off-spec roll, but only if the player is not on the reserves list.
     # If they are, it's a soft-reserve roll. 
     if player.name in [r[0] for r in reserves] or confirm == "sr": 
-        if guild_name == "Dark Rising ": roll_type = "TMB"
-        else: roll_type = "SR"
+        roll_type = "SR"
 
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
@@ -686,8 +574,7 @@ def award_loot(players):
             confirm = "y"
         
         if confirm == "y":
-            if guild_name == "Dark Rising ": roll_type = "TMB"
-            else: roll_type = "SR"
+            roll_type = "SR"
 
             player._history[slot_names[int(item_match.slot)]].append(log)
             # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
@@ -778,7 +665,7 @@ def mark_attendance(players):
                 continue
         
         if not found: 
-            players.append(Player(new_player, "", []))
+            players.append(Player(new_player, []))
 
         # Find the player in the list of players, and change their _attendance to True. 
         for p in players:
@@ -940,17 +827,11 @@ def export_loot():
                 continue
 
             # Print out the player's name, and then the number of plusses they have; of both types.
-            f.write(f"{p.name} (+{p._regular_plusses} MS) (+{p._reserve_plusses} {'TMB' if guild_name == 'Dark Rising ' else 'SR'})\n")
+            f.write(f"{p.name} (+{p._regular_plusses} MS) (+{p._reserve_plusses} SR)\n")
 
             for l in p._raid_log:
                 if l.roll == "SR":
                     f.write(f"- {l.item.name} ({l.item.ilvl}) (SR) -- received on")
-                    date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
-                    f.write(f" {date_string}\n")
-
-            for l in p._raid_log:
-                if l.roll == "TMB":
-                    f.write(f"- {l.item.name} ({l.item.ilvl}) (TMB) -- received on")
                     date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                     f.write(f" {date_string}\n")
 
@@ -1057,10 +938,6 @@ def remove_loot(players):
     elif player._raid_log[sel-1].roll == "SR":
         player._reserve_plusses -= 1
         player._regular_plusses -= 1
-
-    elif player._raid_log[sel-1].roll == "TMB":
-        player._reserve_plusses -= 1
-        player._regular_plusses -= 1
     
     # Remove the item from the player's log.
     item = player._raid_log[sel-1]
@@ -1136,16 +1013,16 @@ def sudo_mode(players, raiding):
             print("WARNING: This will completely wipe the pickle file. This cannot be undone.")
             print("Removing the pickle file will affect: ")
             print("  - The loot history")
-            print("  - The reserve lists of ALL players, in BOTH guilds")
-            print("  - The names of ALL players, in BOTH guilds")
-            print("  - The plusses of ALL players, in BOTH guilds")
+            print("  - The reserve lists of ALL players")
+            print("  - The names of ALL players")
+            print("  - The plusses of ALL players")
 
             confirm = input("Are you sure you want to wipe the pickle file? (y/n): ").lower()
             if confirm == "y":
                 os.remove("players.pickle")
 
             players = []
-            players.append(Player("_disenchanted", "", []))
+            players.append(Player("_disenchanted", []))
 
         elif sel == "b": 
             print("Who are we modifying?")
@@ -1229,9 +1106,8 @@ def sudo_mode(players, raiding):
                     item = item_matches[sel-1]
 
                 # Check the player's reserve list to see if they have this item reserved.
-                if player._guild == guild_name and item.name in player._reserves:
-                    if guild_name == "Dark Rising ": roll_type = "TMB"
-                    else: roll_type = "SR"
+                if item.name in player._reserves:
+                    roll_type = "SR"
                     print(f"{player.name} has {item.name} reserved. Roll-type auto-selected as {roll_type}.")
 
                 elif item.slot == "ETC" and not "Mark of Sanctification" in item.name: 
@@ -1335,7 +1211,7 @@ def sudo_mode(players, raiding):
                 # We'll select this match, and then move on.
                 player = player_matches[sel-1]
 
-            reserve_type = "TMB" if guild_name == "Dark Rising " else "SR"
+            reserve_type = "SR"
             print(f"This player has {player._regular_plusses} regular plusses and {player._reserve_plusses} {reserve_type} plusses.") 
 
             regular_plusses = input("How many regular plusses should they have? ")
@@ -1492,12 +1368,12 @@ def export_chat(players):
     time.sleep(0.25)
 
 while(True): 
-    export_pickle(players, guild_name)
+    export_pickle(players)
     
     print("----------------------------------------")
-    print(f"{guild_name}Loot Tracker{'' if raiding else ' (Debug Mode)'}")
+    print(f"Loot Tracker{'' if raiding else ' (Debug Mode)'}")
     print("1) Award loot")
-    print("2) Import soft-reserve or TMB (or change guild)")
+    print("2) Import soft-reserve")
     print("3) Mark attendance")
     print("4) Export the loot history to a file")
     print("5) Export THIS RAID's loot to a file")
@@ -1512,14 +1388,7 @@ while(True):
     except: break
 
     if sel == 1: players = award_loot(players)
-    elif sel == 2: 
-        print("a) Import soft-reserve, for Asylum of the Immortals")
-        print("b) Import TMB, for Dark Rising")
-        sel = input("Select an option: ").lower()
-
-        if sel == "a": players = import_softreserve(players)
-        elif sel == "b": players = import_tmb(players)
-        else: print("Invalid option.")
+    elif sel == 2: players = import_softreserve(players)
     elif sel == 3: players = mark_attendance(players)
     elif sel == 4: export_history()
     elif sel == 5: export_loot()
