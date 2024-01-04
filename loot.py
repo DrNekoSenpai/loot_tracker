@@ -333,46 +333,6 @@ def award_loot(players):
     print(f"Item: {item_match.name} ({item_match.ilvl})")
     print(f"Slot: {slot_names[int(item_match.slot)]}")
 
-    # # If the item's name is "Shadowfrost Shard"... 
-    # if item_match.name == "Shadowfrost Shard":
-    #     # first, check if Artaz has already won 50 of these. 
-
-    #     artaz = next((p for p in players if p.name == "Artaz"), None)
-    #     shards = len([x for x in artaz._history["ETC"] if x.item.name == "Shadowfrost Shard"])
-
-    #     if shards < 50: winner = "Artaz"
-    #     else: 
-    #         ferrousblade = next((p for p in players if p.name == "Ferrousblade"), None)
-    #         shards = len([x for x in ferrousblade._history["ETC"] if x.item.name == "Shadowfrost Shard"])
-
-    #         if shards < 50: winner = "Ferrousblade"
-
-    #         else:
-    #             pastiry = next((p for p in players if p.name == "Pastiry"), None)
-    #             shards = len([x for x in pastiry._history["ETC"] if x.item.name == "Shadowfrost Shard"])
-
-    #             if shards < 50: winner = "Pastiry"
-    #             else: winner = None
-
-    #     if winner is None: 
-    #         print("All three players have already won 50 Shadowfrost Shards.")
-    #         winner = input("Who's next on the priority list? ")
-
-    #     roll_type = "ETC"
-    #     log = Log(winner.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-    #     winner._raid_log.append(log)
-
-    #     if not raiding: 
-    #         confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-    #     else:
-    #         confirm = "y"
-
-    #     if confirm == "y":
-    #         winner._history[slot_names[int(item_match.slot)]].append(log)
-
-    #     print(f"{winner.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
-    #     return players
-
     reserves = []
     ineligible = 0
 
@@ -485,11 +445,61 @@ def award_loot(players):
                 time.sleep(0.1)
                 pyautogui.press("space")
                 time.sleep(0.1)
-                if ineligible == 0: pyautogui.write(f"The following item, {item_match.name}, is an open roll  -- no one has reserved it.")
-                else: pyautogui.write(f"The following item, {item_match.name}, is an open roll  -- ALL those who have reserved it have already won this item.")
+                if ineligible == 0: pyautogui.write(f"The following item, {item_match.name}, is an open roll -- no one has reserved it.")
+                else: pyautogui.write(f"The following item, {item_match.name}, is an open roll -- ALL those who have reserved it have already won this item.")
                 time.sleep(0.1)
                 pyautogui.press("enter")
                 time.sleep(0.25)
+
+    elif slot_names[int(item_match.slot)] == "ETC": 
+        if item_match.name == "Shadowfrost Shard": pass
+        elif item_match.name == "Rotface's Acidic Blood": pass
+        elif item_match.name == "Festergut's Acidic Blood": pass
+
+        # Find all of the people who have this item in their history, as well as how many they have. 
+        received = []
+        for player in players: 
+            count = 0
+            for log in player._history["ETC"]: 
+                if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
+                    count += 1
+            if count > 0:
+                received.append((player, count))
+
+        if len(players) > 0: 
+            print("")
+            print("The following people have already won one or more copies of this item:")
+            for p in received:
+                print(f"  - {p[0].name} ({p[1]}x)")
+
+            if raiding: 
+                ready = input("Ready to announce? (y/n): ").lower()
+                if ready == "y": 
+                    pyautogui.hotkey("alt", "tab")
+
+                    pyautogui.write("/")
+                    time.sleep(0.1)
+                    pyautogui.write("rw")
+                    time.sleep(0.1)
+                    pyautogui.press("space")
+                    time.sleep(0.1)
+                    pyautogui.write(f"The following people have already won one or more copies of this item, {item_match.name}:")
+                    time.sleep(0.1)
+                    pyautogui.press("enter")
+                    time.sleep(0.25)
+
+                    for p in received:
+                        pyautogui.write("/")
+                        time.sleep(0.1)
+                        pyautogui.write("rw")
+                        time.sleep(0.1)
+                        pyautogui.press("space")
+                        time.sleep(0.1)
+
+                        pyautogui.write(f"{p[0].name} ({p[1]}x)")
+                        time.sleep(0.1)
+                        pyautogui.press("enter")
+                        time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -868,6 +878,36 @@ def export_loot():
 
                 for l in p._raid_log:
                     f.write(f"- {l.item.name}\n")
+
+def export_tokens(): 
+    # Sort the players by alphabetical order.
+    players.sort(key=lambda x: x.name)
+
+    with open("tokens.txt", "w") as file:
+        for p in players: 
+            normal_tokens = 0
+            for l in p._history["ETC"]:
+                if l.item.name == "Conqueror's Mark of Sanctification (N25)":
+                    normal_tokens += 1
+                elif l.item.name == "Vanquisher's Mark of Sanctification (N25)":
+                    normal_tokens += 1
+                elif l.item.name == "Protector's Mark of Sanctification (N25)":
+                    normal_tokens += 1
+            
+            heroic_tokens = 0
+            for l in p._history["ETC"]:
+                if l.item.name == "Conqueror's Mark of Sanctification (H25)":
+                    heroic_tokens += 1
+                elif l.item.name == "Vanquisher's Mark of Sanctification (H25)":
+                    heroic_tokens += 1
+                elif l.item.name == "Protector's Mark of Sanctification (H25)":
+                    heroic_tokens += 1
+
+            if normal_tokens == 0 and heroic_tokens == 0: continue 
+            else: 
+                file.write(f"{p.name}: {normal_tokens} Normal")
+                if heroic_tokens == 0: file.write("\n")
+                else: file.write(f", {heroic_tokens} Heroic\n")
 
 def remove_loot(players):
     player = input("Enter the name of the player who we are removing from: ").lower()
@@ -1377,10 +1417,11 @@ while(True):
     print("3) Mark attendance")
     print("4) Export the loot history to a file")
     print("5) Export THIS RAID's loot to a file")
-    print("6) Remove loot, or weekly reset")
-    print("7) Export plusses in Gargul style")
-    print("8) Export plusses to be pasted into chat")
-    print(f"9) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
+    print("6) Export number of tokens received")
+    print("7) Remove loot, or weekly reset")
+    print("8) Export plusses in Gargul style")
+    print("9) Export plusses to be pasted into chat")
+    print(f"10) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
 
     print("")
 
@@ -1392,7 +1433,8 @@ while(True):
     elif sel == 3: players = mark_attendance(players)
     elif sel == 4: export_history()
     elif sel == 5: export_loot()
-    elif sel == 6: 
+    elif sel == 6: export_tokens()
+    elif sel == 7: 
         print("Choose an option: ")
         print("a) Remove one piece of loot from a player")
         print("b) Weekly reset (clear plusses and raid logs, but not history)")
@@ -1401,7 +1443,7 @@ while(True):
         if sel == "a": remove_loot(players)
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
-    elif sel == 7: export_gargul(players)
-    elif sel == 8: export_chat(players)
-    elif sel == 9: players, raiding = sudo_mode(players, raiding)
+    elif sel == 8: export_gargul(players)
+    elif sel == 9: export_chat(players)
+    elif sel == 10: players, raiding = sudo_mode(players, raiding)
     else: break
