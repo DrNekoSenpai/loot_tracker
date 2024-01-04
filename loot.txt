@@ -1,64 +1,52 @@
-Loot log for Wednesday, 2023/12/13 and **Sunday, 2023/12/17**:
+Loot log for **Wednesday, 2024/01/03**:
 
-Killiandra (+2 MS) (+1 SR)
-- Plaguebringer's Stained Pants (264) (SR) -- received on **2023-12-17**
-- Holiday's Grace (264) (MS) -- received on **2023-12-17**
+Catreene (+2 MS) (+1 SR)
+- Bloodsunder's Bracers (264) (SR) -- received on **2024-01-03**
+- Conqueror's Mark of Sanctification (N25) (80) (MS) -- received on **2024-01-03**
 
-Artaz (+1 MS) (+1 SR)
-- Might of Blight (264) (SR) -- received on **2023-12-17**
+Sighanama (+2 MS) (+1 SR)
+- Carapace of Forgotten Kings (264) (SR) -- received on **2024-01-03**
+- Distant Land (264) (MS) -- received on **2024-01-03**
 
 Elisesolis (+1 MS) (+1 SR)
-- Bile-Encrusted Medallion (264) (SR) -- received on **2023-12-17**
-- Blood-Soaked Saronite Stompers (264) (OS) -- received on 2023-12-13
-- Ahn'kahar Onyx Neckguard (264) (OS) -- received on 2023-12-13
+- Boneguard Commander's Pauldrons (277) (SR) -- received on **2024-01-03**
+- Bryntroll, the Bone Arbiter (264) (OS) -- received on **2024-01-03**
 
-Ferrousblade (+1 MS) (+1 SR)
-- Grinning Skull Greatboots (264) (SR) -- received on **2023-12-17**
+Miatotems (+1 MS) (+1 SR)
+- Ring of Rapid Ascent (277) (SR) -- received on **2024-01-03**
+- Dual-Bladed Pauldrons (264) (OS) -- received on **2024-01-03**
+- Leggings of Northern Lights (264) (OS) -- received on **2024-01-03**
 
-Gnoraa (+1 MS) (+1 SR)
-- Amulet of the Silent Eulogy (277) (SR) -- received on 2023-12-13
+Snedpie (+1 MS) (+1 SR)
+- Plague Scientist's Boots (264) (SR) -- received on **2024-01-03**
 
-Gnoya (+1 MS) (+1 SR)
-- Corpse-Impaling Spike (264) (SR) -- received on **2023-12-17**
+Artaz (+1 MS) (+0 SR)
+- Skeleton Lord's Circle (277) (MS) -- received on **2024-01-03**
+- Shadowfrost Shard (ETC) -- received on **2024-01-03**
+- Shadowfrost Shard (ETC) -- received on **2024-01-03**
+- Shadowfrost Shard (ETC) -- received on **2024-01-03**
+- Shadowfrost Shard (ETC) -- received on **2024-01-03**
 
-Jwizard (+1 MS) (+1 SR)
-- Bone Sentinel's Amulet (264) (SR) -- received on 2023-12-13
-
-Lilypalooza (+1 MS) (+1 SR)
-- Nightmare Ender (264) (SR) -- received on **2023-12-17**
-
-Pacratt (+1 MS) (+1 SR)
-- Ring of Rapid Ascent (277) (SR) -- received on 2023-12-13
-
-Swiftbladess (+1 MS) (+1 SR)
-- Deathbringer's Will (264) (SR) -- received on 2023-12-13
-
-Tinyraider (+1 MS) (+1 SR)
-- The Lady's Brittle Bracers (264) (SR) -- received on 2023-12-13
-- Wrathful Gladiator's Silk Handguards (270) (OS) -- received on 2023-12-13
-- Wrathful Gladiator's Silk Handguards (270) (OS) -- received on 2023-12-13
-
-Prunejuuce (+2 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (80) (MS) -- received on 2023-12-13
-- Devium's Eternally Cold Ring (264) (MS) -- received on **2023-12-17**
-
-Axsel (+1 MS) (+0 SR)
-- Crushing Coldwraith Belt (264) (MS) -- received on 2023-12-13
-
-Catreene (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (80) (MS) -- received on 2023-12-13
+Beesty (+1 MS) (+0 SR)
+- Zod's Repeating Longbow (264) (MS) -- received on **2024-01-03**
 
 Darkfern (+1 MS) (+0 SR)
-- Scourgeborne Waraxe (277) (MS) -- received on 2023-12-13
+- Vanquisher's Mark of Sanctification (N25) (80) (MS) -- received on **2024-01-03**
+
+Jwizard (+1 MS) (+0 SR)
+- Frozen Bonespike (264) (MS) -- received on **2024-01-03**
+
+Kelorlyn (+1 MS) (+0 SR)
+- Ring of Rotting Sinew (264) (MS) -- received on **2024-01-03**
 
 Meemeemeemee (+1 MS) (+0 SR)
-- Rib Spreader (264) (MS) -- received on **2023-12-17**
-- Sanctified Frost Witch's Legguards (264) (OS) -- received on 2023-12-13
+- Seal of Many Mouths (264) (MS) -- received on **2024-01-03**
 
-Miatotems (+1 MS) (+0 SR)
-- Holiday's Grace (264) (MS) -- received on **2023-12-17**
-- Snowserpent Mail Helm (264) (OS) -- received on 2023-12-13
+Lilypalooza (+0 MS) (+0 SR)
+- Nibelung (264) (OS) -- received on **2024-01-03**
 
-Sighanama (+0 MS) (+0 SR)
-- Wrathful Gladiator's Chain Gauntlets (270) (OS) -- received on 2023-12-13
+Swiftbladess (+0 MS) (+0 SR)
+- Bloodvenom Blade (264) (OS) -- received on **2024-01-03**
 
+_disenchanted
+- Rusted Bonespike Pauldrons
