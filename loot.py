@@ -784,6 +784,33 @@ def export_history():
                             file.write(f"  \- [{item.item.name}]({link})  ({item.date})\n")
 
                 file.write("----------------------------------------\n")
+                    
+        file.write("Number of tokens received:\n\n")
+
+        for p in players: 
+            normal_tokens = 0
+            for l in p._history["ETC"]:
+                if l.item.name == "Conqueror's Mark of Sanctification (N25)":
+                    normal_tokens += 1
+                elif l.item.name == "Vanquisher's Mark of Sanctification (N25)":
+                    normal_tokens += 1
+                elif l.item.name == "Protector's Mark of Sanctification (N25)":
+                    normal_tokens += 1
+            
+            heroic_tokens = 0
+            for l in p._history["ETC"]:
+                if l.item.name == "Conqueror's Mark of Sanctification (H25)":
+                    heroic_tokens += 1
+                elif l.item.name == "Vanquisher's Mark of Sanctification (H25)":
+                    heroic_tokens += 1
+                elif l.item.name == "Protector's Mark of Sanctification (H25)":
+                    heroic_tokens += 1
+
+            if normal_tokens == 0 and heroic_tokens == 0: continue 
+            else: 
+                file.write(f"\- {p.name}: {normal_tokens} Normal")
+                if heroic_tokens == 0: file.write("\n")
+                else: file.write(f", {heroic_tokens} Heroic\n")
 
 def export_loot(): 
     """
@@ -878,36 +905,6 @@ def export_loot():
 
                 for l in p._raid_log:
                     f.write(f"- {l.item.name}\n")
-
-def export_tokens(): 
-    # Sort the players by alphabetical order.
-    players.sort(key=lambda x: x.name)
-
-    with open("tokens.txt", "w") as file:
-        for p in players: 
-            normal_tokens = 0
-            for l in p._history["ETC"]:
-                if l.item.name == "Conqueror's Mark of Sanctification (N25)":
-                    normal_tokens += 1
-                elif l.item.name == "Vanquisher's Mark of Sanctification (N25)":
-                    normal_tokens += 1
-                elif l.item.name == "Protector's Mark of Sanctification (N25)":
-                    normal_tokens += 1
-            
-            heroic_tokens = 0
-            for l in p._history["ETC"]:
-                if l.item.name == "Conqueror's Mark of Sanctification (H25)":
-                    heroic_tokens += 1
-                elif l.item.name == "Vanquisher's Mark of Sanctification (H25)":
-                    heroic_tokens += 1
-                elif l.item.name == "Protector's Mark of Sanctification (H25)":
-                    heroic_tokens += 1
-
-            if normal_tokens == 0 and heroic_tokens == 0: continue 
-            else: 
-                file.write(f"{p.name}: {normal_tokens} Normal")
-                if heroic_tokens == 0: file.write("\n")
-                else: file.write(f", {heroic_tokens} Heroic\n")
 
 def remove_loot(players):
     player = input("Enter the name of the player who we are removing from: ").lower()
@@ -1417,11 +1414,10 @@ while(True):
     print("3) Mark attendance")
     print("4) Export the loot history to a file")
     print("5) Export THIS RAID's loot to a file")
-    print("6) Export number of tokens received")
-    print("7) Remove loot, or weekly reset")
-    print("8) Export plusses in Gargul style")
-    print("9) Export plusses to be pasted into chat")
-    print(f"10) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
+    print("6) Remove loot, or weekly reset")
+    print("7) Export plusses in Gargul style")
+    print("8) Export plusses to be pasted into chat")
+    print(f"9) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
 
     print("")
 
@@ -1433,8 +1429,7 @@ while(True):
     elif sel == 3: players = mark_attendance(players)
     elif sel == 4: export_history()
     elif sel == 5: export_loot()
-    elif sel == 6: export_tokens()
-    elif sel == 7: 
+    elif sel == 6: 
         print("Choose an option: ")
         print("a) Remove one piece of loot from a player")
         print("b) Weekly reset (clear plusses and raid logs, but not history)")
@@ -1443,7 +1438,7 @@ while(True):
         if sel == "a": remove_loot(players)
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
-    elif sel == 8: export_gargul(players)
-    elif sel == 9: export_chat(players)
-    elif sel == 10: players, raiding = sudo_mode(players, raiding)
+    elif sel == 7: export_gargul(players)
+    elif sel == 8: export_chat(players)
+    elif sel == 9: players, raiding = sudo_mode(players, raiding)
     else: break

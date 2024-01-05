@@ -199,7 +199,6 @@
 49989;Ahn'kahar Onyx Neckguard;264;0;1;Elisesolis;2023-12-13
 52026;Protector's Mark of Sanctification;80;0;0;Prunejuuce;2023-12-13
 50362;Deathbringer's Will;264;1;0;Swiftbladess;2023-12-13
-51464;Wrathful Gladiator's Silk Handguards;270;0;1;Tinyraider;2023-12-13
 51193;Sanctified Frost Witch's Legguards;264;0;1;Meemeemeemee;2023-12-13
 49952;Snowserpent Mail Helm;264;0;1;Miatotems;2023-12-13
 52027;Conqueror's Mark of Sanctification;80;0;0;Catreene;2023-12-13
