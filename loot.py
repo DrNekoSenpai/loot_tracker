@@ -868,21 +868,31 @@ def export_loot():
 
             for l in p._raid_log:
                 if l.roll == "SR":
-                    f.write(f"- {l.item.name} ({l.item.ilvl}) (SR) -- received on")
+                    f.write(f"- {l.item.name} (SR) -- received on")
                     date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                     f.write(f" {date_string}\n")
 
             for l in p._raid_log:
                 if l.roll == "MS":
-                    f.write(f"- {l.item.name} ({l.item.ilvl}) (MS) -- received on")
-                    date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
-                    f.write(f" {date_string}\n")
+                    if "Mark of Sanctification" in l.item.name: 
+                        f.write(f"- {l.item.name} (MS) -- received on")
+                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                        f.write(f" {date_string}\n")
+                    else: 
+                        f.write(f"- {l.item.name} ({l.item.ilvl}) (MS) -- received on")
+                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                        f.write(f" {date_string}\n")
 
             for l in p._raid_log:
                 if l.roll == "OS":
-                    f.write(f"- {l.item.name} ({l.item.ilvl}) (OS) -- received on")
-                    date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
-                    f.write(f" {date_string}\n")
+                    if "Mark of Sanctification" in l.item.name: 
+                        f.write(f"- {l.item.name} (OS) -- received on")
+                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                        f.write(f" {date_string}\n")
+                    else: 
+                        f.write(f"- {l.item.name} ({l.item.ilvl}) (OS) -- received on")
+                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                        f.write(f" {date_string}\n")
 
             for l in p._raid_log:
                 if l.roll == "ETC":
