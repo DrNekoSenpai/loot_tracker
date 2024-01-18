@@ -455,51 +455,52 @@ def award_loot(players):
         if item_match.name == "Shadowfrost Shard": pass
         elif item_match.name == "Rotface's Acidic Blood": pass
         elif item_match.name == "Festergut's Acidic Blood": pass
+        
+        else: 
+            # Find all of the people who have this item in their history, as well as how many they have. 
+            received = []
+            for player in players: 
+                count = 0
+                for log in player._history["ETC"]: 
+                    if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
+                        count += 1
+                if count > 0:
+                    received.append((player, count))
 
-        # Find all of the people who have this item in their history, as well as how many they have. 
-        received = []
-        for player in players: 
-            count = 0
-            for log in player._history["ETC"]: 
-                if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
-                    count += 1
-            if count > 0:
-                received.append((player, count))
+            if len(received) > 0: 
+                print("")
+                print("The following people have already won one or more copies of this item:")
+                for p in received:
+                    print(f"  - {p[0].name} ({p[1]}x)")
 
-        if len(players) > 0: 
-            print("")
-            print("The following people have already won one or more copies of this item:")
-            for p in received:
-                print(f"  - {p[0].name} ({p[1]}x)")
+                if raiding: 
+                    ready = input("Ready to announce? (y/n): ").lower()
+                    if ready == "y": 
+                        pyautogui.hotkey("alt", "tab")
 
-            if raiding: 
-                ready = input("Ready to announce? (y/n): ").lower()
-                if ready == "y": 
-                    pyautogui.hotkey("alt", "tab")
-
-                    pyautogui.write("/")
-                    time.sleep(0.1)
-                    pyautogui.write("rw")
-                    time.sleep(0.1)
-                    pyautogui.press("space")
-                    time.sleep(0.1)
-                    pyautogui.write(f"The following people have already won one or more copies of this item, {item_match.name}:")
-                    time.sleep(0.1)
-                    pyautogui.press("enter")
-                    time.sleep(0.25)
-
-                    for p in received:
                         pyautogui.write("/")
                         time.sleep(0.1)
                         pyautogui.write("rw")
                         time.sleep(0.1)
                         pyautogui.press("space")
                         time.sleep(0.1)
-
-                        pyautogui.write(f"{p[0].name} ({p[1]}x)")
+                        pyautogui.write(f"The following people have already won one or more copies of this item, {item_match.name}:")
                         time.sleep(0.1)
                         pyautogui.press("enter")
                         time.sleep(0.25)
+
+                        for p in received:
+                            pyautogui.write("/")
+                            time.sleep(0.1)
+                            pyautogui.write("rw")
+                            time.sleep(0.1)
+                            pyautogui.press("space")
+                            time.sleep(0.1)
+
+                            pyautogui.write(f"{p[0].name} ({p[1]}x)")
+                            time.sleep(0.1)
+                            pyautogui.press("enter")
+                            time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 

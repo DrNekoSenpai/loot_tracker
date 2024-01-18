@@ -1,52 +1,67 @@
-Loot log for **Wednesday, 2024-01-03**:
+Loot log for **Wednesday, 2024-01-17**:
 
-Catreene (+2 MS) (+1 SR)
-- Bloodsunder's Bracers (264) (SR) -- received on **2024-01-03**
-- Conqueror's Mark of Sanctification (N25) (80) (MS) -- received on **2024-01-03**
+Prunejuuce (+2 MS) (+1 SR)
+- Bile-Encrusted Medallion (SR) -- received on **2024-01-17**
+- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-01-17**
 
-Sighanama (+2 MS) (+1 SR)
-- Carapace of Forgotten Kings (264) (SR) -- received on **2024-01-03**
-- Distant Land (264) (MS) -- received on **2024-01-03**
+Tinyraider (+2 MS) (+1 SR)
+- Plaguebringer's Stained Pants (SR) -- received on **2024-01-17**
+- Stiffened Corpse Shoulderpads (264) (MS) -- received on **2024-01-17**
 
-Elisesolis (+1 MS) (+1 SR)
-- Boneguard Commander's Pauldrons (277) (SR) -- received on **2024-01-03**
-- Bryntroll, the Bone Arbiter (264) (OS) -- received on **2024-01-03**
+Artaz (+1 MS) (+1 SR)
+- Blood-Soaked Saronite Stompers (SR) -- received on **2024-01-17**
+- Shadowfrost Shard (ETC) -- received on **2024-01-17**
+- Shadowfrost Shard (ETC) -- received on **2024-01-17**
+- Shadowfrost Shard (ETC) -- received on **2024-01-17**
+- Shadowfrost Shard (ETC) -- received on **2024-01-17**
 
-Miatotems (+1 MS) (+1 SR)
-- Ring of Rapid Ascent (277) (SR) -- received on **2024-01-03**
-- Dual-Bladed Pauldrons (264) (OS) -- received on **2024-01-03**
-- Leggings of Northern Lights (264) (OS) -- received on **2024-01-03**
+Axsel (+1 MS) (+1 SR)
+- Dislodged Foreign Object (SR) -- received on **2024-01-17**
 
-Snedpie (+1 MS) (+1 SR)
-- Plague Scientist's Boots (264) (SR) -- received on **2024-01-03**
+Gnoya (+1 MS) (+1 SR)
+- Crushing Coldwraith Belt (SR) -- received on **2024-01-17**
 
-Artaz (+1 MS) (+0 SR)
-- Skeleton Lord's Circle (277) (MS) -- received on **2024-01-03**
-- Shadowfrost Shard (ETC) -- received on **2024-01-03**
-- Shadowfrost Shard (ETC) -- received on **2024-01-03**
-- Shadowfrost Shard (ETC) -- received on **2024-01-03**
-- Shadowfrost Shard (ETC) -- received on **2024-01-03**
+Kelorlyn (+1 MS) (+1 SR)
+- Band of the Bone Colossus (SR) -- received on **2024-01-17**
+
+Meemeemeemee (+1 MS) (+1 SR)
+- Black Bruise (SR) -- received on **2024-01-17**
+
+Killadin (+3 MS) (+0 SR)
+- Waistband of Righteous Fury (277) (MS) -- received on **2024-01-17**
+- Harbinger's Bone Band (264) (MS) -- received on **2024-01-17**
+- Belt of the Lonely Noble (264) (MS) -- received on **2024-01-17**
 
 Beesty (+1 MS) (+0 SR)
-- Zod's Repeating Longbow (264) (MS) -- received on **2024-01-03**
+- Wodin's Lucky Necklace (264) (MS) -- received on **2024-01-17**
+
+Catreene (+1 MS) (+0 SR)
+- Holiday's Grace (264) (MS) -- received on **2024-01-17**
+- Leggings of Dubious Charms (264) (OS) -- received on **2024-01-17**
 
 Darkfern (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (80) (MS) -- received on **2024-01-03**
+- Scourge Reaver's Legplates (264) (MS) -- received on **2024-01-17**
 
-Jwizard (+1 MS) (+0 SR)
-- Frozen Bonespike (264) (MS) -- received on **2024-01-03**
+Medulla (+1 MS) (+0 SR)
+- Legguards of Lost Hope (264) (MS) -- received on **2024-01-17**
 
-Kelorlyn (+1 MS) (+0 SR)
-- Ring of Rotting Sinew (264) (MS) -- received on **2024-01-03**
+Pacratt (+1 MS) (+0 SR)
+- Corp'rethar Ceremonial Crown (277) (MS) -- received on **2024-01-17**
 
-Meemeemeemee (+1 MS) (+0 SR)
-- Seal of Many Mouths (264) (MS) -- received on **2024-01-03**
+Snedpie (+1 MS) (+0 SR)
+- Nightmare Ender (264) (MS) -- received on **2024-01-17**
 
-Lilypalooza (+0 MS) (+0 SR)
-- Nibelung (264) (OS) -- received on **2024-01-03**
+Soulreaverr (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-01-17**
+- Rotface's Acidic Blood (ETC) -- received on **2024-01-17**
+- Festergut's Acidic Blood (ETC) -- received on **2024-01-17**
 
-Swiftbladess (+0 MS) (+0 SR)
-- Bloodvenom Blade (264) (OS) -- received on **2024-01-03**
+Swiftbladess (+1 MS) (+0 SR)
+- Scourgeborne Waraxe (277) (MS) -- received on **2024-01-17**
+- Cultist's Bloodsoaked Spaulders (264) (OS) -- received on **2024-01-17**
+- Bloodvenom Blade (264) (OS) -- received on **2024-01-17**
 
 _disenchanted
-- Rusted Bonespike Pauldrons
+- Nibelung
+- Rib Spreader
+- Lungbreaker
