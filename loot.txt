@@ -1,67 +1,74 @@
-Loot log for **Wednesday, 2024-01-17**:
+Loot log for Wednesday, 2024-01-17 and **Sunday, 2024-01-21**:
 
 Prunejuuce (+2 MS) (+1 SR)
-- Bile-Encrusted Medallion (SR) -- received on **2024-01-17**
-- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-01-17**
+- Bile-Encrusted Medallion (SR) -- received on 2024-01-17
+- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-01-17
 
 Tinyraider (+2 MS) (+1 SR)
-- Plaguebringer's Stained Pants (SR) -- received on **2024-01-17**
-- Stiffened Corpse Shoulderpads (264) (MS) -- received on **2024-01-17**
+- Plaguebringer's Stained Pants (SR) -- received on 2024-01-17
+- Stiffened Corpse Shoulderpads (264) (MS) -- received on 2024-01-17
 
 Artaz (+1 MS) (+1 SR)
-- Blood-Soaked Saronite Stompers (SR) -- received on **2024-01-17**
-- Shadowfrost Shard (ETC) -- received on **2024-01-17**
-- Shadowfrost Shard (ETC) -- received on **2024-01-17**
-- Shadowfrost Shard (ETC) -- received on **2024-01-17**
-- Shadowfrost Shard (ETC) -- received on **2024-01-17**
+- Blood-Soaked Saronite Stompers (SR) -- received on 2024-01-17
+- Shadowfrost Shard (ETC) -- received on 2024-01-17
+- Shadowfrost Shard (ETC) -- received on 2024-01-17
+- Shadowfrost Shard (ETC) -- received on 2024-01-17
+- Shadowfrost Shard (ETC) -- received on 2024-01-17
 
 Axsel (+1 MS) (+1 SR)
-- Dislodged Foreign Object (SR) -- received on **2024-01-17**
+- Dislodged Foreign Object (SR) -- received on 2024-01-17
 
 Gnoya (+1 MS) (+1 SR)
-- Crushing Coldwraith Belt (SR) -- received on **2024-01-17**
+- Crushing Coldwraith Belt (SR) -- received on 2024-01-17
 
 Kelorlyn (+1 MS) (+1 SR)
-- Band of the Bone Colossus (SR) -- received on **2024-01-17**
+- Band of the Bone Colossus (SR) -- received on 2024-01-17
 
 Meemeemeemee (+1 MS) (+1 SR)
-- Black Bruise (SR) -- received on **2024-01-17**
+- Black Bruise (SR) -- received on 2024-01-17
 
 Killadin (+3 MS) (+0 SR)
-- Waistband of Righteous Fury (277) (MS) -- received on **2024-01-17**
-- Harbinger's Bone Band (264) (MS) -- received on **2024-01-17**
-- Belt of the Lonely Noble (264) (MS) -- received on **2024-01-17**
+- Waistband of Righteous Fury (277) (MS) -- received on 2024-01-17
+- Harbinger's Bone Band (264) (MS) -- received on 2024-01-17
+- Belt of the Lonely Noble (264) (MS) -- received on 2024-01-17
 
 Beesty (+1 MS) (+0 SR)
-- Wodin's Lucky Necklace (264) (MS) -- received on **2024-01-17**
+- Wodin's Lucky Necklace (264) (MS) -- received on 2024-01-17
 
 Catreene (+1 MS) (+0 SR)
-- Holiday's Grace (264) (MS) -- received on **2024-01-17**
-- Leggings of Dubious Charms (264) (OS) -- received on **2024-01-17**
+- Holiday's Grace (264) (MS) -- received on 2024-01-17
+- Leggings of Dubious Charms (264) (OS) -- received on 2024-01-17
 
 Darkfern (+1 MS) (+0 SR)
-- Scourge Reaver's Legplates (264) (MS) -- received on **2024-01-17**
+- Scourge Reaver's Legplates (264) (MS) -- received on 2024-01-17
 
 Medulla (+1 MS) (+0 SR)
-- Legguards of Lost Hope (264) (MS) -- received on **2024-01-17**
+- Legguards of Lost Hope (264) (MS) -- received on 2024-01-17
 
 Pacratt (+1 MS) (+0 SR)
-- Corp'rethar Ceremonial Crown (277) (MS) -- received on **2024-01-17**
+- Corp'rethar Ceremonial Crown (277) (MS) -- received on 2024-01-17
 
 Snedpie (+1 MS) (+0 SR)
-- Nightmare Ender (264) (MS) -- received on **2024-01-17**
+- Nightmare Ender (264) (MS) -- received on 2024-01-17
 
 Soulreaverr (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-01-17**
-- Rotface's Acidic Blood (ETC) -- received on **2024-01-17**
-- Festergut's Acidic Blood (ETC) -- received on **2024-01-17**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-01-17
+- Rotface's Acidic Blood (ETC) -- received on 2024-01-17
+- Festergut's Acidic Blood (ETC) -- received on 2024-01-17
 
 Swiftbladess (+1 MS) (+0 SR)
-- Scourgeborne Waraxe (277) (MS) -- received on **2024-01-17**
-- Cultist's Bloodsoaked Spaulders (264) (OS) -- received on **2024-01-17**
-- Bloodvenom Blade (264) (OS) -- received on **2024-01-17**
+- Scourgeborne Waraxe (277) (MS) -- received on 2024-01-17
+- Cultist's Bloodsoaked Spaulders (264) (OS) -- received on 2024-01-17
+- Bloodvenom Blade (264) (OS) -- received on 2024-01-17
+
+Abletu (+0 MS) (+0 SR)
+- Sanctified Lasherweave Legplates (264) (OS) -- received on **2024-01-21**
+
+Miatotems (+0 MS) (+0 SR)
+- Wrathful Gladiator's Mail Leggings (270) (OS) -- received on **2024-01-21**
 
 _disenchanted
 - Nibelung
 - Rib Spreader
 - Lungbreaker
+- Sanctified Frost Witch's Kilt

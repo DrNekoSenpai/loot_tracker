@@ -1,4 +1,4 @@
-Abletu: 7 items.
+Abletu: 8 items.
 
 Neck:
   \- [Amulet of the Silent Eulogy (277)](<https://www.wowhead.com/wotlk/item=50005>) (SR) (2023-10-25)
@@ -8,6 +8,9 @@ Hands:
   \- [Wrathful Gladiator's Kodohide Gloves (270)](<https://www.wowhead.com/wotlk/item=51420>) (OS) (2023-11-01)
   \- [Sanctified Lasherweave Gauntlets (264)](<https://www.wowhead.com/wotlk/item=51138>) (OS) (2023-11-08)
   \- [Sanctified Lasherweave Gloves (264)](<https://www.wowhead.com/wotlk/item=51148>) (MS) (2023-11-15)
+
+Legs:
+  \- [Sanctified Lasherweave Legplates (264)](<https://www.wowhead.com/wotlk/item=51136>) (OS) (2024-01-21)
 
 Feet:
   \- [Boots of Unnatural Growth (277)](<https://www.wowhead.com/wotlk/item=50009>) (MS) (2023-11-15)
@@ -341,7 +344,7 @@ Mettybeans: 1 items.
 Off-Hand:
   \- [Bulwark of Smouldering Steel (264)](<https://www.wowhead.com/wotlk/item=49976>) (SR) (2023-10-25)
 ----------------------------------------
-Miatotems: 11 items.
+Miatotems: 12 items.
 
 Head:
   \- [Snowserpent Mail Helm (264)](<https://www.wowhead.com/wotlk/item=49952>) (OS) (2023-12-13)
@@ -361,6 +364,7 @@ Waist:
 Legs:
   \- [Sanctified Frost Witch's Legguards (264)](<https://www.wowhead.com/wotlk/item=51193>) (MS) (2023-11-15)
   \- [Leggings of Northern Lights (264)](<https://www.wowhead.com/wotlk/item=49988>) (OS) (2024-01-03)
+  \- [Wrathful Gladiator's Mail Leggings (270)](<https://www.wowhead.com/wotlk/item=51512>) (OS) (2024-01-21)
 
 Feet:
   \- [Necrophotic Greaves (264)](<https://www.wowhead.com/wotlk/item=49993>) (SR) (2023-11-15)
@@ -575,7 +579,7 @@ Wamili: 1 items.
 Two-Hand:
   \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (MS) (2023-11-12)
 ----------------------------------------
-_disenchanted: 15 items.
+_disenchanted: 16 items.
 
 Shoulder:
   \- [Rusted Bonespike Pauldrons (264)](<https://www.wowhead.com/wotlk/item=49980>) (2023-12-06)
@@ -598,6 +602,7 @@ Waist:
 Legs:
   \- [Sanctified Shadowblade Legplates (264)](<https://www.wowhead.com/wotlk/item=51186>) (2023-12-06)
   \- [Leggings of Dubious Charms (264)](<https://www.wowhead.com/wotlk/item=50450>) (2024-01-17)
+  \- [Sanctified Frost Witch's Kilt (264)](<https://www.wowhead.com/wotlk/item=51203>) (2024-01-21)
 
 Main-Hand:
   \- [Lungbreaker (264)](<https://www.wowhead.com/wotlk/item=50183>) (2024-01-17)

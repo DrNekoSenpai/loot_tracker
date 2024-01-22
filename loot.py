@@ -460,6 +460,8 @@ def award_loot(players):
             # Find all of the people who have this item in their history, as well as how many they have. 
             received = []
             for player in players: 
+                # Check if this player is present. If not, continue. 
+                if player._attendance == False: continue
                 count = 0
                 for log in player._history["ETC"]: 
                     if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
