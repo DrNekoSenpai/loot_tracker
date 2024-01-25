@@ -871,9 +871,14 @@ def export_loot():
 
             for l in p._raid_log:
                 if l.roll == "SR":
-                    f.write(f"- {l.item.name} (SR) -- received on")
-                    date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
-                    f.write(f" {date_string}\n")
+                    if "Mark of Sanctification" in l.item.name: 
+                        f.write(f"- {l.item.name} (SR) -- received on")
+                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                        f.write(f" {date_string}\n")
+                    else:
+                        f.write(f"- {l.item.name} ({l.item.ilvl}) (SR) -- received on")
+                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                        f.write(f" {date_string}\n")
 
             for l in p._raid_log:
                 if l.roll == "MS":
@@ -1304,6 +1309,7 @@ def sudo_mode(players, raiding):
 
                 if winner == "SÃµÃ§kÃ¶": winner = "Socko"
                 if winner == "FlambeaÃ¼": winner = "Flambeau"
+                if winner == "KillÃ¤din": winner = "Killadin"
 
                 if ilvl <= 263 and not item_name in exceptions: continue
 
