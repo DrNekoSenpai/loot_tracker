@@ -1,4 +1,4 @@
-Abletu: 9 items.
+Abletu: 10 items.
 
 Neck:
   \- [Amulet of the Silent Eulogy (277)](<https://www.wowhead.com/wotlk/item=50005>) (SR) (2023-10-25)
@@ -11,6 +11,7 @@ Hands:
 
 Legs:
   \- [Sanctified Lasherweave Legplates (264)](<https://www.wowhead.com/wotlk/item=51136>) (MS) (2024-01-21)
+  \- [Sanctified Lasherweave Trousers (264)](<https://www.wowhead.com/wotlk/item=51146>) (MS) (2024-01-28)
 
 Feet:
   \- [Boots of Unnatural Growth (277)](<https://www.wowhead.com/wotlk/item=50009>) (MS) (2023-11-15)
@@ -50,7 +51,27 @@ Main-Hand:
   \- [Bloodvenom Blade (264)](<https://www.wowhead.com/wotlk/item=50412>) (SR) (2023-11-12)
   \- [Bloodvenom Blade (264)](<https://www.wowhead.com/wotlk/item=50412>) (SR) (2023-12-06)
 ----------------------------------------
-Beesty: 3 items.
+Axsel: 6 items.
+
+ETC:
+  \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2023-12-06)
+
+Neck:
+  \- [Amulet of the Silent Eulogy (264)](<https://www.wowhead.com/wotlk/item=50005>) (SR) (2023-10-18)
+
+Waist:
+  \- [Crushing Coldwraith Belt (264)](<https://www.wowhead.com/wotlk/item=49978>) (MS) (2023-12-13)
+
+Ring:
+  \- [Ring of Rapid Ascent (277)](<https://www.wowhead.com/wotlk/item=50008>) (SR) (2023-11-12)
+
+Trinket:
+  \- [Dislodged Foreign Object (264)](<https://www.wowhead.com/wotlk/item=50353>) (SR) (2024-01-17)
+
+Two-Hand:
+  \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (MS) (2023-11-01)
+----------------------------------------
+Beasty: 3 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-01-24)
@@ -68,6 +89,19 @@ Waist:
 
 Legs:
   \- [Leggings of Northern Lights (264)](<https://www.wowhead.com/wotlk/item=49988>) (MS) (2024-01-24)
+----------------------------------------
+Bunniful: 1 items.
+
+Ring:
+  \- [Loop of the Endless Labyrinth (264)](<https://www.wowhead.com/wotlk/item=49977>) (SR) (2023-10-15)
+----------------------------------------
+Bzorder: 2 items.
+
+ETC:
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-25)
+
+Feet:
+  \- [Boots of Unnatural Growth (277)](<https://www.wowhead.com/wotlk/item=50009>) (MS) (2023-11-01)
 ----------------------------------------
 Catreene: 8 items.
 
@@ -201,6 +235,14 @@ Trinket:
 Ranged:
   \- [Corpse-Impaling Spike (264)](<https://www.wowhead.com/wotlk/item=50033>) (SR) (2023-12-17)
 ----------------------------------------
+Jwizard: 2 items.
+
+Neck:
+  \- [Bone Sentinel's Amulet (264)](<https://www.wowhead.com/wotlk/item=49975>) (SR) (2023-12-13)
+
+Main-Hand:
+  \- [Frozen Bonespike (264)](<https://www.wowhead.com/wotlk/item=49968>) (MS) (2024-01-03)
+----------------------------------------
 Kelorlyn: 6 items.
 
 Neck:
@@ -287,6 +329,11 @@ Chest:
 Legs:
   \- [Sanctified Lightsworn Legplates (264)](<https://www.wowhead.com/wotlk/item=51278>) (MS) (2023-11-08)
 ----------------------------------------
+Medulla: 1 items.
+
+Legs:
+  \- [Legguards of Lost Hope (264)](<https://www.wowhead.com/wotlk/item=49964>) (MS) (2024-01-17)
+----------------------------------------
 Meemeemeemee: 8 items.
 
 ETC:
@@ -306,6 +353,11 @@ Main-Hand:
   \- [Scourgeborne Waraxe (277)](<https://www.wowhead.com/wotlk/item=50411>) (MS) (2023-12-06)
   \- [Rib Spreader (264)](<https://www.wowhead.com/wotlk/item=50016>) (MS) (2023-12-17)
   \- [Black Bruise (264)](<https://www.wowhead.com/wotlk/item=50035>) (SR) (2024-01-17)
+----------------------------------------
+Mettybeans: 1 items.
+
+Off-Hand:
+  \- [Bulwark of Smouldering Steel (264)](<https://www.wowhead.com/wotlk/item=49976>) (SR) (2023-10-25)
 ----------------------------------------
 Miatotems: 14 items.
 
@@ -358,6 +410,15 @@ Ring:
 
 Main-Hand:
   \- [Frozen Bonespike (264)](<https://www.wowhead.com/wotlk/item=49968>) (MS) (2023-11-29)
+----------------------------------------
+Pastiry: 3 items.
+
+Feet:
+  \- [Blood-Soaked Saronite Stompers (264)](<https://www.wowhead.com/wotlk/item=49983>) (SR) (2023-12-06)
+
+Two-Hand:
+  \- [Bryntroll, the Bone Arbiter (264)](<https://www.wowhead.com/wotlk/item=50415>) (SR) (2023-11-01)
+  \- [Bryntroll, the Bone Arbiter (264)](<https://www.wowhead.com/wotlk/item=50415>) (SR) (2023-12-06)
 ----------------------------------------
 Prunejuuce: 7 items.
 
@@ -420,6 +481,14 @@ Ring:
 
 Ranged:
   \- [Nightmare Ender (264)](<https://www.wowhead.com/wotlk/item=50472>) (MS) (2024-01-17)
+----------------------------------------
+Socko: 2 items.
+
+ETC:
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-01)
+
+Main-Hand:
+  \- [Scourgeborne Waraxe (277)](<https://www.wowhead.com/wotlk/item=50411>) (MS) (2023-11-15)
 ----------------------------------------
 Soulreaverr: 9 items.
 
@@ -533,7 +602,7 @@ Main-Hand:
 Two-Hand:
   \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (OS) (2023-12-06)
 ----------------------------------------
-_disenchanted: 18 items.
+_disenchanted: 20 items.
 
 Shoulder:
   \- [Rusted Bonespike Pauldrons (264)](<https://www.wowhead.com/wotlk/item=49980>) (2023-12-06)
@@ -560,6 +629,10 @@ Legs:
   \- [Sanctified Shadowblade Legplates (264)](<https://www.wowhead.com/wotlk/item=51186>) (2023-12-06)
   \- [Leggings of Dubious Charms (264)](<https://www.wowhead.com/wotlk/item=50450>) (2024-01-17)
   \- [Sanctified Frost Witch's Kilt (264)](<https://www.wowhead.com/wotlk/item=51203>) (2024-01-21)
+  \- [Sanctified Frost Witch's Legguards (264)](<https://www.wowhead.com/wotlk/item=51193>) (2024-01-28)
+
+Feet:
+  \- [Wrathful Gladiator's Boots of Triumph (264)](<https://www.wowhead.com/wotlk/item=51369>) (2024-01-28)
 
 Main-Hand:
   \- [Lungbreaker (264)](<https://www.wowhead.com/wotlk/item=50183>) (2024-01-17)
@@ -576,7 +649,9 @@ Ranged:
 Number of tokens received:
 
 \- Artaz: 1 Normal
-\- Beesty: 1 Normal
+\- Axsel: 1 Normal
+\- Beasty: 1 Normal
+\- Bzorder: 1 Normal
 \- Catreene: 2 Normal
 \- Darkfern: 2 Normal
 \- Elisesolis: 1 Normal
@@ -587,6 +662,7 @@ Number of tokens received:
 \- Miatotems: 1 Normal
 \- Pacratt: 1 Normal
 \- Prunejuuce: 2 Normal
+\- Socko: 1 Normal
 \- Soulreaverr: 2 Normal
 \- Strixien: 1 Normal
 \- Tinyraider: 1 Normal

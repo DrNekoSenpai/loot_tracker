@@ -1,57 +1,61 @@
-Loot log for **Wednesday, 2024-01-24**:
+Loot log for Wednesday, 2024-01-24 and **Sunday, 2024-01-28**:
 
 Bigpapapaul (+2 MS) (+1 SR)
-- Nerub'ar Stalker's Cord (264) (SR) -- received on **2024-01-24**
-- Leggings of Northern Lights (264) (MS) -- received on **2024-01-24**
+- Nerub'ar Stalker's Cord (264) (SR) -- received on 2024-01-24
+- Leggings of Northern Lights (264) (MS) -- received on 2024-01-24
 
 Miatotems (+2 MS) (+1 SR)
-- Trauma (264) (SR) -- received on **2024-01-24**
-- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-01-24**
+- Trauma (264) (SR) -- received on 2024-01-24
+- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-01-24
 
 Elisesolis (+1 MS) (+1 SR)
-- Juggernaut Band (264) (SR) -- received on **2024-01-24**
+- Juggernaut Band (264) (SR) -- received on 2024-01-24
 
 Gnoya (+1 MS) (+1 SR)
-- Marrowgar's Frigid Eye (264) (SR) -- received on **2024-01-24**
+- Marrowgar's Frigid Eye (264) (SR) -- received on 2024-01-24
 
 Kelorlyn (+1 MS) (+1 SR)
-- Aldriana's Gloves of Secrecy (264) (SR) -- received on **2024-01-24**
+- Aldriana's Gloves of Secrecy (264) (SR) -- received on 2024-01-24
 
 Strixien (+1 MS) (+1 SR)
-- Althor's Abacus (277) (SR) -- received on **2024-01-24**
+- Althor's Abacus (277) (SR) -- received on 2024-01-24
+
+Abletu (+2 MS) (+0 SR)
+- Loop of the Endless Labyrinth (264) (MS) -- received on 2024-01-24
+- Sanctified Lasherweave Trousers (264) (MS) -- received on **2024-01-28**
 
 Darkfern (+2 MS) (+0 SR)
-- Coldwraith Links (264) (MS) -- received on **2024-01-24**
-- Skeleton Lord's Circle (277) (MS) -- received on **2024-01-24**
+- Coldwraith Links (264) (MS) -- received on 2024-01-24
+- Skeleton Lord's Circle (277) (MS) -- received on 2024-01-24
 
-Abletu (+1 MS) (+0 SR)
-- Loop of the Endless Labyrinth (264) (MS) -- received on **2024-01-24**
-
-Beesty (+1 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-01-24**
+Beasty (+1 MS) (+0 SR)
+- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-01-24
 
 Ferrousblade (+1 MS) (+0 SR)
-- Bile-Encrusted Medallion (264) (MS) -- received on **2024-01-24**
+- Bile-Encrusted Medallion (264) (MS) -- received on 2024-01-24
 
 Gnoraa (+1 MS) (+0 SR)
-- Robe of the Waking Nightmare (264) (MS) -- received on **2024-01-24**
+- Robe of the Waking Nightmare (264) (MS) -- received on 2024-01-24
 
 Sighanama (+1 MS) (+0 SR)
-- Distant Land (264) (MS) -- received on **2024-01-24**
+- Distant Land (264) (MS) -- received on 2024-01-24
 
 Snedpie (+1 MS) (+0 SR)
-- Holiday's Grace (264) (MS) -- received on **2024-01-24**
+- Holiday's Grace (264) (MS) -- received on 2024-01-24
 
 Tinyraider (+1 MS) (+0 SR)
-- Amulet of the Silent Eulogy (277) (MS) -- received on **2024-01-24**
+- Amulet of the Silent Eulogy (277) (MS) -- received on 2024-01-24
 
 Artaz (+0 MS) (+0 SR)
-- Shadowfrost Shard (ETC) -- received on **2024-01-24**
-- Shadowfrost Shard (ETC) -- received on **2024-01-24**
-- Shadowfrost Shard (ETC) -- received on **2024-01-24**
-- Shadowfrost Shard (ETC) -- received on **2024-01-24**
-- Shadowfrost Shard (ETC) -- received on **2024-01-24**
-- Shadowfrost Shard (ETC) -- received on **2024-01-24**
+- Shadowfrost Shard (ETC) -- received on 2024-01-24
+- Shadowfrost Shard (ETC) -- received on 2024-01-24
+- Shadowfrost Shard (ETC) -- received on 2024-01-24
+- Shadowfrost Shard (ETC) -- received on 2024-01-24
+- Shadowfrost Shard (ETC) -- received on 2024-01-24
+- Shadowfrost Shard (ETC) -- received on 2024-01-24
 
 _disenchanted
+- Bloodvenom Blade
 - Deathwhisper Raiment
+- Sanctified Frost Witch's Legguards
+- Wrathful Gladiator's Boots of Triumph

@@ -247,6 +247,7 @@ def import_softreserve(players):
 
         if name == "Swiftblades": name = "Swiftbladess"
         if name == "SÃµÃ§kÃ¶": name = "Socko"
+        if name == "BeÃ¡sty": name = "Beasty"
         
         # Check if the player's name can be typed using the English keyboard. 
         if not regular_keyboard(name):
@@ -661,6 +662,7 @@ def mark_attendance(players):
 
     for new_player in new_players: 
         if new_player == "KillÃ¤din": new_player = "Killadin"
+        if new_player == "BeÃ¡sty": new_player = "Beasty"
         
         if not regular_keyboard(new_player):
             print(f"Player name {new_player} is not valid. Please input the name manually.")
@@ -1310,6 +1312,7 @@ def sudo_mode(players, raiding):
                 if winner == "SÃµÃ§kÃ¶": winner = "Socko"
                 if winner == "FlambeaÃ¼": winner = "Flambeau"
                 if winner == "KillÃ¤din": winner = "Killadin"
+                if winner == "BeÃ¡sty": winner = "Beasty"
 
                 if ilvl <= 263 and not item_name in exceptions: continue
 

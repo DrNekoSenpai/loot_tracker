@@ -230,7 +230,7 @@
 50025;Seal of Many Mouths;264;0;0;Meemeemeemee;2024-01-03
 50030;Bloodsunder's Bracers;264;1;0;Catreene;2024-01-03
 52027;Conqueror's Mark of Sanctification;80;0;0;Catreene;2024-01-03
-50034;Zod's Repeating Longbow;264;0;0;Beesty;2024-01-03
+50034;Zod's Repeating Longbow;264;0;0;Beásty;2024-01-03
 50415;Bryntroll, the Bone Arbiter;264;0;1;Elisesolis;2024-01-03
 49980;Rusted Bonespike Pauldrons;264;0;0;_disenchanted;2024-01-03
 50453;Ring of Rotting Sinew;264;0;0;Kelorlyn;2024-01-03
@@ -255,7 +255,7 @@
 49992;Nibelung;264;0;0;_disenchanted;2024-01-17
 50016;Rib Spreader;264;0;0;_disenchanted;2024-01-17
 50061;Holiday's Grace;264;0;0;Catreene;2024-01-17
-50452;Wodin's Lucky Necklace;264;0;0;Beesty;2024-01-17
+50452;Wodin's Lucky Necklace;264;0;0;Beásty;2024-01-17
 49987;Cultist's Bloodsoaked Spaulders;264;0;1;Swiftbladess;2024-01-17
 50035;Black Bruise;264;1;0;Meemeemeemee;2024-01-17
 50472;Nightmare Ender;264;0;0;Snedpie;2024-01-17
@@ -297,7 +297,7 @@
 50418;Robe of the Waking Nightmare;264;0;0;Gnoraa;2024-01-24
 50187;Coldwraith Links;264;0;0;Darkfern;2024-01-24
 50023;Bile-Encrusted Medallion;264;0;0;Ferrousblade;2024-01-24
-52026;Protector's Mark of Sanctification;80;0;0;Beesty;2024-01-24
+52026;Protector's Mark of Sanctification;80;0;0;Beásty;2024-01-24
 52026;Protector's Mark of Sanctification;80;0;0;Miatotems;2024-01-24
 50412;Bloodvenom Blade;264;0;0;_disenchanted;2024-01-24
 50657;Skeleton Lord's Circle;277;0;0;Darkfern;2024-01-24
