@@ -1,61 +1,63 @@
-Loot log for Wednesday, 2024-01-24 and **Sunday, 2024-01-28**:
+Loot log for **Wednesday, 2024-01-31**:
 
-Bigpapapaul (+2 MS) (+1 SR)
-- Nerub'ar Stalker's Cord (264) (SR) -- received on 2024-01-24
-- Leggings of Northern Lights (264) (MS) -- received on 2024-01-24
+Pastiry (+3 MS) (+1 SR)
+- Bryntroll, the Bone Arbiter (277) (SR) -- received on **2024-01-31**
+- Ring of Rotting Sinew (264) (MS) -- received on **2024-01-31**
+- Raging Behemoth's Shoulderplates (264) (MS) -- received on **2024-01-31**
 
-Miatotems (+2 MS) (+1 SR)
-- Trauma (264) (SR) -- received on 2024-01-24
-- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-01-24
+Abletu (+2 MS) (+1 SR)
+- Frozen Bonespike (277) (SR) -- received on **2024-01-31**
+- Professor's Bloodied Smock (264) (MS) -- received on **2024-01-31**
+
+Bzorder (+2 MS) (+1 SR)
+- Crushing Coldwraith Belt (277) (SR) -- received on **2024-01-31**
+- Leather of Stitched Scourge Parts (264) (MS) -- received on **2024-01-31**
+
+Lorniras (+2 MS) (+1 SR)
+- Shoulders of Mercy Killing (264) (SR) -- received on **2024-01-31**
+- Holiday's Grace (264) (MS) -- received on **2024-01-31**
 
 Elisesolis (+1 MS) (+1 SR)
-- Juggernaut Band (264) (SR) -- received on 2024-01-24
+- Broken Ram Skull Helm (264) (SR) -- received on **2024-01-31**
+- Rotface's Acidic Blood (ETC) -- received on **2024-01-31**
 
-Gnoya (+1 MS) (+1 SR)
-- Marrowgar's Frigid Eye (264) (SR) -- received on 2024-01-24
+Ferrousblade (+1 MS) (+1 SR)
+- Skeleton Lord's Circle (277) (SR) -- received on **2024-01-31**
 
-Kelorlyn (+1 MS) (+1 SR)
-- Aldriana's Gloves of Secrecy (264) (SR) -- received on 2024-01-24
+Killiandra (+1 MS) (+1 SR)
+- Ring of Rapid Ascent (277) (SR) -- received on **2024-01-31**
 
 Strixien (+1 MS) (+1 SR)
-- Althor's Abacus (277) (SR) -- received on 2024-01-24
+- Greatcloak of the Turned Champion (264) (SR) -- received on **2024-01-31**
 
-Abletu (+2 MS) (+0 SR)
-- Loop of the Endless Labyrinth (264) (MS) -- received on 2024-01-24
-- Sanctified Lasherweave Trousers (264) (MS) -- received on **2024-01-28**
+Medulla (+2 MS) (+0 SR)
+- Boneguard Commander's Pauldrons (277) (MS) -- received on **2024-01-31**
+- Bile-Encrusted Medallion (264) (MS) -- received on **2024-01-31**
 
-Darkfern (+2 MS) (+0 SR)
-- Coldwraith Links (264) (MS) -- received on 2024-01-24
-- Skeleton Lord's Circle (277) (MS) -- received on 2024-01-24
+Artaz (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-01-31**
+- Shadowfrost Shard (ETC) -- received on **2024-01-31**
+- Shadowfrost Shard (ETC) -- received on **2024-01-31**
+- Shadowfrost Shard (ETC) -- received on **2024-01-31**
+- Shadowfrost Shard (ETC) -- received on **2024-01-31**
+- Shadowfrost Shard (ETC) -- received on **2024-01-31**
+- Shadowfrost Shard (ETC) -- received on **2024-01-31**
 
-Beasty (+1 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-01-24
+Gnoya (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-01-31**
 
-Ferrousblade (+1 MS) (+0 SR)
-- Bile-Encrusted Medallion (264) (MS) -- received on 2024-01-24
+Lilypalooza (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-01-31**
 
-Gnoraa (+1 MS) (+0 SR)
-- Robe of the Waking Nightmare (264) (MS) -- received on 2024-01-24
+Meemeemeemee (+1 MS) (+0 SR)
+- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-01-31**
 
-Sighanama (+1 MS) (+0 SR)
-- Distant Land (264) (MS) -- received on 2024-01-24
+Miatotems (+1 MS) (+0 SR)
+- Bloodsunder's Bracers (264) (MS) -- received on **2024-01-31**
+- Carapace of Forgotten Kings (264) (OS) -- received on **2024-01-31**
 
-Snedpie (+1 MS) (+0 SR)
-- Holiday's Grace (264) (MS) -- received on 2024-01-24
-
-Tinyraider (+1 MS) (+0 SR)
-- Amulet of the Silent Eulogy (277) (MS) -- received on 2024-01-24
-
-Artaz (+0 MS) (+0 SR)
-- Shadowfrost Shard (ETC) -- received on 2024-01-24
-- Shadowfrost Shard (ETC) -- received on 2024-01-24
-- Shadowfrost Shard (ETC) -- received on 2024-01-24
-- Shadowfrost Shard (ETC) -- received on 2024-01-24
-- Shadowfrost Shard (ETC) -- received on 2024-01-24
-- Shadowfrost Shard (ETC) -- received on 2024-01-24
+Prunejuuce (+0 MS) (+0 SR)
+- Festergut's Acidic Blood (ETC) -- received on **2024-01-31**
 
 _disenchanted
-- Bloodvenom Blade
-- Deathwhisper Raiment
-- Sanctified Frost Witch's Legguards
-- Wrathful Gladiator's Boots of Triumph
+- Necrophotic Greaves

@@ -247,6 +247,8 @@ def import_softreserve(players):
 
         if name == "Swiftblades": name = "Swiftbladess"
         if name == "SÃµÃ§kÃ¶": name = "Socko"
+        if name == "FlambeaÃ¼": name = "Flambeau"
+        if name == "KillÃ¤din": name = "Killadin"
         if name == "BeÃ¡sty": name = "Beasty"
         
         # Check if the player's name can be typed using the English keyboard. 
@@ -660,7 +662,10 @@ def mark_attendance(players):
             name = re.search(r"\d. (.*) \.* \d.*", val).group(1)
             new_players.append(name)
 
-    for new_player in new_players: 
+    for new_player in new_players:
+        if new_player == "Swiftblades": new_player = "Swiftbladess"
+        if new_player == "SÃµÃ§kÃ¶": new_player = "Socko"
+        if new_player == "FlambeaÃ¼": new_player = "Flambeau"
         if new_player == "KillÃ¤din": new_player = "Killadin"
         if new_player == "BeÃ¡sty": new_player = "Beasty"
         
@@ -1309,6 +1314,7 @@ def sudo_mode(players, raiding):
                 winner = line[5]
                 date = line[6]
 
+                if winner == "Swiftblades": winner = "Swiftbladess"
                 if winner == "SÃµÃ§kÃ¶": winner = "Socko"
                 if winner == "FlambeaÃ¼": winner = "Flambeau"
                 if winner == "KillÃ¤din": winner = "Killadin"
@@ -1349,8 +1355,9 @@ def sudo_mode(players, raiding):
                     roll_type = "SR" if reserved else "OS" if offspec else "MS"
                     
                 if player is None: 
-                    print(f"Could not find player {winner}.")
-                    continue
+                    print(f"Could not find player {winner}. Creating a new player.")
+                    players.append(Player(winner, []))
+                    player = players[-1]
 
                 player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date))
                 print(f"Added {item.name} ({item.ilvl}) [{roll_type}] to {player.name}'s history.")
@@ -1426,6 +1433,10 @@ def export_chat(players):
     pyautogui.press("enter")
     time.sleep(0.25)
 
+def paste_history(): 
+    print("ERROR: Not yet implemented.")
+    return
+
 while(True): 
     export_pickle(players)
     
@@ -1434,12 +1445,13 @@ while(True):
     print("1) Award loot")
     print("2) Import soft-reserve")
     print("3) Mark attendance")
-    print("4) Export the loot history to a file")
-    print("5) Export THIS RAID's loot to a file")
-    print("6) Remove loot, or weekly reset")
-    print("7) Export plusses in Gargul style")
-    print("8) Export plusses to be pasted into chat")
-    print(f"9) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
+    print("4) Export THIS RAID's loot to a file")
+    print("5) Export the loot history to a file")
+    print("6) Paste history into #lootlist channel -- in progress")
+    print("7) Remove loot, or weekly reset")
+    print("8) Export plusses in Gargul style")
+    print("9) Export plusses to be pasted into chat")
+    print(f"10) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
 
     print("")
 
@@ -1449,9 +1461,10 @@ while(True):
     if sel == 1: players = award_loot(players)
     elif sel == 2: players = import_softreserve(players)
     elif sel == 3: players = mark_attendance(players)
-    elif sel == 4: export_history()
-    elif sel == 5: export_loot()
-    elif sel == 6: 
+    elif sel == 4: export_loot()
+    elif sel == 5: export_history()
+    elif sel == 6: paste_history()
+    elif sel == 7: 
         print("Choose an option: ")
         print("a) Remove one piece of loot from a player")
         print("b) Weekly reset (clear plusses and raid logs, but not history)")
@@ -1460,7 +1473,7 @@ while(True):
         if sel == "a": remove_loot(players)
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
-    elif sel == 7: export_gargul(players)
-    elif sel == 8: export_chat(players)
-    elif sel == 9: players, raiding = sudo_mode(players, raiding)
+    elif sel == 8: export_gargul(players)
+    elif sel == 9: export_chat(players)
+    elif sel == 10: players, raiding = sudo_mode(players, raiding)
     else: break
