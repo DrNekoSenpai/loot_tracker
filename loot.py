@@ -647,6 +647,8 @@ def award_loot(players):
     return players
 
 def mark_attendance(players):
+    num_present = 0
+
     for p in players: 
         p._attendance = False
 
@@ -658,6 +660,7 @@ def mark_attendance(players):
 
     for ind,val in enumerate(lines):
         if ind == 0: continue
+        elif val.beginswith("Details!"): continue
         else: 
             name = re.search(r"\d. (.*) \.* \d.*", val).group(1)
             new_players.append(name)
@@ -690,6 +693,7 @@ def mark_attendance(players):
         # Find the player in the list of players, and change their _attendance to True. 
         for p in players:
             if p.name == new_player:
+                if not p._attendance: num_present += 1
                 p._attendance = True
                 print(f"HERE: {p.name}")
                 break
@@ -698,6 +702,8 @@ def mark_attendance(players):
     for p in players: 
         if p._attendance == False and not p.name == "_disenchanted": 
             print(f"ABSENT: {p.name}")
+
+    print(f"\n{num_present} players present.")
 
     print("")
     return players
@@ -821,6 +827,17 @@ def export_history():
                 file.write(f"\- {p.name}: {normal_tokens} Normal")
                 if heroic_tokens == 0: file.write("\n")
                 else: file.write(f", {heroic_tokens} Heroic\n")
+
+        file.write("----------------------------------------\n")
+        file.write("Number of Shadowfrost Shards received:\n\n")
+        for p in players: 
+            shards = 0
+            for l in p._history["ETC"]:
+                if l.item.name == "Shadowfrost Shard":
+                    shards += 1
+            if shards == 0: continue 
+            else: 
+                file.write(f"\- {p.name}: {shards}\n")
 
 def export_loot(): 
     """
@@ -1345,7 +1362,7 @@ def sudo_mode(players, raiding):
                         item = i
                         break
                 
-                if item_id == 50274: 
+                if item_id in [50274, 50231, 50226]: 
                     roll_type = "ETC"
 
                 elif "Wrathful Gladiator's" in item_name: 
@@ -1387,7 +1404,7 @@ def sudo_mode(players, raiding):
             print("Exiting sudo mode.")
             return players, raiding
 
-def export_gargul(players): 
+def export_gargul(players):
     with open("plusses.txt", "w") as file: 
         for p in players: 
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
@@ -1434,8 +1451,43 @@ def export_chat(players):
     time.sleep(0.25)
 
 def paste_history(): 
-    print("ERROR: Not yet implemented.")
-    return
+    # Delete all files in "./history"
+    for file in os.listdir("./history"):
+        os.remove(f"./history/{file}")
+        
+    with open("history.txt", "r") as file: 
+        lines = file.read()
+
+    # Split by "----------------------------------------" without removing the line of dashes. 
+    lines = lines.split("----------------------------------------\n")
+    for i in range(len(lines)):
+        lines[i] += "----------------------------------------\n"
+
+    receivers = []
+    paste = ""
+    total_length = 0
+    index = 0
+
+    for line in lines: 
+        receiver = line.split("\n")[0]
+
+        if len(line) + total_length < 3900: 
+            receivers.append(receiver)
+            paste += line
+            total_length += len(line)
+        
+        else: 
+            with open(f"./history/paste_{index}.txt", "w") as file:
+                file.write(paste)
+                index += 1
+            print(f"{total_length}, {'; '.join(receivers)}")
+            receivers = [receiver]
+            paste = line
+            total_length = len(line)
+    
+    print(f"{total_length}, {'; '.join(receivers)}")
+    with open(f"./history/paste_{index}.txt", "w") as file:
+        file.write(paste)
 
 while(True): 
     export_pickle(players)
@@ -1447,7 +1499,7 @@ while(True):
     print("3) Mark attendance")
     print("4) Export THIS RAID's loot to a file")
     print("5) Export the loot history to a file")
-    print("6) Paste history into #lootlist channel -- in progress")
+    print("6) Split up history into paste-sized chunks")
     print("7) Remove loot, or weekly reset")
     print("8) Export plusses in Gargul style")
     print("9) Export plusses to be pasted into chat")

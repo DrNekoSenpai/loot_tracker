@@ -1,0 +1,44 @@
+@ID;@ITEM;@ILVL;@SR;@OS;@WINNER;@YEAR-@MONTH-@DAY
+50038;Carapace of Forgotten Kings;264;0;1;Miatotems;2024-01-31
+52026;Protector's Mark of Sanctification;80;0;0;Meemeemeemee;2024-01-31
+50069;Professor's Bloodied Smock;264;0;0;Abletu;2024-01-31
+50613;Crushing Coldwraith Belt;277;1;0;Bzorder;2024-01-31
+50657;Skeleton Lord's Circle;277;1;0;Ferrousblade;2024-01-31
+50453;Ring of Rotting Sinew;264;0;0;Pastiry;2024-01-31
+52025;Vanquisher's Mark of Sanctification;80;0;0;Artaz;2024-01-31
+50709;Bryntroll, the Bone Arbiter;277;1;0;Pastiry;2024-01-31
+50030;Bloodsunder's Bracers;264;0;0;Miatotems;2024-01-31
+50041;Leather of Stitched Scourge Parts;264;0;0;Bzorder;2024-01-31
+49991;Shoulders of Mercy Killing;264;1;0;Lorniras;2024-01-31
+50020;Raging Behemoth's Shoulderplates;264;0;0;Pastiry;2024-01-31
+50061;Holiday's Grace;264;0;0;Lorniras;2024-01-31
+52027;Conqueror's Mark of Sanctification;80;0;0;Gnoya;2024-01-31
+52027;Conqueror's Mark of Sanctification;80;0;0;Lilypalooza;2024-01-31
+50014;Greatcloak of the Turned Champion;264;1;0;Strixien;2024-01-31
+50608;Frozen Bonespike;277;1;0;Abletu;2024-01-31
+49993;Necrophotic Greaves;264;0;0;_disenchanted;2024-01-31
+50664;Ring of Rapid Ascent;277;1;0;Killiandra;2024-01-31
+50660;Boneguard Commander's Pauldrons;277;0;0;Medulla;2024-01-31
+50023;Bile-Encrusted Medallion;264;0;0;Medulla;2024-01-31
+49986;Broken Ram Skull Helm;264;1;0;Elisesolis;2024-01-31
+50274;Shadowfrost Shard;0;0;0;Artaz;2024-01-31
+50274;Shadowfrost Shard;0;0;0;Artaz;2024-01-31
+50274;Shadowfrost Shard;0;0;0;Artaz;2024-01-31
+50274;Shadowfrost Shard;0;0;0;Artaz;2024-01-31
+50274;Shadowfrost Shard;0;0;0;Artaz;2024-01-31
+50274;Shadowfrost Shard;0;0;0;Artaz;2024-01-31
+51414;Wrathful Gladiator's Dreadplate Gauntlets;270;0;1;Ferrousblade;2024-02-04
+50186;Frostbrood Sapphire Ring;264;1;0;Bigpapapaul;2024-02-04
+50177;Mail of Crimson Coins;264;0;0;Vangoat;2024-02-04
+50450;Leggings of Dubious Charms;264;0;0;Vangoat;2024-02-04
+52025;Vanquisher's Mark of Sanctification;80;0;0;Swiftbladess;2024-02-04
+50184;Keleseth's Seducer;264;0;0;Bigpapapaul;2024-02-04
+51181;Sanctified Crimson Acolyte Pants;264;0;0;Snedpie;2024-02-04
+50181;Dying Light;264;0;0;Lorniras;2024-02-04
+51217;Sanctified Ymirjar Lord's Handguards;264;0;1;Pastiry;2024-02-04
+50195;Noose of Malachite;264;0;0;Prunejuuce;2024-02-04
+52027;Conqueror's Mark of Sanctification;80;0;0;Gnoraa;2024-02-04
+50172;Sanguine Silk Robes;264;0;0;Gnoya;2024-02-04
+50418;Robe of the Waking Nightmare;264;0;0;Lorniras;2024-02-04
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-04
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-04
