@@ -60,9 +60,10 @@ class Log:
         self.note = note
 
 class Player: 
-    def __init__(self, name:str, reserves:List[str]):
+    def __init__(self, name:str, reserves:List[str], pclass:str):
         self.name = name
         self._reserves = reserves
+        self._player_class = pclass
 
         self._regular_plusses = 0
         self._reserve_plusses = 0
@@ -188,7 +189,7 @@ def import_pickle():
     except FileNotFoundError:
         print('No pickle file found. Creating a new one.')
         players = []
-        players.append(Player("_disenchanted", []))
+        players.append(Player("_disenchanted", [], ""))
 
     return players
 
@@ -205,7 +206,7 @@ else:
 
     # Create a special player called "_disenchanted", for items that were not awarded to anyone.
     # This is used when no one rolls. 
-    players.append(Player("_disenchanted", []))
+    players.append(Player("_disenchanted", [], ""))
 
 if datetime.now().weekday() == 6 and datetime.now().hour >= 16 and datetime.now().hour < 19: raiding = True
 elif datetime.now().weekday() == 2 and datetime.now().hour >= 18 and datetime.now().hour < 20: raiding = True
@@ -270,7 +271,20 @@ def import_softreserve(players):
         
         if not player_exists: 
             # Create a new player object and append it the list. 
-            players.append(Player(name, []))
+
+            pclass = input(f"Could not find player {name}. Creating from scratch. What class are they? ")
+            if pclass.lower() in "death knight": pclass = "Death Knight"
+            elif pclass.lower() in "druid": pclass = "Druid"
+            elif pclass.lower() in "hunter": pclass = "Hunter"
+            elif pclass.lower() in "mage": pclass = "Mage"
+            elif pclass.lower() in "paladin": pclass = "Paladin"
+            elif pclass.lower() in "priest": pclass = "Priest"
+            elif pclass.lower() in "rogue": pclass = "Rogue"
+            elif pclass.lower() in "shaman": pclass = "Shaman"
+            elif pclass.lower() in "warlock": pclass = "Warlock"
+            elif pclass.lower() in "warrior": pclass = "Warrior"
+
+            players.append(Player(name, [], pclass))
             current_player = players[-1]
 
         # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
@@ -688,7 +702,19 @@ def mark_attendance(players):
                 continue
         
         if not found: 
-            players.append(Player(new_player, []))
+            pclass = input(f"Could not find player {name}. Creating from scratch. What class are they? ")
+            if pclass.lower() in "death knight": pclass = "Death Knight"
+            elif pclass.lower() in "druid": pclass = "Druid"
+            elif pclass.lower() in "hunter": pclass = "Hunter"
+            elif pclass.lower() in "mage": pclass = "Mage"
+            elif pclass.lower() in "paladin": pclass = "Paladin"
+            elif pclass.lower() in "priest": pclass = "Priest"
+            elif pclass.lower() in "rogue": pclass = "Rogue"
+            elif pclass.lower() in "shaman": pclass = "Shaman"
+            elif pclass.lower() in "warlock": pclass = "Warlock"
+            elif pclass.lower() in "warrior": pclass = "Warrior"
+
+            players.append(Player(name, [], pclass))
 
         # Find the player in the list of players, and change their _attendance to True. 
         for p in players:
@@ -1101,7 +1127,7 @@ def sudo_mode(players, raiding):
                 os.remove("players.pickle")
 
             players = []
-            players.append(Player("_disenchanted", []))
+            players.append(Player("_disenchanted", [], ""))
 
         elif sel == "b": 
             print("Who are we modifying?")
@@ -1372,8 +1398,19 @@ def sudo_mode(players, raiding):
                     roll_type = "SR" if reserved else "OS" if offspec else "MS"
                     
                 if player is None: 
-                    print(f"Could not find player {winner}. Creating a new player.")
-                    players.append(Player(winner, []))
+                    pclass = input(f"Could not find player {winner}. Creating from scratch. What class are they? ")
+                    if pclass.lower() in "death knight": pclass = "Death Knight"
+                    elif pclass.lower() in "druid": pclass = "Druid"
+                    elif pclass.lower() in "hunter": pclass = "Hunter"
+                    elif pclass.lower() in "mage": pclass = "Mage"
+                    elif pclass.lower() in "paladin": pclass = "Paladin"
+                    elif pclass.lower() in "priest": pclass = "Priest"
+                    elif pclass.lower() in "rogue": pclass = "Rogue"
+                    elif pclass.lower() in "shaman": pclass = "Shaman"
+                    elif pclass.lower() in "warlock": pclass = "Warlock"
+                    elif pclass.lower() in "warrior": pclass = "Warrior"
+
+                    players.append(Player(winner, [], pclass))
                     player = players[-1]
 
                 player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date))
