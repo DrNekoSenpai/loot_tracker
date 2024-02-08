@@ -31,17 +31,23 @@ for ind,item in enumerate(loot):
     if ind == 0: continue 
 
     pattern_1 = re.compile(r"(\S+) \(\+\d+ \w+\) \(\+\d+ \w+\)")
+    pattern_1_dis = re.compile(r"\_disenchanted")
     pattern_2 = re.compile(r"- (.*) \((.*)\) \((.*)\) -- received on [\*\*]{0,2}(\d{4}-\d{2}-\d{2})[\*\*]{0,2}")
     pattern_3 = re.compile(r"- (.*) \((.*)\) -- received on [\*\*]{0,2}(\d{4}-\d{2}-\d{2})[\*\*]{0,2}")
+    pattern_dis = re.compile(r"- (.*)")
 
     if pattern_1.match(item):
         winner = pattern_1.match(item).groups()[0]
+    elif pattern_1_dis.match(item):
+        continue
     elif pattern_2.match(item):
         item, ilvl, roll, date = pattern_2.match(item).groups()
         item_log.append((item, ilvl, roll, date, winner))
     elif pattern_3.match(item):
         item, roll, date = pattern_3.match(item).groups()
         item_log.append((item, "0", roll, date, winner))
+    elif pattern_dis.match(item):
+        continue
 
     else: 
         if not item == "": print(f"ERROR: {item}")
@@ -62,7 +68,7 @@ for ind,line in enumerate(export):
     if winner == "Sõçkö": winner = "Socko"
     if winner == "Flambeaü": winner = "Flambeau"
     if winner == "Killädin": winner = "Killadin"
-    if winner == "BeÃ¡sty": winner = "Beasty"
+    if winner == "Beásty": winner = "Beasty"
 
     if not regular_keyboard(winner):
         print(f"Player name {winner} is not valid. Please input the name manually.")

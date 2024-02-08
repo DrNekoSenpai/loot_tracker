@@ -469,57 +469,117 @@ def award_loot(players):
                 time.sleep(0.25)
 
     elif slot_names[int(item_match.slot)] == "ETC": 
-        if item_match.name == "Shadowfrost Shard": pass
-        elif item_match.name == "Rotface's Acidic Blood": pass
-        elif item_match.name == "Festergut's Acidic Blood": pass
-        
-        else: 
-            # Find all of the people who have this item in their history, as well as how many they have. 
-            received = []
-            for player in players: 
-                # Check if this player is present. If not, continue. 
-                if player._attendance == False: continue
-                count = 0
-                for log in player._history["ETC"]: 
-                    if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
-                        count += 1
-                if count > 0:
-                    received.append((player, count))
+        if "Mark of Sanctification" in item_match.name: 
+            if "Conqueror's Mark of Sanctification" in item_match.name:
+                player_classes = ["Paladin", "Priest", "Warlock"]
+            elif "Protector's Mark of Sanctification" in item_match.name:
+                player_classes = ["Warrior", "Hunter", "Shaman"]
+            elif "Vanquisher's Mark of Sanctification" in item_match.name:
+                player_classes = ["Death Knight", "Druid", "Mage", "Rogue"]
 
-            if len(received) > 0: 
-                print("")
-                print("The following people have already won one or more copies of this item:")
-                for p in received:
-                    print(f"  - {p[0].name} ({p[1]}x)")
+            token_threshold = 2
 
-                if raiding: 
-                    ready = input("Ready to announce? (y/n): ").lower()
-                    if ready == "y": 
-                        pyautogui.hotkey("alt", "tab")
+            eligible_players = []
+            for p in players: 
+                if p._attendance == False: continue
+                if p._player_class in player_classes: 
+                    count = 0
+                    for log in p._history["ETC"]: 
+                        if log.item.name == item_match.name: 
+                            count += 1
+                    if count < token_threshold: 
+                        eligible_players.append((p, count))
+            eligible_players.sort(key=lambda x: (x[1], x[0].name))
 
+            print(f"\nThreshold: {token_threshold} tokens.")
+            print("The following people are eligible to roll on this item:")
+            for p in eligible_players: 
+                print(f"  - {p[0].name} ({p[1]}x)")
+
+            if raiding:
+                ready = input("Ready to announce? (y/n): ").lower()
+                if ready == "y": 
+                    pyautogui.hotkey("alt", "tab")
+
+                    pyautogui.write("/")
+                    time.sleep(0.1)
+                    pyautogui.write("rw")
+                    time.sleep(0.1)
+                    pyautogui.press("space")
+                    time.sleep(0.1)
+                    pyautogui.write(f"Threshold: {token_threshold} tokens.")
+                    time.sleep(0.1)
+                    pyautogui.press("enter")
+
+                    pyautogui.write("/")
+                    time.sleep(0.1)
+                    pyautogui.write("rw")
+                    time.sleep(0.1)
+                    pyautogui.press("space")
+                    time.sleep(0.1)
+                    pyautogui.write(f"The following people are eligible to roll on this item, {item_match.name}:")
+                    time.sleep(0.1)
+                    pyautogui.press("enter")
+                    time.sleep(0.25)
+
+                    for p in eligible_players: 
                         pyautogui.write("/")
                         time.sleep(0.1)
                         pyautogui.write("rw")
                         time.sleep(0.1)
                         pyautogui.press("space")
                         time.sleep(0.1)
-                        pyautogui.write(f"The following people have already won one or more copies of this item, {item_match.name}:")
+                        pyautogui.write(f"{p[0].name} ({p[1]}x)")
                         time.sleep(0.1)
                         pyautogui.press("enter")
                         time.sleep(0.25)
 
-                        for p in received:
-                            pyautogui.write("/")
-                            time.sleep(0.1)
-                            pyautogui.write("rw")
-                            time.sleep(0.1)
-                            pyautogui.press("space")
-                            time.sleep(0.1)
+            # # Find all of the people who have this item in their history, as well as how many they have. 
+            # received = []
+            # for player in players: 
+            #     # Check if this player is present. If not, continue. 
+            #     if player._attendance == False: continue
+            #     count = 0
+            #     for log in player._history["ETC"]: 
+            #         if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
+            #             count += 1
+            #     if count > 0:
+            #         received.append((player, count))
 
-                            pyautogui.write(f"{p[0].name} ({p[1]}x)")
-                            time.sleep(0.1)
-                            pyautogui.press("enter")
-                            time.sleep(0.25)
+            # if len(received) > 0: 
+            #     print("")
+            #     print("The following people have already won one or more copies of this item:")
+            #     for p in received:
+            #         print(f"  - {p[0].name} ({p[1]}x)")
+
+            #     if raiding: 
+            #         ready = input("Ready to announce? (y/n): ").lower()
+            #         if ready == "y": 
+            #             pyautogui.hotkey("alt", "tab")
+
+            #             pyautogui.write("/")
+            #             time.sleep(0.1)
+            #             pyautogui.write("rw")
+            #             time.sleep(0.1)
+            #             pyautogui.press("space")
+            #             time.sleep(0.1)
+            #             pyautogui.write(f"The following people have already won one or more copies of this item, {item_match.name}:")
+            #             time.sleep(0.1)
+            #             pyautogui.press("enter")
+            #             time.sleep(0.25)
+
+            #             for p in received:
+            #                 pyautogui.write("/")
+            #                 time.sleep(0.1)
+            #                 pyautogui.write("rw")
+            #                 time.sleep(0.1)
+            #                 pyautogui.press("space")
+            #                 time.sleep(0.1)
+
+            #                 pyautogui.write(f"{p[0].name} ({p[1]}x)")
+            #                 time.sleep(0.1)
+            #                 pyautogui.press("enter")
+            #                 time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -674,10 +734,10 @@ def mark_attendance(players):
 
     for ind,val in enumerate(lines):
         if ind == 0: continue
-        elif val.beginswith("Details!"): continue
+        elif val.startswith("Details!"): continue
         else: 
             name = re.search(r"\d. (.*) \.* \d.*", val).group(1)
-            new_players.append(name)
+            if name not in new_players: new_players.append(name)
 
     for new_player in new_players:
         if new_player == "Swiftblades": new_player = "Swiftbladess"
@@ -691,18 +751,15 @@ def mark_attendance(players):
             new_player = input("Name: ")
 
         new_player = new_player.title()
-        if len(new_player) > 12: 
-            print(f"ERROR: {new_player} is too long. Please enter a name that is 12 characters or less.")
-            continue
 
         found = False
         for p in players:
             if p.name == new_player:
                 found = True
-                continue
+                break
         
         if not found: 
-            pclass = input(f"Could not find player {name}. Creating from scratch. What class are they? ")
+            pclass = input(f"Could not find player {new_player}. Creating from scratch. What class are they? ")
             if pclass.lower() in "death knight": pclass = "Death Knight"
             elif pclass.lower() in "druid": pclass = "Druid"
             elif pclass.lower() in "hunter": pclass = "Hunter"
@@ -714,7 +771,7 @@ def mark_attendance(players):
             elif pclass.lower() in "warlock": pclass = "Warlock"
             elif pclass.lower() in "warrior": pclass = "Warrior"
 
-            players.append(Player(name, [], pclass))
+            players.append(Player(new_player, [], pclass))
 
         # Find the player in the list of players, and change their _attendance to True. 
         for p in players:
@@ -1398,20 +1455,104 @@ def sudo_mode(players, raiding):
                     roll_type = "SR" if reserved else "OS" if offspec else "MS"
                     
                 if player is None: 
-                    pclass = input(f"Could not find player {winner}. Creating from scratch. What class are they? ")
-                    if pclass.lower() in "death knight": pclass = "Death Knight"
-                    elif pclass.lower() in "druid": pclass = "Druid"
-                    elif pclass.lower() in "hunter": pclass = "Hunter"
-                    elif pclass.lower() in "mage": pclass = "Mage"
-                    elif pclass.lower() in "paladin": pclass = "Paladin"
-                    elif pclass.lower() in "priest": pclass = "Priest"
-                    elif pclass.lower() in "rogue": pclass = "Rogue"
-                    elif pclass.lower() in "shaman": pclass = "Shaman"
-                    elif pclass.lower() in "warlock": pclass = "Warlock"
-                    elif pclass.lower() in "warrior": pclass = "Warrior"
+                    # Ferrousblade: Death Knight
+                    # Sighanama: Hunter
+                    # Strixien: Druid
+                    # Bunniful: Druid
+                    # Lumosbringer: Paladin
+                    # Kelorlyn: Druid
+                    # Catreene: Paladin
+                    # Mettybeans: Shaman
+                    # Socko: Rogue
+                    # Wamili: Warlock
+                    # Pacratt: Mage
+                    # Flambeau: Shaman
+                    # Jwizard: Warlock
+                    # Killadin: Paladin
+                    # Artaz: Death Knight
+                    # Soulreaverr: Death Knight
+                    # Darkfern: Death Knight
+                    # Swiftbladess: Rogue
+                    # Killiandra: Mage
+                    # Pastiry: Warrior
+                    # Meemeemeemee: Shaman
+                    # Tinyraider: Mage
+                    # Beasty: Hunter
+                    # Axsel: Warlock
+                    # Snedpie: Priest
+                    # Bigpapapaul: Hunter
+                    # Gnoraa: Warlock
+                    # Abletu: Druid
+                    # Bzorder: Druid
+                    # Elisesolis: Paladin
+                    # Prunejuuce: Warrior
+                    # Medulla: Paladin
+                    # Lorniras: Warlock
+                    # Vangoat: Shaman
+                    # Miatotems: Shaman
+                    # Lilypalooza: Priest
+                    # Gnoya: Priest
 
-                    players.append(Player(winner, [], pclass))
-                    player = players[-1]
+                    known_players = {
+                        "Ferrousblade": "Death Knight",
+                        "Sighanama": "Hunter",
+                        "Strixien": "Druid",
+                        "Bunniful": "Druid",
+                        "Lumosbringer": "Paladin",
+                        "Kelorlyn": "Druid",
+                        "Catreene": "Paladin",
+                        "Mettybeans": "Shaman",
+                        "Socko": "Rogue",
+                        "Wamili": "Warlock",
+                        "Pacratt": "Mage",
+                        "Flambeau": "Shaman",
+                        "Jwizard": "Warlock",
+                        "Killadin": "Paladin",
+                        "Artaz": "Death Knight",
+                        "Soulreaverr": "Death Knight",
+                        "Darkfern": "Death Knight",
+                        "Swiftbladess": "Rogue",
+                        "Killiandra": "Mage",
+                        "Pastiry": "Warrior",
+                        "Meemeemeemee": "Shaman",
+                        "Tinyraider": "Mage",
+                        "Beasty": "Hunter",
+                        "Axsel": "Warlock",
+                        "Snedpie": "Priest",
+                        "Bigpapapaul": "Hunter",
+                        "Gnoraa": "Warlock",
+                        "Abletu": "Druid",
+                        "Bzorder": "Druid",
+                        "Elisesolis": "Paladin",
+                        "Prunejuuce": "Warrior",
+                        "Medulla": "Paladin",
+                        "Lorniras": "Warlock",
+                        "Vangoat": "Shaman",
+                        "Miatotems": "Shaman",
+                        "Lilypalooza": "Priest",
+                        "Gnoya": "Priest"
+                    }
+                    if winner in known_players:
+                        pclass = known_players[winner]
+                        print(f"Player {winner} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
+                        players.append(Player(winner, [], pclass))
+                        player = players[-1]
+
+                    else: 
+                        pclass = input(f"Could not find player {winner}. Creating from scratch. What class are they? ")
+                        if pclass.lower() in "death knight": pclass = "Death Knight"
+                        elif pclass.lower() in "druid": pclass = "Druid"
+                        elif pclass.lower() in "hunter": pclass = "Hunter"
+                        elif pclass.lower() in "mage": pclass = "Mage"
+                        elif pclass.lower() in "paladin": pclass = "Paladin"
+                        elif pclass.lower() in "priest": pclass = "Priest"
+                        elif pclass.lower() in "rogue": pclass = "Rogue"
+                        elif pclass.lower() in "shaman": pclass = "Shaman"
+                        elif pclass.lower() in "warlock": pclass = "Warlock"
+                        elif pclass.lower() in "warrior": pclass = "Warrior"
+
+                        players.append(Player(winner, [], pclass))
+                        player = players[-1]
 
                 player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date))
                 print(f"Added {item.name} ({item.ilvl}) [{roll_type}] to {player.name}'s history.")
