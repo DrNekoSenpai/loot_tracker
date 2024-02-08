@@ -822,25 +822,33 @@ Ranged:
 ----------------------------------------
 Number of tokens received:
 
-\- Artaz: 2 Normal
+Conqueror's Mark of Sanctification:
+
 \- Axsel: 1 Normal
-\- Beasty: 2 Normal
-\- Bzorder: 1 Normal
 \- Catreene: 2 Normal
-\- Darkfern: 2 Normal
 \- Elisesolis: 2 Normal
-\- Ferrousblade: 1 Normal
-\- Flambeau: 1 Normal
 \- Gnoraa: 1 Normal
 \- Gnoya: 1 Normal
-\- Kelorlyn: 1 Normal
-\- Killiandra: 2 Normal
 \- Lilypalooza: 2 Normal
 \- Lumosbringer: 1 Normal
+
+Protector's Mark of Sanctification:
+
+\- Beasty: 2 Normal
+\- Flambeau: 1 Normal
 \- Meemeemeemee: 2 Normal
 \- Miatotems: 1 Normal
-\- Pacratt: 1 Normal
 \- Prunejuuce: 2 Normal
+
+Vanquisher's Mark of Sanctification:
+
+\- Artaz: 2 Normal
+\- Bzorder: 1 Normal
+\- Darkfern: 2 Normal
+\- Ferrousblade: 1 Normal
+\- Kelorlyn: 1 Normal
+\- Killiandra: 2 Normal
+\- Pacratt: 1 Normal
 \- Socko: 1 Normal
 \- Soulreaverr: 2 Normal
 \- Strixien: 1 Normal

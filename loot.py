@@ -886,24 +886,53 @@ def export_history():
                     
         file.write("Number of tokens received:\n\n")
 
+        file.write("Conqueror's Mark of Sanctification:\n\n")
         for p in players: 
             normal_tokens = 0
-            for l in p._history["ETC"]:
-                if l.item.name == "Conqueror's Mark of Sanctification (N25)":
-                    normal_tokens += 1
-                elif l.item.name == "Vanquisher's Mark of Sanctification (N25)":
-                    normal_tokens += 1
-                elif l.item.name == "Protector's Mark of Sanctification (N25)":
-                    normal_tokens += 1
-            
             heroic_tokens = 0
-            for l in p._history["ETC"]:
-                if l.item.name == "Conqueror's Mark of Sanctification (H25)":
-                    heroic_tokens += 1
-                elif l.item.name == "Vanquisher's Mark of Sanctification (H25)":
-                    heroic_tokens += 1
-                elif l.item.name == "Protector's Mark of Sanctification (H25)":
-                    heroic_tokens += 1
+
+            if p._player_class in ["Paladin", "Priest", "Warlock"]:
+                for l in p._history["ETC"]:
+                    if l.item.name == "Conqueror's Mark of Sanctification (N25)":
+                        normal_tokens += 1
+                    elif l.item.name == "Conqueror's Mark of Sanctification (H25)":
+                        heroic_tokens += 1
+
+            if normal_tokens == 0 and heroic_tokens == 0: continue 
+            else: 
+                file.write(f"\- {p.name}: {normal_tokens} Normal")
+                if heroic_tokens == 0: file.write("\n")
+                else: file.write(f", {heroic_tokens} Heroic\n")
+
+        file.write("\nProtector's Mark of Sanctification:\n\n")
+        for p in players:
+            normal_tokens = 0
+            heroic_tokens = 0
+
+            if p._player_class in ["Warrior", "Hunter", "Shaman"]:
+                for l in p._history["ETC"]:
+                    if l.item.name == "Protector's Mark of Sanctification (N25)":
+                        normal_tokens += 1
+                    elif l.item.name == "Protector's Mark of Sanctification (H25)":
+                        heroic_tokens += 1
+
+            if normal_tokens == 0 and heroic_tokens == 0: continue 
+            else: 
+                file.write(f"\- {p.name}: {normal_tokens} Normal")
+                if heroic_tokens == 0: file.write("\n")
+                else: file.write(f", {heroic_tokens} Heroic\n")
+
+        file.write("\nVanquisher's Mark of Sanctification:\n\n")
+        for p in players:
+            normal_tokens = 0
+            heroic_tokens = 0
+
+            if p._player_class in ["Death Knight", "Druid", "Mage", "Rogue"]:
+                for l in p._history["ETC"]:
+                    if l.item.name == "Vanquisher's Mark of Sanctification (N25)":
+                        normal_tokens += 1
+                    elif l.item.name == "Vanquisher's Mark of Sanctification (H25)":
+                        heroic_tokens += 1
 
             if normal_tokens == 0 and heroic_tokens == 0: continue 
             else: 
