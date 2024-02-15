@@ -31,9 +31,9 @@ def up_to_date():
 
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
-        return False
+        return None
     
-if not up_to_date():
+if up_to_date() == False:
     print("Error: Updates available for pulling. Please pull the latest changes (using 'git pull') and try again.")
     exit()
 
@@ -469,6 +469,31 @@ def award_loot(players):
                 time.sleep(0.25)
 
     elif slot_names[int(item_match.slot)] == "ETC": 
+        if item_match.name == "Shadowfrost Shard": 
+            # Priority: Artaz, then Ferrousblade, then Pastiry
+            # Print out the number of shards that these players have. 
+            eligible_players = ["Artaz", "Ferrousblade", "Pastiry"]
+            print("")
+
+            priority = ""
+            for p in players:
+                if p.name in eligible_players: 
+                    # Check if this player is present. If not, they can't receive a shard. 
+                    if p._attendance == False: continue
+                    count = 0
+                    for log in p._history["ETC"]: 
+                        if log.item.name == item_match.name: 
+                            count += 1
+                    print(f"{p.name}: {count} shards.")
+                    if count < 50 and priority == "": 
+                        priority = p.name
+
+            if priority == "": 
+                print(f"An error occurred; all players marked as eligible for {item_match.name} have already received 50 shards.")
+            
+            else: 
+                print(f"This shard goes to: {priority}.")
+
         if "Mark of Sanctification" in item_match.name: 
             if "Conqueror's Mark of Sanctification" in item_match.name:
                 player_classes = ["Paladin", "Priest", "Warlock"]
@@ -533,53 +558,6 @@ def award_loot(players):
                         time.sleep(0.1)
                         pyautogui.press("enter")
                         time.sleep(0.25)
-
-            # # Find all of the people who have this item in their history, as well as how many they have. 
-            # received = []
-            # for player in players: 
-            #     # Check if this player is present. If not, continue. 
-            #     if player._attendance == False: continue
-            #     count = 0
-            #     for log in player._history["ETC"]: 
-            #         if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
-            #             count += 1
-            #     if count > 0:
-            #         received.append((player, count))
-
-            # if len(received) > 0: 
-            #     print("")
-            #     print("The following people have already won one or more copies of this item:")
-            #     for p in received:
-            #         print(f"  - {p[0].name} ({p[1]}x)")
-
-            #     if raiding: 
-            #         ready = input("Ready to announce? (y/n): ").lower()
-            #         if ready == "y": 
-            #             pyautogui.hotkey("alt", "tab")
-
-            #             pyautogui.write("/")
-            #             time.sleep(0.1)
-            #             pyautogui.write("rw")
-            #             time.sleep(0.1)
-            #             pyautogui.press("space")
-            #             time.sleep(0.1)
-            #             pyautogui.write(f"The following people have already won one or more copies of this item, {item_match.name}:")
-            #             time.sleep(0.1)
-            #             pyautogui.press("enter")
-            #             time.sleep(0.25)
-
-            #             for p in received:
-            #                 pyautogui.write("/")
-            #                 time.sleep(0.1)
-            #                 pyautogui.write("rw")
-            #                 time.sleep(0.1)
-            #                 pyautogui.press("space")
-            #                 time.sleep(0.1)
-
-            #                 pyautogui.write(f"{p[0].name} ({p[1]}x)")
-            #                 time.sleep(0.1)
-            #                 pyautogui.press("enter")
-            #                 time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 

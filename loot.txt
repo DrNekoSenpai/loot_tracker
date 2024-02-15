@@ -1,65 +1,57 @@
-Loot log for **Wednesday, 2024-02-07**:
+Loot log for **Wednesday, 2024-02-14**:
 
-Artaz (+2 MS) (+1 SR)
-- Polar Bear Claw Bracers (277) (SR) -- received on **2024-02-07**
-- Carapace of Forgotten Kings (264) (OS) -- received on **2024-02-07**
+Ferrousblade (+1 MS) (+1 SR)
+- Bracers of Dark Reckoning (277) (SR) -- received on **2024-02-14**
+- Shadowfrost Shard (ETC) -- received on **2024-02-14**
+- Shadowfrost Shard (ETC) -- received on **2024-02-14**
+- Shadowfrost Shard (ETC) -- received on **2024-02-14**
 
-Bigpapapaul (+2 MS) (+1 SR)
-- Shadowvault Slayer's Cloak (277) (SR) -- received on **2024-02-07**
-- Bloodvenom Blade (264) (MS) -- received on **2024-02-07**
+Jwizard (+1 MS) (+1 SR)
+- Dislodged Foreign Object (264) (SR) -- received on **2024-02-14**
 
-Gnoraa (+1 MS) (+1 SR)
-- Corpse-Impaling Spike (264) (SR) -- received on **2024-02-07**
+Lilypalooza (+1 MS) (+1 SR)
+- Althor's Abacus (277) (SR) -- received on **2024-02-14**
 
-Tinyraider (+1 MS) (+1 SR)
-- Frozen Bonespike (277) (SR) -- received on **2024-02-07**
+Miatotems (+1 MS) (+1 SR)
+- Bulwark of Smouldering Steel (277) (SR) -- received on **2024-02-14**
 
-Lilypalooza (+2 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-02-07**
-- Holiday's Grace (264) (MS) -- received on **2024-02-07**
-- Stiffened Corpse Shoulderpads (264) (OS) -- received on **2024-02-07**
+Pastiry (+1 MS) (+1 SR)
+- Polar Bear Claw Bracers (277) (SR) -- received on **2024-02-14**
+- Shadowfrost Shard (ETC) -- received on **2024-02-14**
 
-Beasty (+1 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-02-07**
+Sighanama (+1 MS) (+1 SR)
+- Snowserpent Mail Helm (277) (SR) -- received on **2024-02-14**
 
-Catreene (+1 MS) (+0 SR)
-- Rot-Resistant Breastplate (264) (MS) -- received on **2024-02-07**
+Swiftbladess (+1 MS) (+1 SR)
+- Astrylian's Sutured Cinch (264) (SR) -- received on **2024-02-14**
+
+Bigpapapaul (+1 MS) (+0 SR)
+- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-02-14**
+
+Bzorder (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-02-14**
 
 Darkfern (+1 MS) (+0 SR)
-- Gendarme's Cuirass (277) (MS) -- received on **2024-02-07**
+- Scourgeborne Waraxe (277) (MS) -- received on **2024-02-14**
 
-Elisesolis (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-02-07**
+Gnoya (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-02-14**
 
 Kelorlyn (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-02-07**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-02-14**
 
-Meemeemeemee (+1 MS) (+0 SR)
-- Tiny Abomination in a Jar (264) (MS) -- received on **2024-02-07**
+Killadin (+0 MS) (+0 SR)
+- Faceplate of the Forgotten (264) (OS) -- received on **2024-02-14**
 
-Strixien (+1 MS) (+0 SR)
-- Boots of Unnatural Growth (277) (MS) -- received on **2024-02-07**
+Lorniras (+0 MS) (+0 SR)
+- Carapace of Forgotten Kings (264) (OS) -- received on **2024-02-14**
 
-Abletu (+0 MS) (+0 SR)
-- Handguards of Winter's Respite (277) (OS) -- received on **2024-02-07**
-
-Bzorder (+0 MS) (+0 SR)
-- Cultist's Bloodsoaked Spaulders (264) (OS) -- received on **2024-02-07**
-- Wodin's Lucky Necklace (264) (OS) -- received on **2024-02-07**
-
-Ferrousblade (+0 MS) (+0 SR)
-- Shadowfrost Shard (ETC) -- received on **2024-02-07**
-- Shadowfrost Shard (ETC) -- received on **2024-02-07**
-- Shadowfrost Shard (ETC) -- received on **2024-02-07**
-- Shadowfrost Shard (ETC) -- received on **2024-02-07**
-- Shadowfrost Shard (ETC) -- received on **2024-02-07**
-
-Miatotems (+0 MS) (+0 SR)
-- Rib Spreader (264) (OS) -- received on **2024-02-07**
-
-Prunejuuce (+0 MS) (+0 SR)
-- Blood-Soaked Saronite Stompers (264) (OS) -- received on **2024-02-07**
+Medulla (+0 MS) (+0 SR)
+- Blood-Soaked Saronite Stompers (264) (OS) -- received on **2024-02-14**
 
 _disenchanted
-- Necrophotic Greaves
-- Leather of Stitched Scourge Parts
+- Deathwhisper Raiment
+- Leggings of Northern Lights
+- Helm of the Elder Moon
+- Dual-Bladed Pauldrons
+- Horrific Flesh Epaulets
