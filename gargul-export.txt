@@ -449,3 +449,18 @@
 50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-14
 50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-14
 50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-14
+51539;Wrathful Gladiator's Felweave Trousers;270;0;1;Gnoraa;2024-02-18
+50184;Keleseth's Seducer;264;0;1;Miatotems;2024-02-18
+50190;Grinning Skull Greatboots;264;1;0;Elisesolis;2024-02-18
+50182;Blood Queen's Crimson Choker;264;1;0;Killiandra;2024-02-18
+50170;Valanar's Other Signet Ring;264;1;0;Lorniras;2024-02-18
+50418;Robe of the Waking Nightmare;264;0;0;Pacratt;2024-02-18
+52025;Vanquisher's Mark of Sanctification;80;0;0;Tinyraider;2024-02-18
+50186;Frostbrood Sapphire Ring;264;1;0;Beásty;2024-02-18
+50173;Shadow Silk Spindle;264;1;0;Pacratt;2024-02-18
+52025;Vanquisher's Mark of Sanctification;80;0;0;Strixien;2024-02-18
+51500;Wrathful Gladiator's Ringmail Leggings;270;0;0;_disenchanted;2024-02-18
+51148;Sanctified Lasherweave Gloves;264;0;1;Strixien;2024-02-18
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-18
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-18
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-18
