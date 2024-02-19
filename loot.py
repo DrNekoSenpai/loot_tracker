@@ -13,6 +13,7 @@ parser.add_argument("--force-new", "-f", help="Force the script to create a new 
 args = parser.parse_args()
 
 raiding = True
+gargul = "{rt3} Gargul : "
 
 def up_to_date(): 
     # Return FALSE if there is a new version available.
@@ -532,7 +533,7 @@ def award_loot(players):
                     time.sleep(0.1)
                     pyautogui.press("space")
                     time.sleep(0.1)
-                    pyautogui.write(f"Threshold: {token_threshold} tokens.")
+                    pyautogui.write(f"The current token threshold is {token_threshold} tokens.")
                     time.sleep(0.1)
                     pyautogui.press("enter")
 

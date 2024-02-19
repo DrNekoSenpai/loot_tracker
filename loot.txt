@@ -1,53 +1,81 @@
-Loot log for **Wednesday, 2024-02-14**:
+Loot log for Wednesday, 2024-02-14 and **Sunday, 2024-02-18**:
+
+Pacratt (+2 MS) (+1 SR)
+- Shadow Silk Spindle (264) (SR) -- received on **2024-02-18**
+- Robe of the Waking Nightmare (264) (MS) -- received on **2024-02-18**
+
+Beasty (+1 MS) (+1 SR)
+- Frostbrood Sapphire Ring (264) (SR) -- received on **2024-02-18**
+
+Elisesolis (+1 MS) (+1 SR)
+- Grinning Skull Greatboots (264) (SR) -- received on **2024-02-18**
 
 Ferrousblade (+1 MS) (+1 SR)
-- Bracers of Dark Reckoning (277) (SR) -- received on **2024-02-14**
-- Shadowfrost Shard (ETC) -- received on **2024-02-14**
-- Shadowfrost Shard (ETC) -- received on **2024-02-14**
-- Shadowfrost Shard (ETC) -- received on **2024-02-14**
+- Bracers of Dark Reckoning (277) (SR) -- received on 2024-02-14
+- Shadowfrost Shard (ETC) -- received on 2024-02-14
+- Shadowfrost Shard (ETC) -- received on 2024-02-14
+- Shadowfrost Shard (ETC) -- received on 2024-02-14
+- Shadowfrost Shard (ETC) -- received on **2024-02-18**
+- Shadowfrost Shard (ETC) -- received on **2024-02-18**
+- Shadowfrost Shard (ETC) -- received on **2024-02-18**
 
 Jwizard (+1 MS) (+1 SR)
-- Dislodged Foreign Object (264) (SR) -- received on **2024-02-14**
+- Dislodged Foreign Object (264) (SR) -- received on 2024-02-14
+
+Killiandra (+1 MS) (+1 SR)
+- Blood Queen's Crimson Choker (264) (SR) -- received on **2024-02-18**
 
 Lilypalooza (+1 MS) (+1 SR)
-- Althor's Abacus (277) (SR) -- received on **2024-02-14**
+- Althor's Abacus (277) (SR) -- received on 2024-02-14
+
+Lorniras (+1 MS) (+1 SR)
+- Valanar's Other Signet Ring (264) (SR) -- received on **2024-02-18**
+- Carapace of Forgotten Kings (264) (OS) -- received on 2024-02-14
 
 Miatotems (+1 MS) (+1 SR)
-- Bulwark of Smouldering Steel (277) (SR) -- received on **2024-02-14**
+- Bulwark of Smouldering Steel (277) (SR) -- received on 2024-02-14
+- Keleseth's Seducer (264) (OS) -- received on **2024-02-18**
 
 Pastiry (+1 MS) (+1 SR)
-- Polar Bear Claw Bracers (277) (SR) -- received on **2024-02-14**
-- Shadowfrost Shard (ETC) -- received on **2024-02-14**
+- Polar Bear Claw Bracers (277) (SR) -- received on 2024-02-14
+- Shadowfrost Shard (ETC) -- received on 2024-02-14
 
 Sighanama (+1 MS) (+1 SR)
-- Snowserpent Mail Helm (277) (SR) -- received on **2024-02-14**
+- Snowserpent Mail Helm (277) (SR) -- received on 2024-02-14
 
 Swiftbladess (+1 MS) (+1 SR)
-- Astrylian's Sutured Cinch (264) (SR) -- received on **2024-02-14**
+- Astrylian's Sutured Cinch (264) (SR) -- received on 2024-02-14
 
 Bigpapapaul (+1 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-02-14**
+- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-02-14
 
 Bzorder (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-02-14**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-02-14
 
 Darkfern (+1 MS) (+0 SR)
-- Scourgeborne Waraxe (277) (MS) -- received on **2024-02-14**
+- Scourgeborne Waraxe (277) (MS) -- received on 2024-02-14
 
 Gnoya (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-02-14**
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-02-14
 
 Kelorlyn (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-02-14**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-02-14
+
+Strixien (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-02-18**
+- Sanctified Lasherweave Gloves (264) (OS) -- received on **2024-02-18**
+
+Tinyraider (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-02-18**
+
+Gnoraa (+0 MS) (+0 SR)
+- Wrathful Gladiator's Felweave Trousers (270) (OS) -- received on **2024-02-18**
 
 Killadin (+0 MS) (+0 SR)
-- Faceplate of the Forgotten (264) (OS) -- received on **2024-02-14**
-
-Lorniras (+0 MS) (+0 SR)
-- Carapace of Forgotten Kings (264) (OS) -- received on **2024-02-14**
+- Faceplate of the Forgotten (264) (OS) -- received on 2024-02-14
 
 Medulla (+0 MS) (+0 SR)
-- Blood-Soaked Saronite Stompers (264) (OS) -- received on **2024-02-14**
+- Blood-Soaked Saronite Stompers (264) (OS) -- received on 2024-02-14
 
 _disenchanted
 - Deathwhisper Raiment
@@ -55,3 +83,4 @@ _disenchanted
 - Helm of the Elder Moon
 - Dual-Bladed Pauldrons
 - Horrific Flesh Epaulets
+- Wrathful Gladiator's Ringmail Leggings
