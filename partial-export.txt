@@ -1,41 +1,28 @@
 @ID;@ITEM;@ILVL;@SR;@OS;@WINNER;@YEAR-@MONTH-@DAY
-50659;Polar Bear Claw Bracers;277;1;0;Pastiry;2024-02-14
-50059;Horrific Flesh Epaulets;264;0;0;_disenchanted;2024-02-14
-52026;Protector's Mark of Sanctification;80;0;0;Bigpapapaul;2024-02-14
-52025;Vanquisher's Mark of Sanctification;80;0;0;Kelorlyn;2024-02-14
-50060;Faceplate of the Forgotten;264;0;1;Killädin;2024-02-14
-50026;Helm of the Elder Moon;264;0;0;_disenchanted;2024-02-14
-50353;Dislodged Foreign Object;264;1;0;Jwizard;2024-02-14
-52027;Conqueror's Mark of Sanctification;80;0;0;Gnoya;2024-02-14
-50412;Bloodvenom Blade;264;0;0;_disenchanted;2024-02-14
-49996;Deathwhisper Raiment;264;0;0;_disenchanted;2024-02-14
-49988;Leggings of Northern Lights;264;0;0;_disenchanted;2024-02-14
-50611;Bracers of Dark Reckoning;277;1;0;Ferrousblade;2024-02-14
-50616;Bulwark of Smouldering Steel;277;1;0;Miatotems;2024-02-14
-50038;Carapace of Forgotten Kings;264;0;1;Lorniras;2024-02-14
-49983;Blood-Soaked Saronite Stompers;264;0;1;Medulla;2024-02-14
-50067;Astrylian's Sutured Cinch;264;1;0;Swiftbladess;2024-02-14
-50366;Althor's Abacus;277;1;0;Lilypalooza;2024-02-14
-50605;Snowserpent Mail Helm;277;1;0;Sighanama;2024-02-14
-50022;Dual-Bladed Pauldrons;264;0;1;Miatotems;2024-02-14
-52025;Vanquisher's Mark of Sanctification;80;0;0;Bzorder;2024-02-14
-50654;Scourgeborne Waraxe;277;0;0;Darkfern;2024-02-14
-50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-14
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-14
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-14
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-14
-51539;Wrathful Gladiator's Felweave Trousers;270;0;1;Gnoraa;2024-02-18
-50184;Keleseth's Seducer;264;0;1;Miatotems;2024-02-18
-50190;Grinning Skull Greatboots;264;1;0;Elisesolis;2024-02-18
-50182;Blood Queen's Crimson Choker;264;1;0;Killiandra;2024-02-18
-50170;Valanar's Other Signet Ring;264;1;0;Lorniras;2024-02-18
-50418;Robe of the Waking Nightmare;264;0;0;Pacratt;2024-02-18
-52025;Vanquisher's Mark of Sanctification;80;0;0;Tinyraider;2024-02-18
-50186;Frostbrood Sapphire Ring;264;1;0;Beásty;2024-02-18
-50173;Shadow Silk Spindle;264;1;0;Pacratt;2024-02-18
-52025;Vanquisher's Mark of Sanctification;80;0;0;Strixien;2024-02-18
-51500;Wrathful Gladiator's Ringmail Leggings;270;0;0;_disenchanted;2024-02-18
-51148;Sanctified Lasherweave Gloves;264;0;1;Strixien;2024-02-18
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-18
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-18
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-18
+50354;Bauble of True Blood;264;0;1;Abletu;2024-02-21
+50660;Boneguard Commander's Pauldrons;277;0;0;Strixien;2024-02-21
+50657;Skeleton Lord's Circle;277;0;1;Prunejuuce;2024-02-21
+50451;Belt of the Lonely Noble;264;0;1;Bigpapapaul;2024-02-21
+50074;Royal Crimson Cloak;264;1;0;Elisesolis;2024-02-21
+50664;Ring of Rapid Ascent;277;1;0;Abletu;2024-02-21
+50444;Rowan's Rifle of Silver Bullets;264;0;0;Prunejuuce;2024-02-21
+50660;Boneguard Commander's Pauldrons;277;0;1;Pastiry;2024-02-21
+52025;Vanquisher's Mark of Sanctification;80;0;0;Swiftbladess;2024-02-21
+49983;Blood-Soaked Saronite Stompers;264;0;0;Medulla;2024-02-21
+52027;Conqueror's Mark of Sanctification;80;0;0;Jwizard;2024-02-21
+50709;Bryntroll, the Bone Arbiter;277;0;1;Medulla;2024-02-21
+50175;Crypt Keeper's Bracers;264;0;1;Lilypalooza;2024-02-21
+50362;Deathbringer's Will;264;1;0;Pastiry;2024-02-21
+49988;Leggings of Northern Lights;264;0;0;_disenchanted;2024-02-21
+50615;Handguards of Winter's Respite;277;0;1;Abletu;2024-02-21
+49995;Fallen Lord's Handguards;264;0;0;_disenchanted;2024-02-21
+50608;Frozen Bonespike;277;1;0;Strixien;2024-02-21
+52027;Conqueror's Mark of Sanctification;80;0;0;Snedpie;2024-02-21
+49919;Cryptmaker;264;0;1;Artaz;2024-02-21
+52026;Protector's Mark of Sanctification;80;0;0;Miatotems;2024-02-21
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-21
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-21
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-21
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-21
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-21
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-21

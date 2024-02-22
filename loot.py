@@ -423,7 +423,9 @@ def award_loot(players):
         if raiding: 
             ready = input("Ready to announce? (y/n): ").lower()
             if ready == "y": 
-                pyautogui.hotkey("alt", "tab")
+                pyautogui.moveTo(1920/2, 1080/2)
+                pyautogui.click()
+                time.sleep(0.1)
 
                 pyautogui.write("/")
                 time.sleep(0.1)
@@ -455,7 +457,9 @@ def award_loot(players):
         if raiding: 
             ready = input("Ready to announce? (y/n): ").lower()
             if ready == "y": 
-                pyautogui.hotkey("alt", "tab")
+                pyautogui.moveTo(1920/2, 1080/2)
+                pyautogui.click()
+                time.sleep(0.1)
 
                 pyautogui.write("/")
                 time.sleep(0.1)
@@ -525,7 +529,9 @@ def award_loot(players):
             if raiding:
                 ready = input("Ready to announce? (y/n): ").lower()
                 if ready == "y": 
-                    pyautogui.hotkey("alt", "tab")
+                    pyautogui.moveTo(1920/2, 1080/2)
+                    pyautogui.click()
+                    time.sleep(0.1)
 
                     pyautogui.write("/")
                     time.sleep(0.1)
@@ -1597,7 +1603,8 @@ def export_gargul(players):
 
 def export_chat(players): 
     # Hit alt tab
-    pyautogui.hotkey("alt", "tab")
+    pyautogui.moveTo(1920/2, 1080/2)
+    pyautogui.click()
     time.sleep(0.1)
     
     pyautogui.typewrite("/")
