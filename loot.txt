@@ -1,54 +1,70 @@
-Loot log for **Wednesday, 2024-02-21**:
+Loot log for Wednesday, 2024-02-21 and **Sunday, 2024-02-25**:
+
+Jwizard (+2 MS) (+1 SR)
+- Phylactery of the Nameless Lich (264) (SR) -- received on **2024-02-25**
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-02-21
 
 Abletu (+1 MS) (+1 SR)
-- Ring of Rapid Ascent (277) (SR) -- received on **2024-02-21**
-- Handguards of Winter's Respite (277) (OS) -- received on **2024-02-21**
-- Bauble of True Blood (264) (OS) -- received on **2024-02-21**
+- Ring of Rapid Ascent (277) (SR) -- received on 2024-02-21
+- Handguards of Winter's Respite (277) (OS) -- received on 2024-02-21
+- Bauble of True Blood (264) (OS) -- received on 2024-02-21
+
+Catreene (+1 MS) (+1 SR)
+- Frostbinder's Shredded Cape (264) (SR) -- received on **2024-02-25**
 
 Elisesolis (+1 MS) (+1 SR)
-- Royal Crimson Cloak (264) (SR) -- received on **2024-02-21**
+- Royal Crimson Cloak (264) (SR) -- received on 2024-02-21
+
+Ferrousblade (+1 MS) (+1 SR)
+- Noose of Malachite (264) (SR) -- received on **2024-02-25**
+- Shadowfrost Shard (ETC) -- received on **2024-02-25**
 
 Pastiry (+1 MS) (+1 SR)
-- Deathbringer's Will (264) (SR) -- received on **2024-02-21**
-- Boneguard Commander's Pauldrons (277) (OS) -- received on **2024-02-21**
-- Shadowfrost Shard (ETC) -- received on **2024-02-21**
-- Shadowfrost Shard (ETC) -- received on **2024-02-21**
-- Shadowfrost Shard (ETC) -- received on **2024-02-21**
-- Shadowfrost Shard (ETC) -- received on **2024-02-21**
-- Shadowfrost Shard (ETC) -- received on **2024-02-21**
-- Shadowfrost Shard (ETC) -- received on **2024-02-21**
+- Deathbringer's Will (264) (SR) -- received on 2024-02-21
+- Boneguard Commander's Pauldrons (277) (OS) -- received on 2024-02-21
+- Shadowfrost Shard (ETC) -- received on 2024-02-21
+- Shadowfrost Shard (ETC) -- received on 2024-02-21
+- Shadowfrost Shard (ETC) -- received on 2024-02-21
+- Shadowfrost Shard (ETC) -- received on 2024-02-21
+- Shadowfrost Shard (ETC) -- received on 2024-02-21
+- Shadowfrost Shard (ETC) -- received on 2024-02-21
 
 Strixien (+1 MS) (+1 SR)
-- Frozen Bonespike (277) (SR) -- received on **2024-02-21**
+- Frozen Bonespike (277) (SR) -- received on 2024-02-21
 
-Jwizard (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-02-21**
+Medulla (+2 MS) (+0 SR)
+- Blood-Soaked Saronite Stompers (264) (MS) -- received on 2024-02-21
+- Devium's Eternally Cold Ring (264) (MS) -- received on **2024-02-25**
+- Bryntroll, the Bone Arbiter (277) (OS) -- received on 2024-02-21
 
-Medulla (+1 MS) (+0 SR)
-- Blood-Soaked Saronite Stompers (264) (MS) -- received on **2024-02-21**
-- Bryntroll, the Bone Arbiter (277) (OS) -- received on **2024-02-21**
+Axsel (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-02-25**
 
 Miatotems (+1 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-02-21**
+- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-02-21
+
+Pacratt (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-02-25**
 
 Prunejuuce (+1 MS) (+0 SR)
-- Rowan's Rifle of Silver Bullets (264) (MS) -- received on **2024-02-21**
-- Skeleton Lord's Circle (277) (OS) -- received on **2024-02-21**
+- Rowan's Rifle of Silver Bullets (264) (MS) -- received on 2024-02-21
+- Skeleton Lord's Circle (277) (OS) -- received on 2024-02-21
 
 Snedpie (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-02-21**
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-02-21
 
 Swiftbladess (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-02-21**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-02-21
 
 Artaz (+0 MS) (+0 SR)
-- Cryptmaker (264) (OS) -- received on **2024-02-21**
+- Cryptmaker (264) (OS) -- received on 2024-02-21
 
 Bigpapapaul (+0 MS) (+0 SR)
-- Belt of the Lonely Noble (264) (OS) -- received on **2024-02-21**
+- Belt of the Lonely Noble (264) (OS) -- received on 2024-02-21
 
 Lilypalooza (+0 MS) (+0 SR)
-- Crypt Keeper's Bracers (264) (OS) -- received on **2024-02-21**
+- Crypt Keeper's Bracers (264) (OS) -- received on 2024-02-21
+- Belt of the Lonely Noble (264) (OS) -- received on **2024-02-25**
 
 _disenchanted
 - Leggings of Northern Lights

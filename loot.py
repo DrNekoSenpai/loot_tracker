@@ -4,6 +4,7 @@ from datetime import datetime
 from datetime import timedelta
 from contextlib import redirect_stdout as redirect
 from io import StringIO
+import requests
 
 parser = argparse.ArgumentParser()
 
@@ -13,7 +14,6 @@ parser.add_argument("--force-new", "-f", help="Force the script to create a new 
 args = parser.parse_args()
 
 raiding = True
-gargul = "{rt3} Gargul : "
 
 def up_to_date(): 
     # Return FALSE if there is a new version available.
@@ -39,10 +39,11 @@ if up_to_date() == False:
     exit()
 
 class Item: 
-    def __init__(self, name:str, ilvl:int, slot:int): 
+    def __init__(self, name:str, ilvl:int, slot:int, boe:bool=False): 
         self.name = name
         self.ilvl = ilvl 
         self.slot = slot
+        self.boe = boe
 
 class Log: 
     def __init__(self, name, item:Item, roll_type, date:str, note:str = None): 
@@ -127,6 +128,8 @@ exceptions = [
     "Festergut's Acidic Blood"
 ]
 
+boe_items = []
+
 for item in items:
     match = pattern.match(item)
     if match: 
@@ -144,7 +147,17 @@ for item in items:
         elif item_id == 52029: name += " (H25)"
         elif item_id == 52030: name += " (H25)"
 
-        all_items[item_id] = Item(name, item_level, inventory_type)
+        # link = f"https://www.wowhead.com/wotlk/item={item_id}"
+        # html = requests.get(link).text 
+
+        # is_bind_on_equip = re.search("Binds when equipped", html) is not None
+        # if is_bind_on_equip: boe_items.append(item_id)
+
+        is_bind_on_equip = False
+
+        all_items[item_id] = Item(name, item_level, inventory_type, is_bind_on_equip)
+
+# print(boe_items)
 
 for item in all_items.values(): 
     if item.slot not in slots: slots[item.slot] = [item]
@@ -840,6 +853,7 @@ def export_history():
                 file.write("----------------------------------------\n")
 
             else:  
+                continue 
                 num_items = []
 
                 for slot in player._history:
