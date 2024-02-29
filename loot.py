@@ -216,7 +216,7 @@ def export_pickle(players):
 if not args.force_new:
     players = import_pickle()
 else:
-    players = [], ""
+    players = []
 
     # Create a special player called "_disenchanted", for items that were not awarded to anyone.
     # This is used when no one rolls. 
@@ -513,28 +513,95 @@ def award_loot(players):
                 print(f"This shard goes to: {priority}.")
 
         if "Mark of Sanctification" in item_match.name: 
+            conquerors_token_threshold = 2
+            protectors_token_threshold = 2
+            vanquishers_token_threshold = 2
+
             if "Conqueror's Mark of Sanctification" in item_match.name:
                 player_classes = ["Paladin", "Priest", "Warlock"]
+
+                eligible_players = []
+                for p in players: 
+                    if p._attendance == False: continue
+                    if p._player_class in player_classes:
+                        count = 0
+                        for log in p._history["ETC"]: 
+                            if log.item.name == item_match.name: 
+                                count += 1
+                        if count < conquerors_token_threshold: 
+                            eligible_players.append((p, count))
+
+                if len(eligible_players) == 0: 
+                    conquerors_token_threshold = 4
+                    for p in players:
+                        if p._attendance == False: continue
+                        if p._player_class in player_classes:
+                            count = 0
+                            for log in p._history["ETC"]:
+                                if log.item.name == item_match.name:
+                                    count += 1
+                            if count < conquerors_token_threshold:
+                                eligible_players.append((p, count))
+
             elif "Protector's Mark of Sanctification" in item_match.name:
                 player_classes = ["Warrior", "Hunter", "Shaman"]
+
+                eligible_players = []
+                for p in players:
+                    if p._attendance == False: continue
+                    if p._player_class in player_classes:
+                        count = 0
+                        for log in p._history["ETC"]:
+                            if log.item.name == item_match.name:
+                                count += 1
+                        if count < protectors_token_threshold:
+                            eligible_players.append((p, count))
+
+                    token_threshold = protectors_token_threshold
+
+                if len(eligible_players) == 0:
+                    protectors_token_threshold = 4
+                    for p in players:
+                        if p._attendance == False: continue
+                        if p._player_class in player_classes:
+                            count = 0
+                            for log in p._history["ETC"]:
+                                if log.item.name == item_match.name:
+                                    count += 1
+                            if count < protectors_token_threshold:
+                                eligible_players.append((p, count))
+
+                    token_threshold = protectors_token_threshold
+
             elif "Vanquisher's Mark of Sanctification" in item_match.name:
                 player_classes = ["Death Knight", "Druid", "Mage", "Rogue"]
 
-            token_threshold = 2
+                eligible_players = []
+                for p in players:
+                    if p._attendance == False: continue
+                    if p._player_class in player_classes:
+                        count = 0
+                        for log in p._history["ETC"]:
+                            if log.item.name == item_match.name:
+                                count += 1
+                        if count < vanquishers_token_threshold:
+                            eligible_players.append((p, count))
 
-            eligible_players = []
-            for p in players: 
-                if p._attendance == False: continue
-                if p._player_class in player_classes: 
-                    count = 0
-                    for log in p._history["ETC"]: 
-                        if log.item.name == item_match.name: 
-                            count += 1
-                    if count < token_threshold: 
-                        eligible_players.append((p, count))
-            eligible_players.sort(key=lambda x: (x[1], x[0].name))
+                if len(eligible_players) == 0:
+                    vanquishers_token_threshold = 4
+                    for p in players:
+                        if p._attendance == False: continue
+                        if p._player_class in player_classes:
+                            count = 0
+                            for log in p._history["ETC"]:
+                                if log.item.name == item_match.name:
+                                    count += 1
+                            if count < vanquishers_token_threshold:
+                                eligible_players.append((p, count))
 
-            print(f"\nThreshold: {token_threshold} tokens.")
+                    token_threshold = vanquishers_token_threshold
+
+            print(f"\nThe current token threshold is {token_threshold} tokens.")
             print("The following people are eligible to roll on this item:")
             for p in eligible_players: 
                 print(f"  - {p[0].name} ({p[1]}x)")
