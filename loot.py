@@ -543,6 +543,8 @@ def award_loot(players):
                             if count < conquerors_token_threshold:
                                 eligible_players.append((p, count))
 
+                token_threshold = conquerors_token_threshold
+
             elif "Protector's Mark of Sanctification" in item_match.name:
                 player_classes = ["Warrior", "Hunter", "Shaman"]
 
@@ -557,8 +559,6 @@ def award_loot(players):
                         if count < protectors_token_threshold:
                             eligible_players.append((p, count))
 
-                    token_threshold = protectors_token_threshold
-
                 if len(eligible_players) == 0:
                     protectors_token_threshold = 4
                     for p in players:
@@ -571,7 +571,7 @@ def award_loot(players):
                             if count < protectors_token_threshold:
                                 eligible_players.append((p, count))
 
-                    token_threshold = protectors_token_threshold
+                token_threshold = protectors_token_threshold
 
             elif "Vanquisher's Mark of Sanctification" in item_match.name:
                 player_classes = ["Death Knight", "Druid", "Mage", "Rogue"]
@@ -599,7 +599,7 @@ def award_loot(players):
                             if count < vanquishers_token_threshold:
                                 eligible_players.append((p, count))
 
-                    token_threshold = vanquishers_token_threshold
+                token_threshold = vanquishers_token_threshold
 
             print(f"\nThe current token threshold is {token_threshold} tokens.")
             print("The following people are eligible to roll on this item:")
@@ -1587,6 +1587,7 @@ def sudo_mode(players, raiding):
                     # Miatotems: Shaman
                     # Lilypalooza: Priest
                     # Gnoya: Priest
+                    # Killit: Warlock
 
                     known_players = {
                         "Ferrousblade": "Death Knight",
@@ -1625,7 +1626,8 @@ def sudo_mode(players, raiding):
                         "Vangoat": "Shaman",
                         "Miatotems": "Shaman",
                         "Lilypalooza": "Priest",
-                        "Gnoya": "Priest"
+                        "Gnoya": "Priest",
+                        "Killit": "Warlock",
                     }
                     if winner in known_players:
                         pclass = known_players[winner]

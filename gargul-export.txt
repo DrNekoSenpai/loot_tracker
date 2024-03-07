@@ -489,12 +489,6 @@
 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-21
 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-21
 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-02-21
-49994;The Lady's Brittle Bracers;264;1;0;Pacratt;2024-02-28
-50034;Zod's Repeating Longbow;264;0;0;_disenchanted;2024-02-28
-49991;Shoulders of Mercy Killing;264;0;0;Tinyraider;2024-02-28
-50604;Band of the Bone Colossus;277;0;0;Swiftbladess;2024-02-28
-50617;Rusted Bonespike Pauldrons;277;0;0;Catreene;2024-02-28
-50608;Frozen Bonespike;277;0;0;Snedpie;2024-02-28
 52025;Vanquisher's Mark of Sanctification;80;0;0;Ferrousblade;2024-02-28
 49994;The Lady's Brittle Bracers;264;1;0;Pacratt;2024-02-28
 52027;Conqueror's Mark of Sanctification;80;0;0;Medulla;2024-02-28
@@ -521,3 +515,37 @@
 50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-28
 50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-28
 50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-28
+40431;Fury of the Five Flights;213;0;0;_disenchanted;2024-03-03
+43346;Large Satchel of Spoils;1;0;0;Gnoraa;2024-03-03
+40451;Hyaline Helm of the Sniper;213;0;0;_disenchanted;2024-03-03
+40433;Wyrmrest Band;213;0;0;_disenchanted;2024-03-03
+40628;Gauntlets of the Lost Conqueror;80;0;0;_disenchanted;2024-03-03
+43345;Dragon Hide Bag;80;0;0;Medulla;2024-03-03
+40630;Gauntlets of the Lost Vanquisher;80;0;0;_disenchanted;2024-03-03
+51374;Wrathful Gladiator's Waistguard of Dominance;264;0;1;Miatotems;2024-03-03
+51207;Sanctified Dark Coven Leggings;264;0;0;Killit;2024-03-03
+51186;Sanctified Shadowblade Legplates;264;0;1;Ferrousblade;2024-03-03
+50177;Mail of Crimson Coins;264;0;0;_disenchanted;2024-03-06
+52025;Vanquisher's Mark of Sanctification;80;0;0;Bunniful;2024-03-06
+50609;Bone Sentinel's Amulet;277;1;0;Strixien;2024-03-06
+52025;Vanquisher's Mark of Sanctification;80;0;0;Abletu;2024-03-06
+52026;Protector's Mark of Sanctification;80;0;0;Sighanama;2024-03-06
+50181;Dying Light;264;1;0;Bunniful;2024-03-06
+49919;Cryptmaker;264;0;1;Catreene;2024-03-06
+50171;Shoulders of Frost-Tipped Thorns;264;0;0;Bunniful;2024-03-06
+50362;Deathbringer's Will;264;1;0;Sighanama;2024-03-06
+50366;Althor's Abacus;277;1;0;Miatotems;2024-03-06
+49993;Necrophotic Greaves;264;0;0;_disenchanted;2024-03-06
+49991;Shoulders of Mercy Killing;264;0;1;Abletu;2024-03-06
+50660;Boneguard Commander's Pauldrons;277;0;1;Artaz;2024-03-06
+52025;Vanquisher's Mark of Sanctification;80;0;0;Abletu;2024-03-06
+50604;Band of the Bone Colossus;277;0;0;Beásty;2024-03-06
+49985;Juggernaut Band;264;1;0;Prunejuuce;2024-03-06
+50617;Rusted Bonespike Pauldrons;277;0;0;_disenchanted;2024-03-06
+50654;Scourgeborne Waraxe;277;0;1;Artaz;2024-03-06
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06

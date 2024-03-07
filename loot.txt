@@ -1,59 +1,47 @@
-Loot log for Wednesday, 2024-02-28 and **Sunday, 2024-03-03**:
+Loot log for **Wednesday, 2024-03-06**:
 
-Pacratt (+2 MS) (+1 SR)
-- The Lady's Brittle Bracers (264) (SR) -- received on 2024-02-28
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-02-28
+Bunniful (+3 MS) (+1 SR)
+- Dying Light (264) (SR) -- received on **2024-03-06**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-03-06**
+- Shoulders of Frost-Tipped Thorns (264) (MS) -- received on **2024-03-06**
 
-Tinyraider (+2 MS) (+1 SR)
-- Dislodged Foreign Object (264) (SR) -- received on 2024-02-28
-- Shoulders of Mercy Killing (264) (MS) -- received on 2024-02-28
+Sighanama (+2 MS) (+1 SR)
+- Deathbringer's Will (264) (SR) -- received on **2024-03-06**
+- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-03-06**
 
-Beasty (+1 MS) (+1 SR)
-- Nerub'ar Stalker's Cord (264) (SR) -- received on 2024-02-28
+Miatotems (+1 MS) (+1 SR)
+- Althor's Abacus (277) (SR) -- received on **2024-03-06**
 
-Catreene (+2 MS) (+0 SR)
-- Rusted Bonespike Pauldrons (277) (MS) -- received on 2024-02-28
-- Greatcloak of the Turned Champion (264) (MS) -- received on 2024-02-28
+Prunejuuce (+1 MS) (+1 SR)
+- Juggernaut Band (264) (SR) -- received on **2024-03-06**
 
-Ferrousblade (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-02-28
-- Ring of Rotting Sinew (264) (OS) -- received on 2024-02-28
-- Sanctified Shadowblade Legplates (264) (OS) -- received on **2024-03-03**
-- Shadowfrost Shard (ETC) -- received on 2024-02-28
-- Shadowfrost Shard (ETC) -- received on 2024-02-28
-- Shadowfrost Shard (ETC) -- received on 2024-02-28
+Strixien (+1 MS) (+1 SR)
+- Bone Sentinel's Amulet (277) (SR) -- received on **2024-03-06**
 
-Jwizard (+1 MS) (+0 SR)
-- Amulet of the Silent Eulogy (277) (MS) -- received on 2024-02-28
+Abletu (+2 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-03-06**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-03-06**
+- Shoulders of Mercy Killing (264) (OS) -- received on **2024-03-06**
 
-Killit (+1 MS) (+0 SR)
-- Sanctified Dark Coven Leggings (264) (MS) -- received on **2024-03-03**
+Beasty (+1 MS) (+0 SR)
+- Band of the Bone Colossus (277) (MS) -- received on **2024-03-06**
 
-Lorniras (+1 MS) (+0 SR)
-- Plaguebringer's Stained Pants (264) (MS) -- received on 2024-02-28
+Artaz (+0 MS) (+0 SR)
+- Boneguard Commander's Pauldrons (277) (OS) -- received on **2024-03-06**
+- Scourgeborne Waraxe (277) (OS) -- received on **2024-03-06**
 
-Medulla (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-02-28
-- Skeleton Lord's Circle (277) (OS) -- received on 2024-02-28
+Catreene (+0 MS) (+0 SR)
+- Cryptmaker (264) (OS) -- received on **2024-03-06**
 
-Meemeemeemee (+1 MS) (+0 SR)
-- Wodin's Lucky Necklace (264) (MS) -- received on 2024-02-28
-- Astrylian's Sutured Cinch (264) (OS) -- received on 2024-02-28
-
-Sighanama (+1 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-02-28
-
-Snedpie (+1 MS) (+0 SR)
-- Frozen Bonespike (277) (MS) -- received on 2024-02-28
-
-Swiftbladess (+1 MS) (+0 SR)
-- Band of the Bone Colossus (277) (MS) -- received on 2024-02-28
-
-Miatotems (+0 MS) (+0 SR)
-- Seal of Many Mouths (264) (OS) -- received on 2024-02-28
-- Wrathful Gladiator's Waistguard of Dominance (264) (OS) -- received on **2024-03-03**
+Ferrousblade (+0 MS) (+0 SR)
+- Shadowfrost Shard (ETC) -- received on **2024-03-06**
+- Shadowfrost Shard (ETC) -- received on **2024-03-06**
+- Shadowfrost Shard (ETC) -- received on **2024-03-06**
+- Shadowfrost Shard (ETC) -- received on **2024-03-06**
+- Shadowfrost Shard (ETC) -- received on **2024-03-06**
+- Shadowfrost Shard (ETC) -- received on **2024-03-06**
 
 _disenchanted
-- Zod's Repeating Longbow
-- Waistband of Righteous Fury
-- Dual-Bladed Pauldrons
+- Rusted Bonespike Pauldrons
+- Necrophotic Greaves
+- Mail of Crimson Coins

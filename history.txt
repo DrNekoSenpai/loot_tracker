@@ -1,7 +1,14 @@
-Abletu: 16 items.
+Abletu: 19 items.
+
+ETC:
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-03-06)
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-03-06)
 
 Neck:
   \- [Amulet of the Silent Eulogy (277)](<https://www.wowhead.com/wotlk/item=50005>) (SR) (2023-10-25)
+
+Shoulder:
+  \- [Shoulders of Mercy Killing (264)](<https://www.wowhead.com/wotlk/item=49991>) (OS) (2024-03-06)
 
 Hands:
   \- [Handguards of Winter's Respite (264)](<https://www.wowhead.com/wotlk/item=49979>) (MS) (2023-10-18)
@@ -32,7 +39,7 @@ Main-Hand:
   \- [Frozen Bonespike (264)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2023-10-18)
   \- [Frozen Bonespike (277)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2024-01-31)
 ----------------------------------------
-Artaz: 15 items.
+Artaz: 17 items.
 
 ETC:
   \- [Shadowfrost Shard (50x)](<https://www.wowhead.com/wotlk/item=50274>)
@@ -42,6 +49,9 @@ ETC:
 Neck:
   \- [Ahn'kahar Onyx Neckguard (264)](<https://www.wowhead.com/wotlk/item=49989>) (MS) (2023-11-12)
   \- [Ahn'kahar Onyx Neckguard (264)](<https://www.wowhead.com/wotlk/item=49989>) (MS) (2023-11-29)
+
+Shoulder:
+  \- [Boneguard Commander's Pauldrons (277)](<https://www.wowhead.com/wotlk/item=50003>) (OS) (2024-03-06)
 
 Chest:
   \- [Carapace of Forgotten Kings (264)](<https://www.wowhead.com/wotlk/item=50038>) (OS) (2024-02-07)
@@ -64,6 +74,7 @@ Trinket:
 Main-Hand:
   \- [Bloodvenom Blade (264)](<https://www.wowhead.com/wotlk/item=50412>) (SR) (2023-11-12)
   \- [Bloodvenom Blade (264)](<https://www.wowhead.com/wotlk/item=50412>) (SR) (2023-12-06)
+  \- [Scourgeborne Waraxe (277)](<https://www.wowhead.com/wotlk/item=50411>) (OS) (2024-03-06)
 
 Two-Hand:
   \- [Cryptmaker (264)](<https://www.wowhead.com/wotlk/item=49919>) (OS) (2024-02-21)
@@ -88,7 +99,7 @@ Trinket:
 Two-Hand:
   \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (MS) (2023-11-01)
 ----------------------------------------
-Beasty: 6 items.
+Beasty: 7 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-01-24)
@@ -102,6 +113,7 @@ Waist:
 
 Ring:
   \- [Frostbrood Sapphire Ring (264)](<https://www.wowhead.com/wotlk/item=50186>) (SR) (2024-02-18)
+  \- [Band of the Bone Colossus (277)](<https://www.wowhead.com/wotlk/item=49949>) (MS) (2024-03-06)
 
 Ranged:
   \- [Zod's Repeating Longbow (264)](<https://www.wowhead.com/wotlk/item=50034>) (MS) (2024-01-03)
@@ -130,10 +142,19 @@ Main-Hand:
 Off-Hand:
   \- [Keleseth's Seducer (264)](<https://www.wowhead.com/wotlk/item=50184>) (MS) (2024-02-04)
 ----------------------------------------
-Bunniful: 1 items.
+Bunniful: 4 items.
+
+ETC:
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-03-06)
+
+Shoulder:
+  \- [Shoulders of Frost-Tipped Thorns (264)](<https://www.wowhead.com/wotlk/item=50171>) (MS) (2024-03-06)
 
 Ring:
   \- [Loop of the Endless Labyrinth (264)](<https://www.wowhead.com/wotlk/item=49977>) (SR) (2023-10-15)
+
+Two-Hand:
+  \- [Dying Light (264)](<https://www.wowhead.com/wotlk/item=50181>) (SR) (2024-03-06)
 ----------------------------------------
 Bzorder: 7 items.
 
@@ -156,7 +177,7 @@ Legs:
 Feet:
   \- [Boots of Unnatural Growth (277)](<https://www.wowhead.com/wotlk/item=50009>) (MS) (2023-11-01)
 ----------------------------------------
-Catreene: 12 items.
+Catreene: 13 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2023-12-13)
@@ -189,6 +210,9 @@ Legs:
 
 Ring:
   \- [Marrowgar's Frigid Eye (264)](<https://www.wowhead.com/wotlk/item=49967>) (SR) (2023-11-01)
+
+Two-Hand:
+  \- [Cryptmaker (264)](<https://www.wowhead.com/wotlk/item=49919>) (OS) (2024-03-06)
 ----------------------------------------
 Darkfern: 10 items.
 
@@ -252,7 +276,7 @@ Two-Hand:
 Ferrousblade: 16 items.
 
 ETC:
-  \- [Shadowfrost Shard (14x)](<https://www.wowhead.com/wotlk/item=50274>)
+  \- [Shadowfrost Shard (20x)](<https://www.wowhead.com/wotlk/item=50274>)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-25)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-28)
 
@@ -566,7 +590,7 @@ Mettybeans: 1 items.
 Off-Hand:
   \- [Bulwark of Smouldering Steel (264)](<https://www.wowhead.com/wotlk/item=49976>) (SR) (2023-10-25)
 ----------------------------------------
-Miatotems: 23 items.
+Miatotems: 24 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-01-24)
@@ -607,6 +631,9 @@ Ring:
   \- [Ring of Maddening Whispers (264)](<https://www.wowhead.com/wotlk/item=49990>) (MS) (2023-10-15)
   \- [Ring of Rapid Ascent (277)](<https://www.wowhead.com/wotlk/item=50008>) (SR) (2024-01-03)
   \- [Seal of Many Mouths (264)](<https://www.wowhead.com/wotlk/item=50025>) (OS) (2024-02-28)
+
+Trinket:
+  \- [Althor's Abacus (277)](<https://www.wowhead.com/wotlk/item=50359>) (SR) (2024-03-06)
 
 Main-Hand:
   \- [Trauma (264)](<https://www.wowhead.com/wotlk/item=50028>) (SR) (2024-01-24)
@@ -670,7 +697,7 @@ Two-Hand:
   \- [Bryntroll, the Bone Arbiter (264)](<https://www.wowhead.com/wotlk/item=50415>) (SR) (2023-12-06)
   \- [Bryntroll, the Bone Arbiter (277)](<https://www.wowhead.com/wotlk/item=50415>) (SR) (2024-01-31)
 ----------------------------------------
-Prunejuuce: 11 items.
+Prunejuuce: 12 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2023-12-13)
@@ -692,6 +719,7 @@ Feet:
 Ring:
   \- [Devium's Eternally Cold Ring (264)](<https://www.wowhead.com/wotlk/item=50185>) (MS) (2023-12-17)
   \- [Skeleton Lord's Circle (277)](<https://www.wowhead.com/wotlk/item=49999>) (OS) (2024-02-21)
+  \- [Juggernaut Band (264)](<https://www.wowhead.com/wotlk/item=49985>) (SR) (2024-03-06)
 
 Trinket:
   \- [Corpse Tongue Coin (277)](<https://www.wowhead.com/wotlk/item=50352>) (MS) (2023-11-12)
@@ -699,10 +727,11 @@ Trinket:
 Ranged:
   \- [Rowan's Rifle of Silver Bullets (264)](<https://www.wowhead.com/wotlk/item=50444>) (MS) (2024-02-21)
 ----------------------------------------
-Sighanama: 12 items.
+Sighanama: 14 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-02-28)
+  \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-03-06)
 
 Head:
   \- [Snowserpent Mail Helm (264)](<https://www.wowhead.com/wotlk/item=49952>) (SR) (2023-11-29)
@@ -725,6 +754,9 @@ Legs:
 
 Ring:
   \- [Band of the Bone Colossus (264)](<https://www.wowhead.com/wotlk/item=49949>) (MS) (2023-10-25)
+
+Trinket:
+  \- [Deathbringer's Will (264)](<https://www.wowhead.com/wotlk/item=50362>) (SR) (2024-03-06)
 
 Two-Hand:
   \- [Distant Land (264)](<https://www.wowhead.com/wotlk/item=50040>) (MS) (2024-01-03)
@@ -786,7 +818,7 @@ Trinket:
 Main-Hand:
   \- [Scourgeborne Waraxe (277)](<https://www.wowhead.com/wotlk/item=50411>) (MS) (2023-10-25)
 ----------------------------------------
-Strixien: 14 items.
+Strixien: 15 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-12-06)
@@ -794,6 +826,7 @@ ETC:
 
 Neck:
   \- [Bone Sentinel's Amulet (264)](<https://www.wowhead.com/wotlk/item=49975>) (SR) (2023-10-25)
+  \- [Bone Sentinel's Amulet (277)](<https://www.wowhead.com/wotlk/item=49975>) (SR) (2024-03-06)
 
 Shoulder:
   \- [Boneguard Commander's Pauldrons (277)](<https://www.wowhead.com/wotlk/item=50003>) (MS) (2024-02-21)
@@ -936,11 +969,13 @@ Protector's Mark of Sanctification:
 \- Meemeemeemee: 2 Normal
 \- Miatotems: 2 Normal
 \- Prunejuuce: 2 Normal
-\- Sighanama: 1 Normal
+\- Sighanama: 2 Normal
 
 Vanquisher's Mark of Sanctification:
 
+\- Abletu: 2 Normal
 \- Artaz: 2 Normal
+\- Bunniful: 1 Normal
 \- Bzorder: 2 Normal
 \- Darkfern: 2 Normal
 \- Ferrousblade: 2 Normal
@@ -956,5 +991,5 @@ Vanquisher's Mark of Sanctification:
 Number of Shadowfrost Shards received:
 
 \- Artaz: 50
-\- Ferrousblade: 14
+\- Ferrousblade: 20
 \- Pastiry: 9
