@@ -249,7 +249,7 @@ Trinket:
 Two-Hand:
   \- [Bryntroll, the Bone Arbiter (264)](<https://www.wowhead.com/wotlk/item=50415>) (OS) (2024-01-03)
 ----------------------------------------
-Ferrousblade: 15 items.
+Ferrousblade: 16 items.
 
 ETC:
   \- [Shadowfrost Shard (14x)](<https://www.wowhead.com/wotlk/item=50274>)
@@ -271,6 +271,7 @@ Hands:
 
 Legs:
   \- [Scourge Reaver's Legplates (264)](<https://www.wowhead.com/wotlk/item=50192>) (OS) (2023-11-12)
+  \- [Sanctified Shadowblade Legplates (264)](<https://www.wowhead.com/wotlk/item=51186>) (OS) (2024-03-03)
 
 Feet:
   \- [Grinning Skull Greatboots (264)](<https://www.wowhead.com/wotlk/item=50190>) (SR) (2023-12-17)
@@ -413,6 +414,11 @@ Ring:
 
 Two-Hand:
   \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (SR) (2023-10-15)
+----------------------------------------
+Killit: 1 items.
+
+Legs:
+  \- [Sanctified Dark Coven Leggings (264)](<https://www.wowhead.com/wotlk/item=51207>) (MS) (2024-03-03)
 ----------------------------------------
 Lilypalooza: 11 items.
 
@@ -560,7 +566,7 @@ Mettybeans: 1 items.
 Off-Hand:
   \- [Bulwark of Smouldering Steel (264)](<https://www.wowhead.com/wotlk/item=49976>) (SR) (2023-10-25)
 ----------------------------------------
-Miatotems: 22 items.
+Miatotems: 23 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-01-24)
@@ -587,6 +593,7 @@ Wrist:
 
 Waist:
   \- [Wrathful Gladiator's Waistguard of Dominance (264)](<https://www.wowhead.com/wotlk/item=51374>) (OS) (2023-10-25)
+  \- [Wrathful Gladiator's Waistguard of Dominance (264)](<https://www.wowhead.com/wotlk/item=51374>) (OS) (2024-03-03)
 
 Legs:
   \- [Sanctified Frost Witch's Legguards (264)](<https://www.wowhead.com/wotlk/item=51193>) (MS) (2023-11-15)
