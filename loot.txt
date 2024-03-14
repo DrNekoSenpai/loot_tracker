@@ -1,47 +1,58 @@
-Loot log for **Wednesday, 2024-03-06**:
+Loot log for **Wednesday, 2024-03-13**:
 
-Bunniful (+3 MS) (+1 SR)
-- Dying Light (264) (SR) -- received on **2024-03-06**
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-03-06**
-- Shoulders of Frost-Tipped Thorns (264) (MS) -- received on **2024-03-06**
+Abletu (+2 MS) (+1 SR)
+- Bracers of Eternal Dreaming (264) (SR) -- received on **2024-03-13**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-03-13**
 
-Sighanama (+2 MS) (+1 SR)
-- Deathbringer's Will (264) (SR) -- received on **2024-03-06**
-- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-03-06**
+Tinyraider (+2 MS) (+1 SR)
+- Gunship Captain's Mittens (277) (SR) -- received on **2024-03-13**
+- Valanar's Other Signet Ring (264) (MS) -- received on **2024-03-13**
+- Marrowgar's Frigid Eye (264) (OS) -- received on **2024-03-13**
 
-Miatotems (+1 MS) (+1 SR)
-- Althor's Abacus (277) (SR) -- received on **2024-03-06**
+Beasty (+1 MS) (+1 SR)
+- Scourge Hunter's Vambraces (277) (SR) -- received on **2024-03-13**
 
-Prunejuuce (+1 MS) (+1 SR)
-- Juggernaut Band (264) (SR) -- received on **2024-03-06**
+Soulreaverr (+1 MS) (+1 SR)
+- Polar Bear Claw Bracers (277) (SR) -- received on **2024-03-13**
 
-Strixien (+1 MS) (+1 SR)
-- Bone Sentinel's Amulet (277) (SR) -- received on **2024-03-06**
+Swiftbladess (+1 MS) (+1 SR)
+- Toskk's Maximized Wristguards (264) (SR) -- received on **2024-03-13**
+- Cultist's Bloodsoaked Spaulders (264) (OS) -- received on **2024-03-13**
+- Lungbreaker (264) (OS) -- received on **2024-03-13**
 
-Abletu (+2 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-03-06**
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-03-06**
-- Shoulders of Mercy Killing (264) (OS) -- received on **2024-03-06**
+Bigpapapaul (+1 MS) (+0 SR)
+- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-03-13**
 
-Beasty (+1 MS) (+0 SR)
-- Band of the Bone Colossus (277) (MS) -- received on **2024-03-06**
+Catreene (+1 MS) (+0 SR)
+- Leggings of Dying Candles (264) (MS) -- received on **2024-03-13**
 
-Artaz (+0 MS) (+0 SR)
-- Boneguard Commander's Pauldrons (277) (OS) -- received on **2024-03-06**
-- Scourgeborne Waraxe (277) (OS) -- received on **2024-03-06**
+Ferrousblade (+1 MS) (+0 SR)
+- Juggernaut Band (264) (MS) -- received on **2024-03-13**
+- Shadowfrost Shard (ETC) -- received on **2024-03-13**
+- Shadowfrost Shard (ETC) -- received on **2024-03-13**
+- Shadowfrost Shard (ETC) -- received on **2024-03-13**
+- Shadowfrost Shard (ETC) -- received on **2024-03-13**
+- Shadowfrost Shard (ETC) -- received on **2024-03-13**
 
-Catreene (+0 MS) (+0 SR)
-- Cryptmaker (264) (OS) -- received on **2024-03-06**
+Gnoraa (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-03-13**
 
-Ferrousblade (+0 MS) (+0 SR)
-- Shadowfrost Shard (ETC) -- received on **2024-03-06**
-- Shadowfrost Shard (ETC) -- received on **2024-03-06**
-- Shadowfrost Shard (ETC) -- received on **2024-03-06**
-- Shadowfrost Shard (ETC) -- received on **2024-03-06**
-- Shadowfrost Shard (ETC) -- received on **2024-03-06**
-- Shadowfrost Shard (ETC) -- received on **2024-03-06**
+Killiandra (+1 MS) (+0 SR)
+- Dying Light (264) (MS) -- received on **2024-03-13**
+
+Snedpie (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-03-13**
+
+Lilypalooza (+0 MS) (+0 SR)
+- Loop of the Endless Labyrinth (264) (OS) -- received on **2024-03-13**
+
+Medulla (+0 MS) (+0 SR)
+- Band of the Bone Colossus (264) (OS) -- received on **2024-03-13**
+
+Sighanama (+0 MS) (+0 SR)
+- Belt of the Lonely Noble (264) (OS) -- received on **2024-03-13**
 
 _disenchanted
-- Rusted Bonespike Pauldrons
-- Necrophotic Greaves
-- Mail of Crimson Coins
+- Incarnadine Band of Mending
+- Deathwhisper Raiment
+- Cryptmaker

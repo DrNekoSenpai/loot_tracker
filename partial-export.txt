@@ -1,25 +1,28 @@
 @ID;@ITEM;@ILVL;@SR;@OS;@WINNER;@YEAR-@MONTH-@DAY
-50177;Mail of Crimson Coins;264;0;0;_disenchanted;2024-03-06
-52025;Vanquisher's Mark of Sanctification;80;0;0;Bunniful;2024-03-06
-50609;Bone Sentinel's Amulet;277;1;0;Strixien;2024-03-06
-52025;Vanquisher's Mark of Sanctification;80;0;0;Abletu;2024-03-06
-52026;Protector's Mark of Sanctification;80;0;0;Sighanama;2024-03-06
-50181;Dying Light;264;1;0;Bunniful;2024-03-06
-49919;Cryptmaker;264;0;1;Catreene;2024-03-06
-50171;Shoulders of Frost-Tipped Thorns;264;0;0;Bunniful;2024-03-06
-50362;Deathbringer's Will;264;1;0;Sighanama;2024-03-06
-50366;Althor's Abacus;277;1;0;Miatotems;2024-03-06
-49993;Necrophotic Greaves;264;0;0;_disenchanted;2024-03-06
-49991;Shoulders of Mercy Killing;264;0;1;Abletu;2024-03-06
-50660;Boneguard Commander's Pauldrons;277;0;1;Artaz;2024-03-06
-52025;Vanquisher's Mark of Sanctification;80;0;0;Abletu;2024-03-06
-50604;Band of the Bone Colossus;277;0;0;Beásty;2024-03-06
-49985;Juggernaut Band;264;1;0;Prunejuuce;2024-03-06
-50617;Rusted Bonespike Pauldrons;277;0;0;_disenchanted;2024-03-06
-50654;Scourgeborne Waraxe;277;0;1;Artaz;2024-03-06
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
-50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-06
+50199;Leggings of Dying Candles;264;0;0;Catreene;2024-03-13
+50417;Bracers of Eternal Dreaming;264;1;0;Abletu;2024-03-13
+50333;Toskk's Maximized Wristguards;264;1;0;Swiftbladess;2024-03-13
+50174;Incarnadine Band of Mending;264;0;0;_disenchanted;2024-03-13
+49985;Juggernaut Band;264;0;0;Ferrousblade;2024-03-13
+52025;Vanquisher's Mark of Sanctification;80;0;0;Abletu;2024-03-13
+50451;Belt of the Lonely Noble;264;0;1;Sighanama;2024-03-13
+49996;Deathwhisper Raiment;264;0;0;_disenchanted;2024-03-13
+50663;Gunship Captain's Mittens;277;1;0;Tinyraider;2024-03-13
+52026;Protector's Mark of Sanctification;80;0;0;Bigpapapaul;2024-03-13
+50170;Valanar's Other Signet Ring;264;0;0;Tinyraider;2024-03-13
+50659;Polar Bear Claw Bracers;277;1;0;Soulreaverr;2024-03-13
+50181;Dying Light;264;0;0;Killiandra;2024-03-13
+49967;Marrowgar's Frigid Eye;264;0;1;Tinyraider;2024-03-13
+49987;Cultist's Bloodsoaked Spaulders;264;0;1;Swiftbladess;2024-03-13
+49977;Loop of the Endless Labyrinth;264;0;1;Lilypalooza;2024-03-13
+49949;Band of the Bone Colossus;264;0;1;Medulla;2024-03-13
+52027;Conqueror's Mark of Sanctification;80;0;0;Gnoraa;2024-03-13
+50183;Lungbreaker;264;0;1;Swiftbladess;2024-03-13
+52027;Conqueror's Mark of Sanctification;80;0;0;Snedpie;2024-03-13
+49919;Cryptmaker;264;0;0;_disenchanted;2024-03-13
+50655;Scourge Hunter's Vambraces;277;1;0;Beásty;2024-03-13
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-13
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-13
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-13
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-13
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-03-13

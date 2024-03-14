@@ -1,14 +1,18 @@
-Abletu: 19 items.
+Abletu: 21 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-03-06)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-03-06)
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-03-13)
 
 Neck:
   \- [Amulet of the Silent Eulogy (277)](<https://www.wowhead.com/wotlk/item=50005>) (SR) (2023-10-25)
 
 Shoulder:
   \- [Shoulders of Mercy Killing (264)](<https://www.wowhead.com/wotlk/item=49991>) (OS) (2024-03-06)
+
+Wrist:
+  \- [Bracers of Eternal Dreaming (264)](<https://www.wowhead.com/wotlk/item=50417>) (SR) (2024-03-13)
 
 Hands:
   \- [Handguards of Winter's Respite (264)](<https://www.wowhead.com/wotlk/item=49979>) (MS) (2023-10-18)
@@ -99,7 +103,7 @@ Trinket:
 Two-Hand:
   \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (MS) (2023-11-01)
 ----------------------------------------
-Beasty: 7 items.
+Beasty: 8 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-01-24)
@@ -107,6 +111,9 @@ ETC:
 
 Neck:
   \- [Wodin's Lucky Necklace (264)](<https://www.wowhead.com/wotlk/item=50452>) (MS) (2024-01-17)
+
+Wrist:
+  \- [Scourge Hunter's Vambraces (277)](<https://www.wowhead.com/wotlk/item=50000>) (SR) (2024-03-13)
 
 Waist:
   \- [Nerub'ar Stalker's Cord (264)](<https://www.wowhead.com/wotlk/item=50413>) (SR) (2024-02-28)
@@ -118,10 +125,11 @@ Ring:
 Ranged:
   \- [Zod's Repeating Longbow (264)](<https://www.wowhead.com/wotlk/item=50034>) (MS) (2024-01-03)
 ----------------------------------------
-Bigpapapaul: 8 items.
+Bigpapapaul: 9 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-02-14)
+  \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-03-13)
 
 Back:
   \- [Shadowvault Slayer's Cloak (277)](<https://www.wowhead.com/wotlk/item=49998>) (SR) (2024-02-07)
@@ -177,7 +185,7 @@ Legs:
 Feet:
   \- [Boots of Unnatural Growth (277)](<https://www.wowhead.com/wotlk/item=50009>) (MS) (2023-11-01)
 ----------------------------------------
-Catreene: 13 items.
+Catreene: 14 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2023-12-13)
@@ -207,6 +215,7 @@ Waist:
 
 Legs:
   \- [Leggings of Dubious Charms (264)](<https://www.wowhead.com/wotlk/item=50450>) (OS) (2024-01-17)
+  \- [Leggings of Dying Candles (264)](<https://www.wowhead.com/wotlk/item=50199>) (MS) (2024-03-13)
 
 Ring:
   \- [Marrowgar's Frigid Eye (264)](<https://www.wowhead.com/wotlk/item=49967>) (SR) (2023-11-01)
@@ -273,10 +282,10 @@ Trinket:
 Two-Hand:
   \- [Bryntroll, the Bone Arbiter (264)](<https://www.wowhead.com/wotlk/item=50415>) (OS) (2024-01-03)
 ----------------------------------------
-Ferrousblade: 16 items.
+Ferrousblade: 17 items.
 
 ETC:
-  \- [Shadowfrost Shard (20x)](<https://www.wowhead.com/wotlk/item=50274>)
+  \- [Shadowfrost Shard (25x)](<https://www.wowhead.com/wotlk/item=50274>)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-25)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-28)
 
@@ -305,6 +314,7 @@ Ring:
   \- [Devium's Eternally Cold Ring (264)](<https://www.wowhead.com/wotlk/item=50185>) (SR) (2023-11-12)
   \- [Skeleton Lord's Circle (277)](<https://www.wowhead.com/wotlk/item=49999>) (SR) (2024-01-31)
   \- [Ring of Rotting Sinew (264)](<https://www.wowhead.com/wotlk/item=50453>) (OS) (2024-02-28)
+  \- [Juggernaut Band (264)](<https://www.wowhead.com/wotlk/item=49985>) (MS) (2024-03-13)
 
 Trinket:
   \- [Corpse Tongue Coin (277)](<https://www.wowhead.com/wotlk/item=50352>) (MS) (2023-11-01)
@@ -317,10 +327,11 @@ Flambeau: 1 items.
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2023-11-29)
 ----------------------------------------
-Gnoraa: 6 items.
+Gnoraa: 7 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-02-04)
+  \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-03-13)
 
 Neck:
   \- [Amulet of the Silent Eulogy (277)](<https://www.wowhead.com/wotlk/item=50005>) (SR) (2023-12-13)
@@ -413,7 +424,7 @@ Waist:
 Ring:
   \- [Harbinger's Bone Band (264)](<https://www.wowhead.com/wotlk/item=50447>) (MS) (2024-01-17)
 ----------------------------------------
-Killiandra: 10 items.
+Killiandra: 11 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-12)
@@ -438,13 +449,14 @@ Ring:
 
 Two-Hand:
   \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (SR) (2023-10-15)
+  \- [Dying Light (264)](<https://www.wowhead.com/wotlk/item=50181>) (MS) (2024-03-13)
 ----------------------------------------
 Killit: 1 items.
 
 Legs:
   \- [Sanctified Dark Coven Leggings (264)](<https://www.wowhead.com/wotlk/item=51207>) (MS) (2024-03-03)
 ----------------------------------------
-Lilypalooza: 11 items.
+Lilypalooza: 12 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-01-31)
@@ -467,6 +479,7 @@ Legs:
 
 Ring:
   \- [Marrowgar's Frigid Eye (264)](<https://www.wowhead.com/wotlk/item=49967>) (SR) (2023-12-06)
+  \- [Loop of the Endless Labyrinth (264)](<https://www.wowhead.com/wotlk/item=49977>) (OS) (2024-03-13)
 
 Trinket:
   \- [Althor's Abacus (277)](<https://www.wowhead.com/wotlk/item=50359>) (SR) (2024-02-14)
@@ -528,7 +541,7 @@ Chest:
 Legs:
   \- [Sanctified Lightsworn Legplates (264)](<https://www.wowhead.com/wotlk/item=51278>) (MS) (2023-11-08)
 ----------------------------------------
-Medulla: 9 items.
+Medulla: 10 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-02-28)
@@ -551,6 +564,7 @@ Feet:
 
 Ring:
   \- [Skeleton Lord's Circle (277)](<https://www.wowhead.com/wotlk/item=49999>) (OS) (2024-02-28)
+  \- [Band of the Bone Colossus (264)](<https://www.wowhead.com/wotlk/item=49949>) (OS) (2024-03-13)
 
 Two-Hand:
   \- [Bryntroll, the Bone Arbiter (277)](<https://www.wowhead.com/wotlk/item=50415>) (OS) (2024-02-21)
@@ -727,7 +741,7 @@ Trinket:
 Ranged:
   \- [Rowan's Rifle of Silver Bullets (264)](<https://www.wowhead.com/wotlk/item=50444>) (MS) (2024-02-21)
 ----------------------------------------
-Sighanama: 14 items.
+Sighanama: 15 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-02-28)
@@ -749,6 +763,9 @@ Chest:
 Hands:
   \- [Wrathful Gladiator's Chain Gauntlets (270)](<https://www.wowhead.com/wotlk/item=51459>) (OS) (2023-12-13)
 
+Waist:
+  \- [Belt of the Lonely Noble (264)](<https://www.wowhead.com/wotlk/item=50451>) (OS) (2024-03-13)
+
 Legs:
   \- [Leggings of Northern Lights (264)](<https://www.wowhead.com/wotlk/item=49988>) (SR) (2023-12-06)
 
@@ -765,10 +782,11 @@ Two-Hand:
 Ranged:
   \- [Zod's Repeating Longbow (264)](<https://www.wowhead.com/wotlk/item=50034>) (MS) (2023-10-15)
 ----------------------------------------
-Snedpie: 7 items.
+Snedpie: 8 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-02-21)
+  \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-03-13)
 
 Neck:
   \- [Holiday's Grace (264)](<https://www.wowhead.com/wotlk/item=50061>) (MS) (2024-01-24)
@@ -796,7 +814,7 @@ ETC:
 Main-Hand:
   \- [Scourgeborne Waraxe (277)](<https://www.wowhead.com/wotlk/item=50411>) (MS) (2023-11-15)
 ----------------------------------------
-Soulreaverr: 8 items.
+Soulreaverr: 9 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-01)
@@ -805,6 +823,9 @@ ETC:
 Neck:
   \- [Ahn'kahar Onyx Neckguard (264)](<https://www.wowhead.com/wotlk/item=49989>) (SR) (2023-10-25)
   \- [Wrathful Gladiator's Pendant of Triumph (264)](<https://www.wowhead.com/wotlk/item=51355>) (OS) (2023-11-29)
+
+Wrist:
+  \- [Polar Bear Claw Bracers (277)](<https://www.wowhead.com/wotlk/item=50002>) (SR) (2024-03-13)
 
 Feet:
   \- [Blood-Soaked Saronite Stompers (264)](<https://www.wowhead.com/wotlk/item=49983>) (SR) (2023-10-25)
@@ -855,7 +876,7 @@ Main-Hand:
   \- [Frozen Bonespike (264)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2023-10-15)
   \- [Frozen Bonespike (277)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2024-02-21)
 ----------------------------------------
-Swiftbladess: 15 items.
+Swiftbladess: 18 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-04)
@@ -866,9 +887,13 @@ Neck:
 
 Shoulder:
   \- [Cultist's Bloodsoaked Spaulders (264)](<https://www.wowhead.com/wotlk/item=49987>) (OS) (2024-01-17)
+  \- [Cultist's Bloodsoaked Spaulders (264)](<https://www.wowhead.com/wotlk/item=49987>) (OS) (2024-03-13)
 
 Back:
   \- [Shadowvault Slayer's Cloak (277)](<https://www.wowhead.com/wotlk/item=49998>) (SR) (2023-11-12)
+
+Wrist:
+  \- [Toskk's Maximized Wristguards (264)](<https://www.wowhead.com/wotlk/item=50333>) (SR) (2024-03-13)
 
 Hands:
   \- [Wrathful Gladiator's Leather Gloves (270)](<https://www.wowhead.com/wotlk/item=51493>) (OS) (2023-10-25)
@@ -891,8 +916,9 @@ Main-Hand:
   \- [Bloodvenom Blade (264)](<https://www.wowhead.com/wotlk/item=50412>) (OS) (2024-01-03)
   \- [Scourgeborne Waraxe (277)](<https://www.wowhead.com/wotlk/item=50411>) (MS) (2024-01-17)
   \- [Bloodvenom Blade (264)](<https://www.wowhead.com/wotlk/item=50412>) (OS) (2024-01-17)
+  \- [Lungbreaker (264)](<https://www.wowhead.com/wotlk/item=50183>) (OS) (2024-03-13)
 ----------------------------------------
-Tinyraider: 14 items.
+Tinyraider: 17 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-18)
@@ -910,6 +936,7 @@ Wrist:
 
 Hands:
   \- [Wrathful Gladiator's Silk Handguards (270)](<https://www.wowhead.com/wotlk/item=51464>) (OS) (2023-12-13)
+  \- [Gunship Captain's Mittens (277)](<https://www.wowhead.com/wotlk/item=50011>) (SR) (2024-03-13)
 
 Waist:
   \- [Crushing Coldwraith Belt (264)](<https://www.wowhead.com/wotlk/item=49978>) (SR) (2023-11-12)
@@ -919,6 +946,8 @@ Legs:
 
 Ring:
   \- [Ring of Maddening Whispers (264)](<https://www.wowhead.com/wotlk/item=49990>) (SR) (2023-11-15)
+  \- [Valanar's Other Signet Ring (264)](<https://www.wowhead.com/wotlk/item=50170>) (MS) (2024-03-13)
+  \- [Marrowgar's Frigid Eye (264)](<https://www.wowhead.com/wotlk/item=49967>) (OS) (2024-03-13)
 
 Trinket:
   \- [Dislodged Foreign Object (264)](<https://www.wowhead.com/wotlk/item=50353>) (SR) (2024-02-28)
@@ -953,18 +982,18 @@ Conqueror's Mark of Sanctification:
 \- Axsel: 1 Normal
 \- Catreene: 2 Normal
 \- Elisesolis: 2 Normal
-\- Gnoraa: 1 Normal
+\- Gnoraa: 2 Normal
 \- Gnoya: 2 Normal
 \- Jwizard: 1 Normal
 \- Lilypalooza: 2 Normal
 \- Lumosbringer: 1 Normal
 \- Medulla: 1 Normal
-\- Snedpie: 1 Normal
+\- Snedpie: 2 Normal
 
 Protector's Mark of Sanctification:
 
 \- Beasty: 2 Normal
-\- Bigpapapaul: 1 Normal
+\- Bigpapapaul: 2 Normal
 \- Flambeau: 1 Normal
 \- Meemeemeemee: 2 Normal
 \- Miatotems: 2 Normal
@@ -973,7 +1002,7 @@ Protector's Mark of Sanctification:
 
 Vanquisher's Mark of Sanctification:
 
-\- Abletu: 2 Normal
+\- Abletu: 3 Normal
 \- Artaz: 2 Normal
 \- Bunniful: 1 Normal
 \- Bzorder: 2 Normal
@@ -991,5 +1020,5 @@ Vanquisher's Mark of Sanctification:
 Number of Shadowfrost Shards received:
 
 \- Artaz: 50
-\- Ferrousblade: 20
+\- Ferrousblade: 25
 \- Pastiry: 9

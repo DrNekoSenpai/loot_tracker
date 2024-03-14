@@ -128,8 +128,6 @@ exceptions = [
     "Festergut's Acidic Blood"
 ]
 
-boe_items = []
-
 for item in items:
     match = pattern.match(item)
     if match: 
@@ -147,17 +145,7 @@ for item in items:
         elif item_id == 52029: name += " (H25)"
         elif item_id == 52030: name += " (H25)"
 
-        # link = f"https://www.wowhead.com/wotlk/item={item_id}"
-        # html = requests.get(link).text 
-
-        # is_bind_on_equip = re.search("Binds when equipped", html) is not None
-        # if is_bind_on_equip: boe_items.append(item_id)
-
-        is_bind_on_equip = False
-
-        all_items[item_id] = Item(name, item_level, inventory_type, is_bind_on_equip)
-
-# print(boe_items)
+        all_items[item_id] = Item(name, item_level, inventory_type, False)
 
 for item in all_items.values(): 
     if item.slot not in slots: slots[item.slot] = [item]
