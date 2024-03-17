@@ -33,7 +33,7 @@ def up_to_date():
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
         return None
-    
+
 if up_to_date() == False:
     print("Error: Updates available for pulling. Please pull the latest changes (using 'git pull') and try again.")
     exit()
@@ -62,8 +62,10 @@ class Log:
         self.note = note
 
 class Player: 
-    def __init__(self, name:str, reserves:List[str], pclass:str):
+    def __init__(self, name:str, alias:str, reserves:List[str], pclass:str):
         self.name = name
+        self.alias = alias
+
         self._reserves = reserves
         self._player_class = pclass
 
@@ -93,7 +95,7 @@ class Player:
             "Relic": [],
         }
 
-with open('items.sql') as items_file: 
+with open('items.sql', 'r', encoding="utf-8") as items_file: 
     items = items_file.read()
     items = items.replace("'", '"')
     items = items.replace('\\"', "'")
@@ -109,7 +111,7 @@ with open('items.sql') as items_file:
     # (52029,'Protector\'s Mark of Sanctification',64878,4,0,69,80,80,0),
     # (52030,'Conqueror\'s Mark of Sanctification',64878,4,0,274,80,80,0),
 
-    with open("all_items.txt", 'w') as file: 
+    with open("all_items.txt", 'w', encoding="utf-8") as file: 
         for item in items: 
             file.write(f"{item}\n")
 
@@ -191,7 +193,7 @@ def import_pickle():
     except FileNotFoundError:
         print('No pickle file found. Creating a new one.')
         players = []
-        players.append(Player("_disenchanted", [], ""))
+        players.append(Player("_disenchanted", "_disenchanted", [], ""))
 
     return players
 
@@ -208,11 +210,18 @@ else:
 
     # Create a special player called "_disenchanted", for items that were not awarded to anyone.
     # This is used when no one rolls. 
-    players.append(Player("_disenchanted", [], ""))
+    players.append(Player("_disenchanted", "_disenchanted", [], ""))
 
 if datetime.now().weekday() == 6 and datetime.now().hour >= 16 and datetime.now().hour < 19: raiding = True
 elif datetime.now().weekday() == 2 and datetime.now().hour >= 18 and datetime.now().hour < 20: raiding = True
 else: raiding = False
+
+known_aliases = {
+    "Sõçkö": "Socko", 
+    "Flambeaü": "Flambeau",
+    "Killädin": "Killadin",
+    "Beásty": "Beasty",
+}
 
 def import_softreserve(players): 
     # We'll attempt to import reserve data from the CSV file. 
@@ -224,7 +233,7 @@ def import_softreserve(players):
     for p in players: 
         p._reserves = []
 
-    with open("soft_reserves.csv", "r") as f: 
+    with open("soft_reserves.csv", "r", encoding="utf-8") as f: 
         sr_data = f.readlines()
 
     # Parse the data. 
@@ -249,15 +258,17 @@ def import_softreserve(players):
         name = soft_res[3]
 
         if name == "Swiftblades": name = "Swiftbladess"
-        if name == "SÃµÃ§kÃ¶": name = "Socko"
-        if name == "FlambeaÃ¼": name = "Flambeau"
-        if name == "KillÃ¤din": name = "Killadin"
-        if name == "BeÃ¡sty": name = "Beasty"
+
+        if name in known_aliases.keys(): 
+            alias = known_aliases[name]
+
+        else: 
+            alias = name
         
         # Check if the player's name can be typed using the English keyboard. 
-        if not regular_keyboard(name):
-            print(f"Player name {name} is not valid. Please input the name manually.")
-            name = input("Name: ")
+        if not regular_keyboard(alias):
+            print(f"Player name {alias} is not valid. Please input the name manually.")
+            alias = input("Name: ")
 
         # Search for an existing player object. Create it if it doesn't exist. 
 
@@ -266,7 +277,7 @@ def import_softreserve(players):
         player_exists = False
         current_player = None
         for p in players: 
-            if p.name == name: 
+            if p.alias == alias: 
                 player_exists = True
                 current_player = p
                 break
@@ -274,7 +285,7 @@ def import_softreserve(players):
         if not player_exists: 
             # Create a new player object and append it the list. 
 
-            pclass = input(f"Could not find player {name}. Creating from scratch. What class are they? ")
+            pclass = input(f"Could not find player {alias}. Creating from scratch. What class are they? ")
             if pclass.lower() in "death knight": pclass = "Death Knight"
             elif pclass.lower() in "druid": pclass = "Druid"
             elif pclass.lower() in "hunter": pclass = "Hunter"
@@ -286,7 +297,7 @@ def import_softreserve(players):
             elif pclass.lower() in "warlock": pclass = "Warlock"
             elif pclass.lower() in "warrior": pclass = "Warrior"
 
-            players.append(Player(name, [], pclass))
+            players.append(Player(name, alias, [], pclass))
             current_player = players[-1]
 
         # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
@@ -641,7 +652,7 @@ def award_loot(players):
 
     player_matches = []
     for p in players:
-        if name in p.name.lower(): 
+        if name in p.alias.lower(): 
             player_matches.append(p)
 
     if len(player_matches) == 0:
@@ -656,7 +667,7 @@ def award_loot(players):
         # We'll print all of the matches, and ask them to select one.
         print("Multiple matches found. Please select one of the following:")
         for i in range(len(player_matches)):
-            print(f"{i+1}. {player_matches[i].name}")
+            print(f"{i+1}. {player_matches[i].alias}")
 
         # We'll ask the user to select a number.
         sel = input("Select a number: ")
@@ -780,7 +791,7 @@ def mark_attendance(players):
         p._attendance = False
 
     print("")
-    with open("attendance.txt", "r") as file: 
+    with open("attendance.txt", "r", encoding="utf-8") as file: 
         lines = file.readlines()
 
     new_players = []
@@ -793,17 +804,18 @@ def mark_attendance(players):
             if name not in new_players: new_players.append(name)
 
     for new_player in new_players:
-        if new_player == "Swiftblades": new_player = "Swiftbladess"
-        if new_player == "SÃµÃ§kÃ¶": new_player = "Socko"
-        if new_player == "FlambeaÃ¼": new_player = "Flambeau"
-        if new_player == "KillÃ¤din": new_player = "Killadin"
-        if new_player == "BeÃ¡sty": new_player = "Beasty"
-        
-        if not regular_keyboard(new_player):
-            print(f"Player name {new_player} is not valid. Please input the name manually.")
+        if new_player in known_aliases.keys(): 
+            alias = known_aliases[new_player]
+
+        else:
+            alias = new_player
+
+        if not regular_keyboard(alias):
+            print(f"Player name {alias} is not valid. Please input the name manually.")
             new_player = input("Name: ")
 
         new_player = new_player.title()
+        alias = alias.title()
 
         found = False
         for p in players:
@@ -824,7 +836,7 @@ def mark_attendance(players):
             elif pclass.lower() in "warlock": pclass = "Warlock"
             elif pclass.lower() in "warrior": pclass = "Warrior"
 
-            players.append(Player(new_player, [], pclass))
+            players.append(Player(new_player, alias, [], pclass))
 
         # Find the player in the list of players, and change their _attendance to True. 
         for p in players:
@@ -856,7 +868,7 @@ def export_history():
             else: 
                 p._history[slot].sort(key=lambda x: (x.date, x.roll, -x.item.ilvl, x.item.name))
 
-    with open("history.txt", "w") as file:
+    with open("history.txt", "w", encoding="utf-8") as file:
         for player in players: 
             if sum([len(player._history[x]) for x in player._history]) == 0: 
                 continue      
@@ -1034,7 +1046,7 @@ def export_loot():
 
     last_raid = (last_wednesday if last_wednesday > last_sunday else last_sunday).strftime("%Y-%m-%d")
 
-    with open("loot.txt", "w") as f:
+    with open("loot.txt", "w", encoding="utf-8") as f:
         
         # If last_raid is WEDNESDAY, print WEDNESDAY's date. Bold the date.
         # If last raid is SUNDAY, print both WEDNESDAY and SUNDAY's date. Bold only Sunday's date. 
@@ -1118,7 +1130,7 @@ def remove_loot(players):
     player = input("Enter the name of the player who we are removing from: ").lower()
     player_matches = []
     for p in players:
-        if player in p.name.lower(): 
+        if player in p.alias.lower(): 
             player_matches.append(p)
 
     if len(player_matches) == 0:
@@ -1246,11 +1258,9 @@ def sudo_mode(players, raiding):
     while(True): 
         print("---- SUDO MODE ----")
         print("a. COMPLETELY wipe the pickle file")
-        print("b. Add or remove items from a player's history")
-        print("c. Add or remove plusses from a player")
-        print("d. Restore history from Gargul export")
-        print(f"e. {'Enter' if not raiding else 'Exit'} raiding mode")
-        print("f. Exit sudo mode")
+        print("b. Restore history from Gargul export")
+        print(f"c. {'Enter' if not raiding else 'Exit'} raiding mode")
+        print("d. Exit sudo mode")
         sel = input("Select an option: ").lower()
         print("")
 
@@ -1267,215 +1277,10 @@ def sudo_mode(players, raiding):
                 os.remove("players.pickle")
 
             players = []
-            players.append(Player("_disenchanted", [], ""))
+            players.append(Player("_disenchanted", "_disenchanted", [], ""))
 
-        elif sel == "b": 
-            print("Who are we modifying?")
-            name = input("Name: ").lower()
-
-            player_matches = []
-            for p in players:
-                if name in p.name.lower(): 
-                    player_matches.append(p)
-
-            if len(player_matches) == 0:
-                print("No matches found. Please double-check the player name and try again.")
-                continue
-            
-            elif len(player_matches) == 1:
-                # We'll select this match, and then move on.
-                player = player_matches[0]
-
-            elif len(player_matches) > 1:
-                # We'll print all of the matches, and ask them to select one.
-                print("Multiple matches found. Please select one of the following:")
-                for i in range(len(player_matches)):
-                    print(f"{i+1}. {player_matches[i].name}")
-
-                # We'll ask the user to select a number.
-                sel = input("Select a number: ")
-                try:
-                    sel = int(sel)
-                    if sel < 1 or sel > len(player_matches):
-                        print("Invalid integer input.")
-                        continue
-                    
-                except:
-                    print("Invalid non-convertible input.")
-                    continue
-
-                # We'll select this match, and then move on.
-                player = player_matches[sel-1]
-
-            print("Are we adding or removing items?")
-            print(" i. Adding")
-            print("ii. Removing")
-            sel = input("Select an option: ").lower()
-            print("")
-
-            if sel == "i":
-                item_name = input("Enter the name of the item: ").lower()
-
-                item_matches = []
-                for item in all_items.values():
-                    if item_name in item.name.lower(): 
-                        item_matches.append(item)
-
-                if len(item_matches) == 0:
-                    print("No matches found. Please double-check the item name and try again.")
-                    continue
-
-                elif len(item_matches) == 1:
-                    # We'll select this match, and then move on.
-                    item = item_matches[0]
-
-                elif len(item_matches) > 1:
-                    # We'll print all of the matches, and ask them to select one.
-                    print("Multiple matches found. Please select one of the following:")
-                    for i in range(len(item_matches)):
-                        print(f"{i+1}. {item_matches[i].name} ({item_matches[i].ilvl})")
-
-                    # We'll ask the user to select a number.
-                    sel = input("Select a number: ")
-                    try:
-                        sel = int(sel)
-                        if sel < 1 or sel > len(item_matches):
-                            print("Invalid integer input.")
-                            continue
-                        
-                    except:
-                        print("Invalid non-convertible input.")
-                        continue
-
-                    # We'll select this match, and then move on.
-                    item = item_matches[sel-1]
-
-                # Check the player's reserve list to see if they have this item reserved.
-                if item.name in player._reserves:
-                    roll_type = "SR"
-                    print(f"{player.name} has {item.name} reserved. Roll-type auto-selected as {roll_type}.")
-
-                elif item.slot == "ETC" and not "Mark of Sanctification" in item.name: 
-                    print(f"{item.name} is an ETC item. Roll-type auto-selected as ETC.")
-                    roll_type = "ETC"
-
-                else: 
-                    # Add this item to their history. 
-                    off_spec = input("Was this an off-spec roll? (y/n): ").lower()
-                    if off_spec == "y": roll_type = "OS"
-                    else: roll_type = "MS"
-
-                print("What date was this item received? (YYYY-MM-DD)")
-                date = input("Date: ")
-                pattern = re.compile(r"^\d{4}-\d{1,2}-\d{1,2}$")
-                if not pattern.match(date):
-                    print("Invalid date format.")
-                    continue
-
-                note = input("Enter a note for this item (optional): ")
-
-                player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date, note))
-            
-            elif sel == "ii":
-                # First, we must check if the player has any items in their history. If not, we'll tell them this player isn't a valid target. 
-                count = 0
-                for slot in player._history:
-                    if len(player._history[slot]) == 0: continue
-                    count += len(player._history[slot])
-                
-                if count == 0: 
-                    print("This player has no items in their history. Please select another player.")
-                    continue
-
-                # Print out the list of items they've won, and ask them to select one.
-                print("Select an item to remove:")
-                ind = 0
-                for slot in player._history:
-                    if len(player._history[slot]) == 0: continue
-                    for item in player._history[slot]: 
-                        print(f"{ind+1}. {item.item.name} ({item.item.ilvl}) ({item.roll}) ({item.date})")
-                        ind += 1
-
-                sel = input("Select a number: ")
-                try:
-                    sel = int(sel)
-                    if sel < 1 or sel > len(player._history[slot_names[int(item.item.slot)]]):
-                        print("Invalid integer input.")
-                    
-                except:
-                    print("Invalid non-convertible input.")
-                    
-                ind = 0
-                for slot in player._history:
-                    if len(player._history[slot]) == 0: continue
-                    for item in player._history[slot]: 
-                        if ind != sel-1: 
-                            ind += 1
-                            continue 
-                        item = player._history[slot][ind]
-
-                confirm = input("Are you sure you want to remove this item? (y/n): ").lower()
-                if confirm != "y":
-                    print("Aborting.")
-                    continue
-
-                player._history[slot_names[int(item.item.slot)]].remove(item)
-
-        elif sel == "c":
-            print("Who are we modifying?")
-            name = input("Name: ").lower()
-
-            player_matches = []
-            for p in players:
-                if name in p.name.lower(): 
-                    player_matches.append(p)
-
-            if len(player_matches) == 0:
-                print("No matches found. Please double-check the player name and try again.")
-            
-            elif len(player_matches) == 1:
-                # We'll select this match, and then move on.
-                player = player_matches[0]
-
-            elif len(player_matches) > 1:
-                # We'll print all of the matches, and ask them to select one.
-                print("Multiple matches found. Please select one of the following:")
-                for i in range(len(player_matches)):
-                    print(f"{i+1}. {player_matches[i].name}")
-
-                # We'll ask the user to select a number.
-                sel = input("Select a number: ")
-                try:
-                    sel = int(sel)
-                    if sel < 1 or sel > len(player_matches):
-                        print("Invalid integer input.")
-                    
-                except:
-                    print("Invalid non-convertible input.")
-
-                # We'll select this match, and then move on.
-                player = player_matches[sel-1]
-
-            reserve_type = "SR"
-            print(f"This player has {player._regular_plusses} regular plusses and {player._reserve_plusses} {reserve_type} plusses.") 
-
-            regular_plusses = input("How many regular plusses should they have? ")
-            try: regular_plusses = int(regular_plusses)
-            except:
-                print("Invalid integer input.")
-                continue
-
-            reserve_plusses = input(f"How many {reserve_type} plusses should they have? ")
-            try: reserve_plusses = int(reserve_plusses)
-            except:
-                print("Invalid integer input.")
-                continue
-
-            player._regular_plusses = regular_plusses
-            player._reserve_plusses = reserve_plusses
-
-        elif sel == "d":
-            with open("gargul-export.txt", "r") as file: 
+        elif sel == "b":
+            with open("gargul-export.txt", "r", encoding="utf-8") as file: 
                 lines = file.readlines()
 
             for p in players: 
@@ -1497,17 +1302,17 @@ def sudo_mode(players, raiding):
                 winner = line[5]
                 date = line[6]
 
-                if winner == "Swiftblades": winner = "Swiftbladess"
-                if winner == "SÃµÃ§kÃ¶": winner = "Socko"
-                if winner == "FlambeaÃ¼": winner = "Flambeau"
-                if winner == "KillÃ¤din": winner = "Killadin"
-                if winner == "BeÃ¡sty": winner = "Beasty"
-
                 if ilvl <= 263 and not item_name in exceptions: continue
 
-                if not regular_keyboard(winner):
-                    print(f"Player name {winner} is not valid. Please input the name manually.")
-                    winner = input("Name: ")
+                if winner in known_aliases.keys(): 
+                    alias = known_aliases[winner]
+
+                else: 
+                    alias = winner
+
+                if not regular_keyboard(alias):
+                    print(f"Player name {alias} is not valid. Please input the name manually.")
+                    alias = input("Name: ")
 
                 player = None
                 for p in players:
@@ -1538,45 +1343,6 @@ def sudo_mode(players, raiding):
                     roll_type = "SR" if reserved else "OS" if offspec else "MS"
                     
                 if player is None: 
-                    # Ferrousblade: Death Knight
-                    # Sighanama: Hunter
-                    # Strixien: Druid
-                    # Bunniful: Druid
-                    # Lumosbringer: Paladin
-                    # Kelorlyn: Druid
-                    # Catreene: Paladin
-                    # Mettybeans: Shaman
-                    # Socko: Rogue
-                    # Wamili: Warlock
-                    # Pacratt: Mage
-                    # Flambeau: Shaman
-                    # Jwizard: Warlock
-                    # Killadin: Paladin
-                    # Artaz: Death Knight
-                    # Soulreaverr: Death Knight
-                    # Darkfern: Death Knight
-                    # Swiftbladess: Rogue
-                    # Killiandra: Mage
-                    # Pastiry: Warrior
-                    # Meemeemeemee: Shaman
-                    # Tinyraider: Mage
-                    # Beasty: Hunter
-                    # Axsel: Warlock
-                    # Snedpie: Priest
-                    # Bigpapapaul: Hunter
-                    # Gnoraa: Warlock
-                    # Abletu: Druid
-                    # Bzorder: Druid
-                    # Elisesolis: Paladin
-                    # Prunejuuce: Warrior
-                    # Medulla: Paladin
-                    # Lorniras: Warlock
-                    # Vangoat: Shaman
-                    # Miatotems: Shaman
-                    # Lilypalooza: Priest
-                    # Gnoya: Priest
-                    # Killit: Warlock
-
                     known_players = {
                         "Ferrousblade": "Death Knight",
                         "Sighanama": "Hunter",
@@ -1586,12 +1352,12 @@ def sudo_mode(players, raiding):
                         "Kelorlyn": "Druid",
                         "Catreene": "Paladin",
                         "Mettybeans": "Shaman",
-                        "Socko": "Rogue",
+                        "Sõçkö": "Rogue",
                         "Wamili": "Warlock",
                         "Pacratt": "Mage",
-                        "Flambeau": "Shaman",
+                        "Flambeaü": "Shaman",
                         "Jwizard": "Warlock",
-                        "Killadin": "Paladin",
+                        "Killädin": "Paladin",
                         "Artaz": "Death Knight",
                         "Soulreaverr": "Death Knight",
                         "Darkfern": "Death Knight",
@@ -1600,7 +1366,7 @@ def sudo_mode(players, raiding):
                         "Pastiry": "Warrior",
                         "Meemeemeemee": "Shaman",
                         "Tinyraider": "Mage",
-                        "Beasty": "Hunter",
+                        "Beásty": "Hunter",
                         "Axsel": "Warlock",
                         "Snedpie": "Priest",
                         "Bigpapapaul": "Hunter",
@@ -1620,7 +1386,7 @@ def sudo_mode(players, raiding):
                     if winner in known_players:
                         pclass = known_players[winner]
                         print(f"Player {winner} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
-                        players.append(Player(winner, [], pclass))
+                        players.append(Player(winner, alias, [], pclass))
                         player = players[-1]
 
                     else: 
@@ -1636,7 +1402,7 @@ def sudo_mode(players, raiding):
                         elif pclass.lower() in "warlock": pclass = "Warlock"
                         elif pclass.lower() in "warrior": pclass = "Warrior"
 
-                        players.append(Player(winner, [], pclass))
+                        players.append(Player(winner, alias, [], pclass))
                         player = players[-1]
 
                 player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date))
@@ -1658,17 +1424,17 @@ def sudo_mode(players, raiding):
                     elif not offspec and not roll_type == "ETC" and not roll_type == "OS": 
                         player._regular_plusses += 1
 
-        elif sel == "e": 
+        elif sel == "c": 
             if raiding: print("Exiting raiding mode.")
             else: print("Entering raiding mode.")
             raiding = not raiding
 
-        elif sel == "f":
+        elif sel == "d":
             print("Exiting sudo mode.")
             return players, raiding
 
 def export_gargul(players):
-    with open("plusses.txt", "w") as file: 
+    with open("plusses.txt", "w", encoding="utf-8") as file: 
         for p in players: 
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
 
@@ -1719,7 +1485,7 @@ def paste_history():
     for file in os.listdir("./history"):
         os.remove(f"./history/{file}")
         
-    with open("history.txt", "r") as file: 
+    with open("history.txt", "r", encoding="utf-8") as file: 
         lines = file.read()
 
     # Split by "----------------------------------------" without removing the line of dashes. 
@@ -1741,7 +1507,7 @@ def paste_history():
             total_length += len(line)
         
         else: 
-            with open(f"./history/paste_{index}.txt", "w") as file:
+            with open(f"./history/paste_{index}.txt", "w", encoding="utf-8") as file:
                 file.write(paste)
                 index += 1
             print(f"{total_length}, {'; '.join(receivers)}")
@@ -1750,7 +1516,7 @@ def paste_history():
             total_length = len(line)
     
     print(f"{total_length}, {'; '.join(receivers)}")
-    with open(f"./history/paste_{index}.txt", "w") as file:
+    with open(f"./history/paste_{index}.txt", "w", encoding="utf-8") as file:
         file.write(paste)
 
 while(True): 

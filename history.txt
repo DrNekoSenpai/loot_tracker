@@ -103,7 +103,7 @@ Trinket:
 Two-Hand:
   \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (MS) (2023-11-01)
 ----------------------------------------
-Beasty: 8 items.
+Beásty: 8 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-01-24)
@@ -285,7 +285,7 @@ Two-Hand:
 Ferrousblade: 17 items.
 
 ETC:
-  \- [Shadowfrost Shard (25x)](<https://www.wowhead.com/wotlk/item=50274>)
+  \- [Shadowfrost Shard (29x)](<https://www.wowhead.com/wotlk/item=50274>)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-25)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-28)
 
@@ -322,7 +322,7 @@ Trinket:
 Two-Hand:
   \- [Bryntroll, the Bone Arbiter (264)](<https://www.wowhead.com/wotlk/item=50415>) (MS) (2023-10-18)
 ----------------------------------------
-Flambeau: 1 items.
+Flambeaü: 1 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2023-11-29)
@@ -412,18 +412,6 @@ Ring:
   \- [Ring of Rotting Sinew (264)](<https://www.wowhead.com/wotlk/item=50453>) (MS) (2024-01-03)
   \- [Band of the Bone Colossus (264)](<https://www.wowhead.com/wotlk/item=49949>) (SR) (2024-01-17)
 ----------------------------------------
-Killadin: 4 items.
-
-Head:
-  \- [Faceplate of the Forgotten (264)](<https://www.wowhead.com/wotlk/item=50060>) (OS) (2024-02-14)
-
-Waist:
-  \- [Waistband of Righteous Fury (277)](<https://www.wowhead.com/wotlk/item=50010>) (MS) (2024-01-17)
-  \- [Belt of the Lonely Noble (264)](<https://www.wowhead.com/wotlk/item=50451>) (MS) (2024-01-17)
-
-Ring:
-  \- [Harbinger's Bone Band (264)](<https://www.wowhead.com/wotlk/item=50447>) (MS) (2024-01-17)
-----------------------------------------
 Killiandra: 11 items.
 
 ETC:
@@ -455,6 +443,18 @@ Killit: 1 items.
 
 Legs:
   \- [Sanctified Dark Coven Leggings (264)](<https://www.wowhead.com/wotlk/item=51207>) (MS) (2024-03-03)
+----------------------------------------
+Killädin: 4 items.
+
+Head:
+  \- [Faceplate of the Forgotten (264)](<https://www.wowhead.com/wotlk/item=50060>) (OS) (2024-02-14)
+
+Waist:
+  \- [Waistband of Righteous Fury (277)](<https://www.wowhead.com/wotlk/item=50010>) (MS) (2024-01-17)
+  \- [Belt of the Lonely Noble (264)](<https://www.wowhead.com/wotlk/item=50451>) (MS) (2024-01-17)
+
+Ring:
+  \- [Harbinger's Bone Band (264)](<https://www.wowhead.com/wotlk/item=50447>) (MS) (2024-01-17)
 ----------------------------------------
 Lilypalooza: 12 items.
 
@@ -806,14 +806,6 @@ Main-Hand:
 Ranged:
   \- [Nightmare Ender (264)](<https://www.wowhead.com/wotlk/item=50472>) (MS) (2024-01-17)
 ----------------------------------------
-Socko: 2 items.
-
-ETC:
-  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-01)
-
-Main-Hand:
-  \- [Scourgeborne Waraxe (277)](<https://www.wowhead.com/wotlk/item=50411>) (MS) (2023-11-15)
-----------------------------------------
 Soulreaverr: 9 items.
 
 ETC:
@@ -918,6 +910,14 @@ Main-Hand:
   \- [Bloodvenom Blade (264)](<https://www.wowhead.com/wotlk/item=50412>) (OS) (2024-01-17)
   \- [Lungbreaker (264)](<https://www.wowhead.com/wotlk/item=50183>) (OS) (2024-03-13)
 ----------------------------------------
+Sõçkö: 2 items.
+
+ETC:
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-01)
+
+Main-Hand:
+  \- [Scourgeborne Waraxe (277)](<https://www.wowhead.com/wotlk/item=50411>) (MS) (2023-11-15)
+----------------------------------------
 Tinyraider: 17 items.
 
 ETC:
@@ -992,9 +992,9 @@ Conqueror's Mark of Sanctification:
 
 Protector's Mark of Sanctification:
 
-\- Beasty: 2 Normal
+\- Beásty: 2 Normal
 \- Bigpapapaul: 2 Normal
-\- Flambeau: 1 Normal
+\- Flambeaü: 1 Normal
 \- Meemeemeemee: 2 Normal
 \- Miatotems: 2 Normal
 \- Prunejuuce: 2 Normal
@@ -1011,14 +1011,14 @@ Vanquisher's Mark of Sanctification:
 \- Kelorlyn: 2 Normal
 \- Killiandra: 2 Normal
 \- Pacratt: 2 Normal
-\- Socko: 1 Normal
 \- Soulreaverr: 2 Normal
 \- Strixien: 2 Normal
 \- Swiftbladess: 2 Normal
+\- Sõçkö: 1 Normal
 \- Tinyraider: 2 Normal
 ----------------------------------------
 Number of Shadowfrost Shards received:
 
 \- Artaz: 50
-\- Ferrousblade: 25
+\- Ferrousblade: 29
 \- Pastiry: 9

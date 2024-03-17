@@ -255,7 +255,7 @@
 49988;Leggings of Northern Lights;264;0;1;Miatotems;2024-01-03
 50022;Dual-Bladed Pauldrons;264;0;1;Miatotems;2024-01-03
 50025;Seal of Many Mouths;264;0;0;Meemeemeemee;2024-01-03
-50034;Zod's Repeating Longbow;264;0;0;Beasty;2024-01-03
+50034;Zod's Repeating Longbow;264;0;0;Beásty;2024-01-03
 52027;Conqueror's Mark of Sanctification;80;0;0;Catreene;2024-01-03
 50453;Ring of Rotting Sinew;264;0;0;Kelorlyn;2024-01-03
 49992;Nibelung;264;0;1;Lilypalooza;2024-01-03
@@ -281,7 +281,7 @@
 49992;Nibelung;264;0;0;_disenchanted;2024-01-17
 50016;Rib Spreader;264;0;0;_disenchanted;2024-01-17
 50061;Holiday's Grace;264;0;0;Catreene;2024-01-17
-50452;Wodin's Lucky Necklace;264;0;0;Beasty;2024-01-17
+50452;Wodin's Lucky Necklace;264;0;0;Beásty;2024-01-17
 49987;Cultist's Bloodsoaked Spaulders;264;0;1;Swiftbladess;2024-01-17
 49964;Legguards of Lost Hope;264;0;0;Medulla;2024-01-17
 50447;Harbinger's Bone Band;264;0;0;Killädin;2024-01-17
@@ -333,7 +333,7 @@
 50413;Nerub'ar Stalker's Cord;264;1;0;Bigpapapaul;2024-01-24
 50658;Amulet of the Silent Eulogy;277;0;0;Tinyraider;2024-01-24
 49996;Deathwhisper Raiment;264;0;0;_disenchanted;2024-01-24
-52026;Protector's Mark of Sanctification;80;0;0;Beasty;2024-01-24
+52026;Protector's Mark of Sanctification;80;0;0;Beásty;2024-01-24
 50274;Shadowfrost Shard;0;0;0;Artaz;2024-01-24
 50274;Shadowfrost Shard;0;0;0;Artaz;2024-01-24
 50274;Shadowfrost Shard;0;0;0;Artaz;2024-01-24
@@ -512,6 +512,10 @@
 50413;Nerub'ar Stalker's Cord;264;1;0;Beásty;2024-02-28
 50452;Wodin's Lucky Necklace;264;0;0;Meemeemeemee;2024-02-28
 50056;Plaguebringer's Stained Pants;264;0;0;Lorniras;2024-02-28
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-28
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-28
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-28
+50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-28
 50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-28
 50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-28
 50274;Shadowfrost Shard;0;0;0;Ferrousblade;2024-02-28
