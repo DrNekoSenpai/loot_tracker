@@ -4,6 +4,10 @@ Abletu (+2 MS) (+1 SR)
 - Bracers of Eternal Dreaming (264) (SR) -- received on 2024-03-13
 - Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-03-13
 
+Catreene (+2 MS) (+1 SR)
+- Unclean Surgical Gloves (264) (SR) -- received on **2024-03-17**
+- Leggings of Dying Candles (264) (MS) -- received on 2024-03-13
+
 Tinyraider (+2 MS) (+1 SR)
 - Gunship Captain's Mittens (277) (SR) -- received on 2024-03-13
 - Valanar's Other Signet Ring (264) (MS) -- received on 2024-03-13
@@ -11,6 +15,9 @@ Tinyraider (+2 MS) (+1 SR)
 
 Beásty (+1 MS) (+1 SR)
 - Scourge Hunter's Vambraces (277) (SR) -- received on 2024-03-13
+
+Pacratt (+1 MS) (+1 SR)
+- Corpse-Impaling Spike (264) (SR) -- received on **2024-03-17**
 
 Soulreaverr (+1 MS) (+1 SR)
 - Polar Bear Claw Bracers (277) (SR) -- received on 2024-03-13
@@ -23,9 +30,6 @@ Swiftbladess (+1 MS) (+1 SR)
 Bigpapapaul (+1 MS) (+0 SR)
 - Protector's Mark of Sanctification (N25) (MS) -- received on 2024-03-13
 
-Catreene (+1 MS) (+0 SR)
-- Leggings of Dying Candles (264) (MS) -- received on 2024-03-13
-
 Ferrousblade (+1 MS) (+0 SR)
 - Juggernaut Band (264) (MS) -- received on 2024-03-13
 - Shadowfrost Shard (ETC) -- received on 2024-03-13
@@ -33,6 +37,7 @@ Ferrousblade (+1 MS) (+0 SR)
 - Shadowfrost Shard (ETC) -- received on 2024-03-13
 - Shadowfrost Shard (ETC) -- received on 2024-03-13
 - Shadowfrost Shard (ETC) -- received on 2024-03-13
+- Shadowfrost Shard (ETC) -- received on **2024-03-17**
 
 Gnoraa (+1 MS) (+0 SR)
 - Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-03-13
@@ -42,6 +47,9 @@ Killiandra (+1 MS) (+0 SR)
 
 Snedpie (+1 MS) (+0 SR)
 - Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-03-13
+
+Gnoya (+0 MS) (+0 SR)
+- Leggings of Dubious Charms (264) (OS) -- received on **2024-03-17**
 
 Lilypalooza (+0 MS) (+0 SR)
 - Loop of the Endless Labyrinth (264) (OS) -- received on 2024-03-13
@@ -56,3 +64,7 @@ _disenchanted
 - Incarnadine Band of Mending
 - Deathwhisper Raiment
 - Cryptmaker
+- Dual-Bladed Pauldrons
+- Seal of Many Mouths
+- Nerub'ar Stalker's Cord
+- Horrific Flesh Epaulets

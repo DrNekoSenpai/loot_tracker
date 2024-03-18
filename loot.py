@@ -1,10 +1,8 @@
 import pickle, re, argparse, os, time, pyautogui, subprocess
 from typing import List
-from datetime import datetime
-from datetime import timedelta
+from datetime import datetime, timedelta
 from contextlib import redirect_stdout as redirect
 from io import StringIO
-import requests
 
 parser = argparse.ArgumentParser()
 
@@ -34,9 +32,10 @@ def up_to_date():
         print(f"Error: {e}")
         return None
 
-if up_to_date() == False:
-    print("Error: Updates available for pulling. Please pull the latest changes (using 'git pull') and try again.")
-    exit()
+if up_to_date() is False:
+    print("Error: the local repository is not up to date. Please pull the latest changes before running this script.")
+    print("To pull the latest changes, simply run the command 'git pull' in this terminal.")
+    exit(1)
 
 class Item: 
     def __init__(self, name:str, ilvl:int, slot:int, boe:bool=False): 
@@ -283,22 +282,28 @@ def import_softreserve(players):
                 break
         
         if not player_exists: 
-            # Create a new player object and append it the list. 
 
-            pclass = input(f"Could not find player {alias}. Creating from scratch. What class are they? ")
-            if pclass.lower() in "death knight": pclass = "Death Knight"
-            elif pclass.lower() in "druid": pclass = "Druid"
-            elif pclass.lower() in "hunter": pclass = "Hunter"
-            elif pclass.lower() in "mage": pclass = "Mage"
-            elif pclass.lower() in "paladin": pclass = "Paladin"
-            elif pclass.lower() in "priest": pclass = "Priest"
-            elif pclass.lower() in "rogue": pclass = "Rogue"
-            elif pclass.lower() in "shaman": pclass = "Shaman"
-            elif pclass.lower() in "warlock": pclass = "Warlock"
-            elif pclass.lower() in "warrior": pclass = "Warrior"
+            if name in known_players:
+                pclass = known_players[name]
+                print(f"Player {name} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
+                players.append(Player(name, alias, [], pclass))
+                current_player = players[-1]
 
-            players.append(Player(name, alias, [], pclass))
-            current_player = players[-1]
+            else: 
+                pclass = input(f"Could not find player {alias}. Creating from scratch. What class are they? ")
+                if pclass.lower() in "death knight": pclass = "Death Knight"
+                elif pclass.lower() in "druid": pclass = "Druid"
+                elif pclass.lower() in "hunter": pclass = "Hunter"
+                elif pclass.lower() in "mage": pclass = "Mage"
+                elif pclass.lower() in "paladin": pclass = "Paladin"
+                elif pclass.lower() in "priest": pclass = "Priest"
+                elif pclass.lower() in "rogue": pclass = "Rogue"
+                elif pclass.lower() in "shaman": pclass = "Shaman"
+                elif pclass.lower() in "warlock": pclass = "Warlock"
+                elif pclass.lower() in "warrior": pclass = "Warrior"
+
+                players.append(Player(name, alias, [], pclass))
+                current_player = players[-1]
 
         # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
         current_player._reserves.append(item)
@@ -652,6 +657,7 @@ def award_loot(players):
 
     player_matches = []
     for p in players:
+        if p._attendance == False: continue
         if name in p.alias.lower(): 
             player_matches.append(p)
 
@@ -784,11 +790,55 @@ def award_loot(players):
         
     return players
 
+known_players = {
+    "Ferrousblade": "Death Knight",
+    "Sighanama": "Hunter",
+    "Strixien": "Druid",
+    "Bunniful": "Druid",
+    "Lumosbringer": "Paladin",
+    "Kelorlyn": "Druid",
+    "Catreene": "Paladin",
+    "Mettybeans": "Shaman",
+    "Sõçkö": "Rogue",
+    "Wamili": "Warlock",
+    "Pacratt": "Mage",
+    "Flambeaü": "Shaman",
+    "Jwizard": "Warlock",
+    "Killädin": "Paladin",
+    "Artaz": "Death Knight",
+    "Soulreaverr": "Death Knight",
+    "Darkfern": "Death Knight",
+    "Swiftbladess": "Rogue",
+    "Killiandra": "Mage",
+    "Pastiry": "Warrior",
+    "Meemeemeemee": "Shaman",
+    "Tinyraider": "Mage",
+    "Beásty": "Hunter",
+    "Axsel": "Warlock",
+    "Snedpie": "Priest",
+    "Bigpapapaul": "Hunter",
+    "Gnoraa": "Warlock",
+    "Abletu": "Druid",
+    "Bzorder": "Druid",
+    "Elisesolis": "Paladin",
+    "Prunejuuce": "Warrior",
+    "Medulla": "Paladin",
+    "Lorniras": "Warlock",
+    "Vangoat": "Shaman",
+    "Miatotems": "Shaman",
+    "Lilypalooza": "Priest",
+    "Gnoya": "Priest",
+    "Killit": "Warlock",
+}
+
 def mark_attendance(players):
     num_present = 0
 
     for p in players: 
         p._attendance = False
+
+        if p.name == "_disenchanted":
+            p._attendance = True
 
     print("")
     with open("attendance.txt", "r", encoding="utf-8") as file: 
@@ -824,19 +874,25 @@ def mark_attendance(players):
                 break
         
         if not found: 
-            pclass = input(f"Could not find player {new_player}. Creating from scratch. What class are they? ")
-            if pclass.lower() in "death knight": pclass = "Death Knight"
-            elif pclass.lower() in "druid": pclass = "Druid"
-            elif pclass.lower() in "hunter": pclass = "Hunter"
-            elif pclass.lower() in "mage": pclass = "Mage"
-            elif pclass.lower() in "paladin": pclass = "Paladin"
-            elif pclass.lower() in "priest": pclass = "Priest"
-            elif pclass.lower() in "rogue": pclass = "Rogue"
-            elif pclass.lower() in "shaman": pclass = "Shaman"
-            elif pclass.lower() in "warlock": pclass = "Warlock"
-            elif pclass.lower() in "warrior": pclass = "Warrior"
+            if new_player in known_players:
+                pclass = known_players[new_player]
+                print(f"Player {new_player} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
+                players.append(Player(new_player, alias, [], pclass))
 
-            players.append(Player(new_player, alias, [], pclass))
+            else:
+                pclass = input(f"Could not find player {new_player}. Creating from scratch. What class are they? ")
+                if pclass.lower() in "death knight": pclass = "Death Knight"
+                elif pclass.lower() in "druid": pclass = "Druid"
+                elif pclass.lower() in "hunter": pclass = "Hunter"
+                elif pclass.lower() in "mage": pclass = "Mage"
+                elif pclass.lower() in "paladin": pclass = "Paladin"
+                elif pclass.lower() in "priest": pclass = "Priest"
+                elif pclass.lower() in "rogue": pclass = "Rogue"
+                elif pclass.lower() in "shaman": pclass = "Shaman"
+                elif pclass.lower() in "warlock": pclass = "Warlock"
+                elif pclass.lower() in "warrior": pclass = "Warrior"
+
+                players.append(Player(new_player, alias, [], pclass))
 
         # Find the player in the list of players, and change their _attendance to True. 
         for p in players:
@@ -1130,6 +1186,7 @@ def remove_loot(players):
     player = input("Enter the name of the player who we are removing from: ").lower()
     player_matches = []
     for p in players:
+        if p._attendance == False: continue
         if player in p.alias.lower(): 
             player_matches.append(p)
 
@@ -1343,46 +1400,6 @@ def sudo_mode(players, raiding):
                     roll_type = "SR" if reserved else "OS" if offspec else "MS"
                     
                 if player is None: 
-                    known_players = {
-                        "Ferrousblade": "Death Knight",
-                        "Sighanama": "Hunter",
-                        "Strixien": "Druid",
-                        "Bunniful": "Druid",
-                        "Lumosbringer": "Paladin",
-                        "Kelorlyn": "Druid",
-                        "Catreene": "Paladin",
-                        "Mettybeans": "Shaman",
-                        "Sõçkö": "Rogue",
-                        "Wamili": "Warlock",
-                        "Pacratt": "Mage",
-                        "Flambeaü": "Shaman",
-                        "Jwizard": "Warlock",
-                        "Killädin": "Paladin",
-                        "Artaz": "Death Knight",
-                        "Soulreaverr": "Death Knight",
-                        "Darkfern": "Death Knight",
-                        "Swiftbladess": "Rogue",
-                        "Killiandra": "Mage",
-                        "Pastiry": "Warrior",
-                        "Meemeemeemee": "Shaman",
-                        "Tinyraider": "Mage",
-                        "Beásty": "Hunter",
-                        "Axsel": "Warlock",
-                        "Snedpie": "Priest",
-                        "Bigpapapaul": "Hunter",
-                        "Gnoraa": "Warlock",
-                        "Abletu": "Druid",
-                        "Bzorder": "Druid",
-                        "Elisesolis": "Paladin",
-                        "Prunejuuce": "Warrior",
-                        "Medulla": "Paladin",
-                        "Lorniras": "Warlock",
-                        "Vangoat": "Shaman",
-                        "Miatotems": "Shaman",
-                        "Lilypalooza": "Priest",
-                        "Gnoya": "Priest",
-                        "Killit": "Warlock",
-                    }
                     if winner in known_players:
                         pclass = known_players[winner]
                         print(f"Player {winner} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")

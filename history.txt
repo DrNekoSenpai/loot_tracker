@@ -185,7 +185,7 @@ Legs:
 Feet:
   \- [Boots of Unnatural Growth (277)](<https://www.wowhead.com/wotlk/item=50009>) (MS) (2023-11-01)
 ----------------------------------------
-Catreene: 14 items.
+Catreene: 15 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2023-12-13)
@@ -209,6 +209,7 @@ Wrist:
 
 Hands:
   \- [Fallen Lord's Handguards (264)](<https://www.wowhead.com/wotlk/item=49995>) (OS) (2023-10-25)
+  \- [Unclean Surgical Gloves (264)](<https://www.wowhead.com/wotlk/item=50064>) (SR) (2024-03-17)
 
 Waist:
   \- [Waistband of Righteous Fury (277)](<https://www.wowhead.com/wotlk/item=50010>) (MS) (2023-10-25)
@@ -285,7 +286,7 @@ Two-Hand:
 Ferrousblade: 17 items.
 
 ETC:
-  \- [Shadowfrost Shard (29x)](<https://www.wowhead.com/wotlk/item=50274>)
+  \- [Shadowfrost Shard (30x)](<https://www.wowhead.com/wotlk/item=50274>)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-25)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-28)
 
@@ -348,7 +349,7 @@ Legs:
 Ranged:
   \- [Corpse-Impaling Spike (264)](<https://www.wowhead.com/wotlk/item=50033>) (SR) (2024-02-07)
 ----------------------------------------
-Gnoya: 9 items.
+Gnoya: 10 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-01-31)
@@ -365,6 +366,9 @@ Chest:
 
 Waist:
   \- [Crushing Coldwraith Belt (264)](<https://www.wowhead.com/wotlk/item=49978>) (SR) (2024-01-17)
+
+Legs:
+  \- [Leggings of Dubious Charms (264)](<https://www.wowhead.com/wotlk/item=50450>) (OS) (2024-03-17)
 
 Ring:
   \- [Marrowgar's Frigid Eye (264)](<https://www.wowhead.com/wotlk/item=49967>) (SR) (2024-01-24)
@@ -658,7 +662,7 @@ Off-Hand:
   \- [Bulwark of Smouldering Steel (277)](<https://www.wowhead.com/wotlk/item=49976>) (SR) (2024-02-14)
   \- [Keleseth's Seducer (264)](<https://www.wowhead.com/wotlk/item=50184>) (OS) (2024-02-18)
 ----------------------------------------
-Pacratt: 8 items.
+Pacratt: 9 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-15)
@@ -681,6 +685,9 @@ Main-Hand:
 
 Off-Hand:
   \- [Shadow Silk Spindle (264)](<https://www.wowhead.com/wotlk/item=50173>) (SR) (2024-02-18)
+
+Ranged:
+  \- [Corpse-Impaling Spike (264)](<https://www.wowhead.com/wotlk/item=50033>) (SR) (2024-03-17)
 ----------------------------------------
 Pastiry: 10 items.
 
@@ -1020,5 +1027,5 @@ Vanquisher's Mark of Sanctification:
 Number of Shadowfrost Shards received:
 
 \- Artaz: 50
-\- Ferrousblade: 29
+\- Ferrousblade: 30
 \- Pastiry: 9
