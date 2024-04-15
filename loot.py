@@ -1371,12 +1371,10 @@ def paste_history():
     with open("history.txt", "r", encoding="utf-8") as file: 
         lines = file.read()
 
-    # Split by "----------------------------------------" without removing the line of dashes. 
-    lines = lines.split("----------------------------------------\n")
+    lines = lines.split("\n")
     for i in range(len(lines)):
-        lines[i] += "----------------------------------------\n"
+        lines[i] += "\n"
 
-    receivers = []
     paste = ""
     total_length = 0
     index = 0
@@ -1385,7 +1383,6 @@ def paste_history():
         receiver = line.split("\n")[0]
 
         if len(line) + total_length < 3900: 
-            receivers.append(receiver)
             paste += line
             total_length += len(line)
         
@@ -1393,12 +1390,9 @@ def paste_history():
             with open(f"./history/paste_{index}.txt", "w", encoding="utf-8") as file:
                 file.write(paste)
                 index += 1
-            print(f"{total_length}, {'; '.join(receivers)}")
-            receivers = [receiver]
             paste = line
             total_length = len(line)
     
-    print(f"{total_length}, {'; '.join(receivers)}")
     with open(f"./history/paste_{index}.txt", "w", encoding="utf-8") as file:
         file.write(paste)
 

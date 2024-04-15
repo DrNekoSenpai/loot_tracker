@@ -1,40 +1,52 @@
-Loot log for Wednesday, 2024-04-03 and **Sunday, 2024-04-07**:
+Loot log for Wednesday, 2024-04-10 and **Sunday, 2024-04-14**:
 
-Pastiry (+2 MS) (+1 SR)
-- Shadowvault Slayer's Cloak (277) (SR) -- received on 2024-04-03
-- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-04-03
-- Harbinger's Bone Band (264) (OS) -- received on 2024-04-03
+Snedpie (+1 MS) (+1 SR)
+- Dislodged Foreign Object (264) (SR) -- received on **2024-04-14**
 
-Bunniful (+1 MS) (+1 SR)
-- Loop of the Endless Labyrinth (277) (SR) -- received on 2024-04-03
-
-Bzorder (+1 MS) (+1 SR)
-- Ring of Rapid Ascent (277) (SR) -- received on 2024-04-03
-
-Meemeemeemee (+1 MS) (+1 SR)
-- Band of the Bone Colossus (277) (SR) -- received on 2024-04-03
+Lorniras (+2 MS) (+0 SR)
+- Stiffened Corpse Shoulderpads (264) (MS) -- received on **2024-04-14**
+- Bone Sentinel's Amulet (264) (MS) -- received on **2024-04-14**
 
 Beásty (+1 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-04-03
+- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-04-14**
+
+Catreene (+1 MS) (+0 SR)
+- Althor's Abacus (277) (MS) -- received on **2024-04-14**
+
+Gnoya (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-04-14**
+
+Medulla (+1 MS) (+0 SR)
+- Scourgeborne Waraxe (277) (MS) -- received on **2024-04-14**
 
 Pacratt (+1 MS) (+0 SR)
-- Bone Sentinel's Amulet (277) (MS) -- received on 2024-04-03
+- Amulet of the Silent Eulogy (277) (MS) -- received on **2024-04-14**
 
 Artaz (+0 MS) (+0 SR)
-- Belt of the Blood Nova (264) (OS) -- received on 2024-04-03
+- Bryntroll, the Bone Arbiter (264) (OS) -- received on **2024-04-14**
 
 Ferrousblade (+0 MS) (+0 SR)
-- Blood-Soaked Saronite Stompers (264) (OS) -- received on 2024-04-03
-- Shadowfrost Shard (ETC) -- received on 2024-04-03
-- Shadowfrost Shard (ETC) -- received on 2024-04-03
-- Shadowfrost Shard (ETC) -- received on 2024-04-03
-- Shadowfrost Shard (ETC) -- received on 2024-04-03
+- Raging Behemoth's Shoulderplates (264) (OS) -- received on **2024-04-14**
 
-Medulla (+0 MS) (+0 SR)
-- Polar Bear Claw Bracers (277) (OS) -- received on 2024-04-03
+Miatotems (+0 MS) (+0 SR)
+- Loop of the Endless Labyrinth (264) (OS) -- received on **2024-04-14**
 
-Vanthulhu (+0 MS) (+0 SR)
-- Nibelung (264) (OS) -- received on 2024-04-03
+Pastiry (+0 MS) (+0 SR)
+- Shadowfrost Shard (ETC) -- received on **2024-04-14**
+- Shadowfrost Shard (ETC) -- received on **2024-04-14**
+- Shadowfrost Shard (ETC) -- received on **2024-04-14**
+- Shadowfrost Shard (ETC) -- received on **2024-04-14**
+- Shadowfrost Shard (ETC) -- received on **2024-04-14**
+- Shadowfrost Shard (ETC) -- received on **2024-04-14**
+
+Swiftbladess (+0 MS) (+0 SR)
+- Toskk's Maximized Wristguards (264) (OS) -- received on **2024-04-14**
+- Seal of Many Mouths (264) (OS) -- received on **2024-04-14**
 
 _disenchanted
-- Shoulders of Mercy Killing
+- Nibelung
+- Zod's Repeating Longbow
+- Leggings of Northern Lights
+- Faceplate of the Forgotten
+- Distant Land
+- Nerub'ar Stalker's Cord

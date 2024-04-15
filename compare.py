@@ -91,16 +91,6 @@ for ind,line in enumerate(export):
     winner = line[5]
     date = line[6]
 
-    if winner == "Swiftblades": winner = "Swiftbladess"
-    if winner == "Sõçkö": winner = "Socko"
-    if winner == "Flambeaü": winner = "Flambeau"
-    if winner == "Killädin": winner = "Killadin"
-    if winner == "Beásty": winner = "Beasty"
-
-    if not regular_keyboard(winner):
-        print(f"Player name {winner} is not valid. Please input the name manually.")
-        winner = input("Name: ")
-
     if item_id == 52025: ilvl = "N25"
     elif item_id == 52026: ilvl = "N25"
     elif item_id == 52027: ilvl = "N25"
