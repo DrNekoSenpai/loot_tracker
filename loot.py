@@ -492,9 +492,9 @@ def award_loot(players):
 
     elif slot_names[int(item_match.slot)] == "ETC": 
         if item_match.name == "Shadowfrost Shard": 
-            # Priority: Artaz, then Ferrousblade, then Pastiry
+            # Priority: Artasz, then Ferrousblade, then Pastiry
             # Print out the number of shards that these players have. 
-            eligible_players = ["Artaz", "Ferrousblade", "Pastiry"]
+            eligible_players = ["Artasz", "Ferrousblade", "Pastiry"]
             print("")
 
             priority = ""
@@ -671,7 +671,7 @@ known_players = {
     "Flambeaü": "Shaman",
     "Jwizard": "Warlock",
     "Killädin": "Paladin",
-    "Artaz": "Death Knight",
+    "Artasz": "Death Knight",
     "Soulreaverr": "Death Knight",
     "Darkfern": "Death Knight",
     "Swiftbladess": "Rogue",
@@ -688,7 +688,7 @@ known_players = {
     "Bzorder": "Druid",
     "Elisesolis": "Paladin",
     "Prunejuuce": "Warrior",
-    "Medulla": "Paladin",
+    "Medullaa": "Paladin",
     "Lorniras": "Warlock",
     "Vangoat": "Shaman",
     "Miatotems": "Shaman",

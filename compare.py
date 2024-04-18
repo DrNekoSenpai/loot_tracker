@@ -68,11 +68,11 @@ for ind,item in enumerate(loot):
     elif pattern_1_dis.match(item):
         continue
     elif pattern_2.match(item):
-        item, ilvl, roll, date = pattern_2.match(item).groups()
-        item_log.append((item, ilvl, roll, date, winner))
+        item, ilvl, roll, _ = pattern_2.match(item).groups()
+        item_log.append((item, ilvl, roll, winner))
     elif pattern_3.match(item):
-        item, roll, date = pattern_3.match(item).groups()
-        item_log.append((item, "0", roll, date, winner))
+        item, roll, _ = pattern_3.match(item).groups()
+        item_log.append((item, "0", roll, winner))
     elif pattern_dis.match(item):
         continue
 
@@ -89,7 +89,6 @@ for ind,line in enumerate(export):
     reserved = True if line[3] == "1" else False 
     offspec = True if line[4] == "1" else False
     winner = line[5]
-    date = line[6]
 
     if item_id == 52025: ilvl = "N25"
     elif item_id == 52026: ilvl = "N25"
@@ -102,7 +101,7 @@ for ind,line in enumerate(export):
     elif "Wrathful Gladiator's" in item_name: roll_type = "OS"
     else: roll_type = "SR" if reserved else "OS" if offspec else "MS"
 
-    export_log.append((item_name, ilvl, roll_type, date, winner))
+    export_log.append((item_name, ilvl, roll_type, winner))
 
 for item in item_log: 
     item_name = item[0]
@@ -118,22 +117,35 @@ for item in item_log:
     exact_match = False
 
     for match in matches:
-        if item[1] == match[1] and item[2] == match[2] and item[3] == match[3] and item[4] == match[4]:
+        if item[1] == match[1] and item[2] == match[2] and item[3] == match[3]:
             print(f"EXACT: {match}.")
             exact_match = True
             break
     
     if not exact_match:
-        print(f"PARTIAL: {item_name}")
+        print("+----------------------------------------+")
+        item_name = item_name + " " * (38 - len(item_name))
+        print(f"| {item_name} |")
+        print("+--------+---------------+---------------+")
+        print("|  TYPE  |    ACTUAL     |    EXPORT     |")
+        print("+--------+---------------+---------------+")
         for match in matches:
             if item[1] != match[1]:
-                print(f"ILVL: {item[1]} vs {match[1]}")
+                # Append extra spaces to the end each string, to a maximum of 15 characters. 
+                actual = item[1] + " " * (13 - len(item[1]))
+                export = match[1] + " " * (13 - len(match[1]))
+
+                print(f"|  ILVL  | {actual} | {export} |")
 
             if item[2] != match[2]:
-                print(f"ROLL: {item[2]} vs {match[2]}")
+                actual = item[2] + " " * (13 - len(item[2]))
+                export = match[2] + " " * (13 - len(match[2]))
+
+                print(f"|  ROLL  | {actual} | {export} |")
 
             if item[3] != match[3]:
-                print(f"DATE: {item[3]} vs {match[3]}")
+                actual = item[3] + " " * (13 - len(item[3]))
+                export = match[3] + " " * (13 - len(match[3]))
 
-            if item[4] != match[4]:
-                print(f"WINNER: {item[4]} vs {match[4]}")
+                print(f"| WINNER | {actual} | {export} |")
+        print("+--------+---------------+---------------+")
