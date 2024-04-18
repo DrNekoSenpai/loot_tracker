@@ -1,9 +1,7 @@
 Loot log for **Wednesday, 2024-04-17**:
 
-Axsel (+3 MS) (+1 SR)
+Axsel (+1 MS) (+1 SR)
 - Corpse-Impaling Spike (264) (SR) -- received on **2024-04-17**
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-04-17**
-- Dying Light (264) (MS) -- received on **2024-04-17**
 
 Ferrousblade (+1 MS) (+1 SR)
 - Belt of Broken Bones (264) (SR) -- received on **2024-04-17**
@@ -20,6 +18,10 @@ Chainmale (+2 MS) (+0 SR)
 - Faceplate of the Forgotten (264) (MS) -- received on **2024-04-17**
 - Snowserpent Mail Helm (264) (OS) -- received on **2024-04-17**
 
+Lorniras (+2 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-04-17**
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-04-17**
+
 Meemeemeemee (+2 MS) (+0 SR)
 - Protector's Mark of Sanctification (N25) (MS) -- received on **2024-04-17**
 - Protector's Mark of Sanctification (N25) (MS) -- received on **2024-04-17**
@@ -27,9 +29,6 @@ Meemeemeemee (+2 MS) (+0 SR)
 Bladehero (+1 MS) (+0 SR)
 - Skeleton Lord's Circle (277) (MS) -- received on **2024-04-17**
 - Blightborne Warplate (264) (OS) -- received on **2024-04-17**
-
-Lorniras (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-04-17**
 
 Pacratt (+1 MS) (+0 SR)
 - Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-17**
@@ -69,3 +68,4 @@ _disenchanted
 - Dual-Bladed Pauldrons
 - Shoulders of Frost-Tipped Thorns
 - Keleseth's Seducer
+- Dying Light

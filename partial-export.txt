@@ -13,14 +13,14 @@
 50451;Belt of the Lonely Noble;264;0;1;Artasz;2024-04-17
 50657;Skeleton Lord's Circle;277;0;0;Bladehero;2024-04-17
 52026;Protector's Mark of Sanctification;80;0;0;Miatotems;2024-04-17
-52027;Conqueror's Mark of Sanctification;80;0;0;Axsel;2024-04-17
+52027;Conqueror's Mark of Sanctification;80;0;0;Lorniras;2024-04-17
 50664;Ring of Rapid Ascent;277;0;0;Chainmale;2024-04-17
 49987;Cultist's Bloodsoaked Spaulders;264;0;0;_disenchanted;2024-04-17
 49985;Juggernaut Band;264;0;1;Sigofthenama;2024-04-17
 49992;Nibelung;264;0;0;_disenchanted;2024-04-17
 49952;Snowserpent Mail Helm;264;0;1;Chainmale;2024-04-17
 49975;Bone Sentinel's Amulet;264;0;0;_disenchanted;2024-04-17
-50181;Dying Light;264;0;0;Axsel;2024-04-17
+50181;Dying Light;264;0;0;_disenchanted;2024-04-17
 50333;Toskk's Maximized Wristguards;264;0;1;Bzorder;2024-04-17
 50171;Shoulders of Frost-Tipped Thorns;264;0;0;_disenchanted;2024-04-17
 52025;Vanquisher's Mark of Sanctification;80;0;0;Swiftbladess;2024-04-17

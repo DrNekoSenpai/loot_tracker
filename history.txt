@@ -89,11 +89,10 @@ Two-Hand:
   \- [Cryptmaker (264)](<https://www.wowhead.com/wotlk/item=49919>) (OS) (2024-02-21)
   \- [Bryntroll, the Bone Arbiter (264)](<https://www.wowhead.com/wotlk/item=50415>) (OS) (2024-04-14)
 ----------------------------------------
-Axsel: 10 items.
+Axsel: 8 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2023-12-06)
-  \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-04-17)
 
 Neck:
   \- [Amulet of the Silent Eulogy (264)](<https://www.wowhead.com/wotlk/item=50005>) (SR) (2023-10-18)
@@ -112,7 +111,6 @@ Trinket:
 
 Two-Hand:
   \- [Nibelung (264)](<https://www.wowhead.com/wotlk/item=49992>) (MS) (2023-11-01)
-  \- [Dying Light (264)](<https://www.wowhead.com/wotlk/item=50181>) (MS) (2024-04-17)
 
 Ranged:
   \- [Corpse-Impaling Spike (264)](<https://www.wowhead.com/wotlk/item=50033>) (SR) (2024-04-17)
@@ -572,9 +570,10 @@ Two-Hand:
 Ranged:
   \- [Nightmare Ender (264)](<https://www.wowhead.com/wotlk/item=50472>) (SR) (2023-12-17)
 ----------------------------------------
-Lorniras: 15 items.
+Lorniras: 16 items.
 
 ETC:
+  \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-04-17)
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-04-17)
 
 Head:
@@ -1133,14 +1132,14 @@ Number of tokens received:
 
 Conqueror's Mark of Sanctification:
 
-\- Axsel: 2 Normal
+\- Axsel: 1 Normal
 \- Catreene: 2 Normal
 \- Elisesolis: 2 Normal
 \- Gnoraa: 2 Normal
 \- Gnoya: 3 Normal
 \- Jwizard: 1 Normal
 \- Lilypalooza: 2 Normal
-\- Lorniras: 1 Normal
+\- Lorniras: 2 Normal
 \- Lumosbringer: 1 Normal
 \- Medullaa: 2 Normal
 \- Snedpie: 2 Normal
