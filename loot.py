@@ -492,9 +492,9 @@ def award_loot(players):
 
     elif slot_names[int(item_match.slot)] == "ETC": 
         if item_match.name == "Shadowfrost Shard": 
-            # Priority: Artasz, then Ferrousblade, then Pastiry
+            # Priority: Artasz, then Ferrousblade, then Pastiry, then Soulreaverr
             # Print out the number of shards that these players have. 
-            eligible_players = ["Artasz", "Ferrousblade", "Pastiry"]
+            eligible_players = ["Artasz", "Ferrousblade", "Pastiry", "Soulreaverr"]
             print("")
 
             priority = ""
@@ -515,6 +515,35 @@ def award_loot(players):
             
             else: 
                 print(f"This shard goes to: {priority}.")
+
+    if "Mark of Sanctification" in item_match.name: 
+            if "Conqueror's Mark of Sanctification" in item_match.name:
+                player_classes = ["Paladin", "Priest", "Warlock"]
+
+            elif "Protector's Mark of Sanctification" in item_match.name:
+                player_classes = ["Warrior", "Hunter", "Shaman"]
+
+            elif "Vanquisher's Mark of Sanctification" in item_match.name:
+                player_classes = ["Death Knight", "Druid", "Mage", "Rogue"]
+
+            print(f"\nThis token is for the following classes: {', '.join(player_classes)}.")
+
+            if raiding:
+                ready = input("Ready to announce? (y/n): ").lower()
+                if ready == "y": 
+                    pyautogui.moveTo(1920/2, 1080/2)
+                    pyautogui.click()
+                    time.sleep(0.1)
+
+                    pyautogui.write("/")
+                    time.sleep(0.1)
+                    pyautogui.write("rw")
+                    time.sleep(0.1)
+                    pyautogui.press("space")
+                    time.sleep(0.1)
+                    pyautogui.write(f"This token is for the following classes: {', '.join(player_classes)}.")
+                    time.sleep(0.1)
+                    pyautogui.press("enter")
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -690,7 +719,7 @@ known_players = {
     "Prunejuuce": "Warrior",
     "Medullaa": "Paladin",
     "Lorniras": "Warlock",
-    "Vangoat": "Shaman",
+    "Vangoated": "Shaman",
     "Miatotems": "Shaman",
     "Lilypalooza": "Priest",
     "Gnoya": "Priest",

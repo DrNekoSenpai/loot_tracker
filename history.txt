@@ -178,13 +178,16 @@ Chest:
 Ring:
   \- [Skeleton Lord's Circle (277)](<https://www.wowhead.com/wotlk/item=49999>) (MS) (2024-04-17)
 ----------------------------------------
-Bunniful: 5 items.
+Bunniful: 6 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-03-06)
 
 Shoulder:
   \- [Shoulders of Frost-Tipped Thorns (264)](<https://www.wowhead.com/wotlk/item=50171>) (MS) (2024-03-06)
+
+Back:
+  \- [Frostbinder's Shredded Cape (264)](<https://www.wowhead.com/wotlk/item=50205>) (SR) (2024-04-21)
 
 Ring:
   \- [Loop of the Endless Labyrinth (264)](<https://www.wowhead.com/wotlk/item=49977>) (SR) (2023-10-15)
@@ -193,11 +196,12 @@ Ring:
 Two-Hand:
   \- [Dying Light (264)](<https://www.wowhead.com/wotlk/item=50181>) (SR) (2024-03-06)
 ----------------------------------------
-Bzorder: 10 items.
+Bzorder: 11 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-25)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-14)
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-04-21)
 
 Neck:
   \- [Wodin's Lucky Necklace (264)](<https://www.wowhead.com/wotlk/item=50452>) (OS) (2024-02-07)
@@ -221,11 +225,12 @@ Feet:
 Ring:
   \- [Ring of Rapid Ascent (277)](<https://www.wowhead.com/wotlk/item=50008>) (SR) (2024-04-03)
 ----------------------------------------
-Catreene: 16 items.
+Catreene: 17 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2023-12-13)
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-01-03)
+  \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-04-21)
 
 Neck:
   \- [Holiday's Grace (264)](<https://www.wowhead.com/wotlk/item=50061>) (MS) (2024-01-17)
@@ -417,7 +422,7 @@ Main-Hand:
 Ranged:
   \- [Corpse-Impaling Spike (264)](<https://www.wowhead.com/wotlk/item=50033>) (SR) (2024-02-07)
 ----------------------------------------
-Gnoya: 11 items.
+Gnoya: 12 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-01-31)
@@ -442,6 +447,9 @@ Ring:
 
 Trinket:
   \- [Althor's Abacus (277)](<https://www.wowhead.com/wotlk/item=50359>) (SR) (2023-12-06)
+
+Off-Hand:
+  \- [Sundial of Eternal Dusk (264)](<https://www.wowhead.com/wotlk/item=50423>) (SR) (2024-04-21)
 
 Ranged:
   \- [Corpse-Impaling Spike (264)](<https://www.wowhead.com/wotlk/item=50033>) (SR) (2023-12-17)
@@ -666,7 +674,7 @@ Main-Hand:
 Two-Hand:
   \- [Bryntroll, the Bone Arbiter (277)](<https://www.wowhead.com/wotlk/item=50415>) (OS) (2024-02-21)
 ----------------------------------------
-Meemeemeemee: 15 items.
+Meemeemeemee: 16 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2023-11-29)
@@ -679,6 +687,9 @@ Neck:
 
 Back:
   \- [Shadowvault Slayer's Cloak (264)](<https://www.wowhead.com/wotlk/item=49998>) (SR) (2023-10-18)
+
+Hands:
+  \- [Anub'ar Stalker's Gloves (264)](<https://www.wowhead.com/wotlk/item=50188>) (SR) (2024-04-21)
 
 Waist:
   \- [Astrylian's Sutured Cinch (264)](<https://www.wowhead.com/wotlk/item=50067>) (OS) (2024-02-28)
@@ -793,7 +804,7 @@ Off-Hand:
 Pastiry: 16 items.
 
 ETC:
-  \- [Shadowfrost Shard (26x)](<https://www.wowhead.com/wotlk/item=50274>)
+  \- [Shadowfrost Shard (27x)](<https://www.wowhead.com/wotlk/item=50274>)
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-04-03)
 
 Shoulder:
@@ -941,6 +952,7 @@ Ranged:
 Soulreaverr: 9 items.
 
 ETC:
+  \- [Shadowfrost Shard (2x)](<https://www.wowhead.com/wotlk/item=50274>)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-11-01)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-01-17)
 
@@ -1133,7 +1145,7 @@ Number of tokens received:
 Conqueror's Mark of Sanctification:
 
 \- Axsel: 1 Normal
-\- Catreene: 2 Normal
+\- Catreene: 3 Normal
 \- Elisesolis: 2 Normal
 \- Gnoraa: 2 Normal
 \- Gnoya: 3 Normal
@@ -1160,7 +1172,7 @@ Vanquisher's Mark of Sanctification:
 \- Abletu: 3 Normal
 \- Artasz: 2 Normal
 \- Bunniful: 1 Normal
-\- Bzorder: 2 Normal
+\- Bzorder: 3 Normal
 \- Darkfern: 3 Normal
 \- Ferrousblade: 3 Normal
 \- Kelorlyn: 2 Normal
@@ -1176,4 +1188,5 @@ Number of Shadowfrost Shards received:
 
 \- Artasz: 50
 \- Ferrousblade: 50
-\- Pastiry: 26
+\- Pastiry: 27
+\- Soulreaverr: 2

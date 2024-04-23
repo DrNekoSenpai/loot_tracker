@@ -39,3 +39,11 @@
 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-17
 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-17
 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-17
+50199;Leggings of Dying Candles;264;0;0;_disenchanted;2024-04-21
+50205;Frostbinder's Shredded Cape;264;1;0;Bunniful;2024-04-21
+52025;Vanquisher's Mark of Sanctification;80;0;0;Bzorder;2024-04-21
+50188;Anub'ar Stalker's Gloves;264;1;0;Meemeemeemee;2024-04-21
+52027;Conqueror's Mark of Sanctification;80;0;0;Catreene;2024-04-21
+50423;Sundial of Eternal Dusk;264;1;0;Gnoya;2024-04-21
+50274;Shadowfrost Shard;0;0;0;Soulreaverr;2024-04-21
+50274;Shadowfrost Shard;0;0;0;Soulreaverr;2024-04-21
