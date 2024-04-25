@@ -227,6 +227,17 @@ def import_softreserve(players):
     if not os.path.exists("soft_reserves.csv"):
         print("No reserve file found. Skipping.")
         return players
+    
+    if not os.path.exists("passing.txt"): 
+        print("No passing file found.")
+        passing = []
+    
+    else:
+        with open("passing.txt", "r") as f: 
+            passing = f.readlines()
+
+        for ind, p in enumerate(passing): 
+            passing[ind] = p.strip().split(", ")
 
     # Go through the list of players, and wipe all reserves. 
     for p in players: 
@@ -283,7 +294,6 @@ def import_softreserve(players):
                 break
         
         if not player_exists: 
-
             if name in known_players:
                 pclass = known_players[name]
                 print(f"Player {name} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
@@ -307,9 +317,17 @@ def import_softreserve(players):
                 current_player = players[-1]
 
         # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
-        current_player._reserves.append(item)
-        # current_player._reserves.append((item, False))
-        print(f"{current_player.name} has reserved {item}.")
+        # Find if they are passing on this item. 
+        passing_on = False
+        for p in passing: 
+            if p[0] == name and p[1] == item:
+                passing_on = True
+                break
+
+        current_player._reserves.append((item, passing_on))
+        print(f"{current_player.name} has reserved {item}", end = "")
+        if passing_on: print(", but has chosen to pass on this item.")
+        else: print(".")
 
     return players
 
@@ -376,6 +394,7 @@ def award_loot(players):
     # We'll check the soft-reserves to see if anyone has this item soft-reserved, excluding anyone who has already won the same item, with the same item level. 
     # For example, Ring of Rapid Ascent (264) and Ring of Rapid Ascent (277) are considered different items.
     # We need to check the corresponding _history list, which is categorized based on slot. 
+    table_printed = False
 
     for p in players: 
         # Skip this person if they're not here.
@@ -385,12 +404,30 @@ def award_loot(players):
         # Tuple: (string, bool) -- string, the item name; bool, whether or not the player is passing on this item. 
         # The bool is there to account for players who received something better, and no longer needs this item. 
 
-        # if item_match.name in [i[0] for i in p._reserves]:
-        if item_match.name in p._reserves: 
-            print(f"{p.name} has soft-reserved this item ({item_match.name}).")
+        if item_match.name in [i[0] for i in p._reserves]:
+            passing = False
+            for i in p._reserves:
+                if i[0] == item_match.name: 
+                    passing = i[1]
+                    break
+
+            reserve_name = p.name
+
+            if not table_printed: 
+                print("\n Player Name  | Passing | Received")
+                print("--------------+---------+----------")
+                table_printed = True
+
+            if len(p.name) < 12: reserve_name += " " * (12-len(p.name))
+            else: reserve_name = p.name
+
+            if passing is False: reserve_passing = "FALSE  "
+            elif passing is True: reserve_passing = "TRUE   "
+
+            print(f" {reserve_name} | {reserve_passing} |", end = "")
+
             # First, we should check if the player has double-reserved this item; that is, if they want two.
-            # count = len([i for i in p._reserves if i[0] == item_match.name])
-            count = len([i for i in p._reserves if i == item_match.name])
+            count = len([i for i in p._reserves if i[0] == item_match.name])
             if count > 1:
                 num_received = 0
                 for log in p._history[slot_names[int(item_match.slot)]]: 
@@ -406,13 +443,17 @@ def award_loot(players):
                                 num_received_264 += 1
                         
                         # Only add it to the reserves list if they haven't passed on this item. 
-                        reserves.append((p.name, p._reserve_plusses, f" (ilvl 277: {num_received}/2, ilvl 264: {num_received_264}/2)"))
+                        if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
+                            reserves.append((p.name, p._reserve_plusses, f" (277: {num_received}/2, 264: {num_received_264}/2)"))
+                            print(f" FALSE (277: {num_received}/2, 264: {num_received_264}/2)")
                             
                     else: 
-                        reserves.append((p.name, p._reserve_plusses, f" (ilvl 264: {num_received}/2)"))
+                        if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
+                            reserves.append((p.name, p._reserve_plusses, f" (264: {num_received}/2)"))
+                            print(f" FALSE (264: {num_received}/2)")
                 
                 else: 
-                    print(f"{p.name} has already won both copies of this item ({item_match.name} {item_match.ilvl}).")
+                    print(f" TRUE (2/2)")
                     ineligible += 1
 
             else: 
@@ -421,26 +462,31 @@ def award_loot(players):
                 for log in p._history[slot_names[int(item_match.slot)]]: 
                     if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
                         already_received = True
-                        print(f"{p.name} has already won this item ({item_match.name} {item_match.ilvl}).")
+                        print(" TRUE")
                         ineligible += 1
                         break
 
                 if not already_received: 
                     if item_match.ilvl == 277: 
                         if any([item_match.name == log.item.name and log.item.ilvl == 264 for log in p._history[slot_names[int(item_match.slot)]]]):
-                            reserves.append((p.name, p._reserve_plusses, f" (has 264 version)"))
+                            if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
+                                reserves.append((p.name, p._reserve_plusses, f" (has 264 version)"))
+                                print(" FALSE (has 264 version)")
                         else: 
-                            reserves.append((p.name, p._reserve_plusses, ""))
+                            if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
+                                reserves.append((p.name, p._reserve_plusses, ""))
+                                print(" FALSE")
 
                     else: 
-                        reserves.append((p.name, p._reserve_plusses, ""))
+                        if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
+                            reserves.append((p.name, p._reserve_plusses, ""))
+                            print(" FALSE")
     
     if len(reserves) > 0:
         # Sort the reserves list by reserve plusses, then by name.
         reserves.sort(key=lambda x: (x[1], x[0]))
 
-        print("")
-
+        print("\n")
         print("The following people have soft-reserved this item:")
         roll_type = "SR"
         for r in reserves: 
@@ -619,6 +665,33 @@ def award_loot(players):
             print("Aborting.")
             return players
         
+        for r in reserves: 
+            passing = input(f"Is {r[0]} passing on this item? (y/n): ").lower()
+            if passing == "y": 
+                # Find the corresponding reserve in the player's reserve list, and change the boolean to True
+                for i in player._reserves: 
+                    if i[0] == item_match.name: 
+                        i[1] = True
+                        break
+
+                # Open the file called "passing.txt", and if it doesn't exist, create it.
+                if not os.path.exists("passing.txt"): 
+                    with open("passing.txt", "w") as f: 
+                        f.write("")
+
+                with open("passing.txt", "a") as f: 
+                    # First, find if there is already an equivalent passing note in the file.
+                    found = False
+                    pattern = re.compile(rf"^{r[0]}, {item_match.name}$")
+                    with open("passing.txt", "r") as f2: 
+                        for line in f2: 
+                            if pattern.match(line): 
+                                found = True
+                                break
+                            
+                    if not found:
+                        f.write(f"{r[0]}, {item_match.name}\n")
+        
     elif len(reserves) > 0 and player.name in [r[0] for r in reserves]: 
         confirm = "sr"
         
@@ -740,6 +813,7 @@ known_players = {
     "Sigofthenama": "Death Knight", 
     "Cageymagey": "Mage",
     "Vanarann": "Druid",
+    "Ryotto": "Death Knight",
 }
 
 def mark_attendance(players):
@@ -1381,7 +1455,7 @@ def paste_history():
     paste = ""
     total_length = 0
     index = 0
-    threshold = 3750
+    threshold = 3800
 
     for line in lines: 
         if len(line) + total_length < threshold: 

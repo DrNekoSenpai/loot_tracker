@@ -743,6 +743,7 @@
 52025;Vanquisher's Mark of Sanctification;80;0;0;Tinyraider;2024-04-24
 52025;Vanquisher's Mark of Sanctification;80;0;0;Tinyraider;2024-04-24
 52025;Vanquisher's Mark of Sanctification;80;0;0;Pacratt;2024-04-24
+52025;Vanquisher's Mark of Sanctification;80;0;0;Pacratt;2024-04-24
 50023;Bile-Encrusted Medallion;264;0;0;Ryotto;2024-04-24
 50016;Rib Spreader;264;0;0;_disenchanted;2024-04-24
 52025;Vanquisher's Mark of Sanctification;80;0;0;Swiftbladess;2024-04-24

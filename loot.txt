@@ -19,9 +19,9 @@ Vanthulhu (+1 MS) (+1 SR)
 
 Ryotto (+4 MS) (+0 SR)
 - Bryntroll, the Bone Arbiter (264) (MS) -- received on **2024-04-24**
-- Blood-Soaked Saronite Stompers (264) (MS) -- received on **2024-04-24**
 - Ring of Rotting Sinew (264) (MS) -- received on **2024-04-24**
 - Bile-Encrusted Medallion (264) (MS) -- received on **2024-04-24**
+- Blood-Soaked Saronite Stompers (264) (MS) -- received on **2024-04-24**
 - Taldaram's Plated Fists (264) (OS) -- received on **2024-04-24**
 
 Prunejuuce (+2 MS) (+0 SR)
@@ -49,6 +49,9 @@ Pastiry (+1 MS) (+0 SR)
 - Shadowfrost Shard (ETC) -- received on **2024-04-24**
 - Shadowfrost Shard (ETC) -- received on **2024-04-24**
 
+Swiftbladess (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-24**
+
 Elisesolis (+0 MS) (+0 SR)
 - Astrylian's Sutured Cinch (264) (OS) -- received on **2024-04-24**
 
@@ -56,11 +59,11 @@ Sighanama (+0 MS) (+0 SR)
 - Treads of the Wasteland (264) (OS) -- received on **2024-04-24**
 
 _disenchanted
-- Loop of the Endless Labyrinth
+- Gangrenous Leggings
 - Marrowgar's Frigid Eye
-- Cultist's Bloodsoaked Spaulders
-- Waistband of Righteous Fury
+- Loop of the Endless Labyrinth
+- Mail of Crimson Coins
 - Toskk's Maximized Wristguards
 - Rib Spreader
-- Gangrenous Leggings
-- Mail of Crimson Coins
+- Waistband of Righteous Fury
+- Cultist's Bloodsoaked Spaulders

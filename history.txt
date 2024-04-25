@@ -1056,13 +1056,14 @@ Main-Hand:
   \- [Frozen Bonespike (264)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2023-10-15)
   \- [Frozen Bonespike (277)](<https://www.wowhead.com/wotlk/item=49968>) (SR) (2024-02-21)
 ----------------------------------------
-Swiftbladess: 26 items.
+Swiftbladess: 27 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-04)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-21)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-03-27)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-04-17)
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-04-24)
 
 Neck:
   \- [Wodin's Lucky Necklace (264)](<https://www.wowhead.com/wotlk/item=50452>) (MS) (2023-10-18)
@@ -1233,7 +1234,7 @@ Vanquisher's Mark of Sanctification:
 \- Pacratt: 5 Normal
 \- Soulreaverr: 2 Normal
 \- Strixien: 3 Normal
-\- Swiftbladess: 4 Normal
+\- Swiftbladess: 5 Normal
 \- Sõçkö: 1 Normal
 \- Tinyraider: 4 Normal
 ----------------------------------------
