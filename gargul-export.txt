@@ -323,7 +323,7 @@
 50187;Coldwraith Links;264;0;0;Darkfern;2024-01-24
 49967;Marrowgar's Frigid Eye;264;1;0;Gnoya;2024-01-24
 52026;Protector's Mark of Sanctification;80;0;0;Miatotems;2024-01-24
-50202;Snowstorm Helm;264;0;1;Vangoat;2024-01-24
+50202;Snowstorm Helm;264;0;1;Vangoated;2024-01-24
 50657;Skeleton Lord's Circle;277;0;0;Darkfern;2024-01-24
 50366;Althor's Abacus;277;1;0;Strixien;2024-01-24
 50412;Bloodvenom Blade;264;0;0;_disenchanted;2024-01-24
@@ -380,8 +380,8 @@
 50274;Shadowfrost Shard;0;0;0;Artasz;2024-01-31
 51414;Wrathful Gladiator's Dreadplate Gauntlets;270;0;1;Ferrousblade;2024-02-04
 50186;Frostbrood Sapphire Ring;264;1;0;Bigpapapaul;2024-02-04
-50177;Mail of Crimson Coins;264;0;0;Vangoat;2024-02-04
-50450;Leggings of Dubious Charms;264;0;0;Vangoat;2024-02-04
+50177;Mail of Crimson Coins;264;0;0;Vangoated;2024-02-04
+50450;Leggings of Dubious Charms;264;0;0;Vangoated;2024-02-04
 52025;Vanquisher's Mark of Sanctification;80;0;0;Swiftbladess;2024-02-04
 50184;Keleseth's Seducer;264;0;0;Bigpapapaul;2024-02-04
 51181;Sanctified Crimson Acolyte Pants;264;0;0;Snedpie;2024-02-04
@@ -732,3 +732,42 @@
 50423;Sundial of Eternal Dusk;264;1;0;Gnoya;2024-04-21
 50274;Shadowfrost Shard;0;0;0;Soulreaverr;2024-04-21
 50274;Shadowfrost Shard;0;0;0;Soulreaverr;2024-04-21
+50415;Bryntroll, the Bone Arbiter;264;0;0;Ryotto;2024-04-24
+50042;Gangrenous Leggings;264;0;0;_disenchanted;2024-04-24
+50453;Ring of Rotting Sinew;264;0;0;Ryotto;2024-04-24
+49967;Marrowgar's Frigid Eye;264;0;0;_disenchanted;2024-04-24
+49977;Loop of the Endless Labyrinth;264;0;0;_disenchanted;2024-04-24
+50177;Mail of Crimson Coins;264;0;0;_disenchanted;2024-04-24
+50062;Plague Scientist's Boots;264;1;0;Pacratt;2024-04-24
+50333;Toskk's Maximized Wristguards;264;0;0;_disenchanted;2024-04-24
+52025;Vanquisher's Mark of Sanctification;80;0;0;Tinyraider;2024-04-24
+52025;Vanquisher's Mark of Sanctification;80;0;0;Tinyraider;2024-04-24
+52025;Vanquisher's Mark of Sanctification;80;0;0;Pacratt;2024-04-24
+50023;Bile-Encrusted Medallion;264;0;0;Ryotto;2024-04-24
+50016;Rib Spreader;264;0;0;_disenchanted;2024-04-24
+52025;Vanquisher's Mark of Sanctification;80;0;0;Swiftbladess;2024-04-24
+50667;Waistband of Righteous Fury;277;0;0;_disenchanted;2024-04-24
+49987;Cultist's Bloodsoaked Spaulders;264;0;0;_disenchanted;2024-04-24
+49994;The Lady's Brittle Bracers;264;0;0;Lorniras;2024-04-24
+50658;Amulet of the Silent Eulogy;277;1;0;Axsel;2024-04-24
+50067;Astrylian's Sutured Cinch;264;0;1;Elisesolis;2024-04-24
+52026;Protector's Mark of Sanctification;80;0;0;Prunejuuce;2024-04-24
+52026;Protector's Mark of Sanctification;80;0;0;Prunejuuce;2024-04-24
+49983;Blood-Soaked Saronite Stompers;264;0;0;Ryotto;2024-04-24
+50653;Shadowvault Slayer's Cloak;277;1;0;Vanarann;2024-04-24
+50353;Dislodged Foreign Object;264;1;0;Vanthulhu;2024-04-24
+50414;Might of Blight;264;0;0;Pastiry;2024-04-24
+50075;Taldaram's Plated Fists;264;0;1;Ryotto;2024-04-24
+50071;Treads of the Wasteland;264;0;1;Sighanama;2024-04-24
+50182;Blood Queen's Crimson Choker;264;1;0;Cageymagey;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24

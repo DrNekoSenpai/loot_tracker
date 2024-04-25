@@ -61,7 +61,7 @@ class Log:
         self.note = note
 
 class Player: 
-    def __init__(self, name:str, alias:str, reserves:List[str], pclass:str):
+    def __init__(self, name:str, alias:str, reserves:List, pclass:str):
         self.name = name
         self.alias = alias
 
@@ -257,6 +257,7 @@ def import_softreserve(players):
         name = soft_res[3]
 
         if name == "Swiftblades": name = "Swiftbladess"
+        if name == "Artaz": name = "Artasz"
 
         if name in known_aliases.keys(): 
             alias = known_aliases[name]
@@ -307,6 +308,7 @@ def import_softreserve(players):
 
         # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
         current_player._reserves.append(item)
+        # current_player._reserves.append((item, False))
         print(f"{current_player.name} has reserved {item}.")
 
     return players
@@ -379,9 +381,15 @@ def award_loot(players):
         # Skip this person if they're not here.
         if p._attendance == False: continue
 
+        # TODO: Change this to account for a tuple-style reserve list. 
+        # Tuple: (string, bool) -- string, the item name; bool, whether or not the player is passing on this item. 
+        # The bool is there to account for players who received something better, and no longer needs this item. 
+
+        # if item_match.name in [i[0] for i in p._reserves]:
         if item_match.name in p._reserves: 
             print(f"{p.name} has soft-reserved this item ({item_match.name}).")
             # First, we should check if the player has double-reserved this item; that is, if they want two.
+            # count = len([i for i in p._reserves if i[0] == item_match.name])
             count = len([i for i in p._reserves if i == item_match.name])
             if count > 1:
                 num_received = 0
@@ -397,6 +405,7 @@ def award_loot(players):
                             if log.item.name == item_match.name and log.item.ilvl == 264: 
                                 num_received_264 += 1
                         
+                        # Only add it to the reserves list if they haven't passed on this item. 
                         reserves.append((p.name, p._reserve_plusses, f" (ilvl 277: {num_received}/2, ilvl 264: {num_received_264}/2)"))
                             
                     else: 
@@ -724,6 +733,13 @@ known_players = {
     "Lilypalooza": "Priest",
     "Gnoya": "Priest",
     "Killit": "Warlock",
+    "Themrmoseby": "Warrior",
+    "Vanthulhu": "Priest", 
+    "Chainmale": "Paladin", 
+    "Bladehero": "Paladin", 
+    "Sigofthenama": "Death Knight", 
+    "Cageymagey": "Mage",
+    "Vanarann": "Druid",
 }
 
 def mark_attendance(players):
@@ -1350,48 +1366,6 @@ def export_gargul(players):
         for p in players: 
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
 
-def export_chat(players): 
-    # Hit alt tab
-    pyautogui.moveTo(1920/2, 1080/2)
-    pyautogui.click()
-    time.sleep(0.1)
-    
-    pyautogui.typewrite("/")
-    time.sleep(0.1)
-    pyautogui.typewrite(f"raid")
-    time.sleep(0.1)
-    pyautogui.press("space")
-    time.sleep(0.1)
-    pyautogui.typewrite(f"Plusses: ")
-    time.sleep(0.1)
-    pyautogui.press("enter")
-    time.sleep(0.25)
-    
-    for p in players: 
-        if p._regular_plusses == 0 and p._reserve_plusses == 0: continue
-        # Announce in raid chat. 
-        pyautogui.typewrite("/")
-        time.sleep(0.1)
-        pyautogui.typewrite(f"raid")
-        time.sleep(0.1)
-        pyautogui.press("space")
-        time.sleep(0.1)
-        pyautogui.typewrite(f"- {p.name}: (+{p._regular_plusses} MS) (+{p._reserve_plusses} SR)")
-        time.sleep(0.1)
-        pyautogui.press("enter")
-        time.sleep(0.25)
-
-    pyautogui.typewrite("/")
-    time.sleep(0.1)
-    pyautogui.typewrite(f"raid")
-    time.sleep(0.1)
-    pyautogui.press("space")
-    time.sleep(0.1)
-    pyautogui.typewrite(f"If your name is not on this list, you don't have any plusses.")
-    time.sleep(0.1)
-    pyautogui.press("enter")
-    time.sleep(0.25)
-
 def paste_history(): 
     # Delete all files in "./history"
     for file in os.listdir("./history"):
@@ -1407,11 +1381,10 @@ def paste_history():
     paste = ""
     total_length = 0
     index = 0
+    threshold = 3750
 
     for line in lines: 
-        receiver = line.split("\n")[0]
-
-        if len(line) + total_length < 3900: 
+        if len(line) + total_length < threshold: 
             paste += line
             total_length += len(line)
         
@@ -1438,8 +1411,7 @@ while(True):
     print("6) Split up history into paste-sized chunks")
     print("7) Remove loot, or weekly reset")
     print("8) Export plusses in Gargul style")
-    print("9) Export plusses to be pasted into chat")
-    print(f"10) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
+    print(f"9) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
 
     print("")
 
@@ -1462,6 +1434,5 @@ while(True):
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
     elif sel == 8: export_gargul(players)
-    elif sel == 9: export_chat(players)
-    elif sel == 10: players, raiding = sudo_mode(players, raiding)
+    elif sel == 9: players, raiding = sudo_mode(players, raiding)
     else: break
