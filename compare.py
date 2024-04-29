@@ -69,10 +69,10 @@ for ind,item in enumerate(loot):
         continue
     elif pattern_2.match(item):
         item, ilvl, roll, _ = pattern_2.match(item).groups()
-        item_log.append((item, ilvl, roll, winner))
+        item_log.append((item, ilvl, roll, winner, False))
     elif pattern_3.match(item):
         item, roll, _ = pattern_3.match(item).groups()
-        item_log.append((item, "0", roll, winner))
+        item_log.append((item, "0", roll, winner, False))
     elif pattern_dis.match(item):
         continue
 
@@ -101,51 +101,72 @@ for ind,line in enumerate(export):
     elif "Wrathful Gladiator's" in item_name: roll_type = "OS"
     else: roll_type = "SR" if reserved else "OS" if offspec else "MS"
 
-    export_log.append((item_name, ilvl, roll_type, winner))
+    export_log.append((item_name, ilvl, roll_type, winner, False))
 
-for item in item_log: 
+for ind_i,item in enumerate(item_log): 
     item_name = item[0]
     # Find an entry in the export_log that matches the item name
     matches = [x for x in export_log if item_name in x[0]]
 
     if len(matches) == 0:
-        print(f"ERROR: {item_name} not found.")
+        print(f"ERROR: {item_name[:-1]} not found.")
         continue
 
-    # Find if there is a tuple in export_log that matches the tuple in the item_log. 
+    elif len(matches) == 1: 
+        # Find if there is a tuple in export_log that matches the tuple in the item_log.
+        exact_match = False
 
-    exact_match = False
-
-    for match in matches:
-        if item[1] == match[1] and item[2] == match[2] and item[3] == match[3]:
-            print(f"EXACT: {match}.")
-            exact_match = True
-            break
-    
-    if not exact_match:
-        print("+----------------------------------------+")
-        item_name = item_name + " " * (38 - len(item_name))
-        print(f"| {item_name} |")
-        print("+--------+---------------+---------------+")
-        print("|  TYPE  |    ACTUAL     |    EXPORT     |")
-        print("+--------+---------------+---------------+")
         for match in matches:
-            if item[1] != match[1]:
-                # Append extra spaces to the end each string, to a maximum of 15 characters. 
-                actual = item[1] + " " * (13 - len(item[1]))
-                export = match[1] + " " * (13 - len(match[1]))
+            if item[1] == match[1] and item[2] == match[2] and item[3] == match[3]:
+                # print(f"EXACT: {match[:-1]}.")
+                exact_match = True
+                break
+        
+        if not exact_match:
+            print("+----------------------------------------+")
+            item_name = item_name + " " * (38 - len(item_name))
+            print(f"| {item_name} |")
+            print("+--------+---------------+---------------+")
+            print("|  TYPE  |    ACTUAL     |    EXPORT     |")
+            print("+--------+---------------+---------------+")
+            for match in matches:
+                if item[1] != match[1]:
+                    # Append extra spaces to the end each string, to a maximum of 15 characters. 
+                    actual = item[1] + " " * (13 - len(item[1]))
+                    export = match[1] + " " * (13 - len(match[1]))
 
-                print(f"|  ILVL  | {actual} | {export} |")
+                    print(f"|  ILVL  | {actual} | {export} |")
 
-            if item[2] != match[2]:
-                actual = item[2] + " " * (13 - len(item[2]))
-                export = match[2] + " " * (13 - len(match[2]))
+                if item[2] != match[2]:
+                    actual = item[2] + " " * (13 - len(item[2]))
+                    export = match[2] + " " * (13 - len(match[2]))
 
-                print(f"|  ROLL  | {actual} | {export} |")
+                    print(f"|  ROLL  | {actual} | {export} |")
 
-            if item[3] != match[3]:
-                actual = item[3] + " " * (13 - len(item[3]))
-                export = match[3] + " " * (13 - len(match[3]))
+                if item[3] != match[3]:
+                    actual = item[3] + " " * (13 - len(item[3]))
+                    export = match[3] + " " * (13 - len(match[3]))
 
-                print(f"| WINNER | {actual} | {export} |")
-        print("+--------+---------------+---------------+")
+                    print(f"| WINNER | {actual} | {export} |")
+            print("+--------+---------------+---------------+")
+
+# At this point, we've eliminated all of the items that dropped exactly once. 
+# Now we need to find out if there are items that dropped multiple times.
+
+# Identify the items that dropped multiple times, disregarding who won them. 
+
+multiples = list(set([x[0] for x in item_log if item_log.count(x) > 1]))
+
+for item in multiples: 
+    # Figure out the list of players who won this item, counting the number of times they won it.
+    winners = [x[3] for x in item_log if x[0] == item]
+    winner_count = {x: winners.count(x) for x in winners}
+
+    # For each player, figure out the number of times they won the item in the export log.
+    # If the number of times they won the item in the export log is different from the number of times they won the item in the loot log, print an error.
+    for winner in winner_count.keys(): 
+        loot_count = winner_count[winner]
+        export_count = sum([1 for x in export_log if x[0] == item and x[3] == winner])
+
+        if loot_count != export_count: 
+            print(f"ERROR: {winner} won {item} {loot_count} times in the loot log, but won it {export_count} times in the export log.")

@@ -1,62 +1,80 @@
-Loot log for **Wednesday, 2024-04-24**:
+Loot log for Wednesday, 2024-04-24 and **Sunday, 2024-04-28**:
 
 Pacratt (+3 MS) (+1 SR)
-- Plague Scientist's Boots (264) (SR) -- received on **2024-04-24**
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-24**
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-24**
+- Plague Scientist's Boots (264) (SR) -- received on 2024-04-24
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
+
+Abletu (+1 MS) (+1 SR)
+- Frostbinder's Shredded Cape (264) (SR) -- received on **2024-04-28**
 
 Axsel (+1 MS) (+1 SR)
-- Amulet of the Silent Eulogy (277) (SR) -- received on **2024-04-24**
+- Amulet of the Silent Eulogy (277) (SR) -- received on 2024-04-24
 
 Cageymagey (+1 MS) (+1 SR)
-- Blood Queen's Crimson Choker (264) (SR) -- received on **2024-04-24**
+- Blood Queen's Crimson Choker (264) (SR) -- received on 2024-04-24
 
 Vanarann (+1 MS) (+1 SR)
-- Shadowvault Slayer's Cloak (277) (SR) -- received on **2024-04-24**
+- Shadowvault Slayer's Cloak (277) (SR) -- received on 2024-04-24
 
 Vanthulhu (+1 MS) (+1 SR)
-- Dislodged Foreign Object (264) (SR) -- received on **2024-04-24**
+- Dislodged Foreign Object (264) (SR) -- received on 2024-04-24
 
-Ryotto (+4 MS) (+0 SR)
-- Bryntroll, the Bone Arbiter (264) (MS) -- received on **2024-04-24**
-- Ring of Rotting Sinew (264) (MS) -- received on **2024-04-24**
-- Bile-Encrusted Medallion (264) (MS) -- received on **2024-04-24**
-- Blood-Soaked Saronite Stompers (264) (MS) -- received on **2024-04-24**
-- Taldaram's Plated Fists (264) (OS) -- received on **2024-04-24**
+Ryotto (+5 MS) (+0 SR)
+- Bryntroll, the Bone Arbiter (264) (MS) -- received on 2024-04-24
+- Ring of Rotting Sinew (264) (MS) -- received on 2024-04-24
+- Bile-Encrusted Medallion (264) (MS) -- received on 2024-04-24
+- Blood-Soaked Saronite Stompers (264) (MS) -- received on 2024-04-24
+- Scourge Reaver's Legplates (264) (MS) -- received on **2024-04-28**
+- Taldaram's Plated Fists (264) (OS) -- received on 2024-04-24
+- Devium's Eternally Cold Ring (264) (OS) -- received on **2024-04-28**
 
 Prunejuuce (+2 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-04-24**
-- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-04-24**
+- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
+- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
 
 Tinyraider (+2 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-24**
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-24**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
+
+Artasz (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-28**
+
+Bzorder (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-28**
+
+Elisesolis (+1 MS) (+0 SR)
+- Sindragosa's Flawless Fang (264) (MS) -- received on **2024-04-28**
+- Astrylian's Sutured Cinch (264) (OS) -- received on 2024-04-24
 
 Lorniras (+1 MS) (+0 SR)
-- The Lady's Brittle Bracers (264) (MS) -- received on **2024-04-24**
+- The Lady's Brittle Bracers (264) (MS) -- received on 2024-04-24
 
 Pastiry (+1 MS) (+0 SR)
-- Might of Blight (264) (MS) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
-- Shadowfrost Shard (ETC) -- received on **2024-04-24**
+- Might of Blight (264) (MS) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on 2024-04-24
+- Shadowfrost Shard (ETC) -- received on **2024-04-28**
+- Shadowfrost Shard (ETC) -- received on **2024-04-28**
+- Shadowfrost Shard (ETC) -- received on **2024-04-28**
 
 Swiftbladess (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-24**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
 
-Elisesolis (+0 MS) (+0 SR)
-- Astrylian's Sutured Cinch (264) (OS) -- received on **2024-04-24**
+Chainmale (+0 MS) (+0 SR)
+- Belt of the Lonely Noble (264) (OS) -- received on **2024-04-28**
 
 Sighanama (+0 MS) (+0 SR)
-- Treads of the Wasteland (264) (OS) -- received on **2024-04-24**
+- Treads of the Wasteland (264) (OS) -- received on 2024-04-24
 
 _disenchanted
 - Gangrenous Leggings

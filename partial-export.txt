@@ -39,3 +39,14 @@
 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+52025;Vanquisher's Mark of Sanctification;80;0;0;Artasz;2024-04-28
+50192;Scourge Reaver's Legplates;264;0;0;Ryotto;2024-04-28
+50451;Belt of the Lonely Noble;264;0;0;Gnoya;2024-04-28
+52025;Vanquisher's Mark of Sanctification;80;0;0;Bzorder;2024-04-28
+50361;Sindragosa's Flawless Fang;264;0;0;Elisesolis;2024-04-28
+50451;Belt of the Lonely Noble;264;0;1;Chainmale;2024-04-28
+50205;Frostbinder's Shredded Cape;264;1;0;Abletu;2024-04-28
+50185;Devium's Eternally Cold Ring;264;0;1;Ryotto;2024-04-28
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-28
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-28
+50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-28
