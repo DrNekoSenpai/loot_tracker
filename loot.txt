@@ -1,87 +1,76 @@
-Loot log for Wednesday, 2024-04-24 and **Sunday, 2024-04-28**:
+Loot log for **Wednesday, 2024-05-01**:
 
-Pacratt (+3 MS) (+1 SR)
-- Plague Scientist's Boots (264) (SR) -- received on 2024-04-24
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
+Bzorder (+1 MS) (+1 SR)
+- Blood Queen's Crimson Choker (264) (SR) -- received on **2024-05-01**
 
-Abletu (+1 MS) (+1 SR)
-- Frostbinder's Shredded Cape (264) (SR) -- received on **2024-04-28**
+Ferrousblade (+1 MS) (+1 SR)
+- Deathbringer's Will (264) (SR) -- received on **2024-05-01**
 
-Axsel (+1 MS) (+1 SR)
-- Amulet of the Silent Eulogy (277) (SR) -- received on 2024-04-24
+Bunniful (+2 MS) (+0 SR)
+- Nibelung (264) (MS) -- received on **2024-05-01**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-05-01**
 
-Cageymagey (+1 MS) (+1 SR)
-- Blood Queen's Crimson Choker (264) (SR) -- received on 2024-04-24
+Ryotto (+2 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-05-01**
+- Landsoul's Horned Greathelm (264) (MS) -- received on **2024-05-01**
 
-Vanarann (+1 MS) (+1 SR)
-- Shadowvault Slayer's Cloak (277) (SR) -- received on 2024-04-24
-
-Vanthulhu (+1 MS) (+1 SR)
-- Dislodged Foreign Object (264) (SR) -- received on 2024-04-24
-
-Ryotto (+5 MS) (+0 SR)
-- Bryntroll, the Bone Arbiter (264) (MS) -- received on 2024-04-24
-- Ring of Rotting Sinew (264) (MS) -- received on 2024-04-24
-- Bile-Encrusted Medallion (264) (MS) -- received on 2024-04-24
-- Blood-Soaked Saronite Stompers (264) (MS) -- received on 2024-04-24
-- Scourge Reaver's Legplates (264) (MS) -- received on **2024-04-28**
-- Taldaram's Plated Fists (264) (OS) -- received on 2024-04-24
-- Devium's Eternally Cold Ring (264) (OS) -- received on **2024-04-28**
-
-Prunejuuce (+2 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
-- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
-
-Tinyraider (+2 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
+Themrmoseby (+2 MS) (+0 SR)
+- Polar Bear Claw Bracers (277) (MS) -- received on **2024-05-01**
+- Skeleton Lord's Circle (277) (MS) -- received on **2024-05-01**
 
 Artasz (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-28**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-05-01**
+- Fleshrending Gauntlets (264) (OS) -- received on **2024-05-01**
+- Noose of Malachite (264) (OS) -- received on **2024-05-01**
 
-Bzorder (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-04-28**
+Catreene (+1 MS) (+0 SR)
+- Trauma (264) (MS) -- received on **2024-05-01**
 
-Elisesolis (+1 MS) (+0 SR)
-- Sindragosa's Flawless Fang (264) (MS) -- received on **2024-04-28**
-- Astrylian's Sutured Cinch (264) (OS) -- received on 2024-04-24
+Darkfern (+1 MS) (+0 SR)
+- Broken Ram Skull Helm (264) (MS) -- received on **2024-05-01**
 
 Lorniras (+1 MS) (+0 SR)
-- The Lady's Brittle Bracers (264) (MS) -- received on 2024-04-24
+- San'layn Ritualist Gloves (264) (MS) -- received on **2024-05-01**
 
-Pastiry (+1 MS) (+0 SR)
-- Might of Blight (264) (MS) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on 2024-04-24
-- Shadowfrost Shard (ETC) -- received on **2024-04-28**
-- Shadowfrost Shard (ETC) -- received on **2024-04-28**
-- Shadowfrost Shard (ETC) -- received on **2024-04-28**
+Miatotems (+1 MS) (+0 SR)
+- Frozen Bonespike (277) (MS) -- received on **2024-05-01**
+- Protector's Mark of Sanctification (N25) (OS) -- received on **2024-05-01**
+- Valanar's Other Signet Ring (264) (OS) -- received on **2024-05-01**
+- Protector's Mark of Sanctification (N25) (OS) -- received on **2024-05-01**
 
-Swiftbladess (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-04-24
+Sighanama (+1 MS) (+0 SR)
+- Band of the Bone Colossus (277) (MS) -- received on **2024-05-01**
 
-Chainmale (+0 MS) (+0 SR)
-- Belt of the Lonely Noble (264) (OS) -- received on **2024-04-28**
+Soulreaverr (+1 MS) (+0 SR)
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
 
-Sighanama (+0 MS) (+0 SR)
-- Treads of the Wasteland (264) (OS) -- received on 2024-04-24
+Tinyraider (+1 MS) (+0 SR)
+- Nightmare Ender (264) (MS) -- received on **2024-05-01**
+
+Elisesolis (+0 MS) (+0 SR)
+- Frostbrood Sapphire Ring (264) (OS) -- received on **2024-05-01**
+
+Pastiry (+0 MS) (+0 SR)
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+
+Strixien (+0 MS) (+0 SR)
+- Seal of Many Mouths (264) (OS) -- received on **2024-05-01**
 
 _disenchanted
-- Gangrenous Leggings
-- Marrowgar's Frigid Eye
-- Loop of the Endless Labyrinth
-- Mail of Crimson Coins
-- Toskk's Maximized Wristguards
-- Rib Spreader
+- Rusted Bonespike Pauldrons
 - Waistband of Righteous Fury
-- Cultist's Bloodsoaked Spaulders
+- Rib Spreader
+- Gangrenous Leggings
+- Lingering Illness
+- Astrylian's Sutured Cinch

@@ -1301,8 +1301,9 @@ def sudo_mode(players, raiding):
         print("---- SUDO MODE ----")
         print("a. COMPLETELY wipe the pickle file")
         print("b. Restore history from Gargul export")
-        print(f"c. {'Enter' if not raiding else 'Exit'} raiding mode")
-        print("d. Exit sudo mode")
+        print("c. Create Gargul export")
+        print(f"d. {'Enter' if not raiding else 'Exit'} raiding mode")
+        print("e. Exit sudo mode")
         sel = input("Select an option: ").lower()
         print("")
 
@@ -1427,11 +1428,31 @@ def sudo_mode(players, raiding):
                         player._regular_plusses += 1
 
         elif sel == "c": 
+            with open(f"partial-export.txt", "w", encoding="utf-8") as file: 
+                file.write("@ID;@ITEM;@ILVL;@SR;@OS;@WINNER;@YEAR-@MONTH-@DAY\n")
+                for p in players: 
+                    # For each item in their loot log, write out;
+                    # @ID;@ITEM;@ILVL;@SR;@OS;@WINNER;@YEAR-@MONTH-@DAY
+                    # 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+                    for item in p._raid_log: 
+                        item_id = 0
+
+                        for key, value in all_items.items():
+                            if value.name == item.item.name and value.ilvl == item.item.ilvl:
+                                item_id = key
+                                break
+
+                        reserved = 1 if item.roll == "SR" else 0
+                        offspec = 1 if item.roll == "OS" else 0
+                        item_name = item.item.name.replace(" (N25)", "").replace(" (H25)", "")
+                        file.write(f"{item_id};{item_name};{item.item.ilvl};{reserved};{offspec};{p.name};{item.date}\n")
+
+        elif sel == "d": 
             if raiding: print("Exiting raiding mode.")
             else: print("Entering raiding mode.")
             raiding = not raiding
 
-        elif sel == "d":
+        elif sel == "e":
             print("Exiting sudo mode.")
             return players, raiding
 
