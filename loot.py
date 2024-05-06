@@ -1459,9 +1459,10 @@ def sudo_mode(players, raiding):
 def export_gargul(players):
     with open("plusses.txt", "w", encoding="utf-8") as file: 
         for p in players: 
+            if p.name == "_disenchanted": continue
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
 
-def paste_history(): 
+def paste_history():  
     # Delete all files in "./history"
     for file in os.listdir("./history"):
         os.remove(f"./history/{file}")
@@ -1475,7 +1476,7 @@ def paste_history():
 
     paste = ""
     total_length = 0
-    index = 0
+    index = 1
     threshold = 3800
 
     for line in lines: 

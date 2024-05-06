@@ -1,71 +1,92 @@
-Loot log for **Wednesday, 2024-05-01**:
+Loot log for Wednesday, 2024-05-01 and **Sunday, 2024-05-05**:
+
+Catreene (+2 MS) (+1 SR)
+- Royal Scepter of Terenas II (271) (SR) -- received on **2024-05-05**
+- Trauma (264) (MS) -- received on 2024-05-01
+
+Kelorlyn (+2 MS) (+1 SR)
+- Sindragosa's Cruel Claw (264) (SR) -- received on **2024-05-05**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-05-05**
+
+Beásty (+1 MS) (+1 SR)
+- Fal'inrush, Defender of Quel'thalas (271) (SR) -- received on **2024-05-05**
 
 Bzorder (+1 MS) (+1 SR)
-- Blood Queen's Crimson Choker (264) (SR) -- received on **2024-05-01**
+- Blood Queen's Crimson Choker (264) (SR) -- received on 2024-05-01
 
 Ferrousblade (+1 MS) (+1 SR)
-- Deathbringer's Will (264) (SR) -- received on **2024-05-01**
+- Deathbringer's Will (264) (SR) -- received on 2024-05-01
 
 Bunniful (+2 MS) (+0 SR)
-- Nibelung (264) (MS) -- received on **2024-05-01**
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-05-01**
+- Nibelung (264) (MS) -- received on 2024-05-01
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-05-01
 
 Ryotto (+2 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-05-01**
-- Landsoul's Horned Greathelm (264) (MS) -- received on **2024-05-01**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-05-01
+- Landsoul's Horned Greathelm (264) (MS) -- received on 2024-05-01
 
 Themrmoseby (+2 MS) (+0 SR)
-- Polar Bear Claw Bracers (277) (MS) -- received on **2024-05-01**
-- Skeleton Lord's Circle (277) (MS) -- received on **2024-05-01**
+- Polar Bear Claw Bracers (277) (MS) -- received on 2024-05-01
+- Skeleton Lord's Circle (277) (MS) -- received on 2024-05-01
+
+Tinyraider (+2 MS) (+0 SR)
+- Nightmare Ender (264) (MS) -- received on 2024-05-01
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-05-05**
 
 Artasz (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-05-01**
-- Fleshrending Gauntlets (264) (OS) -- received on **2024-05-01**
-- Noose of Malachite (264) (OS) -- received on **2024-05-01**
-
-Catreene (+1 MS) (+0 SR)
-- Trauma (264) (MS) -- received on **2024-05-01**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-05-01
+- Fleshrending Gauntlets (264) (OS) -- received on 2024-05-01
+- Noose of Malachite (264) (OS) -- received on 2024-05-01
 
 Darkfern (+1 MS) (+0 SR)
-- Broken Ram Skull Helm (264) (MS) -- received on **2024-05-01**
+- Broken Ram Skull Helm (264) (MS) -- received on 2024-05-01
+
+Jwizard (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-05-05**
 
 Lorniras (+1 MS) (+0 SR)
-- San'layn Ritualist Gloves (264) (MS) -- received on **2024-05-01**
+- San'layn Ritualist Gloves (264) (MS) -- received on 2024-05-01
 
 Miatotems (+1 MS) (+0 SR)
-- Frozen Bonespike (277) (MS) -- received on **2024-05-01**
-- Protector's Mark of Sanctification (N25) (OS) -- received on **2024-05-01**
-- Valanar's Other Signet Ring (264) (OS) -- received on **2024-05-01**
-- Protector's Mark of Sanctification (N25) (OS) -- received on **2024-05-01**
+- Frozen Bonespike (277) (MS) -- received on 2024-05-01
+- Protector's Mark of Sanctification (N25) (OS) -- received on 2024-05-01
+- Valanar's Other Signet Ring (264) (OS) -- received on 2024-05-01
+- Protector's Mark of Sanctification (N25) (OS) -- received on 2024-05-01
 
 Sighanama (+1 MS) (+0 SR)
-- Band of the Bone Colossus (277) (MS) -- received on **2024-05-01**
+- Band of the Bone Colossus (277) (MS) -- received on 2024-05-01
+
+Snedpie (+1 MS) (+0 SR)
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-05-05**
 
 Soulreaverr (+1 MS) (+0 SR)
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
 
-Tinyraider (+1 MS) (+0 SR)
-- Nightmare Ender (264) (MS) -- received on **2024-05-01**
+Bladehero (+0 MS) (+0 SR)
+- Shadowfrost Shard (ETC) -- received on **2024-05-05**
+- Shadowfrost Shard (ETC) -- received on **2024-05-05**
+- Shadowfrost Shard (ETC) -- received on **2024-05-05**
+- Shadowfrost Shard (ETC) -- received on **2024-05-05**
 
 Elisesolis (+0 MS) (+0 SR)
-- Frostbrood Sapphire Ring (264) (OS) -- received on **2024-05-01**
+- Frostbrood Sapphire Ring (264) (OS) -- received on 2024-05-01
 
 Pastiry (+0 MS) (+0 SR)
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
-- Shadowfrost Shard (ETC) -- received on **2024-05-01**
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
+- Shadowfrost Shard (ETC) -- received on 2024-05-01
 
 Strixien (+0 MS) (+0 SR)
-- Seal of Many Mouths (264) (OS) -- received on **2024-05-01**
+- Seal of Many Mouths (264) (OS) -- received on 2024-05-01
 
 _disenchanted
 - Rusted Bonespike Pauldrons

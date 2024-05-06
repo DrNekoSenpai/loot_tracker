@@ -121,7 +121,7 @@ Two-Hand:
 Ranged:
   \- [Corpse-Impaling Spike (264)](<https://www.wowhead.com/wotlk/item=50033>) (SR) (2024-04-17)
 ----------------------------------------
-Beásty: 13 items.
+Beásty: 14 items.
 
 ETC:
   \- [Protector's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52026>) (MS) (2024-01-24)
@@ -153,6 +153,7 @@ Two-Hand:
 
 Ranged:
   \- [Zod's Repeating Longbow (264)](<https://www.wowhead.com/wotlk/item=50034>) (MS) (2024-01-03)
+  \- [Fal'inrush, Defender of Quel'thalas (271)](<https://www.wowhead.com/wotlk/item=49981>) (SR) (2024-05-05)
 ----------------------------------------
 Bigpapapaul: 9 items.
 
@@ -180,6 +181,9 @@ Off-Hand:
   \- [Keleseth's Seducer (264)](<https://www.wowhead.com/wotlk/item=50184>) (MS) (2024-02-04)
 ----------------------------------------
 Bladehero: 2 items.
+
+ETC:
+  \- [Shadowfrost Shard (4x)](<https://www.wowhead.com/wotlk/item=50274>)
 
 Chest:
   \- [Blightborne Warplate (264)](<https://www.wowhead.com/wotlk/item=50024>) (OS) (2024-04-17)
@@ -242,7 +246,7 @@ Cageymagey: 1 items.
 Neck:
   \- [Blood Queen's Crimson Choker (264)](<https://www.wowhead.com/wotlk/item=50182>) (SR) (2024-04-24)
 ----------------------------------------
-Catreene: 18 items.
+Catreene: 19 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2023-12-13)
@@ -284,6 +288,7 @@ Trinket:
 
 Main-Hand:
   \- [Trauma (264)](<https://www.wowhead.com/wotlk/item=50028>) (MS) (2024-05-01)
+  \- [Royal Scepter of Terenas II (271)](<https://www.wowhead.com/wotlk/item=50428>) (SR) (2024-05-05)
 
 Two-Hand:
   \- [Cryptmaker (264)](<https://www.wowhead.com/wotlk/item=49919>) (OS) (2024-03-06)
@@ -482,10 +487,11 @@ Off-Hand:
 Ranged:
   \- [Corpse-Impaling Spike (264)](<https://www.wowhead.com/wotlk/item=50033>) (SR) (2023-12-17)
 ----------------------------------------
-Jwizard: 7 items.
+Jwizard: 8 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-02-21)
+  \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-05-05)
 
 Neck:
   \- [Bone Sentinel's Amulet (264)](<https://www.wowhead.com/wotlk/item=49975>) (SR) (2023-12-13)
@@ -503,14 +509,16 @@ Main-Hand:
 Ranged:
   \- [Corpse-Impaling Spike (264)](<https://www.wowhead.com/wotlk/item=50033>) (SR) (2024-03-20)
 ----------------------------------------
-Kelorlyn: 9 items.
+Kelorlyn: 11 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-07)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-14)
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-05-05)
 
 Neck:
   \- [Wodin's Lucky Necklace (264)](<https://www.wowhead.com/wotlk/item=50452>) (MS) (2023-11-12)
+  \- [Sindragosa's Cruel Claw (264)](<https://www.wowhead.com/wotlk/item=50421>) (SR) (2024-05-05)
 
 Wrist:
   \- [Toskk's Maximized Wristguards (264)](<https://www.wowhead.com/wotlk/item=50333>) (SR) (2023-10-18)
@@ -990,11 +998,12 @@ Sigofthenama: 1 items.
 Ring:
   \- [Juggernaut Band (264)](<https://www.wowhead.com/wotlk/item=49985>) (OS) (2024-04-17)
 ----------------------------------------
-Snedpie: 10 items.
+Snedpie: 11 items.
 
 ETC:
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-02-21)
   \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-03-13)
+  \- [Conqueror's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52027>) (MS) (2024-05-05)
 
 Neck:
   \- [Holiday's Grace (264)](<https://www.wowhead.com/wotlk/item=50061>) (MS) (2024-01-24)
@@ -1158,13 +1167,14 @@ Ring:
   \- [Ring of Rotting Sinew (264)](<https://www.wowhead.com/wotlk/item=50453>) (OS) (2024-03-27)
   \- [Skeleton Lord's Circle (277)](<https://www.wowhead.com/wotlk/item=49999>) (MS) (2024-05-01)
 ----------------------------------------
-Tinyraider: 20 items.
+Tinyraider: 21 items.
 
 ETC:
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2023-10-18)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-02-18)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-04-24)
   \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-04-24)
+  \- [Vanquisher's Mark of Sanctification (N25)](<https://www.wowhead.com/wotlk/item=52025>) (MS) (2024-05-05)
 
 Neck:
   \- [Amulet of the Silent Eulogy (277)](<https://www.wowhead.com/wotlk/item=50005>) (MS) (2024-01-24)
@@ -1242,12 +1252,12 @@ Conqueror's Mark of Sanctification:
 \- Elisesolis: 2 Normal
 \- Gnoraa: 2 Normal
 \- Gnoya: 3 Normal
-\- Jwizard: 1 Normal
+\- Jwizard: 2 Normal
 \- Lilypalooza: 2 Normal
 \- Lorniras: 2 Normal
 \- Lumosbringer: 1 Normal
 \- Medullaa: 2 Normal
-\- Snedpie: 2 Normal
+\- Snedpie: 3 Normal
 
 Protector's Mark of Sanctification:
 
@@ -1268,7 +1278,7 @@ Vanquisher's Mark of Sanctification:
 \- Bzorder: 3 Normal
 \- Darkfern: 3 Normal
 \- Ferrousblade: 3 Normal
-\- Kelorlyn: 2 Normal
+\- Kelorlyn: 3 Normal
 \- Killiandra: 2 Normal
 \- Pacratt: 5 Normal
 \- Ryotto: 1 Normal
@@ -1276,11 +1286,12 @@ Vanquisher's Mark of Sanctification:
 \- Strixien: 3 Normal
 \- Swiftbladess: 5 Normal
 \- Sõçkö: 1 Normal
-\- Tinyraider: 4 Normal
+\- Tinyraider: 5 Normal
 ----------------------------------------
 Number of Shadowfrost Shards received:
 
 \- Artasz: 50
+\- Bladehero: 4
 \- Ferrousblade: 50
 \- Pastiry: 50
 \- Soulreaverr: 6
