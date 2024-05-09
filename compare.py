@@ -1,5 +1,4 @@
 import re, subprocess
-
 from contextlib import redirect_stdout as redirect
 from io import StringIO
 
@@ -40,6 +39,7 @@ print("")
 
 item_log = []
 export_log = []
+disenchants = []
 
 exceptions = [
     "Vanquisher's Mark of Sanctification",
@@ -74,7 +74,8 @@ for ind,item in enumerate(loot):
         item, roll, _ = pattern_3.match(item).groups()
         item_log.append((item, "0", roll, winner, False))
     elif pattern_dis.match(item):
-        continue
+        item = pattern_dis.match(item).groups()[0]
+        disenchants.append(item)
 
     else: 
         if not item == "": print(f"ERROR: {item}")
@@ -109,7 +110,6 @@ for ind_i,item in enumerate(item_log):
     matches = [x for x in export_log if item_name in x[0]]
 
     if len(matches) == 0:
-        print(f"ERROR: {item_name[:-1]} not found.")
         continue
 
     elif len(matches) == 1: 
@@ -162,11 +162,58 @@ for item in multiples:
     winners = [x[3] for x in item_log if x[0] == item]
     winner_count = {x: winners.count(x) for x in winners}
 
-    # For each player, figure out the number of times they won the item in the export log.
-    # If the number of times they won the item in the export log is different from the number of times they won the item in the loot log, print an error.
-    for winner in winner_count.keys(): 
-        loot_count = winner_count[winner]
-        export_count = sum([1 for x in export_log if x[0] == item and x[3] == winner])
+    # Find out the number of times this item was awarded in the export log, along with who they went to. 
+    export_winners = [x[3] for x in export_log if x[0] == item]
+    export_winner_count = {x: export_winners.count(x) for x in export_winners}
 
-        if loot_count != export_count: 
-            print(f"ERROR: {winner} won {item} {loot_count} times in the loot log, but won it {export_count} times in the export log.")
+    # Find out the number of times this item was awarded in the loot log, along with who they went to.
+    loot_winners = [x[3] for x in item_log if x[0] == item]
+    loot_winner_count = {x: loot_winners.count(x) for x in loot_winners}
+
+    # Now, we should compare the two dictionaries.
+    # Skip over the ones that are exactly the same.
+
+    # We need to sort the dictionaries, first alphabetically by name, then number of times won, descending.
+    export_winner_count = dict(sorted(export_winner_count.items(), key=lambda x: (x[0], x[1]), reverse=True))
+    loot_winner_count = dict(sorted(loot_winner_count.items(), key=lambda x: (x[0], x[1]), reverse=True))
+
+    if export_winner_count == loot_winner_count: continue
+
+    print(f"{item}: ")
+    print("+--------------+---+---+")
+
+    # At this point, we know that the two dictionaries are not the same.
+    # Print out any discrepancies between the dictionaries, including winner and count. 
+    # Skip exact matches, even if they're not in order. 
+
+    for winner in export_winner_count:
+        text_winner = f"{winner:<12}"
+        if winner not in loot_winner_count:
+            print(f"| {text_winner} | {export_winner_count[winner]} | 0 |")
+        elif export_winner_count[winner] != loot_winner_count[winner]:
+            print(f"| {text_winner} | {export_winner_count[winner]} | {loot_winner_count[winner]} |")
+
+    for winner in loot_winner_count:
+        text_winner = f"{winner:<12}"
+        if winner not in export_winner_count:
+            print(f"| {text_winner} | 0 | {loot_winner_count[winner]} |")
+
+    print("+--------------+---+---+")
+
+# At this point, we should look and see if there are any items that seem to have been awarded more times in the export log, than they were in the loot log.
+# This could be due to overridden rolls. 
+
+for item in export_log:
+    item_name = item[0]
+    item_count = sum([1 for x in item_log if x[0] == item_name])
+
+    if item_count == 0: 
+        # Check if this item was disenchanted.
+        if item_name in disenchants: 
+            continue
+
+        print(f"ERROR: {item_name} was not found in the loot log.")
+        continue
+
+    if item_count < sum([1 for x in export_log if x[0] == item_name]):
+        print(f"ERROR: {item_name} was awarded more times in the export log than in the loot log.")

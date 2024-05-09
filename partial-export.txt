@@ -1,42 +1,44 @@
 @ID;@ITEM;@ILVL;@SR;@OS;@WINNER;@YEAR-@MONTH-@DAY
-52025;Vanquisher's Mark of Sanctification;80;0;0;Artasz;2024-05-01
-50037;Fleshrending Gauntlets;264;0;1;Artasz;2024-05-01
-50195;Noose of Malachite;264;0;1;Artasz;2024-05-01
-49992;Nibelung;264;0;0;Bunniful;2024-05-01
-52025;Vanquisher's Mark of Sanctification;80;0;0;Bunniful;2024-05-01
-50182;Blood Queen's Crimson Choker;264;1;0;Bzorder;2024-05-01
-50028;Trauma;264;0;0;Catreene;2024-05-01
-49986;Broken Ram Skull Helm;264;0;0;Darkfern;2024-05-01
-50186;Frostbrood Sapphire Ring;264;0;1;Elisesolis;2024-05-01
-50362;Deathbringer's Will;264;1;0;Ferrousblade;2024-05-01
-50176;San'layn Ritualist Gloves;264;0;0;Lorniras;2024-05-01
-50608;Frozen Bonespike;277;0;0;Miatotems;2024-05-01
-52026;Protector's Mark of Sanctification;80;0;1;Miatotems;2024-05-01
-50170;Valanar's Other Signet Ring;264;0;1;Miatotems;2024-05-01
-52026;Protector's Mark of Sanctification;80;0;1;Miatotems;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Pastiry;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Pastiry;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Pastiry;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Pastiry;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Pastiry;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Pastiry;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Pastiry;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Pastiry;2024-05-01
-52025;Vanquisher's Mark of Sanctification;80;0;0;Ryotto;2024-05-01
-50072;Landsoul's Horned Greathelm;264;0;0;Ryotto;2024-05-01
-50604;Band of the Bone Colossus;277;0;0;Sighanama;2024-05-01
-52025;Vanquisher's Mark of Sanctification;80;0;0;Soulreaverr;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Soulreaverr;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Soulreaverr;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Soulreaverr;2024-05-01
-50274;Shadowfrost Shard;0;0;0;Soulreaverr;2024-05-01
-50025;Seal of Many Mouths;264;0;1;Strixien;2024-05-01
-50659;Polar Bear Claw Bracers;277;0;0;Themrmoseby;2024-05-01
-50657;Skeleton Lord's Circle;277;0;0;Themrmoseby;2024-05-01
-50472;Nightmare Ender;264;0;0;Tinyraider;2024-05-01
-50617;Rusted Bonespike Pauldrons;277;0;0;_disenchanted;2024-05-01
-50667;Waistband of Righteous Fury;277;0;0;_disenchanted;2024-05-01
-50016;Rib Spreader;264;0;0;_disenchanted;2024-05-01
-50042;Gangrenous Leggings;264;0;0;_disenchanted;2024-05-01
-50063;Lingering Illness;264;0;0;_disenchanted;2024-05-01
-50067;Astrylian's Sutured Cinch;264;0;0;_disenchanted;2024-05-01
+50176;San'layn Ritualist Gloves;264;0;0;_disenchanted;2024-05-08
+50366;Althor's Abacus;277;0;0;Chainmale;2024-05-08
+50413;Nerub'ar Stalker's Cord;264;0;0;Meemeemeemee;2024-05-08
+49983;Blood-Soaked Saronite Stompers;264;0;1;Onlyflowers;2024-05-08
+50073;Geistlord's Punishment Sack;264;0;0;Kairiz;2024-05-08
+50661;Corp'rethar Ceremonial Crown;277;0;0;Axsel;2024-05-08
+50415;Bryntroll, the Bone Arbiter;264;0;0;Onlyflowers;2024-05-08
+50187;Coldwraith Links;264;0;0;Ryotto;2024-05-08
+50653;Shadowvault Slayer's Cloak;277;1;0;Meemeemeemee;2024-05-08
+49975;Bone Sentinel's Amulet;264;0;0;Uvite;2024-05-08
+49991;Shoulders of Mercy Killing;264;0;0;Lorniras;2024-05-08
+50353;Dislodged Foreign Object;264;0;0;Bzorder;2024-05-08
+50205;Frostbinder's Shredded Cape;264;0;0;Vanthulhu;2024-05-08
+52025;Vanquisher's Mark of Sanctification;80;0;0;Kairiz;2024-05-08
+52025;Vanquisher's Mark of Sanctification;80;0;0;Onlyflowers;2024-05-08
+50060;Faceplate of the Forgotten;264;0;0;_disenchanted;2024-05-08
+50362;Deathbringer's Will;264;1;0;Darkfern;2024-05-08
+49979;Handguards of Winter's Respite;264;0;0;_disenchanted;2024-05-08
+50023;Bile-Encrusted Medallion;264;0;0;Ulvson;2024-05-08
+52027;Conqueror's Mark of Sanctification;80;0;0;Bladehero;2024-05-08
+50172;Sanguine Silk Robes;264;0;0;Uvite;2024-05-08
+50056;Plaguebringer's Stained Pants;264;0;1;Uvite;2024-05-08
+50179;Last Word;264;0;0;Ulvson;2024-05-08
+50180;Lana'thel's Chain of Flagellation;264;0;0;Onlyflowers;2024-05-08
+50202;Snowstorm Helm;264;0;0;_disenchanted;2024-05-08
+52025;Vanquisher's Mark of Sanctification;80;0;0;Ryotto;2024-05-08
+49992;Nibelung;264;0;0;Ulvson;2024-05-08
+52025;Vanquisher's Mark of Sanctification;80;0;0;Ryotto;2024-05-08
+52026;Protector's Mark of Sanctification;80;0;0;Zynrenner;2024-05-08
+50020;Raging Behemoth's Shoulderplates;264;0;0;Onlyflowers;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
