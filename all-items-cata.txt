@@ -1,0 +1,1042 @@
+ID;Item;Item Level;Category;Version
+71715;A Treatise on Strategy;None;Items;Normal
+56291;Abalone Plate Armor;346;Chest;Normal
+56465;Abandoned Dark Iron Ring;346;Finger;Normal
+65039;Aberration's Leggings;372;Legs;Heroic
+59343;Aberration's Leggings;359;Legs;Normal
+56327;Acanthia's Lost Pendant;346;Neck;Normal
+62378;Acorn of the Daughter Tree;346;Neck;Normal
+70934;Adamantine Signet of the Avengers;391;Finger;Normal
+62381;Aessina-Blessed Gloves;346;Hands;Normal
+59455;Agile Bio-Optic Killshades;359;Head;Normal
+65007;Akirus the Worm-Breaker;372;Two-Handed Maces;Heroic
+59492;Akirus the Worm-Breaker;359;Two-Handed Maces;Normal
+65023;Akmin-Kurai, Dominion's Shield;372;Off Hand;Heroic
+59444;Akmin-Kurai, Dominion's Shield;359;Off Hand;Normal
+65023;Akmin-Kurai, Dominion's Shield;372;Off Hand;Normal
+57870;Alpha Bracers;346;Wrist;Normal
+56294;Alpheus Legguards;346;Legs;Normal
+72880;Alurmi's Ring;378;Finger;Normal
+71427;Alysra's Razor;391;Daggers;Heroic
+70733;Alysra's Razor;378;Daggers;Normal
+71433;Alysrazor's Band;391;Finger;Heroic
+70738;Alysrazor's Band;378;Finger;Normal
+69801;Amani Armguards;353;Wrist;Normal
+69747;Amani Battle Bear;None;Mount Items;Normal
+69579;Amani Headdress;353;Head;Normal
+69581;Amani Scepter of Rites;353;One-Handed Maces;Normal
+69559;Amani'shi Bracers;353;Wrist;Normal
+56317;Amber Messenger;346;Bows;Normal
+71573;Amulet of Burning Brilliance;391;Neck;Heroic
+71213;Amulet of Burning Brilliance;378;Neck;Normal
+57931;Amulet of Dull Dreaming;346;Neck;Normal
+69635;Amulet of Protection;353;Neck;Normal
+56362;Amulet of Tender Breath;346;Neck;Normal
+69605;Amulet of the Watcher;353;Neck;Normal
+69199;Ancient Petrified Seed;391;Trinket;Heroic
+69001;Ancient Petrified Seed;378;Trinket;Normal
+65017;Andoros, Fist of the Dragon King;372;One-Handed Maces;Heroic
+59459;Andoros, Fist of the Dragon King;359;One-Handed Maces;Normal
+56407;Anhuur's Hymnal;346;Trinket;Normal
+72842;Annihilan Helm;378;Head;Normal
+56278;Anomuran Helm;346;Head;Normal
+57868;Anraphet's Regalia;346;Chest;Normal
+56276;Anthia's Ring;346;Finger;Normal
+69113;Apparatus of Khaz'goroth;391;Trinket;Heroic
+68972;Apparatus of Khaz'goroth;378;Trinket;Normal
+57924;Apple-Bent Bough;346;Held In Off-hand;Normal
+71404;Arachnaflame Treads;391;Feet;Heroic
+71029;Arachnaflame Treads;378;Feet;Normal
+71611;Arathar, the Eye of Flame;397;Bows;Heroic
+71353;Arathar, the Eye of Flame;384;Bows;Normal
+71414;Arbalest of Erupting Fury;391;Crossbows;Heroic
+70991;Arbalest of Erupting Fury;378;Crossbows;Normal
+68769;Arcanum of Vicious Agility;None;Item Enhancements (Permanent);Normal
+68770;Arcanum of Vicious Intellect;None;Item Enhancements (Permanent);Normal
+68768;Arcanum of Vicious Strength;None;Item Enhancements (Permanent);Normal
+63445;Arced War Axe;346;Two-Handed Axes;Normal
+72852;Archivist's Gloves;378;Hands;Normal
+72853;Arcurion Legguards;378;Legs;Normal
+65120;Arion's Crown;372;Head;Heroic
+59504;Arion's Crown;359;Head;Normal
+69638;Arlokk's Claws;353;Fist Weapons;Normal
+69610;Arlokk's Signet;353;Finger;Normal
+56297;Armbands of Change;346;Wrist;Normal
+63484;Armbands of Exiled Architects;346;Wrist;Normal
+69556;Armbands of the Bear Spirit;353;Wrist;Normal
+56416;Armguards of Unearthly Light;346;Wrist;Normal
+72897;Arrow of Time;378;Trinket;Normal
+78527;Arrowflick Gauntlets;410;Hands;Heroic
+77162;Arrowflick Gauntlets;397;Hands;Normal
+78610;Arrowflick Gauntlets;384;Hands;LFR
+67150;Arrowsinger Legguards;359;Legs;Normal
+56562;Assassin's Chestplate;359;Chest;Normal
+78445;Ataraxis, Cudgel of the Warmaster;410;Two-Handed Maces;Heroic
+77224;Ataraxis, Cudgel of the Warmaster;397;Two-Handed Maces;Normal
+78453;Ataraxis, Cudgel of the Warmaster;384;Two-Handed Maces;LFR
+56269;Aurelian Mitre;346;Head;Normal
+70122;Aviana's Grips;365;Hands;Normal
+71778;Avool's Incendiary Shanker;391;Daggers;Heroic
+71779;Avool's Incendiary Shanker;378;Daggers;Normal
+56408;Awakening Footfalls;346;Feet;Normal
+56364;Axe of the Eclipse;346;One-Handed Axes;Normal
+72814;Axe of the Tauren Chieftains;378;Two-Handed Axes;Normal
+56450;Azureborne Cloak;346;Back;Normal
+78465;Backbreaker Spaulders;416;Shoulder;Heroic
+77236;Backbreaker Spaulders;403;Shoulder;Normal
+78470;Backbreaker Spaulders;390;Shoulder;LFR
+71594;Balespider's Handwraps;391;Hands;Heroic
+71281;Balespider's Handwraps;378;Hands;Normal
+71595;Balespider's Hood;391;Head;Heroic
+71282;Balespider's Hood;378;Head;Normal
+71596;Balespider's Leggings;391;Legs;Heroic
+71283;Balespider's Leggings;378;Legs;Normal
+71598;Balespider's Mantle;391;Shoulder;Heroic
+71285;Balespider's Mantle;378;Shoulder;Normal
+71597;Balespider's Robes;391;Chest;Heroic
+71284;Balespider's Robes;378;Chest;Normal
+56386;Balkar's Waders;346;Legs;Normal
+58185;Band of Bees;359;Finger;Normal
+52318;Band of Blades;346;Finger;Normal
+71327;Band of Ghoulish Glee;365;Finger;Normal
+70110;Band of Glittering Lights;365;Finger;Normal
+62415;Band of Lamentation;346;Finger;Normal
+56418;Band of Life Energy;346;Finger;Normal
+56432;Band of Rays;346;Finger;Normal
+78523;Band of Reconstruction;410;Finger;Heroic
+77109;Band of Reconstruction;397;Finger;Normal
+78601;Band of Reconstruction;384;Finger;LFR
+58188;Band of Secret Names;359;Finger;Normal
+62427;Band of Singing Grass;346;Finger;Normal
+69802;Band of the Gurubashi Berserker;353;Finger;Normal
+65175;Baradin Footman's Tags;333;Trinket;Normal
+65176;Baradin Grunt's Talisman;333;Trinket;Normal
+56390;Barim's Main Gauche;346;Daggers;Normal
+56292;Barnacle Pendant;346;Neck;Normal
+63437;Baron Ashbury's Cuffs;346;Wrist;Normal
+63444;Baron Silverlaine's Greaves;346;Feet;Normal
+63438;Baroness Silverlaine's Locket;346;Neck;Normal
+62236;Battle Tome;339;Held In Off-hand;Normal
+65062;Battleplate of Ancient Kings;372;Chest;Heroic
+59316;Battleplate of Ancient Kings;359;Chest;Normal
+78727;Battleplate of Radiant Glory;410;Chest;Heroic
+76874;Battleplate of Radiant Glory;397;Chest;Normal
+78822;Battleplate of Radiant Glory;384;Chest;LFR
+69593;Battleplate of the Amani Empire;353;Chest;Normal
+65131;Battleplate of the Apocalypse;372;Chest;Heroic
+59486;Battleplate of the Apocalypse;359;Chest;Normal
+71600;Battleplate of the Molten Giant;391;Chest;Heroic
+71068;Battleplate of the Molten Giant;378;Chest;Normal
+78509;Batwing Cloak;410;Back;Heroic
+77095;Batwing Cloak;397;Back;Normal
+78587;Batwing Cloak;384;Back;LFR
+67246;Beak of Julak-Doom;346;Daggers;Normal
+56309;Beauty's Chew Toy;346;Legs;Normal
+56306;Beauty's Favorite Bone;346;Held In Off-hand;Normal
+56308;Beauty's Plate;346;Chest;Normal
+56305;Beauty's Silken Ribbon;346;Waist;Normal
+58182;Bedrock Talisman;359;Trinket;Normal
+57913;Beech Green Belt;346;Waist;Normal
+65053;Bell of Enraging Resonance;372;Trinket;Heroic
+59326;Bell of Enraging Resonance;359;Trinket;Normal
+65040;Belt of Absolute Zero;372;Waist;Heroic
+59342;Belt of Absolute Zero;359;Waist;Normal
+65034;Belt of Arcane Storms;372;Waist;Heroic
+59349;Belt of Arcane Storms;359;Waist;Normal
+57915;Belt of Barred Clouds;346;Waist;Normal
+78388;Belt of Flayed Skin;410;Waist;Heroic
+77260;Belt of Flayed Skin;397;Waist;Normal
+78395;Belt of Flayed Skin;384;Waist;LFR
+78886;Belt of Ghostly Graces;397;Waist;Normal
+67067;Belt of Guardianship;333;Waist;Normal
+78565;Belt of Hidden Keys;410;Waist;Heroic
+77180;Belt of Hidden Keys;397;Waist;Normal
+78640;Belt of Hidden Keys;384;Waist;LFR
+70117;Belt of Living Obsidium;365;Waist;Normal
+56537;Belt of Nefarious Whispers;359;Waist;Normal
+56410;Belt of Petrified Tears;346;Waist;Normal
+78463;Belt of Shattered Elementium;416;Waist;Heroic
+77237;Belt of Shattered Elementium;403;Waist;Normal
+78468;Belt of Shattered Elementium;390;Waist;LFR
+69600;Belt of Slithering Serpents;353;Waist;Normal
+78566;Belt of Universal Curing;410;Waist;Heroic
+77181;Belt of Universal Curing;397;Waist;Normal
+78641;Belt of Universal Curing;384;Waist;LFR
+69877;Belt of a Thousand Gaping Mouths;359;Waist;Normal
+67240;Belt of a Thousand Mouths;346;Waist;Normal
+78447;Belt of the Beloved Companion;410;Waist;Heroic
+77241;Belt of the Beloved Companion;397;Waist;Normal
+78455;Belt of the Beloved Companion;384;Waist;LFR
+65022;Belt of the Blackhand;372;Waist;Heroic
+59450;Belt of the Blackhand;359;Waist;Normal
+54504;Belt of the Depths;359;Waist;Normal
+57916;Belt of the Dim Forest;346;Waist;Normal
+60231;Belt of the Fallen Brood;379;Waist;Normal
+57922;Belt of the Falling Rain;346;Waist;Normal
+62384;Belt of the Ferocious Wolf;359;Waist;Normal
+56447;Belt of the Forgemaster;346;Waist;Normal
+65057;Belt of the Nightmare;372;Waist;Heroic
+59321;Belt of the Nightmare;359;Waist;Normal
+56341;Belt of the Ringworm;346;Waist;Normal
+71398;Belt of the Seven Seals;391;Waist;Heroic
+71253;Belt of the Seven Seals;378;Waist;Normal
+57917;Belt of the Still Stream;346;Waist;Normal
+62431;Belt of the Untamed;359;Waist;Normal
+56325;Berto's Staff;346;Staves;Normal
+72870;Betrayer's Pauldrons;378;Shoulder;Normal
+65070;Bile-O-Tron Nut;372;Finger;Heroic
+59233;Bile-O-Tron Nut;359;Finger;Normal
+56369;Billowing Cape;346;Back;Normal
+60234;Bindings of Bleak Betrayal;379;Wrist;Normal
+76156;Bindings of the End Times;378;Wrist;Normal
+56289;Bioluminescent Lamp;346;Held In Off-hand;Normal
+56357;Biting Wind;346;Daggers;Normal
+71333;Bitterer Balebrew Charm;365;Trinket;Normal
+78679;Blackfang Battleweave Gloves;410;Hands;Heroic
+77024;Blackfang Battleweave Gloves;397;Hands;Normal
+78774;Blackfang Battleweave Gloves;384;Hands;LFR
+78699;Blackfang Battleweave Helmet;410;Head;Heroic
+77025;Blackfang Battleweave Helmet;397;Head;Normal
+78794;Blackfang Battleweave Helmet;384;Head;LFR
+78708;Blackfang Battleweave Legguards;410;Legs;Heroic
+77026;Blackfang Battleweave Legguards;397;Legs;Normal
+78803;Blackfang Battleweave Legguards;384;Legs;LFR
+78738;Blackfang Battleweave Spaulders;410;Shoulder;Heroic
+77027;Blackfang Battleweave Spaulders;397;Shoulder;Normal
+78833;Blackfang Battleweave Spaulders;384;Shoulder;LFR
+78664;Blackfang Battleweave Tunic;410;Chest;Heroic
+77023;Blackfang Battleweave Tunic;397;Chest;Normal
+78759;Blackfang Battleweave Tunic;384;Chest;LFR
+78448;Blackhorn's Mighty Bulwark;410;Off Hand;Heroic
+77226;Blackhorn's Mighty Bulwark;397;Off Hand;Normal
+78456;Blackhorn's Mighty Bulwark;384;Off Hand;LFR
+56433;Blade of the Burning Sun;346;One-Handed Swords;Normal
+62454;Blade of the Fearless;346;Two-Handed Swords;Normal
+62473;Blade of the Fearless;346;Two-Handed Swords;Normal
+78474;Blade of the Unmaker;416;Daggers;Heroic
+77189;Blade of the Unmaker;403;Daggers;Normal
+78483;Blade of the Unmaker;390;Daggers;LFR
+65091;Blade of the Witching Hour;372;Daggers;Heroic
+63536;Blade of the Witching Hour;359;Daggers;Normal
+71391;Bladed Flamewrath Cover;391;Back;Heroic
+71227;Bladed Flamewrath Cover;378;Back;Normal
+71985;Bladeshadow Leggings;397;Legs;Normal
+71994;Bladeshadow Wristguards;397;Wrist;Normal
+78511;Bladeshatter Treads;410;Feet;Heroic
+77171;Bladeshatter Treads;397;Feet;Normal
+78591;Bladeshatter Treads;384;Feet;LFR
+67139;Blauvelt's Family Crest;359;Finger;Normal
+67236;Blazewing's Furious Kilt;346;Legs;Normal
+58152;Blessed Hands of Elune;346;Hands;Normal
+63455;Blinders of the Follower;346;Head;Normal
+78563;Blinding Girdle of Truth;410;Waist;Heroic
+77184;Blinding Girdle of Truth;397;Waist;Normal
+78644;Blinding Girdle of Truth;384;Waist;LFR
+67145;Blockade's Lost Shield;359;Off Hand;Normal
+56414;Blood of Isiset;346;Trinket;Normal
+33102;Blood of Zul'jin;None;Items;Normal
+72815;Bloodhoof Legguards;378;Legs;Normal
+56546;Bloodied Dragonscale Belt;339;Waist;Normal
+56534;Bloodied Dragonscale Boots;339;Feet;Normal
+56526;Bloodied Dragonscale Bracers;339;Wrist;Normal
+56559;Bloodied Dragonscale Chest;339;Chest;Normal
+56535;Bloodied Dragonscale Gloves;339;Hands;Normal
+56547;Bloodied Dragonscale Helm;339;Head;Normal
+56558;Bloodied Dragonscale Legs;339;Legs;Normal
+56527;Bloodied Dragonscale Shoulders;339;Shoulder;Normal
+56542;Bloodied Leather Belt;339;Waist;Normal
+56530;Bloodied Leather Boots;339;Feet;Normal
+56522;Bloodied Leather Bracers;339;Wrist;Normal
+56554;Bloodied Leather Chest;339;Chest;Normal
+56523;Bloodied Leather Gloves;339;Hands;Normal
+56543;Bloodied Leather Helm;339;Head;Normal
+56555;Bloodied Leather Legs;339;Legs;Normal
+56531;Bloodied Leather Shoulders;339;Shoulder;Normal
+55073;Bloodied Pyrium Belt;339;Waist;Normal
+55074;Bloodied Pyrium Boots;339;Feet;Normal
+55071;Bloodied Pyrium Bracers;339;Wrist;Normal
+55078;Bloodied Pyrium Breastplate;339;Chest;Normal
+55072;Bloodied Pyrium Gauntlets;339;Hands;Normal
+55077;Bloodied Pyrium Helm;339;Head;Normal
+55076;Bloodied Pyrium Legguards;339;Legs;Normal
+55075;Bloodied Pyrium Shoulders;339;Shoulder;Normal
+56533;Bloodied Scale Belt;339;Waist;Normal
+56532;Bloodied Scale Boots;339;Feet;Normal
+56524;Bloodied Scale Bracers;339;Wrist;Normal
+56556;Bloodied Scale Chest;339;Chest;Normal
+56525;Bloodied Scale Gloves;339;Hands;Normal
+56557;Bloodied Scale Helm;339;Head;Normal
+56545;Bloodied Scale Legs;339;Legs;Normal
+56544;Bloodied Scale Shoulders;339;Shoulder;Normal
+56521;Bloodied Wyrmhide Belt;339;Waist;Normal
+56529;Bloodied Wyrmhide Boots;339;Feet;Normal
+56520;Bloodied Wyrmhide Bracers;339;Wrist;Normal
+56541;Bloodied Wyrmhide Chest;339;Chest;Normal
+56528;Bloodied Wyrmhide Gloves;339;Hands;Normal
+56553;Bloodied Wyrmhide Helm;339;Head;Normal
+56552;Bloodied Wyrmhide Legs;339;Legs;Normal
+56540;Bloodied Wyrmhide Shoulders;339;Shoulder;Normal
+69609;Bloodlord's Protector;353;One-Handed Swords;Normal
+56419;Bloodpetal Mantle;346;Shoulder;Normal
+70072;Bloodthirsty Amberjewel Band;358;Finger;Normal
+70075;Bloodthirsty Amberjewel Pendant;358;Neck;Normal
+70077;Bloodthirsty Charm of Triumph;358;Relic;Normal
+70044;Bloodthirsty Charscale Belt;358;Waist;Normal
+70045;Bloodthirsty Charscale Boots;358;Feet;Normal
+70046;Bloodthirsty Charscale Bracers;358;Wrist;Normal
+70047;Bloodthirsty Charscale Chest;358;Chest;Normal
+70048;Bloodthirsty Charscale Gloves;358;Hands;Normal
+70049;Bloodthirsty Charscale Helm;358;Head;Normal
+70050;Bloodthirsty Charscale Legs;358;Legs;Normal
+70051;Bloodthirsty Charscale Shoulders;358;Shoulder;Normal
+70036;Bloodthirsty Dragonscale Belt;358;Waist;Normal
+70037;Bloodthirsty Dragonscale Boots;358;Feet;Normal
+70038;Bloodthirsty Dragonscale Bracers;358;Wrist;Normal
+70039;Bloodthirsty Dragonscale Chest;358;Chest;Normal
+70040;Bloodthirsty Dragonscale Gloves;358;Hands;Normal
+70041;Bloodthirsty Dragonscale Helm;358;Head;Normal
+70042;Bloodthirsty Dragonscale Legs;358;Legs;Normal
+70043;Bloodthirsty Dragonscale Shoulders;358;Shoulder;Normal
+70062;Bloodthirsty Embersilk Belt;358;Waist;Normal
+70061;Bloodthirsty Embersilk Boots;358;Feet;Normal
+70063;Bloodthirsty Embersilk Bracers;358;Wrist;Normal
+70070;Bloodthirsty Embersilk Cape;358;Back;Normal
+70067;Bloodthirsty Embersilk Cowl;358;Head;Normal
+70065;Bloodthirsty Embersilk Gloves;358;Hands;Normal
+70066;Bloodthirsty Embersilk Pants;358;Legs;Normal
+70060;Bloodthirsty Embersilk Robe;358;Chest;Normal
+70064;Bloodthirsty Embersilk Shoulders;358;Shoulder;Normal
+70078;Bloodthirsty Eyeball of Dominance;358;Relic;Normal
+70052;Bloodthirsty Fireweave Belt;358;Waist;Normal
+70053;Bloodthirsty Fireweave Boots;358;Feet;Normal
+70054;Bloodthirsty Fireweave Bracers;358;Wrist;Normal
+70055;Bloodthirsty Fireweave Cowl;358;Head;Normal
+70056;Bloodthirsty Fireweave Gloves;358;Hands;Normal
+70057;Bloodthirsty Fireweave Pants;358;Legs;Normal
+70058;Bloodthirsty Fireweave Robe;358;Chest;Normal
+70059;Bloodthirsty Fireweave Shoulders;358;Shoulder;Normal
+70068;Bloodthirsty Fur Cloak;358;Back;Normal
+64681;Bloodthirsty Gladiator's Armbands of Meditation;352;Wrist;Normal
+64682;Bloodthirsty Gladiator's Armbands of Prowess;352;Wrist;Normal
+64683;Bloodthirsty Gladiator's Armplates of Alacrity;352;Wrist;Normal
+64684;Bloodthirsty Gladiator's Armplates of Proficiency;352;Wrist;Normal
+64685;Bloodthirsty Gladiator's Armwraps of Accuracy;352;Wrist;Normal
+64686;Bloodthirsty Gladiator's Armwraps of Alacrity;352;Wrist;Normal
+64687;Bloodthirsty Gladiator's Badge of Conquest;352;Trinket;Normal
+64688;Bloodthirsty Gladiator's Badge of Dominance;352;Trinket;Normal
+64689;Bloodthirsty Gladiator's Badge of Victory;352;Trinket;Normal
+64690;Bloodthirsty Gladiator's Band of Accuracy;352;Finger;Normal
+64691;Bloodthirsty Gladiator's Band of Cruelty;352;Finger;Normal
+64692;Bloodthirsty Gladiator's Band of Meditation;352;Finger;Normal
+64693;Bloodthirsty Gladiator's Barrier;353;Off Hand;Normal
+64694;Bloodthirsty Gladiator's Baton of Light;353;Wands;Normal
+64695;Bloodthirsty Gladiator's Battle Staff;353;Staves;Normal
+64696;Bloodthirsty Gladiator's Belt of Cruelty;352;Waist;Normal
+64697;Bloodthirsty Gladiator's Belt of Meditation;352;Waist;Normal
+64698;Bloodthirsty Gladiator's Bindings of Meditation;352;Wrist;Normal
+64699;Bloodthirsty Gladiator's Bindings of Prowess;352;Wrist;Normal
+64700;Bloodthirsty Gladiator's Bonecracker;353;One-Handed Maces;Normal
+64701;Bloodthirsty Gladiator's Bonegrinder;353;Two-Handed Maces;Normal
+64702;Bloodthirsty Gladiator's Boots of Alacrity;352;Feet;Normal
+64703;Bloodthirsty Gladiator's Boots of Cruelty;352;Feet;Normal
+64704;Bloodthirsty Gladiator's Bracers of Meditation;352;Wrist;Normal
+64705;Bloodthirsty Gladiator's Bracers of Prowess;352;Wrist;Normal
+64706;Bloodthirsty Gladiator's Cape of Cruelty;352;Back;Normal
+64707;Bloodthirsty Gladiator's Cape of Prowess;352;Back;Normal
+64708;Bloodthirsty Gladiator's Chain Armor;352;Chest;Normal
+64709;Bloodthirsty Gladiator's Chain Gauntlets;352;Hands;Normal
+64710;Bloodthirsty Gladiator's Chain Helm;352;Head;Normal
+64711;Bloodthirsty Gladiator's Chain Leggings;352;Legs;Normal
+64712;Bloodthirsty Gladiator's Chain Spaulders;352;Shoulder;Normal
+64713;Bloodthirsty Gladiator's Choker of Accuracy;352;Neck;Normal
+64714;Bloodthirsty Gladiator's Choker of Proficiency;352;Neck;Normal
+64715;Bloodthirsty Gladiator's Clasp of Cruelty;352;Waist;Normal
+64716;Bloodthirsty Gladiator's Clasp of Meditation;352;Waist;Normal
+64717;Bloodthirsty Gladiator's Cleaver;353;One-Handed Axes;Normal
+64718;Bloodthirsty Gladiator's Cloak of Alacrity;352;Back;Normal
+64719;Bloodthirsty Gladiator's Cloak of Prowess;352;Back;Normal
+64720;Bloodthirsty Gladiator's Cord of Accuracy;352;Waist;Normal
+64721;Bloodthirsty Gladiator's Cord of Cruelty;352;Waist;Normal
+64722;Bloodthirsty Gladiator's Cord of Meditation;352;Waist;Normal
+64723;Bloodthirsty Gladiator's Cuffs of Accuracy;352;Wrist;Normal
+64724;Bloodthirsty Gladiator's Cuffs of Meditation;352;Wrist;Normal
+64725;Bloodthirsty Gladiator's Cuffs of Prowess;352;Wrist;Normal
+64726;Bloodthirsty Gladiator's Decapitator;353;Two-Handed Axes;Normal
+64727;Bloodthirsty Gladiator's Dragonhide Gloves;352;Hands;Normal
+64728;Bloodthirsty Gladiator's Dragonhide Helm;352;Head;Normal
+64729;Bloodthirsty Gladiator's Dragonhide Legguards;352;Legs;Normal
+64730;Bloodthirsty Gladiator's Dragonhide Robes;352;Chest;Normal
+64731;Bloodthirsty Gladiator's Dragonhide Spaulders;352;Shoulder;Normal
+64732;Bloodthirsty Gladiator's Drape of Diffusion;352;Back;Normal
+64733;Bloodthirsty Gladiator's Drape of Meditation;352;Back;Normal
+64734;Bloodthirsty Gladiator's Drape of Prowess;352;Back;Normal
+64735;Bloodthirsty Gladiator's Dreadplate Chestpiece;352;Chest;Normal
+64736;Bloodthirsty Gladiator's Dreadplate Gauntlets;352;Hands;Normal
+64737;Bloodthirsty Gladiator's Dreadplate Helm;352;Head;Normal
+64738;Bloodthirsty Gladiator's Dreadplate Legguards;352;Legs;Normal
+64739;Bloodthirsty Gladiator's Dreadplate Shoulders;352;Shoulder;Normal
+64740;Bloodthirsty Gladiator's Emblem of Cruelty;352;Trinket;Normal
+64741;Bloodthirsty Gladiator's Emblem of Meditation;352;Trinket;Normal
+64742;Bloodthirsty Gladiator's Emblem of Tenacity;352;Trinket;Normal
+64743;Bloodthirsty Gladiator's Endgame;353;Held In Off-hand;Normal
+64744;Bloodthirsty Gladiator's Energy Staff;353;Staves;Normal
+64745;Bloodthirsty Gladiator's Felweave Amice;352;Shoulder;Normal
+64746;Bloodthirsty Gladiator's Felweave Cowl;352;Head;Normal
+64747;Bloodthirsty Gladiator's Felweave Handguards;352;Hands;Normal
+64748;Bloodthirsty Gladiator's Felweave Raiment;352;Chest;Normal
+64749;Bloodthirsty Gladiator's Felweave Trousers;352;Legs;Normal
+64750;Bloodthirsty Gladiator's Footguards of Alacrity;352;Feet;Normal
+64751;Bloodthirsty Gladiator's Footguards of Meditation;352;Feet;Normal
+64752;Bloodthirsty Gladiator's Gavel;353;One-Handed Maces;Normal
+64753;Bloodthirsty Gladiator's Girdle of Cruelty;352;Waist;Normal
+64754;Bloodthirsty Gladiator's Girdle of Prowess;352;Waist;Normal
+64755;Bloodthirsty Gladiator's Greatsword;353;Two-Handed Swords;Normal
+64756;Bloodthirsty Gladiator's Greaves of Alacrity;352;Feet;Normal
+64757;Bloodthirsty Gladiator's Greaves of Meditation;352;Feet;Normal
+64758;Bloodthirsty Gladiator's Hacker;353;One-Handed Axes;Normal
+64759;Bloodthirsty Gladiator's Hatchet;353;None;Normal
+64760;Bloodthirsty Gladiator's Heavy Crossbow;353;Crossbows;Normal
+64761;Bloodthirsty Gladiator's Insignia of Conquest;352;Trinket;Normal
+64762;Bloodthirsty Gladiator's Insignia of Dominance;352;Trinket;Normal
+64763;Bloodthirsty Gladiator's Insignia of Victory;352;Trinket;Normal
+64764;Bloodthirsty Gladiator's Kodohide Gloves;352;Hands;Normal
+64765;Bloodthirsty Gladiator's Kodohide Helm;352;Head;Normal
+64766;Bloodthirsty Gladiator's Kodohide Legguards;352;Legs;Normal
+64767;Bloodthirsty Gladiator's Kodohide Robes;352;Chest;Normal
+64768;Bloodthirsty Gladiator's Kodohide Spaulders;352;Shoulder;Normal
+64769;Bloodthirsty Gladiator's Leather Gloves;352;Hands;Normal
+64770;Bloodthirsty Gladiator's Leather Helm;352;Head;Normal
+64771;Bloodthirsty Gladiator's Leather Legguards;352;Legs;Normal
+64772;Bloodthirsty Gladiator's Leather Spaulders;352;Shoulder;Normal
+64773;Bloodthirsty Gladiator's Leather Tunic;352;Chest;Normal
+64774;Bloodthirsty Gladiator's Left Render;353;Fist Weapons;Normal
+64775;Bloodthirsty Gladiator's Left Ripper;353;Fist Weapons;Normal
+64776;Bloodthirsty Gladiator's Linked Armor;352;Chest;Normal
+64777;Bloodthirsty Gladiator's Linked Gauntlets;352;Hands;Normal
+64778;Bloodthirsty Gladiator's Linked Helm;352;Head;Normal
+64779;Bloodthirsty Gladiator's Linked Leggings;352;Legs;Normal
+64780;Bloodthirsty Gladiator's Linked Spaulders;352;Shoulder;Normal
+64781;Bloodthirsty Gladiator's Links of Accuracy;352;Waist;Normal
+64782;Bloodthirsty Gladiator's Links of Cruelty;352;Waist;Normal
+64783;Bloodthirsty Gladiator's Longbow;353;Bows;Normal
+64784;Bloodthirsty Gladiator's Mail Armor;352;Chest;Normal
+64785;Bloodthirsty Gladiator's Mail Gauntlets;352;Hands;Normal
+64786;Bloodthirsty Gladiator's Mail Helm;352;Head;Normal
+64787;Bloodthirsty Gladiator's Mail Leggings;352;Legs;Normal
+64788;Bloodthirsty Gladiator's Mail Spaulders;352;Shoulder;Normal
+69787;Bloodthirsty Gladiator's Mark of Cruelty;352;Trinket;Normal
+69789;Bloodthirsty Gladiator's Mark of Meditation;352;Trinket;Normal
+69788;Bloodthirsty Gladiator's Mark of Tenacity;352;Trinket;Normal
+64789;Bloodthirsty Gladiator's Medallion of Cruelty;352;Trinket;Normal
+64790;Bloodthirsty Gladiator's Medallion of Cruelty;352;Trinket;Normal
+64791;Bloodthirsty Gladiator's Medallion of Meditation;352;Trinket;Normal
+64792;Bloodthirsty Gladiator's Medallion of Meditation;352;Trinket;Normal
+64793;Bloodthirsty Gladiator's Medallion of Tenacity;352;Trinket;Normal
+64794;Bloodthirsty Gladiator's Medallion of Tenacity;352;Trinket;Normal
+64795;Bloodthirsty Gladiator's Mooncloth Gloves;352;Hands;Normal
+64796;Bloodthirsty Gladiator's Mooncloth Helm;352;Head;Normal
+64797;Bloodthirsty Gladiator's Mooncloth Leggings;352;Legs;Normal
+64798;Bloodthirsty Gladiator's Mooncloth Mantle;352;Shoulder;Normal
+64799;Bloodthirsty Gladiator's Mooncloth Robe;352;Chest;Normal
+64800;Bloodthirsty Gladiator's Necklace of Proficiency;352;Neck;Normal
+64801;Bloodthirsty Gladiator's Necklace of Prowess;352;Neck;Normal
+64802;Bloodthirsty Gladiator's Ornamented Chestguard;352;Chest;Normal
+64803;Bloodthirsty Gladiator's Ornamented Gloves;352;Hands;Normal
+64804;Bloodthirsty Gladiator's Ornamented Headcover;352;Head;Normal
+64805;Bloodthirsty Gladiator's Ornamented Legplates;352;Legs;Normal
+64806;Bloodthirsty Gladiator's Ornamented Spaulders;352;Shoulder;Normal
+64807;Bloodthirsty Gladiator's Pendant of Alacrity;352;Neck;Normal
+64808;Bloodthirsty Gladiator's Pendant of Diffusion;352;Neck;Normal
+64809;Bloodthirsty Gladiator's Pendant of Meditation;352;Neck;Normal
+64810;Bloodthirsty Gladiator's Pike;353;Polearms;Normal
+64811;Bloodthirsty Gladiator's Plate Chestpiece;352;Chest;Normal
+64812;Bloodthirsty Gladiator's Plate Gauntlets;352;Hands;Normal
+64813;Bloodthirsty Gladiator's Plate Helm;352;Head;Normal
+64814;Bloodthirsty Gladiator's Plate Legguards;352;Legs;Normal
+64815;Bloodthirsty Gladiator's Plate Shoulders;352;Shoulder;Normal
+64816;Bloodthirsty Gladiator's Pummeler;353;One-Handed Maces;Normal
+64817;Bloodthirsty Gladiator's Quickblade;353;One-Handed Swords;Normal
+64818;Bloodthirsty Gladiator's Redoubt;353;Off Hand;Normal
+64819;Bloodthirsty Gladiator's Relic of Conquest;352;Relic;Normal
+64820;Bloodthirsty Gladiator's Relic of Dominance;352;Relic;Normal
+64821;Bloodthirsty Gladiator's Relic of Salvation;352;Relic;Normal
+64822;Bloodthirsty Gladiator's Relic of Triumph;352;Relic;Normal
+64823;Bloodthirsty Gladiator's Reprieve;353;Held In Off-hand;Normal
+64824;Bloodthirsty Gladiator's Rifle;353;Guns;Normal
+64825;Bloodthirsty Gladiator's Right Render;353;Fist Weapons;Normal
+64826;Bloodthirsty Gladiator's Right Ripper;353;Fist Weapons;Normal
+64832;Bloodthirsty Gladiator's Ring of Accuracy;352;Finger;Normal
+64833;Bloodthirsty Gladiator's Ring of Cruelty;352;Finger;Normal
+64827;Bloodthirsty Gladiator's Ringmail Armor;352;Chest;Normal
+64828;Bloodthirsty Gladiator's Ringmail Gauntlets;352;Hands;Normal
+64829;Bloodthirsty Gladiator's Ringmail Helm;352;Head;Normal
+64830;Bloodthirsty Gladiator's Ringmail Leggings;352;Legs;Normal
+64831;Bloodthirsty Gladiator's Ringmail Spaulders;352;Shoulder;Normal
+64834;Bloodthirsty Gladiator's Sabatons of Alacrity;352;Feet;Normal
+64835;Bloodthirsty Gladiator's Sabatons of Alacrity;352;Feet;Normal
+64836;Bloodthirsty Gladiator's Sabatons of Cruelty;352;Feet;Normal
+64837;Bloodthirsty Gladiator's Sabatons of Meditation;352;Feet;Normal
+64838;Bloodthirsty Gladiator's Satin Gloves;352;Hands;Normal
+64839;Bloodthirsty Gladiator's Satin Hood;352;Head;Normal
+64840;Bloodthirsty Gladiator's Satin Leggings;352;Legs;Normal
+64841;Bloodthirsty Gladiator's Satin Mantle;352;Shoulder;Normal
+64842;Bloodthirsty Gladiator's Satin Robe;352;Chest;Normal
+64843;Bloodthirsty Gladiator's Scaled Chestpiece;352;Chest;Normal
+64844;Bloodthirsty Gladiator's Scaled Gauntlets;352;Hands;Normal
+64845;Bloodthirsty Gladiator's Scaled Helm;352;Head;Normal
+64846;Bloodthirsty Gladiator's Scaled Legguards;352;Legs;Normal
+64847;Bloodthirsty Gladiator's Scaled Shoulders;352;Shoulder;Normal
+64848;Bloodthirsty Gladiator's Shanker;353;Daggers;Normal
+64849;Bloodthirsty Gladiator's Shield Wall;353;Off Hand;Normal
+64850;Bloodthirsty Gladiator's Shiv;353;Daggers;Normal
+64851;Bloodthirsty Gladiator's Signet of Accuracy;352;Finger;Normal
+64852;Bloodthirsty Gladiator's Signet of Cruelty;352;Finger;Normal
+64853;Bloodthirsty Gladiator's Silk Amice;352;Shoulder;Normal
+64854;Bloodthirsty Gladiator's Silk Cowl;352;Head;Normal
+64855;Bloodthirsty Gladiator's Silk Handguards;352;Hands;Normal
+64856;Bloodthirsty Gladiator's Silk Robe;352;Chest;Normal
+64857;Bloodthirsty Gladiator's Silk Trousers;352;Legs;Normal
+64858;Bloodthirsty Gladiator's Slicer;353;One-Handed Swords;Normal
+64859;Bloodthirsty Gladiator's Spellblade;353;Daggers;Normal
+64860;Bloodthirsty Gladiator's Staff;353;Staves;Normal
+69790;Bloodthirsty Gladiator's Symbol of Cruelty;352;Trinket;Normal
+69792;Bloodthirsty Gladiator's Symbol of Meditation;352;Trinket;Normal
+69791;Bloodthirsty Gladiator's Symbol of Tenacity;352;Trinket;Normal
+64861;Bloodthirsty Gladiator's Touch of Defeat;353;Wands;Normal
+64862;Bloodthirsty Gladiator's Treads of Alacrity;352;Feet;Normal
+64863;Bloodthirsty Gladiator's Treads of Cruelty;352;Feet;Normal
+64864;Bloodthirsty Gladiator's Treads of Meditation;352;Feet;Normal
+64865;Bloodthirsty Gladiator's Waistband of Accuracy;352;Waist;Normal
+64866;Bloodthirsty Gladiator's Waistband of Cruelty;352;Waist;Normal
+64867;Bloodthirsty Gladiator's Waistguard of Cruelty;352;Waist;Normal
+64868;Bloodthirsty Gladiator's Waistguard of Meditation;352;Waist;Normal
+64871;Bloodthirsty Gladiator's War Edge;353;None;Normal
+64869;Bloodthirsty Gladiator's Warboots of Alacrity;352;Feet;Normal
+64870;Bloodthirsty Gladiator's Warboots of Cruelty;352;Feet;Normal
+64872;Bloodthirsty Gladiator's Wristguards of Accuracy;352;Wrist;Normal
+64873;Bloodthirsty Gladiator's Wristguards of Alacrity;352;Wrist;Normal
+64874;Bloodthirsty Gladiator's Wyrmhide Gloves;352;Hands;Normal
+64875;Bloodthirsty Gladiator's Wyrmhide Helm;352;Head;Normal
+64876;Bloodthirsty Gladiator's Wyrmhide Legguards;352;Legs;Normal
+64877;Bloodthirsty Gladiator's Wyrmhide Robes;352;Chest;Normal
+64878;Bloodthirsty Gladiator's Wyrmhide Spaulders;352;Shoulder;Normal
+70069;Bloodthirsty Hide Cloak;358;Back;Normal
+70079;Bloodthirsty Jawbone of Conquest;358;Relic;Normal
+70020;Bloodthirsty Leather Belt;358;Waist;Normal
+70021;Bloodthirsty Leather Boots;358;Feet;Normal
+70022;Bloodthirsty Leather Bracers;358;Wrist;Normal
+70023;Bloodthirsty Leather Chest;358;Chest;Normal
+70024;Bloodthirsty Leather Gloves;358;Hands;Normal
+70025;Bloodthirsty Leather Helm;358;Head;Normal
+70026;Bloodthirsty Leather Legs;358;Legs;Normal
+70027;Bloodthirsty Leather Shoulders;358;Shoulder;Normal
+70018;Bloodthirsty Ornate Pyrium Belt;358;Waist;Normal
+70013;Bloodthirsty Ornate Pyrium Boots;358;Feet;Normal
+70019;Bloodthirsty Ornate Pyrium Bracers;358;Wrist;Normal
+70012;Bloodthirsty Ornate Pyrium Breastplate;358;Chest;Normal
+70014;Bloodthirsty Ornate Pyrium Gauntlets;358;Hands;Normal
+70015;Bloodthirsty Ornate Pyrium Helm;358;Head;Normal
+70016;Bloodthirsty Ornate Pyrium Legguards;358;Legs;Normal
+70017;Bloodthirsty Ornate Pyrium Shoulders;358;Shoulder;Normal
+70010;Bloodthirsty Pyrium Belt;358;Waist;Normal
+70005;Bloodthirsty Pyrium Boots;358;Feet;Normal
+70011;Bloodthirsty Pyrium Bracers;358;Wrist;Normal
+70004;Bloodthirsty Pyrium Breastplate;358;Chest;Normal
+70006;Bloodthirsty Pyrium Gauntlets;358;Hands;Normal
+70007;Bloodthirsty Pyrium Helm;358;Head;Normal
+70008;Bloodthirsty Pyrium Legguards;358;Legs;Normal
+70009;Bloodthirsty Pyrium Shoulders;358;Shoulder;Normal
+70076;Bloodthirsty Ruby Choker;358;Neck;Normal
+70073;Bloodthirsty Ruby Signet;358;Finger;Normal
+70074;Bloodthirsty Sapphire Necklace;358;Neck;Normal
+70071;Bloodthirsty Sapphire Ring;358;Finger;Normal
+70028;Bloodthirsty Wyrmhide Belt;358;Waist;Normal
+70029;Bloodthirsty Wyrmhide Boots;358;Feet;Normal
+70030;Bloodthirsty Wyrmhide Bracers;358;Wrist;Normal
+70031;Bloodthirsty Wyrmhide Chest;358;Chest;Normal
+70032;Bloodthirsty Wyrmhide Gloves;358;Hands;Normal
+70033;Bloodthirsty Wyrmhide Helm;358;Head;Normal
+70034;Bloodthirsty Wyrmhide Legs;358;Legs;Normal
+70035;Bloodthirsty Wyrmhide Shoulders;358;Shoulder;Normal
+69619;Bone Plate Handguards;353;Hands;Normal
+67125;Bone-Inlaid Sarcophagus Key;333;Held In Off-hand;Normal
+78002;Bone-Link Fetish;410;Trinket;Heroic
+77210;Bone-Link Fetish;397;Trinket;Normal
+77982;Bone-Link Fetish;384;Trinket;LFR
+78499;Bones of the Damned;410;Chest;Heroic
+77119;Bones of the Damned;397;Chest;Normal
+78583;Bones of the Damned;384;Chest;LFR
+78512;Boneshard Boots;410;Feet;Heroic
+77175;Boneshard Boots;397;Feet;Normal
+78596;Boneshard Boots;384;Feet;LFR
+65133;Book of Binding Will;372;Held In Off-hand;Heroic
+59484;Book of Binding Will;359;Held In Off-hand;Normal
+56350;Book of Dark Prophecies;346;Relic;Normal
+63487;Book of the Well Sung Song;346;Relic;Normal
+60235;Boots of Az'galada;379;Feet;Normal
+69562;Boots of Bad Mojo;353;Feet;Normal
+57867;Boots of Crumbling Ruin;346;Feet;Normal
+78517;Boots of Fungoid Growth;410;Feet;Heroic
+77172;Boots of Fungoid Growth;397;Feet;Normal
+78592;Boots of Fungoid Growth;384;Feet;LFR
+63440;Boots of Lingering Sorrow;346;Feet;Normal
+62418;Boots of Sullen Rock;359;Feet;Normal
+65063;Boots of Vertigo;372;Feet;Heroic
+59315;Boots of Vertigo;359;Feet;Normal
+69954;Boots of the Black Flame;378;Feet;Normal
+72874;Boots of the Forked Road;378;Feet;Normal
+58481;Boots of the Perilous Seas;359;Feet;Normal
+63435;Boots of the Predator;346;Feet;Normal
+72879;Boots of the Treacherous Path;378;Feet;Normal
+69555;Boots of the Ursine;353;Feet;Normal
+78005;Bottled Wishes;410;Trinket;Heroic
+77114;Bottled Wishes;397;Trinket;Normal
+77985;Bottled Wishes;384;Trinket;LFR
+67127;Bracers of Caustic Purification;333;Wrist;Normal
+56301;Bracers of Cooled Anger;346;Wrist;Normal
+71992;Bracers of Destructive Strength;397;Wrist;Normal
+71995;Bracers of Flowing Serenity;397;Wrist;Normal
+71570;Bracers of Forked Lightning;391;Wrist;Heroic
+71264;Bracers of Forked Lightning;378;Wrist;Normal
+69552;Bracers of Hidden Purpose;353;Wrist;Normal
+71583;Bracers of Imperious Truths;391;Wrist;Heroic
+71260;Bracers of Imperious Truths;378;Wrist;Normal
+65143;Bracers of Impossible Strength;372;Wrist;Heroic
+59470;Bracers of Impossible Strength;359;Wrist;Normal
+78430;Bracers of Looming Darkness;410;Wrist;Heroic
+77247;Bracers of Looming Darkness;397;Wrist;Normal
+78438;Bracers of Looming Darkness;384;Wrist;LFR
+78574;Bracers of Manifold Pockets;410;Wrist;Heroic
+77322;Bracers of Manifold Pockets;397;Wrist;Normal
+78654;Bracers of Manifold Pockets;384;Wrist;LFR
+71582;Bracers of Misting Ash;391;Wrist;Heroic
+71263;Bracers of Misting Ash;378;Wrist;Normal
+71585;Bracers of Regal Force;391;Wrist;Heroic
+70937;Bracers of Regal Force;378;Wrist;Normal
+63479;Bracers of Some Consequence;346;Wrist;Normal
+56464;Bracers of Umbral Mending;346;Wrist;Normal
+71989;Bracers of Unconquered Power;397;Wrist;Normal
+78570;Bracers of Unrelenting Excellence;410;Wrist;Heroic
+77318;Bracers of Unrelenting Excellence;397;Wrist;Normal
+78650;Bracers of Unrelenting Excellence;384;Wrist;LFR
+78417;Bracers of the Banished;410;Wrist;Heroic
+77249;Bracers of the Banished;397;Wrist;Normal
+78425;Bracers of the Banished;384;Wrist;LFR
+78577;Bracers of the Black Dream;410;Wrist;Heroic
+77323;Bracers of the Black Dream;397;Wrist;Normal
+78655;Bracers of the Black Dream;384;Wrist;LFR
+65138;Bracers of the Bronze Flight;372;Wrist;Heroic
+59475;Bracers of the Bronze Flight;359;Wrist;Normal
+65056;Bracers of the Burningeye;372;Wrist;Heroic
+59322;Bracers of the Burningeye;359;Wrist;Normal
+60238;Bracers of the Dark Mother;379;Wrist;Normal
+65097;Bracers of the Dark Pool;372;Wrist;Heroic
+60211;Bracers of the Dark Pool;359;Wrist;Normal
+71452;Bracers of the Dread Hunter;391;Wrist;Heroic
+71026;Bracers of the Dread Hunter;378;Wrist;Normal
+71470;Bracers of the Fiery Path;391;Wrist;Heroic
+70920;Bracers of the Fiery Path;378;Wrist;Normal
+71996;Bracers of the Hunter-Killer;397;Wrist;Normal
+60228;Bracers of the Mat'redor;379;Wrist;Normal
+78572;Bracers of the Spectral Wolf;410;Wrist;Heroic
+77319;Bracers of the Spectral Wolf;397;Wrist;Normal
+78651;Bracers of the Spectral Wolf;384;Wrist;LFR
+78367;Brackenshell Shoulderplates;410;Shoulder;Heroic
+77268;Brackenshell Shoulderplates;397;Shoulder;Normal
+78378;Brackenshell Shoulderplates;384;Shoulder;LFR
+65065;Brackish Gloves;372;Hands;Heroic
+59313;Brackish Gloves;359;Hands;Normal
+70155;Brainsplinter;365;Daggers;Normal
+71084;Branch of Nordrassil;378;Staves;Normal
+71338;Brawler's Trophy;365;Trinket;Normal
+52350;Brazen Elementium Medallion;346;Neck;Normal
+65042;Breastplate of Avenging Flame;372;Chest;Heroic
+59340;Breastplate of Avenging Flame;359;Chest;Normal
+76154;Breastplate of Despair;378;Chest;Normal
+69565;Breastplate of Primal Fury;353;Chest;Normal
+78726;Breastplate of Radiant Glory;410;Chest;Heroic
+76765;Breastplate of Radiant Glory;397;Chest;Normal
+78821;Breastplate of Radiant Glory;384;Chest;LFR
+58096;Breastplate of Raging Fury;346;Chest;Normal
+69603;Breastplate of Serenity;353;Chest;Normal
+71469;Breastplate of Shifting Visions;391;Chest;Heroic
+71344;Breastplate of Shifting Visions;378;Chest;Normal
+72801;Breastplate of Sorrow;378;Chest;Normal
+72818;Breastplate of Tarnished Bronze;378;Chest;Normal
+71455;Breastplate of the Incendiary Soul;391;Chest;Heroic
+71314;Breastplate of the Incendiary Soul;378;Chest;Normal
+72834;Breastplate of the Queen's Guard;378;Chest;Normal
+56425;Breastplate of the Risen Land;346;Chest;Normal
+63447;Breastplate of the Stilled Heart;346;Chest;Normal
+78492;Breathstealer Band;410;Finger;Heroic
+77230;Breathstealer Band;397;Finger;Normal
+78497;Breathstealer Band;384;Finger;LFR
+54505;Breeches of Mended Nightmares;359;Legs;Normal
+72873;Bronze Blaster;378;Guns;Normal
+71334;Bubblier Brightbrew Charm;365;Trinket;Normal
+67138;Buc-Zakai Choker;359;Neck;Normal
+56426;Bulwark of the Primordial Mound;346;Off Hand;Normal
+63452;Burden of Lost Humanity;346;Shoulder;Normal
+65067;Burden of Mortality;372;Shoulder;Heroic
+59311;Burden of Mortality;359;Shoulder;Normal
+56304;Burned Gatherings;346;Back;Normal
+65166;Buzz Saw;346;One-Handed Swords;Normal
+65163;Buzzer Blade;346;Daggers;Normal
+60227;Caelestrasz's Will;379;Neck;Normal
+78546;Cameo of Terrible Memories;410;Neck;Heroic
+77091;Cameo of Terrible Memories;397;Neck;Normal
+78622;Cameo of Terrible Memories;384;Neck;LFR
+59453;Camouflage Bio-Optic Killshades;359;Head;Normal
+65177;Cape of the Brotherhood;346;Back;Normal
+56372;Captured Lightning;346;Relic;Normal
+71405;Carapace of Imbibed Flame;391;Chest;Heroic
+70914;Carapace of Imbibed Flame;378;Chest;Normal
+56273;Caridean Epaulettes;346;Shoulder;Normal
+56319;Carrier Wave Pendant;346;Neck;Normal
+71465;Casque of Flame;391;Head;Heroic
+71342;Casque of Flame;378;Head;Normal
+73518;Cataclysmic Gladiator's Armbands of Meditation;403;Wrist;Normal
+73519;Cataclysmic Gladiator's Armbands of Prowess;403;Wrist;Normal
+73550;Cataclysmic Gladiator's Armplates of Alacrity;403;Wrist;Normal
+73551;Cataclysmic Gladiator's Armplates of Proficiency;403;Wrist;Normal
+73528;Cataclysmic Gladiator's Armwraps of Accuracy;403;Wrist;Normal
+73529;Cataclysmic Gladiator's Armwraps of Alacrity;403;Wrist;Normal
+73648;Cataclysmic Gladiator's Badge of Conquest;403;Trinket;Normal
+73498;Cataclysmic Gladiator's Badge of Dominance;403;Trinket;Normal
+73496;Cataclysmic Gladiator's Badge of Victory;403;Trinket;Normal
+73622;Cataclysmic Gladiator's Band of Accuracy;403;Finger;Normal
+73623;Cataclysmic Gladiator's Band of Cruelty;403;Finger;Normal
+73621;Cataclysmic Gladiator's Band of Meditation;403;Finger;Normal
+73435;Cataclysmic Gladiator's Barrier;410;Off Hand;Heroic
+73468;Cataclysmic Gladiator's Barrier;397;Off Hand;Normal
+73417;Cataclysmic Gladiator's Baton of Light;410;Wands;Heroic
+73450;Cataclysmic Gladiator's Baton of Light;397;Wands;Normal
+73433;Cataclysmic Gladiator's Battle Staff;410;Staves;Heroic
+73466;Cataclysmic Gladiator's Battle Staff;397;Staves;Normal
+73602;Cataclysmic Gladiator's Belt of Cruelty;403;Waist;Normal
+73610;Cataclysmic Gladiator's Belt of Meditation;403;Waist;Normal
+73608;Cataclysmic Gladiator's Bindings of Meditation;403;Wrist;Normal
+73600;Cataclysmic Gladiator's Bindings of Prowess;403;Wrist;Normal
+73415;Cataclysmic Gladiator's Bonecracker;410;One-Handed Maces;Heroic
+73448;Cataclysmic Gladiator's Bonecracker;397;One-Handed Maces;Normal
+73443;Cataclysmic Gladiator's Bonegrinder;410;Two-Handed Maces;Heroic
+73476;Cataclysmic Gladiator's Bonegrinder;397;Two-Handed Maces;Normal
+73530;Cataclysmic Gladiator's Boots of Alacrity;403;Feet;Normal
+73683;Cataclysmic Gladiator's Boots of Alacrity;403;Feet;Normal
+73531;Cataclysmic Gladiator's Boots of Cruelty;403;Feet;Normal
+73684;Cataclysmic Gladiator's Boots of Cruelty;403;Feet;Normal
+73561;Cataclysmic Gladiator's Bracers of Meditation;403;Wrist;Normal
+73562;Cataclysmic Gladiator's Bracers of Prowess;403;Wrist;Normal
+73647;Cataclysmic Gladiator's Cape of Cruelty;403;Back;Normal
+73646;Cataclysmic Gladiator's Cape of Prowess;403;Back;Normal
+73584;Cataclysmic Gladiator's Chain Armor;403;Chest;Normal
+73718;Cataclysmic Gladiator's Chain Armor;403;Chest;Normal
+73583;Cataclysmic Gladiator's Chain Gauntlets;403;Hands;Normal
+73717;Cataclysmic Gladiator's Chain Gauntlets;403;Hands;Normal
+73582;Cataclysmic Gladiator's Chain Helm;403;Head;Normal
+73716;Cataclysmic Gladiator's Chain Helm;403;Head;Normal
+73581;Cataclysmic Gladiator's Chain Leggings;403;Legs;Normal
+73715;Cataclysmic Gladiator's Chain Leggings;403;Legs;Normal
+73580;Cataclysmic Gladiator's Chain Spaulders;403;Shoulder;Normal
+73714;Cataclysmic Gladiator's Chain Spaulders;403;Shoulder;Normal
+73492;Cataclysmic Gladiator's Choker of Accuracy;403;Neck;Normal
+73493;Cataclysmic Gladiator's Choker of Proficiency;403;Neck;Normal
+73566;Cataclysmic Gladiator's Clasp of Cruelty;403;Waist;Normal
+73565;Cataclysmic Gladiator's Clasp of Meditation;403;Waist;Normal
+73441;Cataclysmic Gladiator's Cleaver;410;One-Handed Axes;Heroic
+73474;Cataclysmic Gladiator's Cleaver;397;One-Handed Axes;Normal
+73495;Cataclysmic Gladiator's Cloak of Alacrity;403;Back;Normal
+73494;Cataclysmic Gladiator's Cloak of Prowess;403;Back;Normal
+73638;Cataclysmic Gladiator's Cord of Accuracy;403;Waist;Normal
+73639;Cataclysmic Gladiator's Cord of Cruelty;403;Waist;Normal
+73637;Cataclysmic Gladiator's Cord of Meditation;403;Waist;Normal
+73633;Cataclysmic Gladiator's Cuffs of Accuracy;403;Wrist;Normal
+73631;Cataclysmic Gladiator's Cuffs of Meditation;403;Wrist;Normal
+73632;Cataclysmic Gladiator's Cuffs of Prowess;403;Wrist;Normal
+73444;Cataclysmic Gladiator's Decapitator;410;Two-Handed Axes;Heroic
+73477;Cataclysmic Gladiator's Decapitator;397;Two-Handed Axes;Normal
+73615;Cataclysmic Gladiator's Dragonhide Gloves;403;Hands;Normal
+73737;Cataclysmic Gladiator's Dragonhide Gloves;403;Hands;Normal
+73614;Cataclysmic Gladiator's Dragonhide Helm;403;Head;Normal
+73736;Cataclysmic Gladiator's Dragonhide Helm;403;Head;Normal
+73613;Cataclysmic Gladiator's Dragonhide Legguards;403;Legs;Normal
+73735;Cataclysmic Gladiator's Dragonhide Legguards;403;Legs;Normal
+73612;Cataclysmic Gladiator's Dragonhide Robes;403;Chest;Normal
+73734;Cataclysmic Gladiator's Dragonhide Robes;403;Chest;Normal
+73611;Cataclysmic Gladiator's Dragonhide Spaulders;403;Shoulder;Normal
+73733;Cataclysmic Gladiator's Dragonhide Spaulders;403;Shoulder;Normal
+73629;Cataclysmic Gladiator's Drape of Diffusion;403;Back;Normal
+73628;Cataclysmic Gladiator's Drape of Meditation;403;Back;Normal
+73630;Cataclysmic Gladiator's Drape of Prowess;403;Back;Normal
+73620;Cataclysmic Gladiator's Dreadplate Chestpiece;403;Chest;Normal
+73742;Cataclysmic Gladiator's Dreadplate Chestpiece;403;Chest;Normal
+73619;Cataclysmic Gladiator's Dreadplate Gauntlets;403;Hands;Normal
+73741;Cataclysmic Gladiator's Dreadplate Gauntlets;403;Hands;Normal
+73618;Cataclysmic Gladiator's Dreadplate Helm;403;Head;Normal
+73740;Cataclysmic Gladiator's Dreadplate Helm;403;Head;Normal
+73617;Cataclysmic Gladiator's Dreadplate Legguards;403;Legs;Normal
+73739;Cataclysmic Gladiator's Dreadplate Legguards;403;Legs;Normal
+73616;Cataclysmic Gladiator's Dreadplate Shoulders;403;Shoulder;Normal
+73738;Cataclysmic Gladiator's Dreadplate Shoulders;403;Shoulder;Normal
+73593;Cataclysmic Gladiator's Emblem of Cruelty;403;Trinket;Normal
+73591;Cataclysmic Gladiator's Emblem of Meditation;403;Trinket;Normal
+73592;Cataclysmic Gladiator's Emblem of Tenacity;403;Trinket;Normal
+73436;Cataclysmic Gladiator's Endgame;410;Held In Off-hand;Heroic
+73469;Cataclysmic Gladiator's Endgame;397;Held In Off-hand;Normal
+73424;Cataclysmic Gladiator's Energy Staff;410;Staves;Heroic
+73457;Cataclysmic Gladiator's Energy Staff;397;Staves;Normal
+73483;Cataclysmic Gladiator's Felweave Amice;403;Shoulder;Normal
+73656;Cataclysmic Gladiator's Felweave Amice;403;Shoulder;Normal
+73486;Cataclysmic Gladiator's Felweave Cowl;403;Head;Normal
+73659;Cataclysmic Gladiator's Felweave Cowl;403;Head;Normal
+73487;Cataclysmic Gladiator's Felweave Handguards;403;Hands;Normal
+73660;Cataclysmic Gladiator's Felweave Handguards;403;Hands;Normal
+73484;Cataclysmic Gladiator's Felweave Raiment;403;Chest;Normal
+73657;Cataclysmic Gladiator's Felweave Raiment;403;Chest;Normal
+73485;Cataclysmic Gladiator's Felweave Trousers;403;Legs;Normal
+73658;Cataclysmic Gladiator's Felweave Trousers;403;Legs;Normal
+73601;Cataclysmic Gladiator's Footguards of Alacrity;403;Feet;Normal
+73726;Cataclysmic Gladiator's Footguards of Alacrity;403;Feet;Normal
+73609;Cataclysmic Gladiator's Footguards of Meditation;403;Feet;Normal
+73732;Cataclysmic Gladiator's Footguards of Meditation;403;Feet;Normal
+73426;Cataclysmic Gladiator's Gavel;410;One-Handed Maces;Heroic
+73459;Cataclysmic Gladiator's Gavel;397;One-Handed Maces;Normal
+73555;Cataclysmic Gladiator's Girdle of Cruelty;403;Waist;Normal
+73554;Cataclysmic Gladiator's Girdle of Prowess;403;Waist;Normal
+73442;Cataclysmic Gladiator's Greatsword;410;Two-Handed Swords;Heroic
+73475;Cataclysmic Gladiator's Greatsword;397;Two-Handed Swords;Normal
+73564;Cataclysmic Gladiator's Greaves of Alacrity;403;Feet;Normal
+73703;Cataclysmic Gladiator's Greaves of Alacrity;403;Feet;Normal
+73563;Cataclysmic Gladiator's Greaves of Meditation;403;Feet;Normal
+73702;Cataclysmic Gladiator's Greaves of Meditation;403;Feet;Normal
+73416;Cataclysmic Gladiator's Hacker;410;One-Handed Axes;Heroic
+73449;Cataclysmic Gladiator's Hacker;397;One-Handed Axes;Normal
+73438;Cataclysmic Gladiator's Hatchet;410;None;Heroic
+73471;Cataclysmic Gladiator's Hatchet;397;None;Normal
+73430;Cataclysmic Gladiator's Heavy Crossbow;410;Crossbows;Heroic
+73463;Cataclysmic Gladiator's Heavy Crossbow;397;Crossbows;Normal
+73643;Cataclysmic Gladiator's Insignia of Conquest;403;Trinket;Normal
+73497;Cataclysmic Gladiator's Insignia of Dominance;403;Trinket;Normal
+73491;Cataclysmic Gladiator's Insignia of Victory;403;Trinket;Normal
+73607;Cataclysmic Gladiator's Kodohide Gloves;403;Hands;Normal
+73731;Cataclysmic Gladiator's Kodohide Gloves;403;Hands;Normal
+73606;Cataclysmic Gladiator's Kodohide Helm;403;Head;Normal
+73730;Cataclysmic Gladiator's Kodohide Helm;403;Head;Normal
+73605;Cataclysmic Gladiator's Kodohide Legguards;403;Legs;Normal
+73729;Cataclysmic Gladiator's Kodohide Legguards;403;Legs;Normal
+73604;Cataclysmic Gladiator's Kodohide Robes;403;Chest;Normal
+73728;Cataclysmic Gladiator's Kodohide Robes;403;Chest;Normal
+73603;Cataclysmic Gladiator's Kodohide Spaulders;403;Shoulder;Normal
+73727;Cataclysmic Gladiator's Kodohide Spaulders;403;Shoulder;Normal
+73526;Cataclysmic Gladiator's Leather Gloves;403;Hands;Normal
+73681;Cataclysmic Gladiator's Leather Gloves;403;Hands;Normal
+73525;Cataclysmic Gladiator's Leather Helm;403;Head;Normal
+73680;Cataclysmic Gladiator's Leather Helm;403;Head;Normal
+73524;Cataclysmic Gladiator's Leather Legguards;403;Legs;Normal
+73679;Cataclysmic Gladiator's Leather Legguards;403;Legs;Normal
+73523;Cataclysmic Gladiator's Leather Spaulders;403;Shoulder;Normal
+73678;Cataclysmic Gladiator's Leather Spaulders;403;Shoulder;Normal
+73527;Cataclysmic Gladiator's Leather Tunic;403;Chest;Normal
+73682;Cataclysmic Gladiator's Leather Tunic;403;Chest;Normal
+73418;Cataclysmic Gladiator's Left Render;410;Fist Weapons;Heroic
+73451;Cataclysmic Gladiator's Left Render;397;Fist Weapons;Normal
+73420;Cataclysmic Gladiator's Left Ripper;410;Fist Weapons;Heroic
+73453;Cataclysmic Gladiator's Left Ripper;397;Fist Weapons;Normal
+73512;Cataclysmic Gladiator's Linked Armor;403;Chest;Normal
+73670;Cataclysmic Gladiator's Linked Armor;403;Chest;Normal
+73511;Cataclysmic Gladiator's Linked Gauntlets;403;Hands;Normal
+73669;Cataclysmic Gladiator's Linked Gauntlets;403;Hands;Normal
+73510;Cataclysmic Gladiator's Linked Helm;403;Head;Normal
+73668;Cataclysmic Gladiator's Linked Helm;403;Head;Normal
+73509;Cataclysmic Gladiator's Linked Leggings;403;Legs;Normal
+73667;Cataclysmic Gladiator's Linked Leggings;403;Legs;Normal
+73508;Cataclysmic Gladiator's Linked Spaulders;403;Shoulder;Normal
+73666;Cataclysmic Gladiator's Linked Spaulders;403;Shoulder;Normal
+73589;Cataclysmic Gladiator's Links of Accuracy;403;Waist;Normal
+73590;Cataclysmic Gladiator's Links of Cruelty;403;Waist;Normal
+73437;Cataclysmic Gladiator's Longbow;410;Bows;Heroic
+73470;Cataclysmic Gladiator's Longbow;397;Bows;Normal
+73506;Cataclysmic Gladiator's Mail Armor;403;Chest;Normal
+73665;Cataclysmic Gladiator's Mail Armor;403;Chest;Normal
+73505;Cataclysmic Gladiator's Mail Gauntlets;403;Hands;Normal
+73664;Cataclysmic Gladiator's Mail Gauntlets;403;Hands;Normal
+73504;Cataclysmic Gladiator's Mail Helm;403;Head;Normal
+73663;Cataclysmic Gladiator's Mail Helm;403;Head;Normal
+73503;Cataclysmic Gladiator's Mail Leggings;403;Legs;Normal
+73662;Cataclysmic Gladiator's Mail Leggings;403;Legs;Normal
+73502;Cataclysmic Gladiator's Mail Spaulders;403;Shoulder;Normal
+73661;Cataclysmic Gladiator's Mail Spaulders;403;Shoulder;Normal
+73579;Cataclysmic Gladiator's Mark of Cruelty;403;Trinket;Normal
+73577;Cataclysmic Gladiator's Mark of Meditation;403;Trinket;Normal
+73578;Cataclysmic Gladiator's Mark of Tenacity;403;Trinket;Normal
+73538;Cataclysmic Gladiator's Medallion of Cruelty;403;Trinket;Normal
+73539;Cataclysmic Gladiator's Medallion of Cruelty;403;Trinket;Normal
+73534;Cataclysmic Gladiator's Medallion of Meditation;403;Trinket;Normal
+73535;Cataclysmic Gladiator's Medallion of Meditation;403;Trinket;Normal
+73536;Cataclysmic Gladiator's Medallion of Tenacity;403;Trinket;Normal
+73537;Cataclysmic Gladiator's Medallion of Tenacity;403;Trinket;Normal
+73549;Cataclysmic Gladiator's Mooncloth Gloves;403;Hands;Normal
+73694;Cataclysmic Gladiator's Mooncloth Gloves;403;Hands;Normal
+73548;Cataclysmic Gladiator's Mooncloth Helm;403;Head;Normal
+73693;Cataclysmic Gladiator's Mooncloth Helm;403;Head;Normal
+73547;Cataclysmic Gladiator's Mooncloth Leggings;403;Legs;Normal
+73692;Cataclysmic Gladiator's Mooncloth Leggings;403;Legs;Normal
+73545;Cataclysmic Gladiator's Mooncloth Mantle;403;Shoulder;Normal
+73690;Cataclysmic Gladiator's Mooncloth Mantle;403;Shoulder;Normal
+73546;Cataclysmic Gladiator's Mooncloth Robe;403;Chest;Normal
+73691;Cataclysmic Gladiator's Mooncloth Robe;403;Chest;Normal
+73645;Cataclysmic Gladiator's Necklace of Proficiency;403;Neck;Normal
+73644;Cataclysmic Gladiator's Necklace of Prowess;403;Neck;Normal
+73560;Cataclysmic Gladiator's Ornamented Chestguard;403;Chest;Normal
+73701;Cataclysmic Gladiator's Ornamented Chestguard;403;Chest;Normal
+73559;Cataclysmic Gladiator's Ornamented Gloves;403;Hands;Normal
+73700;Cataclysmic Gladiator's Ornamented Gloves;403;Hands;Normal
+73558;Cataclysmic Gladiator's Ornamented Headcover;403;Head;Normal
+73699;Cataclysmic Gladiator's Ornamented Headcover;403;Head;Normal
+73557;Cataclysmic Gladiator's Ornamented Legplates;403;Legs;Normal
+73698;Cataclysmic Gladiator's Ornamented Legplates;403;Legs;Normal
+73556;Cataclysmic Gladiator's Ornamented Spaulders;403;Shoulder;Normal
+73697;Cataclysmic Gladiator's Ornamented Spaulders;403;Shoulder;Normal
+73627;Cataclysmic Gladiator's Pendant of Alacrity;403;Neck;Normal
+73626;Cataclysmic Gladiator's Pendant of Diffusion;403;Neck;Normal
+73625;Cataclysmic Gladiator's Pendant of Meditation;403;Neck;Normal
+73423;Cataclysmic Gladiator's Pike;410;Polearms;Heroic
+73456;Cataclysmic Gladiator's Pike;397;Polearms;Normal
+73482;Cataclysmic Gladiator's Plate Chestpiece;403;Chest;Normal
+73655;Cataclysmic Gladiator's Plate Chestpiece;403;Chest;Normal
+73481;Cataclysmic Gladiator's Plate Gauntlets;403;Hands;Normal
+73654;Cataclysmic Gladiator's Plate Gauntlets;403;Hands;Normal
+73480;Cataclysmic Gladiator's Plate Helm;403;Head;Normal
+73653;Cataclysmic Gladiator's Plate Helm;403;Head;Normal
+73479;Cataclysmic Gladiator's Plate Legguards;403;Legs;Normal
+73652;Cataclysmic Gladiator's Plate Legguards;403;Legs;Normal
+73478;Cataclysmic Gladiator's Plate Shoulders;403;Shoulder;Normal
+73651;Cataclysmic Gladiator's Plate Shoulders;403;Shoulder;Normal
+73440;Cataclysmic Gladiator's Pummeler;410;One-Handed Maces;Heroic
+73473;Cataclysmic Gladiator's Pummeler;397;One-Handed Maces;Normal
+73439;Cataclysmic Gladiator's Quickblade;410;One-Handed Swords;Heroic
+73472;Cataclysmic Gladiator's Quickblade;397;One-Handed Swords;Normal
+73425;Cataclysmic Gladiator's Redoubt;410;Off Hand;Heroic
+73458;Cataclysmic Gladiator's Redoubt;397;Off Hand;Normal
+74783;Cataclysmic Gladiator's Relic of Conquest;410;Relic;Heroic
+73490;Cataclysmic Gladiator's Relic of Conquest;403;Relic;Normal
+74785;Cataclysmic Gladiator's Relic of Dominance;410;Relic;Heroic
+73624;Cataclysmic Gladiator's Relic of Dominance;403;Relic;Normal
+74784;Cataclysmic Gladiator's Relic of Salvation;410;Relic;Heroic
+73594;Cataclysmic Gladiator's Relic of Salvation;403;Relic;Normal
+74786;Cataclysmic Gladiator's Relic of Triumph;410;Relic;Heroic
+73642;Cataclysmic Gladiator's Relic of Triumph;403;Relic;Normal
+73432;Cataclysmic Gladiator's Reprieve;410;Held In Off-hand;Heroic
+73465;Cataclysmic Gladiator's Reprieve;397;Held In Off-hand;Normal
+73427;Cataclysmic Gladiator's Rifle;410;Guns;Heroic
+73460;Cataclysmic Gladiator's Rifle;397;Guns;Normal
+73419;Cataclysmic Gladiator's Right Render;410;Fist Weapons;Heroic
+73452;Cataclysmic Gladiator's Right Render;397;Fist Weapons;Normal
+73421;Cataclysmic Gladiator's Right Ripper;410;Fist Weapons;Heroic
+73454;Cataclysmic Gladiator's Right Ripper;397;Fist Weapons;Normal
+73640;Cataclysmic Gladiator's Ring of Accuracy;403;Finger;Normal
+73641;Cataclysmic Gladiator's Ring of Cruelty;403;Finger;Normal
+73517;Cataclysmic Gladiator's Ringmail Armor;403;Chest;Normal
+73675;Cataclysmic Gladiator's Ringmail Armor;403;Chest;Normal
+73516;Cataclysmic Gladiator's Ringmail Gauntlets;403;Hands;Normal
+73674;Cataclysmic Gladiator's Ringmail Gauntlets;403;Hands;Normal
+73515;Cataclysmic Gladiator's Ringmail Helm;403;Head;Normal
+73673;Cataclysmic Gladiator's Ringmail Helm;403;Head;Normal
+73514;Cataclysmic Gladiator's Ringmail Leggings;403;Legs;Normal
+73672;Cataclysmic Gladiator's Ringmail Leggings;403;Legs;Normal
+73513;Cataclysmic Gladiator's Ringmail Spaulders;403;Shoulder;Normal
+73671;Cataclysmic Gladiator's Ringmail Spaulders;403;Shoulder;Normal
+73588;Cataclysmic Gladiator's Sabatons of Cruelty;403;Feet;Normal
+73720;Cataclysmic Gladiator's Sabatons of Cruelty;403;Feet;Normal
+73520;Cataclysmic Gladiator's Sabatons of Meditation;403;Feet;Normal
+73676;Cataclysmic Gladiator's Sabatons of Meditation;403;Feet;Normal
+73544;Cataclysmic Gladiator's Satin Gloves;403;Hands;Normal
+73689;Cataclysmic Gladiator's Satin Gloves;403;Hands;Normal
+73543;Cataclysmic Gladiator's Satin Hood;403;Head;Normal
+73688;Cataclysmic Gladiator's Satin Hood;403;Head;Normal
+73542;Cataclysmic Gladiator's Satin Leggings;403;Legs;Normal
+73687;Cataclysmic Gladiator's Satin Leggings;403;Legs;Normal
+73540;Cataclysmic Gladiator's Satin Mantle;403;Shoulder;Normal
+73685;Cataclysmic Gladiator's Satin Mantle;403;Shoulder;Normal
+73541;Cataclysmic Gladiator's Satin Robe;403;Chest;Normal
+73686;Cataclysmic Gladiator's Satin Robe;403;Chest;Normal
+73571;Cataclysmic Gladiator's Scaled Chestpiece;403;Chest;Normal
+73708;Cataclysmic Gladiator's Scaled Chestpiece;403;Chest;Normal
+73570;Cataclysmic Gladiator's Scaled Gauntlets;403;Hands;Normal
+73707;Cataclysmic Gladiator's Scaled Gauntlets;403;Hands;Normal
+73569;Cataclysmic Gladiator's Scaled Helm;403;Head;Normal
+73706;Cataclysmic Gladiator's Scaled Helm;403;Head;Normal
+73568;Cataclysmic Gladiator's Scaled Legguards;403;Legs;Normal
+73705;Cataclysmic Gladiator's Scaled Legguards;403;Legs;Normal
+73567;Cataclysmic Gladiator's Scaled Shoulders;403;Shoulder;Normal
+73704;Cataclysmic Gladiator's Scaled Shoulders;403;Shoulder;Normal
+73422;Cataclysmic Gladiator's Shanker;410;Daggers;Heroic
+73455;Cataclysmic Gladiator's Shanker;397;Daggers;Normal
+73413;Cataclysmic Gladiator's Shield Wall;410;Off Hand;Heroic
+73446;Cataclysmic Gladiator's Shield Wall;397;Off Hand;Normal
+73428;Cataclysmic Gladiator's Shiv;410;Daggers;Heroic
+73461;Cataclysmic Gladiator's Shiv;397;Daggers;Normal
+73488;Cataclysmic Gladiator's Signet of Accuracy;403;Finger;Normal
+73489;Cataclysmic Gladiator's Signet of Cruelty;403;Finger;Normal
+73572;Cataclysmic Gladiator's Silk Amice;403;Shoulder;Normal
+73709;Cataclysmic Gladiator's Silk Amice;403;Shoulder;Normal
+73575;Cataclysmic Gladiator's Silk Cowl;403;Head;Normal
+73712;Cataclysmic Gladiator's Silk Cowl;403;Head;Normal
+73576;Cataclysmic Gladiator's Silk Handguards;403;Hands;Normal
+73713;Cataclysmic Gladiator's Silk Handguards;403;Hands;Normal
+73573;Cataclysmic Gladiator's Silk Robe;403;Chest;Normal
+73710;Cataclysmic Gladiator's Silk Robe;403;Chest;Normal
+73574;Cataclysmic Gladiator's Silk Trousers;403;Legs;Normal
+73711;Cataclysmic Gladiator's Silk Trousers;403;Legs;Normal
+73414;Cataclysmic Gladiator's Slicer;410;One-Handed Swords;Heroic
+73447;Cataclysmic Gladiator's Slicer;397;One-Handed Swords;Normal
+73434;Cataclysmic Gladiator's Spellblade;410;Daggers;Heroic
+73467;Cataclysmic Gladiator's Spellblade;397;Daggers;Normal
+73429;Cataclysmic Gladiator's Staff;410;Staves;Heroic
+73462;Cataclysmic Gladiator's Staff;397;Staves;Normal
+73501;Cataclysmic Gladiator's Symbol of Cruelty;403;Trinket;Normal
+73499;Cataclysmic Gladiator's Symbol of Meditation;403;Trinket;Normal
+73500;Cataclysmic Gladiator's Symbol of Tenacity;403;Trinket;Normal
+73431;Cataclysmic Gladiator's Touch of Defeat;410;Wands;Heroic
+73464;Cataclysmic Gladiator's Touch of Defeat;397;Wands;Normal
+73635;Cataclysmic Gladiator's Treads of Alacrity;403;Feet;Normal
+73744;Cataclysmic Gladiator's Treads of Alacrity;403;Feet;Normal
+73636;Cataclysmic Gladiator's Treads of Cruelty;403;Feet;Normal
+73745;Cataclysmic Gladiator's Treads of Cruelty;403;Feet;Normal
+73634;Cataclysmic Gladiator's Treads of Meditation;403;Feet;Normal
+73743;Cataclysmic Gladiator's Treads of Meditation;403;Feet;Normal
+73532;Cataclysmic Gladiator's Waistband of Accuracy;403;Waist;Normal
+73533;Cataclysmic Gladiator's Waistband of Cruelty;403;Waist;Normal
+73507;Cataclysmic Gladiator's Waistguard of Cruelty;403;Waist;Normal
+73522;Cataclysmic Gladiator's Waistguard of Meditation;403;Waist;Normal
+73412;Cataclysmic Gladiator's War Edge;410;None;Heroic
+73445;Cataclysmic Gladiator's War Edge;397;None;Normal
+73552;Cataclysmic Gladiator's Warboots of Alacrity;403;Feet;Normal
+73695;Cataclysmic Gladiator's Warboots of Alacrity;403;Feet;Normal
+73553;Cataclysmic Gladiator's Warboots of Cruelty;403;Feet;Normal
+73696;Cataclysmic Gladiator's Warboots of Cruelty;403;Feet;Normal
+73585;Cataclysmic Gladiator's Wristguards of Accuracy;403;Wrist;Normal
+73586;Cataclysmic Gladiator's Wristguards of Alacrity;403;Wrist;Normal
+73599;Cataclysmic Gladiator's Wyrmhide Gloves;403;Hands;Normal
+73725;Cataclysmic Gladiator's Wyrmhide Gloves;403;Hands;Normal
+73598;Cataclysmic Gladiator's Wyrmhide Helm;403;Head;Normal
+73724;Cataclysmic Gladiator's Wyrmhide Helm;403;Head;Normal
+73597;Cataclysmic Gladiator's Wyrmhide Legguards;403;Legs;Normal
+73723;Cataclysmic Gladiator's Wyrmhide Legguards;403;Legs;Normal
+73596;Cataclysmic Gladiator's Wyrmhide Robes;403;Chest;Normal
+73722;Cataclysmic Gladiator's Wyrmhide Robes;403;Chest;Normal
+73595;Cataclysmic Gladiator's Wyrmhide Spaulders;403;Shoulder;Normal
+73721;Cataclysmic Gladiator's Wyrmhide Spaulders;403;Shoulder;Normal
+57934;Celadon Pendant;346;Neck;Normal
+56271;Cerith Spire Staff;346;Staves;Normal
+72877;Chain of the Demon Hunter;378;Waist;Normal
+65068;Chaos Beast Bracers;372;Wrist;Heroic
+59310;Chaos Beast Bracers;359;Wrist;Normal
+57875;Chaotic Wrappings;346;Legs;Normal
+56437;Charm of the Muse;346;Neck;Normal
+69797;Charmbinder Grips;353;Hands;Normal
+56551;Charscale Leg Armor;None;Item Enhancements (Permanent);Normal
+65102;Chelley's Staff of Dark Mending;372;Staves;Heroic
+59525;Chelley's Staff of Dark Mending;359;Staves;Normal
+71560;Chelley's Sterilized Scalpel;391;Daggers;Heroic
+71359;Chelley's Sterilized Scalpel;378;Daggers;Normal

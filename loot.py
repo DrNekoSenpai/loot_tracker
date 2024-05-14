@@ -11,8 +11,6 @@ parser.add_argument("--force-new", "-f", help="Force the script to create a new 
 
 args = parser.parse_args()
 
-raiding = True
-
 def up_to_date(): 
     # Return FALSE if there is a new version available.
     # Return TRUE if the version is up to date.
@@ -210,10 +208,6 @@ else:
     # Create a special player called "_disenchanted", for items that were not awarded to anyone.
     # This is used when no one rolls. 
     players.append(Player("_disenchanted", "_disenchanted", [], ""))
-
-if datetime.now().weekday() == 6 and datetime.now().hour >= 16 and datetime.now().hour < 19: raiding = True
-elif datetime.now().weekday() == 2 and datetime.now().hour >= 18 and datetime.now().hour < 20: raiding = True
-else: raiding = False
 
 known_aliases = {
     "Sõçkö": "Socko", 
@@ -492,58 +486,56 @@ def award_loot(players):
         for r in reserves: 
             print(f"  - {r[0]} ({roll_type} +{r[1]}){r[2]}")
 
-        if raiding: 
-            ready = input("Ready to announce? (y/n): ").lower()
-            if ready == "y": 
-                pyautogui.moveTo(1920/2, 1080/2)
-                pyautogui.click()
-                time.sleep(0.1)
+        ready = input("Ready to announce? (y/n): ").lower()
+        if ready == "y": 
+            pyautogui.moveTo(1920/2, 1080/2)
+            pyautogui.click()
+            time.sleep(0.1)
 
+            pyautogui.write("/")
+            time.sleep(0.1)
+            pyautogui.write("rw")
+            time.sleep(0.1)
+            pyautogui.press("space")
+            time.sleep(0.1)
+            pyautogui.write(f"The following people have soft-reserved this item, {item_match.name}:")
+            time.sleep(0.1)
+            pyautogui.press("enter")
+            time.sleep(0.25)
+
+            for r in reserves:
                 pyautogui.write("/")
                 time.sleep(0.1)
                 pyautogui.write("rw")
                 time.sleep(0.1)
                 pyautogui.press("space")
                 time.sleep(0.1)
-                pyautogui.write(f"The following people have soft-reserved this item, {item_match.name}:")
+                pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){r[2]}")
                 time.sleep(0.1)
                 pyautogui.press("enter")
                 time.sleep(0.25)
-
-                for r in reserves:
-                    pyautogui.write("/")
-                    time.sleep(0.1)
-                    pyautogui.write("rw")
-                    time.sleep(0.1)
-                    pyautogui.press("space")
-                    time.sleep(0.1)
-                    pyautogui.write(f"{r[0]} ({roll_type} +{r[1]}){r[2]}")
-                    time.sleep(0.1)
-                    pyautogui.press("enter")
-                    time.sleep(0.25)
 
     elif len(reserves) == 0 and not slot_names[int(item_match.slot)] == "ETC": 
         if ineligible == 0: print(f"The following item, {item_match.name}, is an open roll -- no one has reserved it.")
         else: print(f"The following item, {item_match.name}, is an open roll -- ALL those who have reserved it have already won this item.")
 
-        if raiding: 
-            ready = input("Ready to announce? (y/n): ").lower()
-            if ready == "y": 
-                pyautogui.moveTo(1920/2, 1080/2)
-                pyautogui.click()
-                time.sleep(0.1)
+        ready = input("Ready to announce? (y/n): ").lower()
+        if ready == "y": 
+            pyautogui.moveTo(1920/2, 1080/2)
+            pyautogui.click()
+            time.sleep(0.1)
 
-                pyautogui.write("/")
-                time.sleep(0.1)
-                pyautogui.write("rw")
-                time.sleep(0.1)
-                pyautogui.press("space")
-                time.sleep(0.1)
-                if ineligible == 0: pyautogui.write(f"The following item, {item_match.name}, is an open roll -- no one has reserved it.")
-                else: pyautogui.write(f"The following item, {item_match.name}, is an open roll -- ALL those who have reserved it have already won this item.")
-                time.sleep(0.1)
-                pyautogui.press("enter")
-                time.sleep(0.25)
+            pyautogui.write("/")
+            time.sleep(0.1)
+            pyautogui.write("rw")
+            time.sleep(0.1)
+            pyautogui.press("space")
+            time.sleep(0.1)
+            if ineligible == 0: pyautogui.write(f"The following item, {item_match.name}, is an open roll -- no one has reserved it.")
+            else: pyautogui.write(f"The following item, {item_match.name}, is an open roll -- ALL those who have reserved it have already won this item.")
+            time.sleep(0.1)
+            pyautogui.press("enter")
+            time.sleep(0.25)
 
     elif slot_names[int(item_match.slot)] == "ETC": 
         if item_match.name == "Shadowfrost Shard": 
@@ -583,22 +575,21 @@ def award_loot(players):
 
             print(f"\nThis token is for the following classes: {', '.join(player_classes)}.")
 
-            if raiding:
-                ready = input("Ready to announce? (y/n): ").lower()
-                if ready == "y": 
-                    pyautogui.moveTo(1920/2, 1080/2)
-                    pyautogui.click()
-                    time.sleep(0.1)
+            ready = input("Ready to announce? (y/n): ").lower()
+            if ready == "y": 
+                pyautogui.moveTo(1920/2, 1080/2)
+                pyautogui.click()
+                time.sleep(0.1)
 
-                    pyautogui.write("/")
-                    time.sleep(0.1)
-                    pyautogui.write("rw")
-                    time.sleep(0.1)
-                    pyautogui.press("space")
-                    time.sleep(0.1)
-                    pyautogui.write(f"This token is for the following classes: {', '.join(player_classes)}.")
-                    time.sleep(0.1)
-                    pyautogui.press("enter")
+                pyautogui.write("/")
+                time.sleep(0.1)
+                pyautogui.write("rw")
+                time.sleep(0.1)
+                pyautogui.press("space")
+                time.sleep(0.1)
+                pyautogui.write(f"This token is for the following classes: {', '.join(player_classes)}.")
+                time.sleep(0.1)
+                pyautogui.press("enter")
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -704,25 +695,19 @@ def award_loot(players):
         player._raid_log.append(log)
         player._reserve_plusses += 1
         player._regular_plusses += 1
-
-        if not raiding: 
-            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-        else: 
-            confirm = "y"
         
-        if confirm == "y":
-            roll_type = "SR"
+        roll_type = "SR"
 
-            player._history[slot_names[int(item_match.slot)]].append(log)
-            # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-            if item_match.ilvl == 277: 
-                if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+        player._history[slot_names[int(item_match.slot)]].append(log)
+        # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
+        if item_match.ilvl == 277: 
+            if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
+                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
-            # If the item level is 264, w e'll also add the 251 version to the history, but only if it's not already there.
-            elif item_match.ilvl == 264: 
-                if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
-                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+        # If the item level is 264, w e'll also add the 251 version to the history, but only if it's not already there.
+        elif item_match.ilvl == 264: 
+            if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
+                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
     elif slot_names[int(item_match.slot)] != "ETC" or "Mark of Sanctification" in item_match.name: 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
@@ -733,35 +718,23 @@ def award_loot(players):
         player._raid_log.append(log)
         if not off_spec == "y": player._regular_plusses += 1
 
-        if not raiding: 
-            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-        else: 
-            confirm = "y"
+        player._history[slot_names[int(item_match.slot)]].append(log)
+        # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
+        if item_match.ilvl == 277: 
+            if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
+                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
-        if confirm == "y": 
-            player._history[slot_names[int(item_match.slot)]].append(log)
-            # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
-            if item_match.ilvl == 277: 
-                if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
-
-            # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
-            elif item_match.ilvl == 264: 
-                if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
-                    player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+        # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
+        elif item_match.ilvl == 264: 
+            if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
+                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
     else: 
         roll_type = "ETC"
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
 
-        if not raiding: 
-            confirm = input("We do not appear to be raiding. Add this to the log manually? (y/n): ").lower()
-        else:
-            confirm = "y"
-
-        if confirm == "y":
-            player._history[slot_names[int(item_match.slot)]].append(log)
+        player._history[slot_names[int(item_match.slot)]].append(log)
 
     print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
         
@@ -1288,22 +1261,21 @@ def weekly_reset(players):
 
     return players 
 
-def sudo_mode(players, raiding):
+def sudo_mode(players):
     print("----------------------------------------")
     print("WARNING: Sudo mode is a dangerous mode that allows you to modify a lot of things directly. Use with caution.")
     
     confirm = input("Are you sure you want to enter sudo mode? (y/n): ").lower()
     if confirm != "y":
         print("Aborting.")
-        return players, raiding
+        return players
     
     while(True): 
         print("---- SUDO MODE ----")
         print("a. COMPLETELY wipe the pickle file")
         print("b. Restore history from Gargul export")
         print("c. Create Gargul export")
-        print(f"d. {'Enter' if not raiding else 'Exit'} raiding mode")
-        print("e. Exit sudo mode")
+        print("d. Exit sudo mode")
         sel = input("Select an option: ").lower()
         print("")
 
@@ -1447,14 +1419,9 @@ def sudo_mode(players, raiding):
                         item_name = item.item.name.replace(" (N25)", "").replace(" (H25)", "")
                         file.write(f"{item_id};{item_name};{item.item.ilvl};{reserved};{offspec};{p.name};{item.date}\n")
 
-        elif sel == "d": 
-            if raiding: print("Exiting raiding mode.")
-            else: print("Entering raiding mode.")
-            raiding = not raiding
-
-        elif sel == "e":
+        elif sel == "d":
             print("Exiting sudo mode.")
-            return players, raiding
+            return players
 
 def export_gargul(players):
     with open("plusses.txt", "w", encoding="utf-8") as file: 
@@ -1498,7 +1465,7 @@ while(True):
     export_pickle(players)
     
     print("----------------------------------------")
-    print(f"Loot Tracker{'' if raiding else ' (Debug Mode)'}")
+    print(f"Loot Tracker")
     print("1) Award loot")
     print("2) Import soft-reserve")
     print("3) Mark attendance")
@@ -1507,7 +1474,7 @@ while(True):
     print("6) Split up history into paste-sized chunks")
     print("7) Remove loot, or weekly reset")
     print("8) Export plusses in Gargul style")
-    print(f"9) Enter sudo mode (edit history, {'enter' if not raiding else 'exit'} raiding mode, enter debug mode)")
+    print("9) Enter sudo mode")
 
     print("")
 
@@ -1530,5 +1497,5 @@ while(True):
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
     elif sel == 8: export_gargul(players)
-    elif sel == 9: players, raiding = sudo_mode(players, raiding)
+    elif sel == 9: players = sudo_mode(players)
     else: break
