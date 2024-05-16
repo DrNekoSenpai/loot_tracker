@@ -882,3 +882,41 @@
 50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
 50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
 50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-08
+52027;Conqueror's Mark of Sanctification;80;0;0;Axsel;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50411;Scourgeborne Waraxe;264;0;1;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+52027;Conqueror's Mark of Sanctification;80;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50175;Crypt Keeper's Bracers;264;0;0;Catreene;2024-05-15
+50065;Icecrown Glacial Wall;264;1;0;Elisesolis;2024-05-15
+50353;Dislodged Foreign Object;264;1;0;Gnoraa;2024-05-15
+50062;Plague Scientist's Boots;264;0;0;Gnoya;2024-05-15
+50172;Sanguine Silk Robes;264;1;0;Lorniras;2024-05-15
+52027;Conqueror's Mark of Sanctification;80;0;0;Medullaa;2024-05-15
+49989;Ahn'kahar Onyx Neckguard;264;0;0;Ryotto;2024-05-15
+50002;Polar Bear Claw Bracers;264;0;0;Ryotto;2024-05-15
+50021;Aldriana's Gloves of Secrecy;264;1;0;Swiftbladess;2024-05-15
+49975;Bone Sentinel's Amulet;264;0;0;Ulvson;2024-05-15
+50025;Seal of Many Mouths;264;0;0;Ulvson;2024-05-15
+50042;Gangrenous Leggings;264;0;0;Ulvson;2024-05-15
+50067;Astrylian's Sutured Cinch;264;0;1;Ulvson;2024-05-15
+49919;Cryptmaker;264;0;0;Ulvson;2024-05-15
+49977;Loop of the Endless Labyrinth;264;0;0;Zynrenner;2024-05-15
+52026;Protector's Mark of Sanctification;80;0;1;Zynrenner;2024-05-15
+52026;Protector's Mark of Sanctification;80;0;1;Zynrenner;2024-05-15
+50415;Bryntroll, the Bone Arbiter;264;0;0;_disenchanted;2024-05-15
+49982;Heartpierce;264;0;0;_disenchanted;2024-05-15
+49995;Fallen Lord's Handguards;264;0;0;_disenchanted;2024-05-15
+50010;Waistband of Righteous Fury;264;0;0;_disenchanted;2024-05-15
+50412;Bloodvenom Blade;264;0;0;_disenchanted;2024-05-15
+50038;Carapace of Forgotten Kings;264;0;0;_disenchanted;2024-05-15

@@ -1,95 +1,65 @@
-Loot log for Wednesday, 2024-05-08 and **Sunday, 2024-05-12**:
-
-Meemeemeemee (+2 MS) (+1 SR)
-- Shadowvault Slayer's Cloak (277) (SR) -- received on 2024-05-08
-- Nerub'ar Stalker's Cord (264) (MS) -- received on 2024-05-08
-
-Darkfern (+1 MS) (+1 SR)
-- Deathbringer's Will (264) (SR) -- received on 2024-05-08
+Loot log for **Wednesday, 2024-05-15**:
 
 Elisesolis (+1 MS) (+1 SR)
-- Havoc's Call, Blade of Lordaeron Kings (271) (SR) -- received on 2024-05-13
+- Icecrown Glacial Wall (264) (SR) -- received on **2024-05-15**
 
-Sighanama (+1 MS) (+1 SR)
-- Fal'inrush, Defender of Quel'thalas (271) (SR) -- received on 2024-05-13
+Gnoraa (+1 MS) (+1 SR)
+- Dislodged Foreign Object (264) (SR) -- received on **2024-05-15**
 
-Onlyflowers (+4 MS) (+0 SR)
-- Bryntroll, the Bone Arbiter (264) (MS) -- received on 2024-05-08
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-05-08
-- Lana'thel's Chain of Flagellation (264) (MS) -- received on 2024-05-08
-- Raging Behemoth's Shoulderplates (264) (MS) -- received on 2024-05-08
-- Blood-Soaked Saronite Stompers (264) (OS) -- received on 2024-05-08
+Lorniras (+1 MS) (+1 SR)
+- Sanguine Silk Robes (264) (SR) -- received on **2024-05-15**
 
-Ryotto (+4 MS) (+0 SR)
-- Coldwraith Links (264) (MS) -- received on 2024-05-08
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-05-08
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-05-08
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-05-13
+Swiftbladess (+1 MS) (+1 SR)
+- Aldriana's Gloves of Secrecy (264) (SR) -- received on **2024-05-15**
 
-Ulvson (+3 MS) (+0 SR)
-- Bile-Encrusted Medallion (264) (MS) -- received on 2024-05-08
-- Last Word (264) (MS) -- received on 2024-05-08
-- Nibelung (264) (MS) -- received on 2024-05-08
+Ulvson (+4 MS) (+0 SR)
+- Bone Sentinel's Amulet (264) (MS) -- received on **2024-05-15**
+- Seal of Many Mouths (264) (MS) -- received on **2024-05-15**
+- Gangrenous Leggings (264) (MS) -- received on **2024-05-15**
+- Cryptmaker (264) (MS) -- received on **2024-05-15**
+- Astrylian's Sutured Cinch (264) (OS) -- received on **2024-05-15**
 
-Kairiz (+2 MS) (+0 SR)
-- Geistlord's Punishment Sack (264) (MS) -- received on 2024-05-08
-- Vanquisher's Mark of Sanctification (N25) (MS) -- received on 2024-05-08
-
-Uvite (+2 MS) (+0 SR)
-- Bone Sentinel's Amulet (264) (MS) -- received on 2024-05-08
-- Sanguine Silk Robes (264) (MS) -- received on 2024-05-08
-- Plaguebringer's Stained Pants (264) (OS) -- received on 2024-05-08
+Ryotto (+2 MS) (+0 SR)
+- Ahn'kahar Onyx Neckguard (264) (MS) -- received on **2024-05-15**
+- Polar Bear Claw Bracers (264) (MS) -- received on **2024-05-15**
 
 Axsel (+1 MS) (+0 SR)
-- Corp'rethar Ceremonial Crown (277) (MS) -- received on 2024-05-08
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-05-15**
 
 Bladehero (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-08
-- Shadowfrost Shard (ETC) -- received on 2024-05-13
-- Shadowfrost Shard (ETC) -- received on 2024-05-13
-- Shadowfrost Shard (ETC) -- received on 2024-05-13
-- Shadowfrost Shard (ETC) -- received on 2024-05-13
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-05-15**
+- Scourgeborne Waraxe (264) (OS) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Shadowfrost Shard (ETC) -- received on **2024-05-15**
 
-Bzorder (+1 MS) (+0 SR)
-- Dislodged Foreign Object (264) (MS) -- received on 2024-05-08
+Catreene (+1 MS) (+0 SR)
+- Crypt Keeper's Bracers (264) (MS) -- received on **2024-05-15**
 
-Chainmale (+1 MS) (+0 SR)
-- Althor's Abacus (277) (MS) -- received on 2024-05-08
-
-Jwizard (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-05-13
-
-Lorniras (+1 MS) (+0 SR)
-- Shoulders of Mercy Killing (264) (MS) -- received on 2024-05-08
+Gnoya (+1 MS) (+0 SR)
+- Plague Scientist's Boots (264) (MS) -- received on **2024-05-15**
 
 Medullaa (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-05-13
-
-Strixien (+1 MS) (+0 SR)
-- Memory of Malygos (264) (MS) -- received on 2024-05-13
-
-Vanthulhu (+1 MS) (+0 SR)
-- Frostbinder's Shredded Cape (264) (MS) -- received on 2024-05-08
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-05-15**
 
 Zynrenner (+1 MS) (+0 SR)
-- Protector's Mark of Sanctification (N25) (MS) -- received on 2024-05-08
+- Loop of the Endless Labyrinth (264) (MS) -- received on **2024-05-15**
+- Protector's Mark of Sanctification (N25) (OS) -- received on **2024-05-15**
+- Protector's Mark of Sanctification (N25) (OS) -- received on **2024-05-15**
 
 _disenchanted
-- San'layn Ritualist Gloves
-- Faceplate of the Forgotten
-- Handguards of Winter's Respite
-- Snowstorm Helm
-- Protector's Mark of Sanctification (N25)
+- Bryntroll, the Bone Arbiter
+- Heartpierce
+- Fallen Lord's Handguards
+- Waistband of Righteous Fury
+- Bloodvenom Blade
+- Carapace of Forgotten Kings

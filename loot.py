@@ -231,7 +231,7 @@ def import_softreserve(players):
             passing = f.readlines()
 
         for ind, p in enumerate(passing): 
-            passing[ind] = p.strip().split(", ")
+            passing[ind] = p.strip().split("; ")
 
     # Go through the list of players, and wipe all reserves. 
     for p in players: 
@@ -681,7 +681,7 @@ def award_loot(players):
                                 break
                             
                     if not found:
-                        f.write(f"{r[0]}, {item_match.name}\n")
+                        f.write(f"{r[0]}; {item_match.name}\n")
         
     elif len(reserves) > 0 and player.name in [r[0] for r in reserves]: 
         confirm = "sr"
