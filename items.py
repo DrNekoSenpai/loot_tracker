@@ -33,7 +33,7 @@ cata_items, cata_ids = zip(*sorted(zip(cata_items, cata_ids)))
 
 if not os.path.exists("all-items-cata.txt"):
     with open("all-items-cata.txt", "w", encoding="utf-8") as all_items_file:
-        all_items_file.write("ID;Item;Item Level;Category;Bind;Version\n")
+        all_items_file.write("ID;Item;Item Level;Classes;Category;Bind;Version\n")
 
 else: 
     # Open the file and figure out where we left off
@@ -48,9 +48,14 @@ else:
 ilvl_pattern = re.compile(r"Item Level <!--ilvl-->(\d+)", re.IGNORECASE)
 cat_pattern = re.compile(r"In the (.+?) category", re.IGNORECASE)
 slot_pattern = re.compile(r"goes in the &quot;(.+?)&quot; slot", re.IGNORECASE)
+armor_type_pattern = re.compile(r"<span class=\"q1\">(Cloth|Leather|Mail|Plate)<\/span>")
 
-boe_pattern = re.compile("<br>Binds when equipped<br>")
-boa_pattern = re.compile("<br>Binds to account<br>")
+# <div class="wowhead-tooltip-item-classes">Classes: <a href="/cata/class=4/rogue" class="c4">Rogue</a>, <a href="/cata/class=6/death-knight" class="c6">Death Knight</a>, <a href="/cata/class=8/mage" class="c8">Mage</a>, <a href="/cata/class=11/druid" class="c11">Druid</a></div>
+# Capture the classes that can use the item
+classes_pattern = re.compile(r'<a href="/cata/class=\d+/.*?" class="c\d+">(.*?)</a>')
+
+boe_pattern = re.compile(r"<br>Binds when equipped<br>")
+boa_pattern = re.compile(r"<br>Binds to account<br>")
 
 unique_items = sorted(list(set(cata_items)))
 
@@ -72,18 +77,26 @@ for item in tqdm(unique_items):
             elif cat_pattern.search(text): category = cat_pattern.search(text).group(1)
             else: category = None
 
+            if category is not None: 
+                if armor_type_pattern.search(text): armor_type = armor_type_pattern.search(text).group(1)
+                else: armor_type = None
+
+            if armor_type is not None: category = f"{armor_type} {category}"
+
+            if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
+            else: classes = None
+
             if boe_pattern.search(text): bind = "Binds when equipped"
             elif boa_pattern.search(text): bind = "Binds to account"
             else: bind = "Binds when picked up"
                     
-            all_items_file.write(f"{item_id};{item};{item_level};{category};{bind};{difficulty}\n")
+            all_items_file.write(f"{item_id};{item};{item_level};{classes};{category};{bind};{difficulty}\n")
             
         elif count == 2: 
             # Find the IDs of the matching items
             item_ids = [cata_ids[i] for i, x in enumerate(cata_items) if x == item]
             item_url = item.replace(" ", "-").replace(",", "").lower()
             ilvls = []
-            binds = []
 
             for item_id in item_ids:
                 url = f"https://www.wowhead.com/cata/item={item_id}/{item_url}"
@@ -92,30 +105,37 @@ for item in tqdm(unique_items):
                 if ilvl_pattern.search(text): item_level = ilvl_pattern.search(text).group(1)
                 else: item_level = None
 
-                if slot_pattern.search(text): category = slot_pattern.search(text).group(1)
-                elif cat_pattern.search(text): category = cat_pattern.search(text).group(1)
-                else: category = None
-
-                if boe_pattern.search(text): bind = "Binds when equipped"
-                elif boa_pattern.search(text): bind = "Binds to account"
-                else: bind = "Binds when picked up"
-
                 ilvls.append(item_level)
-                binds.append(bind)
 
-            item_ids, ilvls, binds = zip(*sorted(zip(item_ids, ilvls, binds), key=lambda x: x[1], reverse=True))
+            if slot_pattern.search(text): category = slot_pattern.search(text).group(1)
+            elif cat_pattern.search(text): category = cat_pattern.search(text).group(1)
+            else: category = None
+
+            if category is not None: 
+                if armor_type_pattern.search(text): armor_type = armor_type_pattern.search(text).group(1)
+                else: armor_type = None
+
+            if armor_type is not None: category = f"{armor_type} {category}"
+
+            if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
+            else: classes = None
+
+            if boe_pattern.search(text): bind = "Binds when equipped"
+            elif boa_pattern.search(text): bind = "Binds to account"
+            else: bind = "Binds when picked up"
+
+            item_ids, ilvls = zip(*sorted(zip(item_ids, ilvls), key=lambda x: x[1], reverse=True))
             if ilvls[0] == ilvls[1]: difficulties = ["Normal", "Normal"]
             else: difficulties = ["Heroic", "Normal"]
 
             for i, item_id in enumerate(item_ids):
-                all_items_file.write(f"{item_id};{item};{ilvls[i]};{category};{binds[i]};{difficulties[i]}\n")
+                all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{category};{bind};{difficulties[i]}\n")
 
         elif count == 3: 
             # Find the IDs of the matching items
             item_ids = [cata_ids[i] for i, x in enumerate(cata_items) if x == item]
             item_url = item.replace(" ", "-").replace(",", "").lower()
             ilvls = []
-            binds = []
 
             for item_id in item_ids:
                 url = f"https://www.wowhead.com/cata/item={item_id}/{item_url}"
@@ -124,20 +144,28 @@ for item in tqdm(unique_items):
                 if ilvl_pattern.search(text): item_level = ilvl_pattern.search(text).group(1)
                 else: item_level = None
 
-                if slot_pattern.search(text): category = slot_pattern.search(text).group(1)
-                elif cat_pattern.search(text): category = cat_pattern.search(text).group(1)
-                else: category = None
-
-                if boe_pattern.search(text): bind = "Binds when equipped"
-                elif boa_pattern.search(text): bind = "Binds to account"
-                else: bind = "Binds when picked up"
-
                 ilvls.append(item_level)
-                binds.append(bind)
+
+            if slot_pattern.search(text): category = slot_pattern.search(text).group(1)
+            elif cat_pattern.search(text): category = cat_pattern.search(text).group(1)
+            else: category = None
+
+            if category is not None: 
+                if armor_type_pattern.search(text): armor_type = armor_type_pattern.search(text).group(1)
+                else: armor_type = None
+
+            if armor_type is not None: category = f"{armor_type} {category}"
+
+            if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
+            else: classes = None
+
+            if boe_pattern.search(text): bind = "Binds when equipped"
+            elif boa_pattern.search(text): bind = "Binds to account"
+            else: bind = "Binds when picked up"
 
             # print(f"{item}", end = "")
 
-            item_ids, ilvls, binds = zip(*sorted(zip(item_ids, ilvls, binds), key=lambda x: x[1], reverse=True))
+            item_ids, ilvls = zip(*sorted(zip(item_ids, ilvls), key=lambda x: x[1], reverse=True))
             if ilvls[0] == ilvls[1] == ilvls[2]: difficulties = ["Normal", "Normal", "Normal"]
             elif ilvls[0] > ilvls[1] == ilvls[2]: difficulties = ["Heroic", "Normal", "Normal"]
             elif ilvls[0] == ilvls[1] > ilvls[2]: difficulties = ["Heroic", "Heroic", "Normal"]
@@ -146,4 +174,7 @@ for item in tqdm(unique_items):
             # print(f" {item_ids} {ilvls} {difficulties}")
 
             for i, item_id in enumerate(item_ids):
-                all_items_file.write(f"{item_id};{item};{ilvls[i]};{category};{binds[i]};{difficulties[i]}\n")
+                all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{category};{bind};{difficulties[i]}\n")
+
+        # with open(f"./items/{item_id}_{item_url}.html", "w", encoding="utf-8") as item_file:
+        #     item_file.write(text)

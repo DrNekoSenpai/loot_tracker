@@ -1,5 +1,5 @@
 import pickle, re, argparse, os, time, pyautogui, subprocess
-from typing import List
+from typing import List, Union
 from datetime import datetime, timedelta
 from contextlib import redirect_stdout as redirect
 from io import StringIO
@@ -36,11 +36,17 @@ if up_to_date() is False:
     exit(1)
 
 class Item: 
-    def __init__(self, name:str, ilvl:int, slot:int, boe:bool=False): 
+    def __init__(self, id:int, name:str, ilvl:int, classes:Union[list, str], category:str, bind_type:str, version:str): 
+        """
+        Create a log entry. ID;Item;Item Level;Classes;Category;Bind;Version
+        """
+        self.id = id
         self.name = name
-        self.ilvl = ilvl 
-        self.slot = slot
-        self.boe = boe
+        self.ilvl = ilvl
+        self.classes = classes 
+        self.category = category
+        self.bind_type = bind_type
+        self.version = version
 
 class Log: 
     def __init__(self, name, item:Item, roll_type, date:str, note:str = None): 
@@ -92,99 +98,41 @@ class Player:
             "Relic": [],
         }
 
-with open('items.sql', 'r', encoding="utf-8") as items_file: 
-    items = items_file.read()
-    items = items.replace("'", '"')
-    items = items.replace('\\"', "'")
-    items = items.splitlines()
-
-    # NORMAL 25
-    # (52025,'Vanquisher\'s Mark of Sanctification',64877,4,0,1192,80,80,0),
-    # (52026,'Protector\'s Mark of Sanctification',64877,4,0,69,80,80,0),
-    # (52027,'Conqueror\'s Mark of Sanctification',64877,4,0,274,80,80,0),
-
-    # HEROIC 25
-    # (52028,'Vanquisher\'s Mark of Sanctification',64878,4,0,1192,80,80,0),
-    # (52029,'Protector\'s Mark of Sanctification',64878,4,0,69,80,80,0),
-    # (52030,'Conqueror\'s Mark of Sanctification',64878,4,0,274,80,80,0),
-
-    with open("all_items.txt", 'w', encoding="utf-8") as file: 
-        for item in items: 
-            file.write(f"{item}\n")
-
 all_items = {}
-# (50008,"Ring of Rapid Ascent",64170,4,11,-1,264,80,0),
-# Capture the item ID, name, inventory type, and item level.
-pattern = re.compile(r'\((\d+),\"(.+)\",\d+,\d+,(\d+),-?\d+,(\d+),\d+,\d+\),?')
-slots = {}
 
-exceptions = [
-    "Vanquisher's Mark of Sanctification",
-    "Protector's Mark of Sanctification",
-    "Conqueror's Mark of Sanctification",
-    "Shadowfrost Shard",
-    "Rotface's Acidic Blood", 
-    "Festergut's Acidic Blood"
-]
+def match_category(category:str): 
+    valid_categories = ["ETC", "Head", "Neck", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Ring", "Trinket", "Main-Hand", "Off-Hand", "Two-Hand", "Ranged", "Relic"]
+    
+    if re.match(r"(Cloth|Leather|Mail|Plate)", category, re.IGNORECASE): category = category.split(" ")[1]
+    elif re.match(r"(One-Hand|Daggers|Fist Weapons)", category, re.IGNORECASE): category = "Main-Hand"
+    elif re.match(r"(Two-Hand|Staves|Polearms)", category, re.IGNORECASE): category = "Two-Hand"
+    elif re.match(r"(Held In Off-hand|Off hand)", category, re.IGNORECASE): category = "Off-Hand"
+    elif re.match(r"(Bows|Thrown|Crossbows|Guns|Wands)", category, re.IGNORECASE): category = "Ranged"
+    elif re.match(r"Finger", category, re.IGNORECASE): category = "Ring"
+    if category not in valid_categories: category = "ETC"
 
-for item in items:
-    match = pattern.match(item)
-    if match: 
-        item_id = int(match.group(1))
-        name = match.group(2)
-        item_level = int(match.group(4))
-        inventory_type = int(match.group(3))
+    return category
 
-        if item_level <= 251 and not name in exceptions: continue
+with open("all-items-cata.txt", "r", encoding="utf-8") as cata_file: 
+    cata_items = cata_file.readlines()
+    for ind,item in enumerate(cata_items):
+        if ind == 0: continue # Header 
+        # ID;Item;Item Level;Classes;Category;Bind;Version
+        item = item.strip().split(";")
+        item_id = int(item[0])
+        name = item[1]
+        item_level = int(item[2])
+        classes = item[3].split(", ") if "," in item[3] else item[3]
+        category = item[4]
+        bind_type = item[5]
+        version = item[6]
 
-        if item_id == 52025: name += " (N25)"
-        elif item_id == 52026: name += " (N25)"
-        elif item_id == 52027: name += " (N25)"
-        elif item_id == 52028: name += " (H25)"
-        elif item_id == 52029: name += " (H25)"
-        elif item_id == 52030: name += " (H25)"
-
-        all_items[item_id] = Item(name, item_level, inventory_type, False)
-
-for item in all_items.values(): 
-    if item.slot not in slots: slots[item.slot] = [item]
-    else: slots[item.slot].append(item)
-
-# sort the categories dictionary by slot number
-slots = dict(sorted(slots.items()))
-
-slot_names = {
-    0: "ETC", 
-    1: "Head", 
-    2: "Neck",
-    3: "Shoulder",
-    5: "Chest",
-    6: "Waist",
-    7: "Legs",
-    8: "Feet",
-    9: "Wrist",
-    10: "Hands",
-    11: "Ring",
-    12: "Trinket",
-    13: "Main-Hand",
-    14: "Off-Hand",
-    15: "Ranged",
-    16: "Back",
-    17: "Two-Hand",
-    20: "Chest", 
-    21: "Main-Hand",
-    22: "Off-Hand",
-    23: "Off-Hand",
-    24: "Ranged", 
-    25: "Ranged",
-    26: "Ranged",
-    28: "Relic"
-}
+        all_items[item_id] = Item(item_id, name, item_level, classes, category, bind_type, version)
 
 def import_pickle(): 
     # Import the pickle file
     try: 
-        with open('players.pickle', 'rb') as f:
+        with open('players_cata.pickle', 'rb') as f:
             players = pickle.load(f)
 
     except FileNotFoundError:
@@ -196,7 +144,7 @@ def import_pickle():
 
 def export_pickle(players):
     # Export the pickle file
-    with open('players.pickle', 'wb') as f:
+    with open('players_cata.pickle', 'wb') as f:
         pickle.dump(players, f)
 
 # We'll import the pickle if the "--force-new" argument is not present.
@@ -209,12 +157,9 @@ else:
     # This is used when no one rolls. 
     players.append(Player("_disenchanted", "_disenchanted", [], ""))
 
-known_aliases = {
-    "Sõçkö": "Socko", 
-    "Flambeaü": "Flambeau",
-    "Killädin": "Killadin",
-    "Beásty": "Beasty",
-}
+with open("known-players.txt", "r", encoding="utf-8") as f:
+    known_players = [line.strip().split(",") for line in f.readlines()]
+    known_aliases = {x[0]: x[1] for x in known_players if x[0] != x[1]}
 
 def import_softreserve(players): 
     # We'll attempt to import reserve data from the CSV file. 
@@ -380,7 +325,9 @@ def award_loot(players):
         print("")
     # Now, we'll print out the item name; the corresponding category; and the item level.
     print(f"Item: {item_match.name} ({item_match.ilvl})")
-    print(f"Slot: {slot_names[int(item_match.slot)]}")
+    print(f"Category: {item_match.category}")
+
+    slot_category = match_category(item_match.category)
 
     reserves = []
     ineligible = 0
@@ -424,7 +371,7 @@ def award_loot(players):
             count = len([i for i in p._reserves if i[0] == item_match.name])
             if count > 1:
                 num_received = 0
-                for log in p._history[slot_names[int(item_match.slot)]]: 
+                for log in p._history[slot_category]: 
                     if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
                         num_received += 1
                 
@@ -432,7 +379,7 @@ def award_loot(players):
                     if item_match.ilvl == 277: 
                         # We want to check if the player has already won the 264 version of this item. If so, we'll add a note to the reserves list.
                         num_received_264 = 0
-                        for log in p._history[slot_names[int(item_match.slot)]]: 
+                        for log in p._history[slot_category]: 
                             if log.item.name == item_match.name and log.item.ilvl == 264: 
                                 num_received_264 += 1
                         
@@ -453,7 +400,7 @@ def award_loot(players):
             else: 
                 # Only append the player to the reserves list if they have not already won the same item, with the same item level.
                 already_received = False
-                for log in p._history[slot_names[int(item_match.slot)]]: 
+                for log in p._history[slot_category]: 
                     if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
                         already_received = True
                         print(" TRUE")
@@ -462,7 +409,7 @@ def award_loot(players):
 
                 if not already_received: 
                     if item_match.ilvl == 277: 
-                        if any([item_match.name == log.item.name and log.item.ilvl == 264 for log in p._history[slot_names[int(item_match.slot)]]]):
+                        if any([item_match.name == log.item.name and log.item.ilvl == 264 for log in p._history[slot_category]]):
                             if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
                                 reserves.append((p.name, p._reserve_plusses, f" (has 264 version)"))
                                 print(" FALSE (has 264 version)")
@@ -515,7 +462,7 @@ def award_loot(players):
                 pyautogui.press("enter")
                 time.sleep(0.25)
 
-    elif len(reserves) == 0 and not slot_names[int(item_match.slot)] == "ETC": 
+    elif len(reserves) == 0 and not slot_category == "ETC": 
         if ineligible == 0: print(f"The following item, {item_match.name}, is an open roll -- no one has reserved it.")
         else: print(f"The following item, {item_match.name}, is an open roll -- ALL those who have reserved it have already won this item.")
 
@@ -537,7 +484,7 @@ def award_loot(players):
             pyautogui.press("enter")
             time.sleep(0.25)
 
-    elif slot_names[int(item_match.slot)] == "ETC": 
+    elif slot_category == "ETC": 
         if item_match.name == "Shadowfrost Shard": 
             # Priority: Artasz, then Ferrousblade, then Pastiry, then Soulreaverr, then Bladehero
             # Print out the number of shards that these players have. 
@@ -644,7 +591,7 @@ def award_loot(players):
             if p.name == "_disenchanted":
                 # Add the item to the player's history list.
                 p._raid_log.append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
-                p._history[slot_names[int(item_match.slot)]].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
+                p._history[slot_category].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
                 return players
 
     confirm = ""
@@ -698,18 +645,18 @@ def award_loot(players):
         
         roll_type = "SR"
 
-        player._history[slot_names[int(item_match.slot)]].append(log)
+        player._history[slot_category].append(log)
         # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
         if item_match.ilvl == 277: 
-            if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+            if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_category]]):
+                player._history[slot_category].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
         # If the item level is 264, w e'll also add the 251 version to the history, but only if it's not already there.
         elif item_match.ilvl == 264: 
-            if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
-                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+            if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_category]]):
+                player._history[slot_category].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
-    elif slot_names[int(item_match.slot)] != "ETC" or "Mark of Sanctification" in item_match.name: 
+    elif slot_category != "ETC" or "Mark of Sanctification" in item_match.name: 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
         if off_spec == "y": roll_type = "OS"
         else: roll_type = "MS"
@@ -718,76 +665,27 @@ def award_loot(players):
         player._raid_log.append(log)
         if not off_spec == "y": player._regular_plusses += 1
 
-        player._history[slot_names[int(item_match.slot)]].append(log)
+        player._history[slot_category].append(log)
         # If the item level is 277, we'll also add the 264 version to the history, but only if it's not already there.
         if item_match.ilvl == 277: 
-            if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_names[int(item_match.slot)]]]):
-                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+            if not any([item_match.name == log.item.name and log.item.ilvl == 264 for log in player._history[slot_category]]):
+                player._history[slot_category].append(Log(player.name, Item(item_match.name, 264, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
         # If the item level is 264, we'll also add the 251 version to the history, but only if it's not already there.
         elif item_match.ilvl == 264: 
-            if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_names[int(item_match.slot)]]]):
-                player._history[slot_names[int(item_match.slot)]].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
+            if not any([item_match.name == log.item.name and log.item.ilvl == 251 for log in player._history[slot_category]]):
+                player._history[slot_category].append(Log(player.name, Item(item_match.name, 251, item_match.slot), roll_type, datetime.now().strftime("%Y-%m-%d"), "auto"))
 
     else: 
         roll_type = "ETC"
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
 
-        player._history[slot_names[int(item_match.slot)]].append(log)
+        player._history[slot_category].append(log)
 
     print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
         
     return players
-
-known_players = {
-    "Ferrousblade": "Death Knight",
-    "Sighanama": "Hunter",
-    "Strixien": "Druid",
-    "Bunniful": "Druid",
-    "Lumosbringer": "Paladin",
-    "Kelorlyn": "Druid",
-    "Catreene": "Paladin",
-    "Mettybeans": "Shaman",
-    "Sõçkö": "Rogue",
-    "Wamili": "Warlock",
-    "Pacratt": "Mage",
-    "Flambeaü": "Shaman",
-    "Jwizard": "Warlock",
-    "Killädin": "Paladin",
-    "Artasz": "Death Knight",
-    "Soulreaverr": "Death Knight",
-    "Darkfern": "Death Knight",
-    "Swiftbladess": "Rogue",
-    "Killiandra": "Mage",
-    "Pastiry": "Warrior",
-    "Meemeemeemee": "Shaman",
-    "Tinyraider": "Mage",
-    "Beásty": "Hunter",
-    "Axsel": "Warlock",
-    "Snedpie": "Priest",
-    "Bigpapapaul": "Hunter",
-    "Gnoraa": "Warlock",
-    "Abletu": "Druid",
-    "Bzorder": "Druid",
-    "Elisesolis": "Paladin",
-    "Prunejuuce": "Warrior",
-    "Medullaa": "Paladin",
-    "Lorniras": "Warlock",
-    "Vangoated": "Shaman",
-    "Miatotems": "Shaman",
-    "Lilypalooza": "Priest",
-    "Gnoya": "Priest",
-    "Killit": "Warlock",
-    "Themrmoseby": "Warrior",
-    "Vanthulhu": "Priest", 
-    "Chainmale": "Paladin", 
-    "Bladehero": "Paladin", 
-    "Sigofthenama": "Death Knight", 
-    "Cageymagey": "Mage",
-    "Vanarann": "Druid",
-    "Ryotto": "Death Knight",
-}
 
 def mark_attendance(players):
     num_present = 0
@@ -1219,27 +1117,27 @@ def remove_loot(players):
 
     # We can only check the logs if the item was not disenchanted. 
     if not player.name == "_disenchanted": 
+        slot_category = match_category(item.item.slot)
 
         # We'll check if the item is 277. If so, we'll remove the 264 version as well.
         if item.item.ilvl == 277:
             # First, check if there exists a 264 version of the item in the history; and if so, if the note is "auto". 
-
-            if any([item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
+            if any([item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_category]]):
                 # If so, find the index of the 264 version, and use that to remove it. 
-                index = [item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
-                player._history[slot_names[int(item.item.slot)]].pop(index)
+                index = [item.item.name == log.item.name and log.item.ilvl == 264 and log.note == "auto" for log in player._history[slot_category]].index(True)
+                player._history[slot_category].pop(index)
 
         # We'll check if the item is 264. If so, we'll remove the 251 version as well.
         elif item.item.ilvl == 264:
             # First, check if there exists a 251 version of the item in the history; and if so, if the note is "auto". 
 
-            if any([item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]]):
+            if any([item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_category]]):
                 # If so, find the index of the 251 version, and use that to remove it. 
-                index = [item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_names[int(item.item.slot)]]].index(True)
-                player._history[slot_names[int(item.item.slot)]].pop(index)
+                index = [item.item.name == log.item.name and log.item.ilvl == 251 and log.note == "auto" for log in player._history[slot_category]].index(True)
+                player._history[slot_category].pop(index)
 
-        index = player._history[slot_names[int(item.item.slot)]].index(item)
-        player._history[slot_names[int(item.item.slot)]].pop(index)
+        index = player._history[slot_category].index(item)
+        player._history[slot_category].pop(index)
 
     return players
 
@@ -1275,8 +1173,7 @@ def sudo_mode(players):
         print("a. COMPLETELY wipe the pickle file")
         print("b. Restore history from Gargul export")
         print("c. Create Gargul export")
-        print("d. Create known players export")
-        print("e. Exit sudo mode")
+        print("d. Exit sudo mode")
         sel = input("Select an option: ").lower()
         print("")
 
@@ -1290,7 +1187,7 @@ def sudo_mode(players):
 
             confirm = input("Are you sure you want to wipe the pickle file? (y/n): ").lower()
             if confirm == "y":
-                os.remove("players.pickle")
+                os.remove("players_cata.pickle")
 
             players = []
             players.append(Player("_disenchanted", "_disenchanted", [], ""))
@@ -1317,8 +1214,6 @@ def sudo_mode(players):
                 offspec = True if line[4] == "1" else False
                 winner = line[5]
                 date = line[6]
-
-                if ilvl <= 263 and not item_name in exceptions: continue
 
                 if winner in known_aliases.keys(): 
                     alias = known_aliases[winner]
@@ -1381,7 +1276,7 @@ def sudo_mode(players):
                         players.append(Player(winner, alias, [], pclass))
                         player = players[-1]
 
-                player._history[slot_names[int(item.slot)]].append(Log(player.name, item, roll_type, date))
+                player._history[match_category(item.slot)].append(Log(player.name, item, roll_type, date))
                 print(f"Added {item.name} ({item.ilvl}) [{roll_type}] to {player.name}'s history.")
 
                 # Check if the date is after the last weekly reset, on Tuesday. If so, we must also add this item to their raid log.
@@ -1421,14 +1316,6 @@ def sudo_mode(players):
                         file.write(f"{item_id};{item_name};{item.item.ilvl};{reserved};{offspec};{p.name};{item.date}\n")
 
         elif sel == "d":
-            with open("known-players.txt", "w", encoding="utf-8") as file: 
-                # Print out each player's name, alias, and class; separated by comma. 
-                file.write("Name,Alias,Class\n")
-                for p in players:
-                    if p.name == "_disenchanted": continue
-                    file.write(f"{p.name},{p.alias},{p._player_class}\n")
-
-        elif sel == "e":
             print("Exiting sudo mode.")
             return players
 
