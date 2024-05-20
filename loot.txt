@@ -1,60 +1,78 @@
-Loot log for **Wednesday, 2024-05-15**:
+Loot log for Wednesday, 2024-05-15 and **Sunday, 2024-05-19**:
+
+Swiftbladess (+2 MS) (+1 SR)
+- Aldriana's Gloves of Secrecy (264) (SR) -- received on 2024-05-15
+- Fal'inrush, Defender of Quel'thalas (271) (MS) -- received on **2024-05-19**
+
+Bzorder (+1 MS) (+1 SR)
+- Bracers of Eternal Dreaming (264) (SR) -- received on **2024-05-19**
 
 Elisesolis (+1 MS) (+1 SR)
-- Icecrown Glacial Wall (264) (SR) -- received on **2024-05-15**
+- Icecrown Glacial Wall (264) (SR) -- received on 2024-05-15
 
 Gnoraa (+1 MS) (+1 SR)
-- Dislodged Foreign Object (264) (SR) -- received on **2024-05-15**
+- Dislodged Foreign Object (264) (SR) -- received on 2024-05-15
 
 Lorniras (+1 MS) (+1 SR)
-- Sanguine Silk Robes (264) (SR) -- received on **2024-05-15**
+- Sanguine Silk Robes (264) (SR) -- received on 2024-05-15
 
-Swiftbladess (+1 MS) (+1 SR)
-- Aldriana's Gloves of Secrecy (264) (SR) -- received on **2024-05-15**
+Pastiry (+1 MS) (+1 SR)
+- Sindragosa's Cruel Claw (264) (SR) -- received on **2024-05-19**
 
 Ulvson (+4 MS) (+0 SR)
-- Bone Sentinel's Amulet (264) (MS) -- received on **2024-05-15**
-- Seal of Many Mouths (264) (MS) -- received on **2024-05-15**
-- Gangrenous Leggings (264) (MS) -- received on **2024-05-15**
-- Cryptmaker (264) (MS) -- received on **2024-05-15**
-- Astrylian's Sutured Cinch (264) (OS) -- received on **2024-05-15**
+- Bone Sentinel's Amulet (264) (MS) -- received on 2024-05-15
+- Seal of Many Mouths (264) (MS) -- received on 2024-05-15
+- Gangrenous Leggings (264) (MS) -- received on 2024-05-15
+- Cryptmaker (264) (MS) -- received on 2024-05-15
+- Astrylian's Sutured Cinch (264) (OS) -- received on 2024-05-15
+
+Prunejuuce (+2 MS) (+0 SR)
+- Mithrios, Bronzebeard's Legacy (271) (MS) -- received on **2024-05-19**
+- Protector's Mark of Sanctification (N25) (MS) -- received on **2024-05-19**
 
 Ryotto (+2 MS) (+0 SR)
-- Ahn'kahar Onyx Neckguard (264) (MS) -- received on **2024-05-15**
-- Polar Bear Claw Bracers (264) (MS) -- received on **2024-05-15**
+- Ahn'kahar Onyx Neckguard (264) (MS) -- received on 2024-05-15
+- Polar Bear Claw Bracers (264) (MS) -- received on 2024-05-15
 
 Axsel (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-05-15**
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-05-15
 
 Bladehero (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-05-15**
-- Scourgeborne Waraxe (264) (OS) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
-- Shadowfrost Shard (ETC) -- received on **2024-05-15**
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-05-15
+- Scourgeborne Waraxe (264) (OS) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on 2024-05-15
+- Shadowfrost Shard (ETC) -- received on **2024-05-19**
+- Shadowfrost Shard (ETC) -- received on **2024-05-19**
 
 Catreene (+1 MS) (+0 SR)
-- Crypt Keeper's Bracers (264) (MS) -- received on **2024-05-15**
+- Crypt Keeper's Bracers (264) (MS) -- received on 2024-05-15
 
 Gnoya (+1 MS) (+0 SR)
-- Plague Scientist's Boots (264) (MS) -- received on **2024-05-15**
+- Plague Scientist's Boots (264) (MS) -- received on 2024-05-15
 
 Medullaa (+1 MS) (+0 SR)
-- Conqueror's Mark of Sanctification (N25) (MS) -- received on **2024-05-15**
+- Conqueror's Mark of Sanctification (N25) (MS) -- received on 2024-05-15
 
 Zynrenner (+1 MS) (+0 SR)
-- Loop of the Endless Labyrinth (264) (MS) -- received on **2024-05-15**
-- Protector's Mark of Sanctification (N25) (OS) -- received on **2024-05-15**
-- Protector's Mark of Sanctification (N25) (OS) -- received on **2024-05-15**
+- Loop of the Endless Labyrinth (264) (MS) -- received on 2024-05-15
+- Protector's Mark of Sanctification (N25) (OS) -- received on 2024-05-15
+- Protector's Mark of Sanctification (N25) (OS) -- received on 2024-05-15
+- Snowstorm Helm (264) (OS) -- received on **2024-05-19**
+- Protector's Mark of Sanctification (N25) (OS) -- received on **2024-05-19**
+
+Beásty (+0 MS) (+0 SR)
+- Protector's Mark of Sanctification (N25) (OS) -- received on **2024-05-19**
 
 _disenchanted
 - Bryntroll, the Bone Arbiter
@@ -63,3 +81,5 @@ _disenchanted
 - Waistband of Righteous Fury
 - Bloodvenom Blade
 - Carapace of Forgotten Kings
+- Anub'ar Stalker's Gloves
+- Vanquisher's Mark of Sanctification (N25)
