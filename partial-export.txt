@@ -1,5 +1,6 @@
 @ID;@ITEM;@ILVL;@SR;@OS;@WINNER;@YEAR-@MONTH-@DAY
 52027;Conqueror's Mark of Sanctification;80;0;0;Axsel;2024-05-15
+52026;Protector's Mark of Sanctification;80;0;1;Beásty;2024-05-19
 50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
 50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
 50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
@@ -14,15 +15,22 @@
 50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
 50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
 50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-15
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-19
+50274;Shadowfrost Shard;0;0;0;Bladehero;2024-05-19
+50417;Bracers of Eternal Dreaming;264;1;0;Bzorder;2024-05-19
 50175;Crypt Keeper's Bracers;264;0;0;Catreene;2024-05-15
 50065;Icecrown Glacial Wall;264;1;0;Elisesolis;2024-05-15
 50353;Dislodged Foreign Object;264;1;0;Gnoraa;2024-05-15
 50062;Plague Scientist's Boots;264;0;0;Gnoya;2024-05-15
 50172;Sanguine Silk Robes;264;1;0;Lorniras;2024-05-15
 52027;Conqueror's Mark of Sanctification;80;0;0;Medullaa;2024-05-15
+50421;Sindragosa's Cruel Claw;264;1;0;Pastiry;2024-05-19
+49997;Mithrios, Bronzebeard's Legacy;271;0;0;Prunejuuce;2024-05-19
+52026;Protector's Mark of Sanctification;80;0;0;Prunejuuce;2024-05-19
 49989;Ahn'kahar Onyx Neckguard;264;0;0;Ryotto;2024-05-15
 50002;Polar Bear Claw Bracers;264;0;0;Ryotto;2024-05-15
 50021;Aldriana's Gloves of Secrecy;264;1;0;Swiftbladess;2024-05-15
+49981;Fal'inrush, Defender of Quel'thalas;271;0;0;Swiftbladess;2024-05-19
 49975;Bone Sentinel's Amulet;264;0;0;Ulvson;2024-05-15
 50025;Seal of Many Mouths;264;0;0;Ulvson;2024-05-15
 50042;Gangrenous Leggings;264;0;0;Ulvson;2024-05-15
@@ -31,9 +39,13 @@
 49977;Loop of the Endless Labyrinth;264;0;0;Zynrenner;2024-05-15
 52026;Protector's Mark of Sanctification;80;0;1;Zynrenner;2024-05-15
 52026;Protector's Mark of Sanctification;80;0;1;Zynrenner;2024-05-15
+50202;Snowstorm Helm;264;0;1;Zynrenner;2024-05-19
+52026;Protector's Mark of Sanctification;80;0;1;Zynrenner;2024-05-19
 50415;Bryntroll, the Bone Arbiter;264;0;0;_disenchanted;2024-05-15
 49982;Heartpierce;264;0;0;_disenchanted;2024-05-15
 49995;Fallen Lord's Handguards;264;0;0;_disenchanted;2024-05-15
 50010;Waistband of Righteous Fury;264;0;0;_disenchanted;2024-05-15
 50412;Bloodvenom Blade;264;0;0;_disenchanted;2024-05-15
 50038;Carapace of Forgotten Kings;264;0;0;_disenchanted;2024-05-15
+50188;Anub'ar Stalker's Gloves;264;0;0;_disenchanted;2024-05-19
+52025;Vanquisher's Mark of Sanctification;80;0;0;_disenchanted;2024-05-19
