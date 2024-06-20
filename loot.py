@@ -109,9 +109,59 @@ def match_category(category:str):
     elif re.match(r"(Held In Off-hand|Off hand)", category, re.IGNORECASE): category = "Off-Hand"
     elif re.match(r"(Bows|Thrown|Crossbows|Guns|Wands)", category, re.IGNORECASE): category = "Ranged"
     elif re.match(r"Finger", category, re.IGNORECASE): category = "Ring"
+    elif re.match(r"Back", category, re.IGNORECASE): category = "Back"
+    elif re.match(r"Neck", category, re.IGNORECASE): category = "Neck"
+    elif re.match(r"Trinket", category, re.IGNORECASE): category = "Trinket"
+    elif re.match(r"Relic", category, re.IGNORECASE): category = "Relic"
+
     if category not in valid_categories: category = "ETC"
 
     return category
+
+def armor_subtype(text, base_type): 
+    text = text.lower()
+
+    if "spirit" in text and "intellect" in text: return f"{base_type} (Healing)"
+
+    elif "hit" in text:
+        if "intellect" in text: return f"{base_type} (Caster)" 
+        else: return f"{base_type} (Damage)"
+
+    elif "expertise" in text: 
+        if "agility" in text: return f"{base_type} (Melee Agility)"
+        elif "strength" in text: return f"{base_type} (Melee Strength)"
+
+    elif "dodge" in text or "parry" in text: return f"{base_type} (Tank)"
+
+    elif "intellect" in text: return f"{base_type} (Intellect)"
+    elif "agility" in text: return f"{base_type} (Agility)"
+    elif "strength" in text: return f"{base_type} (Strength)"
+
+    else: return f"{base_type}"
+
+def match_suffix(item_name, base_type): 
+    item_name = item_name.lower()
+    if "fireflash" in item_name: return armor_subtype("Stamina, Intellect, Critical Strike, Haste", base_type)
+    elif "feverflare" in item_name: return armor_subtype("Stamina, Intellect, Haste, Mastery", base_type)
+    elif "faultline" in item_name: return armor_subtype("Stamina, Strength, Haste, Mastery", base_type)
+    elif "landslide" in item_name: return armor_subtype("Stamina, Strength, Hit, Expertise", base_type)
+    elif "earthshaker" in item_name: return armor_subtype("Stamina, Strength, Hit, Critical Strike", base_type)
+    elif "earthfall" in item_name: return armor_subtype("Stamina, Strength, Critical Strike, Haste", base_type)
+    elif "undertow" in item_name: return armor_subtype("Stamina, Intellect, Haste, Spirit", base_type)
+    elif "wavecrest" in item_name: return armor_subtype("Stamina, Intellect, Mastery, Spirit", base_type)
+    elif "earthbreaker" in item_name: return armor_subtype("Stamina, Strength, Critical Strike, Mastery", base_type)
+    elif "wildfire" in item_name: return armor_subtype("Stamina, Intellect, Hit, Critical Strike", base_type)
+    elif "flameblaze" in item_name: return armor_subtype("Stamina, Intellect, Mastery, Hit", base_type)
+    elif "zephyr" in item_name: return armor_subtype("Stamina, Agility, Haste, Mastery", base_type)
+    elif "windstorm" in item_name: return armor_subtype("Stamina, Agility, Critical Strike, Mastery", base_type)
+    elif "stormblast" in item_name: return armor_subtype("Stamina, Agility, Hit, Critical Strike", base_type)
+    elif "galeburst" in item_name: return armor_subtype("Stamina, Agility, Hit, Expertise", base_type)
+    elif "windflurry" in item_name: return armor_subtype("Stamina, Agility, Critical Strike, Haste", base_type)
+    elif "bouldercrag" in item_name: return armor_subtype("Stamina, Strength, Dodge, Parry", base_type)
+    elif "rockslab" in item_name: return armor_subtype("Stamina, Strength, Mastery, Dodge", base_type)
+    elif "bedrock" in item_name: return armor_subtype("Stamina, Strength, Mastery, Parry", base_type)
+    elif "mountainbed" in item_name: return armor_subtype("Stamina, Strength, Mastery, Expertise", base_type)
+    else: return "Unknown"
 
 with open("all-items-cata.txt", "r", encoding="utf-8") as cata_file: 
     cata_items = cata_file.readlines()
@@ -418,11 +468,13 @@ def award_loot(players):
         # We'll select this match, and then move on.
         item_match = item_matches[sel-1]
         print("")
-    # Now, we'll print out the item name; the corresponding category; and the item level.
-    print(f"Item: {item_match.name} ({item_match.ilvl})")
-    print(f"Category: {item_match.category}")
+
+    if "Random" in item_match.category: 
+        prefix = input("Item subcategory is random. What's the prefix? ")
+        item_match.category = match_suffix(prefix, item_match.category)
 
     slot_category = match_category(item_match.category)
+    item_match.category = item_match.category.replace(" (Random)", "")
 
     reserves = []
     ineligible = 0
@@ -549,6 +601,9 @@ def award_loot(players):
 
     elif len(reserves) == 0 and not slot_category == "ETC": 
         print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
+        # If this is a class-restricted item... announce that. 
+        if item_match.classes != "None": pass
+
         if ineligible == 0: print(f"Open roll -- no one has reserved it.")
         else: print(f"Open roll -- no valid reserves remaining.")
 

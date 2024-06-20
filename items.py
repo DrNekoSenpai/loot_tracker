@@ -50,6 +50,39 @@ cat_pattern = re.compile(r"In the (.+?) category", re.IGNORECASE)
 slot_pattern = re.compile(r"goes in the &quot;(.+?)&quot; slot", re.IGNORECASE)
 armor_type_pattern = re.compile(r"<span class=\"q1\">(Cloth|Leather|Mail|Plate)<\/span>")
 
+def armor_subtype(text, base_type): 
+    text = text.lower()
+
+    if "spirit" in text and "intellect" in text: return f"{base_type} (Healing)"
+
+    elif "hit rating" in text:
+        if "intellect" in text: return f"{base_type} (Caster)" 
+        else: return f"{base_type} (Damage)"
+
+    elif "expertise rating" in text: 
+        if "agility" in text: return f"{base_type} (Melee Agility)"
+        elif "strength" in text: return f"{base_type} (Melee Strength)"
+
+    elif "dodge" in text or "parry" in text: return f"{base_type} (Tank)"
+
+    elif "intellect" in text: return f"{base_type} (Intellect)"
+    elif "agility" in text: return f"{base_type} (Agility)"
+    elif "strength" in text: return f"{base_type} (Strength)"
+
+    elif "resilience" in text: return f"{base_type} (PvP)"
+    elif "random enchantment" in text: return f"{base_type} (Random)"
+    
+    else: return f"{base_type}"
+
+# <h1 class="heading-size-1">Alysra's Razor</h1>
+# <noscript><table><tr><td><!--nstart--><!--nend--><!--ndstart--><!--ndend--><span class="q"><br>Item Level <!--ilvl-->378</span><!--bo--><br>Binds when picked up<!--ue--><table width="100%"><tr><td>One-Hand</td><th><!--scstart2:15--><span class="q1">Dagger</span><!--scend--></th></tr></table><!--rf--><table width="100%"><tr>
+#     <td><span><!--dmg-->540 - 1,004 Damage</span></td>
+#     <th>Speed <!--spd-->1.40</th>
+# </tr></table><!--dps-->(551.43 damage per second)<br><span><!--stat3-->+155 Agility</span><br><span><!--stat7-->+262 Stamina</span><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><br /><br><a href="/cata/items/gems?filter=81;3;0" class="socket-yellow q0">Yellow Socket</a><!--ps--><br><!--sb--><span class="q0">Socket Bonus: +10 Agility</span><br /><br />Durability 75 / 75</td></tr></table><table><tr><td>Requires Level <!--rlvl-->85<br><!--rr--><span class="q2">Equip: Improves haste rating by <!--rtg36-->113.</span><br><span class="q2">Equip: Increases your expertise rating by <!--rtg37-->98.</span><!--itemEffects:1--><div class="whtt-sellprice">Sell Price: <span class="moneygold">36</span> <span class="moneysilver">51</span> <span class="moneycopper">89</span></div><div class="whtt-extra whtt-droppedby">Dropped by: Alysrazor</div></td></tr></table><!--i?70733:1:85:85--></noscript>
+
+# Search only in this part of the text, beginning with the h1 and ending with the noscript tag
+item_pattern = re.compile(r"<h1 class=\"heading-size-1\">(.*?)</h1>.*?<noscript>(.*?)</noscript>", re.DOTALL)
+
 # <div class="wowhead-tooltip-item-classes">Classes: <a href="/cata/class=4/rogue" class="c4">Rogue</a>, <a href="/cata/class=6/death-knight" class="c6">Death Knight</a>, <a href="/cata/class=8/mage" class="c8">Mage</a>, <a href="/cata/class=11/druid" class="c11">Druid</a></div>
 # Capture the classes that can use the item
 classes_pattern = re.compile(r'<a href="/cata/class=\d+/.*?" class="c\d+">(.*?)</a>')
@@ -82,6 +115,10 @@ for item in tqdm(unique_items):
                 else: armor_type = None
 
             if armor_type is not None: category = f"{armor_type} {category}"
+            text = item_pattern.search(text).group(2)
+
+            subcategory = armor_subtype(text, category)
+            if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
 
             if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
             else: classes = None
@@ -90,7 +127,7 @@ for item in tqdm(unique_items):
             elif boa_pattern.search(text): bind = "Binds to account"
             else: bind = "Binds when picked up"
                     
-            all_items_file.write(f"{item_id};{item};{item_level};{classes};{category};{bind};{difficulty}\n")
+            all_items_file.write(f"{item_id};{item};{item_level};{classes};{subcategory};{bind};{difficulty}\n")
             
         elif count == 2: 
             # Find the IDs of the matching items
@@ -116,6 +153,10 @@ for item in tqdm(unique_items):
                 else: armor_type = None
 
             if armor_type is not None: category = f"{armor_type} {category}"
+            text = item_pattern.search(text).group(2)
+
+            subcategory = armor_subtype(text, category)
+            if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
 
             if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
             else: classes = None
@@ -129,7 +170,7 @@ for item in tqdm(unique_items):
             else: difficulties = ["Heroic", "Normal"]
 
             for i, item_id in enumerate(item_ids):
-                all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{category};{bind};{difficulties[i]}\n")
+                all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{subcategory};{bind};{difficulties[i]}\n")
 
         elif count == 3: 
             # Find the IDs of the matching items
@@ -155,6 +196,10 @@ for item in tqdm(unique_items):
                 else: armor_type = None
 
             if armor_type is not None: category = f"{armor_type} {category}"
+            text = item_pattern.search(text).group(2)
+
+            subcategory = armor_subtype(text, category)
+            if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
 
             if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
             else: classes = None
@@ -174,7 +219,7 @@ for item in tqdm(unique_items):
             # print(f" {item_ids} {ilvls} {difficulties}")
 
             for i, item_id in enumerate(item_ids):
-                all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{category};{bind};{difficulties[i]}\n")
+                all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{subcategory};{bind};{difficulties[i]}\n")
 
-        # with open(f"./items/{item_id}_{item_url}.html", "w", encoding="utf-8") as item_file:
-        #     item_file.write(text)
+#         with open(f"./items/{item_id}_{item_url}.html", "w", encoding="utf-8") as item_file:
+#             item_file.write(text)
