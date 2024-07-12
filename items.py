@@ -53,6 +53,7 @@ armor_type_pattern = re.compile(r"<span class=\"q1\">(Cloth|Leather|Mail|Plate)<
 def armor_subtype(text, base_type): 
     text = text.lower()
 
+    if "resilience" in text: return f"{base_type} (PvP)"
     if "spirit" in text and "intellect" in text: return f"{base_type} (Healing)"
 
     elif "hit rating" in text:
@@ -68,10 +69,8 @@ def armor_subtype(text, base_type):
     elif "intellect" in text: return f"{base_type} (Intellect)"
     elif "agility" in text: return f"{base_type} (Agility)"
     elif "strength" in text: return f"{base_type} (Strength)"
-
-    elif "resilience" in text: return f"{base_type} (PvP)"
     elif "random enchantment" in text: return f"{base_type} (Random)"
-    
+
     else: return f"{base_type}"
 
 # <h1 class="heading-size-1">Alysra's Razor</h1>
@@ -118,7 +117,10 @@ for item in tqdm(unique_items):
             text = item_pattern.search(text).group(2)
 
             subcategory = armor_subtype(text, category)
-            if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
+            try: 
+                if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
+            except: 
+                continue
 
             if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
             else: classes = None
@@ -156,7 +158,10 @@ for item in tqdm(unique_items):
             text = item_pattern.search(text).group(2)
 
             subcategory = armor_subtype(text, category)
-            if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
+            try: 
+                if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
+            except: 
+                continue
 
             if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
             else: classes = None
@@ -199,7 +204,10 @@ for item in tqdm(unique_items):
             text = item_pattern.search(text).group(2)
 
             subcategory = armor_subtype(text, category)
-            if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
+            try: 
+                if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
+            except: 
+                continue
 
             if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
             else: classes = None

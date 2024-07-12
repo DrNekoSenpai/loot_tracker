@@ -42,12 +42,7 @@ export_log = []
 disenchants = []
 
 exceptions = [
-    "Vanquisher's Mark of Sanctification",
-    "Protector's Mark of Sanctification",
-    "Conqueror's Mark of Sanctification",
-    "Shadowfrost Shard",
-    "Rotface's Acidic Blood", 
-    "Festergut's Acidic Blood"
+
 ]
 
 def regular_keyboard(input_string): 
@@ -87,9 +82,8 @@ for ind,line in enumerate(export):
     item_id = int(line[0])
     item_name = line[1]
     ilvl = line[2]
-    reserved = True if line[3] == "1" else False 
-    offspec = True if line[4] == "1" else False
-    winner = line[5]
+    offspec = True if line[3] == "1" else False
+    winner = line[4]
 
     if item_id == 52025: ilvl = "N25"
     elif item_id == 52026: ilvl = "N25"
@@ -100,7 +94,7 @@ for ind,line in enumerate(export):
     
     if item_id in [50274, 50231, 50226]: roll_type = "ETC"
     elif "Wrathful Gladiator's" in item_name: roll_type = "OS"
-    else: roll_type = "SR" if reserved else "OS" if offspec else "MS"
+    else: roll_type = "OS" if offspec else "MS"
 
     export_log.append((item_name, ilvl, roll_type, winner, False))
 

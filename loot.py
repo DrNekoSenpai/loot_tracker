@@ -54,7 +54,7 @@ class Log:
         Create a log entry.
         - Name: The name of the player
         - Item: The Item object of what was awarded
-        - Roll: Roll type (MS, OS, reserve)
+        - Roll: Roll type (MS, OS)
         - Date: The date the item was awarded
         """
 
@@ -65,15 +65,12 @@ class Log:
         self.note = note
 
 class Player: 
-    def __init__(self, name:str, alias:str, reserves:List, pclass:str):
+    def __init__(self, name:str, alias:str, pclass:str):
         self.name = name
         self.alias = alias
-
-        self._reserves = reserves
         self._player_class = pclass
 
         self._regular_plusses = 0
-        self._reserve_plusses = 0
         self._attendance = False
 
         self._raid_log = []
@@ -188,7 +185,7 @@ def import_pickle():
     except FileNotFoundError:
         print('No pickle file found. Creating a new one.')
         players = []
-        players.append(Player("_disenchanted", "_disenchanted", [], ""))
+        players.append(Player("_disenchanted", "_disenchanted", ""))
 
     return players
 
@@ -205,215 +202,12 @@ else:
 
     # Create a special player called "_disenchanted", for items that were not awarded to anyone.
     # This is used when no one rolls. 
-    players.append(Player("_disenchanted", "_disenchanted", [], ""))
+    players.append(Player("_disenchanted", "_disenchanted", ""))
 
 with open("known-players.txt", "r", encoding="utf-8") as f:
-    known_players = [line.strip().split(",") for line in f.readlines()]
-    known_aliases = {x[0]: x[1] for x in known_players if x[0] != x[1]}
+    known_players = [line.strip().split(";") for ind,line in enumerate(f.readlines()) if ind > 0]
+    known_aliases = {x[0]: x[1] for x in known_players}
     known_players = {x[0]: x[2] for x in known_players}
-
-def import_softreserve(players): 
-    # We'll attempt to import reserve data from the CSV file. 
-    if not os.path.exists("soft_reserves.csv"):
-        print("No reserve file found. Skipping.")
-        return players
-    
-    if not os.path.exists("passing.txt"): 
-        print("No passing file found.")
-        passing = []
-    
-    else:
-        with open("passing.txt", "r") as f: 
-            passing = f.readlines()
-
-        for ind, p in enumerate(passing): 
-            passing[ind] = p.strip().split("; ")
-
-    # Go through the list of players, and wipe all reserves. 
-    for p in players: 
-        p._reserves = []
-
-    with open("soft_reserves.csv", "r", encoding="utf-8") as f: 
-        sr_data = f.readlines()
-
-    # Parse the data. 
-    for ind,soft_res in enumerate(sr_data):
-        if ind == 0: continue # Header row 
-        # Split the string into a list.
-        soft_res = soft_res.split(",")
-
-        # We'll check if the second column is a number. If it's not, then this item has a comma in it; and we'll join the first two elements together with a comma. 
-        if not soft_res[1].isdigit():
-            soft_res[0:2] = [",".join(soft_res[0:2])]
-
-        # We'll remove all the quotes from the string. 
-        soft_res = [x.replace('"', "") for x in soft_res]
-
-        # Format the strings.
-        # Item,ItemId,From,Name,Class,Spec,Note,Plus,Date
-        # We care about: Item, Name, Class, Spec
-        
-        # Item
-        item = soft_res[0]
-        name = soft_res[3]
-
-        if name == "Swiftblades": name = "Swiftbladess"
-        if name == "Artaz": name = "Artasz"
-
-        if name in known_aliases.keys(): 
-            alias = known_aliases[name]
-
-        else: 
-            alias = name
-        
-        # Check if the player's name can be typed using the English keyboard. 
-        if not regular_keyboard(alias):
-            print(f"Player name {alias} is not valid. Please input the name manually.")
-            alias = input("Name: ")
-
-        # Search for an existing player object. Create it if it doesn't exist. 
-
-        # Check if the player is in the list of players. 
-        # If so, wipe their reserve. 
-        player_exists = False
-        current_player = None
-        for p in players: 
-            if p.alias == alias: 
-                player_exists = True
-                current_player = p
-                break
-        
-        if not player_exists: 
-            if name in known_players:
-                pclass = known_players[name]
-                print(f"Player {name} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
-                players.append(Player(name, alias, [], pclass))
-                current_player = players[-1]
-
-            else: 
-                pclass = input(f"Could not find player {alias}. Creating from scratch. What class are they? ")
-                if pclass.lower() in "death knight": pclass = "Death Knight"
-                elif pclass.lower() in "druid": pclass = "Druid"
-                elif pclass.lower() in "hunter": pclass = "Hunter"
-                elif pclass.lower() in "mage": pclass = "Mage"
-                elif pclass.lower() in "paladin": pclass = "Paladin"
-                elif pclass.lower() in "priest": pclass = "Priest"
-                elif pclass.lower() in "rogue": pclass = "Rogue"
-                elif pclass.lower() in "shaman": pclass = "Shaman"
-                elif pclass.lower() in "warlock": pclass = "Warlock"
-                elif pclass.lower() in "warrior": pclass = "Warrior"
-
-                players.append(Player(name, alias, [], pclass))
-                current_player = players[-1]
-
-        # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
-        # Find if they are passing on this item. 
-        passing_on = False
-        for p in passing: 
-            if p[0] == name and p[1] == item:
-                passing_on = True
-                break
-
-        current_player._reserves.append((item, passing_on))
-        print(f"{current_player.name} has reserved {item}", end = "")
-        if passing_on: print(", but has chosen to pass on this item.")
-        else: print(".")
-
-    return players
-
-def import_tmb_prios(players): 
-    if not os.path.exists("tmb_prios.csv"):
-        print("No TMB prios file found. Skipping.")
-        return players
-    
-    if not os.path.exists("passing.txt"): 
-        print("No passing file found.")
-        passing = []
-    
-    else:
-        with open("passing.txt", "r") as f: 
-            passing = f.readlines()
-
-        for ind, p in enumerate(passing): 
-            passing[ind] = p.strip().split("; ")
-
-    # Go through the list of players, and wipe all reserves. 
-    for p in players: 
-        p._reserves = []
-
-    with open("tmb_prios.csv", "r", encoding="utf-8") as f:
-        tmb_data = f.readlines()
-
-    for ind, prio in enumerate(tmb_data):
-        if ind == 0: continue # Header row
-        # type,raid_group_name,member_name,character_name,character_class,character_is_alt,character_inactive_at,character_note,sort_order,item_name,item_id,is_offspec,note,received_at,import_id,item_note,item_prio_note,officer_note,item_tier,item_tier_label,created_at,updated_at,instance_name,source_name
-        # prio,"Asylum of the Immortals",Sned,Snedpie,Priest,0,,,1,"Einhorn's Galoshes",59234,0,,,,,,,,,"2024-05-18 06:14:11","2024-05-18 06:14:11","Blackwing Descent Normal",Chimaeron
-        # prio,"Asylum of the Immortals",Sned,Snedpie,Priest,0,,,2,"Treads of Liquid Ice",59508,0,,,,,,,,,"2024-05-18 06:16:00","2024-05-18 06:16:00","The Bastion of Twilight Normal","Ascendant Council"
-        # A lot of these are unimportant; we need character name (Snedpie), class (Priest), item name (Einhorn's Galoshes), item ID (59234), sort_order (1 or 2)
-        prio = prio.split(",")
-        name = prio[3]
-        item = prio[9]
-        item_id = prio[10]
-        sort_order = prio[8]
-
-        if name == "Swiftblades": name = "Swiftbladess"
-        if name == "Artaz": name = "Artasz"
-
-        if name in known_aliases.keys(): 
-            alias = known_aliases[name]
-
-        else: 
-            alias = name
-        
-        # Check if the player's name can be typed using the English keyboard. 
-        if not regular_keyboard(alias):
-            print(f"Player name {alias} is not valid. Please input the name manually.")
-            alias = input("Name: ")
-
-        # Check if the player is in the list of players. 
-        # If so, wipe their reserve. 
-        player_exists = False
-        current_player = None
-        for p in players: 
-            if p.alias == alias: 
-                player_exists = True
-                current_player = p
-                break
-        
-        if not player_exists: 
-            if name in known_players:
-                pclass = known_players[name]
-                print(f"Player {name} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
-                players.append(Player(name, alias, [], pclass))
-                current_player = players[-1]
-
-            else: 
-                pclass = input(f"Could not find player {alias}. Creating from scratch. What class are they? ")
-                if pclass.lower() in "death knight": pclass = "Death Knight"
-                elif pclass.lower() in "druid": pclass = "Druid"
-                elif pclass.lower() in "hunter": pclass = "Hunter"
-                elif pclass.lower() in "mage": pclass = "Mage"
-                elif pclass.lower() in "paladin": pclass = "Paladin"
-                elif pclass.lower() in "priest": pclass = "Priest"
-                elif pclass.lower() in "rogue": pclass = "Rogue"
-                elif pclass.lower() in "shaman": pclass = "Shaman"
-                elif pclass.lower() in "warlock": pclass = "Warlock"
-                elif pclass.lower() in "warrior": pclass = "Warrior"
-
-                players.append(Player(name, alias, [], pclass))
-                current_player = players[-1]
-
-        # Add the item to the player's reserve list, but only if an item of the same name isn't already there. 
-        # Find if they are passing on this item. 
-        passing_on = False
-        for p in passing: 
-            if p[0] == name and p[1] == item: 
-                passing_on = True
-                break
-
-        current_player.reserves.append((item, sort_order, passing_on))       
-
-    return players
 
 def print_write(string, file=None):
     print(string)
@@ -476,162 +270,31 @@ def award_loot(players):
     slot_category = match_category(item_match.category)
     item_match.category = item_match.category.replace(" (Random)", "")
 
-    reserves = []
-    ineligible = 0
-
-    # We'll check the soft-reserves to see if anyone has this item soft-reserved, excluding anyone who has already won the same item, with the same item level. 
-    # For example, Ring of Rapid Ascent (264) and Ring of Rapid Ascent (277) are considered different items.
-    # We need to check the corresponding _history list, which is categorized based on slot. 
-    table_printed = False
-
     for p in players: 
         # Skip this person if they're not here.
         if p._attendance == False: continue
 
-        # TODO: Change this to account for a tuple-style reserve list. 
-        # Tuple: (string, bool) -- string, the item name; bool, whether or not the player is passing on this item. 
-        # The bool is there to account for players who received something better, and no longer needs this item. 
-
-        if item_match.name in [i[0] for i in p._reserves]:
-            passing = False
-            for i in p._reserves:
-                if i[0] == item_match.name: 
-                    passing = i[1]
-                    break
-
-            reserve_name = p.name
-
-            if not table_printed: 
-                print("\n Player Name  | Passing | Received")
-                print("--------------+---------+----------")
-                table_printed = True
-
-            if len(p.name) < 12: reserve_name += " " * (12-len(p.name))
-            else: reserve_name = p.name
-
-            if passing is False: reserve_passing = "FALSE  "
-            elif passing is True: reserve_passing = "TRUE   "
-
-            print(f" {reserve_name} | {reserve_passing} |", end = "")
-
-            # First, we should check if the player has double-reserved this item; that is, if they want two.
-            count = len([i for i in p._reserves if i[0] == item_match.name])
-            if count > 1:
-                num_received = 0
-                for log in p._history[slot_category]: 
-                    if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
-                        num_received += 1
-                
-                if num_received != 2: 
-                    if item_match.version == "Heroic": 
-                        # We want to check if the player has already won the Normal version of this item. If so, we'll add a note to the reserves list.
-                        num_received_normal = 0
-                        for log in p._history[slot_category]: 
-                            if log.item.name == item_match.name and log.item.version == "Normal": 
-                                num_received_normal += 1
-                        
-                        # Only add it to the reserves list if they haven't passed on this item. 
-                        if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
-                            reserves.append((p.name, p._reserve_plusses, f" (Heroic: {num_received}/2, Normal: {num_received_normal}/2)"))
-                            print(f" FALSE (Heroic: {num_received}/2, Normal: {num_received_normal}/2)")
-                            
-                    else: 
-                        if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
-                            reserves.append((p.name, p._reserve_plusses, f" (Normal: {num_received}/2)"))
-                            print(f" FALSE (Normal: {num_received}/2)")
-                
-                else: 
-                    print(f" TRUE (2/2)")
-                    ineligible += 1
-
-            else: 
-                # Only append the player to the reserves list if they have not already won the same item, with the same item level.
-                already_received = False
-                for log in p._history[slot_category]: 
-                    if log.item.name == item_match.name and log.item.ilvl == item_match.ilvl: 
-                        already_received = True
-                        print(" TRUE")
-                        ineligible += 1
-                        break
-
-                if not already_received: 
-                    if item_match.version == "Heroic": 
-                        if any([item_match.name == log.item.name and log.item.version == "Normal" for log in p._history[slot_category]]):
-                            if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
-                                reserves.append((p.name, p._reserve_plusses, f" (has Normal version)"))
-                                print(" FALSE (has Normal version)")
-                        else: 
-                            if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
-                                reserves.append((p.name, p._reserve_plusses, ""))
-                                print(" FALSE")
-
-                    else: 
-                        if any([i[0] == item_match.name and i[1] == False for i in p._reserves]):
-                            reserves.append((p.name, p._reserve_plusses, ""))
-                            print(" FALSE")
-    
-    if len(reserves) > 0:
-        # Sort the reserves list by reserve plusses, then by name.
-        reserves.sort(key=lambda x: (x[1], x[0]))
-
-        print("\n")
-        print("The following people have soft-reserved this item:")
-        roll_type = "SR"
-        for r in reserves: 
-            print(f"  - {r[0]} ({roll_type} +{r[1]}){r[2]}")
-
-        ready = input("Ready to announce? (y/n): ").lower()
-        if ready == "y": 
-            pyautogui.moveTo(1920/2, 1080/2)
-            pyautogui.click()
-            time.sleep(0.1)
-
-            text = f"/rw The following people have soft-reserved this item, {item_match.name}:"
-            pyperclip.copy(text)
-            pyautogui.hotkey("ctrl", "v")
-            pyautogui.press("enter")
-            time.sleep(0.25)
-
-            for r in reserves:
-                text = f"/rw {r[0]} ({roll_type} +{r[1]}){r[2]}"
-                pyperclip.copy(text)
-                pyautogui.hotkey("ctrl", "v")
-                pyautogui.press("enter")
-                time.sleep(0.25)
-
-    elif len(reserves) == 0 and not slot_category == "ETC": 
+    if not slot_category == "ETC": 
         print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
         # If this is a class-restricted item... announce that. 
         if item_match.classes != "None": pass
 
-        if ineligible == 0: print(f"Open roll -- no one has reserved it.")
-        else: print(f"Open roll -- no valid reserves remaining.")
-
         ready = input("Ready to announce? (y/n): ").lower()
         if ready == "y": 
             pyautogui.moveTo(1920/2, 1080/2)
             pyautogui.click()
-            time.sleep(0.1)
-
-            text = f"/rw Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}"
-            pyperclip.copy(text)
-            pyautogui.hotkey("ctrl", "v")
-            pyautogui.press("enter")
             time.sleep(0.25)
 
-            if ineligible == 0:
-                text = f"/rw Open roll -- no one has reserved it."
-                pyperclip.copy(text)
-                pyautogui.hotkey("ctrl", "v")
-                pyautogui.press("enter")
-                time.sleep(0.25)
-
-            else:
-                text = f"/rw Open roll -- no valid reserves remaining."
-                pyperclip.copy(text)
-                pyautogui.hotkey("ctrl", "v")
-                pyautogui.press("enter")
-                time.sleep(0.25)
+            pyautogui.write("/")
+            time.sleep(0.1)
+            pyautogui.write("rw")
+            time.sleep(0.1)
+            pyautogui.press("space")
+            time.sleep(0.1)
+            pyautogui.write(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
+            time.sleep(0.1)
+            pyautogui.press("enter")
+            time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -674,12 +337,6 @@ def award_loot(players):
         player = player_matches[sel-1]
 
     if player.name == "_disenchanted":
-        if len(reserves) > 0: 
-            confirm = input("This item is reserved. Are you sure it should be disenchanted instead? (y/n): ").lower()
-            if confirm != "y":
-                print("Aborting.")
-                return players
-            
         print(f"{item_match.name} ({item_match.ilvl}) has been disenchanted.")
         # Find the disenchanted player. 
         for p in players:
@@ -690,59 +347,8 @@ def award_loot(players):
                 return players
 
     confirm = ""
-    
-    # If the player isn't on the reserves list, we'll ask to confirm that this is intentional. 
-    if len(reserves) > 0 and player.name not in [r[0] for r in reserves]: 
-        confirm = input("This person is not on the reserves list. Are you sure this is intentional? (y/n/sr): ").lower()
-        if confirm != "y" and confirm != "sr": 
-            print("Aborting.")
-            return players
-        
-        for r in reserves: 
-            passing = input(f"Is {r[0]} passing on this item? (y/n): ").lower()
-            if passing == "y": 
-                # Find the corresponding reserve in the player's reserve list, and change the boolean to True
-                for i in player._reserves: 
-                    if i[0] == item_match.name: 
-                        i[1] = True
-                        break
 
-                # Open the file called "passing.txt", and if it doesn't exist, create it.
-                if not os.path.exists("passing.txt"): 
-                    with open("passing.txt", "w") as f: 
-                        f.write("")
-
-                with open("passing.txt", "a") as f: 
-                    # First, find if there is already an equivalent passing note in the file.
-                    found = False
-                    pattern = re.compile(rf"^{r[0]}, {item_match.name}$")
-                    with open("passing.txt", "r") as f2: 
-                        for line in f2: 
-                            if pattern.match(line): 
-                                found = True
-                                break
-                            
-                    if not found:
-                        f.write(f"{r[0]}; {item_match.name}\n")
-        
-    elif len(reserves) > 0 and player.name in [r[0] for r in reserves]: 
-        confirm = "sr"
-        
-    # We'll ask the user whether or not this is an off-spec roll, but only if the player is not on the reserves list.
-    # If they are, it's a soft-reserve roll. 
-    if player.name in [r[0] for r in reserves] or confirm == "sr": 
-        roll_type = "SR"
-
-        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-        player._raid_log.append(log)
-        player._reserve_plusses += 1
-        player._regular_plusses += 1
-        
-        roll_type = "SR"
-
-        player._history[slot_category].append(log)
-
-    elif slot_category != "ETC" or "Mark of Sanctification" in item_match.name: 
+    if slot_category != "ETC": 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
         if off_spec == "y": roll_type = "OS"
         else: roll_type = "MS"
@@ -810,7 +416,7 @@ def mark_attendance(players):
             if new_player in known_players:
                 pclass = known_players[new_player]
                 print(f"Player {new_player} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
-                players.append(Player(new_player, alias, [], pclass))
+                players.append(Player(new_player, alias, pclass))
 
             else:
                 pclass = input(f"Could not find player {new_player}. Creating from scratch. What class are they? ")
@@ -825,7 +431,7 @@ def mark_attendance(players):
                 elif pclass.lower() in "warlock": pclass = "Warlock"
                 elif pclass.lower() in "warrior": pclass = "Warrior"
 
-                players.append(Player(new_player, alias, [], pclass))
+                players.append(Player(new_player, alias, pclass))
 
         # Find the player in the list of players, and change their _attendance to True. 
         for p in players:
@@ -908,113 +514,8 @@ def export_history():
                                 file.write(f"  \- [{item.item.name}]({link}) ({item.roll}) ({item.date})\n")
                 file.write("----------------------------------------\n")
 
-            else:  
-                continue 
-                num_items = []
-
-                for slot in player._history:
-                    if len(player._history[slot]) == 0: continue
-                    for item in player._history[slot]: 
-                        if item.note == "auto": continue
-                        num_items.append(item)
-                file.write(f"{player.name}: {len(num_items)} items.\n")
-
-                for slot in player._history:
-                    if len(player._history[slot]) == 0: continue
-                    file.write("\n")
-                    file.write(f"{slot}:\n")
-                    for item in player._history[slot]: 
-                        if item.note == "auto": continue
-                        # print(item.item.name)
-
-                        # Find the item id, this is the key of the item in the dictionary
-                        for key, value in all_items.items():
-                            if value.name == item.item.name:
-                                link = f"<https://www.wowhead.com/wotlk/item={key}>"
-                                break
-                        if not "Mark of Sanctification" in item.item.name: 
-                            file.write(f"  \- [{item.item.name} ({item.item.ilvl})]({link}) ({item.date})\n")
-                        else: 
-                            file.write(f"  \- [{item.item.name}]({link})  ({item.date})\n")
-
-                file.write("----------------------------------------\n")
-                    
-        file.write("Number of tokens received:\n\n")
-
-        file.write("Conqueror's Mark of Sanctification:\n\n")
-        for p in players: 
-            normal_tokens = 0
-            heroic_tokens = 0
-
-            if p._player_class in ["Paladin", "Priest", "Warlock"]:
-                for l in p._history["ETC"]:
-                    if l.item.name == "Conqueror's Mark of Sanctification (N25)":
-                        normal_tokens += 1
-                    elif l.item.name == "Conqueror's Mark of Sanctification (H25)":
-                        heroic_tokens += 1
-
-            if normal_tokens == 0 and heroic_tokens == 0: continue 
-            else: 
-                file.write(f"\- {p.name}: {normal_tokens} Normal")
-                if heroic_tokens == 0: file.write("\n")
-                else: file.write(f", {heroic_tokens} Heroic\n")
-
-        file.write("\nProtector's Mark of Sanctification:\n\n")
-        for p in players:
-            normal_tokens = 0
-            heroic_tokens = 0
-
-            if p._player_class in ["Warrior", "Hunter", "Shaman"]:
-                for l in p._history["ETC"]:
-                    if l.item.name == "Protector's Mark of Sanctification (N25)":
-                        normal_tokens += 1
-                    elif l.item.name == "Protector's Mark of Sanctification (H25)":
-                        heroic_tokens += 1
-
-            if normal_tokens == 0 and heroic_tokens == 0: continue 
-            else: 
-                file.write(f"\- {p.name}: {normal_tokens} Normal")
-                if heroic_tokens == 0: file.write("\n")
-                else: file.write(f", {heroic_tokens} Heroic\n")
-
-        file.write("\nVanquisher's Mark of Sanctification:\n\n")
-        for p in players:
-            normal_tokens = 0
-            heroic_tokens = 0
-
-            if p._player_class in ["Death Knight", "Druid", "Mage", "Rogue"]:
-                for l in p._history["ETC"]:
-                    if l.item.name == "Vanquisher's Mark of Sanctification (N25)":
-                        normal_tokens += 1
-                    elif l.item.name == "Vanquisher's Mark of Sanctification (H25)":
-                        heroic_tokens += 1
-
-            if normal_tokens == 0 and heroic_tokens == 0: continue 
-            else: 
-                file.write(f"\- {p.name}: {normal_tokens} Normal")
-                if heroic_tokens == 0: file.write("\n")
-                else: file.write(f", {heroic_tokens} Heroic\n")
-
-        file.write("----------------------------------------\n")
-        file.write("Number of Shadowfrost Shards received:\n\n")
-        for p in players: 
-            shards = 0
-            for l in p._history["ETC"]:
-                if l.item.name == "Shadowfrost Shard":
-                    shards += 1
-            if shards == 0: continue 
-            else: 
-                file.write(f"\- {p.name}: {shards}\n")
-
 def export_loot(): 
-    """
-    Export loot received as console output. 
-    We will sort players by soft-reserve plusses, then by regular plusses. 
-    If there is a tie, we will sort alphabetically by name. 
-    Under each name, we'll print out what items they received. 
-    """
-
-    # Sort the list of players by soft-reserve plusses, then by regular plusses. 
+    # Sort the list of players by regular plusses. 
     # We will sort in descending order; so higher plusses should come first. 
     # If there is a tie, we will sort alphabetically by name. 
     # Names should be sorted alphabetically. 
@@ -1022,7 +523,7 @@ def export_loot():
     # If the mode is "console", output to both console and file.
     # If the mode is "file", output to file only.
 
-    players.sort(key=lambda x: (-x._reserve_plusses, -x._regular_plusses, x.name))
+    players.sort(key=lambda x: (-x._regular_plusses, x.name))
     # The most recent raid was either last Wednesday, or last Sunday -- whichever is closer. This is one-directional; if the closest Wednesday is one day in the future, that doesn't count; that's six days.
     # Exception is if last Wednesday or last Sunday is today -- that is, if the last raid was today. In that case, we want to include it. 
 
@@ -1058,18 +559,7 @@ def export_loot():
                 continue
 
             # Print out the player's name, and then the number of plusses they have; of both types.
-            f.write(f"{p.name} (+{p._regular_plusses} MS) (+{p._reserve_plusses} SR)\n")
-
-            for l in p._raid_log:
-                if l.roll == "SR":
-                    if "Mark of Sanctification" in l.item.name: 
-                        f.write(f"- {l.item.name} (SR) -- received on")
-                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
-                        f.write(f" {date_string}\n")
-                    else:
-                        f.write(f"- {l.item.name} ({l.item.ilvl}) (SR) -- received on")
-                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
-                        f.write(f" {date_string}\n")
+            f.write(f"{p.name} (+{p._regular_plusses} MS)\n")
 
             for l in p._raid_log:
                 if l.roll == "MS":
@@ -1178,12 +668,7 @@ def remove_loot(players):
         return players
     
     # We'll check if the item was won through a main-spec roll. If so, we'll decrement regular plusses. 
-    # Similarly, if it's through a reserve roll, we'll decrement reserve plusses. 
     if player._raid_log[sel-1].roll == "MS":
-        player._regular_plusses -= 1
-
-    elif player._raid_log[sel-1].roll == "SR":
-        player._reserve_plusses -= 1
         player._regular_plusses -= 1
     
     # Remove the item from the player's log.
@@ -1192,7 +677,7 @@ def remove_loot(players):
 
     # We can only check the logs if the item was not disenchanted. 
     if not player.name == "_disenchanted": 
-        slot_category = match_category(item.item.slot)
+        slot_category = match_category(item.item.category)
 
         index = player._history[slot_category].index(item)
         player._history[slot_category].pop(index)
@@ -1200,7 +685,7 @@ def remove_loot(players):
     return players
 
 def weekly_reset(players):
-    players_with_plusses = [p for p in players if p._regular_plusses > 0 or p._reserve_plusses > 0]
+    players_with_plusses = [p for p in players if p._regular_plusses > 0]
     if len(players_with_plusses) == 0: 
         print("There's nothing to clear!")
         return players
@@ -1213,7 +698,6 @@ def weekly_reset(players):
     for i in range(len(players)): 
         players[i]._raid_log = []
         players[i]._regular_plusses = 0
-        players[i]._reserve_plusses = 0
 
     return players 
 
@@ -1231,7 +715,8 @@ def sudo_mode(players):
         print("a. COMPLETELY wipe the pickle file")
         print("b. Restore history from Gargul export")
         print("c. Create Gargul export")
-        print("d. Exit sudo mode")
+        print("d. Export list of known players")
+        print("e. Exit sudo mode")
         sel = input("Select an option: ").lower()
         print("")
 
@@ -1239,7 +724,6 @@ def sudo_mode(players):
             print("WARNING: This will completely wipe the pickle file. This cannot be undone.")
             print("Removing the pickle file will affect: ")
             print("  - The loot history")
-            print("  - The reserve lists of ALL players")
             print("  - The names of ALL players")
             print("  - The plusses of ALL players")
 
@@ -1248,7 +732,7 @@ def sudo_mode(players):
                 os.remove("players_cata.pickle")
 
             players = []
-            players.append(Player("_disenchanted", "_disenchanted", [], ""))
+            players.append(Player("_disenchanted", "_disenchanted", ""))
 
         elif sel == "b":
             with open("gargul-export.txt", "r", encoding="utf-8") as file: 
@@ -1259,7 +743,6 @@ def sudo_mode(players):
                     p._history[slot] = []
                 p._raid_log = []
                 p._regular_plusses = 0
-                p._reserve_plusses = 0
 
             for ind,line in enumerate(lines):
                 if ind == 0: continue
@@ -1268,10 +751,9 @@ def sudo_mode(players):
                 item_id = int(line[0])
                 item_name = line[1]
                 ilvl = int(line[2])
-                reserved = True if line[3] == "1" else False 
-                offspec = True if line[4] == "1" else False
-                winner = line[5]
-                date = line[6]
+                offspec = True if line[3] == "1" else False
+                winner = line[4]
+                date = line[5]
 
                 if winner in known_aliases.keys(): 
                     alias = known_aliases[winner]
@@ -1289,33 +771,22 @@ def sudo_mode(players):
                         player = p
                         break
 
-                if item_id == 52025: item_name += " (N25)"
-                elif item_id == 52026: item_name += " (N25)"
-                elif item_id == 52027: item_name += " (N25)"
-                elif item_id == 52028: item_name += " (H25)"
-                elif item_id == 52029: item_name += " (H25)"
-                elif item_id == 52030: item_name += " (H25)"
-
                 item = None
                 for i in all_items.values():
                     if i.name == item_name and i.ilvl == ilvl: 
                         item = i
                         break
-                
-                if item_id in [50274, 50231, 50226]: 
-                    roll_type = "ETC"
 
-                elif "Wrathful Gladiator's" in item_name: 
+                if "Gladiator" in item_name:
                     roll_type = "OS"
-
-                else: 
-                    roll_type = "SR" if reserved else "OS" if offspec else "MS"
+                else:
+                    roll_type = "OS" if offspec else "MS"
                     
                 if player is None: 
                     if winner in known_players:
                         pclass = known_players[winner]
                         print(f"Player {winner} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
-                        players.append(Player(winner, alias, [], pclass))
+                        players.append(Player(winner, alias, pclass))
                         player = players[-1]
 
                     else: 
@@ -1331,10 +802,10 @@ def sudo_mode(players):
                         elif pclass.lower() in "warlock": pclass = "Warlock"
                         elif pclass.lower() in "warrior": pclass = "Warrior"
 
-                        players.append(Player(winner, alias, [], pclass))
+                        players.append(Player(winner, alias, pclass))
                         player = players[-1]
 
-                player._history[match_category(item.slot)].append(Log(player.name, item, roll_type, date))
+                player._history[match_category(item.category)].append(Log(player.name, item, roll_type, date))
                 print(f"Added {item.name} ({item.ilvl}) [{roll_type}] to {player.name}'s history.")
 
                 # Check if the date is after the last weekly reset, on Tuesday. If so, we must also add this item to their raid log.
@@ -1347,18 +818,15 @@ def sudo_mode(players):
                 
                 if todays_date >= last_tuesday:
                     player._raid_log.append(Log(player.name, item, roll_type, date))
-                    if reserved: 
-                        player._reserve_plusses += 1
-                        player._regular_plusses += 1
-                    elif not offspec and not roll_type == "ETC" and not roll_type == "OS": 
+                    if not offspec and not roll_type == "ETC" and not roll_type == "OS": 
                         player._regular_plusses += 1
 
         elif sel == "c": 
             with open(f"partial-export.txt", "w", encoding="utf-8") as file: 
-                file.write("@ID;@ITEM;@ILVL;@SR;@OS;@WINNER;@YEAR-@MONTH-@DAY\n")
+                file.write("@ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY\n")
                 for p in players: 
                     # For each item in their loot log, write out;
-                    # @ID;@ITEM;@ILVL;@SR;@OS;@WINNER;@YEAR-@MONTH-@DAY
+                    # @ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY
                     # 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
                     for item in p._raid_log: 
                         item_id = 0
@@ -1368,12 +836,18 @@ def sudo_mode(players):
                                 item_id = key
                                 break
 
-                        reserved = 1 if item.roll == "SR" else 0
                         offspec = 1 if item.roll == "OS" else 0
                         item_name = item.item.name.replace(" (N25)", "").replace(" (H25)", "")
-                        file.write(f"{item_id};{item_name};{item.item.ilvl};{reserved};{offspec};{p.name};{item.date}\n")
+                        file.write(f"{item_id};{item_name};{item.item.ilvl};{offspec};{p.name};{item.date}\n")
 
-        elif sel == "d":
+        elif sel == "d": 
+            with open("known-players.txt", "w", encoding="utf-8") as file: 
+                file.write("Name,Alias,Class\n")
+                for p in players: 
+                    if p.name == "_disenchanted": continue
+                    file.write(f"{p.name};{p.alias};{p._player_class}\n")
+
+        elif sel == "e":
             print("Exiting sudo mode.")
             return players
 
@@ -1421,14 +895,13 @@ while(True):
     print("----------------------------------------")
     print(f"Loot Tracker")
     print("1) Award loot")
-    print("2) Import soft-reserve")
-    print("3) Mark attendance")
-    print("4) Export THIS RAID's loot to a file")
-    print("5) Export the loot history to a file")
-    print("6) Split up history into paste-sized chunks")
-    print("7) Remove loot, or weekly reset")
-    print("8) Export plusses in Gargul style")
-    print("9) Enter sudo mode")
+    print("2) Mark attendance")
+    print("3) Export THIS RAID's loot to a file")
+    print("4) Export the loot history to a file")
+    print("5) Split up history into paste-sized chunks")
+    print("6) Remove loot, or weekly reset")
+    print("7) Export plusses in Gargul style")
+    print("8) Enter sudo mode")
 
     print("")
 
@@ -1436,12 +909,11 @@ while(True):
     except: break
 
     if sel == 1: players = award_loot(players)
-    elif sel == 2: players = import_softreserve(players)
-    elif sel == 3: players = mark_attendance(players)
-    elif sel == 4: export_loot()
-    elif sel == 5: export_history()
-    elif sel == 6: paste_history()
-    elif sel == 7: 
+    elif sel == 2: players = mark_attendance(players)
+    elif sel == 3: export_loot()
+    elif sel == 4: export_history()
+    elif sel == 5: paste_history()
+    elif sel == 6: 
         print("Choose an option: ")
         print("a) Remove one piece of loot from a player")
         print("b) Weekly reset (clear plusses and raid logs, but not history)")
@@ -1450,6 +922,6 @@ while(True):
         if sel == "a": remove_loot(players)
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
-    elif sel == 8: export_gargul(players)
-    elif sel == 9: players = sudo_mode(players)
+    elif sel == 7: export_gargul(players)
+    elif sel == 8: players = sudo_mode(players)
     else: break

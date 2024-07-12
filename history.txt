@@ -1,0 +1,83 @@
+Angelofruin: 1 items.
+
+Legs:
+  \- [Vicious Gladiator's Silk Trousers (365)](<https://www.wowhead.com/wotlk/item=70659>) (OS) (2024-07-10)
+----------------------------------------
+Bzorder: 2 items.
+
+Chest:
+  \- [Scorched Wormling Vest (359)](<https://www.wowhead.com/wotlk/item=65045>) (MS) (2024-07-10)
+
+Hands:
+  \- [Stormrider's Gloves (359)](<https://www.wowhead.com/wotlk/item=65199>) (MS) (2024-07-10)
+----------------------------------------
+Chunkofrock: 1 items.
+
+Main-Hand:
+  \- [Incineratus (359)](<https://www.wowhead.com/wotlk/item=65041>) (MS) (2024-07-10)
+----------------------------------------
+Gnoraa: 1 items.
+
+Waist:
+  \- [X-Tron Duct Tape (359)](<https://www.wowhead.com/wotlk/item=65079>) (OS) (2024-07-10)
+----------------------------------------
+Gnoya: 1 items.
+
+Hands:
+  \- [Mercurial Handwraps (359)](<https://www.wowhead.com/wotlk/item=65229>) (MS) (2024-07-10)
+----------------------------------------
+Halibutfilet: 1 items.
+
+Main-Hand:
+  \- [Organic Lifeform Inverter (359)](<https://www.wowhead.com/wotlk/item=65081>) (MS) (2024-07-10)
+----------------------------------------
+Lorniras: 1 items.
+
+Ring:
+  \- [Security Measure Alpha (359)](<https://www.wowhead.com/wotlk/item=65076>) (MS) (2024-07-10)
+----------------------------------------
+Onlyflowers: 1 items.
+
+Feet:
+  \- [Molten Tantrum Boots (359)](<https://www.wowhead.com/wotlk/item=65051>) (MS) (2024-07-10)
+----------------------------------------
+Pastiry: 1 items.
+
+Waist:
+  \- [Belt of Absolute Zero (359)](<https://www.wowhead.com/wotlk/item=65040>) (MS) (2024-07-10)
+----------------------------------------
+Phallipally: 3 items.
+
+Hands:
+  \- [Flash Freeze Gauntlets (359)](<https://www.wowhead.com/wotlk/item=65031>) (MS) (2024-07-10)
+
+Ring:
+  \- [Security Measure Alpha (359)](<https://www.wowhead.com/wotlk/item=65076>) (MS) (2024-07-10)
+
+Two-Hand:
+  \- [Akirus the Worm-Breaker (359)](<https://www.wowhead.com/wotlk/item=65007>) (OS) (2024-07-10)
+----------------------------------------
+Snedcharos: 2 items.
+
+Hands:
+  \- [Magma Plated Handguards (359)](<https://www.wowhead.com/wotlk/item=65185>) (OS) (2024-07-10)
+
+Main-Hand:
+  \- [Lava Spine (359)](<https://www.wowhead.com/wotlk/item=65047>) (MS) (2024-07-10)
+----------------------------------------
+Swiftbladess: 3 items.
+
+Hands:
+  \- [Vicious Gladiator's Leather Gloves (365)](<https://www.wowhead.com/wotlk/item=70585>) (OS) (2024-07-10)
+
+Legs:
+  \- [Aberration's Leggings (359)](<https://www.wowhead.com/wotlk/item=65039>) (MS) (2024-07-10)
+
+Ring:
+  \- [Lightning Conductor Band (359)](<https://www.wowhead.com/wotlk/item=65082>) (MS) (2024-07-10)
+----------------------------------------
+Ulvson: 1 items.
+
+Legs:
+  \- [Leggings of Consuming Flames (359)](<https://www.wowhead.com/wotlk/item=65030>) (MS) (2024-07-10)
+----------------------------------------

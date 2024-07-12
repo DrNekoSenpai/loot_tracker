@@ -1,1 +1,29 @@
 Name,Alias,Class
+Angelofruin;Angelofruin;Mage
+Axsel;Axsel;Warlock
+Bzorder;Bzorder;Druid
+Cageymagey;Cageymagey;Mage
+Chainmale;Chainmale;Paladin
+Chunkofrock;Chunkofrock;Shaman
+Elisesolis;Elisesolis;Paladin
+Gnoraa;Gnoraa;Warlock
+Gnoya;Gnoya;Priest
+Halibutfilet;Halibutfilet;Rogue
+Kairiz;Kairiz;Rogue
+Lorniras;Lorniras;Warlock
+Medullaa;Medullaa;Paladin
+Meemeemeemee;Meemeemeemee;Shaman
+Miatotems;Miatotems;Shaman
+Mobyle;Mobyle;Hunter
+Onlyflowers;Onlyflowers;Death Knight
+Pacratt;Pacratt;Mage
+Pasgghetti;Pasgghetti;Mage
+Pastiry;Pastiry;Warrior
+Phallipally;Phallipally;Paladin
+Ryotto;Ryotto;Death Knight
+Sighanama;Sighanama;Hunter
+Snedcharos;Snedcharos;Death Knight
+Swiftbladess;Swiftbladess;Rogue
+Tinyraider;Tinyraider;Mage
+Ulvson;Ulvson;Druid
+Vanthulhu;Vanthulhu;Priest
