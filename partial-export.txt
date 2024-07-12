@@ -1,0 +1,22 @@
+@ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY
+60350;Magma Plated Handguards;359;1;Snedcharos;2024-07-10
+60285;Stormrider's Gloves;359;0;Bzorder;2024-07-10
+60275;Mercurial Handwraps;359;0;Gnoya;2024-07-10
+60459;Vicious Gladiator's Leather Gloves;365;1;Swiftbladess;2024-07-10
+60465;Vicious Gladiator's Silk Trousers;365;1;Angelofruin;2024-07-10
+60468;Vicious Gladiator's Mooncloth Gloves;365;1;_disenchanted;2024-07-10
+59328;Molten Tantrum Boots;359;0;Onlyflowers;2024-07-10
+59333;Lava Spine;359;0;Snedcharos;2024-07-10
+59492;Akirus the Worm-Breaker;359;1;Phallipally;2024-07-10
+59335;Scorched Wormling Vest;359;0;Bzorder;2024-07-10
+59341;Incineratus;359;0;Chunkofrock;2024-07-10
+59121;Lightning Conductor Band;359;0;Swiftbladess;2024-07-10
+59122;Organic Lifeform Inverter;359;0;Halibutfilet;2024-07-10
+59220;Security Measure Alpha;359;0;Phallipally;2024-07-10
+59220;Security Measure Alpha;359;0;Lorniras;2024-07-10
+59217;X-Tron Duct Tape;359;1;Gnoraa;2024-07-10
+59343;Aberration's Leggings;359;0;Swiftbladess;2024-07-10
+59342;Belt of Absolute Zero;359;0;Pastiry;2024-07-10
+59352;Flash Freeze Gauntlets;359;0;Phallipally;2024-07-10
+59353;Leggings of Consuming Flames;359;0;Ulvson;2024-07-10
+59352;Flash Freeze Gauntlets;359;0;_disenchanted;2024-07-10
