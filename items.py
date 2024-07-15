@@ -54,6 +54,8 @@ def armor_subtype(text, base_type):
     text = text.lower()
 
     if "resilience" in text: return f"{base_type} (PvP)"
+    if "random enchantment" in text: return f"{base_type} (Random)"
+    
     if "spirit" in text and "intellect" in text: return f"{base_type} (Healing)"
 
     elif "hit rating" in text:
@@ -69,7 +71,6 @@ def armor_subtype(text, base_type):
     elif "intellect" in text: return f"{base_type} (Intellect)"
     elif "agility" in text: return f"{base_type} (Agility)"
     elif "strength" in text: return f"{base_type} (Strength)"
-    elif "random enchantment" in text: return f"{base_type} (Random)"
 
     else: return f"{base_type}"
 
@@ -131,7 +132,7 @@ for item in tqdm(unique_items):
                     
             all_items_file.write(f"{item_id};{item};{item_level};{classes};{subcategory};{bind};{difficulty}\n")
             
-        elif count == 2: 
+        else: 
             # Find the IDs of the matching items
             item_ids = [cata_ids[i] for i, x in enumerate(cata_items) if x == item]
             item_url = item.replace(" ", "-").replace(",", "").lower()
@@ -170,61 +171,32 @@ for item in tqdm(unique_items):
             elif boa_pattern.search(text): bind = "Binds to account"
             else: bind = "Binds when picked up"
 
+            # Sort item_ids and ilvls by item level in descending order
             item_ids, ilvls = zip(*sorted(zip(item_ids, ilvls), key=lambda x: x[1], reverse=True))
-            if ilvls[0] == ilvls[1]: difficulties = ["Normal", "Normal"]
-            else: difficulties = ["Heroic", "Normal"]
 
-            for i, item_id in enumerate(item_ids):
-                all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{subcategory};{bind};{difficulties[i]}\n")
+            # Identify unique item levels and sort them in descending order
+            unique_ilvls = sorted(set(ilvls), reverse=True)
 
-        elif count == 3: 
-            # Find the IDs of the matching items
-            item_ids = [cata_ids[i] for i, x in enumerate(cata_items) if x == item]
-            item_url = item.replace(" ", "-").replace(",", "").lower()
-            ilvls = []
+            # Create a mapping of item levels to difficulties
+            difficulty_map = {}
+            if len(unique_ilvls) == 1:
+                difficulty_map[unique_ilvls[0]] = "Normal"
+            elif len(unique_ilvls) == 2:
+                difficulty_map[unique_ilvls[0]] = "Heroic"
+                difficulty_map[unique_ilvls[1]] = "Normal"
+            elif len(unique_ilvls) >= 3:
+                difficulty_map[unique_ilvls[0]] = "Heroic"
+                difficulty_map[unique_ilvls[1]] = "Normal"
+                difficulty_map[unique_ilvls[2]] = "LFR"
 
-            for item_id in item_ids:
-                url = f"https://www.wowhead.com/cata/item={item_id}/{item_url}"
-                text = requests.get(url).text
+            # Assign difficulties to each item based on the item level
+            difficulties = [difficulty_map[ilvl] for ilvl in ilvls]
 
-                if ilvl_pattern.search(text): item_level = ilvl_pattern.search(text).group(1)
-                else: item_level = None
-
-                ilvls.append(item_level)
-
-            if slot_pattern.search(text): category = slot_pattern.search(text).group(1)
-            elif cat_pattern.search(text): category = cat_pattern.search(text).group(1)
-            else: category = None
-
-            if category is not None: 
-                if armor_type_pattern.search(text): armor_type = armor_type_pattern.search(text).group(1)
-                else: armor_type = None
-
-            if armor_type is not None: category = f"{armor_type} {category}"
-            text = item_pattern.search(text).group(2)
-
-            subcategory = armor_subtype(text, category)
-            try: 
-                if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
-            except: 
-                continue
-
-            if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
-            else: classes = None
-
-            if boe_pattern.search(text): bind = "Binds when equipped"
-            elif boa_pattern.search(text): bind = "Binds to account"
-            else: bind = "Binds when picked up"
-
-            # print(f"{item}", end = "")
-
-            item_ids, ilvls = zip(*sorted(zip(item_ids, ilvls), key=lambda x: x[1], reverse=True))
-            if ilvls[0] == ilvls[1] == ilvls[2]: difficulties = ["Normal", "Normal", "Normal"]
-            elif ilvls[0] > ilvls[1] == ilvls[2]: difficulties = ["Heroic", "Normal", "Normal"]
-            elif ilvls[0] == ilvls[1] > ilvls[2]: difficulties = ["Heroic", "Heroic", "Normal"]
-            else: difficulties = ["Heroic", "Normal", "LFR"]
-
-            # print(f" {item_ids} {ilvls} {difficulties}")
+            if len(item_ids) > 3: 
+                # Print difficulties and ilvls
+                print(f"Number of items: {len(item_ids)}")
+                for i, item_id in enumerate(item_ids):
+                    print(f"{item_id}: {difficulties[i]} -- {ilvls[i]}")
 
             for i, item_id in enumerate(item_ids):
                 all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{subcategory};{bind};{difficulties[i]}\n")

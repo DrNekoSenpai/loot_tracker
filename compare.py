@@ -52,7 +52,7 @@ def regular_keyboard(input_string):
 for ind,item in enumerate(loot): 
     if ind == 0: continue 
 
-    pattern_1 = re.compile(r"(\S+) \(\+\d+ \w+\) \(\+\d+ \w+\)")
+    pattern_1 = re.compile(r"(\S+) \(\+\d+ \w+\)")
     pattern_1_dis = re.compile(r"\_disenchanted")
     pattern_2 = re.compile(r"- (.*) \((.*)\) \((.*)\) -- received on [\*\*]{0,2}(\d{4}-\d{2}-\d{2})[\*\*]{0,2}")
     pattern_3 = re.compile(r"- (.*) \((.*)\) -- received on [\*\*]{0,2}(\d{4}-\d{2}-\d{2})[\*\*]{0,2}")

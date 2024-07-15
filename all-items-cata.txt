@@ -87,6 +87,7 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 58182;Bedrock Talisman;359;None;Trinket (Tank);Binds when picked up;Normal
 65053;Bell of Enraging Resonance;372;None;Trinket;Binds when picked up;Heroic
 59326;Bell of Enraging Resonance;359;None;Trinket;Binds when picked up;Normal
+65053;Bell of Enraging Resonance;372;None;Trinket;Binds when picked up;Normal
 65040;Belt of Absolute Zero;372;None;Plate Waist (Damage);Binds when picked up;Heroic
 59342;Belt of Absolute Zero;359;None;Plate Waist (Damage);Binds when picked up;Normal
 65034;Belt of Arcane Storms;372;None;Cloth Waist (Intellect);Binds when picked up;Heroic
@@ -554,6 +555,10 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 73672;Cataclysmic Gladiator's Ringmail Leggings;403;Shaman;Mail Legs (PvP);Binds when picked up;Normal
 73513;Cataclysmic Gladiator's Ringmail Spaulders;403;Shaman;Mail Shoulder (PvP);Binds when picked up;Normal
 73671;Cataclysmic Gladiator's Ringmail Spaulders;403;Shaman;Mail Shoulder (PvP);Binds when picked up;Normal
+73521;Cataclysmic Gladiator's Sabatons of Alacrity;403;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Normal
+73587;Cataclysmic Gladiator's Sabatons of Alacrity;403;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Normal
+73677;Cataclysmic Gladiator's Sabatons of Alacrity;403;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Normal
+73719;Cataclysmic Gladiator's Sabatons of Alacrity;403;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Normal
 73588;Cataclysmic Gladiator's Sabatons of Cruelty;403;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Normal
 73720;Cataclysmic Gladiator's Sabatons of Cruelty;403;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Normal
 73520;Cataclysmic Gladiator's Sabatons of Meditation;403;Shaman;Mail Feet (PvP);Binds when picked up;Normal
@@ -1149,10 +1154,10 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 78648;Flashing Bracers of Warmth;384;None;Plate Wrist (Healing);Binds when picked up;LFR
 52259;Flashing Chimera's Eye;85;None;Red Gems (Tank);Binds when picked up;Normal
 71882;Flashing Queen's Garnet;85;None;Red Gems (Tank);Binds when picked up;Normal
-71011;Flickering Cowl;378;None;Cloth Head (Intellect);Binds when picked up;Normal
+71011;Flickering Cowl;378;None;Cloth Head (Random);Binds when picked up;Normal
 70917;Flickering Handguards;378;None;Plate Hands (Random);Binds when picked up;Normal
-71025;Flickering Shoulderpads;378;None;Leather Shoulder (Intellect);Binds when picked up;Normal
-71030;Flickering Shoulders;378;None;Mail Shoulder (Agility);Binds when picked up;Normal
+71025;Flickering Shoulderpads;378;None;Leather Shoulder (Random);Binds when picked up;Normal
+71030;Flickering Shoulders;378;None;Mail Shoulder (Random);Binds when picked up;Normal
 70735;Flickering Wristbands;378;None;Leather Wrist (Random);Binds when picked up;Normal
 58190;Floating Web;359;None;Back (Melee Strength);Binds when picked up;Normal
 71348;Flowform Choker;378;None;Neck (Intellect);Binds when picked up;Normal
@@ -1177,10 +1182,10 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 77160;Fungus-Born Gloves;397;None;Leather Hands (Healing);Binds when picked up;Normal
 78604;Fungus-Born Gloves;384;None;Leather Hands (Healing);Binds when picked up;LFR
 59461;Fury of Angerforge;359;None;Trinket (Strength);Binds when equipped;Normal
-65374;Gale Rouser Belt;372;None;Leather Waist (Intellect);Binds when picked up;Heroic
-63497;Gale Rouser Belt;359;None;Leather Waist (Intellect);Binds when picked up;Normal
-65384;Gale Rouser Leggings;372;None;Leather Legs (Intellect);Binds when picked up;Heroic
-63506;Gale Rouser Leggings;359;None;Leather Legs (Intellect);Binds when picked up;Normal
+65374;Gale Rouser Belt;372;None;Leather Waist (Random);Binds when picked up;Heroic
+63497;Gale Rouser Belt;359;None;Leather Waist (Random);Binds when picked up;Normal
+65384;Gale Rouser Leggings;372;None;Leather Legs (Random);Binds when picked up;Heroic
+63506;Gale Rouser Leggings;359;None;Leather Legs (Random);Binds when picked up;Normal
 69842;Garr's Reinforced Girdle of Memories;359;None;Plate Waist (Strength);Binds when picked up;Normal
 71312;Gatecrasher;378;None;One-Handed Axes (Melee Agility);Binds when picked up;Normal
 71340;Gatekeeper's Embrace;378;None;Mail Chest (Healing);Binds when picked up;Normal
@@ -1620,10 +1625,10 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 78552;Lightning Spirit in a Bottle;410;None;Relic (Healing);Binds when picked up;Heroic
 77083;Lightning Spirit in a Bottle;397;None;Relic (Healing);Binds when picked up;Normal
 78631;Lightning Spirit in a Bottle;384;None;Relic (Healing);Binds when picked up;LFR
-65377;Lightning Well Belt;372;None;Mail Waist (Intellect);Binds when picked up;Heroic
-63496;Lightning Well Belt;359;None;Mail Waist (Intellect);Binds when picked up;Normal
-65386;Lightning Well Legguards;372;None;Mail Legs (Intellect);Binds when picked up;Heroic
-63505;Lightning Well Legguards;359;None;Mail Legs (Intellect);Binds when picked up;Normal
+65377;Lightning Well Belt;372;None;Mail Waist (Random);Binds when picked up;Heroic
+63496;Lightning Well Belt;359;None;Mail Waist (Random);Binds when picked up;Normal
+65386;Lightning Well Legguards;372;None;Mail Legs (Random);Binds when picked up;Heroic
+63505;Lightning Well Legguards;359;None;Mail Legs (Random);Binds when picked up;Normal
 65205;Lightning-Charged Gloves;372;Hunter;Mail Hands (Agility);Binds when picked up;Heroic
 60307;Lightning-Charged Gloves;359;Hunter;Mail Hands (Agility);Binds when picked up;Normal
 65206;Lightning-Charged Headguard;372;Hunter;Mail Head (Agility);Binds when picked up;Heroic
@@ -1690,6 +1695,12 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 71343;Mantle of Closed Doors;378;None;Cloth Shoulder (Intellect);Binds when picked up;Normal
 71267;Mantle of Desire;365;None;Back (Intellect);Binds when picked up;Normal
 71268;Mantle of Doubt;365;None;Back (Damage);Binds when picked up;Normal
+78747;Mantle of Dying Light;410;Priest;Cloth Shoulder (Intellect);Binds when picked up;Heroic
+78750;Mantle of Dying Light;410;Priest;Cloth Shoulder (Intellect);Binds when picked up;Heroic
+76344;Mantle of Dying Light;397;Priest;Cloth Shoulder (Intellect);Binds when picked up;Normal
+76361;Mantle of Dying Light;397;Priest;Cloth Shoulder (Intellect);Binds when picked up;Normal
+78842;Mantle of Dying Light;384;Priest;Cloth Shoulder (Intellect);Binds when picked up;LFR
+78845;Mantle of Dying Light;384;Priest;Cloth Shoulder (Intellect);Binds when picked up;LFR
 72865;Mantle of False Virtue;378;None;Cloth Shoulder (Caster);Binds when picked up;Normal
 71269;Mantle of Fury;365;None;Back (Strength);Binds when picked up;Normal
 65043;Mantle of Nefarius;372;None;Cloth Shoulder (Healing);Binds when picked up;Heroic
@@ -2299,6 +2310,12 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 77263;Robe of Glowing Stone;397;Priest;Cloth Chest (Healing);Binds when picked up;Normal
 78380;Robe of Glowing Stone;384;Priest;Cloth Chest (Healing);Binds when picked up;LFR
 69598;Robes of Dissention;353;None;Cloth Chest (Intellect);Binds when picked up;Normal
+78728;Robes of Dying Light;410;Priest;Cloth Chest (Healing);Binds when picked up;Heroic
+78731;Robes of Dying Light;410;Priest;Cloth Chest (Healing);Binds when picked up;Heroic
+76345;Robes of Dying Light;397;Priest;Cloth Chest (Healing);Binds when picked up;Normal
+76360;Robes of Dying Light;397;Priest;Cloth Chest (Healing);Binds when picked up;Normal
+78823;Robes of Dying Light;384;Priest;Cloth Chest (Healing);Binds when picked up;LFR
+78826;Robes of Dying Light;384;Priest;Cloth Chest (Healing);Binds when picked up;LFR
 72826;Robes of Fate;378;None;Cloth Chest (Caster);Binds when picked up;Normal
 78555;Robes of Searing Shadow;410;None;Cloth Chest (Caster);Binds when picked up;Heroic
 77122;Robes of Searing Shadow;397;None;Cloth Chest (Caster);Binds when picked up;Normal
@@ -2574,6 +2591,18 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 70409;Ruthless Gladiator's Mark of Cruelty;384;None;Trinket;Binds when picked up;Normal
 70411;Ruthless Gladiator's Mark of Meditation;384;None;Trinket;Binds when picked up;Normal
 70410;Ruthless Gladiator's Mark of Tenacity;384;None;Trinket (PvP);Binds when picked up;Normal
+72410;Ruthless Gladiator's Medallion of Cruelty;390;None;Trinket;Binds when picked up;Heroic
+72411;Ruthless Gladiator's Medallion of Cruelty;390;None;Trinket;Binds when picked up;Heroic
+70390;Ruthless Gladiator's Medallion of Cruelty;384;None;Trinket;Binds when picked up;Normal
+70393;Ruthless Gladiator's Medallion of Cruelty;384;None;Trinket;Binds when picked up;Normal
+72414;Ruthless Gladiator's Medallion of Meditation;390;None;Trinket;Binds when picked up;Heroic
+72415;Ruthless Gladiator's Medallion of Meditation;390;None;Trinket;Binds when picked up;Heroic
+70391;Ruthless Gladiator's Medallion of Meditation;384;None;Trinket;Binds when picked up;Normal
+70394;Ruthless Gladiator's Medallion of Meditation;384;None;Trinket;Binds when picked up;Normal
+72412;Ruthless Gladiator's Medallion of Tenacity;390;None;Trinket (PvP);Binds when picked up;Heroic
+72413;Ruthless Gladiator's Medallion of Tenacity;390;None;Trinket (PvP);Binds when picked up;Heroic
+70392;Ruthless Gladiator's Medallion of Tenacity;384;None;Trinket (PvP);Binds when picked up;Normal
+70395;Ruthless Gladiator's Medallion of Tenacity;384;None;Trinket (PvP);Binds when picked up;Normal
 72400;Ruthless Gladiator's Mooncloth Gloves;390;Priest;Cloth Hands (PvP);Binds when picked up;Heroic
 70304;Ruthless Gladiator's Mooncloth Gloves;384;Priest;Cloth Hands (PvP);Binds when picked up;Normal
 70453;Ruthless Gladiator's Mooncloth Gloves;384;Priest;Cloth Hands (PvP);Binds when picked up;Normal
@@ -2664,6 +2693,12 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 72436;Ruthless Gladiator's Ringmail Spaulders;390;Shaman;Mail Shoulder (PvP);Binds when picked up;Heroic
 70268;Ruthless Gladiator's Ringmail Spaulders;384;Shaman;Mail Shoulder (PvP);Binds when picked up;Normal
 70464;Ruthless Gladiator's Ringmail Spaulders;384;Shaman;Mail Shoulder (PvP);Binds when picked up;Normal
+72365;Ruthless Gladiator's Sabatons of Alacrity;390;Shaman;Mail Feet (PvP);Binds when picked up;Heroic
+72428;Ruthless Gladiator's Sabatons of Alacrity;390;Shaman;Mail Feet (PvP);Binds when picked up;Heroic
+70337;Ruthless Gladiator's Sabatons of Alacrity;384;Shaman;Mail Feet (PvP);Binds when picked up;Normal
+70341;Ruthless Gladiator's Sabatons of Alacrity;384;Shaman;Mail Feet (PvP);Binds when picked up;Normal
+70501;Ruthless Gladiator's Sabatons of Alacrity;384;Shaman;Mail Feet (PvP);Binds when picked up;Normal
+70508;Ruthless Gladiator's Sabatons of Alacrity;384;Shaman;Mail Feet (PvP);Binds when picked up;Normal
 72364;Ruthless Gladiator's Sabatons of Cruelty;390;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Heroic
 70335;Ruthless Gladiator's Sabatons of Cruelty;384;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Normal
 70500;Ruthless Gladiator's Sabatons of Cruelty;384;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Normal
@@ -2905,10 +2940,10 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 69588;Skullcrusher Warboots;353;None;Plate Feet (Damage);Binds when picked up;Normal
 69582;Skullpiercer Pauldrons;353;None;Plate Shoulder (Melee Strength);Binds when picked up;Normal
 71014;Skullstealer Greataxe;378;None;Two-Handed Axes (Strength);Binds when picked up;Normal
-65369;Sky Strider Belt;372;None;Plate Waist (Strength);Binds when picked up;Heroic
-63490;Sky Strider Belt;359;None;Plate Waist (Strength);Binds when picked up;Normal
-65379;Sky Strider Greaves;372;None;Plate Legs (Strength);Binds when picked up;Heroic
-63500;Sky Strider Greaves;359;None;Plate Legs (Strength);Binds when picked up;Normal
+65369;Sky Strider Belt;372;None;Plate Waist (Random);Binds when picked up;Heroic
+63490;Sky Strider Belt;359;None;Plate Waist (Random);Binds when picked up;Normal
+65379;Sky Strider Greaves;372;None;Plate Legs (Random);Binds when picked up;Heroic
+63500;Sky Strider Greaves;359;None;Plate Legs (Random);Binds when picked up;Normal
 71228;Sleek Flamewrath Cloak;378;None;Back (Damage);Binds when picked up;Normal
 58486;Slippers of Moving Waters;359;None;Cloth Feet (Healing);Binds when picked up;Normal
 72836;Slippers of Wizardry;378;None;Cloth Feet (Caster);Binds when picked up;Normal
@@ -2922,10 +2957,10 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 71211;Soothing Brimstone Circle;378;None;Finger (Healing);Binds when picked up;Normal
 65103;Soul Blade;372;None;One-Handed Swords (Damage);Binds when picked up;Heroic
 59521;Soul Blade;359;None;One-Handed Swords (Damage);Binds when picked up;Normal
-65376;Soul Breath Belt;372;None;Cloth Waist (Intellect);Binds when picked up;Heroic
-63498;Soul Breath Belt;359;None;Cloth Waist (Intellect);Binds when picked up;Normal
-65383;Soul Breath Leggings;372;None;Cloth Legs (Intellect);Binds when picked up;Heroic
-63507;Soul Breath Leggings;359;None;Cloth Legs (Intellect);Binds when picked up;Normal
+65376;Soul Breath Belt;372;None;Cloth Waist (Random);Binds when picked up;Heroic
+63498;Soul Breath Belt;359;None;Cloth Waist (Random);Binds when picked up;Normal
+65383;Soul Breath Leggings;372;None;Cloth Legs (Random);Binds when picked up;Heroic
+63507;Soul Breath Leggings;359;None;Cloth Legs (Random);Binds when picked up;Normal
 58183;Soul Casket;359;None;Trinket;Binds when picked up;Normal
 69571;Soul Drain Signet;353;None;Finger (Healing);Binds when picked up;Normal
 71991;Soul Redeemer Bracers;397;None;Plate Wrist (Healing);Binds when picked up;Normal
@@ -3023,10 +3058,10 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 64489;Staff of Sorcerer-Thane Thaurissan;359;None;Staves (Intellect);Binds when picked up;Normal
 72863;Stalk of Corruption;378;None;Staves (Intellect);Binds when picked up;Normal
 71846;Stalwart Lava Coral;85;None;Orange Gems (Tank);Binds when picked up;Normal
-65368;Star Chaser Belt;372;None;Mail Waist (Agility);Binds when picked up;Heroic
-63492;Star Chaser Belt;359;None;Mail Waist (Agility);Binds when picked up;Normal
-65378;Star Chaser Legguards;372;None;Mail Legs (Agility);Binds when picked up;Heroic
-63502;Star Chaser Legguards;359;None;Mail Legs (Agility);Binds when picked up;Normal
+65368;Star Chaser Belt;372;None;Mail Waist (Random);Binds when picked up;Heroic
+63492;Star Chaser Belt;359;None;Mail Waist (Random);Binds when picked up;Normal
+65378;Star Chaser Legguards;372;None;Mail Legs (Random);Binds when picked up;Heroic
+63502;Star Chaser Legguards;359;None;Mail Legs (Random);Binds when picked up;Normal
 77993;Starcatcher Compass;410;None;Trinket (Agility);Binds when picked up;Heroic
 77202;Starcatcher Compass;397;None;Trinket (Agility);Binds when picked up;Normal
 77973;Starcatcher Compass;384;None;Trinket (Agility);Binds when picked up;LFR
@@ -3074,6 +3109,12 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 60289;Stormrider's Spaulders;359;Druid;Leather Shoulder (Agility);Binds when picked up;Normal
 65202;Stormrider's Vestment;372;Druid;Leather Chest (Intellect);Binds when picked up;Heroic
 60281;Stormrider's Vestment;359;Druid;Leather Chest (Intellect);Binds when picked up;Normal
+68130;Stormwake, the Tempest's Reach;372;None;One-Handed Swords (Random);Binds when picked up;Heroic
+68131;Stormwake, the Tempest's Reach;372;None;One-Handed Swords (Random);Binds when picked up;Heroic
+68132;Stormwake, the Tempest's Reach;372;None;One-Handed Swords (Random);Binds when picked up;Heroic
+68127;Stormwake, the Tempest's Reach;359;None;One-Handed Swords (Random);Binds when picked up;Normal
+68128;Stormwake, the Tempest's Reach;359;None;One-Handed Swords (Random);Binds when picked up;Normal
+68129;Stormwake, the Tempest's Reach;359;None;One-Handed Swords (Random);Binds when picked up;Normal
 52263;Stormy Chimera's Eye;85;None;Blue Gems;Binds when picked up;Normal
 71818;Stormy Deepholm Iolite;85;None;Blue Gems;Binds when picked up;Normal
 77140;Stormy Deepholm Iolite;85;None;Blue Gems;Binds when picked up;Normal
@@ -3100,10 +3141,10 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 69594;T'wansi's Handwraps;353;None;Leather Hands (Healing);Binds when picked up;Normal
 69553;Talonguard Band;353;None;Finger (Melee Strength);Binds when picked up;Normal
 56004;Talons of the Storm Crow;232;None;Polearms (Agility);Binds when picked up;Normal
-65375;Tempest Keeper Belt;372;None;Plate Waist (Intellect);Binds when picked up;Heroic
-63495;Tempest Keeper Belt;359;None;Plate Waist (Intellect);Binds when picked up;Normal
-65385;Tempest Keeper Leggings;372;None;Plate Legs (Intellect);Binds when picked up;Heroic
-63504;Tempest Keeper Leggings;359;None;Plate Legs (Intellect);Binds when picked up;Normal
+65375;Tempest Keeper Belt;372;None;Plate Waist (Random);Binds when picked up;Heroic
+63495;Tempest Keeper Belt;359;None;Plate Waist (Random);Binds when picked up;Normal
+65385;Tempest Keeper Leggings;372;None;Plate Legs (Random);Binds when picked up;Heroic
+63504;Tempest Keeper Leggings;359;None;Plate Legs (Random);Binds when picked up;Normal
 72821;Temporal Pauldrons;378;None;Plate Shoulder (Damage);Binds when picked up;Normal
 78567;Tentacular Belt;410;None;Cloth Waist (Intellect);Binds when picked up;Heroic
 77179;Tentacular Belt;397;None;Cloth Waist (Intellect);Binds when picked up;Normal
@@ -3314,6 +3355,12 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 60648;Vicious Gladiator's Band of Dominance;365;None;Finger (PvP);Binds when picked up;Normal
 70522;Vicious Gladiator's Band of Meditation;371;Paladin, Priest, Shaman, Druid;Finger (PvP);Binds when picked up;Heroic
 60649;Vicious Gladiator's Band of Meditation;365;Paladin, Priest, Shaman, Druid;Finger (PvP);Binds when picked up;Normal
+60652;Vicious Gladiator's Band of Triumph;365;None;Finger (PvP);Binds when picked up;Normal
+60653;Vicious Gladiator's Band of Triumph;365;None;Finger (PvP);Binds when picked up;Normal
+60654;Vicious Gladiator's Band of Triumph;365;None;Finger (PvP);Binds when picked up;Normal
+60655;Vicious Gladiator's Band of Triumph;365;None;Finger (PvP);Binds when picked up;Normal
+60656;Vicious Gladiator's Band of Triumph;365;None;Finger (PvP);Binds when picked up;Normal
+60657;Vicious Gladiator's Band of Triumph;365;None;Finger (PvP);Binds when picked up;Normal
 67476;Vicious Gladiator's Barrier;372;None;Off Hand (PvP);Binds when picked up;Heroic
 61360;Vicious Gladiator's Barrier;359;None;Off Hand (PvP);Binds when picked up;Normal
 67464;Vicious Gladiator's Baton of Light;372;None;Wands (PvP);Binds when picked up;Heroic
@@ -3599,8 +3646,20 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 60802;Vicious Gladiator's Medallion of Accuracy;365;None;Trinket (Damage);Binds when picked up;Normal
 60796;Vicious Gladiator's Medallion of Alacrity;365;None;Trinket;Binds when picked up;Normal
 60803;Vicious Gladiator's Medallion of Alacrity;365;None;Trinket;Binds when picked up;Normal
+70602;Vicious Gladiator's Medallion of Cruelty;371;None;Trinket;Binds when picked up;Heroic
+70603;Vicious Gladiator's Medallion of Cruelty;371;None;Trinket;Binds when picked up;Heroic
+60794;Vicious Gladiator's Medallion of Cruelty;365;None;Trinket;Binds when picked up;Normal
+60801;Vicious Gladiator's Medallion of Cruelty;365;None;Trinket;Binds when picked up;Normal
+70604;Vicious Gladiator's Medallion of Meditation;371;None;Trinket;Binds when picked up;Heroic
+70605;Vicious Gladiator's Medallion of Meditation;371;None;Trinket;Binds when picked up;Heroic
+60799;Vicious Gladiator's Medallion of Meditation;365;None;Trinket;Binds when picked up;Normal
+60806;Vicious Gladiator's Medallion of Meditation;365;None;Trinket;Binds when picked up;Normal
 60797;Vicious Gladiator's Medallion of Prowess;365;None;Trinket;Binds when picked up;Normal
 60804;Vicious Gladiator's Medallion of Prowess;365;None;Trinket;Binds when picked up;Normal
+70606;Vicious Gladiator's Medallion of Tenacity;371;None;Trinket (PvP);Binds when picked up;Heroic
+70607;Vicious Gladiator's Medallion of Tenacity;371;None;Trinket (PvP);Binds when picked up;Heroic
+60800;Vicious Gladiator's Medallion of Tenacity;365;None;Trinket (PvP);Binds when picked up;Normal
+60807;Vicious Gladiator's Medallion of Tenacity;365;None;Trinket (PvP);Binds when picked up;Normal
 70608;Vicious Gladiator's Mooncloth Gloves;371;Priest;Cloth Hands (PvP);Binds when picked up;Heroic
 60468;Vicious Gladiator's Mooncloth Gloves;365;Priest;Cloth Hands (PvP);Binds when picked up;Normal
 65556;Vicious Gladiator's Mooncloth Gloves;365;Priest;Cloth Hands (PvP);Binds when picked up;Normal
@@ -3707,6 +3766,12 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 70636;Vicious Gladiator's Ringmail Spaulders;371;Shaman;Mail Shoulder (PvP);Binds when picked up;Heroic
 60432;Vicious Gladiator's Ringmail Spaulders;365;Shaman;Mail Shoulder (PvP);Binds when picked up;Normal
 65567;Vicious Gladiator's Ringmail Spaulders;365;Shaman;Mail Shoulder (PvP);Binds when picked up;Normal
+70639;Vicious Gladiator's Sabatons of Alacrity;371;Shaman;Mail Feet (PvP);Binds when picked up;Heroic
+70640;Vicious Gladiator's Sabatons of Alacrity;371;Shaman;Mail Feet (PvP);Binds when picked up;Heroic
+60557;Vicious Gladiator's Sabatons of Alacrity;365;Shaman;Mail Feet (PvP);Binds when picked up;Normal
+60567;Vicious Gladiator's Sabatons of Alacrity;365;Shaman;Mail Feet (PvP);Binds when picked up;Normal
+65604;Vicious Gladiator's Sabatons of Alacrity;365;Shaman;Mail Feet (PvP);Binds when picked up;Normal
+65611;Vicious Gladiator's Sabatons of Alacrity;365;Shaman;Mail Feet (PvP);Binds when picked up;Normal
 70641;Vicious Gladiator's Sabatons of Cruelty;371;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Heroic
 60554;Vicious Gladiator's Sabatons of Cruelty;365;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Normal
 65603;Vicious Gladiator's Sabatons of Cruelty;365;Hunter, Shaman;Mail Feet (PvP);Binds when picked up;Normal
@@ -3896,10 +3961,10 @@ ID;Item;Item Level;Classes;Category;Bind;Version
 60302;Wind Dancer's Spaulders;359;Rogue;Leather Shoulder (Agility);Binds when picked up;Normal
 65239;Wind Dancer's Tunic;372;Rogue;Leather Chest (Melee Agility);Binds when picked up;Heroic
 60301;Wind Dancer's Tunic;359;Rogue;Leather Chest (Melee Agility);Binds when picked up;Normal
-65371;Wind Stalker Belt;372;None;Leather Waist (Agility);Binds when picked up;Heroic
-63493;Wind Stalker Belt;359;None;Leather Waist (Agility);Binds when picked up;Normal
-65381;Wind Stalker Leggings;372;None;Leather Legs (Agility);Binds when picked up;Heroic
-63503;Wind Stalker Leggings;359;None;Leather Legs (Agility);Binds when picked up;Normal
+65371;Wind Stalker Belt;372;None;Leather Waist (Random);Binds when picked up;Heroic
+63493;Wind Stalker Belt;359;None;Leather Waist (Random);Binds when picked up;Normal
+65381;Wind Stalker Leggings;372;None;Leather Legs (Random);Binds when picked up;Heroic
+63503;Wind Stalker Leggings;359;None;Leather Legs (Random);Binds when picked up;Normal
 72810;Windrunner's Bow;378;None;Bows (Agility);Binds when picked up;Normal
 78559;Windslicer Boomerang;410;None;None (Agility);Binds when picked up;Heroic
 77086;Windslicer Boomerang;397;None;None (Agility);Binds when picked up;Normal

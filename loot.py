@@ -209,6 +209,17 @@ with open("known-players.txt", "r", encoding="utf-8") as f:
     known_aliases = {x[0]: x[1] for x in known_players}
     known_players = {x[0]: x[2] for x in known_players}
 
+    # Check if these players are in the list of players. If not, add them.
+    for player in known_players.keys():
+        found = False
+        for p in players:
+            if p.name == player:
+                found = True
+                break
+
+        if not found:
+            players.append(Player(player, known_aliases[player], known_players[player]))
+
 def print_write(string, file=None):
     print(string)
     if file:
@@ -266,6 +277,7 @@ def award_loot(players):
     if "Random" in item_match.category: 
         prefix = input("Item subcategory is random. What's the prefix? ")
         item_match.category = match_suffix(prefix, item_match.category)
+        item_match.name = f"{item_match.name} of the {prefix}"
 
     slot_category = match_category(item_match.category)
     item_match.category = item_match.category.replace(" (Random)", "")
@@ -274,27 +286,24 @@ def award_loot(players):
         # Skip this person if they're not here.
         if p._attendance == False: continue
 
-    if not slot_category == "ETC": 
-        print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
-        # If this is a class-restricted item... announce that. 
-        if item_match.classes != "None": pass
+    print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
 
-        ready = input("Ready to announce? (y/n): ").lower()
-        if ready == "y": 
-            pyautogui.moveTo(1920/2, 1080/2)
-            pyautogui.click()
-            time.sleep(0.25)
+    ready = input("Ready to announce? (y/n): ").lower()
+    if ready == "y": 
+        pyautogui.moveTo(1920/2, 1080/2)
+        pyautogui.click()
+        time.sleep(0.25)
 
-            pyautogui.write("/")
-            time.sleep(0.1)
-            pyautogui.write("rw")
-            time.sleep(0.1)
-            pyautogui.press("space")
-            time.sleep(0.1)
-            pyautogui.write(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
-            time.sleep(0.1)
-            pyautogui.press("enter")
-            time.sleep(0.25)
+        pyautogui.write("/")
+        time.sleep(0.1)
+        pyautogui.write("rw")
+        time.sleep(0.1)
+        pyautogui.press("space")
+        time.sleep(0.1)
+        pyautogui.write(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
+        time.sleep(0.1)
+        pyautogui.press("enter")
+        time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -469,13 +478,7 @@ def export_history():
                 continue      
 
             if player.name != "_disenchanted":     
-                shards = []
                 num_items = []
-
-                # Shards are always in the ETC slot. 
-                for item in player._history["ETC"]:
-                    if item.item.name == "Shadowfrost Shard": 
-                        shards.append(item)
 
                 for slot in player._history:
                     if len(player._history[slot]) == 0: continue
@@ -493,25 +496,19 @@ def export_history():
                     for item in player._history[slot]: 
                         if item.note == "auto": continue
                         # print(item.item.name)
-                        if item.item.name == "Shadowfrost Shard" and not shards_written:
-                            # Find the item id, this is the key of the item in the dictionary
-                            for key, value in all_items.items():
-                                if value.name == item.item.name:
-                                    link = f"<https://www.wowhead.com/wotlk/item={key}>"
-                                    break
-                            file.write(f"  \- [{item.item.name} ({len(shards)}x)]({link})\n")
-                            shards_written = True
 
-                        elif not item.item.name == "Shadowfrost Shard": 
-                            # Find the item id, this is the key of the item in the dictionary
-                            for key, value in all_items.items():
-                                if value.name == item.item.name:
-                                    link = f"<https://www.wowhead.com/wotlk/item={key}>"
-                                    break
-                            if not "Mark of Sanctification" in item.item.name: 
-                                file.write(f"  \- [{item.item.name} ({item.item.ilvl})]({link}) ({item.roll}) ({item.date})\n")
-                            else: 
-                                file.write(f"  \- [{item.item.name}]({link}) ({item.roll}) ({item.date})\n")
+                        # Find the item id, this is the key of the item in the dictionary
+                        for key, value in all_items.items():
+                            if value.name == item.item.name:
+                                link = f"<https://www.wowhead.com/wotlk/item={key}>"
+                                break
+
+                        if not "Mark of Sanctification" in item.item.name: 
+                            file.write(f"  \- [{item.item.name} ({item.item.ilvl})]({link}) ({item.roll}) ({item.date})\n")
+
+                        else: 
+                            file.write(f"  \- [{item.item.name}]({link}) ({item.roll}) ({item.date})\n")
+
                 file.write("----------------------------------------\n")
 
 def export_loot(): 
@@ -563,7 +560,7 @@ def export_loot():
 
             for l in p._raid_log:
                 if l.roll == "MS":
-                    if "Mark of Sanctification" in l.item.name: 
+                    if re.match(r"(Conqueror|Protector|Vanquisher)", l.item.name):
                         f.write(f"- {l.item.name} (MS) -- received on")
                         date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                         f.write(f" {date_string}\n")
@@ -574,7 +571,7 @@ def export_loot():
 
             for l in p._raid_log:
                 if l.roll == "OS":
-                    if "Mark of Sanctification" in l.item.name: 
+                    if re.match(r"(Conqueror|Protector|Vanquisher)", l.item.name):
                         f.write(f"- {l.item.name} (OS) -- received on")
                         date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                         f.write(f" {date_string}\n")
@@ -827,7 +824,7 @@ def sudo_mode(players):
                 for p in players: 
                     # For each item in their loot log, write out;
                     # @ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY
-                    # 50274;Shadowfrost Shard;0;0;0;Pastiry;2024-04-24
+                    # 50274;Shadowfrost Shard;0;0;Pastiry;2024-04-24
                     for item in p._raid_log: 
                         item_id = 0
 
@@ -837,8 +834,7 @@ def sudo_mode(players):
                                 break
 
                         offspec = 1 if item.roll == "OS" else 0
-                        item_name = item.item.name.replace(" (N25)", "").replace(" (H25)", "")
-                        file.write(f"{item_id};{item_name};{item.item.ilvl};{offspec};{p.name};{item.date}\n")
+                        file.write(f"{item_id};{item.item.name};{item.item.ilvl};{offspec};{p.name};{item.date}\n")
 
         elif sel == "d": 
             with open("known-players.txt", "w", encoding="utf-8") as file: 

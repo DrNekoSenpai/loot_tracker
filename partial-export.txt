@@ -20,3 +20,8 @@
 59352;Flash Freeze Gauntlets;359;0;Phallipally;2024-07-10
 59353;Leggings of Consuming Flames;359;0;Ulvson;2024-07-10
 59352;Flash Freeze Gauntlets;359;0;_disenchanted;2024-07-10
+68127;Stormwake, the Tempest's Reach;359;0;Phallipally;2024-07-14
+69835;Planetary Drape;359;0;Gnoraa;2024-07-14
+69827;Mistral Pendant;359;0;Meemeemeemee;2024-07-14
+63682;Helm of the Forlorn Vanquisher;85;0;Angelofruin;2024-07-14
+63682;Helm of the Forlorn Vanquisher;85;0;Ryotto;2024-07-14

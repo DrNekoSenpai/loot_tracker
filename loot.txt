@@ -1,49 +1,62 @@
-Loot log for **Wednesday, 2024-07-10**:
+Loot log for Wednesday, 2024-07-10 and **Sunday, 2024-07-14**:
 
 Bzorder (+2 MS)
-- Stormrider's Gloves (359) (MS) -- received on **2024-07-10**
-- Scorched Wormling Vest (359) (MS) -- received on **2024-07-10**
+- Stormrider's Gloves (359) (MS) -- received on 2024-07-10
+- Scorched Wormling Vest (359) (MS) -- received on 2024-07-10
 
 Phallipally (+2 MS)
-- Security Measure Alpha (359) (MS) -- received on **2024-07-10**
-- Flash Freeze Gauntlets (359) (MS) -- received on **2024-07-10**
-- Akirus the Worm-Breaker (359) (OS) -- received on **2024-07-10**
+- Security Measure Alpha (359) (MS) -- received on 2024-07-10
+- Flash Freeze Gauntlets (359) (MS) -- received on 2024-07-10
+- Akirus the Worm-Breaker (359) (OS) -- received on 2024-07-10
 
 Swiftbladess (+2 MS)
-- Lightning Conductor Band (359) (MS) -- received on **2024-07-10**
-- Aberration's Leggings (359) (MS) -- received on **2024-07-10**
-- Vicious Gladiator's Leather Gloves (365) (OS) -- received on **2024-07-10**
+- Lightning Conductor Band (359) (MS) -- received on 2024-07-10
+- Aberration's Leggings (359) (MS) -- received on 2024-07-10
+- Vicious Gladiator's Leather Gloves (365) (OS) -- received on 2024-07-10
 
 Chunkofrock (+1 MS)
-- Incineratus (359) (MS) -- received on **2024-07-10**
+- Incineratus (359) (MS) -- received on 2024-07-10
+
+Gnoraa (+1 MS)
+- Planetary Drape (359) (MS) -- received on **2024-07-14**
+- X-Tron Duct Tape (359) (OS) -- received on 2024-07-10
 
 Gnoya (+1 MS)
-- Mercurial Handwraps (359) (MS) -- received on **2024-07-10**
+- Mercurial Handwraps (359) (MS) -- received on 2024-07-10
 
 Halibutfilet (+1 MS)
-- Organic Lifeform Inverter (359) (MS) -- received on **2024-07-10**
+- Organic Lifeform Inverter (359) (MS) -- received on 2024-07-10
+
+Kairiz (+1 MS)
+- Mistral Pendant (359) (MS) -- received on **2024-07-14**
 
 Lorniras (+1 MS)
-- Security Measure Alpha (359) (MS) -- received on **2024-07-10**
+- Security Measure Alpha (359) (MS) -- received on 2024-07-10
+
+Meemeemeemee (+1 MS)
+- Star Chaser Belt (359) (MS) -- received on **2024-07-14**
 
 Onlyflowers (+1 MS)
-- Molten Tantrum Boots (359) (MS) -- received on **2024-07-10**
+- Molten Tantrum Boots (359) (MS) -- received on 2024-07-10
+
+Pasgghetti (+1 MS)
+- Planetary Band (359) (MS) -- received on **2024-07-14**
 
 Pastiry (+1 MS)
-- Belt of Absolute Zero (359) (MS) -- received on **2024-07-10**
+- Belt of Absolute Zero (359) (MS) -- received on 2024-07-10
 
 Snedcharos (+1 MS)
-- Lava Spine (359) (MS) -- received on **2024-07-10**
-- Magma Plated Handguards (359) (OS) -- received on **2024-07-10**
+- Lava Spine (359) (MS) -- received on 2024-07-10
+- Magma Plated Handguards (359) (OS) -- received on 2024-07-10
 
 Ulvson (+1 MS)
-- Leggings of Consuming Flames (359) (MS) -- received on **2024-07-10**
+- Leggings of Consuming Flames (359) (MS) -- received on 2024-07-10
 
 Angelofruin (+0 MS)
-- Vicious Gladiator's Silk Trousers (365) (OS) -- received on **2024-07-10**
+- Vicious Gladiator's Silk Trousers (365) (OS) -- received on 2024-07-10
 
-Gnoraa (+0 MS)
-- X-Tron Duct Tape (359) (OS) -- received on **2024-07-10**
+Ryotto (+0 MS)
+- Helm of the Forlorn Vanquisher (ETC) -- received on **2024-07-14**
 
 _disenchanted
 - Vicious Gladiator's Mooncloth Gloves

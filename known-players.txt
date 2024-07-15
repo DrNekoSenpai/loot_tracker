@@ -1,9 +1,8 @@
 Name,Alias,Class
 Angelofruin;Angelofruin;Mage
 Axsel;Axsel;Warlock
+Bunniful;Bunniful;Druid
 Bzorder;Bzorder;Druid
-Cageymagey;Cageymagey;Mage
-Chainmale;Chainmale;Paladin
 Chunkofrock;Chunkofrock;Shaman
 Elisesolis;Elisesolis;Paladin
 Gnoraa;Gnoraa;Warlock
@@ -21,9 +20,12 @@ Pasgghetti;Pasgghetti;Mage
 Pastiry;Pastiry;Warrior
 Phallipally;Phallipally;Paladin
 Ryotto;Ryotto;Death Knight
-Sighanama;Sighanama;Hunter
+Shetknight;Shetknight;Death Knight
 Snedcharos;Snedcharos;Death Knight
 Swiftbladess;Swiftbladess;Rogue
-Tinyraider;Tinyraider;Mage
 Ulvson;Ulvson;Druid
 Vanthulhu;Vanthulhu;Priest
+Cageymagey;Cageymagey;Mage
+Chainmale;Chainmale;Paladin
+Sighanama;Sighanama;Hunter
+Tinyraider;Tinyraider;Mage
