@@ -3,6 +3,8 @@ Angelofruin;Angelofruin;Mage
 Axsel;Axsel;Warlock
 Bunniful;Bunniful;Druid
 Bzorder;Bzorder;Druid
+Cageymagey;Cageymagey;Mage
+Chainmale;Chainmale;Paladin
 Chunkofrock;Chunkofrock;Shaman
 Elisesolis;Elisesolis;Paladin
 Gnoraa;Gnoraa;Warlock
@@ -10,6 +12,7 @@ Gnoya;Gnoya;Priest
 Halibutfilet;Halibutfilet;Rogue
 Kairiz;Kairiz;Rogue
 Lorniras;Lorniras;Warlock
+Mamaplasma;Mamaplasma;Shaman
 Medullaa;Medullaa;Paladin
 Meemeemeemee;Meemeemeemee;Shaman
 Miatotems;Miatotems;Shaman
@@ -21,11 +24,10 @@ Pastiry;Pastiry;Warrior
 Phallipally;Phallipally;Paladin
 Ryotto;Ryotto;Death Knight
 Shetknight;Shetknight;Death Knight
+Sighanama;Sighanama;Hunter
 Snedcharos;Snedcharos;Death Knight
 Swiftbladess;Swiftbladess;Rogue
-Ulvson;Ulvson;Druid
-Vanthulhu;Vanthulhu;Priest
-Cageymagey;Cageymagey;Mage
-Chainmale;Chainmale;Paladin
-Sighanama;Sighanama;Hunter
 Tinyraider;Tinyraider;Mage
+Ulvson;Ulvson;Druid
+Vanarann;Vanarann;Druid
+Vanthulhu;Vanthulhu;Priest

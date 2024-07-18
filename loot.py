@@ -357,7 +357,14 @@ def award_loot(players):
 
     confirm = ""
 
-    if slot_category != "ETC": 
+    if "(PvP)" in item_match.category:
+        roll_type = "OS"
+
+        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
+        player._raid_log.append(log)
+        player._history[slot_category].append(log)
+
+    elif slot_category != "ETC": 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
         if off_spec == "y": roll_type = "OS"
         else: roll_type = "MS"

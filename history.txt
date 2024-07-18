@@ -1,0 +1,90 @@
+Angelofruin: 1 items.
+
+Main-Hand:
+  \- [Incineratus (359)](<https://www.wowhead.com/wotlk/item=65041>) (MS) (2024-07-17)
+----------------------------------------
+Bzorder: 2 items.
+
+Legs:
+  \- [Leggings of Consuming Flames (359)](<https://www.wowhead.com/wotlk/item=65030>) (OS) (2024-07-17)
+
+Trinket:
+  \- [Bell of Enraging Resonance (359)](<https://www.wowhead.com/wotlk/item=65053>) (MS) (2024-07-17)
+----------------------------------------
+Gnoraa: 1 items.
+
+Main-Hand:
+  \- [Incineratus (359)](<https://www.wowhead.com/wotlk/item=65041>) (MS) (2024-07-17)
+----------------------------------------
+Halibutfilet: 1 items.
+
+Wrist:
+  \- [Parasitic Bands (359)](<https://www.wowhead.com/wotlk/item=65050>) (MS) (2024-07-17)
+----------------------------------------
+Lorniras: 1 items.
+
+Wrist:
+  \- [Bracers of the Burningeye (359)](<https://www.wowhead.com/wotlk/item=65056>) (MS) (2024-07-17)
+----------------------------------------
+Mamaplasma: 3 items.
+
+Feet:
+  \- [Treads of Flawless Creation (359)](<https://www.wowhead.com/wotlk/item=65033>) (MS) (2024-07-17)
+
+Ring:
+  \- [Security Measure Alpha (359)](<https://www.wowhead.com/wotlk/item=65076>) (MS) (2024-07-17)
+
+Main-Hand:
+  \- [Incineratus (359)](<https://www.wowhead.com/wotlk/item=65041>) (MS) (2024-07-17)
+----------------------------------------
+Medullaa: 1 items.
+
+Head:
+  \- [Dragon Bone Warhelm (359)](<https://www.wowhead.com/wotlk/item=65038>) (MS) (2024-07-17)
+----------------------------------------
+Mobyle: 2 items.
+
+Chest:
+  \- [Tunic of Failed Experiments (359)](<https://www.wowhead.com/wotlk/item=65037>) (MS) (2024-07-17)
+
+Feet:
+  \- [Boots of Vertigo (359)](<https://www.wowhead.com/wotlk/item=65063>) (MS) (2024-07-17)
+----------------------------------------
+Onlyflowers: 1 items.
+
+Waist:
+  \- [Jumbotron Power Belt (359)](<https://www.wowhead.com/wotlk/item=65086>) (MS) (2024-07-17)
+----------------------------------------
+Pasgghetti: 1 items.
+
+Waist:
+  \- [Belt of Arcane Storms (359)](<https://www.wowhead.com/wotlk/item=65034>) (MS) (2024-07-17)
+----------------------------------------
+Pastiry: 1 items.
+
+Waist:
+  \- [Jumbotron Power Belt (359)](<https://www.wowhead.com/wotlk/item=65086>) (MS) (2024-07-17)
+----------------------------------------
+Snedcharos: 1 items.
+
+Main-Hand:
+  \- [Lava Spine (359)](<https://www.wowhead.com/wotlk/item=65047>) (MS) (2024-07-17)
+----------------------------------------
+Swiftbladess: 2 items.
+
+Chest:
+  \- [Sark of the Unwatched (359)](<https://www.wowhead.com/wotlk/item=65060>) (MS) (2024-07-17)
+
+Main-Hand:
+  \- [Organic Lifeform Inverter (359)](<https://www.wowhead.com/wotlk/item=65081>) (MS) (2024-07-17)
+----------------------------------------
+Ulvson: 1 items.
+
+Shoulder:
+  \- [Passive Resistor Spaulders (359)](<https://www.wowhead.com/wotlk/item=65078>) (MS) (2024-07-17)
+----------------------------------------
+Vanthulhu: 1 items.
+
+Wrist:
+  \- [Bracers of the Burningeye (359)](<https://www.wowhead.com/wotlk/item=65056>) (MS) (2024-07-17)
+----------------------------------------
