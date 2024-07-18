@@ -160,7 +160,7 @@ def match_suffix(item_name, base_type):
     elif "mountainbed" in item_name: return armor_subtype("Stamina, Strength, Mastery, Expertise", base_type)
     else: return "Unknown"
 
-with open("all-items-cata.txt", "r", encoding="utf-8") as cata_file: 
+with open("all-items-cata.scsv", "r", encoding="utf-8") as cata_file: 
     cata_items = cata_file.readlines()
     for ind,item in enumerate(cata_items):
         if ind == 0: continue # Header 
@@ -204,7 +204,7 @@ else:
     # This is used when no one rolls. 
     players.append(Player("_disenchanted", "_disenchanted", ""))
 
-with open("known-players.txt", "r", encoding="utf-8") as f:
+with open("known-players.scsv", "r", encoding="utf-8") as f:
     known_players = [line.strip().split(";") for ind,line in enumerate(f.readlines()) if ind > 0]
     known_aliases = {x[0]: x[1] for x in known_players}
     known_players = {x[0]: x[2] for x in known_players}
@@ -739,7 +739,7 @@ def sudo_mode(players):
             players.append(Player("_disenchanted", "_disenchanted", ""))
 
         elif sel == "b":
-            with open("gargul-export.txt", "r", encoding="utf-8") as file: 
+            with open("gargul-export.scsv", "r", encoding="utf-8") as file: 
                 lines = file.readlines()
 
             for p in players: 
@@ -844,7 +844,7 @@ def sudo_mode(players):
                         file.write(f"{item_id};{item.item.name};{item.item.ilvl};{offspec};{p.name};{item.date}\n")
 
         elif sel == "d": 
-            with open("known-players.txt", "w", encoding="utf-8") as file: 
+            with open("known-players.scsv", "w", encoding="utf-8") as file: 
                 file.write("Name,Alias,Class\n")
                 for p in players: 
                     if p.name == "_disenchanted": continue
@@ -855,7 +855,7 @@ def sudo_mode(players):
             return players
 
 def export_gargul(players):
-    with open("plusses.txt", "w", encoding="utf-8") as file: 
+    with open("plusses.csv", "w", encoding="utf-8") as file: 
         for p in players: 
             if p.name == "_disenchanted": continue
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")

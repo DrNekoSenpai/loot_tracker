@@ -31,13 +31,13 @@ else:
 # Sort cata_items and cata_ids based on the items; by item name ascending, then by ID ascending
 cata_items, cata_ids = zip(*sorted(zip(cata_items, cata_ids)))
 
-if not os.path.exists("all-items-cata.txt"):
-    with open("all-items-cata.txt", "w", encoding="utf-8") as all_items_file:
+if not os.path.exists("all-items-cata.scsv"):
+    with open("all-items-cata.scsv", "w", encoding="utf-8") as all_items_file:
         all_items_file.write("ID;Item;Item Level;Classes;Category;Bind;Version\n")
 
 else: 
     # Open the file and figure out where we left off
-    with open("all-items-cata.txt", "r", encoding="utf-8") as all_items_file:
+    with open("all-items-cata.scsv", "r", encoding="utf-8") as all_items_file:
         lines = all_items_file.readlines()
         last_item_id = lines[-1].split(";")[0]
         last_item_index = cata_ids.index(last_item_id)
@@ -93,7 +93,7 @@ boa_pattern = re.compile(r"<br>Binds to account<br>")
 unique_items = sorted(list(set(cata_items)))
 
 for item in tqdm(unique_items):
-    with open(f"all-items-cata.txt", "a", encoding="utf-8") as all_items_file:
+    with open(f"all-items-cata.scsv", "a", encoding="utf-8") as all_items_file:
         count = cata_items.count(item)
         if count == 1: 
             # Find the ID of the matching item
