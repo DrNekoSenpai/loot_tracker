@@ -1,4 +1,7 @@
-Angelofruin: 1 items.
+Angelofruin: 2 items.
+
+Trinket:
+  \- [Theralion's Mirror (359)](<https://www.wowhead.com/wotlk/item=65105>) (MS) (2024-07-31)
 
 Main-Hand:
   \- [Incineratus (359)](<https://www.wowhead.com/wotlk/item=65041>) (MS) (2024-07-17)
@@ -11,15 +14,36 @@ Legs:
 Trinket:
   \- [Bell of Enraging Resonance (359)](<https://www.wowhead.com/wotlk/item=65053>) (MS) (2024-07-17)
 ----------------------------------------
+Chunkofrock: 2 items.
+
+Ring:
+  \- [Signet of the Fifth Circle (359)](<https://www.wowhead.com/wotlk/item=65123>) (MS) (2024-07-31)
+
+Trinket:
+  \- [Heart of Ignacious (359)](<https://www.wowhead.com/wotlk/item=65110>) (OS) (2024-07-31)
+----------------------------------------
 Gnoraa: 1 items.
 
 Main-Hand:
   \- [Incineratus (359)](<https://www.wowhead.com/wotlk/item=65041>) (MS) (2024-07-17)
 ----------------------------------------
-Halibutfilet: 1 items.
+Gnoya: 1 items.
+
+Main-Hand:
+  \- [Twilight's Hammer (359)](<https://www.wowhead.com/wotlk/item=65090>) (MS) (2024-07-31)
+----------------------------------------
+Halibutfilet: 2 items.
+
+Head:
+  \- [Tsanga's Helm (359)](<https://www.wowhead.com/wotlk/item=65099>) (MS) (2024-07-31)
 
 Wrist:
   \- [Parasitic Bands (359)](<https://www.wowhead.com/wotlk/item=65050>) (MS) (2024-07-17)
+----------------------------------------
+Kairiz: 1 items.
+
+ETC:
+  \- [Mantle of the Forlorn Vanquisher (85)](<https://www.wowhead.com/wotlk/item=64314>) (ETC) (2024-07-31)
 ----------------------------------------
 Lorniras: 1 items.
 
@@ -42,41 +66,93 @@ Medullaa: 1 items.
 Head:
   \- [Dragon Bone Warhelm (359)](<https://www.wowhead.com/wotlk/item=65038>) (MS) (2024-07-17)
 ----------------------------------------
-Mobyle: 2 items.
+Meemeemeemee: 1 items.
+
+ETC:
+  \- [Mantle of the Forlorn Protector (85)](<https://www.wowhead.com/wotlk/item=64316>) (ETC) (2024-07-31)
+----------------------------------------
+Mobyle: 3 items.
 
 Chest:
   \- [Tunic of Failed Experiments (359)](<https://www.wowhead.com/wotlk/item=65037>) (MS) (2024-07-17)
 
 Feet:
   \- [Boots of Vertigo (359)](<https://www.wowhead.com/wotlk/item=65063>) (MS) (2024-07-17)
+
+Ranged:
+  \- [Dragonheart Piercer (359)](<https://www.wowhead.com/wotlk/item=65095>) (MS) (2024-07-31)
 ----------------------------------------
 Onlyflowers: 1 items.
 
 Waist:
   \- [Jumbotron Power Belt (359)](<https://www.wowhead.com/wotlk/item=65086>) (MS) (2024-07-17)
 ----------------------------------------
-Pasgghetti: 1 items.
+Pacratt: 2 items.
+
+Chest:
+  \- [Robes of the Burning Acolyte (359)](<https://www.wowhead.com/wotlk/item=65135>) (MS) (2024-07-31)
+
+Main-Hand:
+  \- [Blade of the Witching Hour (359)](<https://www.wowhead.com/wotlk/item=65091>) (MS) (2024-07-31)
+----------------------------------------
+Pasgghetti: 2 items.
 
 Waist:
   \- [Belt of Arcane Storms (359)](<https://www.wowhead.com/wotlk/item=65034>) (MS) (2024-07-17)
+
+Off-Hand:
+  \- [Book of Binding Will (359)](<https://www.wowhead.com/wotlk/item=65133>) (MS) (2024-07-31)
 ----------------------------------------
-Pastiry: 1 items.
+Pastiry: 2 items.
+
+Head:
+  \- [Helm of Maddening Whispers (359)](<https://www.wowhead.com/wotlk/item=65130>) (MS) (2024-07-31)
 
 Waist:
   \- [Jumbotron Power Belt (359)](<https://www.wowhead.com/wotlk/item=65086>) (MS) (2024-07-17)
 ----------------------------------------
-Snedcharos: 1 items.
+Ryotto: 1 items.
+
+Back:
+  \- [Glittering Epidermis (359)](<https://www.wowhead.com/wotlk/item=65117>) (MS) (2024-07-31)
+----------------------------------------
+Sighanama: 1 items.
+
+Two-Hand:
+  \- [Malevolence (359)](<https://www.wowhead.com/wotlk/item=65139>) (MS) (2024-07-31)
+----------------------------------------
+Snedcharos: 5 items.
+
+Head:
+  \- [Daybreaker Helm (359)](<https://www.wowhead.com/wotlk/item=65096>) (OS) (2024-07-31)
+
+Shoulder:
+  \- [Pauldrons of the Great Ettin (359)](<https://www.wowhead.com/wotlk/item=65142>) (OS) (2024-07-31)
+
+Trinket:
+  \- [Crushing Weight (359)](<https://www.wowhead.com/wotlk/item=65118>) (MS) (2024-07-31)
 
 Main-Hand:
   \- [Lava Spine (359)](<https://www.wowhead.com/wotlk/item=65047>) (MS) (2024-07-17)
+
+Two-Hand:
+  \- [Shalug'doom, the Axe of Unmaking (359)](<https://www.wowhead.com/wotlk/item=65145>) (OS) (2024-07-31)
 ----------------------------------------
-Swiftbladess: 2 items.
+Swiftbladess: 3 items.
 
 Chest:
   \- [Sark of the Unwatched (359)](<https://www.wowhead.com/wotlk/item=65060>) (MS) (2024-07-17)
 
+Waist:
+  \- [Dispersing Belt (359)](<https://www.wowhead.com/wotlk/item=65122>) (MS) (2024-07-31)
+
 Main-Hand:
   \- [Organic Lifeform Inverter (359)](<https://www.wowhead.com/wotlk/item=65081>) (MS) (2024-07-17)
+----------------------------------------
+Tinyraider: 1 items.
+
+ETC:
+  \- [Mantle of the Forlorn Vanquisher (85)](<https://www.wowhead.com/wotlk/item=64314>) (ETC) (2024-07-31)
 ----------------------------------------
 Ulvson: 1 items.
 
@@ -87,4 +163,9 @@ Vanthulhu: 1 items.
 
 Wrist:
   \- [Bracers of the Burningeye (359)](<https://www.wowhead.com/wotlk/item=65056>) (MS) (2024-07-17)
+----------------------------------------
+Zguis: 1 items.
+
+Ranged:
+  \- [Dragonheart Piercer (359)](<https://www.wowhead.com/wotlk/item=65095>) (MS) (2024-07-31)
 ----------------------------------------

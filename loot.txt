@@ -1,52 +1,59 @@
-Loot log for **Wednesday, 2024-07-17**:
+Loot log for **Wednesday, 2024-07-31**:
 
-Mamaplasma (+3 MS)
-- Incineratus (359) (MS) -- received on **2024-07-17**
-- Security Measure Alpha (359) (MS) -- received on **2024-07-17**
-- Treads of Flawless Creation (359) (MS) -- received on **2024-07-17**
-
-Mobyle (+2 MS)
-- Tunic of Failed Experiments (359) (MS) -- received on **2024-07-17**
-- Boots of Vertigo (359) (MS) -- received on **2024-07-17**
-
-Swiftbladess (+2 MS)
-- Organic Lifeform Inverter (359) (MS) -- received on **2024-07-17**
-- Sark of the Unwatched (359) (MS) -- received on **2024-07-17**
+Pacratt (+2 MS)
+- Robes of the Burning Acolyte (359) (MS) -- received on **2024-07-31**
+- Blade of the Witching Hour (359) (MS) -- received on **2024-07-31**
 
 Angelofruin (+1 MS)
-- Incineratus (359) (MS) -- received on **2024-07-17**
+- Theralion's Mirror (359) (MS) -- received on **2024-07-31**
 
-Bzorder (+1 MS)
-- Bell of Enraging Resonance (359) (MS) -- received on **2024-07-17**
-- Leggings of Consuming Flames (359) (OS) -- received on **2024-07-17**
+Chunkofrock (+1 MS)
+- Signet of the Fifth Circle (359) (MS) -- received on **2024-07-31**
+- Heart of Ignacious (359) (OS) -- received on **2024-07-31**
 
-Gnoraa (+1 MS)
-- Incineratus (359) (MS) -- received on **2024-07-17**
+Gnoya (+1 MS)
+- Twilight's Hammer (359) (MS) -- received on **2024-07-31**
 
 Halibutfilet (+1 MS)
-- Parasitic Bands (359) (MS) -- received on **2024-07-17**
+- Tsanga's Helm (359) (MS) -- received on **2024-07-31**
 
-Lorniras (+1 MS)
-- Bracers of the Burningeye (359) (MS) -- received on **2024-07-17**
+Kairiz (+1 MS)
+- Mantle of the Forlorn Vanquisher (85) (MS) -- received on **2024-07-31**
 
-Medullaa (+1 MS)
-- Dragon Bone Warhelm (359) (MS) -- received on **2024-07-17**
+Meemeemeemee (+1 MS)
+- Mantle of the Forlorn Protector (85) (MS) -- received on **2024-07-31**
 
-Onlyflowers (+1 MS)
-- Jumbotron Power Belt (359) (MS) -- received on **2024-07-17**
+Mobyle (+1 MS)
+- Dragonheart Piercer (359) (MS) -- received on **2024-07-31**
 
 Pasgghetti (+1 MS)
-- Belt of Arcane Storms (359) (MS) -- received on **2024-07-17**
+- Book of Binding Will (359) (MS) -- received on **2024-07-31**
 
 Pastiry (+1 MS)
-- Jumbotron Power Belt (359) (MS) -- received on **2024-07-17**
+- Helm of Maddening Whispers (359) (MS) -- received on **2024-07-31**
+
+Ryotto (+1 MS)
+- Glittering Epidermis (359) (MS) -- received on **2024-07-31**
+
+Sighanama (+1 MS)
+- Malevolence (359) (MS) -- received on **2024-07-31**
 
 Snedcharos (+1 MS)
-- Lava Spine (359) (MS) -- received on **2024-07-17**
+- Crushing Weight (359) (MS) -- received on **2024-07-31**
+- Pauldrons of the Great Ettin (359) (OS) -- received on **2024-07-31**
+- Daybreaker Helm (359) (OS) -- received on **2024-07-31**
+- Shalug'doom, the Axe of Unmaking (359) (OS) -- received on **2024-07-31**
 
-Ulvson (+1 MS)
-- Passive Resistor Spaulders (359) (MS) -- received on **2024-07-17**
+Swiftbladess (+1 MS)
+- Dispersing Belt (359) (MS) -- received on **2024-07-31**
 
-Vanthulhu (+1 MS)
-- Bracers of the Burningeye (359) (MS) -- received on **2024-07-17**
+Tinyraider (+1 MS)
+- Mantle of the Forlorn Vanquisher (85) (MS) -- received on **2024-07-31**
 
+Zguis (+1 MS)
+- Dragonheart Piercer (359) (MS) -- received on **2024-07-31**
+
+_disenchanted
+- Helm of the Nether Scion
+- Glaciated Helm
+- Membrane of C'Thun

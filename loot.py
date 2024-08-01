@@ -287,6 +287,7 @@ def award_loot(players):
         if p._attendance == False: continue
 
     print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
+    if item_match.classes != "": print(f"Classes: {', '.join(item_match.classes)}")
 
     ready = input("Ready to announce? (y/n): ").lower()
     if ready == "y": 
@@ -304,6 +305,18 @@ def award_loot(players):
         time.sleep(0.1)
         pyautogui.press("enter")
         time.sleep(0.25)
+
+        if item_match.classes != "":
+            pyautogui.write("/")
+            time.sleep(0.1)
+            pyautogui.write("rw")
+            time.sleep(0.1)
+            pyautogui.press("space")
+            time.sleep(0.1)
+            pyautogui.write(f"Classes: {', '.join(item_match.classes)}")
+            time.sleep(0.1)
+            pyautogui.press("enter")
+            time.sleep(0.25)
 
     print("")
     # We'll ask the user to input the name of the person who won the roll. 
@@ -355,7 +368,14 @@ def award_loot(players):
                 p._history[slot_category].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
                 return players
 
-    confirm = ""
+    exceptions = [
+        "Mantle of the Forlorn Protector",
+        "Mantle of the Forlorn Vanquisher",
+        "Mantle of the Forlorn Conqueror",
+        "Helm of the Forlorn Protector",
+        "Helm of the Forlorn Vanquisher",
+        "Helm of the Forlorn Conqueror",
+    ]
 
     if "(PvP)" in item_match.category:
         roll_type = "OS"
@@ -364,7 +384,7 @@ def award_loot(players):
         player._raid_log.append(log)
         player._history[slot_category].append(log)
 
-    elif slot_category != "ETC": 
+    elif slot_category != "ETC" or item_match.name in exceptions: 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
         if off_spec == "y": roll_type = "OS"
         else: roll_type = "MS"
@@ -376,7 +396,7 @@ def award_loot(players):
         player._history[slot_category].append(log)
 
     else: 
-        roll_type = "ETC"
+        roll_type = "OS"
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
 
@@ -826,7 +846,7 @@ def sudo_mode(players):
                         player._regular_plusses += 1
 
         elif sel == "c": 
-            with open(f"partial-export.txt", "w", encoding="utf-8") as file: 
+            with open(f"partial-export.scsv", "w", encoding="utf-8") as file: 
                 file.write("@ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY\n")
                 for p in players: 
                     # For each item in their loot log, write out;
