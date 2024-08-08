@@ -3,6 +3,7 @@ from typing import List, Union
 from datetime import datetime, timedelta
 from contextlib import redirect_stdout as redirect
 from io import StringIO
+from items import armor_subtype, match_category
 
 parser = argparse.ArgumentParser()
 
@@ -45,7 +46,6 @@ class Item:
         self.ilvl = ilvl
         self.classes = classes 
         self.category = category
-        self.bind_type = bind_type
         self.version = version
 
 class Log: 
@@ -97,45 +97,6 @@ class Player:
 
 all_items = {}
 
-def match_category(category:str): 
-    valid_categories = ["ETC", "Head", "Neck", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Ring", "Trinket", "Main-Hand", "Off-Hand", "Two-Hand", "Ranged", "Relic"]
-    
-    if re.match(r"(Cloth|Leather|Mail|Plate)", category, re.IGNORECASE): category = category.split(" ")[1]
-    elif re.match(r"(One-Hand|Daggers|Fist Weapons)", category, re.IGNORECASE): category = "Main-Hand"
-    elif re.match(r"(Two-Hand|Staves|Polearms)", category, re.IGNORECASE): category = "Two-Hand"
-    elif re.match(r"(Held In Off-hand|Off hand)", category, re.IGNORECASE): category = "Off-Hand"
-    elif re.match(r"(Bows|Thrown|Crossbows|Guns|Wands)", category, re.IGNORECASE): category = "Ranged"
-    elif re.match(r"Finger", category, re.IGNORECASE): category = "Ring"
-    elif re.match(r"Back", category, re.IGNORECASE): category = "Back"
-    elif re.match(r"Neck", category, re.IGNORECASE): category = "Neck"
-    elif re.match(r"Trinket", category, re.IGNORECASE): category = "Trinket"
-    elif re.match(r"Relic", category, re.IGNORECASE): category = "Relic"
-
-    if category not in valid_categories: category = "ETC"
-
-    return category
-
-def armor_subtype(text, base_type): 
-    text = text.lower()
-
-    if "spirit" in text and "intellect" in text: return f"{base_type} (Healing)"
-
-    elif "hit" in text:
-        if "intellect" in text: return f"{base_type} (Caster)" 
-        else: return f"{base_type} (Damage)"
-
-    elif "expertise" in text: 
-        if "agility" in text: return f"{base_type} (Melee Agility)"
-        elif "strength" in text: return f"{base_type} (Melee Strength)"
-
-    elif "dodge" in text or "parry" in text: return f"{base_type} (Tank)"
-
-    elif "intellect" in text: return f"{base_type} (Intellect)"
-    elif "agility" in text: return f"{base_type} (Agility)"
-    elif "strength" in text: return f"{base_type} (Strength)"
-
-    else: return f"{base_type}"
-
 def match_suffix(item_name, base_type): 
     item_name = item_name.lower()
     if "fireflash" in item_name: return armor_subtype("Stamina, Intellect, Critical Strike, Haste", base_type)
@@ -171,10 +132,9 @@ with open("all-items-cata.scsv", "r", encoding="utf-8") as cata_file:
         item_level = int(item[2])
         classes = item[3].split(", ") if "," in item[3] else item[3]
         category = item[4]
-        bind_type = item[5]
-        version = item[6]
+        version = item[5]
 
-        all_items[item_id] = Item(item_id, name, item_level, classes, category, bind_type, version)
+        all_items[item_id] = Item(item_id, name, item_level, classes, category, version)
 
 def import_pickle(): 
     # Import the pickle file
@@ -287,7 +247,7 @@ def award_loot(players):
         if p._attendance == False: continue
 
     print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
-    if item_match.classes != "": print(f"Classes: {', '.join(item_match.classes)}")
+    if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
 
     ready = input("Ready to announce? (y/n): ").lower()
     if ready == "y": 
@@ -306,7 +266,7 @@ def award_loot(players):
         pyautogui.press("enter")
         time.sleep(0.25)
 
-        if item_match.classes != "":
+        if item_match.classes != "None":
             pyautogui.write("/")
             time.sleep(0.1)
             pyautogui.write("rw")

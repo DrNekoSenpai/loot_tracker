@@ -1,59 +1,56 @@
-Loot log for **Wednesday, 2024-07-31**:
+Loot log for **Wednesday, 2024-08-07**:
 
-Pacratt (+2 MS)
-- Robes of the Burning Acolyte (359) (MS) -- received on **2024-07-31**
-- Blade of the Witching Hour (359) (MS) -- received on **2024-07-31**
+Bunniful (+3 MS)
+- Incineratus (359) (MS) -- received on **2024-08-07**
+- Jar of Ancient Remedies (359) (MS) -- received on **2024-08-07**
+- Manacles of the Sleeping Beast (359) (MS) -- received on **2024-08-07**
 
-Angelofruin (+1 MS)
-- Theralion's Mirror (359) (MS) -- received on **2024-07-31**
+Shetknight (+2 MS)
+- Ironstar Amulet (359) (MS) -- received on **2024-08-07**
+- Bile-O-Tron Nut (359) (MS) -- received on **2024-08-07**
+- Lava Spine (359) (OS) -- received on **2024-08-07**
 
-Chunkofrock (+1 MS)
-- Signet of the Fifth Circle (359) (MS) -- received on **2024-07-31**
-- Heart of Ignacious (359) (OS) -- received on **2024-07-31**
+Elisesolis (+1 MS)
+- Mace of Acrid Death (359) (MS) -- received on **2024-08-07**
 
-Gnoya (+1 MS)
-- Twilight's Hammer (359) (MS) -- received on **2024-07-31**
+Gnoraa (+1 MS)
+- Pip's Solution Agitator (359) (MS) -- received on **2024-08-07**
 
 Halibutfilet (+1 MS)
-- Tsanga's Helm (359) (MS) -- received on **2024-07-31**
+- Poison Protocol Pauldrons (359) (MS) -- received on **2024-08-07**
 
-Kairiz (+1 MS)
-- Mantle of the Forlorn Vanquisher (85) (MS) -- received on **2024-07-31**
+Heallypally (+1 MS)
+- Kingdom's Heart (359) (MS) -- received on **2024-08-07**
+- Dragon Bone Warhelm (359) (OS) -- received on **2024-08-07**
 
-Meemeemeemee (+1 MS)
-- Mantle of the Forlorn Protector (85) (MS) -- received on **2024-07-31**
+Lorniras (+1 MS)
+- Belt of Arcane Storms (359) (MS) -- received on **2024-08-07**
 
 Mobyle (+1 MS)
-- Dragonheart Piercer (359) (MS) -- received on **2024-07-31**
+- Themios the Darkbringer (359) (MS) -- received on **2024-08-07**
 
-Pasgghetti (+1 MS)
-- Book of Binding Will (359) (MS) -- received on **2024-07-31**
+Oopsimissed (+1 MS)
+- Lightning Conductor Band (359) (MS) -- received on **2024-08-07**
 
-Pastiry (+1 MS)
-- Helm of Maddening Whispers (359) (MS) -- received on **2024-07-31**
-
-Ryotto (+1 MS)
-- Glittering Epidermis (359) (MS) -- received on **2024-07-31**
-
-Sighanama (+1 MS)
-- Malevolence (359) (MS) -- received on **2024-07-31**
+Pacratt (+1 MS)
+- Crown of Burning Waters (359) (MS) -- received on **2024-08-07**
 
 Snedcharos (+1 MS)
-- Crushing Weight (359) (MS) -- received on **2024-07-31**
-- Pauldrons of the Great Ettin (359) (OS) -- received on **2024-07-31**
-- Daybreaker Helm (359) (OS) -- received on **2024-07-31**
-- Shalug'doom, the Axe of Unmaking (359) (OS) -- received on **2024-07-31**
+- Heart of Rage (359) (MS) -- received on **2024-08-07**
 
 Swiftbladess (+1 MS)
-- Dispersing Belt (359) (MS) -- received on **2024-07-31**
+- Poison Protocol Pauldrons (359) (MS) -- received on **2024-08-07**
 
-Tinyraider (+1 MS)
-- Mantle of the Forlorn Vanquisher (85) (MS) -- received on **2024-07-31**
+Pasgghetti (+0 MS)
+- Crown of Burning Waters (359) (OS) -- received on **2024-08-07**
 
-Zguis (+1 MS)
-- Dragonheart Piercer (359) (MS) -- received on **2024-07-31**
+Ryotto (+0 MS)
+- Akirus the Worm-Breaker (359) (OS) -- received on **2024-08-07**
 
 _disenchanted
-- Helm of the Nether Scion
-- Glaciated Helm
-- Membrane of C'Thun
+- Circuit Design Breastplate
+- Circuit Design Breastplate
+- Treads of Flawless Creation
+- Sark of the Unwatched
+- Gloves of Cacophony
+- Manacles of the Sleeping Beast
