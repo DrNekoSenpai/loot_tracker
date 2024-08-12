@@ -18,6 +18,11 @@ Heallypally (+3 MS)
 - Gravitational Pull (359) (OS) -- received on **2024-08-11**
 - Soul Blade (359) (OS) -- received on **2024-08-11**
 
+Phallipally (+3 MS)
+- Helm of the Forlorn Conqueror (85) (MS) -- received on **2024-08-11**
+- Shadow of Dread (359) (MS) -- received on **2024-08-11**
+- Mantle of the Forlorn Conqueror (85) (MS) -- received on **2024-08-11**
+
 Shetknight (+3 MS)
 - Ironstar Amulet (359) (MS) -- received on 2024-08-07
 - Bile-O-Tron Nut (359) (MS) -- received on 2024-08-07
@@ -37,10 +42,6 @@ Oopsimissed (+2 MS)
 - Coil of Ten-Thousand Screams (359) (MS) -- received on **2024-08-11**
 - Dragonheart Piercer (359) (OS) -- received on **2024-08-11**
 
-Phallipally (+2 MS)
-- Helm of the Forlorn Conqueror (85) (MS) -- received on **2024-08-11**
-- Shadow of Dread (359) (MS) -- received on **2024-08-11**
-
 Ryotto (+2 MS)
 - Terrastra's Legguards (359) (MS) -- received on **2024-08-11**
 - Rage of Ages (359) (MS) -- received on **2024-08-11**
@@ -53,9 +54,6 @@ Swiftbladess (+2 MS)
 Vanarann (+2 MS)
 - Essence of the Cyclone (359) (MS) -- received on **2024-08-11**
 - Prestor's Talisman of Machination (359) (MS) -- received on **2024-08-11**
-
-Axsel (+1 MS)
-- Mantle of the Forlorn Conqueror (85) (MS) -- received on **2024-08-11**
 
 Bzorder (+1 MS)
 - Mantle of the Forlorn Vanquisher (85) (MS) -- received on **2024-08-11**
