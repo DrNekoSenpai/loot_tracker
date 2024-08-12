@@ -1,18 +1,18 @@
-Angelofruin: 2 items.
+Angelofruin: 1 items.
 
 Trinket:
   \- [Theralion's Mirror (359)](<https://www.wowhead.com/wotlk/item=65105>) (MS) (2024-07-31)
-
-Main-Hand:
-  \- [Incineratus (359)](<https://www.wowhead.com/wotlk/item=65041>) (MS) (2024-07-17)
 ----------------------------------------
-Bzorder: 2 items.
+Bunniful: 3 items.
 
-Legs:
-  \- [Leggings of Consuming Flames (359)](<https://www.wowhead.com/wotlk/item=65030>) (OS) (2024-07-17)
+Wrist:
+  \- [Manacles of the Sleeping Beast (359)](<https://www.wowhead.com/wotlk/item=65021>) (MS) (2024-08-07)
 
 Trinket:
-  \- [Bell of Enraging Resonance (359)](<https://www.wowhead.com/wotlk/item=65053>) (MS) (2024-07-17)
+  \- [Jar of Ancient Remedies (359)](<https://www.wowhead.com/wotlk/item=65029>) (MS) (2024-08-07)
+
+Main-Hand:
+  \- [Incineratus (359)](<https://www.wowhead.com/wotlk/item=65041>) (MS) (2024-08-07)
 ----------------------------------------
 Chunkofrock: 2 items.
 
@@ -22,72 +22,76 @@ Ring:
 Trinket:
   \- [Heart of Ignacious (359)](<https://www.wowhead.com/wotlk/item=65110>) (OS) (2024-07-31)
 ----------------------------------------
-Gnoraa: 1 items.
+Elisesolis: 1 items.
 
 Main-Hand:
-  \- [Incineratus (359)](<https://www.wowhead.com/wotlk/item=65041>) (MS) (2024-07-17)
+  \- [Mace of Acrid Death (359)](<https://www.wowhead.com/wotlk/item=65036>) (MS) (2024-08-07)
+----------------------------------------
+Gnoraa: 2 items.
+
+Wrist:
+  \- [Bracers of the Bronze Flight (359)](<https://www.wowhead.com/wotlk/item=65138>) (MS) (2024-08-11)
+
+Ranged:
+  \- [Pip's Solution Agitator (359)](<https://www.wowhead.com/wotlk/item=65064>) (MS) (2024-08-07)
 ----------------------------------------
 Gnoya: 1 items.
 
 Main-Hand:
   \- [Twilight's Hammer (359)](<https://www.wowhead.com/wotlk/item=65090>) (MS) (2024-07-31)
 ----------------------------------------
-Halibutfilet: 2 items.
+Halibutfilet: 3 items.
 
 Head:
-  \- [Tsanga's Helm (359)](<https://www.wowhead.com/wotlk/item=65099>) (MS) (2024-07-31)
+  \- [Tsanga's Helm (359)](<https://www.wowhead.com/wotlk/item=60202>) (MS) (2024-07-31)
 
-Wrist:
-  \- [Parasitic Bands (359)](<https://www.wowhead.com/wotlk/item=65050>) (MS) (2024-07-17)
+Shoulder:
+  \- [Poison Protocol Pauldrons (359)](<https://www.wowhead.com/wotlk/item=65083>) (MS) (2024-08-07)
+
+Feet:
+  \- [Storm Rider's Boots (359)](<https://www.wowhead.com/wotlk/item=65144>) (MS) (2024-08-11)
+----------------------------------------
+Heallypally: 3 items.
+
+Head:
+  \- [Dragon Bone Warhelm (359)](<https://www.wowhead.com/wotlk/item=65038>) (OS) (2024-08-07)
+
+Legs:
+  \- [Legguards of the Emerald Brood (359)](<https://www.wowhead.com/wotlk/item=65137>) (MS) (2024-08-11)
+
+Off-Hand:
+  \- [Kingdom's Heart (359)](<https://www.wowhead.com/wotlk/item=65052>) (MS) (2024-08-07)
 ----------------------------------------
 Kairiz: 1 items.
 
 ETC:
-  \- [Mantle of the Forlorn Vanquisher (85)](<https://www.wowhead.com/wotlk/item=64314>) (ETC) (2024-07-31)
+  \- [Mantle of the Forlorn Vanquisher (85)](<https://www.wowhead.com/wotlk/item=64314>) (MS) (2024-07-31)
 ----------------------------------------
 Lorniras: 1 items.
 
-Wrist:
-  \- [Bracers of the Burningeye (359)](<https://www.wowhead.com/wotlk/item=65056>) (MS) (2024-07-17)
-----------------------------------------
-Mamaplasma: 3 items.
-
-Feet:
-  \- [Treads of Flawless Creation (359)](<https://www.wowhead.com/wotlk/item=65033>) (MS) (2024-07-17)
-
-Ring:
-  \- [Security Measure Alpha (359)](<https://www.wowhead.com/wotlk/item=65076>) (MS) (2024-07-17)
-
-Main-Hand:
-  \- [Incineratus (359)](<https://www.wowhead.com/wotlk/item=65041>) (MS) (2024-07-17)
-----------------------------------------
-Medullaa: 1 items.
-
-Head:
-  \- [Dragon Bone Warhelm (359)](<https://www.wowhead.com/wotlk/item=65038>) (MS) (2024-07-17)
+Waist:
+  \- [Belt of Arcane Storms (359)](<https://www.wowhead.com/wotlk/item=65034>) (MS) (2024-08-07)
 ----------------------------------------
 Meemeemeemee: 1 items.
 
 ETC:
-  \- [Mantle of the Forlorn Protector (85)](<https://www.wowhead.com/wotlk/item=64316>) (ETC) (2024-07-31)
+  \- [Mantle of the Forlorn Protector (85)](<https://www.wowhead.com/wotlk/item=64316>) (MS) (2024-07-31)
 ----------------------------------------
-Mobyle: 3 items.
-
-Chest:
-  \- [Tunic of Failed Experiments (359)](<https://www.wowhead.com/wotlk/item=65037>) (MS) (2024-07-17)
-
-Feet:
-  \- [Boots of Vertigo (359)](<https://www.wowhead.com/wotlk/item=65063>) (MS) (2024-07-17)
+Mobyle: 2 items.
 
 Ranged:
   \- [Dragonheart Piercer (359)](<https://www.wowhead.com/wotlk/item=65095>) (MS) (2024-07-31)
+  \- [Themios the Darkbringer (359)](<https://www.wowhead.com/wotlk/item=65058>) (MS) (2024-08-07)
 ----------------------------------------
-Onlyflowers: 1 items.
+Oopsimissed: 1 items.
 
-Waist:
-  \- [Jumbotron Power Belt (359)](<https://www.wowhead.com/wotlk/item=65086>) (MS) (2024-07-17)
+Ring:
+  \- [Lightning Conductor Band (359)](<https://www.wowhead.com/wotlk/item=65082>) (MS) (2024-08-07)
 ----------------------------------------
-Pacratt: 2 items.
+Pacratt: 3 items.
+
+Head:
+  \- [Crown of Burning Waters (359)](<https://www.wowhead.com/wotlk/item=65020>) (MS) (2024-08-07)
 
 Chest:
   \- [Robes of the Burning Acolyte (359)](<https://www.wowhead.com/wotlk/item=65135>) (MS) (2024-07-31)
@@ -97,24 +101,35 @@ Main-Hand:
 ----------------------------------------
 Pasgghetti: 2 items.
 
-Waist:
-  \- [Belt of Arcane Storms (359)](<https://www.wowhead.com/wotlk/item=65034>) (MS) (2024-07-17)
+Head:
+  \- [Crown of Burning Waters (359)](<https://www.wowhead.com/wotlk/item=65020>) (OS) (2024-08-07)
 
 Off-Hand:
   \- [Book of Binding Will (359)](<https://www.wowhead.com/wotlk/item=65133>) (MS) (2024-07-31)
 ----------------------------------------
-Pastiry: 2 items.
+Pastiry: 1 items.
 
 Head:
   \- [Helm of Maddening Whispers (359)](<https://www.wowhead.com/wotlk/item=65130>) (MS) (2024-07-31)
-
-Waist:
-  \- [Jumbotron Power Belt (359)](<https://www.wowhead.com/wotlk/item=65086>) (MS) (2024-07-17)
 ----------------------------------------
-Ryotto: 1 items.
+Ryotto: 2 items.
 
 Back:
   \- [Glittering Epidermis (359)](<https://www.wowhead.com/wotlk/item=65117>) (MS) (2024-07-31)
+
+Two-Hand:
+  \- [Akirus the Worm-Breaker (359)](<https://www.wowhead.com/wotlk/item=65007>) (OS) (2024-08-07)
+----------------------------------------
+Shetknight: 3 items.
+
+Neck:
+  \- [Ironstar Amulet (359)](<https://www.wowhead.com/wotlk/item=65059>) (MS) (2024-08-07)
+
+Ring:
+  \- [Bile-O-Tron Nut (359)](<https://www.wowhead.com/wotlk/item=65070>) (MS) (2024-08-07)
+
+Main-Hand:
+  \- [Lava Spine (359)](<https://www.wowhead.com/wotlk/item=65047>) (OS) (2024-08-07)
 ----------------------------------------
 Sighanama: 1 items.
 
@@ -131,38 +146,28 @@ Shoulder:
 
 Trinket:
   \- [Crushing Weight (359)](<https://www.wowhead.com/wotlk/item=65118>) (MS) (2024-07-31)
-
-Main-Hand:
-  \- [Lava Spine (359)](<https://www.wowhead.com/wotlk/item=65047>) (MS) (2024-07-17)
+  \- [Heart of Rage (359)](<https://www.wowhead.com/wotlk/item=65072>) (MS) (2024-08-07)
 
 Two-Hand:
   \- [Shalug'doom, the Axe of Unmaking (359)](<https://www.wowhead.com/wotlk/item=65145>) (OS) (2024-07-31)
 ----------------------------------------
-Swiftbladess: 3 items.
+Swiftbladess: 2 items.
 
-Chest:
-  \- [Sark of the Unwatched (359)](<https://www.wowhead.com/wotlk/item=65060>) (MS) (2024-07-17)
+Shoulder:
+  \- [Poison Protocol Pauldrons (359)](<https://www.wowhead.com/wotlk/item=65083>) (MS) (2024-08-07)
 
 Waist:
   \- [Dispersing Belt (359)](<https://www.wowhead.com/wotlk/item=65122>) (MS) (2024-07-31)
-
-Main-Hand:
-  \- [Organic Lifeform Inverter (359)](<https://www.wowhead.com/wotlk/item=65081>) (MS) (2024-07-17)
 ----------------------------------------
 Tinyraider: 1 items.
 
 ETC:
-  \- [Mantle of the Forlorn Vanquisher (85)](<https://www.wowhead.com/wotlk/item=64314>) (ETC) (2024-07-31)
+  \- [Mantle of the Forlorn Vanquisher (85)](<https://www.wowhead.com/wotlk/item=64314>) (MS) (2024-07-31)
 ----------------------------------------
-Ulvson: 1 items.
+Vanarann: 1 items.
 
-Shoulder:
-  \- [Passive Resistor Spaulders (359)](<https://www.wowhead.com/wotlk/item=65078>) (MS) (2024-07-17)
-----------------------------------------
-Vanthulhu: 1 items.
-
-Wrist:
-  \- [Bracers of the Burningeye (359)](<https://www.wowhead.com/wotlk/item=65056>) (MS) (2024-07-17)
+Trinket:
+  \- [Essence of the Cyclone (359)](<https://www.wowhead.com/wotlk/item=65140>) (MS) (2024-08-11)
 ----------------------------------------
 Zguis: 1 items.
 

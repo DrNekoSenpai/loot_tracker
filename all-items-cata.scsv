@@ -17,8 +17,8 @@ ID;Item;Item Level;Classes;Category;Version
 59316;Battleplate of Ancient Kings;359;None;Plate Chest (Strength w/ Expertise);Normal
 65131;Battleplate of the Apocalypse;372;None;Plate Chest (Tank);Heroic
 59486;Battleplate of the Apocalypse;359;None;Plate Chest (Tank);Normal
-65053;Bell of Enraging Resonance;372;None;Trinket ;Heroic
-59326;Bell of Enraging Resonance;359;None;Trinket ;Normal
+65053;Bell of Enraging Resonance;372;None;Trinket;Heroic
+59326;Bell of Enraging Resonance;359;None;Trinket;Normal
 65040;Belt of Absolute Zero;372;None;Plate Waist (Strength w/ Hit);Heroic
 59342;Belt of Absolute Zero;359;None;Plate Waist (Strength w/ Hit);Normal
 65034;Belt of Arcane Storms;372;None;Cloth Waist (Intellect);Heroic
@@ -38,9 +38,9 @@ ID;Item;Item Level;Classes;Category;Version
 55405;Blackwolf Amulet;312;None;Neck (Random);Normal
 55405;Blackwolf Amulet;312;None;Neck (Random);Normal
 55405;Blackwolf Amulet;312;None;Neck (Random);Normal
-55315;Blackwolf Cloak;312;None;ETC (Random);Normal
-55315;Blackwolf Cloak;312;None;ETC (Random);Normal
-55315;Blackwolf Cloak;312;None;ETC (Random);Normal
+55315;Blackwolf Cloak;312;None;Back (Random);Normal
+55315;Blackwolf Cloak;312;None;Back (Random);Normal
+55315;Blackwolf Cloak;312;None;Back (Random);Normal
 55378;Blackwolf Crystal;312;None;Held In Off-hand (Random);Normal
 55378;Blackwolf Crystal;312;None;Held In Off-hand (Random);Normal
 55378;Blackwolf Crystal;312;None;Held In Off-hand (Random);Normal
@@ -169,9 +169,9 @@ ID;Item;Item Level;Classes;Category;Version
 73551;Cataclysmic Gladiator's Armplates of Proficiency;403;Warrior, Paladin, Death Knight;Plate Wrist (PvP);Normal
 73528;Cataclysmic Gladiator's Armwraps of Accuracy;403;Rogue, Druid;Leather Wrist (PvP);Normal
 73529;Cataclysmic Gladiator's Armwraps of Alacrity;403;Rogue, Druid;Leather Wrist (PvP);Normal
-73648;Cataclysmic Gladiator's Badge of Conquest;403;None;Trinket (PvP);Normal
-73498;Cataclysmic Gladiator's Badge of Dominance;403;None;Trinket (PvP);Normal
-73496;Cataclysmic Gladiator's Badge of Victory;403;None;Trinket (PvP);Normal
+73648;Cataclysmic Gladiator's Badge of Conquest;403;None;Trinket;Normal
+73498;Cataclysmic Gladiator's Badge of Dominance;403;None;Trinket;Normal
+73496;Cataclysmic Gladiator's Badge of Victory;403;None;Trinket;Normal
 73622;Cataclysmic Gladiator's Band of Accuracy;403;Paladin, Priest, Shaman, Mage, Warlock, Druid;Finger (PvP);Normal
 73623;Cataclysmic Gladiator's Band of Cruelty;403;Paladin, Priest, Shaman, Mage, Warlock, Druid;Finger (PvP);Normal
 73621;Cataclysmic Gladiator's Band of Meditation;403;Paladin, Priest, Shaman, Druid;Finger (PvP);Normal
@@ -183,16 +183,16 @@ ID;Item;Item Level;Classes;Category;Version
 73531;Cataclysmic Gladiator's Boots of Cruelty;403;Rogue, Druid;Leather Feet (PvP);Normal
 73561;Cataclysmic Gladiator's Bracers of Meditation;403;Paladin;Plate Wrist (PvP);Normal
 73562;Cataclysmic Gladiator's Bracers of Prowess;403;Paladin;Plate Wrist (PvP);Normal
-73647;Cataclysmic Gladiator's Cape of Cruelty;403;Hunter, Rogue, Shaman, Druid;ETC (PvP);Normal
-73646;Cataclysmic Gladiator's Cape of Prowess;403;Hunter, Rogue, Shaman, Druid;ETC (PvP);Normal
+73647;Cataclysmic Gladiator's Cape of Cruelty;403;Hunter, Rogue, Shaman, Druid;Back (PvP);Normal
+73646;Cataclysmic Gladiator's Cape of Prowess;403;Hunter, Rogue, Shaman, Druid;Back (PvP);Normal
 73583;Cataclysmic Gladiator's Chain Gauntlets;403;Hunter;Mail Hands (PvP);Normal
 73581;Cataclysmic Gladiator's Chain Leggings;403;Hunter;Mail Legs (PvP);Normal
 73492;Cataclysmic Gladiator's Choker of Accuracy;403;Warrior, Paladin, Death Knight;Neck (PvP);Normal
 73493;Cataclysmic Gladiator's Choker of Proficiency;403;Warrior, Paladin, Death Knight;Neck (PvP);Normal
 73566;Cataclysmic Gladiator's Clasp of Cruelty;403;Paladin;Plate Waist (PvP);Normal
 73565;Cataclysmic Gladiator's Clasp of Meditation;403;Paladin;Plate Waist (PvP);Normal
-73495;Cataclysmic Gladiator's Cloak of Alacrity;403;Warrior, Paladin, Death Knight;ETC (PvP);Normal
-73494;Cataclysmic Gladiator's Cloak of Prowess;403;Warrior, Paladin, Death Knight;ETC (PvP);Normal
+73495;Cataclysmic Gladiator's Cloak of Alacrity;403;Warrior, Paladin, Death Knight;Back (PvP);Normal
+73494;Cataclysmic Gladiator's Cloak of Prowess;403;Warrior, Paladin, Death Knight;Back (PvP);Normal
 73638;Cataclysmic Gladiator's Cord of Accuracy;403;Priest, Mage, Warlock;Cloth Waist (PvP);Normal
 73639;Cataclysmic Gladiator's Cord of Cruelty;403;Priest, Mage, Warlock;Cloth Waist (PvP);Normal
 73637;Cataclysmic Gladiator's Cord of Meditation;403;Priest, Mage, Warlock;Cloth Waist (PvP);Normal
@@ -201,14 +201,14 @@ ID;Item;Item Level;Classes;Category;Version
 73632;Cataclysmic Gladiator's Cuffs of Prowess;403;Priest, Mage, Warlock;Cloth Wrist (PvP);Normal
 73615;Cataclysmic Gladiator's Dragonhide Gloves;403;Druid;Leather Hands (PvP);Normal
 73613;Cataclysmic Gladiator's Dragonhide Legguards;403;Druid;Leather Legs (PvP);Normal
-73629;Cataclysmic Gladiator's Drape of Diffusion;403;Paladin, Priest, Shaman, Mage, Warlock, Druid;ETC (PvP);Normal
-73628;Cataclysmic Gladiator's Drape of Meditation;403;Paladin, Priest, Shaman, Druid;ETC (PvP);Normal
-73630;Cataclysmic Gladiator's Drape of Prowess;403;Paladin, Priest, Shaman, Mage, Warlock, Druid;ETC (PvP);Normal
+73629;Cataclysmic Gladiator's Drape of Diffusion;403;Paladin, Priest, Shaman, Mage, Warlock, Druid;Back (PvP);Normal
+73628;Cataclysmic Gladiator's Drape of Meditation;403;Paladin, Priest, Shaman, Druid;Back (PvP);Normal
+73630;Cataclysmic Gladiator's Drape of Prowess;403;Paladin, Priest, Shaman, Mage, Warlock, Druid;Back (PvP);Normal
 73619;Cataclysmic Gladiator's Dreadplate Gauntlets;403;Death Knight;Plate Hands (PvP);Normal
 73617;Cataclysmic Gladiator's Dreadplate Legguards;403;Death Knight;Plate Legs (PvP);Normal
-73593;Cataclysmic Gladiator's Emblem of Cruelty;403;None;Trinket ;Normal
-73591;Cataclysmic Gladiator's Emblem of Meditation;403;None;Trinket ;Normal
-73592;Cataclysmic Gladiator's Emblem of Tenacity;403;None;Trinket (PvP);Normal
+73593;Cataclysmic Gladiator's Emblem of Cruelty;403;None;Trinket;Normal
+73591;Cataclysmic Gladiator's Emblem of Meditation;403;None;Trinket;Normal
+73592;Cataclysmic Gladiator's Emblem of Tenacity;403;None;Trinket;Normal
 73487;Cataclysmic Gladiator's Felweave Handguards;403;Warlock;Cloth Hands (PvP);Normal
 73485;Cataclysmic Gladiator's Felweave Trousers;403;Warlock;Cloth Legs (PvP);Normal
 73601;Cataclysmic Gladiator's Footguards of Alacrity;403;Druid;Leather Feet (PvP);Normal
@@ -217,9 +217,9 @@ ID;Item;Item Level;Classes;Category;Version
 73554;Cataclysmic Gladiator's Girdle of Prowess;403;Warrior, Paladin, Death Knight;Plate Waist (PvP);Normal
 73564;Cataclysmic Gladiator's Greaves of Alacrity;403;Paladin;Plate Feet (PvP);Normal
 73563;Cataclysmic Gladiator's Greaves of Meditation;403;Paladin;Plate Feet (PvP);Normal
-73643;Cataclysmic Gladiator's Insignia of Conquest;403;None;Trinket (PvP);Normal
-73497;Cataclysmic Gladiator's Insignia of Dominance;403;None;Trinket (PvP);Normal
-73491;Cataclysmic Gladiator's Insignia of Victory;403;None;Trinket (PvP);Normal
+73643;Cataclysmic Gladiator's Insignia of Conquest;403;None;Trinket;Normal
+73497;Cataclysmic Gladiator's Insignia of Dominance;403;None;Trinket;Normal
+73491;Cataclysmic Gladiator's Insignia of Victory;403;None;Trinket;Normal
 73607;Cataclysmic Gladiator's Kodohide Gloves;403;Druid;Leather Hands (PvP);Normal
 73605;Cataclysmic Gladiator's Kodohide Legguards;403;Druid;Leather Legs (PvP);Normal
 73526;Cataclysmic Gladiator's Leather Gloves;403;Rogue;Leather Hands (PvP);Normal
@@ -230,12 +230,12 @@ ID;Item;Item Level;Classes;Category;Version
 73590;Cataclysmic Gladiator's Links of Cruelty;403;Hunter, Shaman;Mail Waist (PvP);Normal
 73505;Cataclysmic Gladiator's Mail Gauntlets;403;Shaman;Mail Hands (PvP);Normal
 73503;Cataclysmic Gladiator's Mail Leggings;403;Shaman;Mail Legs (PvP);Normal
-73538;Cataclysmic Gladiator's Medallion of Cruelty;403;None;Trinket ;Normal
-73539;Cataclysmic Gladiator's Medallion of Cruelty;403;None;Trinket ;Normal
-73534;Cataclysmic Gladiator's Medallion of Meditation;403;None;Trinket ;Normal
-73535;Cataclysmic Gladiator's Medallion of Meditation;403;None;Trinket ;Normal
-73536;Cataclysmic Gladiator's Medallion of Tenacity;403;None;Trinket (PvP);Normal
-73537;Cataclysmic Gladiator's Medallion of Tenacity;403;None;Trinket (PvP);Normal
+73538;Cataclysmic Gladiator's Medallion of Cruelty;403;None;Trinket;Normal
+73539;Cataclysmic Gladiator's Medallion of Cruelty;403;None;Trinket;Normal
+73534;Cataclysmic Gladiator's Medallion of Meditation;403;None;Trinket;Normal
+73535;Cataclysmic Gladiator's Medallion of Meditation;403;None;Trinket;Normal
+73536;Cataclysmic Gladiator's Medallion of Tenacity;403;None;Trinket;Normal
+73537;Cataclysmic Gladiator's Medallion of Tenacity;403;None;Trinket;Normal
 73549;Cataclysmic Gladiator's Mooncloth Gloves;403;Priest;Cloth Hands (PvP);Normal
 73547;Cataclysmic Gladiator's Mooncloth Leggings;403;Priest;Cloth Legs (PvP);Normal
 73645;Cataclysmic Gladiator's Necklace of Proficiency;403;Hunter, Rogue, Shaman, Druid;Neck (PvP);Normal
@@ -279,9 +279,9 @@ ID;Item;Item Level;Classes;Category;Version
 65068;Chaos Beast Bracers;372;None;Mail Wrist (Healing);Heroic
 59310;Chaos Beast Bracers;359;None;Mail Wrist (Healing);Normal
 59525;Chelley's Staff of Dark Mending;359;None;Two-Hand Staff (Healing);Normal
-67423;Chest of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
-67424;Chest of the Forlorn Protector;85;Warrior, Hunter, Shaman;ETC;Normal
-67425;Chest of the Forlorn Vanquisher;85;Rogue, Death Knight, Mage, Druid;ETC;Normal
+67423;Chest of the Forlorn Conqueror;85;Paladin, Priest, Warlock;Tier Set Token;Normal
+67424;Chest of the Forlorn Protector;85;Warrior, Hunter, Shaman;Tier Set Token;Normal
+67425;Chest of the Forlorn Vanquisher;85;Rogue, Death Knight, Mage, Druid;Tier Set Token;Normal
 67121;Chestguard of the Caring Ursine;325;None;Leather Chest (Healing);Normal
 67121;Chestguard of the Caring Ursine;325;None;Leather Chest (Healing);Normal
 65028;Chimaeron Armguards;372;None;Mail Wrist (Agility w/ Hit);Heroic
@@ -304,12 +304,12 @@ ID;Item;Item Level;Classes;Category;Version
 62098;Clammy Mail Shoulderpads;150;None;Mail Shoulder;Normal
 63538;Claws of Agony;359;None;Off Hand Fist Weapon (Strength);Normal
 63537;Claws of Torment;359;None;Main Hand Fist Weapon (Agility);Normal
-65035;Cloak of Biting Chill;372;None;ETC (Agility);Heroic
-59348;Cloak of Biting Chill;359;None;ETC (Agility);Normal
-66991;Cloak of Rich Anger;325;None;ETC (Strength);Normal
-66991;Cloak of Rich Anger;325;None;ETC (Strength);Normal
-69879;Cloudburst Cloak;372;None;ETC (Random);Heroic
-69834;Cloudburst Cloak;359;None;ETC (Random);Normal
+65035;Cloak of Biting Chill;372;None;Back (Agility);Heroic
+59348;Cloak of Biting Chill;359;None;Back (Agility);Normal
+66991;Cloak of Rich Anger;325;None;Back (Strength);Normal
+66991;Cloak of Rich Anger;325;None;Back (Strength);Normal
+69879;Cloudburst Cloak;372;None;Back (Random);Heroic
+69834;Cloudburst Cloak;359;None;Back (Random);Normal
 69885;Cloudburst Necklace;372;None;Neck (Random);Heroic
 69829;Cloudburst Necklace;359;None;Neck (Random);Normal
 65382;Cloudburst Ring;372;None;Finger (Random);Heroic
@@ -340,8 +340,8 @@ ID;Item;Item Level;Classes;Category;Version
 63247;Crumpled Parchment;1;None;ETC;Normal
 63247;Crumpled Parchment;1;None;ETC;Normal
 63247;Crumpled Parchment;1;None;ETC;Normal
-65118;Crushing Weight;372;None;Trinket (Strength);Heroic
-59506;Crushing Weight;359;None;Trinket (Strength);Normal
+65118;Crushing Weight;372;None;Trinket;Heroic
+59506;Crushing Weight;359;None;Trinket;Normal
 66972;Crystalline Geoknife;333;None;Main Hand Fist Weapon (Agility);Normal
 66972;Crystalline Geoknife;333;None;Main Hand Fist Weapon (Agility);Normal
 55504;Crystalvein Breastplate;312;None;Plate Chest (Random);Normal
@@ -373,7 +373,6 @@ ID;Item;Item Level;Classes;Category;Version
 55495;Crystalvein Vambraces;312;None;Plate Wrist (Random);Normal
 55637;Dandred Bindings;300;None;Leather Wrist (Random);Normal
 55637;Dandred Bindings;300;None;Leather Wrist (Random);Normal
-55655;Dandred Boots;300;None;Leather Feet (Random);Normal
 55655;Dandred Boots;300;None;Leather Feet (Random);Normal
 55655;Dandred Boots;300;None;Leather Feet (Random);Normal
 55682;Dandred Britches;300;None;Leather Legs (Random);Normal
@@ -461,8 +460,8 @@ ID;Item;Item Level;Classes;Category;Version
 67137;Don Rodrigo's Fabulous Necklace;359;None;Neck (Agility);Normal
 67137;Don Rodrigo's Fabulous Necklace;359;None;Neck (Agility);Normal
 67130;Dorian's Lost Necklace;359;None;Neck (Intellect);Normal
-67134;Dory's Finery;359;None;ETC (Agility w/ Hit);Normal
-67134;Dory's Finery;359;None;ETC (Agility w/ Hit);Normal
+67134;Dory's Finery;359;None;Back (Agility w/ Hit);Normal
+67134;Dory's Finery;359;None;Back (Agility w/ Hit);Normal
 65073;Double Attack Handguards;372;None;Leather Hands (Agility w/ Expertise);Heroic
 59223;Double Attack Handguards;359;None;Leather Hands (Agility w/ Expertise);Normal
 66990;Downfall Hammer;325;None;One-Hand Mace (Agility w/ Hit);Normal
@@ -472,9 +471,9 @@ ID;Item;Item Level;Classes;Category;Version
 65095;Dragonheart Piercer;372;None;Ranged Crossbow (Agility);Heroic
 63532;Dragonheart Piercer;359;None;Ranged Crossbow (Agility);Normal
 68608;Dragonwreck Throwing Axe;359;None;Thrown Thrown (Agility);Normal
-67140;Drape of Inimitable Fate;359;None;ETC (Strength);Normal
-65108;Drape of the Twins;372;None;ETC (Healing);Heroic
-59516;Drape of the Twins;359;None;ETC (Healing);Normal
+67140;Drape of Inimitable Fate;359;None;Back (Strength);Normal
+65108;Drape of the Twins;372;None;Back (Healing);Heroic
+59516;Drape of the Twins;359;None;Back (Healing);Normal
 60326;Earthen Gauntlets;359;Warrior;Plate Hands (Strength);Normal
 60332;Earthen Handguards;359;Warrior;Plate Hands (Tank);Normal
 60330;Earthen Legguards;359;Warrior;Plate Legs (Tank);Normal
@@ -500,8 +499,8 @@ ID;Item;Item Level;Classes;Category;Version
 71294;Erupting Volcanic Kilt;378;Shaman;Mail Legs (Intellect);Normal
 71304;Erupting Volcanic Legguards;378;Shaman;Mail Legs (Agility w/ Hit);Normal
 71299;Erupting Volcanic Legwraps;378;Shaman;Mail Legs (Healing);Normal
-65140;Essence of the Cyclone;372;None;Trinket (Agility);Heroic
-59473;Essence of the Cyclone;359;None;Trinket (Agility);Normal
+65140;Essence of the Cyclone;372;None;Trinket;Heroic
+59473;Essence of the Cyclone;359;None;Trinket;Normal
 66998;Essence of the Forlorn;85;None;ETC;Normal
 55772;Everstill Cord;300;None;Cloth Waist (Random);Normal
 55772;Everstill Cord;300;None;Cloth Waist (Random);Normal
@@ -520,8 +519,8 @@ ID;Item;Item Level;Classes;Category;Version
 55763;Everstill Shoulderpads;300;None;Cloth Shoulder (Random);Normal
 55709;Everstill Wristwraps;300;None;Cloth Wrist (Random);Normal
 55709;Everstill Wristwraps;300;None;Cloth Wrist (Random);Normal
-65124;Fall of Mortality;372;None;Trinket (Healing);Heroic
-59500;Fall of Mortality;359;None;Trinket (Healing);Normal
+65124;Fall of Mortality;372;None;Trinket;Heroic
+59500;Fall of Mortality;359;None;Trinket;Normal
 65094;Fang of Twilight;372;None;One-Hand Sword (Agility);Heroic
 63533;Fang of Twilight;359;None;One-Hand Sword (Agility);Normal
 65114;Feludius' Mantle;372;None;Mail Shoulder (Healing);Heroic
@@ -546,7 +545,7 @@ ID;Item;Item Level;Classes;Category;Version
 68788;Formula: Enchant Bracer - Major Strength;85;None;ETC (Strength);Normal
 68789;Formula: Enchant Bracer - Mighty Intellect;85;None;ETC (Intellect);Normal
 68789;Formula: Enchant Bracer - Mighty Intellect;85;None;ETC (Intellect);Normal
-59461;Fury of Angerforge;359;None;Trinket (Strength);Normal
+59461;Fury of Angerforge;359;None;Trinket;Normal
 65374;Gale Rouser Belt;372;None;Leather Waist (Random);Heroic
 63497;Gale Rouser Belt;359;None;Leather Waist (Random);Normal
 65384;Gale Rouser Leggings;372;None;Leather Legs (Random);Heroic
@@ -561,8 +560,8 @@ ID;Item;Item Level;Classes;Category;Version
 67136;Gilnean Ring of Ruination;359;None;Finger (Agility w/ Hit);Normal
 65115;Glaciated Helm;372;None;Plate Head (Healing);Heroic
 59509;Glaciated Helm;359;None;Plate Head (Healing);Normal
-65117;Glittering Epidermis;372;None;ETC (Strength);Heroic
-59507;Glittering Epidermis;359;None;ETC (Strength);Normal
+65117;Glittering Epidermis;372;None;Back (Strength);Heroic
+59507;Glittering Epidermis;359;None;Back (Strength);Normal
 65055;Gloves of Cacophony;372;None;Mail Hands (Healing);Heroic
 59324;Gloves of Cacophony;359;None;Mail Hands (Healing);Normal
 76348;Gloves of Dying Light;397;Priest;Cloth Hands (Healing);Normal
@@ -593,7 +592,7 @@ ID;Item;Item Level;Classes;Category;Version
 55692;Haldarr Shoulders;306;None;Leather Shoulder (Random);Normal
 55701;Haldarr Waistband;306;None;Leather Waist (Random);Normal
 55701;Haldarr Waistband;306;None;Leather Waist (Random);Normal
-67059;Halted Clock;325;None;ETC (Tank);Normal
+67059;Halted Clock;325;None;Relic (Tank);Normal
 77004;Handguards of Radiant Glory;397;Paladin;Plate Hands (Tank);Normal
 70943;Handguards of the Molten Giant;378;Warrior;Plate Hands (Tank);Normal
 65126;Hands of the Twilight Council;372;None;Cloth Hands (Intellect);Heroic
@@ -603,11 +602,11 @@ ID;Item;Item Level;Classes;Category;Version
 60312;Handwraps of the Raging Elements;359;Shaman;Mail Hands (Healing);Normal
 66992;Harbinger's Breastplate;333;None;Plate Chest (Strength);Normal
 66992;Harbinger's Breastplate;333;None;Plate Chest (Strength);Normal
-65110;Heart of Ignacious;372;None;Trinket ;Heroic
-59514;Heart of Ignacious;359;None;Trinket ;Normal
-65072;Heart of Rage;372;None;Trinket (Strength w/ Expertise);Heroic
-59224;Heart of Rage;359;None;Trinket (Strength w/ Expertise);Normal
-66969;Heart of the Vile;325;None;Trinket (Agility);Normal
+65110;Heart of Ignacious;372;None;Trinket;Heroic
+59514;Heart of Ignacious;359;None;Trinket;Normal
+65072;Heart of Rage;372;None;Trinket;Heroic
+59224;Heart of Rage;359;None;Trinket;Normal
+66969;Heart of the Vile;325;None;Trinket;Normal
 67149;Heartbound Tome;359;None;Held In Off-hand (Healing);Normal
 67149;Heartbound Tome;359;None;Held In Off-hand (Healing);Normal
 59901;Heaving Plates of Protection;359;None;Plate Shoulder (Tank);Normal
@@ -665,7 +664,7 @@ ID;Item;Item Level;Classes;Category;Version
 59341;Incineratus;359;None;Main Hand Dagger (Intellect);Normal
 65059;Ironstar Amulet;372;None;Neck (Tank);Heroic
 59319;Ironstar Amulet;359;None;Neck (Tank);Normal
-59466;Ironstar's Impenetrable Cover;359;None;ETC (Tank);Normal
+59466;Ironstar's Impenetrable Cover;359;None;Back (Tank);Normal
 55288;Irontree Axe;312;None;One-Hand Axe (Random);Normal
 55288;Irontree Axe;312;None;One-Hand Axe (Random);Normal
 55288;Irontree Axe;312;None;One-Hand Axe (Random);Normal
@@ -708,8 +707,8 @@ ID;Item;Item Level;Classes;Category;Version
 55459;Irontree Sword;312;None;One-Hand Sword (Random);Normal
 55459;Irontree Sword;312;None;One-Hand Sword (Random);Normal
 55459;Irontree Sword;312;None;One-Hand Sword (Random);Normal
-65029;Jar of Ancient Remedies;372;None;Trinket ;Heroic
-59354;Jar of Ancient Remedies;359;None;Trinket ;Normal
+65029;Jar of Ancient Remedies;372;None;Trinket;Heroic
+59354;Jar of Ancient Remedies;359;None;Trinket;Normal
 67147;Je'Tze's Sparkling Tiara;359;None;Cloth Head (Healing);Normal
 65086;Jumbotron Power Belt;372;None;Plate Waist (Tank);Heroic
 59117;Jumbotron Power Belt;359;None;Plate Waist (Tank);Normal
@@ -731,9 +730,9 @@ ID;Item;Item Level;Classes;Category;Version
 59331;Leggings of Lethal Force;359;None;Mail Legs (Agility w/ Hit);Normal
 71278;Leggings of the Cleansing Flame;378;Priest;Cloth Legs (Intellect);Normal
 76341;Leggings of the Faceless Shroud;397;Warlock;Cloth Legs (Intellect);Normal
-67428;Leggings of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
-67427;Leggings of the Forlorn Protector;85;Warrior, Hunter, Shaman;ETC;Normal
-67426;Leggings of the Forlorn Vanquisher;85;Rogue, Death Knight, Mage, Druid;ETC;Normal
+67428;Leggings of the Forlorn Conqueror;85;Paladin, Priest, Warlock;Tier Set Token;Normal
+67427;Leggings of the Forlorn Protector;85;Warrior, Hunter, Shaman;Tier Set Token;Normal
+67426;Leggings of the Forlorn Vanquisher;85;Rogue, Death Knight, Mage, Druid;Tier Set Token;Normal
 77006;Legguards of Radiant Glory;397;Paladin;Plate Legs (Tank);Normal
 65137;Legguards of the Emerald Brood;372;None;Plate Legs (Healing);Heroic
 59476;Legguards of the Emerald Brood;359;None;Plate Legs (Healing);Normal
@@ -834,8 +833,8 @@ ID;Item;Item Level;Classes;Category;Version
 55403;Mereldar Amulet;300;None;Neck (Random);Normal
 55403;Mereldar Amulet;300;None;Neck (Random);Normal
 55403;Mereldar Amulet;300;None;Neck (Random);Normal
-55313;Mereldar Cloak;300;None;ETC (Random);Normal
-55313;Mereldar Cloak;300;None;ETC (Random);Normal
+55313;Mereldar Cloak;300;None;Back (Random);Normal
+55313;Mereldar Cloak;300;None;Back (Random);Normal
 55376;Mereldar Crystal;300;None;Held In Off-hand (Random);Normal
 55376;Mereldar Crystal;300;None;Held In Off-hand (Random);Normal
 55421;Mereldar Ring;300;None;Finger (Random);Normal
@@ -849,8 +848,8 @@ ID;Item;Item Level;Classes;Category;Version
 55484;Mereldar Wand;300;None;Ranged Wand (Random);Normal
 65367;Mistral Circle;372;None;Finger (Random);Heroic
 63488;Mistral Circle;359;None;Finger (Random);Normal
-69884;Mistral Drape;372;None;ETC (Random);Heroic
-69831;Mistral Drape;359;None;ETC (Random);Normal
+69884;Mistral Drape;372;None;Back (Random);Heroic
+69831;Mistral Drape;359;None;Back (Random);Normal
 69880;Mistral Pendant;372;None;Neck (Random);Heroic
 69827;Mistral Pendant;359;None;Neck (Random);Normal
 65051;Molten Tantrum Boots;372;None;Plate Feet (Tank);Heroic
@@ -921,8 +920,8 @@ ID;Item;Item Level;Classes;Category;Version
 62076;Perforated Plate Pants;150;None;Plate Legs;Normal
 62075;Perforated Plate Shoulderpads;150;None;Plate Shoulder;Normal
 62075;Perforated Plate Shoulderpads;150;None;Plate Shoulder;Normal
-69878;Permafrost Cape;372;None;ETC (Random);Heroic
-69833;Permafrost Cape;359;None;ETC (Random);Normal
+69878;Permafrost Cape;372;None;Back (Random);Heroic
+69833;Permafrost Cape;359;None;Back (Random);Normal
 69883;Permafrost Choker;372;None;Neck (Random);Heroic
 69828;Permafrost Choker;359;None;Neck (Random);Normal
 65372;Permafrost Signet;372;None;Finger (Random);Heroic
@@ -934,8 +933,8 @@ ID;Item;Item Level;Classes;Category;Version
 69830;Planetary Amulet;359;None;Neck (Random);Normal
 65373;Planetary Band;372;None;Finger (Random);Heroic
 63494;Planetary Band;359;None;Finger (Random);Normal
-69881;Planetary Drape;372;None;ETC (Random);Heroic
-69835;Planetary Drape;359;None;ETC (Random);Normal
+69881;Planetary Drape;372;None;Back (Random);Heroic
+69835;Planetary Drape;359;None;Back (Random);Normal
 65071;Plated Fists of Provocation;372;None;Plate Hands (Strength);Heroic
 59225;Plated Fists of Provocation;359;None;Plate Hands (Strength);Normal
 62069;Plugged Rifle;175;None;Ranged Gun;Normal
@@ -962,8 +961,8 @@ ID;Item;Item Level;Classes;Category;Version
 59120;Poison Protocol Pauldrons;359;None;Leather Shoulder (Agility);Normal
 65077;Power Generator Hood;372;None;Cloth Head (Intellect);Heroic
 59219;Power Generator Hood;359;None;Cloth Head (Intellect);Normal
-65026;Prestor's Talisman of Machination;372;None;Trinket (Agility);Heroic
-59441;Prestor's Talisman of Machination;359;None;Trinket (Agility);Normal
+65026;Prestor's Talisman of Machination;372;None;Trinket;Heroic
+59441;Prestor's Talisman of Machination;359;None;Trinket;Normal
 65141;Proto-Handler's Gauntlets;372;None;Mail Hands (Agility);Heroic
 59472;Proto-Handler's Gauntlets;359;None;Mail Hands (Agility);Normal
 65069;Quickstep Galoshes;372;None;Cloth Feet (Intellect);Heroic
@@ -1027,8 +1026,8 @@ ID;Item;Item Level;Classes;Category;Version
 63041;Reins of the Drake of the South Wind;70;None;ETC;Normal
 65106;Ring of Rivalry;372;None;Finger (Strength w/ Expertise);Heroic
 59518;Ring of Rivalry;359;None;Finger (Strength w/ Expertise);Normal
-67131;Ritssyn's Ruminous Drape;359;None;ETC (Intellect);Normal
-67131;Ritssyn's Ruminous Drape;359;None;ETC (Intellect);Normal
+67131;Ritssyn's Ruminous Drape;359;None;Back (Intellect);Normal
+67131;Ritssyn's Ruminous Drape;359;None;Back (Intellect);Normal
 58268;Roasted Beef;80;None;ETC;Normal
 58268;Roasted Beef;80;None;ETC;Normal
 58268;Roasted Beef;80;None;ETC;Normal
@@ -1050,9 +1049,9 @@ ID;Item;Item Level;Classes;Category;Version
 70327;Ruthless Gladiator's Armplates of Proficiency;384;Warrior, Paladin, Death Knight;Plate Wrist (PvP);Normal
 70350;Ruthless Gladiator's Armwraps of Accuracy;384;Rogue, Druid;Leather Wrist (PvP);Normal
 70352;Ruthless Gladiator's Armwraps of Alacrity;384;Rogue, Druid;Leather Wrist (PvP);Normal
-70399;Ruthless Gladiator's Badge of Conquest;384;None;Trinket (PvP);Normal
-70401;Ruthless Gladiator's Badge of Dominance;384;None;Trinket (PvP);Normal
-70400;Ruthless Gladiator's Badge of Victory;384;None;Trinket (PvP);Normal
+70399;Ruthless Gladiator's Badge of Conquest;384;None;Trinket;Normal
+70401;Ruthless Gladiator's Badge of Dominance;384;None;Trinket;Normal
+70400;Ruthless Gladiator's Badge of Victory;384;None;Trinket;Normal
 70370;Ruthless Gladiator's Band of Accuracy;384;Paladin, Priest, Shaman, Mage, Warlock, Druid;Finger (PvP);Normal
 70369;Ruthless Gladiator's Band of Cruelty;384;Paladin, Priest, Shaman, Mage, Warlock, Druid;Finger (PvP);Normal
 70371;Ruthless Gladiator's Band of Meditation;384;Paladin, Priest, Shaman, Druid;Finger (PvP);Normal
@@ -1064,16 +1063,16 @@ ID;Item;Item Level;Classes;Category;Version
 70348;Ruthless Gladiator's Boots of Cruelty;384;Rogue, Druid;Leather Feet (PvP);Normal
 70334;Ruthless Gladiator's Bracers of Meditation;384;Paladin;Plate Wrist (PvP);Normal
 70325;Ruthless Gladiator's Bracers of Prowess;384;Paladin;Plate Wrist (PvP);Normal
-70386;Ruthless Gladiator's Cape of Cruelty;384;Hunter, Rogue, Shaman, Druid;ETC (PvP);Normal
-70385;Ruthless Gladiator's Cape of Prowess;384;Hunter, Rogue, Shaman, Druid;ETC (PvP);Normal
+70386;Ruthless Gladiator's Cape of Cruelty;384;Hunter, Rogue, Shaman, Druid;Back (PvP);Normal
+70385;Ruthless Gladiator's Cape of Prowess;384;Hunter, Rogue, Shaman, Druid;Back (PvP);Normal
 70260;Ruthless Gladiator's Chain Gauntlets;384;Hunter;Mail Hands (PvP);Normal
 70262;Ruthless Gladiator's Chain Leggings;384;Hunter;Mail Legs (PvP);Normal
 70382;Ruthless Gladiator's Choker of Accuracy;384;Warrior, Paladin, Death Knight;Neck (PvP);Normal
 70381;Ruthless Gladiator's Choker of Proficiency;384;Warrior, Paladin, Death Knight;Neck (PvP);Normal
 70319;Ruthless Gladiator's Clasp of Cruelty;384;Paladin;Plate Waist (PvP);Normal
 70332;Ruthless Gladiator's Clasp of Meditation;384;Paladin;Plate Waist (PvP);Normal
-70383;Ruthless Gladiator's Cloak of Alacrity;384;Warrior, Paladin, Death Knight;ETC (PvP);Normal
-70384;Ruthless Gladiator's Cloak of Prowess;384;Warrior, Paladin, Death Knight;ETC (PvP);Normal
+70383;Ruthless Gladiator's Cloak of Alacrity;384;Warrior, Paladin, Death Knight;Back (PvP);Normal
+70384;Ruthless Gladiator's Cloak of Prowess;384;Warrior, Paladin, Death Knight;Back (PvP);Normal
 70362;Ruthless Gladiator's Cord of Accuracy;384;Priest, Mage, Warlock;Cloth Waist (PvP);Normal
 70360;Ruthless Gladiator's Cord of Cruelty;384;Priest, Mage, Warlock;Cloth Waist (PvP);Normal
 70368;Ruthless Gladiator's Cord of Meditation;384;Priest, Mage, Warlock;Cloth Waist (PvP);Normal
@@ -1082,14 +1081,14 @@ ID;Item;Item Level;Classes;Category;Version
 70365;Ruthless Gladiator's Cuffs of Prowess;384;Priest, Mage, Warlock;Cloth Wrist (PvP);Normal
 70279;Ruthless Gladiator's Dragonhide Gloves;384;Druid;Leather Hands (PvP);Normal
 70281;Ruthless Gladiator's Dragonhide Legguards;384;Druid;Leather Legs (PvP);Normal
-70387;Ruthless Gladiator's Drape of Diffusion;384;Paladin, Priest, Shaman, Mage, Warlock, Druid;ETC (PvP);Normal
-70389;Ruthless Gladiator's Drape of Meditation;384;Paladin, Priest, Shaman, Druid;ETC (PvP);Normal
-70388;Ruthless Gladiator's Drape of Prowess;384;Paladin, Priest, Shaman, Mage, Warlock, Druid;ETC (PvP);Normal
+70387;Ruthless Gladiator's Drape of Diffusion;384;Paladin, Priest, Shaman, Mage, Warlock, Druid;Back (PvP);Normal
+70389;Ruthless Gladiator's Drape of Meditation;384;Paladin, Priest, Shaman, Druid;Back (PvP);Normal
+70388;Ruthless Gladiator's Drape of Prowess;384;Paladin, Priest, Shaman, Mage, Warlock, Druid;Back (PvP);Normal
 70245;Ruthless Gladiator's Dreadplate Gauntlets;384;Death Knight;Plate Hands (PvP);Normal
 70247;Ruthless Gladiator's Dreadplate Legguards;384;Death Knight;Plate Legs (PvP);Normal
-70396;Ruthless Gladiator's Emblem of Cruelty;384;None;Trinket ;Normal
-70397;Ruthless Gladiator's Emblem of Meditation;384;None;Trinket ;Normal
-70398;Ruthless Gladiator's Emblem of Tenacity;384;None;Trinket (PvP);Normal
+70396;Ruthless Gladiator's Emblem of Cruelty;384;None;Trinket;Normal
+70397;Ruthless Gladiator's Emblem of Meditation;384;None;Trinket;Normal
+70398;Ruthless Gladiator's Emblem of Tenacity;384;None;Trinket;Normal
 70314;Ruthless Gladiator's Felweave Handguards;384;Warlock;Cloth Hands (PvP);Normal
 70316;Ruthless Gladiator's Felweave Trousers;384;Warlock;Cloth Legs (PvP);Normal
 70358;Ruthless Gladiator's Footguards of Alacrity;384;Druid;Leather Feet (PvP);Normal
@@ -1098,9 +1097,9 @@ ID;Item;Item Level;Classes;Category;Version
 70326;Ruthless Gladiator's Girdle of Prowess;384;Warrior, Paladin, Death Knight;Plate Waist (PvP);Normal
 70324;Ruthless Gladiator's Greaves of Alacrity;384;Paladin;Plate Feet (PvP);Normal
 70333;Ruthless Gladiator's Greaves of Meditation;384;Paladin;Plate Feet (PvP);Normal
-70404;Ruthless Gladiator's Insignia of Conquest;384;None;Trinket (PvP);Normal
-70402;Ruthless Gladiator's Insignia of Dominance;384;None;Trinket (PvP);Normal
-70403;Ruthless Gladiator's Insignia of Victory;384;None;Trinket (PvP);Normal
+70404;Ruthless Gladiator's Insignia of Conquest;384;None;Trinket;Normal
+70402;Ruthless Gladiator's Insignia of Dominance;384;None;Trinket;Normal
+70403;Ruthless Gladiator's Insignia of Victory;384;None;Trinket;Normal
 70284;Ruthless Gladiator's Kodohide Gloves;384;Druid;Leather Hands (PvP);Normal
 70286;Ruthless Gladiator's Kodohide Legguards;384;Druid;Leather Legs (PvP);Normal
 70295;Ruthless Gladiator's Leather Gloves;384;Rogue;Leather Hands (PvP);Normal
@@ -1111,12 +1110,12 @@ ID;Item;Item Level;Classes;Category;Version
 70336;Ruthless Gladiator's Links of Cruelty;384;Hunter, Shaman;Mail Waist (PvP);Normal
 70275;Ruthless Gladiator's Mail Gauntlets;384;Shaman;Mail Hands (PvP);Normal
 70277;Ruthless Gladiator's Mail Leggings;384;Shaman;Mail Legs (PvP);Normal
-70390;Ruthless Gladiator's Medallion of Cruelty;384;None;Trinket ;Normal
-70393;Ruthless Gladiator's Medallion of Cruelty;384;None;Trinket ;Normal
-70391;Ruthless Gladiator's Medallion of Meditation;384;None;Trinket ;Normal
-70394;Ruthless Gladiator's Medallion of Meditation;384;None;Trinket ;Normal
-70392;Ruthless Gladiator's Medallion of Tenacity;384;None;Trinket (PvP);Normal
-70395;Ruthless Gladiator's Medallion of Tenacity;384;None;Trinket (PvP);Normal
+70390;Ruthless Gladiator's Medallion of Cruelty;384;None;Trinket;Normal
+70393;Ruthless Gladiator's Medallion of Cruelty;384;None;Trinket;Normal
+70391;Ruthless Gladiator's Medallion of Meditation;384;None;Trinket;Normal
+70394;Ruthless Gladiator's Medallion of Meditation;384;None;Trinket;Normal
+70392;Ruthless Gladiator's Medallion of Tenacity;384;None;Trinket;Normal
+70395;Ruthless Gladiator's Medallion of Tenacity;384;None;Trinket;Normal
 70304;Ruthless Gladiator's Mooncloth Gloves;384;Priest;Cloth Hands (PvP);Normal
 70306;Ruthless Gladiator's Mooncloth Leggings;384;Priest;Cloth Legs (PvP);Normal
 70380;Ruthless Gladiator's Necklace of Proficiency;384;Hunter, Rogue, Shaman, Druid;Neck (PvP);Normal
@@ -1173,11 +1172,11 @@ ID;Item;Item Level;Classes;Category;Version
 59220;Security Measure Alpha;359;None;Finger (Healing);Normal
 65127;Shackles of the End of Days;372;None;Plate Wrist (Healing);Heroic
 59497;Shackles of the End of Days;359;None;Plate Wrist (Healing);Normal
-67069;Shade of Death;333;None;ETC (Tank);Normal
-67069;Shade of Death;333;None;ETC (Tank);Normal
-67069;Shade of Death;333;None;ETC (Tank);Normal
-65018;Shadow of Dread;372;None;ETC (Intellect);Heroic
-59457;Shadow of Dread;359;None;ETC (Intellect);Normal
+67069;Shade of Death;333;None;Back (Tank);Normal
+67069;Shade of Death;333;None;Back (Tank);Normal
+67069;Shade of Death;333;None;Back (Tank);Normal
+65018;Shadow of Dread;372;None;Back (Intellect);Heroic
+59457;Shadow of Dread;359;None;Back (Intellect);Normal
 65019;Shadowblaze Robes;372;None;Cloth Chest (Intellect w/ Hit);Heroic
 59454;Shadowblaze Robes;359;None;Cloth Chest (Intellect w/ Hit);Normal
 60248;Shadowflame Handwraps;359;Warlock;Cloth Hands (Intellect);Normal
@@ -1185,7 +1184,7 @@ ID;Item;Item Level;Classes;Category;Version
 59468;Shadowforge's Lightbound Smock;359;None;Cloth Chest (Healing);Normal
 65145;Shalug'doom, the Axe of Unmaking;372;None;Two-Hand Axe (Strength w/ Expertise);Heroic
 59330;Shalug'doom, the Axe of Unmaking;359;None;Two-Hand Axe (Strength w/ Expertise);Normal
-60233;Shard of Woe;379;None;Trinket ;Normal
+60233;Shard of Woe;379;None;Trinket;Normal
 62063;Shattered War Mace;175;None;Two-Hand Mace;Normal
 62063;Shattered War Mace;175;None;Two-Hand Mace;Normal
 62063;Shattered War Mace;175;None;Two-Hand Mace;Normal
@@ -1195,7 +1194,7 @@ ID;Item;Item Level;Classes;Category;Version
 65087;Shoulders of the Forlorn Protector;85;Warrior, Hunter, Shaman;ETC;Normal
 65089;Shoulders of the Forlorn Vanquisher;85;Rogue, Death Knight, Mage, Druid;ETC;Normal
 65089;Shoulders of the Forlorn Vanquisher;85;Rogue, Death Knight, Mage, Druid;ETC;Normal
-60232;Shroud of Endless Grief;379;None;ETC (Intellect);Normal
+60232;Shroud of Endless Grief;379;None;Back (Intellect);Normal
 67129;Signet of High Arcanist Savor;359;None;Finger (Intellect w/ Hit);Normal
 65123;Signet of the Fifth Circle;372;None;Finger (Intellect);Heroic
 59501;Signet of the Fifth Circle;359;None;Finger (Intellect);Normal
@@ -1276,8 +1275,8 @@ ID;Item;Item Level;Classes;Category;Version
 63498;Soul Breath Belt;359;None;Cloth Waist (Random);Normal
 65383;Soul Breath Leggings;372;None;Cloth Legs (Random);Heroic
 63507;Soul Breath Leggings;359;None;Cloth Legs (Random);Normal
-66994;Soul's Anguish;333;None;Trinket (Strength w/ Hit);Normal
-66994;Soul's Anguish;333;None;Trinket (Strength w/ Hit);Normal
+66994;Soul's Anguish;333;None;Trinket;Normal
+66994;Soul's Anguish;333;None;Trinket;Normal
 58256;Sparkling Oasis Water;80;None;ETC;Normal
 58256;Sparkling Oasis Water;80;None;ETC;Normal
 66976;Spaulders of the Savage Beast;333;None;Mail Shoulder (Agility);Normal
@@ -1332,8 +1331,8 @@ ID;Item;Item Level;Classes;Category;Version
 68127;Stormwake, the Tempest's Reach;359;None;Main Hand Sword (Random);Normal
 68128;Stormwake, the Tempest's Reach;359;None;Main Hand Sword (Random);Normal
 68129;Stormwake, the Tempest's Reach;359;None;Main Hand Sword (Random);Normal
-65048;Symbiotic Worm;372;None;Trinket ;Heroic
-59332;Symbiotic Worm;359;None;Trinket ;Normal
+65048;Symbiotic Worm;372;None;Trinket;Heroic
+59332;Symbiotic Worm;359;None;Trinket;Normal
 55630;Talondeep Belt;312;None;Mail Waist (Random);Normal
 55630;Talondeep Belt;312;None;Mail Waist (Random);Normal
 55630;Talondeep Belt;312;None;Mail Waist (Random);Normal
@@ -1366,13 +1365,13 @@ ID;Item;Item Level;Classes;Category;Version
 59503;Terrastra's Legguards;359;None;Plate Legs (Strength w/ Hit);Normal
 65058;Themios the Darkbringer;372;None;Ranged Bow (Agility);Heroic
 59320;Themios the Darkbringer;359;None;Ranged Bow (Agility);Normal
-65105;Theralion's Mirror;372;None;Trinket (Intellect);Heroic
-59519;Theralion's Mirror;359;None;Trinket (Intellect);Normal
+65105;Theralion's Mirror;372;None;Trinket;Heroic
+59519;Theralion's Mirror;359;None;Trinket;Normal
 59460;Theresa's Booklight;359;None;Ranged Wand (Intellect w/ Hit);Normal
 55404;Thondroril Amulet;306;None;Neck (Random);Normal
 55404;Thondroril Amulet;306;None;Neck (Random);Normal
-55314;Thondroril Cloak;306;None;ETC (Random);Normal
-55314;Thondroril Cloak;306;None;ETC (Random);Normal
+55314;Thondroril Cloak;306;None;Back (Random);Normal
+55314;Thondroril Cloak;306;None;Back (Random);Normal
 55377;Thondroril Crystal;306;None;Held In Off-hand (Random);Normal
 55377;Thondroril Crystal;306;None;Held In Off-hand (Random);Normal
 55422;Thondroril Ring;306;None;Finger (Random);Normal
@@ -1400,8 +1399,8 @@ ID;Item;Item Level;Classes;Category;Version
 55620;Thornsnarl Spaulders;306;None;Mail Shoulder (Random);Normal
 55575;Thornsnarl Vest;306;None;Mail Chest (Random);Normal
 55575;Thornsnarl Vest;306;None;Mail Chest (Random);Normal
-67119;Thousand Bandage Drape;325;None;ETC (Healing);Normal
-67119;Thousand Bandage Drape;325;None;ETC (Healing);Normal
+67119;Thousand Bandage Drape;325;None;Back (Healing);Normal
+67119;Thousand Bandage Drape;325;None;Back (Healing);Normal
 65370;Thunder Wall Belt;372;None;Plate Waist (Random);Heroic
 63491;Thunder Wall Belt;359;None;Plate Waist (Random);Normal
 65380;Thunder Wall Greaves;372;None;Plate Legs (Random);Heroic
@@ -1427,12 +1426,12 @@ ID;Item;Item Level;Classes;Category;Version
 63680;Twilight's Hammer;359;None;Main Hand Mace (Intellect);Normal
 68600;Uhn'agh Fash, the Darkest Betrayal;372;None;One-Hand Dagger (Agility);Heroic
 59494;Uhn'agh Fash, the Darkest Betrayal;359;None;One-Hand Dagger (Agility);Normal
-59520;Unheeded Warning;359;None;Trinket (Agility);Normal
+59520;Unheeded Warning;359;None;Trinket;Normal
 65112;Valiona's Medallion;372;None;Neck (Intellect);Heroic
 59512;Valiona's Medallion;359;None;Neck (Intellect);Normal
-65109;Vial of Stolen Memories;372;None;Trinket (Tank);Heroic
-59515;Vial of Stolen Memories;359;None;Trinket (Tank);Normal
-61033;Vicious Gladiator's Badge of Conquest;365;None;Trinket (PvP);Normal
+65109;Vial of Stolen Memories;372;None;Trinket;Heroic
+59515;Vial of Stolen Memories;359;None;Trinket;Normal
+61033;Vicious Gladiator's Badge of Conquest;365;None;Trinket;Normal
 60647;Vicious Gladiator's Band of Accuracy;365;Paladin, Priest, Shaman, Mage, Warlock, Druid;Finger (PvP);Normal
 60645;Vicious Gladiator's Band of Cruelty;365;Paladin, Priest, Shaman, Mage, Warlock, Druid;Finger (PvP);Normal
 60649;Vicious Gladiator's Band of Meditation;365;Paladin, Priest, Shaman, Druid;Finger (PvP);Normal
@@ -1440,16 +1439,16 @@ ID;Item;Item Level;Classes;Category;Version
 60580;Vicious Gladiator's Belt of Meditation;365;Druid;Leather Waist (PvP);Normal
 60593;Vicious Gladiator's Boots of Alacrity;365;Rogue, Druid;Leather Feet (PvP);Normal
 60587;Vicious Gladiator's Boots of Cruelty;365;Rogue, Druid;Leather Feet (PvP);Normal
-60783;Vicious Gladiator's Cape of Cruelty;365;Hunter, Rogue, Shaman, Druid;ETC (PvP);Normal
-60779;Vicious Gladiator's Cape of Prowess;365;Hunter, Rogue, Shaman, Druid;ETC (PvP);Normal
+60783;Vicious Gladiator's Cape of Cruelty;365;Hunter, Rogue, Shaman, Druid;Back (PvP);Normal
+60779;Vicious Gladiator's Cape of Prowess;365;Hunter, Rogue, Shaman, Druid;Back (PvP);Normal
 60424;Vicious Gladiator's Chain Gauntlets;365;Hunter;Mail Hands (PvP);Normal
 60426;Vicious Gladiator's Chain Leggings;365;Hunter;Mail Legs (PvP);Normal
 60673;Vicious Gladiator's Choker of Accuracy;365;Warrior, Paladin, Death Knight;Neck (PvP);Normal
 60670;Vicious Gladiator's Choker of Proficiency;365;Warrior, Paladin, Death Knight;Neck (PvP);Normal
 60505;Vicious Gladiator's Clasp of Cruelty;365;Paladin;Plate Waist (PvP);Normal
 60539;Vicious Gladiator's Clasp of Meditation;365;Paladin;Plate Waist (PvP);Normal
-60776;Vicious Gladiator's Cloak of Alacrity;365;Warrior, Paladin, Death Knight;ETC (PvP);Normal
-60778;Vicious Gladiator's Cloak of Prowess;365;Warrior, Paladin, Death Knight;ETC (PvP);Normal
+60776;Vicious Gladiator's Cloak of Alacrity;365;Warrior, Paladin, Death Knight;Back (PvP);Normal
+60778;Vicious Gladiator's Cloak of Prowess;365;Warrior, Paladin, Death Knight;Back (PvP);Normal
 60626;Vicious Gladiator's Cord of Accuracy;365;Priest, Mage, Warlock;Cloth Waist (PvP);Normal
 60612;Vicious Gladiator's Cord of Cruelty;365;Priest, Mage, Warlock;Cloth Waist (PvP);Normal
 60637;Vicious Gladiator's Cord of Meditation;365;Priest, Mage, Warlock;Cloth Waist (PvP);Normal
@@ -1457,14 +1456,14 @@ ID;Item;Item Level;Classes;Category;Version
 60634;Vicious Gladiator's Cuffs of Prowess;365;Priest, Mage, Warlock;Cloth Wrist (PvP);Normal
 60443;Vicious Gladiator's Dragonhide Gloves;365;Druid;Leather Hands (PvP);Normal
 60445;Vicious Gladiator's Dragonhide Legguards;365;Druid;Leather Legs (PvP);Normal
-60786;Vicious Gladiator's Drape of Diffusion;365;Paladin, Priest, Shaman, Mage, Warlock, Druid;ETC (PvP);Normal
-60788;Vicious Gladiator's Drape of Meditation;365;Paladin, Priest, Shaman, Druid;ETC (PvP);Normal
-60787;Vicious Gladiator's Drape of Prowess;365;Paladin, Priest, Shaman, Mage, Warlock, Druid;ETC (PvP);Normal
+60786;Vicious Gladiator's Drape of Diffusion;365;Paladin, Priest, Shaman, Mage, Warlock, Druid;Back (PvP);Normal
+60788;Vicious Gladiator's Drape of Meditation;365;Paladin, Priest, Shaman, Druid;Back (PvP);Normal
+60787;Vicious Gladiator's Drape of Prowess;365;Paladin, Priest, Shaman, Mage, Warlock, Druid;Back (PvP);Normal
 60409;Vicious Gladiator's Dreadplate Gauntlets;365;Death Knight;Plate Hands (PvP);Normal
 60411;Vicious Gladiator's Dreadplate Legguards;365;Death Knight;Plate Legs (PvP);Normal
-61026;Vicious Gladiator's Emblem of Cruelty;365;None;Trinket ;Normal
-61031;Vicious Gladiator's Emblem of Meditation;365;None;Trinket ;Normal
-61032;Vicious Gladiator's Emblem of Tenacity;365;None;Trinket (PvP);Normal
+61026;Vicious Gladiator's Emblem of Cruelty;365;None;Trinket;Normal
+61031;Vicious Gladiator's Emblem of Meditation;365;None;Trinket;Normal
+61032;Vicious Gladiator's Emblem of Tenacity;365;None;Trinket;Normal
 60478;Vicious Gladiator's Felweave Handguards;365;Warlock;Cloth Hands (PvP);Normal
 60480;Vicious Gladiator's Felweave Trousers;365;Warlock;Cloth Legs (PvP);Normal
 60607;Vicious Gladiator's Footguards of Alacrity;365;Druid;Leather Feet (PvP);Normal
@@ -1473,9 +1472,9 @@ ID;Item;Item Level;Classes;Category;Version
 60521;Vicious Gladiator's Girdle of Prowess;365;Warrior, Paladin, Death Knight;Plate Waist (PvP);Normal
 60516;Vicious Gladiator's Greaves of Alacrity;365;Paladin;Plate Feet (PvP);Normal
 60540;Vicious Gladiator's Greaves of Meditation;365;Paladin;Plate Feet (PvP);Normal
-61047;Vicious Gladiator's Insignia of Conquest;365;None;Trinket (PvP);Normal
-61045;Vicious Gladiator's Insignia of Dominance;365;None;Trinket (PvP);Normal
-61046;Vicious Gladiator's Insignia of Victory;365;None;Trinket (PvP);Normal
+61047;Vicious Gladiator's Insignia of Conquest;365;None;Trinket;Normal
+61045;Vicious Gladiator's Insignia of Dominance;365;None;Trinket;Normal
+61046;Vicious Gladiator's Insignia of Victory;365;None;Trinket;Normal
 60448;Vicious Gladiator's Kodohide Gloves;365;Druid;Leather Hands (PvP);Normal
 60450;Vicious Gladiator's Kodohide Legguards;365;Druid;Leather Legs (PvP);Normal
 60459;Vicious Gladiator's Leather Gloves;365;Rogue;Leather Hands (PvP);Normal
@@ -1486,12 +1485,12 @@ ID;Item;Item Level;Classes;Category;Version
 60555;Vicious Gladiator's Links of Cruelty;365;Hunter, Shaman;Mail Waist (PvP);Normal
 60439;Vicious Gladiator's Mail Gauntlets;365;Shaman;Mail Hands (PvP);Normal
 60441;Vicious Gladiator's Mail Leggings;365;Shaman;Mail Legs (PvP);Normal
-60794;Vicious Gladiator's Medallion of Cruelty;365;None;Trinket ;Normal
-60801;Vicious Gladiator's Medallion of Cruelty;365;None;Trinket ;Normal
-60799;Vicious Gladiator's Medallion of Meditation;365;None;Trinket ;Normal
-60806;Vicious Gladiator's Medallion of Meditation;365;None;Trinket ;Normal
-60800;Vicious Gladiator's Medallion of Tenacity;365;None;Trinket (PvP);Normal
-60807;Vicious Gladiator's Medallion of Tenacity;365;None;Trinket (PvP);Normal
+60794;Vicious Gladiator's Medallion of Cruelty;365;None;Trinket;Normal
+60801;Vicious Gladiator's Medallion of Cruelty;365;None;Trinket;Normal
+60799;Vicious Gladiator's Medallion of Meditation;365;None;Trinket;Normal
+60806;Vicious Gladiator's Medallion of Meditation;365;None;Trinket;Normal
+60800;Vicious Gladiator's Medallion of Tenacity;365;None;Trinket;Normal
+60807;Vicious Gladiator's Medallion of Tenacity;365;None;Trinket;Normal
 60468;Vicious Gladiator's Mooncloth Gloves;365;Priest;Cloth Hands (PvP);Normal
 60470;Vicious Gladiator's Mooncloth Leggings;365;Priest;Cloth Legs (PvP);Normal
 60669;Vicious Gladiator's Necklace of Proficiency;365;Hunter, Rogue, Shaman, Druid;Neck (PvP);Normal
@@ -1556,7 +1555,7 @@ ID;Item;Item Level;Classes;Category;Version
 77031;Wyrmstalker's Legguards;397;Hunter;Mail Legs (Agility);Normal
 65079;X-Tron Duct Tape;372;None;Cloth Waist (Healing);Heroic
 59217;X-Tron Duct Tape;359;None;Cloth Waist (Healing);Normal
-67142;Zom's Electrostatic Cloak;359;None;ETC (Tank);Normal
-67142;Zom's Electrostatic Cloak;359;None;ETC (Tank);Normal
+67142;Zom's Electrostatic Cloak;359;None;Back (Tank);Normal
+67142;Zom's Electrostatic Cloak;359;None;Back (Tank);Normal
 67124;Zulian Swirling Shield;333;None;Off Hand Shield (Intellect);Normal
 67124;Zulian Swirling Shield;333;None;Off Hand Shield (Intellect);Normal

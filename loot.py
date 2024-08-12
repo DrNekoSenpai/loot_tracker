@@ -37,7 +37,7 @@ if up_to_date() is False:
     exit(1)
 
 class Item: 
-    def __init__(self, id:int, name:str, ilvl:int, classes:Union[list, str], category:str, bind_type:str, version:str): 
+    def __init__(self, id:int, name:str, ilvl:int, classes:Union[list, str], category:str, version:str): 
         """
         Create a log entry. ID;Item;Item Level;Classes;Category;Bind;Version
         """
@@ -344,7 +344,7 @@ def award_loot(players):
         player._raid_log.append(log)
         player._history[slot_category].append(log)
 
-    elif slot_category != "ETC" or item_match.name in exceptions: 
+    else: 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
         if off_spec == "y": roll_type = "OS"
         else: roll_type = "MS"
@@ -352,13 +352,6 @@ def award_loot(players):
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
         if not off_spec == "y": player._regular_plusses += 1
-
-        player._history[slot_category].append(log)
-
-    else: 
-        roll_type = "OS"
-        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-        player._raid_log.append(log)
 
         player._history[slot_category].append(log)
 

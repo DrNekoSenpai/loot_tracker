@@ -3,12 +3,13 @@ from tqdm import tqdm
 
 parser = argparse.ArgumentParser(description="Scrape item data from WoWHead.")
 parser.add_argument("--force", action="store_true", help="Force the script to start from the beginning.")
-parser.add_argument("--html", action="store_true", help="Save the HTML of all items instead.")
+parser.add_argument("--html", nargs="?", const='all', help="Save the HTML of all items or the specified item if an argument is provided.")
+parser.add_argument("--output", default="all-items-cata.scsv", help="Output file name.")
 args = parser.parse_args()
 
 def armor_subtype(text, base_type): 
     # If the base type is a trinket, just return it as is
-    if base_type == "Trinket": return "Trinket"
+    if base_type.strip().lower() == "trinket": return "Trinket"
 
     text = text.lower()
 
@@ -82,19 +83,37 @@ if __name__ == "__main__":
     # Sort cata_items and cata_ids based on the items; by item name ascending, then by ID ascending
     cata_items, cata_ids = zip(*sorted(zip(cata_items, cata_ids)))
 
+    tier_set_tokens = [
+        "Chest of the Forlorn Conqueror", 
+        "Chest of the Forlorn Protector",
+        "Chest of the Forlorn Vanquisher",
+        "Mantle of the Forlorn Conqueror",
+        "Mantle of the Forlorn Protector",
+        "Mantle of the Forlorn Vanquisher",
+        "Leggings of the Forlorn Conqueror",
+        "Leggings of the Forlorn Protector",
+        "Leggings of the Forlorn Vanquisher",
+        "Crown of the Forlorn Conqueror",
+        "Crown of the Forlorn Protector",
+        "Crown of the Forlorn Vanquisher",
+        "Shoulders of the Forlorn Conqueror",
+        "Shoulders of the Forlorn Protector",
+        "Shoulders of the Forlorn Vanquisher",
+    ]
+
     # If the argparse flag is set, start from the beginning
     if args.force:
-        with open("all-items-cata.scsv", "w", encoding="utf-8") as all_items_file:
+        with open(args.output, "w", encoding="utf-8") as all_items_file:
             all_items_file.write("ID;Item;Item Level;Classes;Category;Version\n")
 
     else: 
-        if not os.path.exists("all-items-cata.scsv"):
-            with open("all-items-cata.scsv", "w", encoding="utf-8") as all_items_file:
+        if not os.path.exists(args.output):
+            with open(args.output, "w", encoding="utf-8") as all_items_file:
                 all_items_file.write("ID;Item;Item Level;Classes;Category;Version\n")
 
         else: 
             # Open the file and figure out where we left off
-            with open("all-items-cata.scsv", "r", encoding="utf-8") as all_items_file:
+            with open(args.output, "r", encoding="utf-8") as all_items_file:
                 lines = all_items_file.readlines()
                 last_item_id = lines[-1].split(";")[0]
                 last_item_index = cata_ids.index(last_item_id)
@@ -108,13 +127,13 @@ if __name__ == "__main__":
     classes_pattern = re.compile(r'<a href="/cata/class=\d+/.*?" class="c\d+">(.*?)</a>')
 
     armor_type_pattern = re.compile(r"<span class=\"q1\">(Cloth|Leather|Mail|Plate)<\/span>")
-    category_pattern = re.compile(r'<table width="100%"><tr><td>(.*?)</td><th>.*<span class="q1">(.*?)</span>')
+    category_pattern = re.compile(r'<table width="100%"><tr><td>(.*?)</td>(?:<th>.*<span class="q1">(.*?)</span>)?')
 
     unique_items = sorted(list(set(cata_items)))
 
     for item in tqdm(unique_items):
         item_written = False
-        with open(f"all-items-cata.scsv", "a", encoding="utf-8") as all_items_file:
+        with open(args.output, "a", encoding="utf-8") as all_items_file:
             count = cata_items.count(item)
 
             if count == 1: 
@@ -131,15 +150,13 @@ if __name__ == "__main__":
                 category = re.findall(category_pattern, text)[0] if category_pattern.search(text) else "ETC"
                 if category[1] in ["Cloth", "Leather", "Mail", "Plate"]: category = (category[1], category[0])
                 if type(category) is tuple: category = " ".join(category)
-                category = category.replace("  ", " ")
+
+                if item in tier_set_tokens: category = "Tier Set Token"
 
                 text = item_pattern.search(text).group(2)
 
                 subcategory = armor_subtype(text, category)
-                try: 
-                    if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
-                except: 
-                    continue
+                subcategory = subcategory.replace("  ", " ")
 
                 if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
                 else: classes = None
@@ -204,7 +221,7 @@ if __name__ == "__main__":
 
                 item_written = True
         
-        if not item_written or args.html: 
+        if not item_written or args.html == item_id or args.html == "all": 
             # print(f"{item} was not written to the file.")
             with open(f"./items/{item_id}_{item_url}.html", "w", encoding="utf-8") as item_file:
                 item_file.write(text)
