@@ -1,4 +1,4 @@
-import pickle, re, argparse, os, time, pyautogui, subprocess, pyperclip
+import pickle, re, argparse, os, time, pyautogui, subprocess, pytesseract
 from typing import List, Union
 from datetime import datetime, timedelta
 from contextlib import redirect_stdout as redirect
@@ -189,7 +189,181 @@ def regular_keyboard(input_string):
     pattern = r"^[A-Za-z0-9 \~!@#$%^&*()\-=\[\]{}|;:'\",.<>/?\\_+]*$"
     return re.match(pattern, input_string) is not None 
 
-def award_loot(players): 
+def award_loot(players):
+    left, right, up, down = 1620, 1820, 6, 53
+    image = pyautogui.screenshot(region=(left, up, right-left, down-up))
+    whitelist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-,:' "
+    loot_text = pytesseract.image_to_string(image, config=f"-c tessedit_char_whitelist={whitelist}").strip()
+
+    loot_text = loot_text.replace("’", "'")
+    loot_text = loot_text.replace("\n", " ")
+
+    if loot_text: print(f"Item found: {loot_text}")
+    else: 
+        print("No item found. Please double-check that we are rolling off an item. Aborting.")
+        return players
+
+    item_matches = []
+    for i in all_items.values(): 
+        if i.name.lower() in loot_text.lower() or loot_text.lower() in i.name.lower(): 
+            item_matches.append(i)
+
+    if len(item_matches) == 0:
+        print("No matches found. Please double-check that said item exists in the database. Aborting.")
+        return players
+
+    elif len(item_matches) == 1:
+        # We'll select this match, and then move on.
+        item_match = item_matches[0]
+
+    elif len(item_matches) > 1:
+        # We'll print all of the matches, and ask them to select one.
+        print("Multiple matches found. Please select one of the following:")
+        for i in range(len(item_matches)):
+            print(f"{i+1}. {item_matches[i].name} ({item_matches[i].ilvl})")
+
+        # We'll ask the user to select a number.
+        sel = input("Select a number: ")
+        try: 
+            sel = int(sel)
+            if sel < 1 or sel > len(item_matches):
+                print("Invalid integer input.")
+                return players
+            
+        except:
+            print("Invalid non-convertible input.")
+            return players
+
+        # We'll select this match, and then move on.
+        item_match = item_matches[sel-1]
+        print("")
+
+    if "Random" in item_match.category: 
+        prefix = input("Item subcategory is random. What's the prefix? ")
+        item_match.category = match_suffix(prefix, item_match.category)
+        item_match.name = f"{item_match.name} of the {prefix}"
+
+    slot_category = match_category(item_match.category)
+    item_match.category = item_match.category.replace(" (Random)", "")
+
+    for p in players: 
+        # Skip this person if they're not here.
+        if p._attendance == False: continue
+
+    print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
+    if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
+
+    ready = input("Ready to announce? (y/n): ").lower()
+    if ready == "y": 
+        pyautogui.moveTo(1920/2, 1080/2)
+        pyautogui.click()
+        time.sleep(0.25)
+
+        pyautogui.write("/")
+        time.sleep(0.1)
+        pyautogui.write("rw")
+        time.sleep(0.1)
+        pyautogui.press("space")
+        time.sleep(0.1)
+        pyautogui.write(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
+        time.sleep(0.1)
+        pyautogui.press("enter")
+        time.sleep(0.25)
+
+        if item_match.classes != "None":
+            pyautogui.write("/")
+            time.sleep(0.1)
+            pyautogui.write("rw")
+            time.sleep(0.1)
+            pyautogui.press("space")
+            time.sleep(0.1)
+            pyautogui.write(f"Classes: {', '.join(item_match.classes)}")
+            time.sleep(0.1)
+            pyautogui.press("enter")
+            time.sleep(0.25)
+
+    print("")
+    # We'll ask the user to input the name of the person who won the roll. 
+    name = input("Who won the roll? ").lower()
+    if name == "": return players
+
+    player_matches = []
+    for p in players:
+        if p._attendance == False: continue
+        if name in p.alias.lower(): 
+            player_matches.append(p)
+
+    if len(player_matches) == 0:
+        print("No matches found. Please double-check the player name and try again.")
+        return players
+    
+    elif len(player_matches) == 1:
+        # We'll select this match, and then move on.
+        player = player_matches[0]
+
+    elif len(player_matches) > 1:
+        # We'll print all of the matches, and ask them to select one.
+        print("Multiple matches found. Please select one of the following:")
+        for i in range(len(player_matches)):
+            print(f"{i+1}. {player_matches[i].alias}")
+
+        # We'll ask the user to select a number.
+        sel = input("Select a number: ")
+        try:
+            sel = int(sel)
+            if sel < 1 or sel > len(player_matches):
+                print("Invalid integer input.")
+                return players
+            
+        except:
+            print("Invalid non-convertible input.")
+            return players
+
+        # We'll select this match, and then move on.
+        player = player_matches[sel-1]
+
+    if player.name == "_disenchanted":
+        print(f"{item_match.name} ({item_match.ilvl}) has been disenchanted.")
+        # Find the disenchanted player. 
+        for p in players:
+            if p.name == "_disenchanted":
+                # Add the item to the player's history list.
+                p._raid_log.append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
+                p._history[slot_category].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
+                return players
+
+    exceptions = [
+        "Mantle of the Forlorn Protector",
+        "Mantle of the Forlorn Vanquisher",
+        "Mantle of the Forlorn Conqueror",
+        "Helm of the Forlorn Protector",
+        "Helm of the Forlorn Vanquisher",
+        "Helm of the Forlorn Conqueror",
+    ]
+
+    if "(PvP)" in item_match.category:
+        roll_type = "OS"
+
+        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
+        player._raid_log.append(log)
+        player._history[slot_category].append(log)
+
+    else: 
+        off_spec = input("Is this an off-spec roll? (y/n): ").lower()
+        if off_spec == "y": roll_type = "OS"
+        else: roll_type = "MS"
+    
+        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
+        player._raid_log.append(log)
+        if not off_spec == "y": player._regular_plusses += 1
+
+        player._history[slot_category].append(log)
+
+    print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
+        
+    return players
+
+def award_loot_manual(players): 
     print("----------------------------------------")
     # First, we'll ask what item we're rolling off; supporting both case insensitivity and partial matching. 
     item = input("What item are we rolling off? ").lower()
@@ -661,16 +835,17 @@ def remove_loot(players):
 
     return players
 
-def weekly_reset(players):
+def weekly_reset(players, override=False):
     players_with_plusses = [p for p in players if p._regular_plusses > 0]
     if len(players_with_plusses) == 0: 
         print("There's nothing to clear!")
         return players
 
-    confirm = input("Are you sure you want to reset the weekly loot? (y/n): ").lower()
-    if confirm != "y":
-        print("Aborting.")
-        return players
+    if not override:
+        confirm = input("Are you sure you want to reset the weekly loot? (y/n): ").lower()
+        if confirm != "y":
+            print("Aborting.")
+            return players
 
     for i in range(len(players)): 
         players[i]._raid_log = []
@@ -865,19 +1040,57 @@ def paste_history():
     with open(f"./history/paste_{index}.txt", "w", encoding="utf-8") as file:
         file.write(paste)
 
+def last_run(): 
+    try:
+        with open("last_run.txt", "r", encoding="utf-8") as f:
+            last_run = f.readline().strip()
+
+        last_run = datetime.strptime(last_run, "%Y-%m-%d %H:%M:%S")
+        return last_run
+    
+    except:
+        return None
+    
+def write_last_run():
+    # Write the current date and time to the file "last_run.txt".
+    with open("last_run.txt", "w", encoding="utf-8") as f:
+        f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
+def check_weekly_reset(): 
+    # Check if the last run was before the last Tuesday at 8am PST.
+    # If so, we should ask if we want to reset the plusses.
+    # Return TRUE if weekly reset has occurred, FALSE if it has not.
+    last_run_date = last_run()
+    if last_run_date is None: return True
+
+    # Get the last Tuesday at 8am PST.
+    last_tuesday = datetime.now() - timedelta(days=(datetime.now().weekday() - 1) % 7)
+    last_tuesday = last_tuesday.replace(hour=8, minute=0, second=0, microsecond=0)
+
+    return last_run_date < last_tuesday
+
+if __name__ == "__main__":
+    if check_weekly_reset():
+        print("It looks like reset has occurred.")
+        reset = input("Reset weekly plusses? (y/n): ").lower()
+        if reset == "y": players = weekly_reset(players, override=True)
+    
+    write_last_run()
+
 while(True): 
     export_pickle(players)
     
     print("----------------------------------------")
     print(f"Loot Tracker")
-    print("1) Award loot")
-    print("2) Mark attendance")
-    print("3) Export THIS RAID's loot to a file")
-    print("4) Export the loot history to a file")
-    print("5) Split up history into paste-sized chunks")
-    print("6) Remove loot, or weekly reset")
-    print("7) Export plusses in Gargul style")
-    print("8) Enter sudo mode")
+    print("1) Roll off the next piece of loot")
+    print("2) Manually roll off loot")
+    print("3) Mark attendance")
+    print("4) Export THIS RAID's loot to a file")
+    print("5) Export the loot history to a file")
+    print("6) Split up history into paste-sized chunks")
+    print("7) Remove loot, or weekly reset")
+    print("8) Export plusses in Gargul style")
+    print("9) Enter sudo mode")
 
     print("")
 
@@ -885,11 +1098,12 @@ while(True):
     except: break
 
     if sel == 1: players = award_loot(players)
-    elif sel == 2: players = mark_attendance(players)
-    elif sel == 3: export_loot()
-    elif sel == 4: export_history()
-    elif sel == 5: paste_history()
-    elif sel == 6: 
+    elif sel == 2: players = award_loot_manual(players)
+    elif sel == 3: players = mark_attendance(players)
+    elif sel == 4: export_loot()
+    elif sel == 5: export_history()
+    elif sel == 6: paste_history()
+    elif sel == 7: 
         print("Choose an option: ")
         print("a) Remove one piece of loot from a player")
         print("b) Weekly reset (clear plusses and raid logs, but not history)")
@@ -898,6 +1112,6 @@ while(True):
         if sel == "a": remove_loot(players)
         elif sel == "b": players = weekly_reset(players)
         else: print("Invalid option.")
-    elif sel == 7: export_gargul(players)
-    elif sel == 8: players = sudo_mode(players)
+    elif sel == 8: export_gargul(players)
+    elif sel == 9: players = sudo_mode(players)
     else: break

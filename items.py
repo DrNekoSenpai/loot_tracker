@@ -16,7 +16,7 @@ def armor_subtype(text, base_type):
     if "resilience" in text: return f"{base_type} (PvP)"
     if "random enchantment" in text: return f"{base_type} (Random)"
     
-    if "spirit" in text and "intellect" in text: return f"{base_type} (Healing)"
+    if "spirit" in text and "intellect" in text: return f"{base_type} (Intellect w/ Spirit)"
     elif "dodge" in text or "parry" in text: return f"{base_type} (Tank)"
 
     elif "hit rating" in text:

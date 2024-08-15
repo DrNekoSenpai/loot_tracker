@@ -1,108 +1,56 @@
-Loot log for Wednesday, 2024-08-07 and **Sunday, 2024-08-11**:
+Loot log for **Wednesday, 2024-08-14**:
 
-Bunniful (+3 MS)
-- Incineratus (359) (MS) -- received on 2024-08-07
-- Jar of Ancient Remedies (359) (MS) -- received on 2024-08-07
-- Manacles of the Sleeping Beast (359) (MS) -- received on 2024-08-07
+Pastiry (+3 MS)
+- Soul Blade (359) (MS) -- received on **2024-08-14**
+- Vial of Stolen Memories (359) (MS) -- received on **2024-08-14**
+- Heaving Plates of Protection (359) (MS) -- received on **2024-08-14**
 
-Gnoraa (+3 MS)
-- Pip's Solution Agitator (359) (MS) -- received on 2024-08-07
-- Bracers of the Bronze Flight (359) (MS) -- received on **2024-08-11**
-- Helm of Eldritch Authority (359) (MS) -- received on **2024-08-11**
+Pacratt (+2 MS)
+- Book of Binding Will (359) (MS) -- received on **2024-08-14**
+- Theralion's Mirror (359) (MS) -- received on **2024-08-14**
 
-Heallypally (+3 MS)
-- Kingdom's Heart (359) (MS) -- received on 2024-08-07
-- Legguards of the Emerald Brood (359) (MS) -- received on **2024-08-11**
-- Drape of the Twins (359) (MS) -- received on **2024-08-11**
-- Dragon Bone Warhelm (359) (OS) -- received on 2024-08-07
-- Gravitational Pull (359) (OS) -- received on **2024-08-11**
-- Soul Blade (359) (OS) -- received on **2024-08-11**
+Chunkofrock (+1 MS)
+- Valiona's Medallion (359) (MS) -- received on **2024-08-14**
+- Waistguard of Hatred (359) (OS) -- received on **2024-08-14**
 
-Phallipally (+3 MS)
-- Helm of the Forlorn Conqueror (85) (MS) -- received on **2024-08-11**
-- Shadow of Dread (359) (MS) -- received on **2024-08-11**
-- Mantle of the Forlorn Conqueror (85) (MS) -- received on **2024-08-11**
-
-Shetknight (+3 MS)
-- Ironstar Amulet (359) (MS) -- received on 2024-08-07
-- Bile-O-Tron Nut (359) (MS) -- received on 2024-08-07
-- Vial of Stolen Memories (359) (MS) -- received on **2024-08-11**
-- Lava Spine (359) (OS) -- received on 2024-08-07
-
-Halibutfilet (+2 MS)
-- Poison Protocol Pauldrons (359) (MS) -- received on 2024-08-07
-- Storm Rider's Boots (359) (MS) -- received on **2024-08-11**
-
-Mobyle (+2 MS)
-- Themios the Darkbringer (359) (MS) -- received on 2024-08-07
-- Prestor's Talisman of Machination (359) (MS) -- received on **2024-08-11**
-
-Oopsimissed (+2 MS)
-- Lightning Conductor Band (359) (MS) -- received on 2024-08-07
-- Coil of Ten-Thousand Screams (359) (MS) -- received on **2024-08-11**
-- Dragonheart Piercer (359) (OS) -- received on **2024-08-11**
-
-Ryotto (+2 MS)
-- Terrastra's Legguards (359) (MS) -- received on **2024-08-11**
-- Rage of Ages (359) (MS) -- received on **2024-08-11**
-- Akirus the Worm-Breaker (359) (OS) -- received on 2024-08-07
-
-Swiftbladess (+2 MS)
-- Poison Protocol Pauldrons (359) (MS) -- received on 2024-08-07
-- Uhn'agh Fash, the Darkest Betrayal (359) (MS) -- received on **2024-08-11**
-
-Vanarann (+2 MS)
-- Essence of the Cyclone (359) (MS) -- received on **2024-08-11**
-- Prestor's Talisman of Machination (359) (MS) -- received on **2024-08-11**
-
-Bzorder (+1 MS)
-- Mantle of the Forlorn Vanquisher (85) (MS) -- received on **2024-08-11**
-
-Elisesolis (+1 MS)
-- Mace of Acrid Death (359) (MS) -- received on 2024-08-07
-
-Gnoya (+1 MS)
-- Signet of the Fifth Circle (359) (MS) -- received on **2024-08-11**
-
-Kairiz (+1 MS)
-- Uhn'agh Fash, the Darkest Betrayal (359) (MS) -- received on **2024-08-11**
-
-Lorniras (+1 MS)
-- Belt of Arcane Storms (359) (MS) -- received on 2024-08-07
-
-Meemeemeemee (+1 MS)
-- Helm of the Forlorn Protector (85) (MS) -- received on **2024-08-11**
+Gnoraa (+1 MS)
+- Book of Binding Will (359) (MS) -- received on **2024-08-14**
 
 Miatotems (+1 MS)
-- Mantle of the Forlorn Protector (85) (MS) -- received on **2024-08-11**
+- Twilight's Hammer (359) (MS) -- received on **2024-08-14**
 
-Pacratt (+1 MS)
-- Crown of Burning Waters (359) (MS) -- received on 2024-08-07
+Mobyle (+1 MS)
+- Proto-Handler's Gauntlets (359) (MS) -- received on **2024-08-14**
 
-Snedcharos (+1 MS)
-- Heart of Rage (359) (MS) -- received on 2024-08-07
+Phallipally (+1 MS)
+- Fall of Mortality (359) (MS) -- received on **2024-08-14**
 
-Tinyraider (+1 MS)
-- Valiona's Medallion (359) (MS) -- received on **2024-08-11**
+Ryotto (+1 MS)
+- Mantle of the Forlorn Vanquisher (85) (MS) -- received on **2024-08-14**
+
+Shetknight (+1 MS)
+- Bracers of Impossible Strength (359) (MS) -- received on **2024-08-14**
+
+Sighanama (+1 MS)
+- Mantle of the Forlorn Protector (85) (MS) -- received on **2024-08-14**
+
+Ulvson (+1 MS)
+- Twilight's Hammer (359) (MS) -- received on **2024-08-14**
+- Membrane of C'Thun (359) (OS) -- received on **2024-08-14**
+
+Vanthulhu (+1 MS)
+- Mantle of the Forlorn Conqueror (85) (MS) -- received on **2024-08-14**
+- Heart of Ignacious (359) (OS) -- received on **2024-08-14**
 
 Zguis (+1 MS)
-- Helm of the Forlorn Protector (85) (MS) -- received on **2024-08-11**
+- Coil of Ten-Thousand Screams (359) (MS) -- received on **2024-08-14**
 
-Pasgghetti (+0 MS)
-- Crown of Burning Waters (359) (OS) -- received on 2024-08-07
-- Heart of Ignacious (359) (OS) -- received on **2024-08-11**
-
-Ulvson (+0 MS)
-- Dispersing Belt (359) (OS) -- received on **2024-08-11**
+Onlyflowers (+0 MS)
+- Glittering Epidermis (359) (OS) -- received on **2024-08-14**
+- Crushing Weight (359) (OS) -- received on **2024-08-14**
 
 _disenchanted
-- Circuit Design Breastplate
-- Circuit Design Breastplate
-- Treads of Flawless Creation
-- Sark of the Unwatched
-- Gloves of Cacophony
-- Manacles of the Sleeping Beast
-- Robes of the Burning Acolyte
-- Treads of Liquid Ice
-- Kilt of the Forgotten Battle
-- Shadowblaze Robes
+- Proto-Handler's Gauntlets
+- Dragonheart Piercer
+- Dispersing Belt
+- Feludius' Mantle
