@@ -192,8 +192,9 @@ def regular_keyboard(input_string):
 def award_loot(players):
     left, right, up, down = 1620, 1820, 6, 53
     image = pyautogui.screenshot(region=(left, up, right-left, down-up))
-    whitelist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-,:' "
-    loot_text = pytesseract.image_to_string(image, config=f"-c tessedit_char_whitelist={whitelist}").strip()
+
+    whitelist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-,:\' "
+    loot_text = pytesseract.image_to_string(image, config=f"-c tessedit_char_whitelist=\"{whitelist}\"").strip()
 
     loot_text = loot_text.replace("’", "'")
     loot_text = loot_text.replace("\n", " ")
@@ -209,8 +210,52 @@ def award_loot(players):
             item_matches.append(i)
 
     if len(item_matches) == 0:
-        print("No matches found. Please double-check that said item exists in the database. Aborting.")
-        return players
+        print(f"No matches found for {loot_text}. Splitting and trying again.")
+        loot_text = loot_text.split(" ")
+        item_matches = [[] for _ in range(len(loot_text))]
+        for word in loot_text: 
+            for i in all_items.values(): 
+                if word.lower() in i.name.lower() or i.name.lower() in word.lower(): 
+                    item_matches[loot_text.index(word)].append(i)
+
+        item_matches = [x for x in item_matches if x]
+        if len(item_matches) == 0:
+            print("No matches found. Please double-check the item name and try again.")
+            return players
+        
+        elif len(item_matches) > 10: 
+            print("Too many matches found. Please try manually.")
+            return players
+        
+        item_matches = list(set(item_matches[0]).intersection(*item_matches))
+        print(f"Items found: {len(item_matches)}")
+        for i in item_matches: print(f"{i.name} ({i.ilvl}) -- {i.category}")
+
+        if len(item_matches) == 1:
+            # We'll select this match, and then move on.
+            item_match = item_matches[0]
+
+        elif len(item_matches) > 1:
+            # We'll print all of the matches, and ask them to select one.
+            print("Multiple matches found. Please select one of the following:")
+            for i in range(len(item_matches)):
+                print(f"{i+1}. {item_matches[i].name} ({item_matches[i].ilvl})")
+
+            # We'll ask the user to select a number.
+            sel = input("Select a number: ")
+            try: 
+                sel = int(sel)
+                if sel < 1 or sel > len(item_matches):
+                    print("Invalid integer input.")
+                    return players
+                
+            except:
+                print("Invalid non-convertible input.")
+                return players
+
+            # We'll select this match, and then move on.
+            item_match = item_matches[sel-1]
+            print("")
 
     elif len(item_matches) == 1:
         # We'll select this match, and then move on.
@@ -239,7 +284,7 @@ def award_loot(players):
         print("")
 
     if "Random" in item_match.category: 
-        prefix = input("Item subcategory is random. What's the prefix? ")
+        prefix = input("Item subcategory is random. What's the prefix? ").title()
         item_match.category = match_suffix(prefix, item_match.category)
         item_match.name = f"{item_match.name} of the {prefix}"
 
@@ -283,6 +328,16 @@ def award_loot(players):
             time.sleep(0.25)
 
     print("")
+
+    # Check the number of players present -- i.e. the number of players in the list of players with attendance set to True.
+    num_present = len([p.name for p in players if p._attendance == True and p.name != "_disenchanted"])
+
+    # If we have 10 or less players, we're in 10-man mode; otherwise, 25-man mode. 
+    if num_present <= 10: loot_mode = "10-man"
+    else: loot_mode = "25-man"
+
+    if loot_mode == "10-man": return players
+
     # We'll ask the user to input the name of the person who won the roll. 
     name = input("Who won the roll? ").lower()
     if name == "": return players
@@ -452,7 +507,17 @@ def award_loot_manual(players):
             pyautogui.press("enter")
             time.sleep(0.25)
 
+    # Check the number of players present -- i.e. the number of players in the list of players with attendance set to True.
+    num_present = len([p.name for p in players if p._attendance == True and p.name != "_disenchanted"])
+
+    # If we have 10 or less players, we're in 10-man mode; otherwise, 25-man mode. 
+    if num_present <= 10: loot_mode = "10-man"
+    else: loot_mode = "25-man"
+
+    if loot_mode == "10-man": return players
+
     print("")
+
     # We'll ask the user to input the name of the person who won the roll. 
     name = input("Who won the roll? ").lower()
     if name == "": return players
@@ -1070,48 +1135,50 @@ def check_weekly_reset():
     return last_run_date < last_tuesday
 
 if __name__ == "__main__":
-    if check_weekly_reset():
+    players_with_plusses = [p for p in players if p._regular_plusses > 0]
+
+    if check_weekly_reset() and len(players_with_plusses) > 0:
         print("It looks like reset has occurred.")
         reset = input("Reset weekly plusses? (y/n): ").lower()
         if reset == "y": players = weekly_reset(players, override=True)
     
     write_last_run()
 
-while(True): 
-    export_pickle(players)
-    
-    print("----------------------------------------")
-    print(f"Loot Tracker")
-    print("1) Roll off the next piece of loot")
-    print("2) Manually roll off loot")
-    print("3) Mark attendance")
-    print("4) Export THIS RAID's loot to a file")
-    print("5) Export the loot history to a file")
-    print("6) Split up history into paste-sized chunks")
-    print("7) Remove loot, or weekly reset")
-    print("8) Export plusses in Gargul style")
-    print("9) Enter sudo mode")
+    while(True): 
+        export_pickle(players)
+        
+        print("----------------------------------------")
+        print(f"Loot Tracker")
+        print("1) Roll off the next piece of loot")
+        print("2) Manually roll off loot")
+        print("3) Mark attendance")
+        print("4) Export THIS RAID's loot to a file")
+        print("5) Export the loot history to a file")
+        print("6) Split up history into paste-sized chunks")
+        print("7) Remove loot, or weekly reset")
+        print("8) Export plusses in Gargul style")
+        print("9) Enter sudo mode")
 
-    print("")
+        print("")
 
-    try: sel = int(input("Select an option: "))
-    except: break
+        try: sel = int(input("Select an option: "))
+        except: break
 
-    if sel == 1: players = award_loot(players)
-    elif sel == 2: players = award_loot_manual(players)
-    elif sel == 3: players = mark_attendance(players)
-    elif sel == 4: export_loot()
-    elif sel == 5: export_history()
-    elif sel == 6: paste_history()
-    elif sel == 7: 
-        print("Choose an option: ")
-        print("a) Remove one piece of loot from a player")
-        print("b) Weekly reset (clear plusses and raid logs, but not history)")
-        sel = input("Select an option: ").lower()
+        if sel == 1: players = award_loot(players)
+        elif sel == 2: players = award_loot_manual(players)
+        elif sel == 3: players = mark_attendance(players)
+        elif sel == 4: export_loot()
+        elif sel == 5: export_history()
+        elif sel == 6: paste_history()
+        elif sel == 7: 
+            print("Choose an option: ")
+            print("a) Remove one piece of loot from a player")
+            print("b) Weekly reset (clear plusses and raid logs, but not history)")
+            sel = input("Select an option: ").lower()
 
-        if sel == "a": remove_loot(players)
-        elif sel == "b": players = weekly_reset(players)
-        else: print("Invalid option.")
-    elif sel == 8: export_gargul(players)
-    elif sel == 9: players = sudo_mode(players)
-    else: break
+            if sel == "a": remove_loot(players)
+            elif sel == "b": players = weekly_reset(players)
+            else: print("Invalid option.")
+        elif sel == 8: export_gargul(players)
+        elif sel == 9: players = sudo_mode(players)
+        else: break
