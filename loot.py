@@ -329,15 +329,6 @@ def award_loot(players):
 
     print("")
 
-    # Check the number of players present -- i.e. the number of players in the list of players with attendance set to True.
-    num_present = len([p.name for p in players if p._attendance == True and p.name != "_disenchanted"])
-
-    # If we have 10 or less players, we're in 10-man mode; otherwise, 25-man mode. 
-    if num_present <= 10: loot_mode = "10-man"
-    else: loot_mode = "25-man"
-
-    if loot_mode == "10-man": return players
-
     # We'll ask the user to input the name of the person who won the roll. 
     name = input("Who won the roll? ").lower()
     if name == "": return players
@@ -506,15 +497,6 @@ def award_loot_manual(players):
             time.sleep(0.1)
             pyautogui.press("enter")
             time.sleep(0.25)
-
-    # Check the number of players present -- i.e. the number of players in the list of players with attendance set to True.
-    num_present = len([p.name for p in players if p._attendance == True and p.name != "_disenchanted"])
-
-    # If we have 10 or less players, we're in 10-man mode; otherwise, 25-man mode. 
-    if num_present <= 10: loot_mode = "10-man"
-    else: loot_mode = "25-man"
-
-    if loot_mode == "10-man": return players
 
     print("")
 
