@@ -5,12 +5,25 @@ ID;Item;Item Level;Classes;Category;Version
 59492;Akirus the Worm-Breaker;359;None;Two-Hand Mace (Strength w/ Expertise);Normal
 65023;Akmin-Kurai, Dominion's Shield;372;None;Off Hand Shield (Tank);Heroic
 59444;Akmin-Kurai, Dominion's Shield;359;None;Off Hand Shield (Tank);Normal
+71427;Alysra's Razor;391;None;One-Hand Dagger (Agility w/ Expertise);Heroic
+70733;Alysra's Razor;378;None;One-Hand Dagger (Agility w/ Expertise);Normal
+71433;Alysrazor's Band;391;None;Finger  (Strength w/ Expertise);Heroic
+70738;Alysrazor's Band;378;None;Finger  (Strength w/ Expertise);Normal
 65017;Andoros, Fist of the Dragon King;372;None;Main Hand Mace (Intellect w/ Spirit);Heroic
 59459;Andoros, Fist of the Dragon King;359;None;Main Hand Mace (Intellect w/ Spirit);Normal
+71404;Arachnaflame Treads;391;None;Plate Feet (Strength);Heroic
+71029;Arachnaflame Treads;378;None;Plate Feet (Strength);Normal
+71611;Arathar, the Eye of Flame;397;None;Ranged Bow (Agility);Heroic
+71353;Arathar, the Eye of Flame;384;None;Ranged Bow (Agility);Normal
+71414;Arbalest of Erupting Fury;391;None;Ranged Crossbow (Agility);Heroic
+70991;Arbalest of Erupting Fury;378;None;Ranged Crossbow (Agility);Normal
+71414;Arbalest of Erupting Fury;391;None;Ranged Crossbow (Agility);Normal
 65120;Arion's Crown;372;None;Mail Head (Agility);Heroic
 59504;Arion's Crown;359;None;Mail Head (Agility);Normal
 67150;Arrowsinger Legguards;359;None;Mail Legs (Agility w/ Hit);Normal
 67150;Arrowsinger Legguards;359;None;Mail Legs (Agility w/ Hit);Normal
+71778;Avool's Incendiary Shanker;391;None;One-Hand Dagger (Agility w/ Hit);Heroic
+71779;Avool's Incendiary Shanker;378;None;One-Hand Dagger (Agility w/ Hit);Normal
 71281;Balespider's Handwraps;378;Warlock;Cloth Hands (Intellect w/ Hit);Normal
 71283;Balespider's Leggings;378;Warlock;Cloth Legs (Intellect);Normal
 65062;Battleplate of Ancient Kings;372;None;Plate Chest (Strength w/ Expertise);Heroic
@@ -29,24 +42,24 @@ ID;Item;Item Level;Classes;Category;Version
 60231;Belt of the Fallen Brood;379;None;Leather Waist (Agility);Normal
 65057;Belt of the Nightmare;372;None;Leather Waist (Intellect w/ Spirit);Heroic
 59321;Belt of the Nightmare;359;None;Leather Waist (Intellect w/ Spirit);Normal
-65070;Bile-O-Tron Nut;372;None;Finger (Tank);Heroic
-59233;Bile-O-Tron Nut;359;None;Finger (Tank);Normal
+65070;Bile-O-Tron Nut;372;None;Finger  (Tank);Heroic
+59233;Bile-O-Tron Nut;359;None;Finger  (Tank);Normal
 60234;Bindings of Bleak Betrayal;379;None;Plate Wrist (Intellect w/ Spirit);Normal
 52979;Blackened Dragonscale;85;None;ETC;Normal
 77024;Blackfang Battleweave Gloves;397;Rogue;Leather Hands (Agility w/ Hit);Normal
 77026;Blackfang Battleweave Legguards;397;Rogue;Leather Legs (Agility w/ Hit);Normal
-55405;Blackwolf Amulet;312;None;Neck (Random);Normal
-55405;Blackwolf Amulet;312;None;Neck (Random);Normal
-55405;Blackwolf Amulet;312;None;Neck (Random);Normal
-55315;Blackwolf Cloak;312;None;Back (Random);Normal
-55315;Blackwolf Cloak;312;None;Back (Random);Normal
-55315;Blackwolf Cloak;312;None;Back (Random);Normal
-55378;Blackwolf Crystal;312;None;Held In Off-hand (Random);Normal
-55378;Blackwolf Crystal;312;None;Held In Off-hand (Random);Normal
-55378;Blackwolf Crystal;312;None;Held In Off-hand (Random);Normal
-55423;Blackwolf Ring;312;None;Finger (Random);Normal
-55423;Blackwolf Ring;312;None;Finger (Random);Normal
-55423;Blackwolf Ring;312;None;Finger (Random);Normal
+55405;Blackwolf Amulet;312;None;Neck  (Random);Normal
+55405;Blackwolf Amulet;312;None;Neck  (Random);Normal
+55405;Blackwolf Amulet;312;None;Neck  (Random);Normal
+55315;Blackwolf Cloak;312;None;Back  (Random);Normal
+55315;Blackwolf Cloak;312;None;Back  (Random);Normal
+55315;Blackwolf Cloak;312;None;Back  (Random);Normal
+55378;Blackwolf Crystal;312;None;Held In Off-hand  (Random);Normal
+55378;Blackwolf Crystal;312;None;Held In Off-hand  (Random);Normal
+55378;Blackwolf Crystal;312;None;Held In Off-hand  (Random);Normal
+55423;Blackwolf Ring;312;None;Finger  (Random);Normal
+55423;Blackwolf Ring;312;None;Finger  (Random);Normal
+55423;Blackwolf Ring;312;None;Finger  (Random);Normal
 55369;Blackwolf Scepter;312;None;Main Hand Mace (Random);Normal
 55369;Blackwolf Scepter;312;None;Main Hand Mace (Random);Normal
 55369;Blackwolf Scepter;312;None;Main Hand Mace (Random);Normal
@@ -72,8 +85,8 @@ ID;Item;Item Level;Classes;Category;Version
 55359;Bladefist Gun;306;None;Ranged Gun (Random);Normal
 55395;Bladefist Hammer;306;None;Two-Hand Mace (Random);Normal
 55395;Bladefist Hammer;306;None;Two-Hand Mace (Random);Normal
-55476;Bladefist Knives;306;None;Thrown (Random);Normal
-55476;Bladefist Knives;306;None;Thrown (Random);Normal
+55476;Bladefist Knives;306;None;Thrown Thrown (Random);Normal
+55476;Bladefist Knives;306;None;Thrown Thrown (Random);Normal
 55350;Bladefist Knuckles;306;None;One-Hand Fist Weapon (Random);Normal
 55350;Bladefist Knuckles;306;None;One-Hand Fist Weapon (Random);Normal
 55386;Bladefist Mace;306;None;One-Hand Mace (Random);Normal
@@ -133,11 +146,11 @@ ID;Item;Item Level;Classes;Category;Version
 55711;Bluefen Wristwraps;312;None;Cloth Wrist (Random);Normal
 55711;Bluefen Wristwraps;312;None;Cloth Wrist (Random);Normal
 55711;Bluefen Wristwraps;312;None;Cloth Wrist (Random);Normal
-67125;Bone-Inlaid Sarcophagus Key;333;None;Held In Off-hand (Intellect w/ Spirit);Normal
-67125;Bone-Inlaid Sarcophagus Key;333;None;Held In Off-hand (Intellect w/ Spirit);Normal
-67125;Bone-Inlaid Sarcophagus Key;333;None;Held In Off-hand (Intellect w/ Spirit);Normal
-65133;Book of Binding Will;372;None;Held In Off-hand (Intellect w/ Hit);Heroic
-59484;Book of Binding Will;359;None;Held In Off-hand (Intellect w/ Hit);Normal
+67125;Bone-Inlaid Sarcophagus Key;333;None;Held In Off-hand  (Intellect w/ Spirit);Normal
+67125;Bone-Inlaid Sarcophagus Key;333;None;Held In Off-hand  (Intellect w/ Spirit);Normal
+67125;Bone-Inlaid Sarcophagus Key;333;None;Held In Off-hand  (Intellect w/ Spirit);Normal
+65133;Book of Binding Will;372;None;Held In Off-hand  (Intellect w/ Hit);Heroic
+59484;Book of Binding Will;359;None;Held In Off-hand  (Intellect w/ Hit);Normal
 60235;Boots of Az'galada;379;None;Mail Feet (Intellect w/ Spirit);Normal
 65063;Boots of Vertigo;372;None;Mail Feet (Agility w/ Hit);Heroic
 59315;Boots of Vertigo;359;None;Mail Feet (Agility w/ Hit);Normal
@@ -152,17 +165,29 @@ ID;Item;Item Level;Classes;Category;Version
 59322;Bracers of the Burningeye;359;None;Cloth Wrist (Intellect w/ Spirit);Normal
 60238;Bracers of the Dark Mother;379;None;Cloth Wrist (Intellect w/ Spirit);Normal
 60211;Bracers of the Dark Pool;359;None;Cloth Wrist (Intellect w/ Hit);Normal
+71452;Bracers of the Dread Hunter;391;None;Plate Wrist (Intellect w/ Spirit);Heroic
+71026;Bracers of the Dread Hunter;378;None;Plate Wrist (Intellect w/ Spirit);Normal
+71470;Bracers of the Fiery Path;391;None;Plate Wrist (Tank);Heroic
+70920;Bracers of the Fiery Path;378;None;Plate Wrist (Tank);Normal
 60228;Bracers of the Mat'redor;379;None;Plate Wrist (Strength);Normal
 65065;Brackish Gloves;372;None;Cloth Hands (Intellect w/ Spirit);Heroic
 59313;Brackish Gloves;359;None;Cloth Hands (Intellect w/ Spirit);Normal
 65042;Breastplate of Avenging Flame;372;None;Plate Chest (Intellect w/ Spirit);Heroic
 59340;Breastplate of Avenging Flame;359;None;Plate Chest (Intellect w/ Spirit);Normal
+71469;Breastplate of Shifting Visions;391;None;Plate Chest (Strength);Heroic
+71344;Breastplate of Shifting Visions;378;None;Plate Chest (Strength);Normal
+71455;Breastplate of the Incendiary Soul;391;None;Leather Chest (Agility);Heroic
+71314;Breastplate of the Incendiary Soul;378;None;Leather Chest (Agility);Normal
 67138;Buc-Zakai Choker;359;None;Neck (Strength);Normal
 67061;Bulwark of the Scorned Man;325;None;Off Hand Shield (Tank);Normal
 67061;Bulwark of the Scorned Man;325;None;Off Hand Shield (Tank);Normal
 65067;Burden of Mortality;372;None;Plate Shoulder (Intellect w/ Spirit);Heroic
 59311;Burden of Mortality;359;None;Plate Shoulder (Intellect w/ Spirit);Normal
 60227;Caelestrasz's Will;379;None;Neck (Tank);Normal
+71405;Carapace of Imbibed Flame;391;None;Plate Chest (Tank);Heroic
+70914;Carapace of Imbibed Flame;378;None;Plate Chest (Tank);Normal
+71465;Casque of Flame;391;None;Plate Head (Intellect w/ Spirit);Heroic
+71342;Casque of Flame;378;None;Plate Head (Intellect w/ Spirit);Normal
 73518;Cataclysmic Gladiator's Armbands of Meditation;403;Shaman;Mail Wrist (PvP);Normal
 73519;Cataclysmic Gladiator's Armbands of Prowess;403;Shaman;Mail Wrist (PvP);Normal
 73550;Cataclysmic Gladiator's Armplates of Alacrity;403;Warrior, Paladin, Death Knight;Plate Wrist (PvP);Normal
@@ -279,6 +304,9 @@ ID;Item;Item Level;Classes;Category;Version
 65068;Chaos Beast Bracers;372;None;Mail Wrist (Intellect w/ Spirit);Heroic
 59310;Chaos Beast Bracers;359;None;Mail Wrist (Intellect w/ Spirit);Normal
 59525;Chelley's Staff of Dark Mending;359;None;Two-Hand Staff (Intellect w/ Spirit);Normal
+71679;Chest of the Fiery Conqueror;391;Paladin, Priest, Warlock;ETC;Normal
+71686;Chest of the Fiery Protector;391;Warrior, Hunter, Shaman;ETC;Normal
+71672;Chest of the Fiery Vanquisher;391;Rogue, Death Knight, Mage, Druid;ETC;Normal
 67423;Chest of the Forlorn Conqueror;85;Paladin, Priest, Warlock;Tier Set Token;Normal
 67424;Chest of the Forlorn Protector;85;Warrior, Hunter, Shaman;Tier Set Token;Normal
 67425;Chest of the Forlorn Vanquisher;85;Rogue, Death Knight, Mage, Druid;Tier Set Token;Normal
@@ -286,6 +314,12 @@ ID;Item;Item Level;Classes;Category;Version
 67121;Chestguard of the Caring Ursine;325;None;Leather Chest (Intellect w/ Spirit);Normal
 65028;Chimaeron Armguards;372;None;Mail Wrist (Agility w/ Hit);Heroic
 59355;Chimaeron Armguards;359;None;Mail Wrist (Agility w/ Hit);Normal
+71610;Choker of the Vanquished Lord;397;None;Neck  (Agility);Heroic
+71354;Choker of the Vanquished Lord;384;None;Neck  (Agility);Normal
+71410;Cindersilk Gloves;391;None;Leather Hands (Intellect w/ Spirit);Heroic
+71044;Cindersilk Gloves;378;None;Leather Hands (Intellect w/ Spirit);Normal
+71402;Cinderweb Leggings;391;None;Leather Legs (Agility);Heroic
+71031;Cinderweb Leggings;378;None;Leather Legs (Agility);Normal
 65004;Circuit Design Breastplate;372;None;Mail Chest (Intellect w/ Spirit);Heroic
 63540;Circuit Design Breastplate;359;None;Mail Chest (Intellect w/ Spirit);Normal
 62097;Clammy Mail Armor;150;None;Mail Chest;Normal
@@ -304,16 +338,22 @@ ID;Item;Item Level;Classes;Category;Version
 62098;Clammy Mail Shoulderpads;150;None;Mail Shoulder;Normal
 63538;Claws of Agony;359;None;Off Hand Fist Weapon (Strength);Normal
 63537;Claws of Torment;359;None;Main Hand Fist Weapon (Agility);Normal
-65035;Cloak of Biting Chill;372;None;Back (Agility);Heroic
-59348;Cloak of Biting Chill;359;None;Back (Agility);Normal
-66991;Cloak of Rich Anger;325;None;Back (Strength);Normal
-66991;Cloak of Rich Anger;325;None;Back (Strength);Normal
-69879;Cloudburst Cloak;372;None;Back (Random);Heroic
-69834;Cloudburst Cloak;359;None;Back (Random);Normal
-69885;Cloudburst Necklace;372;None;Neck (Random);Heroic
-69829;Cloudburst Necklace;359;None;Neck (Random);Normal
-65382;Cloudburst Ring;372;None;Finger (Random);Heroic
-63499;Cloudburst Ring;359;None;Finger (Random);Normal
+71437;Clawshaper Gauntlets;391;None;Mail Hands (Intellect w/ Spirit);Heroic
+70986;Clawshaper Gauntlets;378;None;Mail Hands (Intellect w/ Spirit);Normal
+65035;Cloak of Biting Chill;372;None;Back  (Agility);Heroic
+59348;Cloak of Biting Chill;359;None;Back  (Agility);Normal
+66991;Cloak of Rich Anger;325;None;Back  (Strength);Normal
+66991;Cloak of Rich Anger;325;None;Back  (Strength);Normal
+69879;Cloudburst Cloak;372;None;Back  (Random);Heroic
+69834;Cloudburst Cloak;359;None;Back  (Random);Normal
+69885;Cloudburst Necklace;372;None;Neck  (Random);Heroic
+69829;Cloudburst Necklace;359;None;Neck  (Random);Normal
+65382;Cloudburst Ring;372;None;Finger  (Random);Heroic
+63499;Cloudburst Ring;359;None;Finger  (Random);Normal
+71439;Clutch of the Firemother;391;None;Plate Chest (Intellect w/ Spirit);Heroic
+70988;Clutch of the Firemother;378;None;Plate Chest (Intellect w/ Spirit);Normal
+71447;Coalwalker Sandals;391;None;Cloth Feet (Intellect);Heroic
+71023;Coalwalker Sandals;378;None;Cloth Feet (Intellect);Normal
 65132;Coil of Ten-Thousand Screams;372;None;Mail Waist (Agility);Heroic
 59485;Coil of Ten-Thousand Screams;359;None;Mail Waist (Agility);Normal
 76985;Colossal Dragonplate Gauntlets;397;Warrior;Plate Hands (Strength w/ Hit);Normal
@@ -324,9 +364,20 @@ ID;Item;Item Level;Classes;Category;Version
 67141;Corefire Legplates;359;None;Plate Legs (Strength w/ Hit);Normal
 67141;Corefire Legplates;359;None;Plate Legs (Strength w/ Hit);Normal
 59465;Corehammer's Riveted Girdle;359;None;Plate Waist (Intellect w/ Spirit);Normal
+71411;Cowl of the Clicking Menace;391;None;Leather Head (Intellect w/ Spirit);Heroic
+71040;Cowl of the Clicking Menace;378;None;Leather Head (Intellect w/ Spirit);Normal
+71420;Cracked Obsidian Stompers;391;None;Plate Feet (Tank);Heroic
+70912;Cracked Obsidian Stompers;378;None;Plate Feet (Tank);Normal
+71438;Craterflame Spaulders;391;None;Mail Shoulder (Intellect);Heroic
+70985;Craterflame Spaulders;378;None;Mail Shoulder (Intellect);Normal
 60210;Crossfire Carbine;359;None;Ranged Gun (Strength w/ Expertise);Normal
 65020;Crown of Burning Waters;372;None;Cloth Head (Intellect w/ Spirit);Heroic
 59452;Crown of Burning Waters;359;None;Cloth Head (Intellect w/ Spirit);Normal
+71616;Crown of Flame;397;None;Mail Head (Intellect w/ Spirit);Heroic
+71356;Crown of Flame;384;None;Mail Head (Intellect w/ Spirit);Normal
+71677;Crown of the Fiery Conqueror;391;Paladin, Priest, Warlock;ETC;Normal
+71684;Crown of the Fiery Protector;391;Warrior, Hunter, Shaman;ETC;Normal
+71670;Crown of the Fiery Vanquisher;391;Rogue, Death Knight, Mage, Druid;ETC;Normal
 65001;Crown of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
 65001;Crown of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
 65000;Crown of the Forlorn Protector;85;Warrior, Hunter, Shaman;ETC;Normal
@@ -342,8 +393,11 @@ ID;Item;Item Level;Classes;Category;Version
 63247;Crumpled Parchment;1;None;ETC;Normal
 65118;Crushing Weight;372;None;Trinket;Heroic
 59506;Crushing Weight;359;None;Trinket;Normal
+71449;Crystal Prison Band;391;None;Finger  (Intellect);Heroic
+71024;Crystal Prison Band;378;None;Finger  (Intellect);Normal
 66972;Crystalline Geoknife;333;None;Main Hand Fist Weapon (Agility);Normal
 66972;Crystalline Geoknife;333;None;Main Hand Fist Weapon (Agility);Normal
+71617;Crystallized Firestone;391;None;ETC;Normal
 55504;Crystalvein Breastplate;312;None;Plate Chest (Random);Normal
 55504;Crystalvein Breastplate;312;None;Plate Chest (Random);Normal
 55504;Crystalvein Breastplate;312;None;Plate Chest (Random);Normal
@@ -393,6 +447,8 @@ ID;Item;Item Level;Classes;Category;Version
 71048;Dark Phoenix Legguards;378;Rogue;Leather Legs (Agility w/ Hit);Normal
 65096;Daybreaker Helm;372;None;Plate Head (Tank);Heroic
 63531;Daybreaker Helm;359;None;Plate Head (Tank);Normal
+71457;Decimation Treads;391;None;Mail Feet (Agility w/ Hit);Heroic
+71315;Decimation Treads;378;None;Mail Feet (Agility w/ Hit);Normal
 77018;Deep Earth Gloves;397;Druid;Leather Hands (Intellect);Normal
 77014;Deep Earth Grips;397;Druid;Leather Hands (Agility w/ Expertise);Normal
 76749;Deep Earth Handwraps;397;Druid;Leather Hands (Intellect w/ Spirit);Normal
@@ -419,6 +475,8 @@ ID;Item;Item Level;Classes;Category;Version
 52385;Design: Forceful Jasper;83;None;ETC;Normal
 52371;Design: Inscribed Hessonite;83;None;ETC (Strength);Normal
 52371;Design: Inscribed Hessonite;83;None;ETC (Strength);Normal
+52371;Design: Inscribed Hessonite;83;None;ETC (Strength);Normal
+52386;Design: Lightning Jasper;83;None;None;Normal
 52379;Design: Nimble Jasper;83;None;ETC (Tank);Normal
 52379;Design: Nimble Jasper;83;None;ETC (Tank);Normal
 52370;Design: Polished Hessonite;83;None;ETC (Tank);Normal
@@ -457,11 +515,11 @@ ID;Item;Item Level;Classes;Category;Version
 65122;Dispersing Belt;372;None;Leather Waist (Agility);Heroic
 59502;Dispersing Belt;359;None;Leather Waist (Agility);Normal
 67133;Dizze's Whirling Robe;359;None;Cloth Chest (Intellect);Normal
-67137;Don Rodrigo's Fabulous Necklace;359;None;Neck (Agility);Normal
-67137;Don Rodrigo's Fabulous Necklace;359;None;Neck (Agility);Normal
+67137;Don Rodrigo's Fabulous Necklace;359;None;Neck  (Agility);Normal
+67137;Don Rodrigo's Fabulous Necklace;359;None;Neck  (Agility);Normal
 67130;Dorian's Lost Necklace;359;None;Neck (Intellect);Normal
-67134;Dory's Finery;359;None;Back (Agility w/ Hit);Normal
-67134;Dory's Finery;359;None;Back (Agility w/ Hit);Normal
+67134;Dory's Finery;359;None;Back  (Agility w/ Hit);Normal
+67134;Dory's Finery;359;None;Back  (Agility w/ Hit);Normal
 65073;Double Attack Handguards;372;None;Leather Hands (Agility w/ Expertise);Heroic
 59223;Double Attack Handguards;359;None;Leather Hands (Agility w/ Expertise);Normal
 66990;Downfall Hammer;325;None;One-Hand Mace (Agility w/ Hit);Normal
@@ -470,10 +528,14 @@ ID;Item;Item Level;Classes;Category;Version
 59344;Dragon Bone Warhelm;359;None;Plate Head (Strength w/ Expertise);Normal
 65095;Dragonheart Piercer;372;None;Ranged Crossbow (Agility);Heroic
 63532;Dragonheart Piercer;359;None;Ranged Crossbow (Agility);Normal
-68608;Dragonwreck Throwing Axe;359;None;Thrown (Agility);Normal
+68608;Dragonwreck Throwing Axe;359;None;Thrown Thrown (Agility);Normal
 67140;Drape of Inimitable Fate;359;None;Back (Strength);Normal
-65108;Drape of the Twins;372;None;Back (Intellect w/ Spirit);Heroic
-59516;Drape of the Twins;359;None;Back (Intellect w/ Spirit);Normal
+65108;Drape of the Twins;372;None;Back  (Intellect w/ Spirit);Heroic
+59516;Drape of the Twins;359;None;Back  (Intellect w/ Spirit);Normal
+71415;Dreadfire Drape;391;None;Back  (Agility w/ Hit);Heroic
+70992;Dreadfire Drape;378;None;Back  (Agility w/ Hit);Normal
+71418;Earthcrack Bracers;391;None;Plate Wrist (Strength);Heroic
+71004;Earthcrack Bracers;378;None;Plate Wrist (Strength);Normal
 60326;Earthen Gauntlets;359;Warrior;Plate Hands (Strength);Normal
 60332;Earthen Handguards;359;Warrior;Plate Hands (Tank);Normal
 60330;Earthen Legguards;359;Warrior;Plate Legs (Tank);Normal
@@ -493,6 +555,8 @@ ID;Item;Item Level;Classes;Category;Version
 53010;Embersilk Cloth;81;None;ETC;Normal
 66989;Endwyn's Flickering Gauntlets;325;None;Plate Hands (Strength);Normal
 66989;Endwyn's Flickering Gauntlets;325;None;Plate Hands (Strength);Normal
+71786;Entrail Disgorger;391;None;One-Hand Dagger (Agility);Heroic
+71787;Entrail Disgorger;378;None;One-Hand Dagger (Agility);Normal
 71292;Erupting Volcanic Gloves;378;Shaman;Mail Hands (Intellect);Normal
 71302;Erupting Volcanic Grips;378;Shaman;Mail Hands (Agility w/ Hit);Normal
 71297;Erupting Volcanic Handwraps;378;Shaman;Mail Hands (Intellect w/ Spirit);Normal
@@ -519,16 +583,32 @@ ID;Item;Item Level;Classes;Category;Version
 55763;Everstill Shoulderpads;300;None;Cloth Shoulder (Random);Normal
 55709;Everstill Wristwraps;300;None;Cloth Wrist (Random);Normal
 55709;Everstill Wristwraps;300;None;Cloth Wrist (Random);Normal
+69149;Eye of Blazing Power;391;None;Trinket;Heroic
+68983;Eye of Blazing Power;378;None;Trinket;Normal
+71777;Eye of Purification;391;None;Main Hand Axe (Intellect w/ Spirit);Heroic
+71776;Eye of Purification;378;None;Main Hand Axe (Intellect w/ Spirit);Normal
 65124;Fall of Mortality;372;None;Trinket;Heroic
 59500;Fall of Mortality;359;None;Trinket;Normal
+71466;Fandral's Flamescythe;391;None;Two-Hand Staff (Agility);Heroic
+69897;Fandral's Flamescythe;378;None;Two-Hand Staff (Agility);Normal
 65094;Fang of Twilight;372;None;One-Hand Sword (Agility);Heroic
 63533;Fang of Twilight;359;None;One-Hand Sword (Agility);Normal
+71441;Feeding Frenzy;391;None;One-Hand Dagger (Agility);Heroic
+71013;Feeding Frenzy;378;None;One-Hand Dagger (Agility);Normal
 65114;Feludius' Mantle;372;None;Mail Shoulder (Intellect w/ Spirit);Heroic
 59510;Feludius' Mantle;359;None;Mail Shoulder (Intellect w/ Spirit);Normal
+71614;Fingers of Incineration;397;None;Cloth Hands (Intellect);Heroic
+71358;Fingers of Incineration;384;None;Cloth Hands (Intellect);Normal
+71474;Firecat Leggings;391;None;Leather Legs (Intellect w/ Spirit);Heroic
+71349;Firecat Leggings;378;None;Leather Legs (Intellect w/ Spirit);Normal
 71286;Firehawk Gloves;378;Mage;Cloth Hands (Intellect w/ Hit);Normal
 71288;Firehawk Leggings;378;Mage;Cloth Legs (Intellect);Normal
 60247;Firelord's Gloves;359;Mage;Cloth Hands (Intellect);Normal
 60245;Firelord's Leggings;359;Mage;Cloth Legs (Intellect w/ Hit);Normal
+71419;Fireskin Gauntlets;391;None;Plate Hands (Strength w/ Hit);Heroic
+70993;Fireskin Gauntlets;378;None;Plate Hands (Strength w/ Hit);Normal
+71784;Firethorn Mindslicer;391;None;Main Hand Sword (Intellect w/ Hit);Heroic
+71785;Firethorn Mindslicer;378;None;Main Hand Sword (Intellect w/ Hit);Normal
 65044;Flame Pillar Leggings;372;None;Cloth Legs (Intellect w/ Hit);Heroic
 59336;Flame Pillar Leggings;359;None;Cloth Legs (Intellect w/ Hit);Normal
 63349;Flame-Scarred Junkbox;80;None;ETC;Normal
@@ -537,44 +617,79 @@ ID;Item;Item Level;Classes;Category;Version
 62067;Flamewashed Mace;175;None;Main Hand Mace;Normal
 62067;Flamewashed Mace;175;None;Main Hand Mace;Normal
 62067;Flamewashed Mace;175;None;Main Hand Mace;Normal
+71417;Flaming Core Chestguard;391;None;Mail Chest (Agility w/ Hit);Heroic
+71005;Flaming Core Chestguard;378;None;Mail Chest (Agility w/ Hit);Normal
 65031;Flash Freeze Gauntlets;372;None;Plate Hands (Intellect w/ Spirit);Heroic
 59352;Flash Freeze Gauntlets;359;None;Plate Hands (Intellect w/ Spirit);Normal
+71421;Flickering Cowl;391;None;Cloth Head (Random);Heroic
+71011;Flickering Cowl;378;None;Cloth Head (Random);Normal
+71458;Flickering Handguards;391;None;Plate Hands (Random);Heroic
+70917;Flickering Handguards;378;None;Plate Hands (Random);Normal
+71450;Flickering Shoulderpads;391;None;Leather Shoulder (Random);Heroic
+71025;Flickering Shoulderpads;378;None;Leather Shoulder (Random);Normal
+71403;Flickering Shoulders;391;None;Mail Shoulder (Random);Heroic
+71030;Flickering Shoulders;378;None;Mail Shoulder (Random);Normal
+71428;Flickering Wristbands;391;None;Leather Wrist (Random);Heroic
+70735;Flickering Wristbands;378;None;Leather Wrist (Random);Normal
+71472;Flowform Choker;391;None;Neck  (Intellect);Heroic
+71348;Flowform Choker;378;None;Neck  (Intellect);Normal
 68787;Formula: Enchant Bracer - Agility;85;None;ETC (Agility);Normal
 68787;Formula: Enchant Bracer - Agility;85;None;ETC (Agility);Normal
 68788;Formula: Enchant Bracer - Major Strength;85;None;ETC (Strength);Normal
 68788;Formula: Enchant Bracer - Major Strength;85;None;ETC (Strength);Normal
 68789;Formula: Enchant Bracer - Mighty Intellect;85;None;ETC (Intellect);Normal
 68789;Formula: Enchant Bracer - Mighty Intellect;85;None;ETC (Intellect);Normal
+71409;Funeral Pyre;391;None;Two-Hand Staff (Intellect);Heroic
+71039;Funeral Pyre;378;None;Two-Hand Staff (Intellect);Normal
 59461;Fury of Angerforge;359;None;Trinket;Normal
 65374;Gale Rouser Belt;372;None;Leather Waist (Random);Heroic
 63497;Gale Rouser Belt;359;None;Leather Waist (Random);Normal
 65384;Gale Rouser Leggings;372;None;Leather Legs (Random);Heroic
 63506;Gale Rouser Leggings;359;None;Leather Legs (Random);Normal
+71454;Gatecrasher;391;None;One-Hand Axe (Agility w/ Expertise);Heroic
+71312;Gatecrasher;378;None;One-Hand Axe (Agility w/ Expertise);Normal
+71464;Gatekeeper's Embrace;391;None;Mail Chest (Intellect w/ Spirit);Heroic
+71340;Gatekeeper's Embrace;378;None;Mail Chest (Intellect w/ Spirit);Normal
 76875;Gauntlets of Radiant Glory;397;Paladin;Plate Hands (Strength);Normal
+71676;Gauntlets of the Fiery Conqueror;391;Paladin, Priest, Warlock;ETC;Normal
+71683;Gauntlets of the Fiery Protector;391;Warrior, Hunter, Shaman;ETC;Normal
+71669;Gauntlets of the Fiery Vanquisher;391;Rogue, Death Knight, Mage, Druid;ETC;Normal
 67429;Gauntlets of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
 67430;Gauntlets of the Forlorn Protector;85;Warrior, Hunter, Shaman;ETC;Normal
 67431;Gauntlets of the Forlorn Vanquisher;85;Rogue, Death Knight, Mage, Druid;ETC;Normal
 71069;Gauntlets of the Molten Giant;378;Warrior;Plate Hands (Strength w/ Hit);Normal
 63275;Gilnean Fortified Brandy;1;None;ETC;Normal
-67136;Gilnean Ring of Ruination;359;None;Finger (Agility w/ Hit);Normal
-67136;Gilnean Ring of Ruination;359;None;Finger (Agility w/ Hit);Normal
+67136;Gilnean Ring of Ruination;359;None;Finger  (Agility w/ Hit);Normal
+67136;Gilnean Ring of Ruination;359;None;Finger  (Agility w/ Hit);Normal
 65115;Glaciated Helm;372;None;Plate Head (Intellect w/ Spirit);Heroic
 59509;Glaciated Helm;359;None;Plate Head (Intellect w/ Spirit);Normal
-65117;Glittering Epidermis;372;None;Back (Strength);Heroic
-59507;Glittering Epidermis;359;None;Back (Strength);Normal
+65117;Glittering Epidermis;372;None;Back  (Strength);Heroic
+59507;Glittering Epidermis;359;None;Back  (Strength);Normal
 65055;Gloves of Cacophony;372;None;Mail Hands (Intellect w/ Spirit);Heroic
 59324;Gloves of Cacophony;359;None;Mail Hands (Intellect w/ Spirit);Normal
+71440;Gloves of Dissolving Smoke;391;None;Leather Hands (Agility);Heroic
+71020;Gloves of Dissolving Smoke;378;None;Leather Hands (Agility);Normal
 76348;Gloves of Dying Light;397;Priest;Cloth Hands (Intellect w/ Spirit);Normal
 76766;Gloves of Radiant Glory;397;Paladin;Plate Hands (Intellect w/ Spirit);Normal
 71276;Gloves of the Cleansing Flame;378;Priest;Cloth Hands (Intellect w/ Spirit);Normal
 76343;Gloves of the Faceless Shroud;397;Warlock;Cloth Hands (Intellect w/ Hit);Normal
 60314;Gloves of the Raging Elements;359;Shaman;Mail Hands (Intellect);Normal
+71463;Glowing Wing Bracers;391;None;Leather Wrist (Intellect w/ Spirit);Heroic
+71341;Glowing Wing Bracers;378;None;Leather Wrist (Intellect w/ Spirit);Normal
+71448;Goblet of Anger;391;None;Held In Off-hand  (Intellect w/ Spirit);Heroic
+71022;Goblet of Anger;378;None;Held In Off-hand  (Intellect w/ Spirit);Normal
 63348;Goblin Gentleman's Magazine;1;None;ETC;Normal
 65119;Gravitational Pull;372;None;Plate Hands (Strength w/ Expertise);Heroic
 59505;Gravitational Pull;359;None;Plate Hands (Strength w/ Expertise);Normal
+71430;Greathelm of the Voracious Maw;391;None;Plate Head (Strength);Heroic
+70734;Greathelm of the Voracious Maw;378;None;Plate Head (Strength);Normal
 76768;Greaves of Radiant Glory;397;Paladin;Plate Legs (Intellect w/ Spirit);Normal
+71468;Grips of Unerring Precision;391;None;Mail Hands (Agility);Heroic
+71346;Grips of Unerring Precision;378;None;Mail Hands (Agility);Normal
 67132;Grips of the Failed Immortal;359;None;Cloth Hands (Intellect);Normal
 60319;Grips of the Raging Elements;359;Shaman;Mail Hands (Agility w/ Hit);Normal
+71426;Grips of the Raging Giant;391;None;Plate Hands (Intellect w/ Spirit);Heroic
+71007;Grips of the Raging Giant;378;None;Plate Hands (Intellect w/ Spirit);Normal
 55638;Haldarr Bindings;306;None;Leather Wrist (Random);Normal
 55638;Haldarr Bindings;306;None;Leather Wrist (Random);Normal
 55656;Haldarr Boots;306;None;Leather Feet (Random);Normal
@@ -607,9 +722,13 @@ ID;Item;Item Level;Classes;Category;Version
 65072;Heart of Rage;372;None;Trinket;Heroic
 59224;Heart of Rage;359;None;Trinket;Normal
 66969;Heart of the Vile;325;None;Trinket;Normal
-67149;Heartbound Tome;359;None;Held In Off-hand (Intellect w/ Spirit);Normal
-67149;Heartbound Tome;359;None;Held In Off-hand (Intellect w/ Spirit);Normal
+67149;Heartbound Tome;359;None;Held In Off-hand  (Intellect w/ Spirit);Normal
+67149;Heartbound Tome;359;None;Held In Off-hand  (Intellect w/ Spirit);Normal
+71423;Heartstone of Rhyolith;391;None;Neck  (Intellect w/ Spirit);Heroic
+71012;Heartstone of Rhyolith;378;None;Neck  (Intellect w/ Spirit);Normal
 59901;Heaving Plates of Protection;359;None;Plate Shoulder (Tank);Normal
+71459;Helm of Blazing Glory;391;None;Plate Head (Tank);Heroic
+70916;Helm of Blazing Glory;378;None;Plate Head (Tank);Normal
 65093;Helm of Eldritch Authority;372;None;Cloth Head (Intellect w/ Spirit);Heroic
 63534;Helm of Eldritch Authority;359;None;Cloth Head (Intellect w/ Spirit);Normal
 67122;Helm of Holy Visions;325;None;Plate Head (Intellect);Normal
@@ -618,6 +737,9 @@ ID;Item;Item Level;Classes;Category;Version
 59487;Helm of Maddening Whispers;359;None;Plate Head (Strength);Normal
 65066;Helm of the Blind Seer;372;None;Leather Head (Intellect w/ Spirit);Heroic
 59312;Helm of the Blind Seer;359;None;Leather Head (Intellect w/ Spirit);Normal
+71675;Helm of the Fiery Conqueror;378;Paladin, Priest, Warlock;ETC;Normal
+71682;Helm of the Fiery Protector;378;Warrior, Hunter, Shaman;ETC;Normal
+71668;Helm of the Fiery Vanquisher;378;Rogue, Death Knight, Mage, Druid;ETC;Normal
 63683;Helm of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
 63683;Helm of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
 63684;Helm of the Forlorn Protector;85;Warrior, Hunter, Shaman;ETC;Normal
@@ -646,24 +768,28 @@ ID;Item;Item Level;Classes;Category;Version
 55619;Highperch Spaulders;300;None;Mail Shoulder (Random);Normal
 55574;Highperch Vest;300;None;Mail Chest (Random);Normal
 55574;Highperch Vest;300;None;Mail Chest (Random);Normal
+71416;Hood of Rampant Disdain;391;None;Leather Head (Agility w/ Expertise);Heroic
+71003;Hood of Rampant Disdain;378;None;Leather Head (Agility w/ Expertise);Normal
 66975;Hood of the Crying Rogue;333;None;Leather Head (Agility);Normal
 66975;Hood of the Crying Rogue;333;None;Leather Head (Agility);Normal
 65113;Hydrolance Gloves;372;None;Leather Hands (Intellect w/ Spirit);Heroic
 59511;Hydrolance Gloves;359;None;Leather Hands (Intellect w/ Spirit);Normal
 67143;Icebone Hauberk;359;None;Plate Chest (Tank);Normal
 67143;Icebone Hauberk;359;None;Plate Chest (Tank);Normal
-66942;Immaculate Br'etc Signet;333;None;Finger (Intellect w/ Hit);Normal
-66942;Immaculate Br'etc Signet;333;None;Finger (Intellect w/ Hit);Normal
+66942;Immaculate Br'etc Signet;333;None;Finger  (Intellect w/ Hit);Normal
+66942;Immaculate Br'etc Signet;333;None;Finger  (Intellect w/ Hit);Normal
 71064;Immolation Gauntlets;378;Paladin;Plate Hands (Strength w/ Hit);Normal
 71092;Immolation Gloves;378;Paladin;Plate Hands (Intellect);Normal
 71094;Immolation Greaves;378;Paladin;Plate Legs (Intellect w/ Spirit);Normal
 70949;Immolation Handguards;378;Paladin;Plate Hands (Tank);Normal
 70947;Immolation Legguards;378;Paladin;Plate Legs (Tank);Normal
 71066;Immolation Legplates;378;Paladin;Plate Legs (Strength);Normal
+71424;Incendic Chestguard;391;None;Leather Chest (Intellect w/ Spirit);Heroic
+71010;Incendic Chestguard;378;None;Leather Chest (Intellect w/ Spirit);Normal
 65041;Incineratus;372;None;Main Hand Dagger (Intellect);Heroic
 59341;Incineratus;359;None;Main Hand Dagger (Intellect);Normal
-65059;Ironstar Amulet;372;None;Neck (Tank);Heroic
-59319;Ironstar Amulet;359;None;Neck (Tank);Normal
+65059;Ironstar Amulet;372;None;Neck  (Tank);Heroic
+59319;Ironstar Amulet;359;None;Neck  (Tank);Normal
 59466;Ironstar's Impenetrable Cover;359;None;Back (Tank);Normal
 55288;Irontree Axe;312;None;One-Hand Axe (Random);Normal
 55288;Irontree Axe;312;None;One-Hand Axe (Random);Normal
@@ -687,8 +813,8 @@ ID;Item;Item Level;Classes;Category;Version
 55396;Irontree Hammer;312;None;Two-Hand Mace (Random);Normal
 55396;Irontree Hammer;312;None;Two-Hand Mace (Random);Normal
 55396;Irontree Hammer;312;None;Two-Hand Mace (Random);Normal
-55477;Irontree Knives;312;None;Thrown (Random);Normal
-55477;Irontree Knives;312;None;Thrown (Random);Normal
+55477;Irontree Knives;312;None;Thrown Thrown (Random);Normal
+55477;Irontree Knives;312;None;Thrown Thrown (Random);Normal
 55351;Irontree Knuckles;312;None;One-Hand Fist Weapon (Random);Normal
 55351;Irontree Knuckles;312;None;One-Hand Fist Weapon (Random);Normal
 55351;Irontree Knuckles;312;None;One-Hand Fist Weapon (Random);Normal
@@ -709,6 +835,8 @@ ID;Item;Item Level;Classes;Category;Version
 55459;Irontree Sword;312;None;One-Hand Sword (Random);Normal
 65029;Jar of Ancient Remedies;372;None;Trinket;Heroic
 59354;Jar of Ancient Remedies;359;None;Trinket;Normal
+69111;Jaws of Defeat;391;None;Trinket;Heroic
+68926;Jaws of Defeat;378;None;Trinket;Normal
 67147;Je'Tze's Sparkling Tiara;359;None;Cloth Head (Intellect w/ Spirit);Normal
 65086;Jumbotron Power Belt;372;None;Plate Waist (Tank);Heroic
 59117;Jumbotron Power Belt;359;None;Plate Waist (Tank);Normal
@@ -719,10 +847,18 @@ ID;Item;Item Level;Classes;Category;Version
 59327;Kingdom's Heart;359;None;Off Hand Shield (Intellect w/ Spirit);Normal
 62068;Knog's Bow of Ineptitude;175;None;Ranged Bow;Normal
 62068;Knog's Bow of Ineptitude;175;None;Ranged Bow;Normal
-66932;Kuang's Locket of Secrets;325;None;Neck (Intellect);Normal
-66932;Kuang's Locket of Secrets;325;None;Neck (Intellect);Normal
+71615;Ko'gun, Hammer of the Firelord;397;None;Main Hand Mace (Intellect w/ Spirit);Heroic
+71355;Ko'gun, Hammer of the Firelord;384;None;Main Hand Mace (Intellect w/ Spirit);Normal
+66932;Kuang's Locket of Secrets;325;None;Neck  (Intellect);Normal
+66932;Kuang's Locket of Secrets;325;None;Neck  (Intellect);Normal
+71425;Lava Line Wristbands;391;None;Mail Wrist (Intellect w/ Spirit);Heroic
+71009;Lava Line Wristbands;378;None;Mail Wrist (Intellect w/ Spirit);Normal
 65047;Lava Spine;372;None;One-Hand Sword (Strength);Heroic
 59333;Lava Spine;359;None;One-Hand Sword (Strength);Normal
+71431;Lavaworm Legplates;391;None;Plate Legs (Strength w/ Hit);Heroic
+70739;Lavaworm Legplates;378;None;Plate Legs (Strength w/ Hit);Normal
+71435;Leggings of Billowing Fire;391;None;Cloth Legs (Intellect);Heroic
+70989;Leggings of Billowing Fire;378;None;Cloth Legs (Intellect);Normal
 65030;Leggings of Consuming Flames;372;None;Leather Legs (Intellect w/ Spirit);Heroic
 59353;Leggings of Consuming Flames;359;None;Leather Legs (Intellect w/ Spirit);Normal
 76346;Leggings of Dying Light;397;Priest;Cloth Legs (Intellect);Normal
@@ -730,6 +866,9 @@ ID;Item;Item Level;Classes;Category;Version
 59331;Leggings of Lethal Force;359;None;Mail Legs (Agility w/ Hit);Normal
 71278;Leggings of the Cleansing Flame;378;Priest;Cloth Legs (Intellect);Normal
 76341;Leggings of the Faceless Shroud;397;Warlock;Cloth Legs (Intellect);Normal
+71678;Leggings of the Fiery Conqueror;391;Paladin, Priest, Warlock;ETC;Normal
+71685;Leggings of the Fiery Protector;391;Warrior, Hunter, Shaman;ETC;Normal
+71671;Leggings of the Fiery Vanquisher;391;Rogue, Death Knight, Mage, Druid;ETC;Normal
 67428;Leggings of the Forlorn Conqueror;85;Paladin, Priest, Warlock;Tier Set Token;Normal
 67427;Leggings of the Forlorn Protector;85;Warrior, Hunter, Shaman;Tier Set Token;Normal
 67426;Leggings of the Forlorn Vanquisher;85;Rogue, Death Knight, Mage, Druid;Tier Set Token;Normal
@@ -740,6 +879,10 @@ ID;Item;Item Level;Classes;Category;Version
 60321;Legguards of the Raging Elements;359;Shaman;Mail Legs (Agility w/ Expertise);Normal
 65061;Legguards of the Unseeing;372;None;Plate Legs (Tank);Heroic
 59317;Legguards of the Unseeing;359;None;Plate Legs (Tank);Normal
+71453;Legplates of Absolute Control;391;None;Plate Legs (Intellect w/ Spirit);Heroic
+71028;Legplates of Absolute Control;378;None;Plate Legs (Intellect w/ Spirit);Normal
+71444;Legplates of Frenzied Devotion;391;None;Plate Legs (Tank);Heroic
+70913;Legplates of Frenzied Devotion;378;None;Plate Legs (Tank);Normal
 76877;Legplates of Radiant Glory;397;Paladin;Plate Legs (Strength);Normal
 71071;Legplates of the Molten Giant;378;Warrior;Plate Legs (Strength w/ Expertise);Normal
 76359;Legwraps of Dying Light;397;Priest;Cloth Legs (Intellect w/ Spirit);Normal
@@ -753,14 +896,15 @@ ID;Item;Item Level;Classes;Category;Version
 59216;Life Force Chargers;359;None;Plate Feet (Intellect w/ Spirit);Normal
 65046;Lifecycle Waistguard;372;None;Mail Waist (Intellect w/ Spirit);Heroic
 59334;Lifecycle Waistguard;359;None;Mail Waist (Intellect w/ Spirit);Normal
-65082;Lightning Conductor Band;372;None;Finger (Agility w/ Hit);Heroic
-59121;Lightning Conductor Band;359;None;Finger (Agility w/ Hit);Normal
+65082;Lightning Conductor Band;372;None;Finger  (Agility w/ Hit);Heroic
+59121;Lightning Conductor Band;359;None;Finger  (Agility w/ Hit);Normal
 65377;Lightning Well Belt;372;None;Mail Waist (Random);Heroic
 63496;Lightning Well Belt;359;None;Mail Waist (Random);Normal
 65386;Lightning Well Legguards;372;None;Mail Legs (Random);Heroic
 63505;Lightning Well Legguards;359;None;Mail Legs (Random);Normal
 60307;Lightning-Charged Gloves;359;Hunter;Mail Hands (Agility);Normal
 60305;Lightning-Charged Legguards;359;Hunter;Mail Legs (Agility);Normal
+69237;Living Ember;80;None;ETC;Normal
 63317;Lucky Raptor Claws;1;None;ETC;Normal
 65036;Mace of Acrid Death;372;None;One-Hand Mace (Tank);Heroic
 59347;Mace of Acrid Death;359;None;One-Hand Mace (Tank);Normal
@@ -771,15 +915,24 @@ ID;Item;Item Level;Classes;Category;Version
 60352;Magma Plated Legguards;359;Death Knight;Plate Legs (Tank);Normal
 60342;Magma Plated Legplates;359;Death Knight;Plate Legs (Strength w/ Hit);Normal
 59462;Maimgor's Bite;359;None;Off Hand Axe (Agility w/ Hit);Normal
+71613;Majordomo's Chain of Office;397;None;Cloth Waist (Intellect);Heroic
+71357;Majordomo's Chain of Office;384;None;Cloth Waist (Intellect);Normal
 59463;Maldo's Sword Cane;359;None;Main Hand Sword (Intellect);Normal
 65139;Malevolence;372;None;Two-Hand Staff (Agility);Heroic
 59474;Malevolence;359;None;Two-Hand Staff (Agility);Normal
 65021;Manacles of the Sleeping Beast;372;None;Leather Wrist (Intellect w/ Spirit);Heroic
 59451;Manacles of the Sleeping Beast;359;None;Leather Wrist (Intellect w/ Spirit);Normal
+71406;Mandible of Beth'tilac;391;None;One-Hand Sword (Tank);Heroic
+70922;Mandible of Beth'tilac;378;None;One-Hand Sword (Tank);Normal
+71461;Mantle of Closed Doors;391;None;Cloth Shoulder (Intellect);Heroic
+71343;Mantle of Closed Doors;378;None;Cloth Shoulder (Intellect);Normal
 65043;Mantle of Nefarius;372;None;Cloth Shoulder (Intellect w/ Spirit);Heroic
 59337;Mantle of Nefarius;359;None;Cloth Shoulder (Intellect w/ Spirit);Normal
 65054;Mantle of Roaring Flames;372;None;Cloth Shoulder (Intellect);Heroic
 59325;Mantle of Roaring Flames;359;None;Cloth Shoulder (Intellect);Normal
+71681;Mantle of the Fiery Conqueror;378;Paladin, Priest, Warlock;ETC;Normal
+71688;Mantle of the Fiery Protector;378;Warrior, Hunter, Shaman;ETC;Normal
+71674;Mantle of the Fiery Vanquisher;378;Rogue, Death Knight, Mage, Druid;ETC;Normal
 64315;Mantle of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
 64315;Mantle of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
 64316;Mantle of the Forlorn Protector;85;Warrior, Hunter, Shaman;ETC;Normal
@@ -804,7 +957,7 @@ ID;Item;Item Level;Classes;Category;Version
 55358;Mardenholde Gun;300;None;Ranged Gun (Random);Normal
 55394;Mardenholde Hammer;300;None;Two-Hand Mace (Random);Normal
 55394;Mardenholde Hammer;300;None;Two-Hand Mace (Random);Normal
-55475;Mardenholde Knives;300;None;Thrown (Random);Normal
+55475;Mardenholde Knives;300;None;Thrown Thrown (Random);Normal
 55349;Mardenholde Knuckles;300;None;One-Hand Fist Weapon (Random);Normal
 55349;Mardenholde Knuckles;300;None;One-Hand Fist Weapon (Random);Normal
 55385;Mardenholde Mace;300;None;One-Hand Mace (Random);Normal
@@ -820,6 +973,8 @@ ID;Item;Item Level;Classes;Category;Version
 55457;Mardenholde Sword;300;None;One-Hand Sword (Random);Normal
 65075;Massacre Treads;372;None;Plate Feet (Strength w/ Expertise);Heroic
 59221;Massacre Treads;359;None;Plate Feet (Strength w/ Expertise);Normal
+69150;Matrix Restabilizer;397;None;Trinket;Heroic
+68994;Matrix Restabilizer;384;None;Trinket;Normal
 62065;Melted Cleaver;175;None;Two-Hand Axe;Normal
 62065;Melted Cleaver;175;None;Two-Hand Axe;Normal
 62065;Melted Cleaver;175;None;Two-Hand Axe;Normal
@@ -830,15 +985,15 @@ ID;Item;Item Level;Classes;Category;Version
 60255;Mercurial Leggings;359;Priest;Cloth Legs (Intellect w/ Spirit);Normal
 60261;Mercurial Legwraps;359;Priest;Cloth Legs (Intellect w/ Spirit);Normal
 66931;Mercury-Coated Hood;325;None;Cloth Head (Intellect w/ Hit);Normal
-55403;Mereldar Amulet;300;None;Neck (Random);Normal
-55403;Mereldar Amulet;300;None;Neck (Random);Normal
-55403;Mereldar Amulet;300;None;Neck (Random);Normal
-55313;Mereldar Cloak;300;None;Back (Random);Normal
-55313;Mereldar Cloak;300;None;Back (Random);Normal
-55376;Mereldar Crystal;300;None;Held In Off-hand (Random);Normal
-55376;Mereldar Crystal;300;None;Held In Off-hand (Random);Normal
-55421;Mereldar Ring;300;None;Finger (Random);Normal
-55421;Mereldar Ring;300;None;Finger (Random);Normal
+55403;Mereldar Amulet;300;None;Neck  (Random);Normal
+55403;Mereldar Amulet;300;None;Neck  (Random);Normal
+55403;Mereldar Amulet;300;None;Neck  (Random);Normal
+55313;Mereldar Cloak;300;None;Back  (Random);Normal
+55313;Mereldar Cloak;300;None;Back  (Random);Normal
+55376;Mereldar Crystal;300;None;Held In Off-hand  (Random);Normal
+55376;Mereldar Crystal;300;None;Held In Off-hand  (Random);Normal
+55421;Mereldar Ring;300;None;Finger  (Random);Normal
+55421;Mereldar Ring;300;None;Finger  (Random);Normal
 55367;Mereldar Scepter;300;None;Main Hand Mace (Random);Normal
 55367;Mereldar Scepter;300;None;Main Hand Mace (Random);Normal
 55439;Mereldar Spellblade;300;None;Main Hand Dagger (Random);Normal
@@ -846,14 +1001,18 @@ ID;Item;Item Level;Classes;Category;Version
 55439;Mereldar Spellblade;300;None;Main Hand Dagger (Random);Normal
 55484;Mereldar Wand;300;None;Ranged Wand (Random);Normal
 55484;Mereldar Wand;300;None;Ranged Wand (Random);Normal
-65367;Mistral Circle;372;None;Finger (Random);Heroic
-63488;Mistral Circle;359;None;Finger (Random);Normal
-69884;Mistral Drape;372;None;Back (Random);Heroic
-69831;Mistral Drape;359;None;Back (Random);Normal
-69880;Mistral Pendant;372;None;Neck (Random);Heroic
-69827;Mistral Pendant;359;None;Neck (Random);Normal
+65367;Mistral Circle;372;None;Finger  (Random);Heroic
+63488;Mistral Circle;359;None;Finger  (Random);Normal
+69884;Mistral Drape;372;None;Back  (Random);Heroic
+69831;Mistral Drape;359;None;Back  (Random);Normal
+69880;Mistral Pendant;372;None;Neck  (Random);Heroic
+69827;Mistral Pendant;359;None;Neck  (Random);Normal
+71462;Molten Scream;391;None;Held In Off-hand  (Intellect w/ Hit);Heroic
+71323;Molten Scream;378;None;Held In Off-hand  (Intellect w/ Hit);Normal
 65051;Molten Tantrum Boots;372;None;Plate Feet (Tank);Heroic
 59328;Molten Tantrum Boots;359;None;Plate Feet (Tank);Normal
+71429;Moltenfeather Leggings;391;None;Mail Legs (Agility w/ Hit);Heroic
+70736;Moltenfeather Leggings;378;None;Mail Legs (Agility w/ Hit);Normal
 67135;Morrie's Waywalker Wrap;359;None;Leather Chest (Agility);Normal
 67135;Morrie's Waywalker Wrap;359;None;Leather Chest (Agility);Normal
 55746;Mystral Cowl;306;None;Cloth Head (Random);Normal
@@ -872,15 +1031,19 @@ ID;Item;Item Level;Classes;Category;Version
 55764;Mystral Shoulderpads;306;None;Cloth Shoulder (Random);Normal
 55710;Mystral Wristwraps;306;None;Cloth Wrist (Random);Normal
 55710;Mystral Wristwraps;306;None;Cloth Wrist (Random);Normal
-65107;Necklace of Strife;372;None;Neck (Agility);Heroic
-59517;Necklace of Strife;359;None;Neck (Agility);Normal
+71446;Necklace of Fetishes;391;None;Neck  (Strength w/ Hit);Heroic
+71019;Necklace of Fetishes;378;None;Neck  (Strength w/ Hit);Normal
+65107;Necklace of Strife;372;None;Neck  (Agility);Heroic
+59517;Necklace of Strife;359;None;Neck  (Agility);Normal
+69139;Necromantic Focus;391;None;Trinket;Heroic
+68982;Necromantic Focus;378;None;Trinket;Normal
 76975;Necrotic Boneplate Gauntlets;397;Death Knight;Plate Hands (Strength);Normal
 76977;Necrotic Boneplate Greaves;397;Death Knight;Plate Legs (Strength);Normal
 77009;Necrotic Boneplate Handguards;397;Death Knight;Plate Hands (Strength w/ Hit);Normal
 77011;Necrotic Boneplate Legguards;397;Death Knight;Plate Legs (Tank);Normal
 60236;Nightmare Rider's Boots;379;None;Leather Feet (Intellect w/ Spirit);Normal
-66974;Nightrend Choker;333;None;Neck (Agility);Normal
-66974;Nightrend Choker;333;None;Neck (Agility);Normal
+66974;Nightrend Choker;333;None;Neck  (Agility);Normal
+66974;Nightrend Choker;333;None;Neck  (Agility);Normal
 67057;Oath-Bound Gauntlets;325;None;Plate Hands (Tank);Normal
 67057;Oath-Bound Gauntlets;325;None;Plate Hands (Tank);Normal
 71107;Obsidian Arborweave Gloves;378;Druid;Leather Hands (Intellect w/ Spirit);Normal
@@ -900,6 +1063,8 @@ ID;Item;Item Level;Classes;Category;Version
 65078;Passive Resistor Spaulders;372;None;Leather Shoulder (Intellect w/ Spirit);Heroic
 59218;Passive Resistor Spaulders;359;None;Leather Shoulder (Intellect w/ Spirit);Normal
 67144;Pauldrons of Edward the Odd;359;None;Plate Shoulder (Tank);Normal
+71612;Pauldrons of Roaring Flame;397;None;Plate Shoulder (Tank);Heroic
+70921;Pauldrons of Roaring Flame;384;None;Plate Shoulder (Tank);Normal
 65027;Pauldrons of the Apocalypse;372;None;Plate Shoulder (Tank);Heroic
 59356;Pauldrons of the Apocalypse;359;None;Plate Shoulder (Tank);Normal
 65142;Pauldrons of the Great Ettin;372;None;Plate Shoulder (Strength);Heroic
@@ -920,21 +1085,23 @@ ID;Item;Item Level;Classes;Category;Version
 62076;Perforated Plate Pants;150;None;Plate Legs;Normal
 62075;Perforated Plate Shoulderpads;150;None;Plate Shoulder;Normal
 62075;Perforated Plate Shoulderpads;150;None;Plate Shoulder;Normal
-69878;Permafrost Cape;372;None;Back (Random);Heroic
-69833;Permafrost Cape;359;None;Back (Random);Normal
-69883;Permafrost Choker;372;None;Neck (Random);Heroic
-69828;Permafrost Choker;359;None;Neck (Random);Normal
-65372;Permafrost Signet;372;None;Finger (Random);Heroic
-63489;Permafrost Signet;359;None;Finger (Random);Normal
+69878;Permafrost Cape;372;None;Back  (Random);Heroic
+69833;Permafrost Cape;359;None;Back  (Random);Normal
+69883;Permafrost Choker;372;None;Neck  (Random);Heroic
+69828;Permafrost Choker;359;None;Neck  (Random);Normal
+65372;Permafrost Signet;372;None;Finger  (Random);Heroic
+63489;Permafrost Signet;359;None;Finger  (Random);Normal
 60201;Phase-Twister Leggings;359;None;Mail Legs (Intellect w/ Spirit);Normal
+71436;Phoenix-Down Treads;391;None;Leather Feet (Intellect w/ Spirit);Heroic
+70987;Phoenix-Down Treads;378;None;Leather Feet (Intellect w/ Spirit);Normal
 65064;Pip's Solution Agitator;372;None;Ranged Wand (Intellect w/ Spirit);Heroic
 59314;Pip's Solution Agitator;359;None;Ranged Wand (Intellect w/ Spirit);Normal
-69882;Planetary Amulet;372;None;Neck (Random);Heroic
-69830;Planetary Amulet;359;None;Neck (Random);Normal
-65373;Planetary Band;372;None;Finger (Random);Heroic
-63494;Planetary Band;359;None;Finger (Random);Normal
-69881;Planetary Drape;372;None;Back (Random);Heroic
-69835;Planetary Drape;359;None;Back (Random);Normal
+69882;Planetary Amulet;372;None;Neck  (Random);Heroic
+69830;Planetary Amulet;359;None;Neck  (Random);Normal
+65373;Planetary Band;372;None;Finger  (Random);Heroic
+63494;Planetary Band;359;None;Finger  (Random);Normal
+69881;Planetary Drape;372;None;Back  (Random);Heroic
+69835;Planetary Drape;359;None;Back  (Random);Normal
 65071;Plated Fists of Provocation;372;None;Plate Hands (Strength);Heroic
 59225;Plated Fists of Provocation;359;None;Plate Hands (Strength);Normal
 62069;Plugged Rifle;175;None;Ranged Gun;Normal
@@ -968,8 +1135,8 @@ ID;Item;Item Level;Classes;Category;Version
 65069;Quickstep Galoshes;372;None;Cloth Feet (Intellect);Heroic
 59234;Quickstep Galoshes;359;None;Cloth Feet (Intellect);Normal
 63274;Rabbit's Other Foot;1;None;ETC;Normal
-65025;Rage of Ages;372;None;Neck (Strength w/ Hit);Heroic
-59442;Rage of Ages;359;None;Neck (Strength w/ Hit);Normal
+65025;Rage of Ages;372;None;Neck  (Strength w/ Hit);Heroic
+59442;Rage of Ages;359;None;Neck  (Strength w/ Hit);Normal
 55502;Ravencrest Breastplate;300;None;Plate Chest (Random);Normal
 55502;Ravencrest Breastplate;300;None;Plate Chest (Random);Normal
 55520;Ravencrest Gauntlets;300;None;Plate Hands (Random);Normal
@@ -1024,15 +1191,17 @@ ID;Item;Item Level;Classes;Category;Version
 60357;Reinforced Sapphirium Legguards;359;Paladin;Plate Legs (Tank);Normal
 60347;Reinforced Sapphirium Legplates;359;Paladin;Plate Legs (Strength w/ Hit);Normal
 63041;Reins of the Drake of the South Wind;70;None;ETC;Normal
-65106;Ring of Rivalry;372;None;Finger (Strength w/ Expertise);Heroic
-59518;Ring of Rivalry;359;None;Finger (Strength w/ Expertise);Normal
-67131;Ritssyn's Ruminous Drape;359;None;Back (Intellect);Normal
-67131;Ritssyn's Ruminous Drape;359;None;Back (Intellect);Normal
+65106;Ring of Rivalry;372;None;Finger  (Strength w/ Expertise);Heroic
+59518;Ring of Rivalry;359;None;Finger  (Strength w/ Expertise);Normal
+67131;Ritssyn's Ruminous Drape;359;None;Back  (Intellect);Normal
+67131;Ritssyn's Ruminous Drape;359;None;Back  (Intellect);Normal
 58268;Roasted Beef;80;None;ETC;Normal
 58268;Roasted Beef;80;None;ETC;Normal
 58268;Roasted Beef;80;None;ETC;Normal
 62072;Robble's Wobbly Staff;175;None;Two-Hand Staff;Normal
 62072;Robble's Wobbly Staff;175;None;Two-Hand Staff;Normal
+71407;Robes of Smoldering Devastation;391;None;Cloth Chest (Intellect);Heroic
+71041;Robes of Smoldering Devastation;378;None;Cloth Chest (Intellect);Normal
 65135;Robes of the Burning Acolyte;372;None;Cloth Chest (Intellect w/ Spirit);Heroic
 59482;Robes of the Burning Acolyte;359;None;Cloth Chest (Intellect w/ Spirit);Normal
 67126;Roffle's Ruffly Gloves;333;None;Cloth Hands (Intellect w/ Spirit);Normal
@@ -1158,25 +1327,29 @@ ID;Item;Item Level;Classes;Category;Version
 70291;Ruthless Gladiator's Wyrmhide Legguards;384;Druid;Leather Legs (PvP);Normal
 66970;Safecracker's Gloves;325;None;Leather Hands (Agility);Normal
 66970;Safecracker's Gloves;325;None;Leather Hands (Agility);Normal
+71467;Sandals of Leaping Coals;391;None;Leather Feet (Agility);Heroic
+71313;Sandals of Leaping Coals;378;None;Leather Feet (Agility);Normal
 65060;Sark of the Unwatched;372;None;Leather Chest (Agility);Heroic
 59318;Sark of the Unwatched;359;None;Leather Chest (Agility);Normal
 68601;Scaleslicer;359;None;One-Hand Dagger (Agility w/ Hit);Normal
+71442;Scalp of the Bandit Prince;391;None;Mail Head (Agility);Heroic
+71018;Scalp of the Bandit Prince;378;None;Mail Head (Agility);Normal
 68197;Scavenged Animal Parts;81;None;ETC;Normal
 68197;Scavenged Animal Parts;81;None;ETC;Normal
-65111;Scepter of Ice;372;None;Held In Off-hand (Intellect w/ Spirit);Heroic
-59513;Scepter of Ice;359;None;Held In Off-hand (Intellect w/ Spirit);Normal
+65111;Scepter of Ice;372;None;Held In Off-hand  (Intellect w/ Spirit);Heroic
+59513;Scepter of Ice;359;None;Held In Off-hand  (Intellect w/ Spirit);Normal
 62421;Scintillating Crystals;1;None;ETC;Normal
 65045;Scorched Wormling Vest;372;None;Leather Chest (Intellect w/ Spirit);Heroic
 59335;Scorched Wormling Vest;359;None;Leather Chest (Intellect w/ Spirit);Normal
-65076;Security Measure Alpha;372;None;Finger (Intellect w/ Spirit);Heroic
-59220;Security Measure Alpha;359;None;Finger (Intellect w/ Spirit);Normal
+65076;Security Measure Alpha;372;None;Finger  (Intellect w/ Spirit);Heroic
+59220;Security Measure Alpha;359;None;Finger  (Intellect w/ Spirit);Normal
 65127;Shackles of the End of Days;372;None;Plate Wrist (Intellect w/ Spirit);Heroic
 59497;Shackles of the End of Days;359;None;Plate Wrist (Intellect w/ Spirit);Normal
-67069;Shade of Death;333;None;Back (Tank);Normal
-67069;Shade of Death;333;None;Back (Tank);Normal
-67069;Shade of Death;333;None;Back (Tank);Normal
-65018;Shadow of Dread;372;None;Back (Intellect);Heroic
-59457;Shadow of Dread;359;None;Back (Intellect);Normal
+67069;Shade of Death;333;None;Back  (Tank);Normal
+67069;Shade of Death;333;None;Back  (Tank);Normal
+67069;Shade of Death;333;None;Back  (Tank);Normal
+65018;Shadow of Dread;372;None;Back  (Intellect);Heroic
+59457;Shadow of Dread;359;None;Back  (Intellect);Normal
 65019;Shadowblaze Robes;372;None;Cloth Chest (Intellect w/ Hit);Heroic
 59454;Shadowblaze Robes;359;None;Cloth Chest (Intellect w/ Hit);Normal
 60248;Shadowflame Handwraps;359;Warlock;Cloth Hands (Intellect);Normal
@@ -1184,10 +1357,21 @@ ID;Item;Item Level;Classes;Category;Version
 59468;Shadowforge's Lightbound Smock;359;None;Cloth Chest (Intellect w/ Spirit);Normal
 65145;Shalug'doom, the Axe of Unmaking;372;None;Two-Hand Axe (Strength w/ Expertise);Heroic
 59330;Shalug'doom, the Axe of Unmaking;359;None;Two-Hand Axe (Strength w/ Expertise);Normal
+71460;Shard of Torment;391;None;Off Hand Shield (Tank);Heroic
+70915;Shard of Torment;378;None;Off Hand Shield (Tank);Normal
 60233;Shard of Woe;379;None;Trinket;Normal
 62063;Shattered War Mace;175;None;Two-Hand Mace;Normal
 62063;Shattered War Mace;175;None;Two-Hand Mace;Normal
 62063;Shattered War Mace;175;None;Two-Hand Mace;Normal
+71783;Shatterskull Bonecrusher;391;None;One-Hand Mace (Agility);Heroic
+71782;Shatterskull Bonecrusher;378;None;One-Hand Mace (Agility);Normal
+71797;Sho'ravon, Greatstaff of Annihilation;397;None;Two-Hand Staff (Intellect);Heroic
+71798;Sho'ravon, Greatstaff of Annihilation;384;None;Two-Hand Staff (Intellect);Normal
+71456;Shoulderpads of the Forgotten Gate;391;None;Leather Shoulder (Agility w/ Hit);Heroic
+71345;Shoulderpads of the Forgotten Gate;378;None;Leather Shoulder (Agility w/ Hit);Normal
+71680;Shoulders of the Fiery Conqueror;391;Paladin, Priest, Warlock;ETC;Normal
+71687;Shoulders of the Fiery Protector;391;Warrior, Hunter, Shaman;ETC;Normal
+71673;Shoulders of the Fiery Vanquisher;391;Rogue, Death Knight, Mage, Druid;ETC;Normal
 65088;Shoulders of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
 65088;Shoulders of the Forlorn Conqueror;85;Paladin, Priest, Warlock;ETC;Normal
 65087;Shoulders of the Forlorn Protector;85;Warrior, Hunter, Shaman;ETC;Normal
@@ -1196,8 +1380,8 @@ ID;Item;Item Level;Classes;Category;Version
 65089;Shoulders of the Forlorn Vanquisher;85;Rogue, Death Knight, Mage, Druid;ETC;Normal
 60232;Shroud of Endless Grief;379;None;Back (Intellect);Normal
 67129;Signet of High Arcanist Savor;359;None;Finger (Intellect w/ Hit);Normal
-65123;Signet of the Fifth Circle;372;None;Finger (Intellect);Heroic
-59501;Signet of the Fifth Circle;359;None;Finger (Intellect);Normal
+65123;Signet of the Fifth Circle;372;None;Finger  (Intellect);Heroic
+59501;Signet of the Fifth Circle;359;None;Finger  (Intellect);Normal
 62108;Singed Armor;199;None;Leather Chest;Normal
 62108;Singed Armor;199;None;Leather Chest;Normal
 62108;Singed Armor;199;None;Leather Chest;Normal
@@ -1219,10 +1403,15 @@ ID;Item;Item Level;Classes;Category;Version
 62111;Singed Shoulderpads;199;None;Leather Shoulder;Normal
 62111;Singed Shoulderpads;199;None;Leather Shoulder;Normal
 67123;Sinman's Helm of Succor;333;None;Mail Head (Intellect);Normal
+71445;Skullstealer Greataxe;391;None;Two-Hand Axe (Strength);Heroic
+71014;Skullstealer Greataxe;378;None;Two-Hand Axe (Strength);Normal
 65369;Sky Strider Belt;372;None;Plate Waist (Random);Heroic
 63490;Sky Strider Belt;359;None;Plate Waist (Random);Normal
 65379;Sky Strider Greaves;372;None;Plate Legs (Random);Heroic
 63500;Sky Strider Greaves;359;None;Plate Legs (Random);Normal
+71774;Smoldering Censer of Purity;391;None;Two-Hand Staff (Intellect w/ Spirit);Heroic
+71775;Smoldering Censer of Purity;378;None;Two-Hand Staff (Intellect w/ Spirit);Normal
+69224;Smoldering Egg of Millagazor;70;None;ETC;Normal
 62120;Sodden Cloth Belt;199;None;Cloth Waist;Normal
 62120;Sodden Cloth Belt;199;None;Cloth Waist;Normal
 62120;Sodden Cloth Belt;199;None;Cloth Waist;Normal
@@ -1279,11 +1468,17 @@ ID;Item;Item Level;Classes;Category;Version
 66994;Soul's Anguish;333;None;Trinket;Normal
 58256;Sparkling Oasis Water;80;None;ETC;Normal
 58256;Sparkling Oasis Water;80;None;ETC;Normal
+71413;Spaulders of Manifold Eyes;391;None;Plate Shoulder (Intellect w/ Spirit);Heroic
+71043;Spaulders of Manifold Eyes;378;None;Plate Shoulder (Intellect w/ Spirit);Normal
+71432;Spaulders of Recurring Flame;391;None;Plate Shoulder (Tank);Heroic
+70737;Spaulders of Recurring Flame;378;None;Plate Shoulder (Tank);Normal
 66976;Spaulders of the Savage Beast;333;None;Mail Shoulder (Agility);Normal
 66976;Spaulders of the Savage Beast;333;None;Mail Shoulder (Agility);Normal
 66976;Spaulders of the Savage Beast;333;None;Mail Shoulder (Agility);Normal
 65074;Spaulders of the Scarred Lady;372;None;Mail Shoulder (Agility);Heroic
 59222;Spaulders of the Scarred Lady;359;None;Mail Shoulder (Agility);Normal
+69138;Spidersilk Spindle;391;None;Trinket;Heroic
+68981;Spidersilk Spindle;378;None;Trinket;Normal
 77038;Spiritwalker's Gloves;397;Shaman;Mail Hands (Intellect w/ Spirit);Normal
 77041;Spiritwalker's Grips;397;Shaman;Mail Hands (Agility w/ Expertise);Normal
 76757;Spiritwalker's Handwraps;397;Shaman;Mail Hands (Intellect w/ Spirit);Normal
@@ -1299,6 +1494,8 @@ ID;Item;Item Level;Classes;Category;Version
 63492;Star Chaser Belt;359;None;Mail Waist (Random);Normal
 65378;Star Chaser Legguards;372;None;Mail Legs (Random);Heroic
 63502;Star Chaser Legguards;359;None;Mail Legs (Random);Normal
+71473;Stinger of the Flaming Scorpion;391;None;Ranged Wand (Intellect);Heroic
+71347;Stinger of the Flaming Scorpion;378;None;Ranged Wand (Intellect);Normal
 55503;Stonewrought Breastplate;306;None;Plate Chest (Random);Normal
 55503;Stonewrought Breastplate;306;None;Plate Chest (Random);Normal
 55521;Stonewrought Gauntlets;306;None;Plate Hands (Random);Normal
@@ -1331,6 +1528,8 @@ ID;Item;Item Level;Classes;Category;Version
 68127;Stormwake, the Tempest's Reach;359;None;Main Hand Sword (Random);Normal
 68128;Stormwake, the Tempest's Reach;359;None;Main Hand Sword (Random);Normal
 68129;Stormwake, the Tempest's Reach;359;None;Main Hand Sword (Random);Normal
+70723;Sulfuras, the Extinguished Hand;397;None;Two-Hand Mace (Strength);Heroic
+71352;Sulfuras, the Extinguished Hand;384;None;Two-Hand Mace (Strength);Normal
 65048;Symbiotic Worm;372;None;Trinket;Heroic
 59332;Symbiotic Worm;359;None;Trinket;Normal
 55630;Talondeep Belt;312;None;Mail Waist (Random);Normal
@@ -1363,25 +1562,29 @@ ID;Item;Item Level;Classes;Category;Version
 63504;Tempest Keeper Leggings;359;None;Plate Legs (Random);Normal
 65121;Terrastra's Legguards;372;None;Plate Legs (Strength w/ Hit);Heroic
 59503;Terrastra's Legguards;359;None;Plate Legs (Strength w/ Hit);Normal
+69112;The Hungerer;391;None;Trinket;Heroic
+68927;The Hungerer;378;None;Trinket;Normal
 65058;Themios the Darkbringer;372;None;Ranged Bow (Agility);Heroic
 59320;Themios the Darkbringer;359;None;Ranged Bow (Agility);Normal
 65105;Theralion's Mirror;372;None;Trinket;Heroic
 59519;Theralion's Mirror;359;None;Trinket;Normal
 59460;Theresa's Booklight;359;None;Ranged Wand (Intellect w/ Hit);Normal
-55404;Thondroril Amulet;306;None;Neck (Random);Normal
-55404;Thondroril Amulet;306;None;Neck (Random);Normal
-55314;Thondroril Cloak;306;None;Back (Random);Normal
-55314;Thondroril Cloak;306;None;Back (Random);Normal
-55377;Thondroril Crystal;306;None;Held In Off-hand (Random);Normal
-55377;Thondroril Crystal;306;None;Held In Off-hand (Random);Normal
-55422;Thondroril Ring;306;None;Finger (Random);Normal
-55422;Thondroril Ring;306;None;Finger (Random);Normal
+55404;Thondroril Amulet;306;None;Neck  (Random);Normal
+55404;Thondroril Amulet;306;None;Neck  (Random);Normal
+55314;Thondroril Cloak;306;None;Back  (Random);Normal
+55314;Thondroril Cloak;306;None;Back  (Random);Normal
+55377;Thondroril Crystal;306;None;Held In Off-hand  (Random);Normal
+55377;Thondroril Crystal;306;None;Held In Off-hand  (Random);Normal
+55422;Thondroril Ring;306;None;Finger  (Random);Normal
+55422;Thondroril Ring;306;None;Finger  (Random);Normal
 55368;Thondroril Scepter;306;None;Main Hand Mace (Random);Normal
 55368;Thondroril Scepter;306;None;Main Hand Mace (Random);Normal
 55440;Thondroril Spellblade;306;None;Main Hand Dagger (Random);Normal
 55440;Thondroril Spellblade;306;None;Main Hand Dagger (Random);Normal
 55485;Thondroril Wand;306;None;Ranged Wand (Random);Normal
 55485;Thondroril Wand;306;None;Ranged Wand (Random);Normal
+71412;Thoracic Flame Kilt;391;None;Mail Legs (Intellect w/ Spirit);Heroic
+71042;Thoracic Flame Kilt;378;None;Mail Legs (Intellect w/ Spirit);Normal
 55629;Thornsnarl Belt;306;None;Mail Waist (Random);Normal
 55629;Thornsnarl Belt;306;None;Mail Waist (Random);Normal
 55566;Thornsnarl Bracers;306;None;Mail Wrist (Random);Normal
@@ -1399,8 +1602,8 @@ ID;Item;Item Level;Classes;Category;Version
 55620;Thornsnarl Spaulders;306;None;Mail Shoulder (Random);Normal
 55575;Thornsnarl Vest;306;None;Mail Chest (Random);Normal
 55575;Thornsnarl Vest;306;None;Mail Chest (Random);Normal
-67119;Thousand Bandage Drape;325;None;Back (Intellect w/ Spirit);Normal
-67119;Thousand Bandage Drape;325;None;Back (Intellect w/ Spirit);Normal
+67119;Thousand Bandage Drape;325;None;Back  (Intellect w/ Spirit);Normal
+67119;Thousand Bandage Drape;325;None;Back  (Intellect w/ Spirit);Normal
 65370;Thunder Wall Belt;372;None;Plate Waist (Random);Heroic
 63491;Thunder Wall Belt;359;None;Plate Waist (Random);Normal
 65380;Thunder Wall Greaves;372;None;Plate Legs (Random);Heroic
@@ -1413,9 +1616,13 @@ ID;Item;Item Level;Classes;Category;Version
 59350;Treads of Flawless Creation;359;None;Mail Feet (Intellect w/ Spirit);Normal
 65128;Treads of Hideous Transformation;372;None;Leather Feet (Intellect w/ Spirit);Heroic
 59495;Treads of Hideous Transformation;359;None;Leather Feet (Intellect w/ Spirit);Normal
+71451;Treads of Implicit Obedience;391;None;Mail Feet (Intellect w/ Spirit);Heroic
+71027;Treads of Implicit Obedience;378;None;Mail Feet (Intellect w/ Spirit);Normal
 65116;Treads of Liquid Ice;372;None;Cloth Feet (Intellect w/ Spirit);Heroic
 59508;Treads of Liquid Ice;359;None;Cloth Feet (Intellect w/ Spirit);Normal
 59464;Treads of Savage Beatings;359;None;Plate Feet (Strength);Normal
+71475;Treads of the Penitent Man;391;None;Plate Feet (Intellect w/ Spirit);Heroic
+71351;Treads of the Penitent Man;378;None;Plate Feet (Intellect w/ Spirit);Normal
 66941;Triple-Loop Belt;333;None;Cloth Waist (Intellect);Normal
 66941;Triple-Loop Belt;333;None;Cloth Waist (Intellect);Normal
 60202;Tsanga's Helm;359;None;Leather Head (Agility);Normal
@@ -1426,9 +1633,15 @@ ID;Item;Item Level;Classes;Category;Version
 63680;Twilight's Hammer;359;None;Main Hand Mace (Intellect);Normal
 68600;Uhn'agh Fash, the Darkest Betrayal;372;None;One-Hand Dagger (Agility);Heroic
 59494;Uhn'agh Fash, the Darkest Betrayal;359;None;One-Hand Dagger (Agility);Normal
+71443;Uncrushable Belt of Fury;391;None;Plate Waist (Strength w/ Expertise);Heroic
+71021;Uncrushable Belt of Fury;378;None;Plate Waist (Strength w/ Expertise);Normal
 59520;Unheeded Warning;359;None;Trinket;Normal
-65112;Valiona's Medallion;372;None;Neck (Intellect);Heroic
-59512;Valiona's Medallion;359;None;Neck (Intellect);Normal
+65112;Valiona's Medallion;372;None;Neck  (Intellect);Heroic
+59512;Valiona's Medallion;359;None;Neck  (Intellect);Normal
+69110;Variable Pulse Lightning Capacitor;397;None;Trinket;Heroic
+68925;Variable Pulse Lightning Capacitor;384;None;Trinket;Normal
+69167;Vessel of Acceleration;397;None;Trinket;Heroic
+68995;Vessel of Acceleration;384;None;Trinket;Normal
 65109;Vial of Stolen Memories;372;None;Trinket;Heroic
 59515;Vial of Stolen Memories;359;None;Trinket;Normal
 61033;Vicious Gladiator's Badge of Conquest;365;None;Trinket;Normal
@@ -1532,30 +1745,42 @@ ID;Item;Item Level;Classes;Category;Version
 52328;Volatile Air;83;None;ETC;Normal
 52327;Volatile Earth;83;None;ETC;Normal
 52325;Volatile Fire;83;None;ETC;Normal
+71422;Volcanospike;391;None;Main Hand Sword (Intellect w/ Hit);Heroic
+71006;Volcanospike;378;None;Main Hand Sword (Intellect w/ Hit);Normal
 65084;Voltage Source Chestguard;372;None;Mail Chest (Agility);Heroic
 59119;Voltage Source Chestguard;359;None;Mail Chest (Agility);Normal
 65092;Waistguard of Hatred;372;None;Mail Waist (Intellect w/ Spirit);Heroic
 63535;Waistguard of Hatred;359;None;Mail Waist (Intellect w/ Spirit);Normal
 60229;War-Torn Crushers;379;None;Plate Feet (Tank);Normal
+71408;Ward of the Red Widow;391;None;Off Hand Shield (Intellect w/ Spirit);Heroic
+71038;Ward of the Red Widow;378;None;Off Hand Shield (Intellect w/ Spirit);Normal
 62064;Warped Greatsword;175;None;Two-Hand Sword;Normal
 62064;Warped Greatsword;175;None;Two-Hand Sword;Normal
 62064;Warped Greatsword;175;None;Two-Hand Sword;Normal
+71401;Widow's Kiss;391;None;Finger  (Agility);Heroic
+71032;Widow's Kiss;378;None;Finger  (Agility);Normal
 60298;Wind Dancer's Gloves;359;Rogue;Leather Hands (Agility w/ Hit);Normal
 60300;Wind Dancer's Legguards;359;Rogue;Leather Legs (Agility);Normal
 65371;Wind Stalker Belt;372;None;Leather Waist (Random);Heroic
 63493;Wind Stalker Belt;359;None;Leather Waist (Random);Normal
 65381;Wind Stalker Leggings;372;None;Leather Legs (Random);Heroic
 63503;Wind Stalker Leggings;359;None;Leather Legs (Random);Normal
+71434;Wings of Flame;391;None;Back  (Intellect);Heroic
+70990;Wings of Flame;378;None;Back  (Intellect);Normal
 62066;Wolk's Blunted Shiv;175;None;One-Hand Dagger;Normal
 62066;Wolk's Blunted Shiv;175;None;One-Hand Dagger;Normal
 67146;Woundsplicer Handwraps;359;None;Cloth Hands (Intellect w/ Spirit);Normal
-65134;Wyrmbreaker's Amulet;372;None;Neck (Intellect w/ Spirit);Heroic
-59483;Wyrmbreaker's Amulet;359;None;Neck (Intellect w/ Spirit);Normal
+71471;Wristwraps of Arrogant Doom;391;None;Cloth Wrist (Intellect);Heroic
+71350;Wristwraps of Arrogant Doom;378;None;Cloth Wrist (Intellect);Normal
+65134;Wyrmbreaker's Amulet;372;None;Neck  (Intellect w/ Spirit);Heroic
+59483;Wyrmbreaker's Amulet;359;None;Neck  (Intellect w/ Spirit);Normal
 77029;Wyrmstalker's Gloves;397;Hunter;Mail Hands (Agility w/ Hit);Normal
 77031;Wyrmstalker's Legguards;397;Hunter;Mail Legs (Agility);Normal
 65079;X-Tron Duct Tape;372;None;Cloth Waist (Intellect w/ Spirit);Heroic
 59217;X-Tron Duct Tape;359;None;Cloth Waist (Intellect w/ Spirit);Normal
-67142;Zom's Electrostatic Cloak;359;None;Back (Tank);Normal
-67142;Zom's Electrostatic Cloak;359;None;Back (Tank);Normal
+71781;Zoid's Firelit Greatsword;391;None;Two-Hand Sword (Strength);Heroic
+71780;Zoid's Firelit Greatsword;378;None;Two-Hand Sword (Strength);Normal
+67142;Zom's Electrostatic Cloak;359;None;Back  (Tank);Normal
+67142;Zom's Electrostatic Cloak;359;None;Back  (Tank);Normal
 67124;Zulian Swirling Shield;333;None;Off Hand Shield (Intellect);Normal
 67124;Zulian Swirling Shield;333;None;Off Hand Shield (Intellect);Normal

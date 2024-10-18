@@ -156,7 +156,8 @@ if __name__ == "__main__":
                 text = item_pattern.search(text).group(2)
 
                 subcategory = armor_subtype(text, category)
-                subcategory = subcategory.replace("  ", " ")
+                if subcategory is not None: 
+                    subcategory = subcategory.replace("  ", " ")
 
                 if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
                 else: classes = None

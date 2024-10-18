@@ -236,7 +236,9 @@ def award_loot(players):
             item_match = item_matches[0]
 
         elif len(item_matches) > 1:
-            # We'll print all of the matches, and ask them to select one.
+            item_matches.sort(key=lambda x: (x.ilvl, x.name))
+
+            # We'll print all of the matches, and ask them to select one.z
             print("Multiple matches found. Please select one of the following:")
             for i in range(len(item_matches)):
                 print(f"{i+1}. {item_matches[i].name} ({item_matches[i].ilvl})")
@@ -262,6 +264,8 @@ def award_loot(players):
         item_match = item_matches[0]
 
     elif len(item_matches) > 1:
+        item_matches.sort(key=lambda x: (x.ilvl, x.name))
+        
         # We'll print all of the matches, and ask them to select one.
         print("Multiple matches found. Please select one of the following:")
         for i in range(len(item_matches)):
