@@ -3,13 +3,20 @@ from tqdm import tqdm
 
 parser = argparse.ArgumentParser(description="Scrape item data from WoWHead.")
 parser.add_argument("--force", action="store_true", help="Force the script to start from the beginning.")
-parser.add_argument("--html", nargs="?", const='all', help="Save the HTML of all items or the specified item if an argument is provided.")
 parser.add_argument("--output", default="all-items-cata.scsv", help="Output file name.")
 args = parser.parse_args()
 
-def armor_subtype(text, base_type): 
+def armor_subtype(text, item, base_type): 
     # If the base type is a trinket, just return it as is
-    if base_type.strip().lower() == "trinket": return "Trinket"
+    if base_type.strip().lower() == "trinket": 
+        if not os.path.exists("trinkets.txt"):
+            with open("trinkets.txt", "w", encoding="utf-8") as trinkets_file:
+                trinkets_file.write("")
+
+        with open("trinkets.txt", "a", encoding="utf-8") as trinkets_file:
+            trinkets_file.write(f"{item}:\n\n{text}\n\n")
+
+        return "Trinket"
 
     text = text.lower()
 
@@ -70,15 +77,6 @@ if __name__ == "__main__":
     # Assert that both lists are of the same length
     assert len(cata_ids) == len(cata_items)
     print(f"Number of items: {len(cata_items)}")
-
-    # Create directory if it doesn't exist
-    if not os.path.exists("./items/"):
-        os.makedirs("./items/")
-
-    else: 
-        # Delete everything in the directory
-        for file in os.listdir("./items/"):
-            os.remove(f"./items/{file}")
 
     # Sort cata_items and cata_ids based on the items; by item name ascending, then by ID ascending
     cata_items, cata_ids = zip(*sorted(zip(cata_items, cata_ids)))
@@ -155,7 +153,7 @@ if __name__ == "__main__":
 
                 text = item_pattern.search(text).group(2)
 
-                subcategory = armor_subtype(text, category)
+                subcategory = armor_subtype(text, item, category)
                 if subcategory is not None: 
                     subcategory = subcategory.replace("  ", " ")
 
@@ -163,7 +161,6 @@ if __name__ == "__main__":
                 else: classes = None
                         
                 all_items_file.write(f"{item_id};{item};{item_level};{classes};{subcategory};{difficulty}\n")
-                item_written = True
                 
             else: 
                 # Find the IDs of the matching items
@@ -187,7 +184,7 @@ if __name__ == "__main__":
 
                 text = item_pattern.search(text).group(2)
 
-                subcategory = armor_subtype(text, category)
+                subcategory = armor_subtype(text, item, category)
                 try: 
                     if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
                 except: 
@@ -219,10 +216,3 @@ if __name__ == "__main__":
 
                 for i, item_id in enumerate(item_ids):
                     all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{subcategory};{difficulties[i]}\n")
-
-                item_written = True
-        
-        if not item_written or args.html == item_id or args.html == "all": 
-            # print(f"{item} was not written to the file.")
-            with open(f"./items/{item_id}_{item_url}.html", "w", encoding="utf-8") as item_file:
-                item_file.write(text)

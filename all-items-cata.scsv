@@ -17,7 +17,6 @@ ID;Item;Item Level;Classes;Category;Version
 71353;Arathar, the Eye of Flame;384;None;Ranged Bow (Agility);Normal
 71414;Arbalest of Erupting Fury;391;None;Ranged Crossbow (Agility);Heroic
 70991;Arbalest of Erupting Fury;378;None;Ranged Crossbow (Agility);Normal
-71414;Arbalest of Erupting Fury;391;None;Ranged Crossbow (Agility);Normal
 65120;Arion's Crown;372;None;Mail Head (Agility);Heroic
 59504;Arion's Crown;359;None;Mail Head (Agility);Normal
 67150;Arrowsinger Legguards;359;None;Mail Legs (Agility w/ Hit);Normal
@@ -473,7 +472,6 @@ ID;Item;Item Level;Classes;Category;Version
 52363;Design: Flashing Carnelian;83;None;ETC (Tank);Normal
 52385;Design: Forceful Jasper;83;None;ETC;Normal
 52385;Design: Forceful Jasper;83;None;ETC;Normal
-52371;Design: Inscribed Hessonite;83;None;ETC (Strength);Normal
 52371;Design: Inscribed Hessonite;83;None;ETC (Strength);Normal
 52371;Design: Inscribed Hessonite;83;None;ETC (Strength);Normal
 52386;Design: Lightning Jasper;83;None;None;Normal
