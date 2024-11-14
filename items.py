@@ -2,28 +2,18 @@ import requests, os, re, argparse
 from tqdm import tqdm
 
 parser = argparse.ArgumentParser(description="Scrape item data from WoWHead.")
-parser.add_argument("--force", action="store_true", help="Force the script to start from the beginning.")
-parser.add_argument("--output", default="all-items-cata.scsv", help="Output file name.")
+parser.add_argument("--force", "-f", action="store_true", help="Force the script to start from the beginning.")
+parser.add_argument("--output", "-o", default="all-items-cata.scsv", help="Output file name.")
 args = parser.parse_args()
 
 def armor_subtype(text, item, base_type): 
-    # If the base type is a trinket, just return it as is
-    if base_type.strip().lower() == "trinket": 
-        if not os.path.exists("trinkets.txt"):
-            with open("trinkets.txt", "w", encoding="utf-8") as trinkets_file:
-                trinkets_file.write("")
-
-        with open("trinkets.txt", "a", encoding="utf-8") as trinkets_file:
-            trinkets_file.write(f"{item}:\n\n{text}\n\n")
-
-        return "Trinket"
-
     text = text.lower()
-
-    if "resilience" in text: return f"{base_type} (PvP)"
-    if "random enchantment" in text: return f"{base_type} (Random)"
+    base_type = base_type.strip()
     
-    if "spirit" in text and "intellect" in text: return f"{base_type} (Intellect w/ Spirit)"
+    if "resilience" in text: return f"{base_type} (PvP)"
+    elif "random enchantment" in text: return f"{base_type} (Random)"
+    
+    elif "spirit" in text and "intellect" in text: return f"{base_type} (Intellect w/ Spirit)"
     elif "dodge" in text or "parry" in text: return f"{base_type} (Tank)"
 
     elif "hit rating" in text:
@@ -39,7 +29,9 @@ def armor_subtype(text, item, base_type):
     elif "agility" in text: return f"{base_type} (Agility)"
     elif "strength" in text: return f"{base_type} (Strength)"
 
-    else: return f"{base_type}"
+    text = text.lower()
+
+    return f"{base_type}"
 
 def match_category(category:str): 
     valid_categories = ["ETC", "Head", "Neck", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Ring", "Trinket", "Main-Hand", "Off-Hand", "Two-Hand", "Ranged", "Relic"]

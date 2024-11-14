@@ -304,6 +304,15 @@ def award_loot(players):
 
     ready = input("Ready to announce? (y/n): ").lower()
     if ready == "y": 
+        pyautogui.click(3440/2, 1440/2)
+
+        # Alt click the middle of the coordinates
+        pyautogui.keyDown('alt')
+        time.sleep(0.25)
+        pyautogui.click((right + left) / 2, (down + up) / 2)
+        time.sleep(0.25)
+        pyautogui.keyUp('alt')
+
         pyautogui.moveTo(1920/2, 1080/2)
         pyautogui.click()
         time.sleep(0.25)
@@ -332,6 +341,30 @@ def award_loot(players):
             time.sleep(0.25)
 
     print("")
+
+
+    # 1) Angelofruin, 2) Pasgghetti, 3) Bzorder, 4) Vanthulhu, 5) Axcel, 6) Tinyraider
+    # Eternal Ember priority for Dragonwrath. 
+
+    dragonwrath = {
+        "Angelofruin": False, 
+        "Pasgghetti": False,
+        "Bzorder": False,
+        "Vanthulhu": False,
+        "Axcel": False,
+        "Tinyraider": False,
+    }
+
+    # If the item name is "Eternal Ember", find the player with the highest priority that does NOT have True in the dictionary. 
+    # Skip players that are marked as absent. 
+    # Print a console message saying which person this item is going to.
+
+    if "Eternal Ember" in item_match.name:
+        for p in players:
+            if p._attendance == False: continue
+            if p.name in dragonwrath.keys() and not dragonwrath[p.name]: 
+                print(f"{item_match.name} ({item_match.ilvl}) should be awarded to {p.name}.")
+                break
 
     # We'll ask the user to input the name of the person who won the roll. 
     name = input("Who won the roll? ").lower()
@@ -381,15 +414,6 @@ def award_loot(players):
                 p._raid_log.append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
                 p._history[slot_category].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
                 return players
-
-    exceptions = [
-        "Mantle of the Forlorn Protector",
-        "Mantle of the Forlorn Vanquisher",
-        "Mantle of the Forlorn Conqueror",
-        "Helm of the Forlorn Protector",
-        "Helm of the Forlorn Vanquisher",
-        "Helm of the Forlorn Conqueror",
-    ]
 
     if "(PvP)" in item_match.category:
         roll_type = "OS"
@@ -974,6 +998,19 @@ def sudo_mode(players):
                         player = p
                         break
 
+                # Exception; Flickering Cowl, Shoulders, Shoulderpads, Handguards, Wristbands. These are random enchant items. 
+
+                if re.match(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)", item_name):
+                    # If we match one of these, add the item directly to the player's history without checking the dictionary.
+
+                    suffix = re.search(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)(.*)", item_name).group(2)
+
+                    # Remove the suffix from the name. 
+                    item_name = item_name.replace(suffix, "").strip()
+
+                else: 
+                    suffix = None
+
                 item = None
                 for i in all_items.values():
                     if i.name == item_name and i.ilvl == ilvl: 
@@ -984,6 +1021,9 @@ def sudo_mode(players):
                     roll_type = "OS"
                 else:
                     roll_type = "OS" if offspec else "MS"
+
+                if item_name == "Eternal Ember" or item_name == "Living Ember": 
+                    roll_type = "ETC"
                     
                 if player is None: 
                     if winner in known_players:
@@ -1007,6 +1047,10 @@ def sudo_mode(players):
 
                         players.append(Player(winner, alias, pclass))
                         player = players[-1]
+
+                # If there is a suffix, add it back to the item name. 
+                if not suffix is None:
+                    item.name += suffix
 
                 player._history[match_category(item.category)].append(Log(player.name, item, roll_type, date))
                 print(f"Added {item.name} ({item.ilvl}) [{roll_type}] to {player.name}'s history.")
