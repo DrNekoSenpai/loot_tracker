@@ -1,7 +1,8 @@
 Loot log for **Wednesday, 2024-11-13**:
 
-Halibutfilet (+1 MS)
+Halibutfilet (+2 MS)
 - Gloves of Dissolving Smoke (378) (MS) -- received on **2024-11-13**
+- Dreadfire Drape (378) (MS) -- received on **2024-11-13**
 
 Kairiz (+1 MS)
 - Hood of Rampant Disdain (378) (MS) -- received on **2024-11-13**
@@ -32,5 +33,3 @@ Angelofruin (+0 MS)
 Phallipally (+0 MS)
 - Legplates of Absolute Control (378) (OS) -- received on **2024-11-13**
 
-_disenchanted
-- Dreadfire Drape
