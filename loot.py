@@ -304,7 +304,8 @@ def award_loot(players):
 
     ready = input("Ready to announce? (y/n): ").lower()
     if ready == "y": 
-        pyautogui.click(3440/2, 1440/2)
+        pyautogui.click((right + left) / 2, (down + up) / 2)
+        time.sleep(0.25)
 
         # Alt click the middle of the coordinates
         pyautogui.keyDown('alt')
@@ -415,8 +416,17 @@ def award_loot(players):
                 p._history[slot_category].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
                 return players
 
+    # Do not award plusses to PvP items. 
     if "(PvP)" in item_match.category:
         roll_type = "OS"
+
+        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
+        player._raid_log.append(log)
+        player._history[slot_category].append(log)
+
+    # Eternal Ember and Living Ember are ETC items and should not be counted as regular plusses.
+    elif "Eternal Ember" in item_match.name or "Living Ember" in item_match.name:
+        roll_type = "ETC"
 
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
