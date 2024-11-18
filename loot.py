@@ -189,7 +189,7 @@ def regular_keyboard(input_string):
     pattern = r"^[A-Za-z0-9 \~!@#$%^&*()\-=\[\]{}|;:'\",.<>/?\\_+]*$"
     return re.match(pattern, input_string) is not None 
 
-def award_loot(players):
+def award_loot_auto(players):
     left, right, up, down = 1620, 1820, 6, 53
     image = pyautogui.screenshot(region=(left, up, right-left, down-up))
 
@@ -287,6 +287,56 @@ def award_loot(players):
         item_match = item_matches[sel-1]
         print("")
 
+    return award_loot(players, item_match)
+
+def award_loot_manual(players): 
+    print("----------------------------------------")
+    # First, we'll ask what item we're rolling off; supporting both case insensitivity and partial matching. 
+    item = input("What item are we rolling off? ").lower()
+    if item == "": return players
+    print("")
+    # Then, we'll cross check this with our item database.
+    item_matches = []
+    for i in all_items.values(): 
+        if item in i.name.lower(): 
+            item_matches.append(i)
+
+    # If there are no matches, we'll print an error and exit.
+    # If there is one match, we'll use that.
+    # If there are multiple matches, we'll ask the user to specify which one they want.
+
+    if len(item_matches) == 0:
+        print("No matches found. Please double-check the item name and try again.")
+        return players
+    
+    elif len(item_matches) == 1: 
+        # We'll select this match, and then move on. 
+        item_match = item_matches[0]
+
+    elif len(item_matches) > 1: 
+        # We'll print all of the matches, and ask them to select one. 
+        print("Multiple matches found. Please select one of the following:")
+        for i in range(len(item_matches)): 
+            print(f"{i+1}. {item_matches[i].name} ({item_matches[i].ilvl})")
+        
+        # We'll ask the user to select a number.
+        sel = input("Select a number: ")
+        try: 
+            sel = int(sel)
+            if sel < 1 or sel > len(item_matches):
+                print("Invalid integer input.")
+                return players
+        except: 
+            print("Invalid non-convertible input.")
+            return players
+        
+        # We'll select this match, and then move on.
+        item_match = item_matches[sel-1]
+        print("")
+
+    return award_loot(players, item_match)
+
+def award_loot(players, item_match):
     if "Random" in item_match.category: 
         prefix = input("Item subcategory is random. What's the prefix? ").title()
         item_match.category = match_suffix(prefix, item_match.category)
@@ -342,7 +392,6 @@ def award_loot(players):
             time.sleep(0.25)
 
     print("")
-
 
     # 1) Angelofruin, 2) Pasgghetti, 3) Bzorder, 4) Vanthulhu, 5) Axcel, 6) Tinyraider
     # Eternal Ember priority for Dragonwrath. 
@@ -427,177 +476,6 @@ def award_loot(players):
     # Eternal Ember and Living Ember are ETC items and should not be counted as regular plusses.
     elif "Eternal Ember" in item_match.name or "Living Ember" in item_match.name:
         roll_type = "ETC"
-
-        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-        player._raid_log.append(log)
-        player._history[slot_category].append(log)
-
-    else: 
-        off_spec = input("Is this an off-spec roll? (y/n): ").lower()
-        if off_spec == "y": roll_type = "OS"
-        else: roll_type = "MS"
-    
-        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-        player._raid_log.append(log)
-        if not off_spec == "y": player._regular_plusses += 1
-
-        player._history[slot_category].append(log)
-
-    print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
-        
-    return players
-
-def award_loot_manual(players): 
-    print("----------------------------------------")
-    # First, we'll ask what item we're rolling off; supporting both case insensitivity and partial matching. 
-    item = input("What item are we rolling off? ").lower()
-    if item == "": return players
-    print("")
-    # Then, we'll cross check this with our item database.
-    item_matches = []
-    for i in all_items.values(): 
-        if item in i.name.lower(): 
-            item_matches.append(i)
-
-    # If there are no matches, we'll print an error and exit.
-    # If there is one match, we'll use that.
-    # If there are multiple matches, we'll ask the user to specify which one they want.
-
-    if len(item_matches) == 0:
-        print("No matches found. Please double-check the item name and try again.")
-        return players
-    
-    elif len(item_matches) == 1: 
-        # We'll select this match, and then move on. 
-        item_match = item_matches[0]
-
-    elif len(item_matches) > 1: 
-        # We'll print all of the matches, and ask them to select one. 
-        print("Multiple matches found. Please select one of the following:")
-        for i in range(len(item_matches)): 
-            print(f"{i+1}. {item_matches[i].name} ({item_matches[i].ilvl})")
-        
-        # We'll ask the user to select a number.
-        sel = input("Select a number: ")
-        try: 
-            sel = int(sel)
-            if sel < 1 or sel > len(item_matches):
-                print("Invalid integer input.")
-                return players
-        except: 
-            print("Invalid non-convertible input.")
-            return players
-        
-        # We'll select this match, and then move on.
-        item_match = item_matches[sel-1]
-        print("")
-
-    if "Random" in item_match.category: 
-        prefix = input("Item subcategory is random. What's the prefix? ").title()
-        item_match.category = match_suffix(prefix, item_match.category)
-        item_match.name = f"{item_match.name} of the {prefix}"
-
-    slot_category = match_category(item_match.category)
-    item_match.category = item_match.category.replace(" (Random)", "")
-
-    for p in players: 
-        # Skip this person if they're not here.
-        if p._attendance == False: continue
-
-    print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
-    if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
-
-    ready = input("Ready to announce? (y/n): ").lower()
-    if ready == "y": 
-        pyautogui.moveTo(1920/2, 1080/2)
-        pyautogui.click()
-        time.sleep(0.25)
-
-        pyautogui.write("/")
-        time.sleep(0.1)
-        pyautogui.write("rw")
-        time.sleep(0.1)
-        pyautogui.press("space")
-        time.sleep(0.1)
-        pyautogui.write(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
-        time.sleep(0.1)
-        pyautogui.press("enter")
-        time.sleep(0.25)
-
-        if item_match.classes != "None":
-            pyautogui.write("/")
-            time.sleep(0.1)
-            pyautogui.write("rw")
-            time.sleep(0.1)
-            pyautogui.press("space")
-            time.sleep(0.1)
-            pyautogui.write(f"Classes: {', '.join(item_match.classes)}")
-            time.sleep(0.1)
-            pyautogui.press("enter")
-            time.sleep(0.25)
-
-    print("")
-
-    # We'll ask the user to input the name of the person who won the roll. 
-    name = input("Who won the roll? ").lower()
-    if name == "": return players
-
-    player_matches = []
-    for p in players:
-        if p._attendance == False: continue
-        if name in p.alias.lower(): 
-            player_matches.append(p)
-
-    if len(player_matches) == 0:
-        print("No matches found. Please double-check the player name and try again.")
-        return players
-    
-    elif len(player_matches) == 1:
-        # We'll select this match, and then move on.
-        player = player_matches[0]
-
-    elif len(player_matches) > 1:
-        # We'll print all of the matches, and ask them to select one.
-        print("Multiple matches found. Please select one of the following:")
-        for i in range(len(player_matches)):
-            print(f"{i+1}. {player_matches[i].alias}")
-
-        # We'll ask the user to select a number.
-        sel = input("Select a number: ")
-        try:
-            sel = int(sel)
-            if sel < 1 or sel > len(player_matches):
-                print("Invalid integer input.")
-                return players
-            
-        except:
-            print("Invalid non-convertible input.")
-            return players
-
-        # We'll select this match, and then move on.
-        player = player_matches[sel-1]
-
-    if player.name == "_disenchanted":
-        print(f"{item_match.name} ({item_match.ilvl}) has been disenchanted.")
-        # Find the disenchanted player. 
-        for p in players:
-            if p.name == "_disenchanted":
-                # Add the item to the player's history list.
-                p._raid_log.append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
-                p._history[slot_category].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
-                return players
-
-    exceptions = [
-        "Mantle of the Forlorn Protector",
-        "Mantle of the Forlorn Vanquisher",
-        "Mantle of the Forlorn Conqueror",
-        "Helm of the Forlorn Protector",
-        "Helm of the Forlorn Vanquisher",
-        "Helm of the Forlorn Conqueror",
-    ]
-
-    if "(PvP)" in item_match.category:
-        roll_type = "OS"
 
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
@@ -1206,7 +1084,7 @@ if __name__ == "__main__":
         try: sel = int(input("Select an option: "))
         except: break
 
-        if sel == 1: players = award_loot(players)
+        if sel == 1: players = award_loot_auto(players)
         elif sel == 2: players = award_loot_manual(players)
         elif sel == 3: players = mark_attendance(players)
         elif sel == 4: export_loot()
