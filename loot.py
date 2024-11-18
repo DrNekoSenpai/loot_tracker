@@ -304,15 +304,15 @@ def award_loot(players):
 
     ready = input("Ready to announce? (y/n): ").lower()
     if ready == "y": 
-        pyautogui.click((right + left) / 2, (down + up) / 2)
-        time.sleep(0.25)
+        # pyautogui.click((right + left) / 2, (down + up) / 2)
+        # time.sleep(0.25)
 
-        # Alt click the middle of the coordinates
-        pyautogui.keyDown('alt')
-        time.sleep(0.25)
-        pyautogui.click((right + left) / 2, (down + up) / 2)
-        time.sleep(0.25)
-        pyautogui.keyUp('alt')
+        # # Alt click the middle of the coordinates
+        # pyautogui.keyDown('alt')
+        # time.sleep(0.25)
+        # pyautogui.click((right + left) / 2, (down + up) / 2)
+        # time.sleep(0.25)
+        # pyautogui.keyUp('alt')
 
         pyautogui.moveTo(1920/2, 1080/2)
         pyautogui.click()
@@ -493,7 +493,7 @@ def award_loot_manual(players):
         print("")
 
     if "Random" in item_match.category: 
-        prefix = input("Item subcategory is random. What's the prefix? ")
+        prefix = input("Item subcategory is random. What's the prefix? ").title()
         item_match.category = match_suffix(prefix, item_match.category)
         item_match.name = f"{item_match.name} of the {prefix}"
 
@@ -699,6 +699,7 @@ def mark_attendance(players):
     print("")
     return players
 
+# Export history is deprecated because we aren't using it. 
 def export_history(): 
     # Sort the players by alphabetical order.
     players.sort(key=lambda x: x.name)
@@ -1023,8 +1024,9 @@ def sudo_mode(players):
 
                 item = None
                 for i in all_items.values():
-                    if i.name == item_name and i.ilvl == ilvl: 
+                    if item_name in i.name and i.ilvl == ilvl:
                         item = i
+                        item.name = item_name
                         break
 
                 if "Gladiator" in item_name:
@@ -1193,11 +1195,11 @@ if __name__ == "__main__":
         print("2) Manually roll off loot")
         print("3) Mark attendance")
         print("4) Export THIS RAID's loot to a file")
-        print("5) Export the loot history to a file")
-        print("6) Split up history into paste-sized chunks")
-        print("7) Remove loot, or weekly reset")
-        print("8) Export plusses in Gargul style")
-        print("9) Enter sudo mode")
+        # print("5) Export the loot history to a file")
+        # print("6) Split up history into paste-sized chunks")
+        print("5) Remove loot, or weekly reset")
+        print("6) Export plusses in Gargul style")
+        print("7) Enter sudo mode")
 
         print("")
 
@@ -1208,9 +1210,9 @@ if __name__ == "__main__":
         elif sel == 2: players = award_loot_manual(players)
         elif sel == 3: players = mark_attendance(players)
         elif sel == 4: export_loot()
-        elif sel == 5: export_history()
-        elif sel == 6: paste_history()
-        elif sel == 7: 
+        # elif sel == 5: export_history()
+        # elif sel == 6: paste_history()
+        elif sel == 5: 
             print("Choose an option: ")
             print("a) Remove one piece of loot from a player")
             print("b) Weekly reset (clear plusses and raid logs, but not history)")
@@ -1219,6 +1221,6 @@ if __name__ == "__main__":
             if sel == "a": remove_loot(players)
             elif sel == "b": players = weekly_reset(players)
             else: print("Invalid option.")
-        elif sel == 8: export_gargul(players)
-        elif sel == 9: players = sudo_mode(players)
+        elif sel == 6: export_gargul(players)
+        elif sel == 7: players = sudo_mode(players)
         else: break

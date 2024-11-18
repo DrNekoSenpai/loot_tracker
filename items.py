@@ -6,7 +6,7 @@ parser.add_argument("--force", "-f", action="store_true", help="Force the script
 parser.add_argument("--output", "-o", default="all-items-cata.scsv", help="Output file name.")
 args = parser.parse_args()
 
-def armor_subtype(text, item, base_type): 
+def armor_subtype(text, base_type): 
     text = text.lower()
     base_type = base_type.strip()
     
@@ -145,7 +145,7 @@ if __name__ == "__main__":
 
                 text = item_pattern.search(text).group(2)
 
-                subcategory = armor_subtype(text, item, category)
+                subcategory = armor_subtype(text, category)
                 if subcategory is not None: 
                     subcategory = subcategory.replace("  ", " ")
 
@@ -176,7 +176,7 @@ if __name__ == "__main__":
 
                 text = item_pattern.search(text).group(2)
 
-                subcategory = armor_subtype(text, item, category)
+                subcategory = armor_subtype(text, category)
                 try: 
                     if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
                 except: 
