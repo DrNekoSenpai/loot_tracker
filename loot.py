@@ -727,7 +727,8 @@ def export_loot():
                 f.write(f"{p.name}\n")
 
                 for l in p._raid_log:
-                    f.write(f"- {l.item.name}\n")
+                    url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                    f.write(f"- [{l.item.name}](<{url}>)\n")
 
 def remove_loot(players):
     player = input("Enter the name of the player who we are removing from: ").lower()
@@ -977,10 +978,20 @@ def sudo_mode(players):
                     for item in p._raid_log: 
                         item_id = 0
 
-                        for key, value in all_items.items():
-                            if value.name == item.item.name and value.ilvl == item.item.ilvl:
-                                item_id = key
-                                break
+                        if re.match(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)", item.item.name):
+                            suffix = " ".join(item.item.name.split(" ")[2:])
+                            item_name = item.item.name.replace(f"{suffix}", "").strip()
+
+                            for key, value in all_items.items():
+                                if value.name == item_name:
+                                    item_id = key
+                                    break
+
+                        else: 
+                            for key, value in all_items.items():
+                                if value.name == item.item.name and value.ilvl == item.item.ilvl:
+                                    item_id = key
+                                    break
 
                         offspec = 1 if item.roll == "OS" else 0
                         file.write(f"{item_id};{item.item.name};{item.item.ilvl};{offspec};{p.name};{item.date}\n")
