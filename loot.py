@@ -410,11 +410,15 @@ def award_loot(players, item_match):
     # Print a console message saying which person this item is going to.
 
     if "Eternal Ember" in item_match.name:
-        for p in players:
-            if p._attendance == False: continue
-            if p.name in dragonwrath.keys() and not dragonwrath[p.name]: 
-                print(f"{item_match.name} ({item_match.ilvl}) should be awarded to {p.name}.")
-                break
+        player_found = False
+        for k,v in dragonwrath.items():
+            for p in players:
+                if p._attendance == False: continue
+                if k in p.alias: 
+                    print(f"{item_match.name} ({item_match.ilvl}) should be awarded to {p.name}.")
+                    player_found = True
+                    break
+            if player_found: break
 
     # We'll ask the user to input the name of the person who won the roll. 
     name = input("Who won the roll? ").lower()
@@ -679,28 +683,33 @@ def export_loot():
             for l in p._raid_log:
                 if l.roll == "MS":
                     if re.match(r"(Conqueror|Protector|Vanquisher)", l.item.name):
-                        f.write(f"- {l.item.name} (MS) -- received on")
+                        url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                        f.write(f"- [{l.item.name}](<{url}>) (MS) -- received on")
                         date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                         f.write(f" {date_string}\n")
                     else: 
-                        f.write(f"- {l.item.name} ({l.item.ilvl}) (MS) -- received on")
+                        url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                        f.write(f"- [{l.item.name}](<{url}>) ({l.item.ilvl}) (MS) -- received on")
                         date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                         f.write(f" {date_string}\n")
 
             for l in p._raid_log:
                 if l.roll == "OS":
                     if re.match(r"(Conqueror|Protector|Vanquisher)", l.item.name):
-                        f.write(f"- {l.item.name} (OS) -- received on")
+                        url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                        f.write(f"- [{l.item.name}](<{url}>) (OS) -- received on")
                         date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                         f.write(f" {date_string}\n")
                     else: 
-                        f.write(f"- {l.item.name} ({l.item.ilvl}) (OS) -- received on")
+                        url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                        f.write(f"- [{l.item.name}](<{url}>) ({l.item.ilvl}) (OS) -- received on")
                         date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                         f.write(f" {date_string}\n")
 
             for l in p._raid_log:
                 if l.roll == "ETC":
-                    f.write(f"- {l.item.name} (ETC) -- received on")
+                    url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                    f.write(f"- [{l.item.name}](<{url}>) (ETC) -- received on")
                     date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
                     f.write(f" {date_string}\n")
 

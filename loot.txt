@@ -1,69 +1,28 @@
-Loot log for Wednesday, 2024-11-13 and **Sunday, 2024-11-17**:
+Loot log for **Wednesday, 2024-11-20**:
 
-Kairiz (+3 MS)
-- Hood of Rampant Disdain (378) (MS) -- received on 2024-11-13
-- Widow's Kiss (378) (MS) -- received on **2024-11-17**
-- Flickering Wristbands of the Zephyr (378) (MS) -- received on **2024-11-17**
+Bzorder (+2 MS)
+- [Flickering Shoulderpads of the Fireflash](<https://www.wowhead.com/cata/item=71025/flickering-shoulderpads-of-the-fireflash>) (378) (MS) -- received on **2024-11-20**
+- [Cowl of the Clicking Menace](<https://www.wowhead.com/cata/item=71040/cowl-of-the-clicking-menace>) (378) (MS) -- received on **2024-11-20**
 
-Halibutfilet (+2 MS)
-- Gloves of Dissolving Smoke (378) (MS) -- received on 2024-11-13
-- Dreadfire Drape (378) (MS) -- received on 2024-11-13
+Elisesolis (+1 MS)
+- [Obsidium Cleaver](<https://www.wowhead.com/cata/item=71362/obsidium-cleaver>) (378) (MS) -- received on **2024-11-20**
 
-Pasgghetti (+2 MS)
-- Crystal Prison Band (378) (MS) -- received on 2024-11-13
-- Wings of Flame (378) (MS) -- received on **2024-11-17**
-- Volcanospike (378) (OS) -- received on 2024-11-13
-- Eternal Ember (ETC) -- received on 2024-11-13
-- Eternal Ember (ETC) -- received on 2024-11-13
-- Eternal Ember (ETC) -- received on 2024-11-13
-- Eternal Ember (ETC) -- received on **2024-11-17**
-- Eternal Ember (ETC) -- received on **2024-11-17**
-- Eternal Ember (ETC) -- received on **2024-11-17**
-- Eternal Ember (ETC) -- received on **2024-11-17**
+Jacegil (+1 MS)
+- [Smoldering Censer of Purity](<https://www.wowhead.com/cata/item=71775/smoldering-censer-of-purity>) (378) (MS) -- received on **2024-11-20**
 
-Tinyraider (+2 MS)
-- Robes of Smoldering Devastation (378) (MS) -- received on **2024-11-17**
-- Leggings of Billowing Fire (378) (MS) -- received on **2024-11-17**
-
-Vanthulhu (+2 MS)
-- Spire of Scarlet Pain (378) (MS) -- received on 2024-11-13
-- Heartstone of Rhyolith (378) (MS) -- received on **2024-11-17**
-
-Chunkofrock (+1 MS)
-- Ward of the Red Widow (378) (MS) -- received on **2024-11-17**
-
-Miadog (+1 MS)
-- Chelley's Sterilized Scalpel (378) (MS) -- received on 2024-11-13
-
-Mobyle (+1 MS)
-- Flaming Core Chestguard (378) (MS) -- received on **2024-11-17**
+Meemeemeemee (+1 MS)
+- [Widow's Kiss](<https://www.wowhead.com/cata/item=71032/widows-kiss>) (378) (MS) -- received on **2024-11-20**
 
 Onlyflowers (+1 MS)
-- Legplates of Frenzied Devotion (378) (MS) -- received on 2024-11-13
+- [Cracked Obsidian Stompers](<https://www.wowhead.com/cata/item=70912/cracked-obsidian-stompers>) (378) (MS) -- received on **2024-11-20**
 
-Phallipally (+1 MS)
-- Greathelm of the Voracious Maw (378) (MS) -- received on **2024-11-17**
-- Legplates of Absolute Control (378) (OS) -- received on 2024-11-13
+Snedcharos (+1 MS)
+- [Obsidium Cleaver](<https://www.wowhead.com/cata/item=71362/obsidium-cleaver>) (378) (MS) -- received on **2024-11-20**
 
-Phillyphilly (+1 MS)
-- Earthcrack Bracers (378) (MS) -- received on **2024-11-17**
-
-Qusom (+1 MS)
-- Flickering Cowl of the Undertow (378) (MS) -- received on 2024-11-13
-
-Zguis (+1 MS)
-- Flickering Shoulders of the Zephyr (378) (MS) -- received on **2024-11-17**
-
-Angelofruin (+0 MS)
-- Eternal Ember (ETC) -- received on 2024-11-13
-- Eternal Ember (ETC) -- received on 2024-11-13
-- Eternal Ember (ETC) -- received on **2024-11-17**
-- Eternal Ember (ETC) -- received on **2024-11-17**
-- Eternal Ember (ETC) -- received on **2024-11-17**
-
-Gnoya (+0 MS)
-- Living Ember (ETC) -- received on **2024-11-17**
-- Living Ember (ETC) -- received on **2024-11-17**
+Pasgghetti (+0 MS)
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-20**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-20**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-20**
 
 _disenchanted
-- Flickering Cowl of the Undertow
+- Legplates of Frenzied Devotion
