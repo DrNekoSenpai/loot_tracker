@@ -1,28 +1,46 @@
-Loot log for **Wednesday, 2024-11-20**:
+Loot log for Wednesday, 2024-11-20 and **Sunday, 2024-11-24**:
 
 Bzorder (+2 MS)
-- [Flickering Shoulderpads of the Fireflash](<https://www.wowhead.com/cata/item=71025/flickering-shoulderpads-of-the-fireflash>) (378) (MS) -- received on **2024-11-20**
-- [Cowl of the Clicking Menace](<https://www.wowhead.com/cata/item=71040/cowl-of-the-clicking-menace>) (378) (MS) -- received on **2024-11-20**
+- [Flickering Shoulderpads of the Fireflash](<https://www.wowhead.com/cata/item=71025/flickering-shoulderpads-of-the-fireflash>) (378) (MS) -- received on 2024-11-20
+- [Cowl of the Clicking Menace](<https://www.wowhead.com/cata/item=71040/cowl-of-the-clicking-menace>) (378) (MS) -- received on 2024-11-20
+
+Shetknight (+2 MS)
+- [Skullstealer Greataxe](<https://www.wowhead.com/cata/item=71014/skullstealer-greataxe>) (378) (MS) -- received on **2024-11-24**
+- [Spidersilk Spindle](<https://www.wowhead.com/cata/item=68981/spidersilk-spindle>) (378) (MS) -- received on **2024-11-24**
 
 Elisesolis (+1 MS)
-- [Obsidium Cleaver](<https://www.wowhead.com/cata/item=71362/obsidium-cleaver>) (378) (MS) -- received on **2024-11-20**
+- [Obsidium Cleaver](<https://www.wowhead.com/cata/item=71362/obsidium-cleaver>) (378) (MS) -- received on 2024-11-20
+
+Gnoya (+1 MS)
+- [Flickering Shoulderpads of the Fireflash](<https://www.wowhead.com/cata/item=71025/flickering-shoulderpads-of-the-fireflash>) (378) (MS) -- received on **2024-11-24**
 
 Jacegil (+1 MS)
-- [Smoldering Censer of Purity](<https://www.wowhead.com/cata/item=71775/smoldering-censer-of-purity>) (378) (MS) -- received on **2024-11-20**
+- [Smoldering Censer of Purity](<https://www.wowhead.com/cata/item=71775/smoldering-censer-of-purity>) (378) (MS) -- received on 2024-11-20
 
 Meemeemeemee (+1 MS)
-- [Widow's Kiss](<https://www.wowhead.com/cata/item=71032/widows-kiss>) (378) (MS) -- received on **2024-11-20**
+- [Widow's Kiss](<https://www.wowhead.com/cata/item=71032/widows-kiss>) (378) (MS) -- received on 2024-11-20
 
 Onlyflowers (+1 MS)
-- [Cracked Obsidian Stompers](<https://www.wowhead.com/cata/item=70912/cracked-obsidian-stompers>) (378) (MS) -- received on **2024-11-20**
+- [Cracked Obsidian Stompers](<https://www.wowhead.com/cata/item=70912/cracked-obsidian-stompers>) (378) (MS) -- received on 2024-11-20
 
 Snedcharos (+1 MS)
-- [Obsidium Cleaver](<https://www.wowhead.com/cata/item=71362/obsidium-cleaver>) (378) (MS) -- received on **2024-11-20**
+- [Obsidium Cleaver](<https://www.wowhead.com/cata/item=71362/obsidium-cleaver>) (378) (MS) -- received on 2024-11-20
+
+Angelofruin (+0 MS)
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-24**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-24**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-24**
+
+Flightyknite (+0 MS)
+- [Earthcrack Bracers](<https://www.wowhead.com/cata/item=71004/earthcrack-bracers>) (378) (OS) -- received on **2024-11-24**
 
 Pasgghetti (+0 MS)
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-20**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-20**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-20**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-20
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-20
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-20
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-20
 
 _disenchanted
 - [Legplates of Frenzied Devotion](<https://www.wowhead.com/cata/item=70913/legplates-of-frenzied-devotion>)
+- [Grips of the Raging Giant](<https://www.wowhead.com/cata/item=71007/grips-of-the-raging-giant>)
+- [Spaulders of Manifold Eyes](<https://www.wowhead.com/cata/item=71043/spaulders-of-manifold-eyes>)

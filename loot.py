@@ -45,7 +45,6 @@ class Item:
         self.name = name
         self.ilvl = ilvl
         self.classes = classes 
-        self.category = category
         self.version = version
 
 class Log: 
@@ -76,23 +75,8 @@ class Player:
         self._raid_log = []
         self._history = {
             "ETC": [], 
-            "Head": [],
-            "Neck": [],
-            "Shoulder": [],
-            "Back": [],
-            "Chest": [],
-            "Wrist": [],
-            "Hands": [],
-            "Waist": [],
-            "Legs": [],
-            "Feet": [],
-            "Ring": [],
-            "Trinket": [],
-            "Main-Hand": [],
-            "Off-Hand": [],
-            "Two-Hand": [],
-            "Ranged": [], 
-            "Relic": [],
+            "Main-Spec": [], 
+            "Off-Spec": []
         }
 
 all_items = {}
@@ -802,10 +786,8 @@ def remove_loot(players):
 
     # We can only check the logs if the item was not disenchanted. 
     if not player.name == "_disenchanted": 
-        slot_category = match_category(item.item.category)
-
-        index = player._history[slot_category].index(item)
-        player._history[slot_category].pop(index)
+        slot_category = "Main-Spec" if item.roll == "MS" else "Off-Spec" if item.roll == "OS" else "ETC"
+        player._history[slot_category].remove(item)
 
     return players
 
@@ -881,6 +863,8 @@ def sudo_mode(players):
                 winner = line[4]
                 date = line[5]
 
+                if ilvl in [300, 306, 312]: continue
+
                 if winner in known_aliases.keys(): 
                     alias = known_aliases[winner]
 
@@ -952,7 +936,8 @@ def sudo_mode(players):
                 if not suffix is None:
                     item.name += suffix
 
-                player._history[match_category(item.category)].append(Log(player.name, item, roll_type, date))
+                item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
+                player._history[item_category].append(Log(player.name, item, roll_type, date))
                 print(f"Added {item.name} ({item.ilvl}) [{roll_type}] to {player.name}'s history.")
 
                 # Check if the date is after the last weekly reset, on Tuesday. If so, we must also add this item to their raid log.
