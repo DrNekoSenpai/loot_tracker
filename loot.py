@@ -627,28 +627,26 @@ def export_loot():
     # If the mode is "file", output to file only.
 
     players.sort(key=lambda x: (-x._regular_plusses, x.name))
-    # The most recent raid was either last Wednesday, or last Sunday -- whichever is closer. This is one-directional; if the closest Wednesday is one day in the future, that doesn't count; that's six days.
-    # Exception is if last Wednesday or last Sunday is today -- that is, if the last raid was today. In that case, we want to include it. 
 
-    # Check if today's date is a Wednesday or a Sunday. 
-    if datetime.now().weekday() == 2: last_wednesday = datetime.now()
-    else: last_wednesday = datetime.now() - timedelta(days=(datetime.now().weekday() - 2) % 7)
+    loot_dates = []
+    for p in players:
+        for l in p._raid_log:
+            loot_dates.append(l.date)
 
-    if datetime.now().weekday() == 6: last_sunday = datetime.now()
-    else: last_sunday = datetime.now() - timedelta(days=(datetime.now().weekday() - 6) % 7)
+    loot_dates = sorted(list(set(loot_dates)))
 
-    last_raid = (last_wednesday if last_wednesday > last_sunday else last_sunday).strftime("%Y-%m-%d")
+    # Set the days of the week for the loot dates.
+    dates = {0: "Monday", 1: "Tuesday", 2: "Wednesday", 3: "Thursday", 4: "Friday", 5: "Saturday", 6: "Sunday"}
+    loot_days = [datetime.strptime(x, "%Y-%m-%d").weekday() for x in loot_dates]
+    loot_days = [dates[x] for x in loot_days]
+    last_raid = max(loot_dates)
 
     with open("loot.txt", "w", encoding="utf-8") as f:
-        
-        # If last_raid is WEDNESDAY, print WEDNESDAY's date. Bold the date.
-        # If last raid is SUNDAY, print both WEDNESDAY and SUNDAY's date. Bold only Sunday's date. 
-
-        if last_raid == last_wednesday.strftime("%Y-%m-%d"):
-            f.write(f"Loot log for **Wednesday, {last_wednesday.strftime('%Y-%m-%d')}**:\n\n")
-
-        elif last_raid == last_sunday.strftime("%Y-%m-%d"):
-            f.write(f"Loot log for Wednesday, {last_wednesday.strftime('%Y-%m-%d')} and **Sunday, {last_sunday.strftime('%Y-%m-%d')}**:\n\n")
+        f.write(f"Loot log for ")
+        for ind, date, day in zip(range(len(loot_dates)), loot_dates, loot_days):
+            last_date = len(loot_dates) - 1
+            if ind == last_date: f.write(f"**and {day}, {date}**:\n\n")
+            else: f.write(f"{day}, {date}, ")
 
         # Print out the list of players.
         for p in players:
@@ -862,8 +860,6 @@ def sudo_mode(players):
                 offspec = True if line[3] == "1" else False
                 winner = line[4]
                 date = line[5]
-
-                if ilvl in [300, 306, 312]: continue
 
                 if winner in known_aliases.keys(): 
                     alias = known_aliases[winner]
