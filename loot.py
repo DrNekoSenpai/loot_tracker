@@ -343,6 +343,7 @@ def award_loot(players, item_match):
     if "Conqueror" in item_match.name: 
         # Check to see how many players have won a Conqueror token.
         for p in players: 
+            if p._attendance == False: continue
             for l in p._history["Main-Spec"]:
                 if "Conqueror" in l.item.name: 
                     if p.name in token_count: token_count[p.name] += 1
@@ -351,6 +352,7 @@ def award_loot(players, item_match):
     if "Protector" in item_match.name:
         # Check to see how many players have won a Protector token.
         for p in players: 
+            if p._attendance == False: continue
             for l in p._history["Main-Spec"]:
                 if "Protector" in l.item.name: 
                     if p.name in token_count: token_count[p.name] += 1
@@ -359,6 +361,7 @@ def award_loot(players, item_match):
     if "Vanquisher" in item_match.name:
         # Check to see how many players have won a Vanquisher token.
         for p in players: 
+            if p._attendance == False: continue
             for l in p._history["Main-Spec"]:
                 if "Vanquisher" in l.item.name: 
                     if p.name in token_count: token_count[p.name] += 1
