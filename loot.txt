@@ -1,54 +1,74 @@
-Loot log for Wednesday, 2024-11-20, Sunday, 2024-11-24, **and Monday, 2024-11-25**:
+Loot log for Wednesday, 2024-11-27, Sunday, 2024-12-01, and **Monday, 2024-12-02**:
 
-Bzorder (+3 MS)
-- [Flickering Shoulderpads of the Fireflash](<https://www.wowhead.com/cata/item=71025/flickering-shoulderpads-of-the-fireflash>) (378) (MS) -- received on 2024-11-20
-- [Cowl of the Clicking Menace](<https://www.wowhead.com/cata/item=71040/cowl-of-the-clicking-menace>) (378) (MS) -- received on 2024-11-20
-- [Glowing Wing Bracers](<https://www.wowhead.com/cata/item=71341/glowing-wing-bracers>) (378) (MS) -- received on **2024-11-25**
+Kairiz (+2 MS)
+- [Cinderweb Leggings](<https://www.wowhead.com/cata/item=71031/cinderweb-leggings>) (378) (MS) -- received on **2024-12-02**
+- [Alysra's Razor](<https://www.wowhead.com/cata/item=70733/alysras-razor>) (378) (MS) -- received on **2024-12-02**
 
-Elisesolis (+2 MS)
-- [Obsidium Cleaver](<https://www.wowhead.com/cata/item=71362/obsidium-cleaver>) (378) (MS) -- received on 2024-11-20
-- [Helm of Blazing Glory](<https://www.wowhead.com/cata/item=70916/helm-of-blazing-glory>) (378) (MS) -- received on **2024-11-25**
+Miatotems (+2 MS)
+- [Thoracic Flame Kilt](<https://www.wowhead.com/cata/item=71042/thoracic-flame-kilt>) (378) (MS) -- received on 2024-11-27
+- [Lava Line Wristbands](<https://www.wowhead.com/cata/item=71009/lava-line-wristbands>) (378) (MS) -- received on 2024-11-27
 
-Onlyflowers (+2 MS)
-- [Cracked Obsidian Stompers](<https://www.wowhead.com/cata/item=70912/cracked-obsidian-stompers>) (378) (MS) -- received on 2024-11-20
-- [Spaulders of Recurring Flame](<https://www.wowhead.com/cata/item=70737/spaulders-of-recurring-flame>) (378) (MS) -- received on **2024-11-25**
+Vanthulhu (+2 MS)
+- [Mantle of Closed Doors](<https://www.wowhead.com/cata/item=71343/mantle-of-closed-doors>) (378) (MS) -- received on 2024-12-01
+- [Stinger of the Flaming Scorpion](<https://www.wowhead.com/cata/item=71347/stinger-of-the-flaming-scorpion>) (378) (MS) -- received on 2024-12-01
 
-Shetknight (+2 MS)
-- [Skullstealer Greataxe](<https://www.wowhead.com/cata/item=71014/skullstealer-greataxe>) (378) (MS) -- received on 2024-11-24
-- [Spidersilk Spindle](<https://www.wowhead.com/cata/item=68981/spidersilk-spindle>) (378) (MS) -- received on 2024-11-24
+Axsel (+1 MS)
+- [Mantle of the Fiery Conqueror](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) (378) (MS) -- received on 2024-12-01
 
-Gnoya (+1 MS)
-- [Flickering Shoulderpads of the Fireflash](<https://www.wowhead.com/cata/item=71025/flickering-shoulderpads-of-the-fireflash>) (378) (MS) -- received on 2024-11-24
+Cawkylocky (+1 MS)
+- [Crystal Prison Band](<https://www.wowhead.com/cata/item=71024/crystal-prison-band>) (378) (MS) -- received on **2024-12-02**
 
-Jacegil (+1 MS)
-- [Smoldering Censer of Purity](<https://www.wowhead.com/cata/item=71775/smoldering-censer-of-purity>) (378) (MS) -- received on 2024-11-20
+Chunkofrock (+1 MS)
+- [Craterflame Spaulders](<https://www.wowhead.com/cata/item=70985/craterflame-spaulders>) (378) (MS) -- received on **2024-12-02**
 
-Meemeemeemee (+1 MS)
-- [Widow's Kiss](<https://www.wowhead.com/cata/item=71032/widows-kiss>) (378) (MS) -- received on 2024-11-20
+Flightyknite (+1 MS)
+- [Breastplate of Shifting Visions](<https://www.wowhead.com/cata/item=71344/breastplate-of-shifting-visions>) (378) (MS) -- received on 2024-12-01
+- [Firebound Gorget](<https://www.wowhead.com/cata/item=70929/firebound-gorget>) (378) (OS) -- received on 2024-11-27
+- [Arachnaflame Treads](<https://www.wowhead.com/cata/item=71029/arachnaflame-treads>) (378) (OS) -- received on 2024-11-27
+- [Cracked Obsidian Stompers](<https://www.wowhead.com/cata/item=70912/cracked-obsidian-stompers>) (378) (OS) -- received on 2024-11-27
+
+Pasgghetti (+1 MS)
+- [Necromantic Focus](<https://www.wowhead.com/cata/item=68982/necromantic-focus>) (378) (MS) -- received on **2024-12-02**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-12-02**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-12-02**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-12-02**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-12-02**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-12-02**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-12-02**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-12-02**
+
+Phillyphilly (+1 MS)
+- [Fireskin Gauntlets](<https://www.wowhead.com/cata/item=70993/fireskin-gauntlets>) (378) (MS) -- received on **2024-12-02**
+- [Flickering Handguards](<https://www.wowhead.com/cata/item=70917/flickering-handguards>) (378) (OS) -- received on **2024-12-02**
+
+Shetknight (+1 MS)
+- [Scales of Life](<https://www.wowhead.com/cata/item=68915/scales-of-life>) (378) (MS) -- received on 2024-11-27
 
 Snedcharos (+1 MS)
-- [Obsidium Cleaver](<https://www.wowhead.com/cata/item=71362/obsidium-cleaver>) (378) (MS) -- received on 2024-11-20
+- [Necklace of Fetishes](<https://www.wowhead.com/cata/item=71019/necklace-of-fetishes>) (378) (MS) -- received on **2024-12-02**
+
+Swiftbladess (+1 MS)
+- [Gloves of Dissolving Smoke](<https://www.wowhead.com/cata/item=71020/gloves-of-dissolving-smoke>) (378) (MS) -- received on 2024-11-27
 
 Angelofruin (+0 MS)
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-24
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-24
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-24
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-25**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **2024-11-25**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-27
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-27
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-27
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-12-01
 
-Flightyknite (+0 MS)
-- [Earthcrack Bracers](<https://www.wowhead.com/cata/item=71004/earthcrack-bracers>) (378) (OS) -- received on 2024-11-24
+Bzorder (+0 MS)
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-12-01
 
-Pasgghetti (+0 MS)
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-20
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-20
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-20
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on 2024-11-20
+Miadog (+0 MS)
+- [Spire of Scarlet Pain](<https://www.wowhead.com/cata/item=71360/spire-of-scarlet-pain>) (378) (OS) -- received on **2024-12-02**
 
-Phallipally (+0 MS)
-- [Clutch of the Firemother](<https://www.wowhead.com/cata/item=70988/clutch-of-the-firemother>) (378) (OS) -- received on **2024-11-25**
+Onlyflowers (+0 MS)
+- [Spaulders of Manifold Eyes](<https://www.wowhead.com/cata/item=71043/spaulders-of-manifold-eyes>) (378) (OS) -- received on **2024-12-02**
 
 _disenchanted
-- [Legplates of Frenzied Devotion](<https://www.wowhead.com/cata/item=70913/legplates-of-frenzied-devotion>)
-- [Grips of the Raging Giant](<https://www.wowhead.com/cata/item=71007/grips-of-the-raging-giant>)
-- [Spaulders of Manifold Eyes](<https://www.wowhead.com/cata/item=71043/spaulders-of-manifold-eyes>)
+- [Legplates of Absolute Control](<https://www.wowhead.com/cata/item=71028/legplates-of-absolute-control>)
+- [Shard of Torment](<https://www.wowhead.com/cata/item=70915/shard-of-torment>)
+- [Flickering Cowl of the Fireflash](<https://www.wowhead.com/cata/item=71011/flickering-cowl-of-the-fireflash>)
+----------------------------------------
+Tier Pieces:
+- Axsel: 1

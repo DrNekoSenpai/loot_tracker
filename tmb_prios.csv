@@ -1,3 +1,0 @@
-type,raid_group_name,member_name,character_name,character_class,character_is_alt,character_inactive_at,character_note,sort_order,item_name,item_id,is_offspec,note,received_at,import_id,item_note,item_prio_note,officer_note,item_tier,item_tier_label,created_at,updated_at,instance_name,source_name
-prio,"Asylum of the Immortals",Sned,Snedpie,Priest,0,,,1,"Einhorn's Galoshes",59234,0,,,,,,,,,"2024-05-18 06:14:11","2024-05-18 06:14:11","Blackwing Descent Normal",Chimaeron
-prio,"Asylum of the Immortals",Sned,Snedpie,Priest,0,,,2,"Treads of Liquid Ice",59508,0,,,,,,,,,"2024-05-18 06:16:00","2024-05-18 06:16:00","The Bastion of Twilight Normal","Ascendant Council"

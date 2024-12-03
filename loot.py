@@ -45,6 +45,7 @@ class Item:
         self.name = name
         self.ilvl = ilvl
         self.classes = classes 
+        self.category = category
         self.version = version
 
 class Log: 
@@ -76,7 +77,7 @@ class Player:
         self._history = {
             "ETC": [], 
             "Main-Spec": [], 
-            "Off-Spec": []
+            "Off-Spec": [], 
         }
 
 all_items = {}
@@ -336,6 +337,36 @@ def award_loot(players, item_match):
     print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
     if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
 
+    token_limit = 1
+    token_count = {}
+
+    if "Conqueror" in item_match.name: 
+        # Check to see how many players have won a Conqueror token.
+        for p in players: 
+            for l in p._history["Main-Spec"]:
+                if "Conqueror" in l.item.name: 
+                    if p.name in token_count: token_count[p.name] += 1
+                    else: token_count[p.name] = 1
+        
+    if "Protector" in item_match.name:
+        # Check to see how many players have won a Protector token.
+        for p in players: 
+            for l in p._history["Main-Spec"]:
+                if "Protector" in l.item.name: 
+                    if p.name in token_count: token_count[p.name] += 1
+                    else: token_count[p.name] = 1
+
+    if "Vanquisher" in item_match.name:
+        # Check to see how many players have won a Vanquisher token.
+        for p in players: 
+            for l in p._history["Main-Spec"]:
+                if "Vanquisher" in l.item.name: 
+                    if p.name in token_count: token_count[p.name] += 1
+                    else: token_count[p.name] = 1
+
+    if token_count:
+        print(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
+
     ready = input("Ready to announce? (y/n): ").lower()
     if ready == "y": 
         # pyautogui.click((right + left) / 2, (down + up) / 2)
@@ -371,6 +402,18 @@ def award_loot(players, item_match):
             pyautogui.press("space")
             time.sleep(0.1)
             pyautogui.write(f"Classes: {', '.join(item_match.classes)}")
+            time.sleep(0.1)
+            pyautogui.press("enter")
+            time.sleep(0.25)
+
+        if token_count:
+            pyautogui.write("/")
+            time.sleep(0.1)
+            pyautogui.write("rw")
+            time.sleep(0.1)
+            pyautogui.press("space")
+            time.sleep(0.1)
+            pyautogui.write(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
             time.sleep(0.1)
             pyautogui.press("enter")
             time.sleep(0.25)
@@ -450,11 +493,10 @@ def award_loot(players, item_match):
             if p.name == "_disenchanted":
                 # Add the item to the player's history list.
                 p._raid_log.append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
-                p._history[slot_category].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
-                return players
+                p._history["ETC"].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
 
     # Do not award plusses to PvP items. 
-    if "(PvP)" in item_match.category:
+    elif "(PvP)" in item_match.category:
         roll_type = "OS"
 
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
@@ -467,7 +509,9 @@ def award_loot(players, item_match):
 
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
-        player._history[slot_category].append(log)
+
+        item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
+        player._history[item_category].append(log)
 
     else: 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
@@ -478,9 +522,15 @@ def award_loot(players, item_match):
         player._raid_log.append(log)
         if not off_spec == "y": player._regular_plusses += 1
 
-        player._history[slot_category].append(log)
+        item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
+        player._history[item_category].append(log)
 
     print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
+
+    random_match = re.compile(r"(.*) of the (.*)", re.IGNORECASE).match(item_match.name)
+    if random_match: 
+        # If the item is a random item, we'll remove the suffix. 
+        item_match.name = random_match.group(1)
         
     return players
 
@@ -645,7 +695,9 @@ def export_loot():
         f.write(f"Loot log for ")
         for ind, date, day in zip(range(len(loot_dates)), loot_dates, loot_days):
             last_date = len(loot_dates) - 1
-            if ind == last_date: f.write(f"**and {day}, {date}**:\n\n")
+            if len(loot_dates) == 1: f.write(f"**{day}, {date}**:\n\n")
+            elif ind == last_date: f.write(f"and **{day}, {date}**:\n\n")
+            elif len(loot_dates) == 2: f.write(f"{day}, {date} ")
             else: f.write(f"{day}, {date}, ")
 
         # Print out the list of players.
@@ -711,6 +763,24 @@ def export_loot():
                 for l in p._raid_log:
                     url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                     f.write(f"- [{l.item.name}](<{url}>)\n")
+        
+        # Now, print out the number of tier pieces awarded over the entire season.
+        tier_pieces = {}
+
+        f.write("----------------------------------------\n")
+        f.write("Tier Pieces:\n")
+
+        for p in players:
+            for l in p._history: 
+                for item in p._history[l]:
+                    if "Conqueror" in item.item.name or "Protector" in item.item.name or "Vanquisher" in item.item.name:
+                        if item.item.name in tier_pieces:
+                            tier_pieces[item.name] += 1
+                        else: 
+                            tier_pieces[item.name] = 1
+
+        for k,v in tier_pieces.items():
+            f.write(f"- {k}: {v}\n")
 
 def remove_loot(players):
     player = input("Enter the name of the player who we are removing from: ").lower()
