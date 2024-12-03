@@ -615,58 +615,6 @@ def mark_attendance(players):
     print("")
     return players
 
-# Export history is deprecated because we aren't using it. 
-def export_history(): 
-    # Sort the players by alphabetical order.
-    players.sort(key=lambda x: x.name)
-
-    for p in players: 
-        for slot in p._history:
-            # If the slot is ETC, sort it so that shards are first. 
-            if slot == "ETC":
-                p._history[slot].sort(key=lambda x: (x.item.name != "Shadowfrost Shard", x.date, x.roll, -x.item.ilvl, x.item.name))
-            else: 
-                p._history[slot].sort(key=lambda x: (x.date, x.roll, -x.item.ilvl, x.item.name))
-
-    with open("history.txt", "w", encoding="utf-8") as file:
-        for player in players: 
-            if sum([len(player._history[x]) for x in player._history]) == 0: 
-                continue      
-
-            if player.name != "_disenchanted":     
-                num_items = []
-
-                for slot in player._history:
-                    if len(player._history[slot]) == 0: continue
-                    for item in player._history[slot]: 
-                        if item.note == "auto": continue
-                        if item.item.name == "Shadowfrost Shard": continue
-                        num_items.append(item)
-                file.write(f"{player.name}: {len(num_items)} items.\n")
-
-                shards_written = False 
-                for slot in player._history:
-                    if len(player._history[slot]) == 0: continue
-                    file.write("\n")
-                    file.write(f"{slot}:\n")
-                    for item in player._history[slot]: 
-                        if item.note == "auto": continue
-                        # print(item.item.name)
-
-                        # Find the item id, this is the key of the item in the dictionary
-                        for key, value in all_items.items():
-                            if value.name == item.item.name:
-                                link = f"<https://www.wowhead.com/wotlk/item={key}>"
-                                break
-
-                        if not "Mark of Sanctification" in item.item.name: 
-                            file.write(f"  \- [{item.item.name} ({item.item.ilvl})]({link}) ({item.roll}) ({item.date})\n")
-
-                        else: 
-                            file.write(f"  \- [{item.item.name}]({link}) ({item.roll}) ({item.date})\n")
-
-                file.write("----------------------------------------\n")
-
 def export_loot(): 
     # Sort the list of players by regular plusses. 
     # We will sort in descending order; so higher plusses should come first. 
@@ -719,12 +667,14 @@ def export_loot():
                     if re.match(r"(Conqueror|Protector|Vanquisher)", l.item.name):
                         url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                         f.write(f"- [{l.item.name}](<{url}>) (MS) -- received on")
-                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                        day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
+                        date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
                         f.write(f" {date_string}\n")
                     else: 
                         url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                         f.write(f"- [{l.item.name}](<{url}>) ({l.item.ilvl}) (MS) -- received on")
-                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                        day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
+                        date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
                         f.write(f" {date_string}\n")
 
             for l in p._raid_log:
@@ -732,19 +682,22 @@ def export_loot():
                     if re.match(r"(Conqueror|Protector|Vanquisher)", l.item.name):
                         url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                         f.write(f"- [{l.item.name}](<{url}>) (OS) -- received on")
-                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                        day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
+                        date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
                         f.write(f" {date_string}\n")
                     else: 
                         url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                         f.write(f"- [{l.item.name}](<{url}>) ({l.item.ilvl}) (OS) -- received on")
-                        date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                        day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
+                        date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
                         f.write(f" {date_string}\n")
 
             for l in p._raid_log:
                 if l.roll == "ETC":
                     url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                     f.write(f"- [{l.item.name}](<{url}>) (ETC) -- received on")
-                    date_string = f"{l.date}" if l.date != last_raid else f"**{l.date}**"
+                    day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
+                    date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
                     f.write(f" {date_string}\n")
 
             f.write("\n")
