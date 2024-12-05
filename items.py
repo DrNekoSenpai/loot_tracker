@@ -94,12 +94,12 @@ if __name__ == "__main__":
     # If the argparse flag is set, start from the beginning
     if args.force:
         with open(args.output, "w", encoding="utf-8") as all_items_file:
-            all_items_file.write("ID;Item;Item Level;Classes;Category;Version\n")
+            all_items_file.write("ID;Item;Item Level;Classes;Category;Binding;Version\n")
 
     else: 
         if not os.path.exists(args.output):
             with open(args.output, "w", encoding="utf-8") as all_items_file:
-                all_items_file.write("ID;Item;Item Level;Classes;Category;Version\n")
+                all_items_file.write("ID;Item;Item Level;Classes;Category;Binding;Version\n")
 
         else: 
             # Open the file and figure out where we left off
@@ -111,6 +111,7 @@ if __name__ == "__main__":
                 cata_items = cata_items[last_item_index + 1:]
 
     ilvl_pattern = re.compile(r"Item Level <!--ilvl-->(\d+)", re.IGNORECASE)
+    binding_pattern = re.compile(r"<br>Binds when (equipped|picked up)", re.IGNORECASE)
 
     # Search only in this part of the text, beginning with the h1 and ending with the noscript tag
     item_pattern = re.compile(r"<h1 class=\"heading-size-1\">(.*?)</h1>.*?<noscript>(.*?)</noscript>", re.DOTALL)
@@ -133,17 +134,19 @@ if __name__ == "__main__":
                 url = f"https://www.wowhead.com/cata/item={item_id}/{item_url}"
                 difficulty = "Normal"
                 text = requests.get(url).text
+                text = item_pattern.search(text).group(2)
 
                 if ilvl_pattern.search(text): item_level = ilvl_pattern.search(text).group(1)
                 else: item_level = None
+
+                if binding_pattern.search(text): binding = f"Binds when {binding_pattern.search(text).group(1)}" 
+                else: binding = "Binds when picked up"
 
                 category = re.findall(category_pattern, text)[0] if category_pattern.search(text) else "ETC"
                 if category[1] in ["Cloth", "Leather", "Mail", "Plate"]: category = (category[1], category[0])
                 if type(category) is tuple: category = " ".join(category)
 
                 if item in tier_set_tokens: category = "Tier Set Token"
-
-                text = item_pattern.search(text).group(2)
 
                 subcategory = armor_subtype(text, category)
                 if subcategory is not None: 
@@ -152,29 +155,34 @@ if __name__ == "__main__":
                 if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
                 else: classes = None
                         
-                all_items_file.write(f"{item_id};{item};{item_level};{classes};{subcategory};{difficulty}\n")
+                all_items_file.write(f"{item_id};{item};{item_level};{classes};{subcategory};{binding};{difficulty}\n")
                 
             else: 
                 # Find the IDs of the matching items
                 item_ids = [cata_ids[i] for i, x in enumerate(cata_items) if x == item]
                 item_url = item.replace(" ", "-").replace(",", "").lower()
                 ilvls = []
+                bindings = []
 
                 for item_id in item_ids:
                     url = f"https://www.wowhead.com/cata/item={item_id}/{item_url}"
                     text = requests.get(url).text
+                    text = item_pattern.search(text).group(2)
 
                     if ilvl_pattern.search(text): item_level = ilvl_pattern.search(text).group(1)
                     else: item_level = None
 
                     ilvls.append(item_level)
 
+                    if binding_pattern.search(text): binding = f"Binds when {binding_pattern.search(text).group(1)}"
+                    else: binding = "Binds when picked up"
+
+                    bindings.append(binding)
+
                 category = re.findall(category_pattern, text)[0] if category_pattern.search(text) else "ETC"
                 if category[1] in ["Cloth", "Leather", "Mail", "Plate"]: category = (category[1], category[0])
                 if type(category) is tuple: category = " ".join(category)
                 category = category.replace("  ", " ")
-
-                text = item_pattern.search(text).group(2)
 
                 subcategory = armor_subtype(text, category)
                 try: 
@@ -185,8 +193,9 @@ if __name__ == "__main__":
                 if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
                 else: classes = None
 
-                # Sort item_ids and ilvls by item level in descending order
-                item_ids, ilvls = zip(*sorted(zip(item_ids, ilvls), key=lambda x: x[1], reverse=True))
+                # Sort item_ids, ilvls, and binding by item level in descending order
+                # item_ids, ilvls = zip(*sorted(zip(item_ids, ilvls), key=lambda x: x[1], reverse=True))
+                item_ids, ilvls, bindings = zip(*sorted(zip(item_ids, ilvls, bindings), key=lambda x: x[1], reverse=True))
 
                 # Identify unique item levels and sort them in descending order
                 unique_ilvls = sorted(set(ilvls), reverse=True)
@@ -207,4 +216,4 @@ if __name__ == "__main__":
                 difficulties = [difficulty_map[ilvl] for ilvl in ilvls]
 
                 for i, item_id in enumerate(item_ids):
-                    all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{subcategory};{difficulties[i]}\n")
+                    all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{subcategory};{bindings[i]};{difficulties[i]}\n")

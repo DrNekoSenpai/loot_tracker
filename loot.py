@@ -37,7 +37,7 @@ if up_to_date() is False:
     exit(1)
 
 class Item: 
-    def __init__(self, id:int, name:str, ilvl:int, classes:Union[list, str], category:str, version:str): 
+    def __init__(self, id:int, name:str, ilvl:int, classes:Union[list, str], category:str, binding:str, version:str): 
         """
         Create a log entry. ID;Item;Item Level;Classes;Category;Bind;Version
         """
@@ -46,6 +46,7 @@ class Item:
         self.ilvl = ilvl
         self.classes = classes 
         self.category = category
+        self.binding = binding
         self.version = version
 
 class Log: 
@@ -117,9 +118,10 @@ with open("all-items-cata.scsv", "r", encoding="utf-8") as cata_file:
         item_level = int(item[2])
         classes = item[3].split(", ") if "," in item[3] else item[3]
         category = item[4]
-        version = item[5]
+        binding = item[5]
+        version = item[6]
 
-        all_items[item_id] = Item(item_id, name, item_level, classes, category, version)
+        all_items[item_id] = Item(item_id, name, item_level, classes, category, binding, version)
 
 def import_pickle(): 
     # Import the pickle file
@@ -336,6 +338,7 @@ def award_loot(players, item_match):
 
     print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
     if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
+    if item_match.binding != "Binds when picked up": print(f"WARNING: Item binds when equipped.")
 
     token_limit = 1
     token_count = {}
@@ -409,6 +412,18 @@ def award_loot(players, item_match):
             pyautogui.press("enter")
             time.sleep(0.25)
 
+        if item_match.binding != "Binds when picked up":
+            pyautogui.write("/")
+            time.sleep(0.1)
+            pyautogui.write("rw")
+            time.sleep(0.1)
+            pyautogui.press("space")
+            time.sleep(0.1)
+            pyautogui.write("WARNING: Item binds when equipped.")
+            time.sleep(0.1)
+            pyautogui.press("enter")
+            time.sleep(0.25)
+
         if token_count:
             pyautogui.write("/")
             time.sleep(0.1)
@@ -427,8 +442,8 @@ def award_loot(players, item_match):
     # Eternal Ember priority for Dragonwrath. 
 
     dragonwrath = {
-        "Angelofruin": False, 
-        "Pasgghetti": False,
+        "Angelofruin": True, 
+        "Pasgghetti": True,
         "Bzorder": False,
         "Vanthulhu": False,
         "Axcel": False,
@@ -497,6 +512,8 @@ def award_loot(players, item_match):
                 # Add the item to the player's history list.
                 p._raid_log.append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
                 p._history["ETC"].append(Log(player.name, item_match, "DE", datetime.now().strftime("%Y-%m-%d")))
+
+                return players
 
     # Do not award plusses to PvP items. 
     elif "(PvP)" in item_match.category:
