@@ -1037,38 +1037,6 @@ def export_gargul(players):
             if p.name == "_disenchanted": continue
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
 
-def paste_history():  
-    # Delete all files in "./history"
-    for file in os.listdir("./history"):
-        os.remove(f"./history/{file}")
-        
-    with open("history.txt", "r", encoding="utf-8") as file: 
-        lines = file.read()
-
-    lines = lines.split("\n")
-    for i in range(len(lines)):
-        lines[i] += "\n"
-
-    paste = ""
-    total_length = 0
-    index = 1
-    threshold = 3800
-
-    for line in lines: 
-        if len(line) + total_length < threshold: 
-            paste += line
-            total_length += len(line)
-        
-        else: 
-            with open(f"./history/paste_{index}.txt", "w", encoding="utf-8") as file:
-                file.write(paste)
-                index += 1
-            paste = line
-            total_length = len(line)
-    
-    with open(f"./history/paste_{index}.txt", "w", encoding="utf-8") as file:
-        file.write(paste)
-
 def last_run(): 
     try:
         with open("last_run.txt", "r", encoding="utf-8") as f:
@@ -1117,8 +1085,6 @@ if __name__ == "__main__":
         print("2) Manually roll off loot")
         print("3) Mark attendance")
         print("4) Export THIS RAID's loot to a file")
-        # print("5) Export the loot history to a file")
-        # print("6) Split up history into paste-sized chunks")
         print("5) Remove loot, or weekly reset")
         print("6) Export plusses in Gargul style")
         print("7) Enter sudo mode")
@@ -1132,8 +1098,6 @@ if __name__ == "__main__":
         elif sel == 2: players = award_loot_manual(players)
         elif sel == 3: players = mark_attendance(players)
         elif sel == 4: export_loot()
-        # elif sel == 5: export_history()
-        # elif sel == 6: paste_history()
         elif sel == 5: 
             print("Choose an option: ")
             print("a) Remove one piece of loot from a player")
