@@ -524,7 +524,8 @@ def award_loot(players, item_match):
         player._history[slot_category].append(log)
 
     # Eternal Ember and Living Ember are ETC items and should not be counted as regular plusses.
-    elif "Eternal Ember" in item_match.name or "Living Ember" in item_match.name:
+    # Same goes for any plans/pattern items. 
+    elif "Eternal Ember" in item_match.name or "Living Ember" in item_match.name or "Plans/Pattern" in item_match.category:
         roll_type = "ETC"
 
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
@@ -585,7 +586,7 @@ def mark_attendance(players):
 
         if not regular_keyboard(alias):
             print(f"Player name {alias} is not valid. Please input the name manually.")
-            new_player = input("Name: ")
+            alias = input("Name: ")
 
         new_player = new_player.title()
         alias = alias.title()
@@ -680,7 +681,7 @@ def export_loot():
                 continue
 
             # Print out the player's name, and then the number of plusses they have; of both types.
-            f.write(f"{p.name} (+{p._regular_plusses} MS)\n")
+            f.write(f"{p.name} (+{p._regular_plusses} MS):\n")
 
             for l in p._raid_log:
                 if l.roll == "MS":
@@ -731,12 +732,15 @@ def export_loot():
                     continue
 
                 # Print out the player's name.
-                f.write(f"{p.name}\n")
+                f.write(f"Disenchanted items:\n")
 
                 for l in p._raid_log:
                     url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
-                    f.write(f"- [{l.item.name}](<{url}>)\n")
-        
+                    f.write(f"- [{l.item.name}](<{url}>) ({l.item.ilvl}) -- disenchanted on")
+                    day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
+                    date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
+                    f.write(f" {date_string}\n")
+                    
         # Now, print out the number of tier pieces awarded over the entire season.
         tier_pieces = {}
 
@@ -859,177 +863,171 @@ def sudo_mode(players):
         print("Aborting.")
         return players
     
-    while(True): 
-        print("---- SUDO MODE ----")
-        print("a. COMPLETELY wipe the pickle file")
-        print("b. Restore history from Gargul export")
-        print("c. Create Gargul export")
-        print("d. Export list of known players")
-        print("e. Exit sudo mode")
-        sel = input("Select an option: ").lower()
-        print("")
+    print("---- SUDO MODE ----")
+    print("a. COMPLETELY wipe the pickle file")
+    print("b. Restore history from Gargul export")
+    print("c. Create Gargul export")
+    print("d. Export list of known players")
+    sel = input("Select an option: ").lower()
+    print("")
 
-        if sel == "a": 
-            print("WARNING: This will completely wipe the pickle file. This cannot be undone.")
-            print("Removing the pickle file will affect: ")
-            print("  - The loot history")
-            print("  - The names of ALL players")
-            print("  - The plusses of ALL players")
+    if sel == "a": 
+        print("WARNING: This will completely wipe the pickle file. This cannot be undone.")
+        print("Removing the pickle file will affect: ")
+        print("  - The loot history")
+        print("  - The names of ALL players")
+        print("  - The plusses of ALL players")
 
-            confirm = input("Are you sure you want to wipe the pickle file? (y/n): ").lower()
-            if confirm == "y":
-                os.remove("players_cata.pickle")
+        confirm = input("Are you sure you want to wipe the pickle file? (y/n): ").lower()
+        if confirm == "y":
+            os.remove("players_cata.pickle")
 
-            players = []
-            players.append(Player("_disenchanted", "_disenchanted", ""))
+        players = []
+        players.append(Player("_disenchanted", "_disenchanted", ""))
 
-        elif sel == "b":
-            with open("gargul-export.scsv", "r", encoding="utf-8") as file: 
-                lines = file.readlines()
+    elif sel == "b":
+        with open("gargul-export.scsv", "r", encoding="utf-8") as file: 
+            lines = file.readlines()
 
+        for p in players: 
+            for slot in p._history: 
+                p._history[slot] = []
+            p._raid_log = []
+            p._regular_plusses = 0
+
+        for ind,line in enumerate(lines):
+            if ind == 0: continue
+            line = line.strip().split(";")
+
+            item_id = int(line[0])
+            item_name = line[1]
+            ilvl = int(line[2])
+            offspec = True if line[3] == "1" else False
+            winner = line[4]
+            date = line[5]
+
+            if winner in known_aliases.keys(): 
+                alias = known_aliases[winner]
+
+            else: 
+                alias = winner
+
+            if not regular_keyboard(alias):
+                print(f"Player name {alias} is not valid. Please input the name manually.")
+                alias = input("Name: ")
+
+            player = None
+            for p in players:
+                if p.name == winner: 
+                    player = p
+                    break
+
+            # Exception; Flickering Cowl, Shoulders, Shoulderpads, Handguards, Wristbands. These are random enchant items. 
+
+            if re.match(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)", item_name):
+                # If we match one of these, add the item directly to the player's history without checking the dictionary.
+
+                suffix = re.search(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)(.*)", item_name).group(2)
+
+                # Remove the suffix from the name. 
+                item_name = item_name.replace(suffix, "").strip()
+
+            else: 
+                suffix = None
+
+            item = None
+            for i in all_items.values():
+                if item_name in i.name and i.ilvl == ilvl:
+                    item = i
+                    item.name = item_name
+                    break
+
+            if "Gladiator" in item_name:
+                roll_type = "OS"
+            else:
+                roll_type = "OS" if offspec else "MS"
+
+            if item_name == "Eternal Ember" or item_name == "Living Ember" or re.match(r"(Plans|Pattern)", item_name):
+                roll_type = "ETC"
+                
+            if player is None: 
+                if winner in known_players:
+                    pclass = known_players[winner]
+                    print(f"Player {winner} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
+                    players.append(Player(winner, alias, pclass))
+                    player = players[-1]
+
+                else: 
+                    pclass = input(f"Could not find player {winner}. Creating from scratch. What class are they? ")
+                    if pclass.lower() in "death knight": pclass = "Death Knight"
+                    elif pclass.lower() in "druid": pclass = "Druid"
+                    elif pclass.lower() in "hunter": pclass = "Hunter"
+                    elif pclass.lower() in "mage": pclass = "Mage"
+                    elif pclass.lower() in "paladin": pclass = "Paladin"
+                    elif pclass.lower() in "priest": pclass = "Priest"
+                    elif pclass.lower() in "rogue": pclass = "Rogue"
+                    elif pclass.lower() in "shaman": pclass = "Shaman"
+                    elif pclass.lower() in "warlock": pclass = "Warlock"
+                    elif pclass.lower() in "warrior": pclass = "Warrior"
+
+                    players.append(Player(winner, alias, pclass))
+                    player = players[-1]
+
+            # If there is a suffix, add it back to the item name. 
+            if not suffix is None:
+                item.name += suffix
+
+            item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
+            player._history[item_category].append(Log(player.name, item, roll_type, date))
+            print(f"Added {item.name} ({item.ilvl}) [{roll_type}] to {player.name}'s history.")
+
+            # Check if the date is after the last weekly reset, on Tuesday. If so, we must also add this item to their raid log.
+            todays_date = datetime.strptime(date, "%Y-%m-%d")
+            
+            # Take today's date, and subtract the number of days that have elapsed since Tuesday. 
+            today = datetime.today()
+            days_since_tuesday = (today.weekday() - 1) % 7
+            last_tuesday = today - timedelta(days=days_since_tuesday)
+            
+            if todays_date >= last_tuesday:
+                player._raid_log.append(Log(player.name, item, roll_type, date))
+                if not offspec and not roll_type == "ETC" and not roll_type == "OS": 
+                    player._regular_plusses += 1
+
+    elif sel == "c": 
+        with open(f"partial-export.scsv", "w", encoding="utf-8") as file: 
+            file.write("@ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY\n")
             for p in players: 
-                for slot in p._history: 
-                    p._history[slot] = []
-                p._raid_log = []
-                p._regular_plusses = 0
+                # For each item in their loot log, write out;
+                # @ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY
+                # 50274;Shadowfrost Shard;0;0;Pastiry;2024-04-24
+                for item in p._raid_log: 
+                    item_id = 0
 
-            for ind,line in enumerate(lines):
-                if ind == 0: continue
-                line = line.strip().split(";")
+                    if re.match(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)", item.item.name):
+                        suffix = " ".join(item.item.name.split(" ")[2:])
+                        item_name = item.item.name.replace(f"{suffix}", "").strip()
 
-                item_id = int(line[0])
-                item_name = line[1]
-                ilvl = int(line[2])
-                offspec = True if line[3] == "1" else False
-                winner = line[4]
-                date = line[5]
-
-                if winner in known_aliases.keys(): 
-                    alias = known_aliases[winner]
-
-                else: 
-                    alias = winner
-
-                if not regular_keyboard(alias):
-                    print(f"Player name {alias} is not valid. Please input the name manually.")
-                    alias = input("Name: ")
-
-                player = None
-                for p in players:
-                    if p.name == winner: 
-                        player = p
-                        break
-
-                # Exception; Flickering Cowl, Shoulders, Shoulderpads, Handguards, Wristbands. These are random enchant items. 
-
-                if re.match(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)", item_name):
-                    # If we match one of these, add the item directly to the player's history without checking the dictionary.
-
-                    suffix = re.search(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)(.*)", item_name).group(2)
-
-                    # Remove the suffix from the name. 
-                    item_name = item_name.replace(suffix, "").strip()
-
-                else: 
-                    suffix = None
-
-                item = None
-                for i in all_items.values():
-                    if item_name in i.name and i.ilvl == ilvl:
-                        item = i
-                        item.name = item_name
-                        break
-
-                if "Gladiator" in item_name:
-                    roll_type = "OS"
-                else:
-                    roll_type = "OS" if offspec else "MS"
-
-                if item_name == "Eternal Ember" or item_name == "Living Ember": 
-                    roll_type = "ETC"
-                    
-                if player is None: 
-                    if winner in known_players:
-                        pclass = known_players[winner]
-                        print(f"Player {winner} not found in dictionary, but found in list of known players. Player class auto-selected as {pclass}.")
-                        players.append(Player(winner, alias, pclass))
-                        player = players[-1]
+                        for key, value in all_items.items():
+                            if value.name == item_name:
+                                item_id = key
+                                break
 
                     else: 
-                        pclass = input(f"Could not find player {winner}. Creating from scratch. What class are they? ")
-                        if pclass.lower() in "death knight": pclass = "Death Knight"
-                        elif pclass.lower() in "druid": pclass = "Druid"
-                        elif pclass.lower() in "hunter": pclass = "Hunter"
-                        elif pclass.lower() in "mage": pclass = "Mage"
-                        elif pclass.lower() in "paladin": pclass = "Paladin"
-                        elif pclass.lower() in "priest": pclass = "Priest"
-                        elif pclass.lower() in "rogue": pclass = "Rogue"
-                        elif pclass.lower() in "shaman": pclass = "Shaman"
-                        elif pclass.lower() in "warlock": pclass = "Warlock"
-                        elif pclass.lower() in "warrior": pclass = "Warrior"
+                        for key, value in all_items.items():
+                            if value.name == item.item.name and value.ilvl == item.item.ilvl:
+                                item_id = key
+                                break
 
-                        players.append(Player(winner, alias, pclass))
-                        player = players[-1]
+                    offspec = 1 if item.roll == "OS" else 0
+                    file.write(f"{item_id};{item.item.name};{item.item.ilvl};{offspec};{p.name};{item.date}\n")
 
-                # If there is a suffix, add it back to the item name. 
-                if not suffix is None:
-                    item.name += suffix
-
-                item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
-                player._history[item_category].append(Log(player.name, item, roll_type, date))
-                print(f"Added {item.name} ({item.ilvl}) [{roll_type}] to {player.name}'s history.")
-
-                # Check if the date is after the last weekly reset, on Tuesday. If so, we must also add this item to their raid log.
-                todays_date = datetime.strptime(date, "%Y-%m-%d")
-                
-                # Take today's date, and subtract the number of days that have elapsed since Tuesday. 
-                today = datetime.today()
-                days_since_tuesday = (today.weekday() - 1) % 7
-                last_tuesday = today - timedelta(days=days_since_tuesday)
-                
-                if todays_date >= last_tuesday:
-                    player._raid_log.append(Log(player.name, item, roll_type, date))
-                    if not offspec and not roll_type == "ETC" and not roll_type == "OS": 
-                        player._regular_plusses += 1
-
-        elif sel == "c": 
-            with open(f"partial-export.scsv", "w", encoding="utf-8") as file: 
-                file.write("@ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY\n")
-                for p in players: 
-                    # For each item in their loot log, write out;
-                    # @ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY
-                    # 50274;Shadowfrost Shard;0;0;Pastiry;2024-04-24
-                    for item in p._raid_log: 
-                        item_id = 0
-
-                        if re.match(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)", item.item.name):
-                            suffix = " ".join(item.item.name.split(" ")[2:])
-                            item_name = item.item.name.replace(f"{suffix}", "").strip()
-
-                            for key, value in all_items.items():
-                                if value.name == item_name:
-                                    item_id = key
-                                    break
-
-                        else: 
-                            for key, value in all_items.items():
-                                if value.name == item.item.name and value.ilvl == item.item.ilvl:
-                                    item_id = key
-                                    break
-
-                        offspec = 1 if item.roll == "OS" else 0
-                        file.write(f"{item_id};{item.item.name};{item.item.ilvl};{offspec};{p.name};{item.date}\n")
-
-        elif sel == "d": 
-            with open("known-players.scsv", "w", encoding="utf-8") as file: 
-                file.write("Name,Alias,Class\n")
-                for p in players: 
-                    if p.name == "_disenchanted": continue
-                    file.write(f"{p.name};{p.alias};{p._player_class}\n")
-
-        elif sel == "e":
-            print("Exiting sudo mode.")
-            return players
+    elif sel == "d": 
+        with open("known-players.scsv", "w", encoding="utf-8") as file: 
+            file.write("Name,Alias,Class\n")
+            for p in players: 
+                if p.name == "_disenchanted": continue
+                file.write(f"{p.name};{p.alias};{p._player_class}\n")
 
 def export_gargul(players):
     with open("plusses.csv", "w", encoding="utf-8") as file: 

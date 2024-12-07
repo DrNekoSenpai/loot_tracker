@@ -8,7 +8,7 @@ args = parser.parse_args()
 
 def armor_subtype(text, base_type): 
     text = text.lower()
-    base_type = base_type.strip()
+    base_type = base_type.strip()    
     
     if "resilience" in text: return f"{base_type} (PvP)"
     elif "random enchantment" in text: return f"{base_type} (Random)"
@@ -33,9 +33,34 @@ def armor_subtype(text, base_type):
 
     return f"{base_type}"
 
+def armor_tags(text, base_type): 
+    text = text.lower()
+    base_type = base_type.strip()
+    tags = []
+
+    if "resilience" in text: return ["PvP"]
+    elif "random enchantment" in text: return ["Random"]
+
+    if "intellect" in text: tags.append("Intellect")
+    if "agility" in text: tags.append("Agility")
+    if "strength" in text: tags.append("Strength")
+
+    if "spirit" in text: tags.append("Spirit")
+    if "dodge" in text: tags.append("Dodge")
+    if "parry" in text: tags.append("Parry")
+
+    if "hit rating" in text: tags.append("Hit")
+    if "expertise rating" in text: tags.append("Expertise")
+
+    if "haste rating" in text: tags.append("Haste")
+    if "mastery rating" in text: tags.append("Mastery")
+    if "crit rating" in text: tags.append("Crit")
+
+    return tags
+
 def match_category(category:str): 
     valid_categories = ["ETC", "Head", "Neck", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Ring", "Trinket", "Main-Hand", "Off-Hand", "Two-Hand", "Ranged", "Relic"]
-    
+
     if re.match(r"(Cloth|Leather|Mail|Plate)", category, re.IGNORECASE): category = category.split(" ")[1]
     elif re.match(r"(One-Hand|Daggers|Fist Weapons)", category, re.IGNORECASE): category = "Main-Hand"
     elif re.match(r"(Two-Hand|Staves|Polearms)", category, re.IGNORECASE): category = "Two-Hand"
@@ -151,6 +176,8 @@ if __name__ == "__main__":
                 subcategory = armor_subtype(text, category)
                 if subcategory is not None: 
                     subcategory = subcategory.replace("  ", " ")
+                    
+                if re.match(r"(Plans|Pattern)", item): subcategory = "Plans/Patterns"
 
                 if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
                 else: classes = None
@@ -183,12 +210,7 @@ if __name__ == "__main__":
                 if category[1] in ["Cloth", "Leather", "Mail", "Plate"]: category = (category[1], category[0])
                 if type(category) is tuple: category = " ".join(category)
                 category = category.replace("  ", " ")
-
                 subcategory = armor_subtype(text, category)
-                try: 
-                    if "Unknown" in subcategory: print(f"{item} -- {subcategory}")
-                except: 
-                    continue
 
                 if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
                 else: classes = None
