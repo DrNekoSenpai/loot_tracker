@@ -41,20 +41,22 @@ def armor_tags(text, base_type):
     if "resilience" in text: return ["PvP"]
     elif "random enchantment" in text: return ["Random"]
 
-    if "intellect" in text: tags.append("Intellect")
-    if "agility" in text: tags.append("Agility")
-    if "strength" in text: tags.append("Strength")
-
-    if "spirit" in text: tags.append("Spirit")
-    if "dodge" in text: tags.append("Dodge")
-    if "parry" in text: tags.append("Parry")
-
-    if "hit rating" in text: tags.append("Hit")
-    if "expertise rating" in text: tags.append("Expertise")
-
-    if "haste rating" in text: tags.append("Haste")
-    if "mastery rating" in text: tags.append("Mastery")
-    if "crit rating" in text: tags.append("Crit")
+    def add_tag(tags, tag, text): 
+        if tag not in tags and tag in text: tags.append(tag)
+        return tags
+    
+    for _ in range(10): 
+        tags = add_tag(tags, "Intellect", text)
+        tags = add_tag(tags, "Spirit", text)
+        tags = add_tag(tags, "Agility", text)
+        tags = add_tag(tags, "Strength", text)
+        tags = add_tag(tags, "Dodge", text)
+        tags = add_tag(tags, "Parry", text)
+        tags = add_tag(tags, "Hit", text)
+        tags = add_tag(tags, "Expertise", text)
+        tags = add_tag(tags, "Haste", text)
+        tags = add_tag(tags, "Crit", text)
+        tags = add_tag(tags, "Mastery", text)
 
     return tags
 
@@ -216,7 +218,6 @@ if __name__ == "__main__":
                 else: classes = None
 
                 # Sort item_ids, ilvls, and binding by item level in descending order
-                # item_ids, ilvls = zip(*sorted(zip(item_ids, ilvls), key=lambda x: x[1], reverse=True))
                 item_ids, ilvls, bindings = zip(*sorted(zip(item_ids, ilvls, bindings), key=lambda x: x[1], reverse=True))
 
                 # Identify unique item levels and sort them in descending order

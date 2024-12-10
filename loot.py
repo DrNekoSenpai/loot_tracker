@@ -373,68 +373,69 @@ def award_loot(players, item_match):
     if token_count:
         print(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
 
-    ready = input("Ready to announce? (y/n): ").lower()
-    if ready == "y": 
-        # pyautogui.click((right + left) / 2, (down + up) / 2)
-        # time.sleep(0.25)
+    if not item_match.name == "Eternal Ember": 
+        ready = input("Ready to announce? (y/n): ").lower()
+        if ready == "y": 
+            # pyautogui.click((right + left) / 2, (down + up) / 2)
+            # time.sleep(0.25)
 
-        # # Alt click the middle of the coordinates
-        # pyautogui.keyDown('alt')
-        # time.sleep(0.25)
-        # pyautogui.click((right + left) / 2, (down + up) / 2)
-        # time.sleep(0.25)
-        # pyautogui.keyUp('alt')
+            # # Alt click the middle of the coordinates
+            # pyautogui.keyDown('alt')
+            # time.sleep(0.25)
+            # pyautogui.click((right + left) / 2, (down + up) / 2)
+            # time.sleep(0.25)
+            # pyautogui.keyUp('alt')
 
-        pyautogui.moveTo(1920/2, 1080/2)
-        pyautogui.click()
-        time.sleep(0.25)
+            pyautogui.moveTo(1920/2, 1080/2)
+            pyautogui.click()
+            time.sleep(0.25)
 
-        pyautogui.write("/")
-        time.sleep(0.1)
-        pyautogui.write("rw")
-        time.sleep(0.1)
-        pyautogui.press("space")
-        time.sleep(0.1)
-        pyautogui.write(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
-        time.sleep(0.1)
-        pyautogui.press("enter")
-        time.sleep(0.25)
-
-        if item_match.classes != "None":
             pyautogui.write("/")
             time.sleep(0.1)
             pyautogui.write("rw")
             time.sleep(0.1)
             pyautogui.press("space")
             time.sleep(0.1)
-            pyautogui.write(f"Classes: {', '.join(item_match.classes)}")
+            pyautogui.write(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
             time.sleep(0.1)
             pyautogui.press("enter")
             time.sleep(0.25)
 
-        if item_match.binding != "Binds when picked up":
-            pyautogui.write("/")
-            time.sleep(0.1)
-            pyautogui.write("rw")
-            time.sleep(0.1)
-            pyautogui.press("space")
-            time.sleep(0.1)
-            pyautogui.write("WARNING: Item binds when equipped.")
-            time.sleep(0.1)
-            pyautogui.press("enter")
-            time.sleep(0.25)
+            if item_match.classes != "None":
+                pyautogui.write("/")
+                time.sleep(0.1)
+                pyautogui.write("rw")
+                time.sleep(0.1)
+                pyautogui.press("space")
+                time.sleep(0.1)
+                pyautogui.write(f"Classes: {', '.join(item_match.classes)}")
+                time.sleep(0.1)
+                pyautogui.press("enter")
+                time.sleep(0.25)
 
-        if token_count:
-            pyautogui.write("/")
-            time.sleep(0.1)
-            pyautogui.write("rw")
-            time.sleep(0.1)
-            pyautogui.press("space")
-            time.sleep(0.1)
-            pyautogui.write(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
-            time.sleep(0.1)
-            pyautogui.press("enter")
-            time.sleep(0.25)
+            if item_match.binding != "Binds when picked up":
+                pyautogui.write("/")
+                time.sleep(0.1)
+                pyautogui.write("rw")
+                time.sleep(0.1)
+                pyautogui.press("space")
+                time.sleep(0.1)
+                pyautogui.write("WARNING: Item binds when equipped.")
+                time.sleep(0.1)
+                pyautogui.press("enter")
+                time.sleep(0.25)
+
+            if token_count:
+                pyautogui.write("/")
+                time.sleep(0.1)
+                pyautogui.write("rw")
+                time.sleep(0.1)
+                pyautogui.press("space")
+                time.sleep(0.1)
+                pyautogui.write(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
+                time.sleep(0.1)
+                pyautogui.press("enter")
+                time.sleep(0.25)
 
     print("")
 
@@ -459,6 +460,7 @@ def award_loot(players, item_match):
         for k,v in dragonwrath.items():
             for p in players:
                 if p._attendance == False: continue
+                if dragonwrath[p.name]: continue
                 if k in p.alias: 
                     print(f"{item_match.name} ({item_match.ilvl}) should be awarded to {p.name}.")
                     player_found = True
@@ -523,9 +525,8 @@ def award_loot(players, item_match):
         player._raid_log.append(log)
         player._history[slot_category].append(log)
 
-    # Eternal Ember and Living Ember are ETC items and should not be counted as regular plusses.
-    # Same goes for any plans/pattern items. 
-    elif "Eternal Ember" in item_match.name or "Living Ember" in item_match.name or "Plans/Pattern" in item_match.category:
+    # Eternal Ember and any plans/pattern items are ETC items and should not be counted as regular plusses.
+    elif "Eternal Ember" in item_match.name or "Plans/Pattern" in item_match.category:
         roll_type = "ETC"
 
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
@@ -759,6 +760,38 @@ def export_loot():
         for k,v in tier_pieces.items():
             f.write(f"- {k}: {v}\n")
 
+def paste_loot():  
+    # Delete all files in "./history"
+    for file in os.listdir("./loot"):
+        os.remove(f"./loot/{file}")
+        
+    with open("loot.txt", "r", encoding="utf-8") as file: 
+        lines = file.read()
+
+    lines = lines.split("\n")
+    for i in range(len(lines)):
+        lines[i] += "\n"
+
+    paste = ""
+    total_length = 0
+    index = 1
+    threshold = 3800
+
+    for line in lines: 
+        if len(line) + total_length < threshold: 
+            paste += line
+            total_length += len(line)
+        
+        else: 
+            with open(f"./loot/paste_{index}.txt", "w", encoding="utf-8") as file:
+                file.write(paste)
+                index += 1
+            paste = line
+            total_length = len(line)
+    
+    with open(f"./loot/paste_{index}.txt", "w", encoding="utf-8") as file:
+        file.write(paste)
+
 def remove_loot(players):
     player = input("Enter the name of the player who we are removing from: ").lower()
     player_matches = []
@@ -947,7 +980,7 @@ def sudo_mode(players):
             else:
                 roll_type = "OS" if offspec else "MS"
 
-            if item_name == "Eternal Ember" or item_name == "Living Ember" or re.match(r"(Plans|Pattern)", item_name):
+            if item_name == "Eternal Ember" or re.match(r"(Plans|Pattern)", item_name):
                 roll_type = "ETC"
                 
             if player is None: 
@@ -1029,6 +1062,8 @@ def sudo_mode(players):
                 if p.name == "_disenchanted": continue
                 file.write(f"{p.name};{p.alias};{p._player_class}\n")
 
+    return players
+
 def export_gargul(players):
     with open("plusses.csv", "w", encoding="utf-8") as file: 
         for p in players: 
@@ -1083,9 +1118,10 @@ if __name__ == "__main__":
         print("2) Manually roll off loot")
         print("3) Mark attendance")
         print("4) Export THIS RAID's loot to a file")
-        print("5) Remove loot, or weekly reset")
-        print("6) Export plusses in Gargul style")
-        print("7) Enter sudo mode")
+        print("5) Split up loot into paste-sized chunks")
+        print("6) Remove loot, or weekly reset")
+        print("7) Export plusses in Gargul style")
+        print("8) Enter sudo mode")
 
         print("")
 
@@ -1096,7 +1132,8 @@ if __name__ == "__main__":
         elif sel == 2: players = award_loot_manual(players)
         elif sel == 3: players = mark_attendance(players)
         elif sel == 4: export_loot()
-        elif sel == 5: 
+        elif sel == 5: paste_loot()
+        elif sel == 6: 
             print("Choose an option: ")
             print("a) Remove one piece of loot from a player")
             print("b) Weekly reset (clear plusses and raid logs, but not history)")
@@ -1105,6 +1142,6 @@ if __name__ == "__main__":
             if sel == "a": remove_loot(players)
             elif sel == "b": players = weekly_reset(players)
             else: print("Invalid option.")
-        elif sel == 6: export_gargul(players)
-        elif sel == 7: players = sudo_mode(players)
+        elif sel == 7: export_gargul(players)
+        elif sel == 8: players = sudo_mode(players)
         else: break
