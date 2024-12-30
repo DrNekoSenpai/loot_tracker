@@ -1,31 +1,16 @@
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on Wednesday, 2024-12-04
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on Wednesday, 2024-12-04
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on Wednesday, 2024-12-04
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on Wednesday, 2024-12-04
-
-Shetknight (+0 MS):
-- [Legplates of Frenzied Devotion](<https://www.wowhead.com/cata/item=70913/legplates-of-frenzied-devotion>) (378) (OS) -- received on Wednesday, 2024-12-04
-- [Breastplate of Shifting Visions](<https://www.wowhead.com/cata/item=71344/breastplate-of-shifting-visions>) (378) (OS) -- received on Sunday, 2024-12-08
-
-Thesuffering (+0 MS):
-- [Riplimb's Lost Collar](<https://www.wowhead.com/cata/item=71640/riplimbs-lost-collar>) (378) (OS) -- received on Thursday, 2024-12-05
-
-Thoragrim (+0 MS):
-- [Uncrushable Belt of Fury](<https://www.wowhead.com/cata/item=71021/uncrushable-belt-of-fury>) (378) (OS) -- received on Thursday, 2024-12-05
-
-Zynrenner (+0 MS):
-- [Riplimb's Lost Collar](<https://www.wowhead.com/cata/item=71640/riplimbs-lost-collar>) (378) (OS) -- received on Thursday, 2024-12-05
-- [Treads of Implicit Obedience](<https://www.wowhead.com/cata/item=71027/treads-of-implicit-obedience>) (378) (OS) -- received on Thursday, 2024-12-05
-
-Disenchanted items:
-- [Legplates of Frenzied Devotion](<https://www.wowhead.com/cata/item=70913/legplates-of-frenzied-devotion>) (378) -- disenchanted on Wednesday, 2024-12-04
-- [Cinderweb Leggings](<https://www.wowhead.com/cata/item=71031/cinderweb-leggings>) (378) -- disenchanted on Wednesday, 2024-12-04
-- [Cindersilk Gloves](<https://www.wowhead.com/cata/item=71044/cindersilk-gloves>) (378) -- disenchanted on Wednesday, 2024-12-04
-- [Incendic Chestguard](<https://www.wowhead.com/cata/item=71010/incendic-chestguard>) (378) -- disenchanted on Wednesday, 2024-12-04
-- [Cindersilk Gloves](<https://www.wowhead.com/cata/item=71044/cindersilk-gloves>) (378) -- disenchanted on Wednesday, 2024-12-04
-- [Gatekeeper's Embrace](<https://www.wowhead.com/cata/item=71340/gatekeepers-embrace>) (378) -- disenchanted on Sunday, 2024-12-08
+- [Leggings of Billowing Fire](<https://www.wowhead.com/cata/item=70989/leggings-of-billowing-fire>) (378) -- disenchanted on **Sunday, 2024-12-29**
+- [Cinderweb Leggings](<https://www.wowhead.com/cata/item=71031/cinderweb-leggings>) (378) -- disenchanted on **Sunday, 2024-12-29**
+- [Thoracic Flame Kilt](<https://www.wowhead.com/cata/item=71042/thoracic-flame-kilt>) (378) -- disenchanted on **Sunday, 2024-12-29**
+- [Dreadfire Drape](<https://www.wowhead.com/cata/item=70992/dreadfire-drape>) (378) -- disenchanted on **Sunday, 2024-12-29**
+- [Lava Line Wristbands](<https://www.wowhead.com/cata/item=71009/lava-line-wristbands>) (378) -- disenchanted on **Sunday, 2024-12-29**
+- [Clutch of the Firemother](<https://www.wowhead.com/cata/item=70988/clutch-of-the-firemother>) (378) -- disenchanted on **Sunday, 2024-12-29**
+- [Gatekeeper's Embrace](<https://www.wowhead.com/cata/item=71340/gatekeepers-embrace>) (378) -- disenchanted on **Sunday, 2024-12-29**
 ----------------------------------------
 Tier Pieces:
-- Phallipally: 1
+- Jacegil: 1
+- Bzorder: 1
 - Axsel: 1
+- Meemeemeemee: 1
+- Pasgghetti: 1
+- Phallipally: 1
 

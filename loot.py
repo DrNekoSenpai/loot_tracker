@@ -439,15 +439,15 @@ def award_loot(players, item_match):
 
     print("")
 
-    # 1) Angelofruin, 2) Pasgghetti, 3) Bzorder, 4) Vanthulhu, 5) Axcel, 6) Tinyraider
+    # 1) Angelofruin, 2) Pasgghetti, 3) Bzorder, 4) Vanthulhu, 5) Axsel, 6) Tinyraider
     # Eternal Ember priority for Dragonwrath. 
 
     dragonwrath = {
         "Angelofruin": True, 
         "Pasgghetti": True,
         "Bzorder": False,
-        "Vanthulhu": False,
-        "Axcel": False,
+        "Vanthulhu": True,
+        "Axsel": False,
         "Tinyraider": False,
     }
 
@@ -460,6 +460,7 @@ def award_loot(players, item_match):
         for k,v in dragonwrath.items():
             for p in players:
                 if p._attendance == False: continue
+                if not p.name in dragonwrath: continue
                 if dragonwrath[p.name]: continue
                 if k in p.alias: 
                     print(f"{item_match.name} ({item_match.ilvl}) should be awarded to {p.name}.")
@@ -974,7 +975,7 @@ def sudo_mode(players):
                     item = i
                     item.name = item_name
                     break
-
+                
             if "Gladiator" in item_name:
                 roll_type = "OS"
             else:
