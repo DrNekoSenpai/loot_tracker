@@ -812,9 +812,12 @@ def export_loot():
                                 # If this doesn't look like a tier piece, we'll skip it.
                                 if not re.match(r"(Mantle|Crown|Robes|Gloves|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
                                 item_url = "https://www.wowhead.com/cata/item=" + str(item.item.id) + "/" + item.item.name.replace(" ", "-").replace("\'", "").lower()
-                                set_pieces.append(f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)")
+                                # set_pieces.append(f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)")
 
-            f.write(", ".join(set_pieces) + "\n")
+                                # Append the item as well as the date received. 
+                                set_pieces.append((f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)", item.date))
+
+            f.write(", ".join([f"{x[0]} ({x[1]})" for x in set_pieces]) + "\n")
 
 def paste_loot():  
     # Delete all files in "./history"
