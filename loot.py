@@ -794,6 +794,9 @@ def export_loot():
                         elif "Gloves" in item.item.name: tier_pieces[p.name]["Heroic"]["Hands"] += 1
                         elif "Leggings" in item.item.name: tier_pieces[p.name]["Heroic"]["Legs"] += 1
 
+        # Sort players alphabetically.
+        players.sort(key=lambda x: x.name)
+
         # Print out the tier pieces.
         for p in players:
             # First, we should check if this player has won ANY tier pieces. 

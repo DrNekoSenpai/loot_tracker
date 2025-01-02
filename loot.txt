@@ -25,8 +25,8 @@ Disenchanted items:
 - [Lava Line Wristbands](<https://www.wowhead.com/cata/item=71009/lava-line-wristbands>) (378) -- disenchanted on **Wednesday, 2025-01-01**
 ----------------------------------------
 Tier Pieces:
-- Jacegil: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2024-12-29)
 - Axsel: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) (2024-12-01)
 - Bzorder: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2024-12-11)
+- Jacegil: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2024-12-29)
 - Meemeemeemee: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71688/mantle-of-the-fiery-protector>) (2024-12-22)
 - Phallipally: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) (2024-12-08)
