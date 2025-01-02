@@ -525,16 +525,38 @@ def award_loot(players, item_match):
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
         player._history[slot_category].append(log)
+        print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
 
     # Eternal Ember and any plans/pattern items are ETC items and should not be counted as regular plusses.
     elif "Eternal Ember" in item_match.name or "Plans/Pattern" in item_match.category:
         roll_type = "ETC"
 
-        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-        player._raid_log.append(log)
+        # If it's an Eternal Ember, we should ask them how many dropped. 
+        if "Eternal Ember" in item_match.name:
+            num_embers = input("How many Eternal Embers dropped? ")
+            try: 
+                num_embers = int(num_embers)
+                if num_embers < 1:
+                    print("Invalid integer input.")
+                    return players
+            except: 
+                print("Invalid non-convertible input.")
+                return players
+            
+            for i in range(num_embers):
+                log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
+                player._raid_log.append(log)
+                player._history[slot_category].append(log)
+            
+            print(f"{player.name} has been awarded {num_embers}x {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
 
-        item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
-        player._history[item_category].append(log)
+        else: 
+            log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
+            player._raid_log.append(log)
+
+            item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
+            player._history[item_category].append(log)
+            print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
 
     else: 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
@@ -548,7 +570,7 @@ def award_loot(players, item_match):
         item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
         player._history[item_category].append(log)
 
-    print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
+        print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
 
     random_match = re.compile(r"(.*) of the (.*)", re.IGNORECASE).match(item_match.name)
     if random_match: 
@@ -746,20 +768,53 @@ def export_loot():
         # Now, print out the number of tier pieces awarded over the entire season.
         tier_pieces = {}
 
+        # Set up categorization; it's a nested dictionary. First level, player name; second level, difficulty; third level, tier slot. 
+        for p in players:
+            tier_pieces[p.name] = {"Heroic": {"Head": 0, "Shoulders": 0, "Chest": 0, "Hands": 0, "Legs": 0}, "Normal": {"Head": 0, "Shoulders": 0}}
+
         f.write("----------------------------------------\n")
         f.write("Tier Pieces:\n")
 
-        for p in players:
+        for p in players: 
             for l in p._history: 
-                for item in p._history[l]:
-                    if "Conqueror" in item.item.name or "Protector" in item.item.name or "Vanquisher" in item.item.name:
-                        if item.item.name in tier_pieces:
-                            tier_pieces[item.name] += 1
-                        else: 
-                            tier_pieces[item.name] = 1
+                for item in p._history[l]: 
+                    if not re.match(r"(Mantle|Crown|Robes|Gloves|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
 
-        for k,v in tier_pieces.items():
-            f.write(f"- {k}: {v}\n")
+                    # We have to categorize by item level; 378 is normal, 391 is heroic.
+                    if item.item.ilvl == 378:
+                        # Mantle is shoulders, Crown is head
+                        if "Mantle" in item.item.name: tier_pieces[p.name]["Normal"]["Shoulders"] += 1
+                        elif "Crown" in item.item.name: tier_pieces[p.name]["Normal"]["Head"] += 1
+                    
+                    elif item.item.ilvl == 391: 
+                        # Mantle is shoulders, Crown is head, Robes is chest, Gloves is hands, Leggings is legs
+                        if "Mantle" in item.item.name: tier_pieces[p.name]["Heroic"]["Shoulders"] += 1
+                        elif "Crown" in item.item.name: tier_pieces[p.name]["Heroic"]["Head"] += 1
+                        elif "Robes" in item.item.name: tier_pieces[p.name]["Heroic"]["Chest"] += 1
+                        elif "Gloves" in item.item.name: tier_pieces[p.name]["Heroic"]["Hands"] += 1
+                        elif "Leggings" in item.item.name: tier_pieces[p.name]["Heroic"]["Legs"] += 1
+
+        # Print out the tier pieces.
+        for p in players:
+            # First, we should check if this player has won ANY tier pieces. 
+            if sum([sum(x.values()) for x in tier_pieces[p.name].values()]) == 0: continue 
+
+            set_pieces = []
+
+            f.write(f"- {p.name}: ")
+            # Now, we should only write out the slots they've won for. 
+            for difficulty in tier_pieces[p.name]:
+                for slot in tier_pieces[p.name][difficulty]:
+                    if tier_pieces[p.name][difficulty][slot] > 0:
+                        # Find the item in the player's history. 
+                        for l in p._history: 
+                            for item in p._history[l]: 
+                                # If this doesn't look like a tier piece, we'll skip it.
+                                if not re.match(r"(Mantle|Crown|Robes|Gloves|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
+                                item_url = "https://www.wowhead.com/cata/item=" + str(item.item.id) + "/" + item.item.name.replace(" ", "-").replace("\'", "").lower()
+                                set_pieces.append(f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)")
+
+            f.write(", ".join(set_pieces) + "\n")
 
 def paste_loot():  
     # Delete all files in "./history"

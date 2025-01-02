@@ -1,66 +1,32 @@
-Loot log for **Sunday, 2024-12-29**:
+Loot log for **Wednesday, 2025-01-01**:
 
-Jacegil (+2 MS):
-- [Crystal Prison Band](<https://www.wowhead.com/cata/item=71024/crystal-prison-band>) (378) (MS) -- received on **Sunday, 2024-12-29**
-- [Mantle of the Fiery Vanquisher](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (378) (MS) -- received on **Sunday, 2024-12-29**
+Flightyknite (+1 MS):
+- [Spaulders of Recurring Flame](<https://www.wowhead.com/cata/item=70737/spaulders-of-recurring-flame>) (378) (MS) -- received on **Wednesday, 2025-01-01**
+- [Widow's Kiss](<https://www.wowhead.com/cata/item=71032/widows-kiss>) (378) (OS) -- received on **Wednesday, 2025-01-01**
 
-Mobyle (+2 MS):
-- [Moltenfeather Leggings](<https://www.wowhead.com/cata/item=70736/moltenfeather-leggings>) (378) (MS) -- received on **Sunday, 2024-12-29**
-- [Decimation Treads](<https://www.wowhead.com/cata/item=71315/decimation-treads>) (378) (MS) -- received on **Sunday, 2024-12-29**
-
-Bzorder (+1 MS):
-- [Flickering Shoulderpads of the Feverflare](<https://www.wowhead.com/cata/item=71025/flickering-shoulderpads-of-the-feverflare>) (378) (MS) -- received on **Sunday, 2024-12-29**
-
-Kairiz (+1 MS):
-- [The Hungerer](<https://www.wowhead.com/cata/item=68927/the-hungerer>) (378) (MS) -- received on **Sunday, 2024-12-29**
+Jacegil (+1 MS):
+- [Wings of Flame](<https://www.wowhead.com/cata/item=70990/wings-of-flame>) (378) (MS) -- received on **Wednesday, 2025-01-01**
 
 Snedcharos (+1 MS):
-- [Obsidium Cleaver](<https://www.wowhead.com/cata/item=71362/obsidium-cleaver>) (378) (MS) -- received on **Sunday, 2024-12-29**
-
-Swiftbladess (+1 MS):
-- [Entrail Disgorger](<https://www.wowhead.com/cata/item=71787/entrail-disgorger>) (378) (MS) -- received on **Sunday, 2024-12-29**
-
-Axsel (+0 MS):
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-
-Meemeemeemee (+0 MS):
-- [Feeding Frenzy](<https://www.wowhead.com/cata/item=71013/feeding-frenzy>) (378) (OS) -- received on **Sunday, 2024-12-29**
+- [Earthcrack Bracers](<https://www.wowhead.com/cata/item=71004/earthcrack-bracers>) (378) (MS) -- received on **Wednesday, 2025-01-01**
+- [Legplates of Frenzied Devotion](<https://www.wowhead.com/cata/item=70913/legplates-of-frenzied-devotion>) (378) (OS) -- received on **Wednesday, 2025-01-01**
+- [Bracers of the Dread Hunter](<https://www.wowhead.com/cata/item=71026/bracers-of-the-dread-hunter>) (378) (OS) -- received on **Wednesday, 2025-01-01**
 
 Miadog (+0 MS):
-- [Stinger of the Flaming Scorpion](<https://www.wowhead.com/cata/item=71347/stinger-of-the-flaming-scorpion>) (378) (OS) -- received on **Sunday, 2024-12-29**
-
-Phallipally (+0 MS):
-- [Lavaworm Legplates](<https://www.wowhead.com/cata/item=70739/lavaworm-legplates>) (378) (OS) -- received on **Sunday, 2024-12-29**
-
-Vanthulhu (+0 MS):
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Sunday, 2024-12-29**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-01**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-01**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-01**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-01**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-01**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-01**
 
 Disenchanted items:
-- [Cracked Obsidian Stompers](<https://www.wowhead.com/cata/item=70912/cracked-obsidian-stompers>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Incendic Chestguard](<https://www.wowhead.com/cata/item=71010/incendic-chestguard>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Leggings of Billowing Fire](<https://www.wowhead.com/cata/item=70989/leggings-of-billowing-fire>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Cinderweb Leggings](<https://www.wowhead.com/cata/item=71031/cinderweb-leggings>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Thoracic Flame Kilt](<https://www.wowhead.com/cata/item=71042/thoracic-flame-kilt>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Dreadfire Drape](<https://www.wowhead.com/cata/item=70992/dreadfire-drape>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Lava Line Wristbands](<https://www.wowhead.com/cata/item=71009/lava-line-wristbands>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Clutch of the Firemother](<https://www.wowhead.com/cata/item=70988/clutch-of-the-firemother>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Gatekeeper's Embrace](<https://www.wowhead.com/cata/item=71340/gatekeepers-embrace>) (378) -- disenchanted on **Sunday, 2024-12-29**
+- [Robes of Smoldering Devastation](<https://www.wowhead.com/cata/item=71041/robes-of-smoldering-devastation>) (378) -- disenchanted on **Wednesday, 2025-01-01**
+- [Lava Line Wristbands](<https://www.wowhead.com/cata/item=71009/lava-line-wristbands>) (378) -- disenchanted on **Wednesday, 2025-01-01**
 ----------------------------------------
 Tier Pieces:
-- Jacegil: 1
-- Bzorder: 1
-- Axsel: 1
-- Meemeemeemee: 1
-- Pasgghetti: 1
-- Phallipally: 1
+- Jacegil: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>)
+- Axsel: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>)
+- Bzorder: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>)
+- Meemeemeemee: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71688/mantle-of-the-fiery-protector>)
+- Phallipally: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>)
