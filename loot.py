@@ -572,7 +572,7 @@ def award_loot(players, item_match):
 
         print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
 
-    random_match = re.compile(r"(.*) of the (.*)", re.IGNORECASE).match(item_match.name)
+    random_match = re.compile(r"Flickering (.*) of the (.*)", re.IGNORECASE).match(item_match.name)
     if random_match: 
         # If the item is a random item, we'll remove the suffix. 
         item_match.name = random_match.group(1)
@@ -779,6 +779,8 @@ def export_loot():
             for l in p._history: 
                 for item in p._history[l]: 
                     if not re.match(r"(Mantle|Crown|Robes|Gloves|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
+                    # Skip if this wasn't a mainspec item.
+                    if not item.roll == "MS": continue
 
                     # We have to categorize by item level; 378 is normal, 391 is heroic.
                     if item.item.ilvl == 378:
@@ -814,6 +816,10 @@ def export_loot():
                             for item in p._history[l]: 
                                 # If this doesn't look like a tier piece, we'll skip it.
                                 if not re.match(r"(Mantle|Crown|Robes|Gloves|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
+
+                                # Check if this wasn't won as a main-spec. If not, this doesn't count against them and we will skip it. 
+                                if not item.roll == "MS": continue
+
                                 item_url = "https://www.wowhead.com/cata/item=" + str(item.item.id) + "/" + item.item.name.replace(" ", "-").replace("\'", "").lower()
                                 # set_pieces.append(f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)")
 

@@ -1,16 +1,3 @@
-- [Leggings of Billowing Fire](<https://www.wowhead.com/cata/item=70989/leggings-of-billowing-fire>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Cinderweb Leggings](<https://www.wowhead.com/cata/item=71031/cinderweb-leggings>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Thoracic Flame Kilt](<https://www.wowhead.com/cata/item=71042/thoracic-flame-kilt>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Dreadfire Drape](<https://www.wowhead.com/cata/item=70992/dreadfire-drape>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Lava Line Wristbands](<https://www.wowhead.com/cata/item=71009/lava-line-wristbands>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Clutch of the Firemother](<https://www.wowhead.com/cata/item=70988/clutch-of-the-firemother>) (378) -- disenchanted on **Sunday, 2024-12-29**
-- [Gatekeeper's Embrace](<https://www.wowhead.com/cata/item=71340/gatekeepers-embrace>) (378) -- disenchanted on **Sunday, 2024-12-29**
-----------------------------------------
-Tier Pieces:
-- Jacegil: 1
-- Bzorder: 1
-- Axsel: 1
-- Meemeemeemee: 1
-- Pasgghetti: 1
-- Phallipally: 1
+- Meemeemeemee: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71688/mantle-of-the-fiery-protector>) (2024-12-22)
+- Phallipally: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) (2024-12-08)
 
