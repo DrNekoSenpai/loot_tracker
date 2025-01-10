@@ -1,19 +1,33 @@
-Loot log for **Wednesday, 2025-01-08**:
+Loot log for Wednesday, 2025-01-08 and **Thursday, 2025-01-09**:
+
+Flightyknite (+1 MS):
+- [Arachnaflame Treads](<https://www.wowhead.com/cata/item=71029/arachnaflame-treads>) (378) (MS) -- received on **Thursday, 2025-01-09**
+
+Halibutfilet (+1 MS):
+- [Feeding Frenzy](<https://www.wowhead.com/cata/item=71013/feeding-frenzy>) (378) (MS) -- received on **Thursday, 2025-01-09**
+
+Qusom (+1 MS):
+- [Flickering Cowl of the Fireflash](<https://www.wowhead.com/cata/item=71011/flickering-cowl-of-the-fireflash>) (378) (MS) -- received on **Thursday, 2025-01-09**
 
 Snedcharos (+1 MS):
-- [Arachnaflame Treads](<https://www.wowhead.com/cata/item=71029/arachnaflame-treads>) (378) (MS) -- received on **Wednesday, 2025-01-08**
-- [Spaulders of Manifold Eyes](<https://www.wowhead.com/cata/item=71043/spaulders-of-manifold-eyes>) (378) (OS) -- received on **Wednesday, 2025-01-08**
+- [Arachnaflame Treads](<https://www.wowhead.com/cata/item=71029/arachnaflame-treads>) (378) (MS) -- received on Wednesday, 2025-01-08
+- [Spaulders of Manifold Eyes](<https://www.wowhead.com/cata/item=71043/spaulders-of-manifold-eyes>) (378) (OS) -- received on Wednesday, 2025-01-08
+
+Vanthulhu (+1 MS):
+- [Crystal Prison Band](<https://www.wowhead.com/cata/item=71024/crystal-prison-band>) (378) (MS) -- received on **Thursday, 2025-01-09**
 
 Tinyraider (+0 MS):
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-08**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-08**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-08**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on Wednesday, 2025-01-08
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on Wednesday, 2025-01-08
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on Wednesday, 2025-01-08
 
 Disenchanted items:
-- [Legplates of Frenzied Devotion](<https://www.wowhead.com/cata/item=70913/legplates-of-frenzied-devotion>) (378) -- disenchanted on **Wednesday, 2025-01-08**
-- [Bracers of the Dread Hunter](<https://www.wowhead.com/cata/item=71026/bracers-of-the-dread-hunter>) (378) -- disenchanted on **Wednesday, 2025-01-08**
-- [Hood of Rampant Disdain](<https://www.wowhead.com/cata/item=71003/hood-of-rampant-disdain>) (378) -- disenchanted on **Wednesday, 2025-01-08**
-- [Flickering Cowl of the Flameblaze](<https://www.wowhead.com/cata/item=71011/flickering-cowl-of-the-flameblaze>) (378) -- disenchanted on **Wednesday, 2025-01-08**
+- [Legplates of Frenzied Devotion](<https://www.wowhead.com/cata/item=70913/legplates-of-frenzied-devotion>) (378) -- disenchanted on Wednesday, 2025-01-08
+- [Bracers of the Dread Hunter](<https://www.wowhead.com/cata/item=71026/bracers-of-the-dread-hunter>) (378) -- disenchanted on Wednesday, 2025-01-08
+- [Hood of Rampant Disdain](<https://www.wowhead.com/cata/item=71003/hood-of-rampant-disdain>) (378) -- disenchanted on Wednesday, 2025-01-08
+- [Flickering Cowl of the Fireflash](<https://www.wowhead.com/cata/item=71011/flickering-cowl-of-the-fireflash>) (378) -- disenchanted on Wednesday, 2025-01-08
+- [Thoracic Flame Kilt](<https://www.wowhead.com/cata/item=71042/thoracic-flame-kilt>) (378) -- disenchanted on **Thursday, 2025-01-09**
+- [Hood of Rampant Disdain](<https://www.wowhead.com/cata/item=71003/hood-of-rampant-disdain>) (378) -- disenchanted on **Thursday, 2025-01-09**
 ----------------------------------------
 Tier Pieces:
 - Axsel: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) (2024-12-01)
