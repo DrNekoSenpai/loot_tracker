@@ -449,6 +449,7 @@ def award_loot(players, item_match):
         "Vanthulhu": True,
         "Axsel": False,
         "Tinyraider": False,
+        "Miadog": False
     }
 
     # If the item name is "Eternal Ember", find the player with the highest priority that does NOT have True in the dictionary. 
