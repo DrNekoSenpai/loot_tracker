@@ -1,29 +1,36 @@
-Loot log for **Wednesday, 2025-01-15**:
+Loot log for **Wednesday, 2025-01-22**:
+
+Vanarann (+2 MS):
+- [Widow's Kiss](<https://www.wowhead.com/cata/item=71032/widows-kiss>) (378) (MS) -- received on **Wednesday, 2025-01-22**
+- [Scales of Life](<https://www.wowhead.com/cata/item=68915/scales-of-life>) (378) (MS) -- received on **Wednesday, 2025-01-22**
 
 Shetknight (+1 MS):
-- [Spaulders of Recurring Flame](<https://www.wowhead.com/cata/item=70737/spaulders-of-recurring-flame>) (378) (MS) -- received on **Wednesday, 2025-01-15**
-- [Arachnaflame Treads](<https://www.wowhead.com/cata/item=71029/arachnaflame-treads>) (378) (OS) -- received on **Wednesday, 2025-01-15**
-- [Volcanospike](<https://www.wowhead.com/cata/item=71006/volcanospike>) (378) (OS) -- received on **Wednesday, 2025-01-15**
+- [Theck's Emberseal](<https://www.wowhead.com/cata/item=71367/thecks-emberseal>) (378) (MS) -- received on **Wednesday, 2025-01-22**
+- [Alysrazor's Band](<https://www.wowhead.com/cata/item=70738/alysrazors-band>) (378) (OS) -- received on **Wednesday, 2025-01-22**
+
+Snedcharos (+1 MS):
+- [Mantle of the Fiery Vanquisher](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (378) (MS) -- received on **Wednesday, 2025-01-22**
 
 Chunkofrock (+0 MS):
-- [Funeral Pyre](<https://www.wowhead.com/cata/item=71039/funeral-pyre>) (378) (OS) -- received on **Wednesday, 2025-01-15**
-- [Wings of Flame](<https://www.wowhead.com/cata/item=70990/wings-of-flame>) (378) (OS) -- received on **Wednesday, 2025-01-15**
-- [Necromantic Focus](<https://www.wowhead.com/cata/item=68982/necromantic-focus>) (378) (OS) -- received on **Wednesday, 2025-01-15**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-15**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-15**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-15**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-15**
-- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-15**
+- [Thoracic Flame Kilt](<https://www.wowhead.com/cata/item=71042/thoracic-flame-kilt>) (378) (OS) -- received on **Wednesday, 2025-01-22**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-22**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-22**
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on **Wednesday, 2025-01-22**
 
-Phallipally (+0 MS):
-- [Shard of Torment](<https://www.wowhead.com/cata/item=70915/shard-of-torment>) (378) (OS) -- received on **Wednesday, 2025-01-15**
+Vanthulhu (+0 MS):
+- [Leggings of Billowing Fire](<https://www.wowhead.com/cata/item=70989/leggings-of-billowing-fire>) (378) (OS) -- received on **Wednesday, 2025-01-22**
 
 Zguis (+0 MS):
-- [Flickering Shoulderpads of the Undertow](<https://www.wowhead.com/cata/item=71025/flickering-shoulderpads-of-the-undertow>) (378) (OS) -- received on **Wednesday, 2025-01-15**
+- [Grips of Unerring Precision](<https://www.wowhead.com/cata/item=71346/grips-of-unerring-precision>) (378) (OS) -- received on **Wednesday, 2025-01-22**
 
 Disenchanted items:
-- [Feeding Frenzy](<https://www.wowhead.com/cata/item=71013/feeding-frenzy>) (378) -- disenchanted on **Wednesday, 2025-01-15**
-- [Earthcrack Bracers](<https://www.wowhead.com/cata/item=71004/earthcrack-bracers>) (378) -- disenchanted on **Wednesday, 2025-01-15**
+- [Legplates of Frenzied Devotion](<https://www.wowhead.com/cata/item=70913/legplates-of-frenzied-devotion>) (378) -- disenchanted on **Wednesday, 2025-01-22**
+- [Bracers of the Dread Hunter](<https://www.wowhead.com/cata/item=71026/bracers-of-the-dread-hunter>) (378) -- disenchanted on **Wednesday, 2025-01-22**
+- [Flaming Core Chestguard](<https://www.wowhead.com/cata/item=71005/flaming-core-chestguard>) (378) -- disenchanted on **Wednesday, 2025-01-22**
+- [Flickering Cowl of the Wavecrest](<https://www.wowhead.com/cata/item=71011/flickering-cowl-of-the-wavecrest>) (378) -- disenchanted on **Wednesday, 2025-01-22**
+- [Breastplate of the Incendiary Soul](<https://www.wowhead.com/cata/item=71314/breastplate-of-the-incendiary-soul>) (378) -- disenchanted on **Wednesday, 2025-01-22**
+- [Glowing Wing Bracers](<https://www.wowhead.com/cata/item=71341/glowing-wing-bracers>) (378) -- disenchanted on **Wednesday, 2025-01-22**
+- [Treads of the Penitent Man](<https://www.wowhead.com/cata/item=71351/treads-of-the-penitent-man>) (378) -- disenchanted on **Wednesday, 2025-01-22**
 ----------------------------------------
 Tier Pieces:
 - Angelofruin: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2025-01-12)
@@ -32,3 +39,4 @@ Tier Pieces:
 - Jacegil: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2024-12-29)
 - Meemeemeemee: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71688/mantle-of-the-fiery-protector>) (2024-12-22)
 - Phallipally: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) (2024-12-08)
+- Snedcharos: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2025-01-22)

@@ -445,11 +445,12 @@ def award_loot(players, item_match):
     dragonwrath = {
         "Angelofruin": True, 
         "Pasgghetti": True,
-        "Bzorder": False,
+        "Bzorder": True,
         "Vanthulhu": True,
         "Axsel": False,
         "Tinyraider": False,
-        "Miadog": False
+        "Miadog": False,
+        "Chunkofrock": False
     }
 
     # If the item name is "Eternal Ember", find the player with the highest priority that does NOT have True in the dictionary. 
@@ -650,11 +651,6 @@ def mark_attendance(players):
                 p._attendance = True
                 print(f"HERE: {p.name}")
                 break
-
-    print("")
-    for p in players: 
-        if p._attendance == False and not p.name == "_disenchanted": 
-            print(f"ABSENT: {p.name}")
 
     print(f"\n{num_present} players present.")
 
