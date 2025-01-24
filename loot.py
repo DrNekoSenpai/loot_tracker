@@ -340,38 +340,48 @@ def award_loot(players, item_match):
     if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
     if item_match.binding != "Binds when picked up": print(f"WARNING: Item binds when equipped.")
 
-    token_limit = 1
     token_count = {}
 
-    if "Conqueror" in item_match.name: 
-        # Check to see how many players have won a Conqueror token.
-        for p in players: 
+    if "Conqueror" in item_match.name:
+        # Classes: Paladin, Priest, Warlock
+        for p in players:
             if p._attendance == False: continue
-            for l in p._history["Main-Spec"]:
-                if "Conqueror" in l.item.name: 
-                    if p.name in token_count: token_count[p.name] += 1
-                    else: token_count[p.name] = 1
-        
+            for player_class in ["Paladin", "Priest", "Warlock"]:
+                if p._player_class == player_class:
+                    token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Conqueror" in l.item.name])
+
     if "Protector" in item_match.name:
-        # Check to see how many players have won a Protector token.
-        for p in players: 
+        # Classes: Warrior, Hunter, Shaman
+        for p in players:
             if p._attendance == False: continue
-            for l in p._history["Main-Spec"]:
-                if "Protector" in l.item.name: 
-                    if p.name in token_count: token_count[p.name] += 1
-                    else: token_count[p.name] = 1
+            for player_class in ["Warrior", "Hunter", "Shaman"]:
+                if p._player_class == player_class:
+                    token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Protector" in l.item.name])
 
     if "Vanquisher" in item_match.name:
-        # Check to see how many players have won a Vanquisher token.
-        for p in players: 
+        # Classes: Rogue, Death Knight, Mage, Druid
+        for p in players:
             if p._attendance == False: continue
-            for l in p._history["Main-Spec"]:
-                if "Vanquisher" in l.item.name: 
-                    if p.name in token_count: token_count[p.name] += 1
-                    else: token_count[p.name] = 1
+            for player_class in ["Rogue", "Death Knight", "Mage", "Druid"]:
+                if p._player_class == player_class:
+                    token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Vanquisher" in l.item.name])
 
-    if token_count:
+    # Sort token count by number of tokens, in descending order.
+    token_count = {k: v for k, v in sorted(token_count.items(), key=lambda item: item[1], reverse=True)}
+
+    # If there's some people in the raid that have won tokens, but not everyone that is eligible has, print out a warning.
+    num_eligible = len([p for p in players if p._attendance == True and p._player_class in item_match.classes])
+    token_limit = min(token_count.values()) + 1 if token_count else 1
+
+    # Find how many people are at the token limit. 
+    num_at_limit = len([k for k,v in token_count.items() if v == token_limit])
+
+    if num_at_limit < num_eligible:
         print(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
+
+    # If in the odd chance that everyone has won the same number of tokens, we will instead announce that everyone's hit their limit, and thus everyone is eligible for a second. 
+    if num_at_limit == num_eligible:
+        print(f"All players have won {token_limit}x tokens. This token is a free roll.")
 
     if not item_match.name == "Eternal Ember": 
         ready = input("Ready to announce? (y/n): ").lower()
@@ -425,22 +435,7 @@ def award_loot(players, item_match):
                 pyautogui.press("enter")
                 time.sleep(0.25)
 
-            if token_count:
-                pyautogui.write("/")
-                time.sleep(0.1)
-                pyautogui.write("rw")
-                time.sleep(0.1)
-                pyautogui.press("space")
-                time.sleep(0.1)
-                pyautogui.write(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
-                time.sleep(0.1)
-                pyautogui.press("enter")
-                time.sleep(0.25)
-
     print("")
-
-    # 1) Angelofruin, 2) Pasgghetti, 3) Bzorder, 4) Vanthulhu, 5) Axsel, 6) Tinyraider
-    # Eternal Ember priority for Dragonwrath. 
 
     dragonwrath = {
         "Angelofruin": True, 
@@ -775,22 +770,20 @@ def export_loot():
         for p in players: 
             for l in p._history: 
                 for item in p._history[l]: 
-                    if not re.match(r"(Mantle|Crown|Robes|Gloves|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
+                    if not re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
                     # Skip if this wasn't a mainspec item.
                     if not item.roll == "MS": continue
 
                     # We have to categorize by item level; 378 is normal, 391 is heroic.
                     if item.item.ilvl == 378:
-                        # Mantle is shoulders, Crown is head
                         if "Mantle" in item.item.name: tier_pieces[p.name]["Normal"]["Shoulders"] += 1
-                        elif "Crown" in item.item.name: tier_pieces[p.name]["Normal"]["Head"] += 1
+                        elif "Helm" in item.item.name: tier_pieces[p.name]["Normal"]["Head"] += 1
                     
                     elif item.item.ilvl == 391: 
-                        # Mantle is shoulders, Crown is head, Robes is chest, Gloves is hands, Leggings is legs
-                        if "Mantle" in item.item.name: tier_pieces[p.name]["Heroic"]["Shoulders"] += 1
+                        if "Shoulders" in item.item.name: tier_pieces[p.name]["Heroic"]["Shoulders"] += 1
                         elif "Crown" in item.item.name: tier_pieces[p.name]["Heroic"]["Head"] += 1
-                        elif "Robes" in item.item.name: tier_pieces[p.name]["Heroic"]["Chest"] += 1
-                        elif "Gloves" in item.item.name: tier_pieces[p.name]["Heroic"]["Hands"] += 1
+                        elif "Chest" in item.item.name: tier_pieces[p.name]["Heroic"]["Chest"] += 1
+                        elif "Gauntlets" in item.item.name: tier_pieces[p.name]["Heroic"]["Hands"] += 1
                         elif "Leggings" in item.item.name: tier_pieces[p.name]["Heroic"]["Legs"] += 1
 
         # Sort players alphabetically.
@@ -812,7 +805,7 @@ def export_loot():
                         for l in p._history: 
                             for item in p._history[l]: 
                                 # If this doesn't look like a tier piece, we'll skip it.
-                                if not re.match(r"(Mantle|Crown|Robes|Gloves|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
+                                if not re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
 
                                 # Check if this wasn't won as a main-spec. If not, this doesn't count against them and we will skip it. 
                                 if not item.roll == "MS": continue
@@ -827,8 +820,8 @@ def export_loot():
 
 def paste_loot():  
     # Delete all files in "./history"
-    for file in os.listdir("./loot"):
-        os.remove(f"./loot/{file}")
+    for file in os.listdir("./pastes"):
+        os.remove(f"./pastes/{file}")
         
     with open("loot.txt", "r", encoding="utf-8") as file: 
         lines = file.read()
@@ -848,13 +841,13 @@ def paste_loot():
             total_length += len(line)
         
         else: 
-            with open(f"./loot/paste_{index}.txt", "w", encoding="utf-8") as file:
+            with open(f"./pastes/paste_{index}.txt", "w", encoding="utf-8") as file:
                 file.write(paste)
                 index += 1
             paste = line
             total_length = len(line)
     
-    with open(f"./loot/paste_{index}.txt", "w", encoding="utf-8") as file:
+    with open(f"./pastes/paste_{index}.txt", "w", encoding="utf-8") as file:
         file.write(paste)
 
 def remove_loot(players):
