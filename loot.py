@@ -371,7 +371,7 @@ def award_loot(players, item_match):
 
     # If there's some people in the raid that have won tokens, but not everyone that is eligible has, print out a warning.
     num_eligible = len([p for p in players if p._attendance == True and p._player_class in item_match.classes])
-    token_limit = min(token_count.values()) + 1 if token_count else 1
+    token_limit = max(token_count.values()) if token_count else 1
 
     # Find how many people are at the token limit. 
     num_at_limit = len([k for k,v in token_count.items() if v == token_limit])
@@ -431,6 +431,30 @@ def award_loot(players, item_match):
                 pyautogui.press("space")
                 time.sleep(0.1)
                 pyautogui.write("WARNING: Item binds when equipped.")
+                time.sleep(0.1)
+                pyautogui.press("enter")
+                time.sleep(0.25)
+
+            if num_at_limit < num_eligible:
+                pyautogui.write("/")
+                time.sleep(0.1)
+                pyautogui.write("rw")
+                time.sleep(0.1)
+                pyautogui.press("space")
+                time.sleep(0.1)
+                pyautogui.write(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
+                time.sleep(0.1)
+                pyautogui.press("enter")
+                time.sleep(0.25)
+
+            if num_at_limit == num_eligible:
+                pyautogui.write("/")
+                time.sleep(0.1)
+                pyautogui.write("rw")
+                time.sleep(0.1)
+                pyautogui.press("space")
+                time.sleep(0.1)
+                pyautogui.write(f"All players have won {token_limit}x tokens. This token is a free roll.")
                 time.sleep(0.1)
                 pyautogui.press("enter")
                 time.sleep(0.25)
