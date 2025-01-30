@@ -340,48 +340,48 @@ def award_loot(players, item_match):
     if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
     if item_match.binding != "Binds when picked up": print(f"WARNING: Item binds when equipped.")
 
-    token_count = {}
+    if re.match(r"(Conqueror|Protector|Vanquisher)", item_match.name):
+        token_count = {}
+        if "Conqueror" in item_match.name:
+            # Classes: Paladin, Priest, Warlock
+            for p in players:
+                if p._attendance == False: continue
+                for player_class in ["Paladin", "Priest", "Warlock"]:
+                    if p._player_class == player_class:
+                        token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Conqueror" in l.item.name])
 
-    if "Conqueror" in item_match.name:
-        # Classes: Paladin, Priest, Warlock
-        for p in players:
-            if p._attendance == False: continue
-            for player_class in ["Paladin", "Priest", "Warlock"]:
-                if p._player_class == player_class:
-                    token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Conqueror" in l.item.name])
+        if "Protector" in item_match.name:
+            # Classes: Warrior, Hunter, Shaman
+            for p in players:
+                if p._attendance == False: continue
+                for player_class in ["Warrior", "Hunter", "Shaman"]:
+                    if p._player_class == player_class:
+                        token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Protector" in l.item.name])
 
-    if "Protector" in item_match.name:
-        # Classes: Warrior, Hunter, Shaman
-        for p in players:
-            if p._attendance == False: continue
-            for player_class in ["Warrior", "Hunter", "Shaman"]:
-                if p._player_class == player_class:
-                    token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Protector" in l.item.name])
+        if "Vanquisher" in item_match.name:
+            # Classes: Rogue, Death Knight, Mage, Druid
+            for p in players:
+                if p._attendance == False: continue
+                for player_class in ["Rogue", "Death Knight", "Mage", "Druid"]:
+                    if p._player_class == player_class:
+                        token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Vanquisher" in l.item.name])
 
-    if "Vanquisher" in item_match.name:
-        # Classes: Rogue, Death Knight, Mage, Druid
-        for p in players:
-            if p._attendance == False: continue
-            for player_class in ["Rogue", "Death Knight", "Mage", "Druid"]:
-                if p._player_class == player_class:
-                    token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Vanquisher" in l.item.name])
+        # Sort token count by number of tokens, in descending order.
+        token_count = {k: v for k, v in sorted(token_count.items(), key=lambda item: item[1], reverse=True)}
 
-    # Sort token count by number of tokens, in descending order.
-    token_count = {k: v for k, v in sorted(token_count.items(), key=lambda item: item[1], reverse=True)}
+        # If there's some people in the raid that have won tokens, but not everyone that is eligible has, print out a warning.
+        num_eligible = len([p for p in players if p._attendance == True and p._player_class in item_match.classes])
+        token_limit = max(token_count.values()) if token_count else 1
 
-    # If there's some people in the raid that have won tokens, but not everyone that is eligible has, print out a warning.
-    num_eligible = len([p for p in players if p._attendance == True and p._player_class in item_match.classes])
-    token_limit = max(token_count.values()) if token_count else 1
+        # Find how many people are at the token limit. 
+        num_at_limit = len([k for k,v in token_count.items() if v == token_limit])
 
-    # Find how many people are at the token limit. 
-    num_at_limit = len([k for k,v in token_count.items() if v == token_limit])
+        if num_at_limit < num_eligible:
+            print(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
 
-    if num_at_limit < num_eligible:
-        print(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
-
-    # If in the odd chance that everyone has won the same number of tokens, we will instead announce that everyone's hit their limit, and thus everyone is eligible for a second. 
-    if num_at_limit == num_eligible:
-        print(f"All players have won {token_limit}x tokens. This token is a free roll.")
+        # If in the odd chance that everyone has won the same number of tokens, we will instead announce that everyone's hit their limit, and thus everyone is eligible for a second. 
+        if num_at_limit == num_eligible:
+            print(f"All players have won {token_limit}x tokens. This token is a free roll.")
 
     if not item_match.name == "Eternal Ember": 
         ready = input("Ready to announce? (y/n): ").lower()
@@ -435,29 +435,30 @@ def award_loot(players, item_match):
                 pyautogui.press("enter")
                 time.sleep(0.25)
 
-            if num_at_limit < num_eligible:
-                pyautogui.write("/")
-                time.sleep(0.1)
-                pyautogui.write("rw")
-                time.sleep(0.1)
-                pyautogui.press("space")
-                time.sleep(0.1)
-                pyautogui.write(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
-                time.sleep(0.1)
-                pyautogui.press("enter")
-                time.sleep(0.25)
+            if re.match(r"(Conqueror|Protector|Vanquisher)", item_match.name):
+                if num_at_limit < num_eligible:
+                    pyautogui.write("/")
+                    time.sleep(0.1)
+                    pyautogui.write("rw")
+                    time.sleep(0.1)
+                    pyautogui.press("space")
+                    time.sleep(0.1)
+                    pyautogui.write(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
+                    time.sleep(0.1)
+                    pyautogui.press("enter")
+                    time.sleep(0.25)
 
-            if num_at_limit == num_eligible:
-                pyautogui.write("/")
-                time.sleep(0.1)
-                pyautogui.write("rw")
-                time.sleep(0.1)
-                pyautogui.press("space")
-                time.sleep(0.1)
-                pyautogui.write(f"All players have won {token_limit}x tokens. This token is a free roll.")
-                time.sleep(0.1)
-                pyautogui.press("enter")
-                time.sleep(0.25)
+                if num_at_limit == num_eligible:
+                    pyautogui.write("/")
+                    time.sleep(0.1)
+                    pyautogui.write("rw")
+                    time.sleep(0.1)
+                    pyautogui.press("space")
+                    time.sleep(0.1)
+                    pyautogui.write(f"All players have won {token_limit}x tokens. This token is a free roll.")
+                    time.sleep(0.1)
+                    pyautogui.press("enter")
+                    time.sleep(0.25)
 
     print("")
 
