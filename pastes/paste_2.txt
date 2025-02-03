@@ -1,6 +1,27 @@
-- [Breastplate of the Incendiary Soul](<https://www.wowhead.com/cata/item=71314/breastplate-of-the-incendiary-soul>) (378) -- disenchanted on Wednesday, 2025-01-22
-- [Glowing Wing Bracers](<https://www.wowhead.com/cata/item=71341/glowing-wing-bracers>) (378) -- disenchanted on Wednesday, 2025-01-22
-- [Treads of the Penitent Man](<https://www.wowhead.com/cata/item=71351/treads-of-the-penitent-man>) (378) -- disenchanted on Wednesday, 2025-01-22
+Zguis (+1 MS):
+- [Hide-Bound Chains](<https://www.wowhead.com/cata/item=71365/hide-bound-chains>) (378) (MS) -- received on **Sunday, 2025-02-02**
+- [Feeding Frenzy](<https://www.wowhead.com/cata/item=71013/feeding-frenzy>) (378) (OS) -- received on Wednesday, 2025-01-29
+
+Axsel (+0 MS):
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on Wednesday, 2025-01-29
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on Wednesday, 2025-01-29
+- [Eternal Ember](<https://www.wowhead.com/cata/item=71141/eternal-ember>) (ETC) -- received on Wednesday, 2025-01-29
+
+Phillyphilly (+0 MS):
+- [Legplates of Frenzied Devotion](<https://www.wowhead.com/cata/item=70913/legplates-of-frenzied-devotion>) (378) (OS) -- received on Wednesday, 2025-01-29
+
+Snedcharos (+0 MS):
+- [Clutch of the Firemother](<https://www.wowhead.com/cata/item=70988/clutch-of-the-firemother>) (378) (OS) -- received on **Sunday, 2025-02-02**
+- [Bracers of the Fiery Path](<https://www.wowhead.com/cata/item=70920/bracers-of-the-fiery-path>) (378) (OS) -- received on **Sunday, 2025-02-02**
+
+Disenchanted items:
+- [Grips of the Raging Giant](<https://www.wowhead.com/cata/item=71007/grips-of-the-raging-giant>) (378) -- disenchanted on **Sunday, 2025-02-02**
+- [Breastplate of the Incendiary Soul](<https://www.wowhead.com/cata/item=71314/breastplate-of-the-incendiary-soul>) (378) -- disenchanted on **Sunday, 2025-02-02**
+- [Firecat Leggings](<https://www.wowhead.com/cata/item=71349/firecat-leggings>) (378) -- disenchanted on **Sunday, 2025-02-02**
+- [Cinderweb Leggings](<https://www.wowhead.com/cata/item=71031/cinderweb-leggings>) (378) -- disenchanted on **Sunday, 2025-02-02**
+- [Fireskin Gauntlets](<https://www.wowhead.com/cata/item=70993/fireskin-gauntlets>) (378) -- disenchanted on **Sunday, 2025-02-02**
+- [Shard of Torment](<https://www.wowhead.com/cata/item=70915/shard-of-torment>) (378) -- disenchanted on **Sunday, 2025-02-02**
+- [Shatterskull Bonecrusher](<https://www.wowhead.com/cata/item=71782/shatterskull-bonecrusher>) (378) -- disenchanted on **Sunday, 2025-02-02**
 ----------------------------------------
 Tier Pieces:
 - Angelofruin: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2025-01-12)
@@ -12,4 +33,5 @@ Tier Pieces:
 - Pasgghetti: [Head (Normal) 1x](<https://www.wowhead.com/cata/item=71668/helm-of-the-fiery-vanquisher>) (2024-12-22)
 - Phallipally: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) (2024-12-08)
 - Snedcharos: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2025-01-22)
+- Swiftbladess: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2025-02-02)
 
