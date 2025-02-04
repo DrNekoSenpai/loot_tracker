@@ -340,7 +340,7 @@ def award_loot(players, item_match):
     if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
     if item_match.binding != "Binds when picked up": print(f"WARNING: Item binds when equipped.")
 
-    if re.match(r"(Conqueror|Protector|Vanquisher)", item_match.name):
+    if re.search(r"(Conqueror|Protector|Vanquisher)", item_match.name):
         token_count = {}
         if "Conqueror" in item_match.name:
             # Classes: Paladin, Priest, Warlock
