@@ -702,7 +702,7 @@ def export_loot():
     last_raid = max(loot_dates)
 
     with open("loot.txt", "w", encoding="utf-8") as f:
-        f.write(f"Loot log for ")
+        f.write(f"# Loot log for ")
         for ind, date, day in zip(range(len(loot_dates)), loot_dates, loot_days):
             last_date = len(loot_dates) - 1
             if len(loot_dates) == 1: f.write(f"**{day}, {date}**:\n\n")
@@ -790,7 +790,7 @@ def export_loot():
             tier_pieces[p.name] = {"Heroic": {"Head": 0, "Shoulders": 0, "Chest": 0, "Hands": 0, "Legs": 0}, "Normal": {"Head": 0, "Shoulders": 0}}
 
         f.write("----------------------------------------\n")
-        f.write("Tier Pieces:\n")
+        f.write("## Tier Pieces:\n")
 
         for p in players: 
             for l in p._history: 
@@ -814,10 +814,11 @@ def export_loot():
         # Sort players alphabetically.
         players.sort(key=lambda x: x.name)
 
-        # Print out the tier pieces.
-        for p in players:
-            # First, we should check if this player has won ANY tier pieces. 
+        # Print out only Conqueror tier pieces (Paladin / Priest / Warlock)
+        f.write("Conqueror (Paladin / Priest / Warlock):\n")
+        for p in players:            
             if sum([sum(x.values()) for x in tier_pieces[p.name].values()]) == 0: continue 
+            if not p._player_class in ["Paladin", "Priest", "Warlock"]: continue
 
             set_pieces = []
 
@@ -839,6 +840,68 @@ def export_loot():
                                 # set_pieces.append(f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)")
 
                                 # Append the item as well as the date received. 
+                                set_pieces.append((f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)", item.date))
+
+            f.write(", ".join([f"{x[0]} ({x[1]})" for x in set_pieces]) + "\n")
+
+        # Print out only Protector tier pieces (Warrior / Hunter / Shaman)
+        f.write("\nProtector (Warrior / Hunter / Shaman):\n")
+
+        for p in players:
+            if sum([sum(x.values()) for x in tier_pieces[p.name].values()]) == 0: continue
+            if not p._player_class in ["Warrior", "Hunter", "Shaman"]: continue
+
+            set_pieces = []
+
+            f.write(f"- {p.name}: ")
+            # Now, we should only write out the slots they've won for.
+            for difficulty in tier_pieces[p.name]:
+                for slot in tier_pieces[p.name][difficulty]:
+                    if tier_pieces[p.name][difficulty][slot] > 0:
+                        # Find the item in the player's history.
+                        for l in p._history:
+                            for item in p._history[l]:
+                                # If this doesn't look like a tier piece, we'll skip it.
+                                if not re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
+
+                                # Check if this wasn't won as a main-spec. If not, this doesn't count against them and we will skip it.
+                                if not item.roll == "MS": continue
+
+                                item_url = "https://www.wowhead.com/cata/item=" + str(item.item.id) + "/" + item.item.name.replace(" ", "-").replace("\'", "").lower()
+                                # set_pieces.append(f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)")
+
+                                # Append the item as well as the date received.
+                                set_pieces.append((f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)", item.date))
+
+            f.write(", ".join([f"{x[0]} ({x[1]})" for x in set_pieces]) + "\n")
+
+        # Print out only Vanquisher tier pieces (Rogue / Death Knight / Mage / Druid)
+        f.write("\nVanquisher (Rogue / Death Knight / Mage / Druid):\n")
+
+        for p in players:
+            if sum([sum(x.values()) for x in tier_pieces[p.name].values()]) == 0: continue
+            if not p._player_class in ["Rogue", "Death Knight", "Mage", "Druid"]: continue
+
+            set_pieces = []
+
+            f.write(f"- {p.name}: ")
+            # Now, we should only write out the slots they've won for.
+            for difficulty in tier_pieces[p.name]:
+                for slot in tier_pieces[p.name][difficulty]:
+                    if tier_pieces[p.name][difficulty][slot] > 0:
+                        # Find the item in the player's history.
+                        for l in p._history:
+                            for item in p._history[l]:
+                                # If this doesn't look like a tier piece, we'll skip it.
+                                if not re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
+
+                                # Check if this wasn't won as a main-spec. If not, this doesn't count against them and we will skip it.
+                                if not item.roll == "MS": continue
+
+                                item_url = "https://www.wowhead.com/cata/item=" + str(item.item.id) + "/" + item.item.name.replace(" ", "-").replace("\'", "").lower()
+                                # set_pieces.append(f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)")
+
+                                # Append the item as well as the date received.
                                 set_pieces.append((f"[{slot} ({difficulty}) {tier_pieces[p.name][difficulty][slot]}x](<{item_url}>)", item.date))
 
             f.write(", ".join([f"{x[0]} ({x[1]})" for x in set_pieces]) + "\n")
