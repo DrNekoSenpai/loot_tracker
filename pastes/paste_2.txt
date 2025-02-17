@@ -1,7 +1,17 @@
-- Bzorder: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2024-12-11)
-- Jacegil: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2024-12-29)
-- Pasgghetti: [Head (Normal) 1x](<https://www.wowhead.com/cata/item=71668/helm-of-the-fiery-vanquisher>) (2024-12-22)
-- Snedcharos: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2025-01-22)
-- Swiftbladess: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2025-02-02)
-- Vanarann: [Shoulders (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) (2025-02-05)
+- Phallipally: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) -- 2024-12-08
+- Vanthulhu: [Helm (Normal) 1x](<https://www.wowhead.com/cata/item=71675/helm-of-the-fiery-conqueror>) -- 2025-02-05
+
+Protector (Warrior / Hunter / Shaman):
+- Chunkofrock: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71688/mantle-of-the-fiery-protector>) -- 2025-02-02, [Helm (Normal) 1x](<https://www.wowhead.com/cata/item=71682/helm-of-the-fiery-protector>) -- 2025-01-23
+- Meemeemeemee: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71688/mantle-of-the-fiery-protector>) -- 2024-12-22
+- Zguis: [Helm (Normal) 1x](<https://www.wowhead.com/cata/item=71682/helm-of-the-fiery-protector>) -- 2025-02-16
+
+Vanquisher (Rogue / Death Knight / Mage / Druid):
+- Angelofruin: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2025-01-12
+- Bzorder: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2024-12-11
+- Jacegil: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2024-12-29
+- Pasgghetti: [Helm (Normal) 1x](<https://www.wowhead.com/cata/item=71668/helm-of-the-fiery-vanquisher>) -- 2024-12-22
+- Snedcharos: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2025-01-22
+- Swiftbladess: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2025-02-02
+- Vanarann: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2025-02-05
 
