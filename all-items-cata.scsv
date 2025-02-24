@@ -1,271 +1,470 @@
 ID;Item;Item Level;Classes;Category;Binding;Version
-71427;Alysra's Razor;391;None;One-Hand Dagger (Agility w/ Expertise);Binds when picked up;Heroic
-70733;Alysra's Razor;378;None;One-Hand Dagger (Agility w/ Expertise);Binds when picked up;Normal
-71433;Alysrazor's Band;391;None;Finger (Strength w/ Expertise);Binds when picked up;Heroic
-70738;Alysrazor's Band;378;None;Finger (Strength w/ Expertise);Binds when picked up;Normal
-68972;Apparatus of Khaz'goroth;378;None;Trinket (Strength);Binds when equipped;Normal
-71404;Arachnaflame Treads;391;None;Plate Feet (Strength);Binds when picked up;Heroic
-71029;Arachnaflame Treads;378;None;Plate Feet (Strength);Binds when equipped;Normal
-71611;Arathar, the Eye of Flame;397;None;Ranged Bow (Agility);Binds when picked up;Heroic
-71353;Arathar, the Eye of Flame;384;None;Ranged Bow (Agility);Binds when picked up;Normal
-71414;Arbalest of Erupting Fury;391;None;Ranged Crossbow (Agility);Binds when picked up;Heroic
-70991;Arbalest of Erupting Fury;378;None;Ranged Crossbow (Agility);Binds when picked up;Normal
-71778;Avool's Incendiary Shanker;391;None;One-Hand Dagger (Agility w/ Hit);Binds when picked up;Heroic
-71779;Avool's Incendiary Shanker;378;None;One-Hand Dagger (Agility w/ Hit);Binds when picked up;Normal
-71452;Bracers of the Dread Hunter;391;None;Plate Wrist (Intellect w/ Spirit);Binds when picked up;Heroic
-71026;Bracers of the Dread Hunter;378;None;Plate Wrist (Intellect w/ Spirit);Binds when picked up;Normal
-71470;Bracers of the Fiery Path;391;None;Plate Wrist (Tank);Binds when picked up;Heroic
-70920;Bracers of the Fiery Path;378;None;Plate Wrist (Tank);Binds when picked up;Normal
-71469;Breastplate of Shifting Visions;391;None;Plate Chest (Strength);Binds when picked up;Heroic
-71344;Breastplate of Shifting Visions;378;None;Plate Chest (Strength);Binds when picked up;Normal
-71455;Breastplate of the Incendiary Soul;391;None;Leather Chest (Agility);Binds when picked up;Heroic
-71314;Breastplate of the Incendiary Soul;378;None;Leather Chest (Agility);Binds when picked up;Normal
-71405;Carapace of Imbibed Flame;391;None;Plate Chest (Tank);Binds when picked up;Heroic
-70914;Carapace of Imbibed Flame;378;None;Plate Chest (Tank);Binds when picked up;Normal
-71465;Casque of Flame;391;None;Plate Head (Intellect w/ Spirit);Binds when picked up;Heroic
-71342;Casque of Flame;378;None;Plate Head (Intellect w/ Spirit);Binds when picked up;Normal
-71359;Chelley's Sterilized Scalpel;378;None;Main Hand Dagger (Intellect);Binds when equipped;Normal
-71679;Chest of the Fiery Conqueror;391;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
-71686;Chest of the Fiery Protector;391;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
-71672;Chest of the Fiery Vanquisher;391;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
-71610;Choker of the Vanquished Lord;397;None;Neck (Agility);Binds when picked up;Heroic
-71354;Choker of the Vanquished Lord;384;None;Neck (Agility);Binds when picked up;Normal
-71410;Cindersilk Gloves;391;None;Leather Hands (Intellect w/ Spirit);Binds when picked up;Heroic
-71044;Cindersilk Gloves;378;None;Leather Hands (Intellect w/ Spirit);Binds when picked up;Normal
-71402;Cinderweb Leggings;391;None;Leather Legs (Agility);Binds when picked up;Heroic
-71031;Cinderweb Leggings;378;None;Leather Legs (Agility);Binds when picked up;Normal
-71437;Clawshaper Gauntlets;391;None;Mail Hands (Intellect w/ Spirit);Binds when picked up;Heroic
-70986;Clawshaper Gauntlets;378;None;Mail Hands (Intellect w/ Spirit);Binds when picked up;Normal
-71439;Clutch of the Firemother;391;None;Plate Chest (Intellect w/ Spirit);Binds when picked up;Heroic
-70988;Clutch of the Firemother;378;None;Plate Chest (Intellect w/ Spirit);Binds when picked up;Normal
-71447;Coalwalker Sandals;391;None;Cloth Feet (Intellect);Binds when picked up;Heroic
-71023;Coalwalker Sandals;378;None;Cloth Feet (Intellect);Binds when equipped;Normal
-71411;Cowl of the Clicking Menace;391;None;Leather Head (Intellect w/ Spirit);Binds when picked up;Heroic
-71040;Cowl of the Clicking Menace;378;None;Leather Head (Intellect w/ Spirit);Binds when picked up;Normal
-71420;Cracked Obsidian Stompers;391;None;Plate Feet (Tank);Binds when picked up;Heroic
-70912;Cracked Obsidian Stompers;378;None;Plate Feet (Tank);Binds when picked up;Normal
-71438;Craterflame Spaulders;391;None;Mail Shoulder (Intellect);Binds when picked up;Heroic
-70985;Craterflame Spaulders;378;None;Mail Shoulder (Intellect);Binds when picked up;Normal
-71616;Crown of Flame;397;None;Mail Head (Intellect w/ Spirit);Binds when picked up;Heroic
-71356;Crown of Flame;384;None;Mail Head (Intellect w/ Spirit);Binds when picked up;Normal
-71677;Crown of the Fiery Conqueror;391;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
-71684;Crown of the Fiery Protector;391;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
-71670;Crown of the Fiery Vanquisher;391;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
-71449;Crystal Prison Band;391;None;Finger (Intellect);Binds when picked up;Heroic
-71024;Crystal Prison Band;378;None;Finger (Intellect);Binds when picked up;Normal
-71617;Crystallized Firestone;391;None;ETC;Binds when picked up;Normal
-71457;Decimation Treads;391;None;Mail Feet (Agility w/ Hit);Binds when picked up;Heroic
-71315;Decimation Treads;378;None;Mail Feet (Agility w/ Hit);Binds when picked up;Normal
-71415;Dreadfire Drape;391;None;Back (Agility w/ Hit);Binds when picked up;Heroic
-70992;Dreadfire Drape;378;None;Back (Agility w/ Hit);Binds when picked up;Normal
-71418;Earthcrack Bracers;391;None;Plate Wrist (Strength);Binds when picked up;Heroic
-71004;Earthcrack Bracers;378;None;Plate Wrist (Strength);Binds when picked up;Normal
-71786;Entrail Disgorger;391;None;One-Hand Dagger (Agility);Binds when picked up;Heroic
-71787;Entrail Disgorger;378;None;One-Hand Dagger (Agility);Binds when picked up;Normal
-71141;Eternal Ember;80;None;ETC;Binds when picked up;Normal
-69149;Eye of Blazing Power;391;None;Trinket (Intellect);Binds when picked up;Heroic
-68983;Eye of Blazing Power;378;None;Trinket (Intellect);Binds when picked up;Normal
-71777;Eye of Purification;391;None;Main Hand Axe (Intellect w/ Spirit);Binds when picked up;Heroic
-71776;Eye of Purification;378;None;Main Hand Axe (Intellect w/ Spirit);Binds when picked up;Normal
-71466;Fandral's Flamescythe;391;None;Two-Hand Staff (Agility);Binds when picked up;Heroic
-69897;Fandral's Flamescythe;378;None;Two-Hand Staff (Agility);Binds when picked up;Normal
-71441;Feeding Frenzy;391;None;One-Hand Dagger (Agility);Binds when picked up;Heroic
-71013;Feeding Frenzy;378;None;One-Hand Dagger (Agility);Binds when picked up;Normal
-71614;Fingers of Incineration;397;None;Cloth Hands (Intellect);Binds when picked up;Heroic
-71358;Fingers of Incineration;384;None;Cloth Hands (Intellect);Binds when picked up;Normal
-70929;Firebound Gorget;378;None;Neck (Strength w/ Expertise);Binds when equipped;Normal
-71474;Firecat Leggings;391;None;Leather Legs (Intellect w/ Spirit);Binds when picked up;Heroic
-71349;Firecat Leggings;378;None;Leather Legs (Intellect w/ Spirit);Binds when picked up;Normal
-71419;Fireskin Gauntlets;391;None;Plate Hands (Strength w/ Hit);Binds when picked up;Heroic
-70993;Fireskin Gauntlets;378;None;Plate Hands (Strength w/ Hit);Binds when picked up;Normal
-71784;Firethorn Mindslicer;391;None;Main Hand Sword (Intellect w/ Hit);Binds when picked up;Heroic
-71785;Firethorn Mindslicer;378;None;Main Hand Sword (Intellect w/ Hit);Binds when picked up;Normal
-71417;Flaming Core Chestguard;391;None;Mail Chest (Agility w/ Hit);Binds when picked up;Heroic
-71005;Flaming Core Chestguard;378;None;Mail Chest (Agility w/ Hit);Binds when picked up;Normal
-71421;Flickering Cowl;391;None;Cloth Head (Random);Binds when picked up;Heroic
-71011;Flickering Cowl;378;None;Cloth Head (Random);Binds when picked up;Normal
-71458;Flickering Handguards;391;None;Plate Hands (Random);Binds when picked up;Heroic
-70917;Flickering Handguards;378;None;Plate Hands (Random);Binds when picked up;Normal
-71450;Flickering Shoulderpads;391;None;Leather Shoulder (Random);Binds when picked up;Heroic
-71025;Flickering Shoulderpads;378;None;Leather Shoulder (Random);Binds when equipped;Normal
-71403;Flickering Shoulders;391;None;Mail Shoulder (Random);Binds when picked up;Heroic
-71030;Flickering Shoulders;378;None;Mail Shoulder (Random);Binds when picked up;Normal
-71428;Flickering Wristbands;391;None;Leather Wrist (Random);Binds when picked up;Heroic
-70735;Flickering Wristbands;378;None;Leather Wrist (Random);Binds when picked up;Normal
-71472;Flowform Choker;391;None;Neck (Intellect);Binds when picked up;Heroic
-71348;Flowform Choker;378;None;Neck (Intellect);Binds when picked up;Normal
-71409;Funeral Pyre;391;None;Two-Hand Staff (Intellect);Binds when picked up;Heroic
-71039;Funeral Pyre;378;None;Two-Hand Staff (Intellect);Binds when picked up;Normal
-71454;Gatecrasher;391;None;One-Hand Axe (Agility w/ Expertise);Binds when picked up;Heroic
-71312;Gatecrasher;378;None;One-Hand Axe (Agility w/ Expertise);Binds when picked up;Normal
-71464;Gatekeeper's Embrace;391;None;Mail Chest (Intellect w/ Spirit);Binds when picked up;Heroic
-71340;Gatekeeper's Embrace;378;None;Mail Chest (Intellect w/ Spirit);Binds when picked up;Normal
-71676;Gauntlets of the Fiery Conqueror;391;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
-71683;Gauntlets of the Fiery Protector;391;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
-71669;Gauntlets of the Fiery Vanquisher;391;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
-71440;Gloves of Dissolving Smoke;391;None;Leather Hands (Agility);Binds when picked up;Heroic
-71020;Gloves of Dissolving Smoke;378;None;Leather Hands (Agility);Binds when picked up;Normal
-71463;Glowing Wing Bracers;391;None;Leather Wrist (Intellect w/ Spirit);Binds when picked up;Heroic
-71341;Glowing Wing Bracers;378;None;Leather Wrist (Intellect w/ Spirit);Binds when equipped;Normal
-71448;Goblet of Anger;391;None;Held In Off-hand (Intellect w/ Spirit);Binds when picked up;Heroic
-71022;Goblet of Anger;378;None;Held In Off-hand (Intellect w/ Spirit);Binds when equipped;Normal
-71430;Greathelm of the Voracious Maw;391;None;Plate Head (Strength);Binds when picked up;Heroic
-70734;Greathelm of the Voracious Maw;378;None;Plate Head (Strength);Binds when picked up;Normal
-71468;Grips of Unerring Precision;391;None;Mail Hands (Agility);Binds when picked up;Heroic
-71346;Grips of Unerring Precision;378;None;Mail Hands (Agility);Binds when picked up;Normal
-71426;Grips of the Raging Giant;391;None;Plate Hands (Intellect w/ Spirit);Binds when picked up;Heroic
-71007;Grips of the Raging Giant;378;None;Plate Hands (Intellect w/ Spirit);Binds when picked up;Normal
-71423;Heartstone of Rhyolith;391;None;Neck (Intellect w/ Spirit);Binds when picked up;Heroic
-71012;Heartstone of Rhyolith;378;None;Neck (Intellect w/ Spirit);Binds when picked up;Normal
-71459;Helm of Blazing Glory;391;None;Plate Head (Tank);Binds when picked up;Heroic
-70916;Helm of Blazing Glory;378;None;Plate Head (Tank);Binds when picked up;Normal
-71675;Helm of the Fiery Conqueror;378;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
-71682;Helm of the Fiery Protector;378;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
-71668;Helm of the Fiery Vanquisher;378;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
-71365;Hide-Bound Chains;378;None;Mail Wrist (Agility w/ Hit);Binds when equipped;Normal
-71416;Hood of Rampant Disdain;391;None;Leather Head (Agility w/ Expertise);Binds when picked up;Heroic
-71003;Hood of Rampant Disdain;378;None;Leather Head (Agility w/ Expertise);Binds when picked up;Normal
-71424;Incendic Chestguard;391;None;Leather Chest (Intellect w/ Spirit);Binds when picked up;Heroic
-71010;Incendic Chestguard;378;None;Leather Chest (Intellect w/ Spirit);Binds when picked up;Normal
-69111;Jaws of Defeat;391;None;Trinket (Intellect);Binds when picked up;Heroic
-68926;Jaws of Defeat;378;None;Trinket (Intellect);Binds when picked up;Normal
-71615;Ko'gun, Hammer of the Firelord;397;None;Main Hand Mace (Intellect w/ Spirit);Binds when picked up;Heroic
-71355;Ko'gun, Hammer of the Firelord;384;None;Main Hand Mace (Intellect w/ Spirit);Binds when picked up;Normal
-71366;Lava Bolt Crossbow;378;None;Ranged Crossbow (Agility);Binds when equipped;Normal
-71425;Lava Line Wristbands;391;None;Mail Wrist (Intellect w/ Spirit);Binds when picked up;Heroic
-71009;Lava Line Wristbands;378;None;Mail Wrist (Intellect w/ Spirit);Binds when picked up;Normal
-71431;Lavaworm Legplates;391;None;Plate Legs (Strength w/ Hit);Binds when picked up;Heroic
-70739;Lavaworm Legplates;378;None;Plate Legs (Strength w/ Hit);Binds when picked up;Normal
-71435;Leggings of Billowing Fire;391;None;Cloth Legs (Intellect);Binds when picked up;Heroic
-70989;Leggings of Billowing Fire;378;None;Cloth Legs (Intellect);Binds when picked up;Normal
-71678;Leggings of the Fiery Conqueror;391;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
-71685;Leggings of the Fiery Protector;391;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
-71671;Leggings of the Fiery Vanquisher;391;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
-71453;Legplates of Absolute Control;391;None;Plate Legs (Intellect w/ Spirit);Binds when picked up;Heroic
-71028;Legplates of Absolute Control;378;None;Plate Legs (Intellect w/ Spirit);Binds when picked up;Normal
-71444;Legplates of Frenzied Devotion;391;None;Plate Legs (Tank);Binds when picked up;Heroic
-70913;Legplates of Frenzied Devotion;378;None;Plate Legs (Tank);Binds when picked up;Normal
-69237;Living Ember;80;None;ETC;Binds when picked up;Normal
-71613;Majordomo's Chain of Office;397;None;Cloth Waist (Intellect);Binds when picked up;Heroic
-71357;Majordomo's Chain of Office;384;None;Cloth Waist (Intellect);Binds when picked up;Normal
-71406;Mandible of Beth'tilac;391;None;One-Hand Sword (Tank);Binds when picked up;Heroic
-70922;Mandible of Beth'tilac;378;None;One-Hand Sword (Tank);Binds when picked up;Normal
-71461;Mantle of Closed Doors;391;None;Cloth Shoulder (Intellect);Binds when picked up;Heroic
-71343;Mantle of Closed Doors;378;None;Cloth Shoulder (Intellect);Binds when picked up;Normal
-71681;Mantle of the Fiery Conqueror;378;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
-71688;Mantle of the Fiery Protector;378;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
-71674;Mantle of the Fiery Vanquisher;378;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
-69150;Matrix Restabilizer;397;None;Trinket (Agility);Binds when picked up;Heroic
-68994;Matrix Restabilizer;384;None;Trinket (Agility);Binds when picked up;Normal
-71462;Molten Scream;391;None;Held In Off-hand (Intellect w/ Hit);Binds when picked up;Heroic
-71323;Molten Scream;378;None;Held In Off-hand (Intellect w/ Hit);Binds when picked up;Normal
-71429;Moltenfeather Leggings;391;None;Mail Legs (Agility w/ Hit);Binds when picked up;Heroic
-70736;Moltenfeather Leggings;378;None;Mail Legs (Agility w/ Hit);Binds when picked up;Normal
-71446;Necklace of Fetishes;391;None;Neck (Strength w/ Hit);Binds when picked up;Heroic
-71019;Necklace of Fetishes;378;None;Neck (Strength w/ Hit);Binds when picked up;Normal
-69139;Necromantic Focus;391;None;Trinket (Intellect);Binds when picked up;Heroic
-68982;Necromantic Focus;378;None;Trinket (Intellect);Binds when picked up;Normal
-71362;Obsidium Cleaver;378;None;One-Hand Axe (Strength w/ Hit);Binds when equipped;Normal
+78445;Ataraxis, Cudgel of the Warmaster;410;None;Two-Hand Mace (Strength);Binds when picked up;Heroic
+77224;Ataraxis, Cudgel of the Warmaster;397;None;Two-Hand Mace (Strength);Binds when picked up;Normal
+78465;Backbreaker Spaulders;416;None;Plate Shoulder (Strength);Binds when picked up;Heroic
+77236;Backbreaker Spaulders;403;None;Plate Shoulder (Strength);Binds when picked up;Normal
+78388;Belt of Flayed Skin;410;None;Leather Waist (Agility w/ Expertise);Binds when picked up;Heroic
+77260;Belt of Flayed Skin;397;None;Leather Waist (Agility w/ Expertise);Binds when picked up;Normal
+78886;Belt of Ghostly Graces;397;None;Mail Waist (Intellect w/ Spirit);Binds when equipped;Normal
+78463;Belt of Shattered Elementium;416;None;Mail Waist (Intellect w/ Spirit);Binds when picked up;Heroic
+77237;Belt of Shattered Elementium;403;None;Mail Waist (Intellect w/ Spirit);Binds when picked up;Normal
+78447;Belt of the Beloved Companion;410;None;Mail Waist (Agility);Binds when picked up;Heroic
+77241;Belt of the Beloved Companion;397;None;Mail Waist (Agility);Binds when picked up;Normal
+78448;Blackhorn's Mighty Bulwark;410;None;Off Hand Shield (Tank);Binds when picked up;Heroic
+77226;Blackhorn's Mighty Bulwark;397;None;Off Hand Shield (Tank);Binds when picked up;Normal
+78474;Blade of the Unmaker;416;None;One-Hand Dagger (Agility);Binds when picked up;Heroic
+77189;Blade of the Unmaker;403;None;One-Hand Dagger (Agility);Binds when picked up;Normal
+78002;Bone-Link Fetish;410;None;Trinket (Strength);Binds when picked up;Heroic
+77210;Bone-Link Fetish;397;None;Trinket (Strength);Binds when picked up;Normal
+78430;Bracers of Looming Darkness;410;None;Mail Wrist (Agility);Binds when picked up;Heroic
+77247;Bracers of Looming Darkness;397;None;Mail Wrist (Agility);Binds when picked up;Normal
+78417;Bracers of the Banished;410;None;Cloth Wrist (Intellect);Binds when picked up;Heroic
+77249;Bracers of the Banished;397;None;Cloth Wrist (Intellect);Binds when picked up;Normal
+78367;Brackenshell Shoulderplates;410;None;Plate Shoulder (Tank);Binds when picked up;Heroic
+77268;Brackenshell Shoulderplates;397;None;Plate Shoulder (Tank);Binds when picked up;Normal
+78492;Breathstealer Band;410;None;Finger (Strength);Binds when picked up;Heroic
+77230;Breathstealer Band;397;None;Finger (Strength);Binds when picked up;Normal
+78847;Chest of the Corrupted Conqueror;410;Paladin, Priest, Warlock;ETC;Binds when picked up;Heroic
+78184;Chest of the Corrupted Conqueror;397;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
+78848;Chest of the Corrupted Protector;410;Warrior, Hunter, Shaman;ETC;Binds when picked up;Heroic
+78179;Chest of the Corrupted Protector;397;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
+78849;Chest of the Corrupted Vanquisher;410;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Heroic
+78174;Chest of the Corrupted Vanquisher;397;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
+78391;Cord of the Slain Champion;410;None;Cloth Waist (Intellect);Binds when picked up;Heroic
+77255;Cord of the Slain Champion;397;None;Cloth Waist (Intellect);Binds when picked up;Normal
+77992;Creche of the Final Dragon;410;None;Trinket (Strength);Binds when picked up;Heroic
+77205;Creche of the Final Dragon;397;None;Trinket (Strength);Binds when picked up;Normal
+78850;Crown of the Corrupted Conqueror;410;Paladin, Priest, Warlock;ETC;Binds when picked up;Heroic
+78182;Crown of the Corrupted Conqueror;397;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
+78851;Crown of the Corrupted Protector;410;Warrior, Hunter, Shaman;ETC;Binds when picked up;Heroic
+78177;Crown of the Corrupted Protector;397;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
+78852;Crown of the Corrupted Vanquisher;410;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Heroic
+78172;Crown of the Corrupted Vanquisher;397;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
+78000;Cunning of the Cruel;410;None;Trinket (Intellect);Binds when picked up;Heroic
+77208;Cunning of the Cruel;397;None;Trinket (Intellect);Binds when picked up;Normal
+78432;Curled Twilight Claw;410;None;Finger (Strength w/ Hit);Binds when picked up;Heroic
+78013;Curled Twilight Claw;397;None;Finger (Strength w/ Hit);Binds when picked up;Normal
+78885;Dragoncarver Belt;397;None;Mail Waist (Agility);Binds when equipped;Normal
+77938;Dragonfire Orb;397;None;Held In Off-hand (Intellect);Binds when picked up;Normal
+78436;Dragonfracture Belt;410;None;Plate Waist (Intellect w/ Spirit);Binds when picked up;Heroic
+77244;Dragonfracture Belt;397;None;Plate Waist (Intellect w/ Spirit);Binds when picked up;Normal
+78414;Electrowing Dagger;410;None;One-Hand Dagger (Agility);Binds when picked up;Heroic
+77220;Electrowing Dagger;397;None;One-Hand Dagger (Agility);Binds when picked up;Normal
+71998;Essence of Destruction;85;None;ETC;Binds when picked up;Normal
+78403;Experimental Specimen Slicer;410;None;Two-Hand Axe (Strength);Binds when picked up;Heroic
+77217;Experimental Specimen Slicer;397;None;Two-Hand Axe (Strength);Binds when picked up;Normal
+77997;Eye of Unmaking;416;None;Trinket (Strength);Binds when picked up;Heroic
+77200;Eye of Unmaking;403;None;Trinket (Strength);Binds when picked up;Normal
+78392;Finger of Zon'ozz;410;None;Ranged Wand (Intellect);Binds when picked up;Heroic
+77216;Finger of Zon'ozz;397;None;Ranged Wand (Intellect);Binds when picked up;Normal
+78853;Gauntlets of the Corrupted Conqueror;410;Paladin, Priest, Warlock;ETC;Binds when picked up;Heroic
+78183;Gauntlets of the Corrupted Conqueror;397;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
+78854;Gauntlets of the Corrupted Protector;410;Warrior, Hunter, Shaman;ETC;Binds when picked up;Heroic
+78178;Gauntlets of the Corrupted Protector;397;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
+78855;Gauntlets of the Corrupted Vanquisher;410;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Heroic
+78173;Gauntlets of the Corrupted Vanquisher;397;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
+78464;Gauntlets of the Golden Thorn;416;None;Plate Hands (Intellect w/ Spirit);Binds when picked up;Heroic
+77235;Gauntlets of the Golden Thorn;403;None;Plate Hands (Intellect w/ Spirit);Binds when picked up;Normal
+78884;Girdle of Fungal Dreams;397;None;Leather Waist (Intellect w/ Spirit);Binds when equipped;Normal
+78370;Girdle of Shattered Stone;410;None;Mail Waist (Intellect);Binds when picked up;Heroic
+77266;Girdle of Shattered Stone;397;None;Mail Waist (Intellect);Binds when picked up;Normal
+78887;Girdle of Soulful Mending;397;None;Plate Waist (Intellect w/ Spirit);Binds when equipped;Normal
+78420;Girdle of the Grotesque;410;None;Leather Waist (Intellect w/ Spirit);Binds when picked up;Heroic
+77248;Girdle of the Grotesque;397;None;Leather Waist (Intellect w/ Spirit);Binds when picked up;Normal
+78461;Gloves of Liquid Smoke;416;None;Cloth Hands (Intellect);Binds when picked up;Heroic
+78357;Gloves of Liquid Smoke;403;None;Cloth Hands (Intellect);Binds when picked up;Normal
+78452;Goriona's Collar;410;None;Plate Waist (Tank);Binds when picked up;Heroic
+77239;Goriona's Collar;397;None;Plate Waist (Tank);Binds when picked up;Normal
+78390;Graveheart Bracers;410;None;Plate Wrist (Tank);Binds when picked up;Heroic
+77258;Graveheart Bracers;397;None;Plate Wrist (Tank);Binds when picked up;Normal
+78393;Grotesquely Writhing Bracers;410;None;Mail Wrist (Intellect w/ Spirit);Binds when picked up;Heroic
+77257;Grotesquely Writhing Bracers;397;None;Mail Wrist (Intellect w/ Spirit);Binds when picked up;Normal
+78478;Gurthalak, Voice of the Deeps;416;None;Two-Hand Sword (Strength);Binds when picked up;Heroic
+77191;Gurthalak, Voice of the Deeps;403;None;Two-Hand Sword (Strength);Binds when picked up;Normal
+78371;Hand of Morchok;410;None;One-Hand Axe (Strength);Binds when picked up;Heroic
+77212;Hand of Morchok;397;None;One-Hand Axe (Strength);Binds when picked up;Normal
+78493;Hardheart Ring;410;None;Finger (Tank);Binds when picked up;Heroic
+77232;Hardheart Ring;397;None;Finger (Tank);Binds when picked up;Normal
+77996;Heart of Unliving;416;None;Trinket (Intellect w/ Spirit);Binds when picked up;Heroic
+77199;Heart of Unliving;403;None;Trinket (Intellect w/ Spirit);Binds when picked up;Normal
+78406;Heartblood Wristplates;410;None;Plate Wrist (Intellect w/ Spirit);Binds when picked up;Heroic
+77253;Heartblood Wristplates;397;None;Plate Wrist (Intellect w/ Spirit);Binds when picked up;Normal
+78387;Horrifying Horn Arbalest;410;None;Ranged Crossbow (Agility);Binds when picked up;Heroic
+77215;Horrifying Horn Arbalest;397;None;Ranged Crossbow (Agility);Binds when picked up;Normal
+78435;Imperfect Specimens 27 and 28;410;None;Mail Shoulder (Intellect);Binds when picked up;Heroic
+77242;Imperfect Specimens 27 and 28;397;None;Mail Shoulder (Intellect);Binds when picked up;Normal
+78003;Indomitable Pride;410;None;Trinket;Binds when picked up;Heroic
+77211;Indomitable Pride;397;None;Trinket;Binds when picked up;Normal
+78490;Infinite Loop;410;None;Finger (Intellect w/ Hit);Binds when picked up;Heroic
+77228;Infinite Loop;397;None;Finger (Intellect w/ Hit);Binds when picked up;Normal
+77991;Insignia of the Corrupted Mind;410;None;Trinket (Intellect);Binds when picked up;Heroic
+77203;Insignia of the Corrupted Mind;397;None;Trinket (Intellect);Binds when picked up;Normal
+78402;Interrogator's Bloody Footpads;410;None;Leather Feet (Agility w/ Hit);Binds when picked up;Heroic
+77254;Interrogator's Bloody Footpads;397;None;Leather Feet (Agility w/ Hit);Binds when picked up;Normal
+78449;Janglespur Jackboots;410;None;Cloth Feet (Intellect);Binds when picked up;Heroic
+77234;Janglespur Jackboots;397;None;Cloth Feet (Intellect);Binds when picked up;Normal
+78473;Kiril, Fury of Beasts;416;None;Two-Hand Polearm (Agility);Binds when picked up;Heroic
+77194;Kiril, Fury of Beasts;403;None;Two-Hand Polearm (Agility);Binds when picked up;Normal
+78433;Ledger of Revolting Rituals;410;None;Held In Off-hand (Intellect w/ Spirit);Binds when picked up;Heroic
+77245;Ledger of Revolting Rituals;397;None;Held In Off-hand (Intellect w/ Spirit);Binds when picked up;Normal
+78856;Leggings of the Corrupted Conqueror;410;Paladin, Priest, Warlock;ETC;Binds when picked up;Heroic
+78181;Leggings of the Corrupted Conqueror;397;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
+78857;Leggings of the Corrupted Protector;410;Warrior, Hunter, Shaman;ETC;Binds when picked up;Heroic
+78176;Leggings of the Corrupted Protector;397;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
+78858;Leggings of the Corrupted Vanquisher;410;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Heroic
+78171;Leggings of the Corrupted Vanquisher;397;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
+77069;Life-Binder's Handmaiden;85;None;ETC;Binds when picked up;Normal
+78418;Lightning Rod;410;None;Two-Hand Staff (Intellect w/ Hit);Binds when picked up;Heroic
+77221;Lightning Rod;397;None;Two-Hand Staff (Intellect w/ Hit);Binds when picked up;Normal
+78476;Maw of the Dragonlord;416;None;Main Hand Mace (Intellect w/ Spirit);Binds when picked up;Heroic
+77196;Maw of the Dragonlord;403;None;Main Hand Mace (Intellect w/ Spirit);Binds when picked up;Normal
+78405;Mindstrainer Treads;410;None;Mail Feet (Intellect w/ Spirit);Binds when picked up;Heroic
+77252;Mindstrainer Treads;397;None;Mail Feet (Intellect w/ Spirit);Binds when picked up;Normal
+78462;Molten Blood Footpads;416;None;Leather Feet (Agility w/ Expertise);Binds when picked up;Heroic
+77238;Molten Blood Footpads;403;None;Leather Feet (Agility w/ Expertise);Binds when picked up;Normal
+78429;Morningstar of Heroic Will;410;None;One-Hand Mace (Agility w/ Expertise);Binds when picked up;Heroic
+77223;Morningstar of Heroic Will;397;None;One-Hand Mace (Agility w/ Expertise);Binds when picked up;Normal
+78366;Mosswrought Shoulderguards;410;None;Cloth Shoulder (Intellect);Binds when picked up;Heroic
+77267;Mosswrought Shoulderguards;397;None;Cloth Shoulder (Intellect);Binds when picked up;Normal
+78372;Mycosynth Wristguards;410;None;Leather Wrist (Intellect w/ Spirit);Binds when picked up;Heroic
+77261;Mycosynth Wristguards;397;None;Leather Wrist (Intellect w/ Spirit);Binds when picked up;Normal
+78882;Nightblind Cinch;397;None;Leather Waist (Agility);Binds when equipped;Normal
+78472;No'Kaled, the Elements of Death;416;None;One-Hand Axe (Agility);Binds when picked up;Heroic
+77188;No'Kaled, the Elements of Death;403;None;One-Hand Axe (Agility);Binds when picked up;Normal
+67095;Pattern: Assassin's Chestplate;85;None;Plans/Patterns;Binds when picked up;Normal
+47639;Pattern: Bejeweled Wizard's Bracers;85;None;Cloth Wrist (Intellect);Binds when equipped;Normal
+47654;Pattern: Bejeweled Wizard's Bracers;85;None;Cloth Wrist (Intellect);Binds when equipped;Normal
+45100;Pattern: Belt of Arctic Life;85;None;Plans/Patterns;Binds when equipped;Normal
+45094;Pattern: Belt of Dragons;85;None;Plans/Patterns;Binds when equipped;Normal
+67070;Pattern: Belt of Nefarious Whispers;85;None;Plans/Patterns;Binds when picked up;Normal
+47629;Pattern: Black Chitin Bracers;85;None;Mail Wrist (Intellect w/ Spirit);Binds when equipped;Normal
+47646;Pattern: Black Chitin Bracers;85;None;Mail Wrist (Intellect w/ Spirit);Binds when equipped;Normal
+68199;Pattern: Black Embersilk Gown;85;None;Plans/Patterns;Binds when picked up;Normal
+49959;Pattern: Bladeborn Leggings;85;None;Plans/Patterns;Binds when picked up;Normal
 72006;Pattern: Bladeshadow Leggings;85;None;Plans/Patterns;Binds when equipped;Normal
 72010;Pattern: Bladeshadow Wristguards;85;None;Plans/Patterns;Binds when equipped;Normal
+49958;Pattern: Blessed Cenarion Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+238167;Pattern: Bloodied Dragonscale Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+238159;Pattern: Bloodied Dragonscale Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+238151;Pattern: Bloodied Dragonscale Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+238176;Pattern: Bloodied Dragonscale Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+238160;Pattern: Bloodied Dragonscale Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+238168;Pattern: Bloodied Dragonscale Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238175;Pattern: Bloodied Dragonscale Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+238152;Pattern: Bloodied Dragonscale Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+238163;Pattern: Bloodied Leather Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+238155;Pattern: Bloodied Leather Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+238147;Pattern: Bloodied Leather Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+238171;Pattern: Bloodied Leather Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+238148;Pattern: Bloodied Leather Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+238164;Pattern: Bloodied Leather Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238172;Pattern: Bloodied Leather Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+238156;Pattern: Bloodied Leather Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+238158;Pattern: Bloodied Scale Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+238157;Pattern: Bloodied Scale Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+238149;Pattern: Bloodied Scale Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+238173;Pattern: Bloodied Scale Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+238150;Pattern: Bloodied Scale Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+238174;Pattern: Bloodied Scale Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238166;Pattern: Bloodied Scale Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+238165;Pattern: Bloodied Scale Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+238146;Pattern: Bloodied Wyrmhide Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+238154;Pattern: Bloodied Wyrmhide Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+238145;Pattern: Bloodied Wyrmhide Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+238162;Pattern: Bloodied Wyrmhide Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+238153;Pattern: Bloodied Wyrmhide Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+238170;Pattern: Bloodied Wyrmhide Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238169;Pattern: Bloodied Wyrmhide Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+238161;Pattern: Bloodied Wyrmhide Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+67064;Pattern: Bloodthirsty Charscale Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+67063;Pattern: Bloodthirsty Charscale Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+67049;Pattern: Bloodthirsty Charscale Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+67090;Pattern: Bloodthirsty Charscale Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+67053;Pattern: Bloodthirsty Charscale Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+67091;Pattern: Bloodthirsty Charscale Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+67079;Pattern: Bloodthirsty Charscale Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+67078;Pattern: Bloodthirsty Charscale Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+67080;Pattern: Bloodthirsty Dragonscale Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+67065;Pattern: Bloodthirsty Dragonscale Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+67054;Pattern: Bloodthirsty Dragonscale Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+67093;Pattern: Bloodthirsty Dragonscale Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+67066;Pattern: Bloodthirsty Dragonscale Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+67081;Pattern: Bloodthirsty Dragonscale Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+67092;Pattern: Bloodthirsty Dragonscale Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+67055;Pattern: Bloodthirsty Dragonscale Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+67076;Pattern: Bloodthirsty Leather Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+67060;Pattern: Bloodthirsty Leather Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+67046;Pattern: Bloodthirsty Leather Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+67087;Pattern: Bloodthirsty Leather Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+67048;Pattern: Bloodthirsty Leather Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+67077;Pattern: Bloodthirsty Leather Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+67089;Pattern: Bloodthirsty Leather Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+67062;Pattern: Bloodthirsty Leather Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+67044;Pattern: Bloodthirsty Wyrmhide Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+67058;Pattern: Bloodthirsty Wyrmhide Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+67042;Pattern: Bloodthirsty Wyrmhide Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+67075;Pattern: Bloodthirsty Wyrmhide Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+67056;Pattern: Bloodthirsty Wyrmhide Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+67086;Pattern: Bloodthirsty Wyrmhide Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+67085;Pattern: Bloodthirsty Wyrmhide Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+67074;Pattern: Bloodthirsty Wyrmhide Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+45096;Pattern: Blue Belt of Chaos;85;None;Plans/Patterns;Binds when equipped;Normal
+45095;Pattern: Boots of Living Scale;85;None;Plans/Patterns;Binds when equipped;Normal
+45101;Pattern: Boots of Wintry Endurance;85;None;Plans/Patterns;Binds when equipped;Normal
 69976;Pattern: Boots of the Black Flame;85;None;Plans/Patterns;Binds when equipped;Normal
 72008;Pattern: Bracers of Flowing Serenity;85;None;Plans/Patterns;Binds when equipped;Normal
+47635;Pattern: Bracers of Swift Death;85;None;Leather Wrist (Agility);Binds when equipped;Normal
+47647;Pattern: Bracers of Swift Death;85;None;Leather Wrist (Agility);Binds when equipped;Normal
 72004;Pattern: Bracers of Unconquered Power;85;None;Plans/Patterns;Binds when equipped;Normal
 72011;Pattern: Bracers of the Hunter-Killer;85;None;Plans/Patterns;Binds when equipped;Normal
+67084;Pattern: Charscale Leg Armor;85;None;Plans/Patterns;Binds when picked up;Normal
+67094;Pattern: Chestguard of Nature's Fury;85;None;Plans/Patterns;Binds when picked up;Normal
 69962;Pattern: Clutches of Evil;85;None;Plans/Patterns;Binds when equipped;Normal
+45104;Pattern: Cord of the White Dawn;85;None;Plans/Patterns;Binds when equipped;Normal
+67073;Pattern: Corded Viper Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+47631;Pattern: Crusader's Dragonscale Bracers;85;None;Mail Wrist (Agility w/ Hit);Binds when equipped;Normal
+47648;Pattern: Crusader's Dragonscale Bracers;85;None;Mail Wrist (Agility w/ Hit);Binds when equipped;Normal
+47630;Pattern: Crusader's Dragonscale Breastplate;85;None;Mail Chest (Agility);Binds when equipped;Normal
+47649;Pattern: Crusader's Dragonscale Breastplate;85;None;Mail Chest (Agility);Binds when equipped;Normal
+45098;Pattern: Death-Warmed Belt;85;None;Plans/Patterns;Binds when equipped;Normal
+49954;Pattern: Deathfrost Boots;85;None;Plans/Patterns;Binds when picked up;Normal
 72005;Pattern: Deathscale Leggings;85;None;Plans/Patterns;Binds when equipped;Normal
 69966;Pattern: Don Tayo's Inferno Mittens;85;None;Plans/Patterns;Binds when equipped;Normal
+49965;Pattern: Draconic Bonesplinter Legguards;85;None;Plans/Patterns;Binds when picked up;Normal
 69960;Pattern: Dragonfire Gloves;85;None;Plans/Patterns;Binds when equipped;Normal
+67100;Pattern: Dragonkiller Tunic;85;None;Plans/Patterns;Binds when picked up;Normal
+68193;Pattern: Dragonscale Leg Armor;85;None;Plans/Patterns;Binds when picked up;Normal
+71721;Pattern: Drakehide Leg Armor;85;None;Plans/Patterns;Binds when picked up;Normal
 72003;Pattern: Dreamwraps of the Light;85;None;Plans/Patterns;Binds when equipped;Normal
 69971;Pattern: Earthen Scale Sabatons;85;None;Plans/Patterns;Binds when equipped;Normal
+49963;Pattern: Earthsoul Boots;85;None;Plans/Patterns;Binds when picked up;Normal
 69975;Pattern: Endless Dream Walkers;85;None;Plans/Patterns;Binds when equipped;Normal
+47628;Pattern: Ensorcelled Nerubian Breastplate;85;None;Mail Chest (Intellect w/ Spirit);Binds when equipped;Normal
+47650;Pattern: Ensorcelled Nerubian Breastplate;85;None;Mail Chest (Intellect w/ Spirit);Binds when equipped;Normal
 69974;Pattern: Ethereal Footfalls;85;None;Plans/Patterns;Binds when equipped;Normal
+49961;Pattern: Footpads of Impending Death;85;None;Plans/Patterns;Binds when picked up;Normal
+45099;Pattern: Footpads of Silence;85;None;Plans/Patterns;Binds when equipped;Normal
 69972;Pattern: Footwraps of Quenched Fire;85;None;Plans/Patterns;Binds when equipped;Normal
 69961;Pattern: Gloves of Unforgiving Flame;85;None;Plans/Patterns;Binds when equipped;Normal
 69965;Pattern: Grips of Altered Reality;85;None;Plans/Patterns;Binds when equipped;Normal
 69963;Pattern: Heavenly Gloves of the Moon;85;None;Plans/Patterns;Binds when equipped;Normal
+67541;Pattern: High Society Top Hat;85;None;Plans/Patterns;Binds when picked up;Normal
+47634;Pattern: Knightbane Carapace;85;None;Leather Chest (Agility w/ Hit);Binds when equipped;Normal
+47651;Pattern: Knightbane Carapace;85;None;Leather Chest (Agility w/ Hit);Binds when equipped;Normal
 72002;Pattern: Lavaquake Legwraps;85;None;Plans/Patterns;Binds when equipped;Normal
 71999;Pattern: Leggings of Nature's Champion;85;None;Plans/Patterns;Binds when equipped;Normal
+49953;Pattern: Leggings of Woven Death;85;None;Plans/Patterns;Binds when picked up;Normal
+49957;Pattern: Legwraps of Unleashed Nature;85;None;Plans/Patterns;Binds when picked up;Normal
+45097;Pattern: Lightning Grounded Boots;85;None;Plans/Patterns;Binds when equipped;Normal
+67068;Pattern: Lightning Lash;85;None;Plans/Patterns;Binds when picked up;Normal
+49962;Pattern: Lightning-Infused Leggings;85;None;Plans/Patterns;Binds when picked up;Normal
+49955;Pattern: Lightweave Leggings;85;None;Plans/Patterns;Binds when picked up;Normal
+47632;Pattern: Lunar Eclipse Robes;85;None;Leather Chest (Intellect w/ Spirit);Binds when equipped;Normal
+47652;Pattern: Lunar Eclipse Robes;85;None;Leather Chest (Intellect w/ Spirit);Binds when equipped;Normal
+70176;Pattern: Luxurious Silk Gem Bag;85;None;Plans/Patterns;Binds when picked up;Normal
+47638;Pattern: Merlin's Robe;85;None;Cloth Chest (Intellect);Binds when equipped;Normal
+47655;Pattern: Merlin's Robe;85;None;Cloth Chest (Intellect);Binds when equipped;Normal
+47633;Pattern: Moonshadow Armguards;85;None;Leather Wrist (Intellect w/ Spirit);Binds when equipped;Normal
+47653;Pattern: Moonshadow Armguards;85;None;Leather Wrist (Intellect w/ Spirit);Binds when equipped;Normal
+67082;Pattern: Razor-Edged Cloak;85;None;Plans/Patterns;Binds when picked up;Normal
 72007;Pattern: Rended Earth Leggings;85;None;Plans/Patterns;Binds when equipped;Normal
+49966;Pattern: Rock-Steady Treads;85;None;Plans/Patterns;Binds when picked up;Normal
+47637;Pattern: Royal Moonshroud Bracers;85;None;Cloth Wrist (Intellect w/ Spirit);Binds when equipped;Normal
+47656;Pattern: Royal Moonshroud Bracers;85;None;Cloth Wrist (Intellect w/ Spirit);Binds when equipped;Normal
+47636;Pattern: Royal Moonshroud Robe;85;None;Cloth Chest (Intellect w/ Spirit);Binds when equipped;Normal
+47657;Pattern: Royal Moonshroud Robe;85;None;Cloth Chest (Intellect w/ Spirit);Binds when equipped;Normal
+70174;Pattern: Royal Scribe's Satchel;85;None;Plans/Patterns;Binds when picked up;Normal
+49956;Pattern: Sandals of Consecration;85;None;Plans/Patterns;Binds when picked up;Normal
+45102;Pattern: Sash of Ancient Power;85;None;Plans/Patterns;Binds when equipped;Normal
+45105;Pattern: Savior's Slippers;85;None;Plans/Patterns;Binds when equipped;Normal
+45103;Pattern: Spellslinger's Slippers;85;None;Plans/Patterns;Binds when equipped;Normal
+67072;Pattern: Stormleather Sash;85;None;Plans/Patterns;Binds when picked up;Normal
 72009;Pattern: Thundering Deathscale Wristguards;85;None;Plans/Patterns;Binds when equipped;Normal
 69973;Pattern: Treads of the Craft;85;None;Plans/Patterns;Binds when equipped;Normal
+70175;Pattern: Triple-Reinforced Mining Bag;85;None;Plans/Patterns;Binds when picked up;Normal
+67083;Pattern: Twilight Dragonscale Cloak;85;None;Plans/Patterns;Binds when picked up;Normal
+67096;Pattern: Twilight Scale Chestguard;85;None;Plans/Patterns;Binds when picked up;Normal
+238103;Pattern: Vicious Charscale Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+238102;Pattern: Vicious Charscale Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+238094;Pattern: Vicious Charscale Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+238118;Pattern: Vicious Charscale Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+238095;Pattern: Vicious Charscale Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+238119;Pattern: Vicious Charscale Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238111;Pattern: Vicious Charscale Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+238110;Pattern: Vicious Charscale Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+238112;Pattern: Vicious Dragonscale Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+238104;Pattern: Vicious Dragonscale Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+238096;Pattern: Vicious Dragonscale Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+238121;Pattern: Vicious Dragonscale Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+238105;Pattern: Vicious Dragonscale Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+238113;Pattern: Vicious Dragonscale Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238120;Pattern: Vicious Dragonscale Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+238097;Pattern: Vicious Dragonscale Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+238108;Pattern: Vicious Leather Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+238100;Pattern: Vicious Leather Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+238092;Pattern: Vicious Leather Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+238116;Pattern: Vicious Leather Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+238093;Pattern: Vicious Leather Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+238109;Pattern: Vicious Leather Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238117;Pattern: Vicious Leather Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+238101;Pattern: Vicious Leather Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
+238091;Pattern: Vicious Wyrmhide Belt;85;None;Plans/Patterns;Binds when picked up;Normal
+238099;Pattern: Vicious Wyrmhide Boots;85;None;Plans/Patterns;Binds when picked up;Normal
+238090;Pattern: Vicious Wyrmhide Bracers;85;None;Plans/Patterns;Binds when picked up;Normal
+238107;Pattern: Vicious Wyrmhide Chest;85;None;Plans/Patterns;Binds when picked up;Normal
+238098;Pattern: Vicious Wyrmhide Gloves;85;None;Plans/Patterns;Binds when picked up;Normal
+238115;Pattern: Vicious Wyrmhide Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238114;Pattern: Vicious Wyrmhide Legs;85;None;Plans/Patterns;Binds when picked up;Normal
+238106;Pattern: Vicious Wyrmhide Shoulders;85;None;Plans/Patterns;Binds when picked up;Normal
 72000;Pattern: World Mender's Pants;85;None;Plans/Patterns;Binds when equipped;Normal
-71612;Pauldrons of Roaring Flame;397;None;Plate Shoulder (Tank);Binds when picked up;Heroic
-70921;Pauldrons of Roaring Flame;384;None;Plate Shoulder (Tank);Binds when picked up;Normal
-71436;Phoenix-Down Treads;391;None;Leather Feet (Intellect w/ Spirit);Binds when picked up;Heroic
-70987;Phoenix-Down Treads;378;None;Leather Feet (Intellect w/ Spirit);Binds when picked up;Normal
+78364;Petrified Fungal Heart;410;None;Neck (Intellect w/ Spirit);Binds when picked up;Heroic
+77262;Petrified Fungal Heart;397;None;Neck (Intellect w/ Spirit);Binds when picked up;Normal
+78361;Pillarfoot Greaves;410;None;Plate Feet (Intellect w/ Spirit);Binds when picked up;Heroic
+77265;Pillarfoot Greaves;397;None;Plate Feet (Intellect w/ Spirit);Binds when picked up;Normal
+62312;Plans: <Random Blacksmithing Plan>;85;None;Plans/Patterns;Binds when picked up;Normal
+62314;Plans: <Random Enchanting Plan>;85;None;Plans/Patterns;Binds when picked up;Normal
+62336;Plans: <Random Jewelcrafting Design>;85;None;Plans/Patterns;Binds when picked up;Normal
+62337;Plans: <Random Leatherworking Pattern>;85;None;ETC;Binds when picked up;Normal
+62337;Plans: <Random Leatherworking Pattern>;85;None;ETC;Binds when picked up;Normal
+62338;Plans: <Random Tailoring Pattern>;85;None;ETC;Binds when picked up;Normal
+62338;Plans: <Random Tailoring Pattern>;85;None;ETC;Binds when picked up;Normal
+45089;Plans: Battlelord's Plate Boots;85;None;Plans/Patterns;Binds when equipped;Normal
+45088;Plans: Belt of the Titans;85;None;Plans/Patterns;Binds when equipped;Normal
+238136;Plans: Bloodied Pyrium Breastplate;85;None;Plans/Patterns;Binds when picked up;Normal
+238135;Plans: Bloodied Pyrium Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238134;Plans: Bloodied Pyrium Legguards;85;None;Plans/Patterns;Binds when picked up;Normal
+66132;Plans: Bloodthirsty Ornate Pyrium Breastplate;85;None;Plans/Patterns;Binds when picked up;Normal
+66131;Plans: Bloodthirsty Ornate Pyrium Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+66130;Plans: Bloodthirsty Ornate Pyrium Legguards;85;None;Plans/Patterns;Binds when picked up;Normal
+66124;Plans: Bloodthirsty Pyrium Breastplate;85;None;Plans/Patterns;Binds when picked up;Normal
+66123;Plans: Bloodthirsty Pyrium Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+66122;Plans: Bloodthirsty Pyrium Legguards;85;None;Plans/Patterns;Binds when picked up;Normal
+49974;Plans: Boots of Kingly Upheaval;85;None;Plans/Patterns;Binds when picked up;Normal
 72015;Plans: Bracers of Destructive Strength;85;None;Plans/Patterns;Binds when equipped;Normal
+70166;Plans: Brainsplinter;85;None;Plans/Patterns;Binds when picked up;Normal
+47622;Plans: Breastplate of the White Knight;85;None;Plate Chest (Tank);Binds when equipped;Normal
+47640;Plans: Breastplate of the White Knight;85;None;Plate Chest (Tank);Binds when equipped;Normal
+66100;Plans: Ebonsteel Belt Buckle;85;None;Plans/Patterns;Binds when picked up;Normal
+70169;Plans: Elementium-Edged Scalper;85;None;Plans/Patterns;Binds when picked up;Normal
 69970;Plans: Emberforged Elementium Boots;85;None;Plans/Patterns;Binds when equipped;Normal
 69958;Plans: Eternal Elementium Handguards;85;None;Plans/Patterns;Binds when equipped;Normal
 69957;Plans: Fists of Fury;85;None;Plans/Patterns;Binds when equipped;Normal
 72013;Plans: Foundations of Courage;85;None;Plans/Patterns;Binds when equipped;Normal
+49972;Plans: Hellfrozen Bonegrinders;85;None;Plans/Patterns;Binds when picked up;Normal
 69959;Plans: Holy Flame Gauntlets;85;None;Plans/Patterns;Binds when equipped;Normal
+45092;Plans: Indestructible Plate Girdle;85;None;Plans/Patterns;Binds when equipped;Normal
+49971;Plans: Legplates of Painful Death;85;None;Plans/Patterns;Binds when picked up;Normal
+70168;Plans: Lightforged Elementium Hammer;85;None;Plans/Patterns;Binds when picked up;Normal
+70172;Plans: Masterwork Elementium Deathblade;85;None;Plans/Patterns;Binds when picked up;Normal
+70167;Plans: Masterwork Elementium Spellblade;85;None;Plans/Patterns;Binds when picked up;Normal
 69969;Plans: Mirrored Boots;85;None;Plans/Patterns;Binds when equipped;Normal
+238144;Plans: Ornate Pyrium Breastplate;85;None;Plans/Patterns;Binds when picked up;Normal
+238143;Plans: Ornate Pyrium Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238142;Plans: Ornate Pyrium Legguards;85;None;Plans/Patterns;Binds when picked up;Normal
+49973;Plans: Pillars of Might;85;None;Plans/Patterns;Binds when picked up;Normal
+45090;Plans: Plate Girdle of Righteousness;85;None;Plans/Patterns;Binds when equipped;Normal
+49970;Plans: Protectors of Life;85;None;Plans/Patterns;Binds when picked up;Normal
+49969;Plans: Puresteel Legplates;85;None;Plans/Patterns;Binds when picked up;Normal
 72001;Plans: Pyrium Legplates of Purified Evil;85;None;Plans/Patterns;Binds when equipped;Normal
+66101;Plans: Pyrium Shield Spike;85;None;Plans/Patterns;Binds when picked up;Normal
+70170;Plans: Pyrium Spellward;85;None;Plans/Patterns;Binds when picked up;Normal
+47623;Plans: Saronite Swordbreakers;85;None;Plate Wrist (Tank);Binds when equipped;Normal
+47641;Plans: Saronite Swordbreakers;85;None;Plate Wrist (Tank);Binds when equipped;Normal
 72014;Plans: Soul Redeemer Bracers;85;None;Plans/Patterns;Binds when equipped;Normal
+45093;Plans: Spiked Deathdealers;85;None;Plans/Patterns;Binds when equipped;Normal
+47627;Plans: Sunforged Bracers;85;None;Plate Wrist (Intellect w/ Spirit);Binds when equipped;Normal
+47642;Plans: Sunforged Bracers;85;None;Plate Wrist (Intellect w/ Spirit);Binds when equipped;Normal
+47626;Plans: Sunforged Breastplate;85;None;Plate Chest (Intellect w/ Spirit);Binds when equipped;Normal
+47643;Plans: Sunforged Breastplate;85;None;Plate Chest (Intellect w/ Spirit);Binds when equipped;Normal
 72016;Plans: Titanguard Wristplates;85;None;Plans/Patterns;Binds when equipped;Normal
+47624;Plans: Titanium Razorplate;85;None;Plate Chest (Strength);Binds when equipped;Normal
+47644;Plans: Titanium Razorplate;85;None;Plate Chest (Strength);Binds when equipped;Normal
+47625;Plans: Titanium Spikeguards;85;None;Plate Wrist (Strength);Binds when equipped;Normal
+47645;Plans: Titanium Spikeguards;85;None;Plate Wrist (Strength);Binds when equipped;Normal
+45091;Plans: Treads of Destiny;85;None;Plans/Patterns;Binds when equipped;Normal
+70171;Plans: Unbreakable Guardian;85;None;Plans/Patterns;Binds when picked up;Normal
 72012;Plans: Unstoppable Destroyer's Legplates;85;None;Plans/Patterns;Binds when equipped;Normal
+238089;Plans: Vicious Ornate Pyrium Breastplate;85;None;Plans/Patterns;Binds when picked up;Normal
+238088;Plans: Vicious Ornate Pyrium Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238087;Plans: Vicious Ornate Pyrium Legguards;85;None;Plans/Patterns;Binds when picked up;Normal
+238081;Plans: Vicious Pyrium Breastplate;85;None;Plans/Patterns;Binds when picked up;Normal
+238080;Plans: Vicious Pyrium Helm;85;None;Plans/Patterns;Binds when picked up;Normal
+238079;Plans: Vicious Pyrium Legguards;85;None;Plans/Patterns;Binds when picked up;Normal
 69968;Plans: Warboots of Mighty Lords;85;None;Plans/Patterns;Binds when equipped;Normal
-71361;Ranseur of Hatred;378;None;Two-Hand Polearm (Agility);Binds when equipped;Normal
-71640;Riplimb's Lost Collar;378;None;Leather Waist (Agility w/ Expertise);Binds when equipped;Normal
-71407;Robes of Smoldering Devastation;391;None;Cloth Chest (Intellect);Binds when picked up;Heroic
-71041;Robes of Smoldering Devastation;378;None;Cloth Chest (Intellect);Binds when picked up;Normal
-71467;Sandals of Leaping Coals;391;None;Leather Feet (Agility);Binds when picked up;Heroic
-71313;Sandals of Leaping Coals;378;None;Leather Feet (Agility);Binds when picked up;Normal
-68915;Scales of Life;378;None;Trinket;Binds when equipped;Normal
-71442;Scalp of the Bandit Prince;391;None;Mail Head (Agility);Binds when picked up;Heroic
-71018;Scalp of the Bandit Prince;378;None;Mail Head (Agility);Binds when picked up;Normal
-71460;Shard of Torment;391;None;Off Hand Shield (Tank);Binds when picked up;Heroic
-70915;Shard of Torment;378;None;Off Hand Shield (Tank);Binds when picked up;Normal
-71783;Shatterskull Bonecrusher;391;None;One-Hand Mace (Agility);Binds when picked up;Heroic
-71782;Shatterskull Bonecrusher;378;None;One-Hand Mace (Agility);Binds when picked up;Normal
-71797;Sho'ravon, Greatstaff of Annihilation;397;None;Two-Hand Staff (Intellect);Binds when picked up;Heroic
-71798;Sho'ravon, Greatstaff of Annihilation;384;None;Two-Hand Staff (Intellect);Binds when picked up;Normal
-71456;Shoulderpads of the Forgotten Gate;391;None;Leather Shoulder (Agility w/ Hit);Binds when picked up;Heroic
-71345;Shoulderpads of the Forgotten Gate;378;None;Leather Shoulder (Agility w/ Hit);Binds when picked up;Normal
-71680;Shoulders of the Fiery Conqueror;391;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
-71687;Shoulders of the Fiery Protector;391;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
-71673;Shoulders of the Fiery Vanquisher;391;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
-71445;Skullstealer Greataxe;391;None;Two-Hand Axe (Strength);Binds when picked up;Heroic
-71014;Skullstealer Greataxe;378;None;Two-Hand Axe (Strength);Binds when picked up;Normal
-71774;Smoldering Censer of Purity;391;None;Two-Hand Staff (Intellect w/ Spirit);Binds when picked up;Heroic
-71775;Smoldering Censer of Purity;378;None;Two-Hand Staff (Intellect w/ Spirit);Binds when picked up;Normal
-69224;Smoldering Egg of Millagazor;70;None;ETC;Binds when picked up;Normal
-71413;Spaulders of Manifold Eyes;391;None;Plate Shoulder (Intellect w/ Spirit);Binds when picked up;Heroic
-71043;Spaulders of Manifold Eyes;378;None;Plate Shoulder (Intellect w/ Spirit);Binds when picked up;Normal
-71432;Spaulders of Recurring Flame;391;None;Plate Shoulder (Tank);Binds when picked up;Heroic
-70737;Spaulders of Recurring Flame;378;None;Plate Shoulder (Tank);Binds when picked up;Normal
-69138;Spidersilk Spindle;391;None;Trinket;Binds when picked up;Heroic
-68981;Spidersilk Spindle;378;None;Trinket;Binds when picked up;Normal
-71360;Spire of Scarlet Pain;378;None;Two-Hand Staff (Intellect w/ Hit);Binds when equipped;Normal
-71473;Stinger of the Flaming Scorpion;391;None;Ranged Wand (Intellect);Binds when picked up;Heroic
-71347;Stinger of the Flaming Scorpion;378;None;Ranged Wand (Intellect);Binds when picked up;Normal
-70723;Sulfuras, the Extinguished Hand;397;None;Two-Hand Mace (Strength);Binds when picked up;Heroic
-71352;Sulfuras, the Extinguished Hand;384;None;Two-Hand Mace (Strength);Binds when picked up;Normal
-69112;The Hungerer;391;None;Trinket (Agility);Binds when picked up;Heroic
-68927;The Hungerer;378;None;Trinket (Agility);Binds when picked up;Normal
-71367;Theck's Emberseal;378;None;Finger (Tank);Binds when equipped;Normal
-71412;Thoracic Flame Kilt;391;None;Mail Legs (Intellect w/ Spirit);Binds when picked up;Heroic
-71042;Thoracic Flame Kilt;378;None;Mail Legs (Intellect w/ Spirit);Binds when picked up;Normal
-71451;Treads of Implicit Obedience;391;None;Mail Feet (Intellect w/ Spirit);Binds when picked up;Heroic
-71027;Treads of Implicit Obedience;378;None;Mail Feet (Intellect w/ Spirit);Binds when equipped;Normal
-71475;Treads of the Penitent Man;391;None;Plate Feet (Intellect w/ Spirit);Binds when picked up;Heroic
-71351;Treads of the Penitent Man;378;None;Plate Feet (Intellect w/ Spirit);Binds when picked up;Normal
-71443;Uncrushable Belt of Fury;391;None;Plate Waist (Strength w/ Expertise);Binds when picked up;Heroic
-71021;Uncrushable Belt of Fury;378;None;Plate Waist (Strength w/ Expertise);Binds when picked up;Normal
-69110;Variable Pulse Lightning Capacitor;397;None;Trinket (Intellect);Binds when picked up;Heroic
-68925;Variable Pulse Lightning Capacitor;384;None;Trinket (Intellect);Binds when picked up;Normal
-69167;Vessel of Acceleration;397;None;Trinket (Strength);Binds when picked up;Heroic
-68995;Vessel of Acceleration;384;None;Trinket (Strength);Binds when picked up;Normal
-71422;Volcanospike;391;None;Main Hand Sword (Intellect w/ Hit);Binds when picked up;Heroic
-71006;Volcanospike;378;None;Main Hand Sword (Intellect w/ Hit);Binds when equipped;Normal
-71408;Ward of the Red Widow;391;None;Off Hand Shield (Intellect w/ Spirit);Binds when picked up;Heroic
-71038;Ward of the Red Widow;378;None;Off Hand Shield (Intellect w/ Spirit);Binds when equipped;Normal
-71401;Widow's Kiss;391;None;Finger (Agility);Binds when picked up;Heroic
-71032;Widow's Kiss;378;None;Finger (Agility);Binds when picked up;Normal
-71434;Wings of Flame;391;None;Back (Intellect);Binds when picked up;Heroic
-70990;Wings of Flame;378;None;Back (Intellect);Binds when picked up;Normal
-71471;Wristwraps of Arrogant Doom;391;None;Cloth Wrist (Intellect);Binds when picked up;Heroic
-71350;Wristwraps of Arrogant Doom;378;None;Cloth Wrist (Intellect);Binds when equipped;Normal
-71781;Zoid's Firelit Greatsword;391;None;Two-Hand Sword (Strength);Binds when picked up;Heroic
-71780;Zoid's Firelit Greatsword;378;None;Two-Hand Sword (Strength);Binds when picked up;Normal
+70173;Plans: Witch-Hunter's Harvester;85;None;Plans/Patterns;Binds when picked up;Normal
+78475;Rathrak, the Poisonous Mind;416;None;Main Hand Dagger (Intellect);Binds when picked up;Heroic
+77195;Rathrak, the Poisonous Mind;403;None;Main Hand Dagger (Intellect);Binds when picked up;Normal
+78369;Razor Saronite Chip;410;None;Thrown Thrown (Agility w/ Hit);Binds when picked up;Heroic
+77213;Razor Saronite Chip;397;None;Thrown Thrown (Agility w/ Hit);Binds when picked up;Normal
+77067;Reins of the Blazing Drake;85;None;ETC;Binds when picked up;Normal
+77998;Resolve of Undying;416;None;Trinket (Tank);Binds when picked up;Heroic
+77201;Resolve of Undying;403;None;Trinket (Tank);Binds when picked up;Normal
+78419;Ring of the Riven;410;None;Finger (Intellect);Binds when picked up;Heroic
+78012;Ring of the Riven;397;None;Finger (Intellect);Binds when picked up;Normal
+78365;Robe of Glowing Stone;410;None;Cloth Chest (Intellect w/ Spirit);Binds when picked up;Heroic
+77263;Robe of Glowing Stone;397;None;Cloth Chest (Intellect w/ Spirit);Binds when picked up;Normal
+78373;Rockhide Bracers;410;None;Plate Wrist (Strength);Binds when picked up;Heroic
+77270;Rockhide Bracers;397;None;Plate Wrist (Strength);Binds when picked up;Normal
+77192;Ruinblaster Shotgun;397;None;Ranged Gun (Agility w/ Hit);Binds when picked up;Normal
+78416;Runescriven Demon Collar;410;None;Plate Waist (Strength);Binds when picked up;Heroic
+77250;Runescriven Demon Collar;397;None;Plate Waist (Strength);Binds when picked up;Normal
+78879;Sash of Relentless Truth;397;None;Cloth Waist (Intellect);Binds when equipped;Normal
+78404;Scalpel of Unrelenting Agony;410;None;Main Hand Dagger (Intellect w/ Spirit);Binds when picked up;Heroic
+77219;Scalpel of Unrelenting Agony;397;None;Main Hand Dagger (Intellect w/ Spirit);Binds when picked up;Normal
+78489;Seal of Primordial Shadow;410;None;Finger (Agility w/ Expertise);Binds when picked up;Heroic
+77231;Seal of Primordial Shadow;397;None;Finger (Agility w/ Expertise);Binds when picked up;Normal
+77989;Seal of the Seven Signs;410;None;Trinket (Intellect);Binds when picked up;Heroic
+77204;Seal of the Seven Signs;397;None;Trinket (Intellect);Binds when picked up;Normal
+78446;Shadow Wing Armbands;410;None;Leather Wrist (Agility);Binds when picked up;Heroic
+77240;Shadow Wing Armbands;397;None;Leather Wrist (Agility);Binds when picked up;Normal
+78859;Shoulders of the Corrupted Conqueror;410;Paladin, Priest, Warlock;ETC;Binds when picked up;Heroic
+78180;Shoulders of the Corrupted Conqueror;397;Paladin, Priest, Warlock;ETC;Binds when picked up;Normal
+78860;Shoulders of the Corrupted Protector;410;Warrior, Hunter, Shaman;ETC;Binds when picked up;Heroic
+78175;Shoulders of the Corrupted Protector;397;Warrior, Hunter, Shaman;ETC;Binds when picked up;Normal
+78861;Shoulders of the Corrupted Vanquisher;410;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Heroic
+78170;Shoulders of the Corrupted Vanquisher;397;Rogue, Death Knight, Mage, Druid;ETC;Binds when picked up;Normal
+78413;Signet of Grasping Mouths;410;None;Finger (Agility);Binds when picked up;Heroic
+78011;Signet of Grasping Mouths;397;None;Finger (Agility);Binds when picked up;Normal
+78491;Signet of Suturing;410;None;Finger (Intellect w/ Spirit);Binds when picked up;Heroic
+77229;Signet of Suturing;397;None;Finger (Intellect w/ Spirit);Binds when picked up;Normal
+78479;Souldrinker;416;None;One-Hand Sword (Strength);Binds when picked up;Heroic
+77193;Souldrinker;403;None;One-Hand Sword (Strength);Binds when picked up;Normal
+77990;Soulshifter Vortex;410;None;Trinket;Binds when picked up;Heroic
+77206;Soulshifter Vortex;397;None;Trinket;Binds when picked up;Normal
+78878;Spine of the Thousand Cuts;397;None;Main Hand Sword (Agility w/ Expertise);Binds when picked up;Normal
+78401;Spire of Coagulated Globules;410;None;Two-Hand Staff (Agility w/ Hit);Binds when picked up;Heroic
+77218;Spire of Coagulated Globules;397;None;Two-Hand Staff (Agility w/ Hit);Binds when picked up;Normal
+78362;Sporebeard Gauntlets;410;None;Mail Hands (Agility);Binds when picked up;Heroic
+77269;Sporebeard Gauntlets;397;None;Mail Hands (Agility);Binds when picked up;Normal
+77993;Starcatcher Compass;410;None;Trinket (Agility);Binds when picked up;Heroic
+77202;Starcatcher Compass;397;None;Trinket (Agility);Binds when picked up;Normal
+78431;Stillheart Warboots;410;None;Plate Feet (Tank);Binds when picked up;Heroic
+77246;Stillheart Warboots;397;None;Plate Feet (Tank);Binds when picked up;Normal
+78477;Ti'tahk, the Steps of Time;416;None;Two-Hand Staff (Intellect);Binds when picked up;Heroic
+77190;Ti'tahk, the Steps of Time;403;None;Two-Hand Staff (Intellect);Binds when picked up;Normal
+78450;Timepiece of the Bronze Flight;410;None;Off Hand Shield (Intellect w/ Spirit);Binds when picked up;Heroic
+77227;Timepiece of the Bronze Flight;397;None;Off Hand Shield (Intellect w/ Spirit);Binds when picked up;Normal
+78389;Treads of Crushed Flesh;410;None;Plate Feet (Strength);Binds when picked up;Heroic
+77259;Treads of Crushed Flesh;397;None;Plate Feet (Strength);Binds when picked up;Normal
+78415;Treads of Dormant Dreams;410;None;Mail Feet (Agility);Binds when picked up;Heroic
+77251;Treads of Dormant Dreams;397;None;Mail Feet (Agility);Binds when picked up;Normal
+78434;Treads of Sordid Screams;410;None;Leather Feet (Intellect w/ Spirit);Binds when picked up;Heroic
+77243;Treads of Sordid Screams;397;None;Leather Feet (Intellect w/ Spirit);Binds when picked up;Normal
+78368;Underdweller's Spaulders;410;None;Leather Shoulder (Agility);Binds when picked up;Heroic
+77271;Underdweller's Spaulders;397;None;Leather Shoulder (Agility);Binds when picked up;Normal
+78363;Vagaries of Time;410;None;Main Hand Mace (Intellect);Binds when picked up;Heroic
+77214;Vagaries of Time;397;None;Main Hand Mace (Intellect);Binds when picked up;Normal
+77999;Vial of Shadows;410;None;Trinket (Agility);Binds when picked up;Heroic
+77207;Vial of Shadows;397;None;Trinket (Agility);Binds when picked up;Normal
+78451;Visage of the Destroyer;410;None;Two-Hand Staff (Intellect w/ Spirit);Binds when picked up;Heroic
+77225;Visage of the Destroyer;397;None;Two-Hand Staff (Intellect w/ Spirit);Binds when picked up;Normal
+78471;Vishanka, Jaws of the Earth;416;None;Ranged Bow (Agility);Binds when picked up;Heroic
+78359;Vishanka, Jaws of the Earth;403;None;Ranged Bow (Agility);Binds when picked up;Normal
+78888;Waistguard of Bleeding Bone;397;None;Plate Waist (Strength w/ Expertise);Binds when equipped;Normal
+78889;Waistplate of the Desecrated Future;397;None;Plate Waist (Tank);Binds when equipped;Normal
+77995;Will of Unbinding;416;None;Trinket (Intellect);Binds when picked up;Heroic
+77198;Will of Unbinding;403;None;Trinket (Intellect);Binds when picked up;Normal
+78001;Windward Heart;410;None;Trinket (Intellect);Binds when picked up;Heroic
+77209;Windward Heart;397;None;Trinket (Intellect);Binds when picked up;Normal
+77994;Wrath of Unchaining;416;None;Trinket (Agility);Binds when picked up;Heroic
+77197;Wrath of Unchaining;403;None;Trinket (Agility);Binds when picked up;Normal

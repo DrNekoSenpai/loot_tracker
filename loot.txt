@@ -1,67 +1,26 @@
-# Loot log for Wednesday, 2025-02-12 and **Sunday, 2025-02-16**:
+# Loot log for **Sunday, 2025-02-23**:
 
-Zguis (+5 MS):
-- [Flickering Shoulders of the Windflurry](<https://www.wowhead.com/cata/item=71030/flickering-shoulders-of-the-windflurry>) (378) (MS) -- received on **Sunday, 2025-02-16**
-- [Scalp of the Bandit Prince](<https://www.wowhead.com/cata/item=71018/scalp-of-the-bandit-prince>) (378) (MS) -- received on **Sunday, 2025-02-16**
-- [Flaming Core Chestguard](<https://www.wowhead.com/cata/item=71005/flaming-core-chestguard>) (378) (MS) -- received on **Sunday, 2025-02-16**
-- [Arathar, the Eye of Flame](<https://www.wowhead.com/cata/item=71353/arathar,-the-eye-of-flame>) (384) (MS) -- received on **Sunday, 2025-02-16**
-- [Helm of the Fiery Protector](<https://www.wowhead.com/cata/item=71682/helm-of-the-fiery-protector>) (378) (MS) -- received on **Sunday, 2025-02-16**
+Chunkofrock (+1 MS):
+- [Vagaries of Time](<https://www.wowhead.com/cata/item=77214/vagaries-of-time>) (397) (MS) -- received on **Sunday, 2025-02-23**
 
-Bladehero (+2 MS):
-- [Skullstealer Greataxe](<https://www.wowhead.com/cata/item=71014/skullstealer-greataxe>) (378) (MS) -- received on Wednesday, 2025-02-12
-- [Bracers of the Fiery Path](<https://www.wowhead.com/cata/item=70920/bracers-of-the-fiery-path>) (378) (MS) -- received on Wednesday, 2025-02-12
-- [Cracked Obsidian Stompers](<https://www.wowhead.com/cata/item=70912/cracked-obsidian-stompers>) (378) (OS) -- received on Wednesday, 2025-02-12
+Kairiz (+1 MS):
+- [Gauntlets of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Sunday, 2025-02-23**
 
-Miadog (+2 MS):
-- [Mantle of the Fiery Conqueror](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) (378) (MS) -- received on Wednesday, 2025-02-12
-- [Majordomo's Chain of Office](<https://www.wowhead.com/cata/item=71357/majordomos-chain-of-office>) (384) (MS) -- received on **Sunday, 2025-02-16**
-
-Lorniras (+1 MS):
-- [Flickering Cowl of the Wildfire](<https://www.wowhead.com/cata/item=71011/flickering-cowl-of-the-wildfire>) (378) (MS) -- received on **Sunday, 2025-02-16**
+Miatotems (+1 MS):
+- [Scalpel of Unrelenting Agony](<https://www.wowhead.com/cata/item=77219/scalpel-of-unrelenting-agony>) (397) (MS) -- received on **Sunday, 2025-02-23**
 
 Tinyraider (+1 MS):
-- [Volcanospike](<https://www.wowhead.com/cata/item=71006/volcanospike>) (378) (MS) -- received on Wednesday, 2025-02-12
+- [Leggings of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Sunday, 2025-02-23**
 
-Zynrenner (+1 MS):
-- [Molten Scream](<https://www.wowhead.com/cata/item=71323/molten-scream>) (378) (MS) -- received on Wednesday, 2025-02-12
+Zguis (+1 MS):
+- [Dragoncarver Belt](<https://www.wowhead.com/cata/item=78885/dragoncarver-belt>) (397) (MS) -- received on **Sunday, 2025-02-23**
 
-Flightyknite (+0 MS):
-- [Spidersilk Spindle](<https://www.wowhead.com/cata/item=68981/spidersilk-spindle>) (378) (OS) -- received on Wednesday, 2025-02-12
+Elisesolis (+0 MS):
+- [Hand of Morchok](<https://www.wowhead.com/cata/item=77212/hand-of-morchok>) (397) (OS) -- received on **Sunday, 2025-02-23**
 
-Gnoya (+0 MS):
-- [Goblet of Anger](<https://www.wowhead.com/cata/item=71022/goblet-of-anger>) (378) (OS) -- received on Wednesday, 2025-02-12
-
-Phallipally (+0 MS):
-- [Spaulders of Manifold Eyes](<https://www.wowhead.com/cata/item=71043/spaulders-of-manifold-eyes>) (378) (OS) -- received on **Sunday, 2025-02-16**
-- [Coalwalker Sandals](<https://www.wowhead.com/cata/item=71023/coalwalker-sandals>) (378) (OS) -- received on **Sunday, 2025-02-16**
-
-Vanthulhu (+0 MS):
-- [Jaws of Defeat](<https://www.wowhead.com/cata/item=68926/jaws-of-defeat>) (378) (OS) -- received on Wednesday, 2025-02-12
-
-Disenchanted items:
-- [Cindersilk Gloves](<https://www.wowhead.com/cata/item=71044/cindersilk-gloves>) (378) -- disenchanted on Wednesday, 2025-02-12
-- [Leggings of Billowing Fire](<https://www.wowhead.com/cata/item=70989/leggings-of-billowing-fire>) (378) -- disenchanted on Wednesday, 2025-02-12
-- [Alysra's Razor](<https://www.wowhead.com/cata/item=70733/alysras-razor>) (378) -- disenchanted on Wednesday, 2025-02-12
-- [Gatecrasher](<https://www.wowhead.com/cata/item=71312/gatecrasher>) (378) -- disenchanted on Wednesday, 2025-02-12
 ----------------------------------------
 ## Tier Pieces:
 
-Conqueror (Paladin / Priest / Warlock):
-- Axsel: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) -- 2024-12-01
-- Miadog: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) -- 2025-02-12
-- Phallipally: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) -- 2024-12-08
-- Vanthulhu: [Helm (Normal) 1x](<https://www.wowhead.com/cata/item=71675/helm-of-the-fiery-conqueror>) -- 2025-02-05
-
-Protector (Warrior / Hunter / Shaman):
-- Chunkofrock: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71688/mantle-of-the-fiery-protector>) -- 2025-02-02, [Helm (Normal) 1x](<https://www.wowhead.com/cata/item=71682/helm-of-the-fiery-protector>) -- 2025-01-23
-- Meemeemeemee: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71688/mantle-of-the-fiery-protector>) -- 2024-12-22
-- Zguis: [Helm (Normal) 1x](<https://www.wowhead.com/cata/item=71682/helm-of-the-fiery-protector>) -- 2025-02-16
-
 Vanquisher (Rogue / Death Knight / Mage / Druid):
-- Angelofruin: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2025-01-12
-- Bzorder: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2024-12-11
-- Jacegil: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2024-12-29
-- Pasgghetti: [Helm (Normal) 1x](<https://www.wowhead.com/cata/item=71668/helm-of-the-fiery-vanquisher>) -- 2024-12-22
-- Snedcharos: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2025-01-22
-- Swiftbladess: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2025-02-02
-- Vanarann: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71674/mantle-of-the-fiery-vanquisher>) -- 2025-02-05
+- Kairiz: [Gauntlets (Normal) 1x](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) -- 2025-02-23
+- Tinyraider: [Leggings (Normal) 1x](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) -- 2025-02-23

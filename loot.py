@@ -345,57 +345,92 @@ def award_loot(players, item_match):
         if "Conqueror" in item_match.name:
             # Classes: Paladin, Priest, Warlock
             for p in players:
-                if p._attendance == False: continue
-                for player_class in ["Paladin", "Priest", "Warlock"]:
-                    if p._player_class == player_class:
-                        token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Conqueror" in l.item.name])
+                # if p._attendance == False: continue
+                if not p._player_class in ["Paladin", "Priest", "Warlock"]: continue
 
-        if "Protector" in item_match.name:
+                for l in p._history["Main-Spec"]:
+                    if re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Corrupted Conqueror", l.item.name):
+                        if p.name in token_count: token_count[p.name] += 1
+                        else: token_count[p.name] = 1
+
+                for l in p._history["Off-Spec"]:
+                    if re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Corrupted Conqueror", l.item.name):
+                        if not any([True for x in p._history["Main-Spec"] if x.item.name == l.item.name]):
+                            if p.name in token_count: token_count[p.name] += 1
+                            else: token_count[p.name] = 1
+
+        elif "Protector" in item_match.name:
             # Classes: Warrior, Hunter, Shaman
             for p in players:
-                if p._attendance == False: continue
-                for player_class in ["Warrior", "Hunter", "Shaman"]:
-                    if p._player_class == player_class:
-                        token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Protector" in l.item.name])
+                # if p._attendance == False: continue
+                if not p._player_class in ["Warrior", "Hunter", "Shaman"]: continue
 
-        if "Vanquisher" in item_match.name:
+                for l in p._history["Main-Spec"]:
+                    if re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Corrupted Protector", l.item.name):
+                        if p.name in token_count: token_count[p.name] += 1
+                        else: token_count[p.name] = 1
+
+                for l in p._history["Off-Spec"]:
+                    if re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Corrupted Protector", l.item.name):
+                        if not any([True for x in p._history["Main-Spec"] if x.item.name == l.item.name]):
+                            if p.name in token_count: token_count[p.name] += 1
+                            else: token_count[p.name] = 1
+
+        elif "Vanquisher" in item_match.name:
             # Classes: Rogue, Death Knight, Mage, Druid
             for p in players:
-                if p._attendance == False: continue
-                for player_class in ["Rogue", "Death Knight", "Mage", "Druid"]:
-                    if p._player_class == player_class:
-                        token_count[p.name] = len([l for l in p._history["Main-Spec"] if "Vanquisher" in l.item.name])
+                # if p._attendance == False: continue
+                if not p._player_class in ["Rogue", "Death Knight", "Mage", "Druid"]: continue
+
+                for l in p._history["Main-Spec"]:
+                    if re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Corrupted Vanquisher", l.item.name):
+                        if p.name in token_count: token_count[p.name] += 1
+                        else: token_count[p.name] = 1
+
+                for l in p._history["Off-Spec"]:
+                    if re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Corrupted Vanquisher", l.item.name):
+                        if not any([True for x in p._history["Main-Spec"] if x.item.name == l.item.name]):
+                            if p.name in token_count: token_count[p.name] += 1
+                            else: token_count[p.name] = 1
+
+        # Find the people on the attendance list that aren't already in the token count list, who haven't won any tokens. 
+        for p in players:
+            if p._attendance == False: continue
+            if re.search(r"Conqueror", item_match.name) and not p._player_class in ["Paladin", "Priest", "Warlock"]: continue
+            if re.search(r"Protector", item_match.name) and not p._player_class in ["Warrior", "Hunter", "Shaman"]: continue
+            if re.search(r"Vanquisher", item_match.name) and not p._player_class in ["Rogue", "Death Knight", "Mage", "Druid"]: continue
+            if not p.name in token_count: token_count[p.name] = 0
 
         # Sort token count by number of tokens, in descending order.
         token_count = {k: v for k, v in sorted(token_count.items(), key=lambda item: item[1], reverse=True)}
 
-        # If there's some people in the raid that have won tokens, but not everyone that is eligible has, print out a warning.
-        num_eligible = len([p for p in players if p._attendance == True and p._player_class in item_match.classes])
-        token_limit = max(token_count.values()) if token_count else 1
+        # Debug: Print out all people that have won tokens, and then all people that are eligible for tokens.
+        for k,v in token_count.items():
+            print(f"{k} has won {v}x tokens.")
 
-        # Find how many people are at the token limit. 
-        num_at_limit = len([k for k,v in token_count.items() if v == token_limit])
+        # Token limit is one more than the number of tokens that the person with the least tokens has. 
 
-        if num_at_limit < num_eligible:
-            print(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
+        # Chunkofrock has won 2x tokens.
+        # Meemeemeemee has won 1x tokens.
+        # Zguis has won 1x tokens.
+        # Miatotems has won 0x tokens.
+        # Prunejuuce has won 0x tokens.
 
-        # If in the odd chance that everyone has won the same number of tokens, we will instead announce that everyone's hit their limit, and thus everyone is eligible for a second. 
-        if num_at_limit == num_eligible:
-            print(f"All players have won {token_limit}x tokens. This token is a free roll.")
+        # Token limit: 1, because Miatotems and Prunejuuce have 0 tokens.
+
+        token_limit = min(token_count.values()) + 1
+        print(f"Token limit: {token_limit}, because {', '.join([k for k,v in token_count.items() if v == min(token_count.values())])} have {min(token_count.values())} tokens.")
+
+        # Print out the people who may not roll on this item
+        # This is the people that are at or above the limit
+
+        print(f"The following people may not roll on this item: ", end = "")
+        print(", ".join([k for k,v in token_count.items() if v >= token_limit]))
 
     if not item_match.name == "Eternal Ember": 
         ready = input("Ready to announce? (y/n): ").lower()
+
         if ready == "y": 
-            # pyautogui.click((right + left) / 2, (down + up) / 2)
-            # time.sleep(0.25)
-
-            # # Alt click the middle of the coordinates
-            # pyautogui.keyDown('alt')
-            # time.sleep(0.25)
-            # pyautogui.click((right + left) / 2, (down + up) / 2)
-            # time.sleep(0.25)
-            # pyautogui.keyUp('alt')
-
             pyautogui.moveTo(1920/2, 1080/2)
             pyautogui.click()
             time.sleep(0.25)
@@ -435,27 +470,26 @@ def award_loot(players, item_match):
                 pyautogui.press("enter")
                 time.sleep(0.25)
 
-            if re.match(r"(Conqueror|Protector|Vanquisher)", item_match.name):
-                if num_at_limit < num_eligible:
+            if re.search(r"(Conqueror|Protector|Vanquisher)", item_match.name):
+                pyautogui.write("/")
+                time.sleep(0.1)
+                pyautogui.write("rw")
+                time.sleep(0.1)
+                pyautogui.press("space")
+                time.sleep(0.1)
+                pyautogui.write(f"Token limit: {token_limit}")
+                time.sleep(0.1)
+                pyautogui.press("enter")
+                time.sleep(0.25)
+                
+                if len(token_count) > 0:
                     pyautogui.write("/")
                     time.sleep(0.1)
                     pyautogui.write("rw")
                     time.sleep(0.1)
                     pyautogui.press("space")
                     time.sleep(0.1)
-                    pyautogui.write(f"The following players may not roll on this item: {', '.join([f'{k} ({v}x)' for k,v in token_count.items() if v >= token_limit])}")
-                    time.sleep(0.1)
-                    pyautogui.press("enter")
-                    time.sleep(0.25)
-
-                if num_at_limit == num_eligible:
-                    pyautogui.write("/")
-                    time.sleep(0.1)
-                    pyautogui.write("rw")
-                    time.sleep(0.1)
-                    pyautogui.press("space")
-                    time.sleep(0.1)
-                    pyautogui.write(f"All players have won {token_limit}x tokens. This token is a free roll.")
+                    pyautogui.write(f"The following people may not roll on this item: {', '.join([k for k,v in token_count.items() if v >= token_limit])}")
                     time.sleep(0.1)
                     pyautogui.press("enter")
                     time.sleep(0.25)
@@ -787,7 +821,7 @@ def export_loot():
 
         # Set up categorization; it's a nested dictionary. First level, player name; second level, difficulty; third level, tier slot. 
         for p in players:
-            tier_pieces[p.name] = {"Heroic": {"Head": 0, "Shoulders": 0, "Chest": 0, "Hands": 0, "Legs": 0}, "Normal": {"Head": 0, "Shoulders": 0}}
+            tier_pieces[p.name] = {"Heroic": {"Head": 0, "Shoulders": 0, "Chest": 0, "Hands": 0, "Legs": 0}, "Normal": {"Head": 0, "Shoulders": 0, "Chest": 0, "Hands": 0, "Legs": 0}}
 
         f.write("----------------------------------------\n")
         f.write("## Tier Pieces:\n")
@@ -795,14 +829,17 @@ def export_loot():
         for p in players: 
             for l in p._history: 
                 for item in p._history[l]: 
-                    if not re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", item.item.name): continue
+                    if not re.match(r"(Crown|Shoulders|Chest|Leggings|Gauntlets) of the Corrupted (Vanquisher|Protector|Conqueror)", item.item.name): continue
 
-                    # We have to categorize by item level; 378 is normal, 391 is heroic.
-                    if item.item.ilvl == 378:
-                        if "Mantle" in item.item.name: tier_pieces[p.name]["Normal"]["Shoulders"] += 1
-                        elif "Helm" in item.item.name: tier_pieces[p.name]["Normal"]["Head"] += 1
+                    # We have to categorize by item level; 397 is normal, 410 is heroic.
+                    if item.item.ilvl == 397:
+                        if "Shoulders" in item.item.name: tier_pieces[p.name]["Normal"]["Shoulders"] += 1
+                        elif "Crown" in item.item.name: tier_pieces[p.name]["Normal"]["Head"] += 1
+                        elif "Chest" in item.item.name: tier_pieces[p.name]["Normal"]["Chest"] += 1
+                        elif "Gauntlets" in item.item.name: tier_pieces[p.name]["Normal"]["Hands"] += 1
+                        elif "Leggings" in item.item.name: tier_pieces[p.name]["Normal"]["Legs"] += 1
                     
-                    elif item.item.ilvl == 391: 
+                    elif item.item.ilvl == 410: 
                         if "Shoulders" in item.item.name: tier_pieces[p.name]["Heroic"]["Shoulders"] += 1
                         elif "Crown" in item.item.name: tier_pieces[p.name]["Heroic"]["Head"] += 1
                         elif "Chest" in item.item.name: tier_pieces[p.name]["Heroic"]["Chest"] += 1
@@ -819,15 +856,15 @@ def export_loot():
 
             # Loop through this person's item log and append the tier pieces to the list; along with date received, difficulty, and the item link. 
             for l in p._history["Main-Spec"]:
-                if re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", l.item.name):
-                    difficulty = "Normal" if re.search(r"(Mantle|Helm) of the Fiery (Vanquisher|Protector|Conqueror)", l.item.name) else "Heroic"
+                if re.match(r"(Crown|Shoulders|Chest|Leggings|Gauntlets) of the Corrupted (Vanquisher|Protector|Conqueror)", l.item.name):
+                    difficulty = "Normal" if l.item.ilvl == 397 else "Heroic"
                     item_name = l.item.name.replace(' ', '-').replace('\'', '').lower()
                     item_url = f"https://www.wowhead.com/cata/item={l.item.id}/{item_name}"
                     set_pieces.append((p.name, l.item.name, l.date, difficulty, item_url, "MS"))
 
             for l in p._history["Off-Spec"]:
-                if re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Fiery (Vanquisher|Protector|Conqueror)", l.item.name):
-                    difficulty = "Normal" if re.search(r"(Mantle|Helm) of the Fiery (Vanquisher|Protector|Conqueror)", l.item.name) else "Heroic"
+                if re.match(r"(Mantle|Helm|Shoulders|Crown|Chest|Gauntlets|Leggings) of the Corrupted (Vanquisher|Protector|Conqueror)", l.item.name):
+                    difficulty = "Normal" if l.item.ilvl == 397 else "Heroic"
                     item_name = l.item.name.replace(' ', '-').replace('\'', '').lower()
                     item_url = f"https://www.wowhead.com/cata/item={l.item.id}/{item_name}"
 
@@ -849,7 +886,7 @@ def export_loot():
 
             for slot in ["Mantle", "Helm", "Shoulders", "Crown", "Chest", "Gauntlets", "Leggings"]:
                 for item in set_pieces: 
-                    if item[0] == p.name and re.match(rf"{slot} of the Fiery Conqueror", item[1]):
+                    if item[0] == p.name and re.match(rf"{slot} of the Corrupted Conqueror", item[1]):
                         # Calculate the sum, but using set_pieces instead of the dictionary.
                         count = len([x for x in set_pieces if x[0] == p.name and x[1] == item[1]])
                         pieces_counted.append(f"[{slot} ({item[3]}) {count}x](<{item[4]}>) -- {item[2]}")
@@ -869,7 +906,7 @@ def export_loot():
 
             for slot in ["Mantle", "Helm", "Shoulders", "Crown", "Chest", "Gauntlets", "Leggings"]:
                 for item in set_pieces: 
-                    if item[0] == p.name and re.match(rf"{slot} of the Fiery Protector", item[1]):
+                    if item[0] == p.name and re.match(rf"{slot} of the Corrupted Protector", item[1]):
                         # Calculate the sum, but using set_pieces instead of the dictionary.
                         count = len([x for x in set_pieces if x[0] == p.name and x[1] == item[1]])
                         pieces_counted.append(f"[{slot} ({item[3]}) {count}x](<{item[4]}>) -- {item[2]}")
@@ -889,7 +926,7 @@ def export_loot():
 
             for slot in ["Mantle", "Helm", "Shoulders", "Crown", "Chest", "Gauntlets", "Leggings"]:
                 for item in set_pieces: 
-                    if item[0] == p.name and re.match(rf"{slot} of the Fiery Vanquisher", item[1]):
+                    if item[0] == p.name and re.match(rf"{slot} of the Corrupted Vanquisher", item[1]):
                         # Calculate the sum, but using set_pieces instead of the dictionary.
                         count = len([x for x in set_pieces if x[0] == p.name and x[1] == item[1]])
                         pieces_counted.append(f"[{slot} ({item[3]}) {count}x](<{item[4]}>) -- {item[2]}")
