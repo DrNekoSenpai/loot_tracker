@@ -1,26 +1,33 @@
-# Loot log for **Sunday, 2025-02-23**:
+# Loot log for **Wednesday, 2025-02-26**:
 
-Chunkofrock (+1 MS):
-- [Vagaries of Time](<https://www.wowhead.com/cata/item=77214/vagaries-of-time>) (397) (MS) -- received on **Sunday, 2025-02-23**
+Gnoya (+2 MS):
+- [Scalpel of Unrelenting Agony](<https://www.wowhead.com/cata/item=77219/scalpel-of-unrelenting-agony>) (397) (MS) -- received on **Wednesday, 2025-02-26**
+- [Leggings of the Corrupted Protector](<https://www.wowhead.com/cata/item=78176/leggings-of-the-corrupted-protector>) (397) (MS) -- received on **Wednesday, 2025-02-26**
+
+Elisesolis (+1 MS):
+- [Waistplate of the Desecrated Future](<https://www.wowhead.com/cata/item=78889/waistplate-of-the-desecrated-future>) (397) (MS) -- received on **Wednesday, 2025-02-26**
 
 Kairiz (+1 MS):
-- [Gauntlets of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Sunday, 2025-02-23**
+- [Leggings of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Wednesday, 2025-02-26**
+- [Interrogator's Bloody Footpads](<https://www.wowhead.com/cata/item=77254/interrogators-bloody-footpads>) (397) (OS) -- received on **Wednesday, 2025-02-26**
 
-Miatotems (+1 MS):
-- [Scalpel of Unrelenting Agony](<https://www.wowhead.com/cata/item=77219/scalpel-of-unrelenting-agony>) (397) (MS) -- received on **Sunday, 2025-02-23**
+Miadog (+1 MS):
+- [Vagaries of Time](<https://www.wowhead.com/cata/item=77214/vagaries-of-time>) (397) (MS) -- received on **Wednesday, 2025-02-26**
 
-Tinyraider (+1 MS):
-- [Leggings of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Sunday, 2025-02-23**
+Onlyflowers (+1 MS):
+- [Rockhide Bracers](<https://www.wowhead.com/cata/item=77270/rockhide-bracers>) (397) (MS) -- received on **Wednesday, 2025-02-26**
 
-Zguis (+1 MS):
-- [Dragoncarver Belt](<https://www.wowhead.com/cata/item=78885/dragoncarver-belt>) (397) (MS) -- received on **Sunday, 2025-02-23**
+Phallipally (+1 MS):
+- [Rockhide Bracers](<https://www.wowhead.com/cata/item=77270/rockhide-bracers>) (397) (MS) -- received on **Wednesday, 2025-02-26**
 
-Elisesolis (+0 MS):
-- [Hand of Morchok](<https://www.wowhead.com/cata/item=77212/hand-of-morchok>) (397) (OS) -- received on **Sunday, 2025-02-23**
+Pasgghetti (+0 MS):
+- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=77267/mosswrought-shoulderguards>) (397) (OS) -- received on **Wednesday, 2025-02-26**
 
-----------------------------------------
-## Tier Pieces:
+Shetknight (+0 MS):
+- [Waistplate of the Desecrated Future](<https://www.wowhead.com/cata/item=78889/waistplate-of-the-desecrated-future>) (397) (OS) -- received on **Wednesday, 2025-02-26**
 
-Vanquisher (Rogue / Death Knight / Mage / Druid):
-- Kairiz: [Gauntlets (Normal) 1x](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) -- 2025-02-23
-- Tinyraider: [Leggings (Normal) 1x](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) -- 2025-02-23
+Swiftbladess (+0 MS):
+- [Pattern: Leggings of Nature's Champion](<https://www.wowhead.com/cata/item=71999/pattern:-leggings-of-natures-champion>) (ETC) -- received on **Wednesday, 2025-02-26**
+- [Pattern: Rended Earth Leggings](<https://www.wowhead.com/cata/item=72007/pattern:-rended-earth-leggings>) (ETC) -- received on **Wednesday, 2025-02-26**
+- [Pattern: Bracers of the Hunter-Killer](<https://www.wowhead.com/cata/item=72011/pattern:-bracers-of-the-hunter-killer>) (ETC) -- received on **Wednesday, 2025-02-26**
+
