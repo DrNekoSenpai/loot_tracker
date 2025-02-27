@@ -340,7 +340,7 @@ def award_loot(players, item_match):
     if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
     if item_match.binding != "Binds when picked up": print(f"WARNING: Item binds when equipped.")
 
-    if not item_match.name == "Eternal Ember": 
+    if item_match.category != "ETC": 
         ready = input("Ready to announce? (y/n): ").lower()
 
         if ready == "y": 
@@ -384,34 +384,6 @@ def award_loot(players, item_match):
                 time.sleep(0.25)
 
     print("")
-
-    dragonwrath = {
-        "Angelofruin": True, 
-        "Pasgghetti": True,
-        "Bzorder": True,
-        "Vanthulhu": True,
-        "Axsel": False,
-        "Tinyraider": False,
-        "Miadog": False,
-        "Chunkofrock": True
-    }
-
-    # If the item name is "Eternal Ember", find the player with the highest priority that does NOT have True in the dictionary. 
-    # Skip players that are marked as absent. 
-    # Print a console message saying which person this item is going to.
-
-    if "Eternal Ember" in item_match.name:
-        player_found = False
-        for k,v in dragonwrath.items():
-            for p in players:
-                if p._attendance == False: continue
-                if not p.name in dragonwrath: continue
-                if dragonwrath[p.name]: continue
-                if k in p.alias: 
-                    print(f"{item_match.name} ({item_match.ilvl}) should be awarded to {p.name}.")
-                    player_found = True
-                    break
-            if player_found: break
 
     # We'll ask the user to input the name of the person who won the roll. 
     name = input("Who won the roll? ").lower()
@@ -472,36 +444,15 @@ def award_loot(players, item_match):
         player._history[slot_category].append(log)
         print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
 
-    # Eternal Ember and any plans/pattern items are ETC items and should not be counted as regular plusses.
-    elif "Eternal Ember" in item_match.name or "Plans/Pattern" in item_match.category:
+    elif "Plans/Pattern" in item_match.category:
         roll_type = "ETC"
 
-        # If it's an Eternal Ember, we should ask them how many dropped. 
-        if "Eternal Ember" in item_match.name:
-            num_embers = input("How many Eternal Embers dropped? ")
-            try: 
-                num_embers = int(num_embers)
-                if num_embers < 1:
-                    print("Invalid integer input.")
-                    return players
-            except: 
-                print("Invalid non-convertible input.")
-                return players
-            
-            for i in range(num_embers):
-                log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-                player._raid_log.append(log)
-                player._history[slot_category].append(log)
-            
-            print(f"{player.name} has been awarded {num_embers}x {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
+        log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
+        player._raid_log.append(log)
 
-        else: 
-            log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
-            player._raid_log.append(log)
-
-            item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
-            player._history[item_category].append(log)
-            print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
+        item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
+        player._history[item_category].append(log)
+        print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
 
     else: 
         off_spec = input("Is this an off-spec roll? (y/n): ").lower()
@@ -900,19 +851,6 @@ def sudo_mode(players):
                     player = p
                     break
 
-            # Exception; Flickering Cowl, Shoulders, Shoulderpads, Handguards, Wristbands. These are random enchant items. 
-
-            if re.match(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)", item_name):
-                # If we match one of these, add the item directly to the player's history without checking the dictionary.
-
-                suffix = re.search(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)(.*)", item_name).group(2)
-
-                # Remove the suffix from the name. 
-                item_name = item_name.replace(suffix, "").strip()
-
-            else: 
-                suffix = None
-
             item = None
             for i in all_items.values():
                 if item_name in i.name and i.ilvl == ilvl:
@@ -925,7 +863,7 @@ def sudo_mode(players):
             else:
                 roll_type = "OS" if offspec else "MS"
 
-            if item_name == "Eternal Ember" or re.match(r"(Plans|Pattern)", item_name):
+            if re.match(r"(Plans|Pattern)", item_name):
                 roll_type = "ETC"
                 
             if player is None: 
@@ -951,9 +889,22 @@ def sudo_mode(players):
                     players.append(Player(winner, alias, pclass))
                     player = players[-1]
 
-            # If there is a suffix, add it back to the item name. 
-            if not suffix is None:
-                item.name += suffix
+            if re.match(r"(Chest|Crown|Leggings|Shoulders|Gauntlets) of the Corrupted (Conqueror|Protector|Vanquisher)", item.name):
+                # Depending on the suffix, we determine what valid classes are. 
+                suffix = item.name.split(" ")[-1]
+                if suffix == "Conqueror": item.classes = ["Paladin", "Priest", "Warlock"]
+                elif suffix == "Protector": item.classes = ["Warrior", "Hunter", "Shaman"]
+                elif suffix == "Vanquisher": item.classes = ["Death Knight", "Druid", "Mage", "Rogue"]
+
+                # We want to make sure that the player's class is in the list of valid classes. 
+                # If it's not, this was a disenchanted item. 
+
+                if player._player_class not in item.classes:
+                    # Find _disenchanted player and award it to that instead. 
+                    for p in players:
+                        if p.name == "_disenchanted":
+                            player = p
+                            break
 
             item_category = "Main-Spec" if roll_type == "MS" else "Off-Spec" if roll_type == "OS" else "ETC"
             player._history[item_category].append(Log(player.name, item, roll_type, date))

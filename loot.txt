@@ -1,11 +1,10 @@
 # Loot log for **Wednesday, 2025-02-26**:
 
-Gnoya (+2 MS):
-- [Scalpel of Unrelenting Agony](<https://www.wowhead.com/cata/item=77219/scalpel-of-unrelenting-agony>) (397) (MS) -- received on **Wednesday, 2025-02-26**
-- [Leggings of the Corrupted Protector](<https://www.wowhead.com/cata/item=78176/leggings-of-the-corrupted-protector>) (397) (MS) -- received on **Wednesday, 2025-02-26**
-
 Elisesolis (+1 MS):
 - [Waistplate of the Desecrated Future](<https://www.wowhead.com/cata/item=78889/waistplate-of-the-desecrated-future>) (397) (MS) -- received on **Wednesday, 2025-02-26**
+
+Gnoya (+1 MS):
+- [Scalpel of Unrelenting Agony](<https://www.wowhead.com/cata/item=77219/scalpel-of-unrelenting-agony>) (397) (MS) -- received on **Wednesday, 2025-02-26**
 
 Kairiz (+1 MS):
 - [Leggings of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Wednesday, 2025-02-26**
@@ -31,3 +30,5 @@ Swiftbladess (+0 MS):
 - [Pattern: Rended Earth Leggings](<https://www.wowhead.com/cata/item=72007/pattern:-rended-earth-leggings>) (ETC) -- received on **Wednesday, 2025-02-26**
 - [Pattern: Bracers of the Hunter-Killer](<https://www.wowhead.com/cata/item=72011/pattern:-bracers-of-the-hunter-killer>) (ETC) -- received on **Wednesday, 2025-02-26**
 
+Disenchanted items:
+- [Leggings of the Corrupted Protector](<https://www.wowhead.com/cata/item=78176/leggings-of-the-corrupted-protector>) (397) -- disenchanted on **Wednesday, 2025-02-26**
