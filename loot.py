@@ -875,7 +875,8 @@ def sudo_mode(players):
 
                 else: 
                     pclass = input(f"Could not find player {winner}. Creating from scratch. What class are they? ")
-                    if pclass.lower() in "death knight": pclass = "Death Knight"
+                    # If class is "Death Knight" or "dk", we'll convert it to "Death Knight".
+                    if re.match(r"(death knight|dk)", pclass.lower()): pclass = "Death Knight"
                     elif pclass.lower() in "druid": pclass = "Druid"
                     elif pclass.lower() in "hunter": pclass = "Hunter"
                     elif pclass.lower() in "mage": pclass = "Mage"
