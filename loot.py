@@ -340,7 +340,7 @@ def award_loot(players, item_match):
     if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
     if item_match.binding != "Binds when picked up": print(f"WARNING: Item binds when equipped.")
 
-    if item_match.category != "ETC": 
+    if item_match.category != "ETC" or re.search(r"(Chest|Crown|Gauntlets|Leggings|Shoulders) of the Corrupted (Conqueror|Protector|Vanquisher)", item_match.name):
         ready = input("Ready to announce? (y/n): ").lower()
 
         if ready == "y": 
