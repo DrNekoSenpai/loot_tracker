@@ -1,8 +1,8 @@
-# Loot log for Wednesday, 2025-03-05 and **Sunday, 2025-03-09**:
+# Loot log for Wednesday, 2025-03-05, Sunday, 2025-03-09, and **Monday, 2025-03-10**:
 
 Meemeemeemee (+2 MS):
 - [Leggings of the Corrupted Protector](<https://www.wowhead.com/cata/item=78176/leggings-of-the-corrupted-protector>) (397) (MS) -- received on Wednesday, 2025-03-05
-- [Bracers of Looming Darkness](<https://www.wowhead.com/cata/item=77247/bracers-of-looming-darkness>) (397) (MS) -- received on **Sunday, 2025-03-09**
+- [Bracers of Looming Darkness](<https://www.wowhead.com/cata/item=77247/bracers-of-looming-darkness>) (397) (MS) -- received on Sunday, 2025-03-09
 
 Chunkofrock (+1 MS):
 - [Grotesquely Writhing Bracers](<https://www.wowhead.com/cata/item=77257/grotesquely-writhing-bracers>) (397) (MS) -- received on Wednesday, 2025-03-05
@@ -18,10 +18,10 @@ Jacegil (+1 MS):
 - [Scalpel of Unrelenting Agony](<https://www.wowhead.com/cata/item=77219/scalpel-of-unrelenting-agony>) (397) (MS) -- received on Wednesday, 2025-03-05
 
 Kairiz (+1 MS):
-- [Chest of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78174/chest-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Sunday, 2025-03-09**
+- [Chest of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78174/chest-of-the-corrupted-vanquisher>) (397) (MS) -- received on Sunday, 2025-03-09
 
 Miadog (+1 MS):
-- [Shoulders of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78180/shoulders-of-the-corrupted-conqueror>) (397) (MS) -- received on **Sunday, 2025-03-09**
+- [Shoulders of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78180/shoulders-of-the-corrupted-conqueror>) (397) (MS) -- received on Sunday, 2025-03-09
 
 Onlyflowers (+1 MS):
 - [Gauntlets of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) (397) (MS) -- received on Wednesday, 2025-03-05
@@ -32,9 +32,15 @@ Snedcharos (+1 MS):
 Swiftbladess (+1 MS):
 - [Underdweller's Spaulders](<https://www.wowhead.com/cata/item=77271/underdwellers-spaulders>) (397) (MS) -- received on Wednesday, 2025-03-05
 
+Vanarann (+1 MS):
+- [Crown of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78172/crown-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Monday, 2025-03-10**
+
 Vanthulhu (+1 MS):
-- [Ring of the Riven](<https://www.wowhead.com/cata/item=78012/ring-of-the-riven>) (397) (MS) -- received on **Sunday, 2025-03-09**
+- [Ring of the Riven](<https://www.wowhead.com/cata/item=78012/ring-of-the-riven>) (397) (MS) -- received on Sunday, 2025-03-09
 - [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=77267/mosswrought-shoulderguards>) (397) (OS) -- received on Wednesday, 2025-03-05
+
+Zguis (+1 MS):
+- [Starcatcher Compass](<https://www.wowhead.com/cata/item=77202/starcatcher-compass>) (397) (MS) -- received on **Monday, 2025-03-10**
 
 Tinyraider (+0 MS):
 - [Pattern: World Mender's Pants](<https://www.wowhead.com/cata/item=72000/pattern:-world-menders-pants>) (ETC) -- received on Wednesday, 2025-03-05
