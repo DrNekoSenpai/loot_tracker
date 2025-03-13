@@ -1,50 +1,23 @@
-# Loot log for Wednesday, 2025-03-05, Sunday, 2025-03-09, and **Monday, 2025-03-10**:
+# Loot log for **Wednesday, 2025-03-12**:
 
-Meemeemeemee (+2 MS):
-- [Leggings of the Corrupted Protector](<https://www.wowhead.com/cata/item=78176/leggings-of-the-corrupted-protector>) (397) (MS) -- received on Wednesday, 2025-03-05
-- [Bracers of Looming Darkness](<https://www.wowhead.com/cata/item=77247/bracers-of-looming-darkness>) (397) (MS) -- received on Sunday, 2025-03-09
+Bladehero (+2 MS):
+- [Leggings of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78181/leggings-of-the-corrupted-conqueror>) (397) (MS) -- received on **Wednesday, 2025-03-12**
+- [Treads of Crushed Flesh](<https://www.wowhead.com/cata/item=77259/treads-of-crushed-flesh>) (397) (MS) -- received on **Wednesday, 2025-03-12**
 
-Chunkofrock (+1 MS):
-- [Grotesquely Writhing Bracers](<https://www.wowhead.com/cata/item=77257/grotesquely-writhing-bracers>) (397) (MS) -- received on Wednesday, 2025-03-05
-
-Gnoraa (+1 MS):
-- [Sash of Relentless Truth](<https://www.wowhead.com/cata/item=78879/sash-of-relentless-truth>) (397) (MS) -- received on Wednesday, 2025-03-05
-- [Pattern: Lavaquake Legwraps](<https://www.wowhead.com/cata/item=72002/pattern:-lavaquake-legwraps>) (ETC) -- received on Wednesday, 2025-03-05
-
-Gnoya (+1 MS):
-- [Leggings of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78181/leggings-of-the-corrupted-conqueror>) (397) (MS) -- received on Wednesday, 2025-03-05
+Axsel (+1 MS):
+- [Shoulders of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78180/shoulders-of-the-corrupted-conqueror>) (397) (MS) -- received on **Wednesday, 2025-03-12**
 
 Jacegil (+1 MS):
-- [Scalpel of Unrelenting Agony](<https://www.wowhead.com/cata/item=77219/scalpel-of-unrelenting-agony>) (397) (MS) -- received on Wednesday, 2025-03-05
+- [Gauntlets of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Wednesday, 2025-03-12**
 
-Kairiz (+1 MS):
-- [Chest of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78174/chest-of-the-corrupted-vanquisher>) (397) (MS) -- received on Sunday, 2025-03-09
-
-Miadog (+1 MS):
-- [Shoulders of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78180/shoulders-of-the-corrupted-conqueror>) (397) (MS) -- received on Sunday, 2025-03-09
-
-Onlyflowers (+1 MS):
-- [Gauntlets of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) (397) (MS) -- received on Wednesday, 2025-03-05
-
-Snedcharos (+1 MS):
-- [Rockhide Bracers](<https://www.wowhead.com/cata/item=77270/rockhide-bracers>) (397) (MS) -- received on Wednesday, 2025-03-05
+Shetknight (+1 MS):
+- [Soulshifter Vortex](<https://www.wowhead.com/cata/item=77206/soulshifter-vortex>) (397) (MS) -- received on **Wednesday, 2025-03-12**
 
 Swiftbladess (+1 MS):
-- [Underdweller's Spaulders](<https://www.wowhead.com/cata/item=77271/underdwellers-spaulders>) (397) (MS) -- received on Wednesday, 2025-03-05
-
-Vanarann (+1 MS):
-- [Crown of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78172/crown-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Monday, 2025-03-10**
-
-Vanthulhu (+1 MS):
-- [Ring of the Riven](<https://www.wowhead.com/cata/item=78012/ring-of-the-riven>) (397) (MS) -- received on Sunday, 2025-03-09
-- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=77267/mosswrought-shoulderguards>) (397) (OS) -- received on Wednesday, 2025-03-05
+- [Razor Saronite Chip](<https://www.wowhead.com/cata/item=77213/razor-saronite-chip>) (397) (MS) -- received on **Wednesday, 2025-03-12**
 
 Zguis (+1 MS):
-- [Starcatcher Compass](<https://www.wowhead.com/cata/item=77202/starcatcher-compass>) (397) (MS) -- received on **Monday, 2025-03-10**
-
-Tinyraider (+0 MS):
-- [Pattern: World Mender's Pants](<https://www.wowhead.com/cata/item=72000/pattern:-world-menders-pants>) (ETC) -- received on Wednesday, 2025-03-05
+- [Seal of Primordial Shadow](<https://www.wowhead.com/cata/item=77231/seal-of-primordial-shadow>) (397) (MS) -- received on **Wednesday, 2025-03-12**
 
 Disenchanted items:
-- [Mycosynth Wristguards](<https://www.wowhead.com/cata/item=77261/mycosynth-wristguards>) (397) -- disenchanted on Wednesday, 2025-03-05
-- [Heartblood Wristplates](<https://www.wowhead.com/cata/item=77253/heartblood-wristplates>) (397) -- disenchanted on Wednesday, 2025-03-05
+- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=77267/mosswrought-shoulderguards>) (397) -- disenchanted on **Wednesday, 2025-03-12**
