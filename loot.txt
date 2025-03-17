@@ -1,23 +1,29 @@
-# Loot log for **Wednesday, 2025-03-12**:
+# Loot log for Wednesday, 2025-03-12 and **Sunday, 2025-03-16**:
 
 Bladehero (+2 MS):
-- [Leggings of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78181/leggings-of-the-corrupted-conqueror>) (397) (MS) -- received on **Wednesday, 2025-03-12**
-- [Treads of Crushed Flesh](<https://www.wowhead.com/cata/item=77259/treads-of-crushed-flesh>) (397) (MS) -- received on **Wednesday, 2025-03-12**
+- [Leggings of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78181/leggings-of-the-corrupted-conqueror>) (397) (MS) -- received on Wednesday, 2025-03-12
+- [Treads of Crushed Flesh](<https://www.wowhead.com/cata/item=77259/treads-of-crushed-flesh>) (397) (MS) -- received on Wednesday, 2025-03-12
+
+Miatotems (+2 MS):
+- [Chest of the Corrupted Protector](<https://www.wowhead.com/cata/item=78179/chest-of-the-corrupted-protector>) (397) (MS) -- received on **Sunday, 2025-03-16**
+- [Imperfect Specimens 27 and 28](<https://www.wowhead.com/cata/item=77242/imperfect-specimens-27-and-28>) (397) (MS) -- received on **Sunday, 2025-03-16**
+
+Swiftbladess (+2 MS):
+- [Razor Saronite Chip](<https://www.wowhead.com/cata/item=77213/razor-saronite-chip>) (397) (MS) -- received on Wednesday, 2025-03-12
+- [Starcatcher Compass](<https://www.wowhead.com/cata/item=77202/starcatcher-compass>) (397) (MS) -- received on **Sunday, 2025-03-16**
+
+Zguis (+2 MS):
+- [Seal of Primordial Shadow](<https://www.wowhead.com/cata/item=77231/seal-of-primordial-shadow>) (397) (MS) -- received on Wednesday, 2025-03-12
+- [Crown of the Corrupted Protector](<https://www.wowhead.com/cata/item=78177/crown-of-the-corrupted-protector>) (397) (MS) -- received on **Sunday, 2025-03-16**
 
 Axsel (+1 MS):
-- [Shoulders of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78180/shoulders-of-the-corrupted-conqueror>) (397) (MS) -- received on **Wednesday, 2025-03-12**
+- [Shoulders of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78180/shoulders-of-the-corrupted-conqueror>) (397) (MS) -- received on Wednesday, 2025-03-12
 
 Jacegil (+1 MS):
-- [Gauntlets of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Wednesday, 2025-03-12**
+- [Gauntlets of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) (397) (MS) -- received on Wednesday, 2025-03-12
 
 Shetknight (+1 MS):
-- [Soulshifter Vortex](<https://www.wowhead.com/cata/item=77206/soulshifter-vortex>) (397) (MS) -- received on **Wednesday, 2025-03-12**
-
-Swiftbladess (+1 MS):
-- [Razor Saronite Chip](<https://www.wowhead.com/cata/item=77213/razor-saronite-chip>) (397) (MS) -- received on **Wednesday, 2025-03-12**
-
-Zguis (+1 MS):
-- [Seal of Primordial Shadow](<https://www.wowhead.com/cata/item=77231/seal-of-primordial-shadow>) (397) (MS) -- received on **Wednesday, 2025-03-12**
+- [Soulshifter Vortex](<https://www.wowhead.com/cata/item=77206/soulshifter-vortex>) (397) (MS) -- received on Wednesday, 2025-03-12
 
 Disenchanted items:
-- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=77267/mosswrought-shoulderguards>) (397) -- disenchanted on **Wednesday, 2025-03-12**
+- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=77267/mosswrought-shoulderguards>) (397) -- disenchanted on Wednesday, 2025-03-12
