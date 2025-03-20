@@ -177,7 +177,8 @@ def regular_keyboard(input_string):
     return re.match(pattern, input_string) is not None 
 
 def award_loot_auto(players):
-    left, right, up, down = 1620, 1820, 6, 53
+    horizontal_boundary = 200
+    left, right, up, down = 1720 - horizontal_boundary, 1720 + horizontal_boundary, 6, 53
     image = pyautogui.screenshot(region=(left, up, right-left, down-up))
 
     whitelist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-,:\' "
