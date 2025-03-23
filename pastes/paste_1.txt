@@ -1,51 +1,50 @@
-# Loot log for Wednesday, 2025-02-12 and **Sunday, 2025-02-16**:
+# Loot log for Wednesday, 2025-03-19 and **Saturday, 2025-03-22**:
 
-Zguis (+5 MS):
-- [Flickering Shoulders of the Windflurry](<https://www.wowhead.com/cata/item=71030/flickering-shoulders-of-the-windflurry>) (378) (MS) -- received on **Sunday, 2025-02-16**
-- [Scalp of the Bandit Prince](<https://www.wowhead.com/cata/item=71018/scalp-of-the-bandit-prince>) (378) (MS) -- received on **Sunday, 2025-02-16**
-- [Flaming Core Chestguard](<https://www.wowhead.com/cata/item=71005/flaming-core-chestguard>) (378) (MS) -- received on **Sunday, 2025-02-16**
-- [Arathar, the Eye of Flame](<https://www.wowhead.com/cata/item=71353/arathar,-the-eye-of-flame>) (384) (MS) -- received on **Sunday, 2025-02-16**
-- [Helm of the Fiery Protector](<https://www.wowhead.com/cata/item=71682/helm-of-the-fiery-protector>) (378) (MS) -- received on **Sunday, 2025-02-16**
-
-Bladehero (+2 MS):
-- [Skullstealer Greataxe](<https://www.wowhead.com/cata/item=71014/skullstealer-greataxe>) (378) (MS) -- received on Wednesday, 2025-02-12
-- [Bracers of the Fiery Path](<https://www.wowhead.com/cata/item=70920/bracers-of-the-fiery-path>) (378) (MS) -- received on Wednesday, 2025-02-12
-- [Cracked Obsidian Stompers](<https://www.wowhead.com/cata/item=70912/cracked-obsidian-stompers>) (378) (OS) -- received on Wednesday, 2025-02-12
+Gnoraa (+2 MS):
+- [Cord of the Slain Champion](<https://www.wowhead.com/cata/item=77255/cord-of-the-slain-champion>) (397) (MS) -- received on **Saturday, 2025-03-22**
+- [Shoulders of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78180/shoulders-of-the-corrupted-conqueror>) (397) (MS) -- received on **Saturday, 2025-03-22**
 
 Miadog (+2 MS):
-- [Mantle of the Fiery Conqueror](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) (378) (MS) -- received on Wednesday, 2025-02-12
-- [Majordomo's Chain of Office](<https://www.wowhead.com/cata/item=71357/majordomos-chain-of-office>) (384) (MS) -- received on **Sunday, 2025-02-16**
+- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=77267/mosswrought-shoulderguards>) (397) (MS) -- received on **Saturday, 2025-03-22**
+- [Ledger of Revolting Rituals](<https://www.wowhead.com/cata/item=77245/ledger-of-revolting-rituals>) (397) (MS) -- received on **Saturday, 2025-03-22**
+- [Bracers of the Banished](<https://www.wowhead.com/cata/item=77249/bracers-of-the-banished>) (397) (OS) -- received on **Saturday, 2025-03-22**
 
-Lorniras (+1 MS):
-- [Flickering Cowl of the Wildfire](<https://www.wowhead.com/cata/item=71011/flickering-cowl-of-the-wildfire>) (378) (MS) -- received on **Sunday, 2025-02-16**
+Miatotems (+2 MS):
+- [Timepiece of the Bronze Flight](<https://www.wowhead.com/cata/item=77227/timepiece-of-the-bronze-flight>) (397) (MS) -- received on Wednesday, 2025-03-19
+- [Crown of the Corrupted Protector](<https://www.wowhead.com/cata/item=78177/crown-of-the-corrupted-protector>) (397) (MS) -- received on Wednesday, 2025-03-19
 
-Tinyraider (+1 MS):
-- [Volcanospike](<https://www.wowhead.com/cata/item=71006/volcanospike>) (378) (MS) -- received on Wednesday, 2025-02-12
+Mindbenderr (+2 MS):
+- [Gauntlets of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Saturday, 2025-03-22**
+- [Gauntlets of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Saturday, 2025-03-22**
 
-Zynrenner (+1 MS):
-- [Molten Scream](<https://www.wowhead.com/cata/item=71323/molten-scream>) (378) (MS) -- received on Wednesday, 2025-02-12
+Snedcharos (+2 MS):
+- [Leggings of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) (397) (MS) -- received on Wednesday, 2025-03-19
+- [Treads of Crushed Flesh](<https://www.wowhead.com/cata/item=77259/treads-of-crushed-flesh>) (397) (MS) -- received on Wednesday, 2025-03-19
 
-Flightyknite (+0 MS):
-- [Spidersilk Spindle](<https://www.wowhead.com/cata/item=68981/spidersilk-spindle>) (378) (OS) -- received on Wednesday, 2025-02-12
+Flightyknite (+1 MS):
+- [Chest of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78174/chest-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Saturday, 2025-03-22**
 
-Gnoya (+0 MS):
-- [Goblet of Anger](<https://www.wowhead.com/cata/item=71022/goblet-of-anger>) (378) (OS) -- received on Wednesday, 2025-02-12
+Halibutfilet (+1 MS):
+- [Chest of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78174/chest-of-the-corrupted-vanquisher>) (397) (MS) -- received on Wednesday, 2025-03-19
 
-Phallipally (+0 MS):
-- [Spaulders of Manifold Eyes](<https://www.wowhead.com/cata/item=71043/spaulders-of-manifold-eyes>) (378) (OS) -- received on **Sunday, 2025-02-16**
-- [Coalwalker Sandals](<https://www.wowhead.com/cata/item=71023/coalwalker-sandals>) (378) (OS) -- received on **Sunday, 2025-02-16**
+Malrific (+1 MS):
+- [Leggings of the Corrupted Protector](<https://www.wowhead.com/cata/item=78176/leggings-of-the-corrupted-protector>) (397) (MS) -- received on **Saturday, 2025-03-22**
 
-Vanthulhu (+0 MS):
-- [Jaws of Defeat](<https://www.wowhead.com/cata/item=68926/jaws-of-defeat>) (378) (OS) -- received on Wednesday, 2025-02-12
+Swiftbladess (+1 MS):
+- [Interrogator's Bloody Footpads](<https://www.wowhead.com/cata/item=77254/interrogators-bloody-footpads>) (397) (MS) -- received on **Saturday, 2025-03-22**
+
+Vanthulhu (+1 MS):
+- [Gauntlets of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78183/gauntlets-of-the-corrupted-conqueror>) (397) (MS) -- received on Wednesday, 2025-03-19
+
+Zguis (+1 MS):
+- [Shoulders of the Corrupted Protector](<https://www.wowhead.com/cata/item=78175/shoulders-of-the-corrupted-protector>) (397) (MS) -- received on Wednesday, 2025-03-19
+
+Elisesolis (+0 MS):
+- [Rockhide Bracers](<https://www.wowhead.com/cata/item=77270/rockhide-bracers>) (397) (OS) -- received on Wednesday, 2025-03-19
+
+Therigheous (+0 MS):
+- [Hand of Morchok](<https://www.wowhead.com/cata/item=77212/hand-of-morchok>) (397) (OS) -- received on **Saturday, 2025-03-22**
+- [Pattern: Rended Earth Leggings](<https://www.wowhead.com/cata/item=72007/pattern:-rended-earth-leggings>) (ETC) -- received on **Saturday, 2025-03-22**
 
 Disenchanted items:
-- [Cindersilk Gloves](<https://www.wowhead.com/cata/item=71044/cindersilk-gloves>) (378) -- disenchanted on Wednesday, 2025-02-12
-- [Leggings of Billowing Fire](<https://www.wowhead.com/cata/item=70989/leggings-of-billowing-fire>) (378) -- disenchanted on Wednesday, 2025-02-12
-- [Alysra's Razor](<https://www.wowhead.com/cata/item=70733/alysras-razor>) (378) -- disenchanted on Wednesday, 2025-02-12
-- [Gatecrasher](<https://www.wowhead.com/cata/item=71312/gatecrasher>) (378) -- disenchanted on Wednesday, 2025-02-12
-----------------------------------------
-## Tier Pieces:
-
-Conqueror (Paladin / Priest / Warlock):
-- Axsel: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) -- 2024-12-01
-- Miadog: [Mantle (Normal) 1x](<https://www.wowhead.com/cata/item=71681/mantle-of-the-fiery-conqueror>) -- 2025-02-12
+- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=77267/mosswrought-shoulderguards>) (397) -- disenchanted on Wednesday, 2025-03-19
