@@ -1,3 +1,8 @@
+- [Hand of Morchok](<https://www.wowhead.com/cata/item=77212/hand-of-morchok>) (397) (OS) -- received on Saturday, 2025-03-22
+- [Pattern: Rended Earth Leggings](<https://www.wowhead.com/cata/item=72007/pattern:-rended-earth-leggings>) (ETC) -- received on Saturday, 2025-03-22
+
+Disenchanted items:
+- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=77267/mosswrought-shoulderguards>) (397) -- disenchanted on Wednesday, 2025-03-19
 - [Scalpel of Unrelenting Agony](<https://www.wowhead.com/cata/item=77219/scalpel-of-unrelenting-agony>) (397) -- disenchanted on Wednesday, 2025-03-19
 - [Girdle of the Grotesque](<https://www.wowhead.com/cata/item=77248/girdle-of-the-grotesque>) (397) -- disenchanted on Wednesday, 2025-03-19
 - [Ledger of Revolting Rituals](<https://www.wowhead.com/cata/item=77245/ledger-of-revolting-rituals>) (397) -- disenchanted on Wednesday, 2025-03-19
