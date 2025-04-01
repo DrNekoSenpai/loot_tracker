@@ -1,16 +1,24 @@
-- [Heart of Unliving](<https://www.wowhead.com/cata/item=77199/heart-of-unliving>) (403) (MS) -- received on **Friday, 2025-03-28**
+- [Shoulders of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78180/shoulders-of-the-corrupted-conqueror>) (397) (MS) -- received on Wednesday, 2025-03-26
 
-Vanarann (+1 MS):
-- [Soulshifter Vortex](<https://www.wowhead.com/cata/item=77206/soulshifter-vortex>) (397) (MS) -- received on Wednesday, 2025-03-26
+Shetknight (+1 MS):
+- [Leggings of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) (397) (MS) -- received on Wednesday, 2025-03-26
+- [Runescriven Demon Collar](<https://www.wowhead.com/cata/item=77250/runescriven-demon-collar>) (397) (OS) -- received on Wednesday, 2025-03-26
+
+Thesuffering (+1 MS):
+- [Heart of Unliving](<https://www.wowhead.com/cata/item=77199/heart-of-unliving>) (403) (MS) -- received on Friday, 2025-03-28
 
 Elisesolis (+0 MS):
-- [Hand of Morchok](<https://www.wowhead.com/cata/item=77212/hand-of-morchok>) (397) (OS) -- received on **Friday, 2025-03-28**
+- [Hand of Morchok](<https://www.wowhead.com/cata/item=77212/hand-of-morchok>) (397) (OS) -- received on Friday, 2025-03-28
 
 Jacegil (+0 MS):
-- [Girdle of Fungal Dreams](<https://www.wowhead.com/cata/item=78884/girdle-of-fungal-dreams>) (397) (OS) -- received on **Friday, 2025-03-28**
+- [Girdle of Fungal Dreams](<https://www.wowhead.com/cata/item=78884/girdle-of-fungal-dreams>) (397) (OS) -- received on Friday, 2025-03-28
 
 Miadog (+0 MS):
-- [Robe of Glowing Stone](<https://www.wowhead.com/cata/item=77263/robe-of-glowing-stone>) (397) (OS) -- received on **Friday, 2025-03-28**
+- [Robe of Glowing Stone](<https://www.wowhead.com/cata/item=77263/robe-of-glowing-stone>) (397) (OS) -- received on Friday, 2025-03-28
+
+Swiftbladess (+0 MS):
+- [Vishanka, Jaws of the Earth](<https://www.wowhead.com/cata/item=78359/vishanka,-jaws-of-the-earth>) (403) (OS) -- received on **Sunday, 2025-03-30**
+- [Reins of the Blazing Drake](<https://www.wowhead.com/cata/item=77067/reins-of-the-blazing-drake>) (ETC) -- received on **Sunday, 2025-03-30**
 
 Disenchanted items:
 - [Sporebeard Gauntlets](<https://www.wowhead.com/cata/item=78362/sporebeard-gauntlets>) (410) -- disenchanted on Wednesday, 2025-03-26

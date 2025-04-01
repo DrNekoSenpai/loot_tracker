@@ -864,7 +864,7 @@ def sudo_mode(players):
             else:
                 roll_type = "OS" if offspec else "MS"
 
-            if re.match(r"(Plans|Pattern)", item_name):
+            if re.match(r"(Plans|Pattern|Reins of the Blazing Drake)", item_name):
                 roll_type = "ETC"
                 
             if player is None: 

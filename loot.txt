@@ -1,13 +1,19 @@
-# Loot log for Wednesday, 2025-03-26 and **Friday, 2025-03-28**:
+# Loot log for Wednesday, 2025-03-26, Friday, 2025-03-28, and **Sunday, 2025-03-30**:
+
+Axcelli (+3 MS):
+- [Leggings of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) (397) (MS) -- received on Friday, 2025-03-28
+- [Vial of Shadows](<https://www.wowhead.com/cata/item=77207/vial-of-shadows>) (397) (MS) -- received on Friday, 2025-03-28
+- [Blade of the Unmaker](<https://www.wowhead.com/cata/item=77189/blade-of-the-unmaker>) (403) (MS) -- received on **Sunday, 2025-03-30**
 
 Baskerfield (+3 MS):
-- [Experimental Specimen Slicer](<https://www.wowhead.com/cata/item=77217/experimental-specimen-slicer>) (397) (MS) -- received on **Friday, 2025-03-28**
-- [Treads of Crushed Flesh](<https://www.wowhead.com/cata/item=77259/treads-of-crushed-flesh>) (397) (MS) -- received on **Friday, 2025-03-28**
-- [Shoulders of the Corrupted Protector](<https://www.wowhead.com/cata/item=78175/shoulders-of-the-corrupted-protector>) (397) (MS) -- received on **Friday, 2025-03-28**
+- [Experimental Specimen Slicer](<https://www.wowhead.com/cata/item=77217/experimental-specimen-slicer>) (397) (MS) -- received on Friday, 2025-03-28
+- [Treads of Crushed Flesh](<https://www.wowhead.com/cata/item=77259/treads-of-crushed-flesh>) (397) (MS) -- received on Friday, 2025-03-28
+- [Shoulders of the Corrupted Protector](<https://www.wowhead.com/cata/item=78175/shoulders-of-the-corrupted-protector>) (397) (MS) -- received on Friday, 2025-03-28
 
-Axcelli (+2 MS):
-- [Leggings of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Friday, 2025-03-28**
-- [Vial of Shadows](<https://www.wowhead.com/cata/item=77207/vial-of-shadows>) (397) (MS) -- received on **Friday, 2025-03-28**
+Malrific (+3 MS):
+- [Gauntlets of the Corrupted Protector](<https://www.wowhead.com/cata/item=78178/gauntlets-of-the-corrupted-protector>) (397) (MS) -- received on Friday, 2025-03-28
+- [Chest of the Corrupted Protector](<https://www.wowhead.com/cata/item=78179/chest-of-the-corrupted-protector>) (397) (MS) -- received on Friday, 2025-03-28
+- [Vishanka, Jaws of the Earth](<https://www.wowhead.com/cata/item=78359/vishanka,-jaws-of-the-earth>) (403) (MS) -- received on **Sunday, 2025-03-30**
 
 Chunkofrock (+2 MS):
 - [Gauntlets of the Corrupted Protector](<https://www.wowhead.com/cata/item=78178/gauntlets-of-the-corrupted-protector>) (397) (MS) -- received on Wednesday, 2025-03-26
@@ -15,12 +21,12 @@ Chunkofrock (+2 MS):
 - [Imperfect Specimens 27 and 28](<https://www.wowhead.com/cata/item=77242/imperfect-specimens-27-and-28>) (397) (OS) -- received on Wednesday, 2025-03-26
 
 Flightyknite (+2 MS):
-- [Crown of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78172/crown-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Friday, 2025-03-28**
-- [Breathstealer Band](<https://www.wowhead.com/cata/item=77230/breathstealer-band>) (397) (MS) -- received on **Friday, 2025-03-28**
+- [Crown of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78172/crown-of-the-corrupted-vanquisher>) (397) (MS) -- received on Friday, 2025-03-28
+- [Breathstealer Band](<https://www.wowhead.com/cata/item=77230/breathstealer-band>) (397) (MS) -- received on Friday, 2025-03-28
 
-Malrific (+2 MS):
-- [Gauntlets of the Corrupted Protector](<https://www.wowhead.com/cata/item=78178/gauntlets-of-the-corrupted-protector>) (397) (MS) -- received on **Friday, 2025-03-28**
-- [Chest of the Corrupted Protector](<https://www.wowhead.com/cata/item=78179/chest-of-the-corrupted-protector>) (397) (MS) -- received on **Friday, 2025-03-28**
+Vanarann (+2 MS):
+- [Soulshifter Vortex](<https://www.wowhead.com/cata/item=77206/soulshifter-vortex>) (397) (MS) -- received on Wednesday, 2025-03-26
+- [Kiril, Fury of Beasts](<https://www.wowhead.com/cata/item=77194/kiril,-fury-of-beasts>) (403) (MS) -- received on **Sunday, 2025-03-30**
 
 Angelofruin (+1 MS):
 - [Chest of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78174/chest-of-the-corrupted-vanquisher>) (397) (MS) -- received on Wednesday, 2025-03-26
@@ -29,10 +35,10 @@ Bladehero (+1 MS):
 - [Crown of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78182/crown-of-the-corrupted-conqueror>) (397) (MS) -- received on Wednesday, 2025-03-26
 
 Fortwntty (+1 MS):
-- [Signet of Grasping Mouths](<https://www.wowhead.com/cata/item=78011/signet-of-grasping-mouths>) (397) (MS) -- received on **Friday, 2025-03-28**
+- [Signet of Grasping Mouths](<https://www.wowhead.com/cata/item=78011/signet-of-grasping-mouths>) (397) (MS) -- received on Friday, 2025-03-28
 
 Gnoraa (+1 MS):
-- [Gloves of Liquid Smoke](<https://www.wowhead.com/cata/item=78357/gloves-of-liquid-smoke>) (403) (MS) -- received on **Friday, 2025-03-28**
+- [Gloves of Liquid Smoke](<https://www.wowhead.com/cata/item=78357/gloves-of-liquid-smoke>) (403) (MS) -- received on Friday, 2025-03-28
 
 Gnoya (+1 MS):
 - [Heart of Unliving](<https://www.wowhead.com/cata/item=77199/heart-of-unliving>) (403) (MS) -- received on Wednesday, 2025-03-26
@@ -51,19 +57,20 @@ Shetknight (+1 MS):
 - [Runescriven Demon Collar](<https://www.wowhead.com/cata/item=77250/runescriven-demon-collar>) (397) (OS) -- received on Wednesday, 2025-03-26
 
 Thesuffering (+1 MS):
-- [Heart of Unliving](<https://www.wowhead.com/cata/item=77199/heart-of-unliving>) (403) (MS) -- received on **Friday, 2025-03-28**
-
-Vanarann (+1 MS):
-- [Soulshifter Vortex](<https://www.wowhead.com/cata/item=77206/soulshifter-vortex>) (397) (MS) -- received on Wednesday, 2025-03-26
+- [Heart of Unliving](<https://www.wowhead.com/cata/item=77199/heart-of-unliving>) (403) (MS) -- received on Friday, 2025-03-28
 
 Elisesolis (+0 MS):
-- [Hand of Morchok](<https://www.wowhead.com/cata/item=77212/hand-of-morchok>) (397) (OS) -- received on **Friday, 2025-03-28**
+- [Hand of Morchok](<https://www.wowhead.com/cata/item=77212/hand-of-morchok>) (397) (OS) -- received on Friday, 2025-03-28
 
 Jacegil (+0 MS):
-- [Girdle of Fungal Dreams](<https://www.wowhead.com/cata/item=78884/girdle-of-fungal-dreams>) (397) (OS) -- received on **Friday, 2025-03-28**
+- [Girdle of Fungal Dreams](<https://www.wowhead.com/cata/item=78884/girdle-of-fungal-dreams>) (397) (OS) -- received on Friday, 2025-03-28
 
 Miadog (+0 MS):
-- [Robe of Glowing Stone](<https://www.wowhead.com/cata/item=77263/robe-of-glowing-stone>) (397) (OS) -- received on **Friday, 2025-03-28**
+- [Robe of Glowing Stone](<https://www.wowhead.com/cata/item=77263/robe-of-glowing-stone>) (397) (OS) -- received on Friday, 2025-03-28
+
+Swiftbladess (+0 MS):
+- [Vishanka, Jaws of the Earth](<https://www.wowhead.com/cata/item=78359/vishanka,-jaws-of-the-earth>) (403) (OS) -- received on **Sunday, 2025-03-30**
+- [Reins of the Blazing Drake](<https://www.wowhead.com/cata/item=77067/reins-of-the-blazing-drake>) (ETC) -- received on **Sunday, 2025-03-30**
 
 Disenchanted items:
 - [Sporebeard Gauntlets](<https://www.wowhead.com/cata/item=78362/sporebeard-gauntlets>) (410) -- disenchanted on Wednesday, 2025-03-26
