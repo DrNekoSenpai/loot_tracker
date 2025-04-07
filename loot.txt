@@ -1,35 +1,66 @@
-# Loot log for **Wednesday, 2025-04-02**:
+# Loot log for Wednesday, 2025-04-02 and **Sunday, 2025-04-06**:
+
+Miadog (+5 MS):
+- [Leggings of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78181/leggings-of-the-corrupted-conqueror>) (397) (MS) -- received on **Sunday, 2025-04-06**
+- [Seal of the Seven Signs](<https://www.wowhead.com/cata/item=77204/seal-of-the-seven-signs>) (397) (MS) -- received on **Sunday, 2025-04-06**
+- [Gauntlets of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78183/gauntlets-of-the-corrupted-conqueror>) (397) (MS) -- received on **Sunday, 2025-04-06**
+- [Chest of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78184/chest-of-the-corrupted-conqueror>) (397) (MS) -- received on **Sunday, 2025-04-06**
+- [Gloves of Liquid Smoke](<https://www.wowhead.com/cata/item=78357/gloves-of-liquid-smoke>) (403) (MS) -- received on **Sunday, 2025-04-06**
+- [Insignia of the Corrupted Mind](<https://www.wowhead.com/cata/item=77203/insignia-of-the-corrupted-mind>) (397) (OS) -- received on **Sunday, 2025-04-06**
+
+Chunkofrock (+2 MS):
+- [Crown of the Corrupted Protector](<https://www.wowhead.com/cata/item=78177/crown-of-the-corrupted-protector>) (397) (MS) -- received on **Sunday, 2025-04-06**
+- [Maw of the Dragonlord](<https://www.wowhead.com/cata/item=77196/maw-of-the-dragonlord>) (403) (MS) -- received on **Sunday, 2025-04-06**
+- [Lightning Rod](<https://www.wowhead.com/cata/item=77221/lightning-rod>) (397) (OS) -- received on **Sunday, 2025-04-06**
 
 Halibutfilet (+2 MS):
-- [Leggings of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Wednesday, 2025-04-02**
-- [Starcatcher Compass](<https://www.wowhead.com/cata/item=77202/starcatcher-compass>) (397) (MS) -- received on **Wednesday, 2025-04-02**
+- [Leggings of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78171/leggings-of-the-corrupted-vanquisher>) (397) (MS) -- received on Wednesday, 2025-04-02
+- [Starcatcher Compass](<https://www.wowhead.com/cata/item=77202/starcatcher-compass>) (397) (MS) -- received on Wednesday, 2025-04-02
+
+Jacegil (+2 MS):
+- [Petrified Fungal Heart](<https://www.wowhead.com/cata/item=77262/petrified-fungal-heart>) (397) (MS) -- received on **Sunday, 2025-04-06**
+- [Treads of Sordid Screams](<https://www.wowhead.com/cata/item=77243/treads-of-sordid-screams>) (397) (MS) -- received on **Sunday, 2025-04-06**
 
 Sighanama (+2 MS):
-- [Gauntlets of the Corrupted Protector](<https://www.wowhead.com/cata/item=78178/gauntlets-of-the-corrupted-protector>) (397) (MS) -- received on **Wednesday, 2025-04-02**
-- [Chest of the Corrupted Protector](<https://www.wowhead.com/cata/item=78179/chest-of-the-corrupted-protector>) (397) (MS) -- received on **Wednesday, 2025-04-02**
+- [Gauntlets of the Corrupted Protector](<https://www.wowhead.com/cata/item=78178/gauntlets-of-the-corrupted-protector>) (397) (MS) -- received on Wednesday, 2025-04-02
+- [Chest of the Corrupted Protector](<https://www.wowhead.com/cata/item=78179/chest-of-the-corrupted-protector>) (397) (MS) -- received on Wednesday, 2025-04-02
 
-Axsel (+1 MS):
-- [Will of Unbinding](<https://www.wowhead.com/cata/item=77198/will-of-unbinding>) (403) (MS) -- received on **Wednesday, 2025-04-02**
+Angelofruin (+1 MS):
+- [Will of Unbinding](<https://www.wowhead.com/cata/item=77198/will-of-unbinding>) (403) (MS) -- received on Wednesday, 2025-04-02
+
+Axcelli (+1 MS):
+- [Shoulders of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78170/shoulders-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Sunday, 2025-04-06**
+
+Gingerlillie (+1 MS):
+- [Belt of the Beloved Companion](<https://www.wowhead.com/cata/item=77241/belt-of-the-beloved-companion>) (397) (MS) -- received on **Sunday, 2025-04-06**
 
 Miatotems (+1 MS):
-- [Belt of Shattered Elementium](<https://www.wowhead.com/cata/item=77237/belt-of-shattered-elementium>) (403) (MS) -- received on **Wednesday, 2025-04-02**
-- [Ti'tahk, the Steps of Time](<https://www.wowhead.com/cata/item=77190/titahk,-the-steps-of-time>) (403) (OS) -- received on **Wednesday, 2025-04-02**
+- [Belt of Shattered Elementium](<https://www.wowhead.com/cata/item=77237/belt-of-shattered-elementium>) (403) (MS) -- received on Wednesday, 2025-04-02
+- [Ti'tahk, the Steps of Time](<https://www.wowhead.com/cata/item=77190/titahk,-the-steps-of-time>) (403) (OS) -- received on Wednesday, 2025-04-02
 
 Phallipally (+1 MS):
-- [Crown of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78182/crown-of-the-corrupted-conqueror>) (397) (MS) -- received on **Wednesday, 2025-04-02**
-- [Pillarfoot Greaves](<https://www.wowhead.com/cata/item=77265/pillarfoot-greaves>) (397) (OS) -- received on **Wednesday, 2025-04-02**
+- [Crown of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78182/crown-of-the-corrupted-conqueror>) (397) (MS) -- received on Wednesday, 2025-04-02
+- [Pillarfoot Greaves](<https://www.wowhead.com/cata/item=77265/pillarfoot-greaves>) (397) (OS) -- received on Wednesday, 2025-04-02
 
 Shetknight (+1 MS):
-- [Gurthalak, Voice of the Deeps](<https://www.wowhead.com/cata/item=77191/gurthalak,-voice-of-the-deeps>) (403) (MS) -- received on **Wednesday, 2025-04-02**
+- [Gurthalak, Voice of the Deeps](<https://www.wowhead.com/cata/item=77191/gurthalak,-voice-of-the-deeps>) (403) (MS) -- received on Wednesday, 2025-04-02
+
+Snedcharos (+1 MS):
+- [Eye of Unmaking](<https://www.wowhead.com/cata/item=77200/eye-of-unmaking>) (403) (MS) -- received on **Sunday, 2025-04-06**
 
 Vanarann (+1 MS):
-- [Shoulders of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78170/shoulders-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Wednesday, 2025-04-02**
+- [Shoulders of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78170/shoulders-of-the-corrupted-vanquisher>) (397) (MS) -- received on Wednesday, 2025-04-02
 
 Vanthulhu (+1 MS):
-- [Cord of the Slain Champion](<https://www.wowhead.com/cata/item=77255/cord-of-the-slain-champion>) (397) (MS) -- received on **Wednesday, 2025-04-02**
-- [Bracers of the Banished](<https://www.wowhead.com/cata/item=77249/bracers-of-the-banished>) (397) (OS) -- received on **Wednesday, 2025-04-02**
+- [Cord of the Slain Champion](<https://www.wowhead.com/cata/item=77255/cord-of-the-slain-champion>) (397) (MS) -- received on Wednesday, 2025-04-02
+- [Bracers of the Banished](<https://www.wowhead.com/cata/item=77249/bracers-of-the-banished>) (397) (OS) -- received on Wednesday, 2025-04-02
+
+Zguis (+0 MS):
+- [Spine of the Thousand Cuts](<https://www.wowhead.com/cata/item=78878/spine-of-the-thousand-cuts>) (397) (OS) -- received on **Sunday, 2025-04-06**
+- [Blade of the Unmaker](<https://www.wowhead.com/cata/item=77189/blade-of-the-unmaker>) (403) (OS) -- received on **Sunday, 2025-04-06**
 
 Disenchanted items:
-- [Rockhide Bracers](<https://www.wowhead.com/cata/item=77270/rockhide-bracers>) (397) -- disenchanted on **Wednesday, 2025-04-02**
-- [Soulshifter Vortex](<https://www.wowhead.com/cata/item=77206/soulshifter-vortex>) (397) -- disenchanted on **Wednesday, 2025-04-02**
-- [Stillheart Warboots](<https://www.wowhead.com/cata/item=77246/stillheart-warboots>) (397) -- disenchanted on **Wednesday, 2025-04-02**
+- [Rockhide Bracers](<https://www.wowhead.com/cata/item=77270/rockhide-bracers>) (397) -- disenchanted on Wednesday, 2025-04-02
+- [Soulshifter Vortex](<https://www.wowhead.com/cata/item=77206/soulshifter-vortex>) (397) -- disenchanted on Wednesday, 2025-04-02
+- [Stillheart Warboots](<https://www.wowhead.com/cata/item=77246/stillheart-warboots>) (397) -- disenchanted on Wednesday, 2025-04-02
+- [Razor Saronite Chip](<https://www.wowhead.com/cata/item=77213/razor-saronite-chip>) (397) -- disenchanted on **Sunday, 2025-04-06**

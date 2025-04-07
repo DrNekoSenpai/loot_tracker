@@ -190,6 +190,10 @@ def award_loot_auto(players):
     if loot_text: print(f"Item found: {loot_text}")
     else: 
         print("No item found. Please double-check that we are rolling off an item. Aborting.")
+
+        # Display image
+        image.show()
+        
         return players
 
     item_matches = []
@@ -209,6 +213,10 @@ def award_loot_auto(players):
         item_matches = [x for x in item_matches if x]
         if len(item_matches) == 0:
             print("No matches found. Please double-check the item name and try again.")
+
+            # Display image for debugging purposes.
+            image.show()
+
             return players
         
         elif len(item_matches) > 10: 
