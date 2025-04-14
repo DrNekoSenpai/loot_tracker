@@ -310,6 +310,7 @@ def award_loot_manual(players):
         item_match = item_matches[0]
 
     elif len(item_matches) > 1: 
+        item_matches.sort(key=lambda x: (x.ilvl, x.name))
         # We'll print all of the matches, and ask them to select one. 
         print("Multiple matches found. Please select one of the following:")
         for i in range(len(item_matches)): 
