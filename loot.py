@@ -592,7 +592,7 @@ def export_loot():
             if len(loot_dates) == 1: f.write(f"**{day}, {date}**:\n\n")
             elif ind == last_date: f.write(f"and **{day}, {date}**:\n\n")
             elif len(loot_dates) == 2: f.write(f"{day}, {date} ")
-            else: f.write(f"{day}, {date}, ")
+            else: f.write(f"{day}, {date}; ")
 
         # Print out the list of players.
         for p in players:

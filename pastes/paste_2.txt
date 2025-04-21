@@ -1,6 +1,27 @@
-- [Treads of Dormant Dreams](<https://www.wowhead.com/cata/item=77251/treads-of-dormant-dreams>) (397) -- disenchanted on Wednesday, 2025-04-09
-- [Grotesquely Writhing Bracers](<https://www.wowhead.com/cata/item=77257/grotesquely-writhing-bracers>) (397) -- disenchanted on **Sunday, 2025-04-13**
-- [Electrowing Dagger](<https://www.wowhead.com/cata/item=77220/electrowing-dagger>) (397) -- disenchanted on **Sunday, 2025-04-13**
-- [Morningstar of Heroic Will](<https://www.wowhead.com/cata/item=77223/morningstar-of-heroic-will>) (397) -- disenchanted on **Sunday, 2025-04-13**
-- [Molten Blood Footpads](<https://www.wowhead.com/cata/item=77238/molten-blood-footpads>) (403) -- disenchanted on **Sunday, 2025-04-13**
+- [Horrifying Horn Arbalest](<https://www.wowhead.com/cata/item=77215/horrifying-horn-arbalest>) (397) (OS) -- received on **Sunday, 2025-04-20**
+
+Zynrenner (+1 MS):
+- [Chest of the Corrupted Protector](<https://www.wowhead.com/cata/item=78179/chest-of-the-corrupted-protector>) (397) (MS) -- received on Wednesday, 2025-04-16
+
+Chunkofrock (+0 MS):
+- [Shoulders of the Corrupted Protector](<https://www.wowhead.com/cata/item=78175/shoulders-of-the-corrupted-protector>) (397) (OS) -- received on **Sunday, 2025-04-20**
+- [Imperfect Specimens 27 and 28](<https://www.wowhead.com/cata/item=77242/imperfect-specimens-27-and-28>) (397) (OS) -- received on **Sunday, 2025-04-20**
+- [Rathrak, the Poisonous Mind](<https://www.wowhead.com/cata/item=77195/rathrak,-the-poisonous-mind>) (403) (OS) -- received on **Sunday, 2025-04-20**
+
+Elisesolis (+0 MS):
+- [Reins of the Blazing Drake](<https://www.wowhead.com/cata/item=77067/reins-of-the-blazing-drake>) (ETC) -- received on Wednesday, 2025-04-16
+
+Flightyknite (+0 MS):
+- [Runescriven Demon Collar](<https://www.wowhead.com/cata/item=77250/runescriven-demon-collar>) (397) (OS) -- received on **Sunday, 2025-04-20**
+- [Plans: Foundations of Courage](<https://www.wowhead.com/cata/item=72013/plans:-foundations-of-courage>) (ETC) -- received on **Sunday, 2025-04-20**
+
+Disenchanted items:
+- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=77267/mosswrought-shoulderguards>) (397) -- disenchanted on Wednesday, 2025-04-16
+- [Girdle of Soulful Mending](<https://www.wowhead.com/cata/item=78887/girdle-of-soulful-mending>) (397) -- disenchanted on Wednesday, 2025-04-16
+- [Dragonfracture Belt](<https://www.wowhead.com/cata/item=77244/dragonfracture-belt>) (397) -- disenchanted on Wednesday, 2025-04-16
+- [Resolve of Undying](<https://www.wowhead.com/cata/item=77201/resolve-of-undying>) (403) -- disenchanted on Wednesday, 2025-04-16
+- [Dragoncarver Belt](<https://www.wowhead.com/cata/item=78885/dragoncarver-belt>) (397) -- disenchanted on **Sunday, 2025-04-20**
+- [Mycosynth Wristguards](<https://www.wowhead.com/cata/item=78372/mycosynth-wristguards>) (410) -- disenchanted on **Sunday, 2025-04-20**
+- [Hand of Morchok](<https://www.wowhead.com/cata/item=78371/hand-of-morchok>) (410) -- disenchanted on **Sunday, 2025-04-20**
+- [Gauntlets of the Golden Thorn](<https://www.wowhead.com/cata/item=77235/gauntlets-of-the-golden-thorn>) (403) -- disenchanted on **Sunday, 2025-04-20**
 
