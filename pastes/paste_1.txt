@@ -1,27 +1,38 @@
-# Loot log for **Wednesday, 2025-05-07**:
+# Loot log for Wednesday, 2025-05-07 and **Sunday, 2025-05-11**:
 
 Qusom (+4 MS):
-- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=78366/mosswrought-shoulderguards>) (410) (MS) -- received on **Wednesday, 2025-05-07**
-- [Cunning of the Cruel](<https://www.wowhead.com/cata/item=77208/cunning-of-the-cruel>) (397) (MS) -- received on **Wednesday, 2025-05-07**
-- [Visage of the Destroyer](<https://www.wowhead.com/cata/item=77225/visage-of-the-destroyer>) (397) (MS) -- received on **Wednesday, 2025-05-07**
-- [Crown of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78172/crown-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Wednesday, 2025-05-07**
-- [Pattern: Dreamwraps of the Light](<https://www.wowhead.com/cata/item=72003/pattern:-dreamwraps-of-the-light>) (ETC) -- received on **Wednesday, 2025-05-07**
+- [Mosswrought Shoulderguards](<https://www.wowhead.com/cata/item=78366/mosswrought-shoulderguards>) (410) (MS) -- received on Wednesday, 2025-05-07
+- [Cunning of the Cruel](<https://www.wowhead.com/cata/item=77208/cunning-of-the-cruel>) (397) (MS) -- received on Wednesday, 2025-05-07
+- [Visage of the Destroyer](<https://www.wowhead.com/cata/item=77225/visage-of-the-destroyer>) (397) (MS) -- received on Wednesday, 2025-05-07
+- [Crown of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78172/crown-of-the-corrupted-vanquisher>) (397) (MS) -- received on Wednesday, 2025-05-07
+- [Pattern: Dreamwraps of the Light](<https://www.wowhead.com/cata/item=72003/pattern:-dreamwraps-of-the-light>) (ETC) -- received on Wednesday, 2025-05-07
 
-Zynrenner (+2 MS):
-- [Insignia of the Corrupted Mind](<https://www.wowhead.com/cata/item=77203/insignia-of-the-corrupted-mind>) (397) (MS) -- received on **Wednesday, 2025-05-07**
-- [Shoulders of the Corrupted Protector](<https://www.wowhead.com/cata/item=78175/shoulders-of-the-corrupted-protector>) (397) (MS) -- received on **Wednesday, 2025-05-07**
-- [Chest of the Corrupted Protector](<https://www.wowhead.com/cata/item=78179/chest-of-the-corrupted-protector>) (397) (OS) -- received on **Wednesday, 2025-05-07**
+Zynrenner (+4 MS):
+- [Insignia of the Corrupted Mind](<https://www.wowhead.com/cata/item=77203/insignia-of-the-corrupted-mind>) (397) (MS) -- received on Wednesday, 2025-05-07
+- [Shoulders of the Corrupted Protector](<https://www.wowhead.com/cata/item=78175/shoulders-of-the-corrupted-protector>) (397) (MS) -- received on Wednesday, 2025-05-07
+- [Rathrak, the Poisonous Mind](<https://www.wowhead.com/cata/item=77195/rathrak,-the-poisonous-mind>) (403) (MS) -- received on **Sunday, 2025-05-11**
+- [Rathrak, the Poisonous Mind](<https://www.wowhead.com/cata/item=77195/rathrak,-the-poisonous-mind>) (403) (MS) -- received on **Sunday, 2025-05-11**
+- [Chest of the Corrupted Protector](<https://www.wowhead.com/cata/item=78179/chest-of-the-corrupted-protector>) (397) (OS) -- received on Wednesday, 2025-05-07
 
-Fortwntty (+1 MS):
-- [Razor Saronite Chip](<https://www.wowhead.com/cata/item=78369/razor-saronite-chip>) (410) (MS) -- received on **Wednesday, 2025-05-07**
+Miatotems (+3 MS):
+- [Leggings of the Corrupted Protector](<https://www.wowhead.com/cata/item=78857/leggings-of-the-corrupted-protector>) (410) (MS) -- received on **Sunday, 2025-05-11**
+- [Imperfect Specimens 27 and 28](<https://www.wowhead.com/cata/item=78435/imperfect-specimens-27-and-28>) (410) (MS) -- received on **Sunday, 2025-05-11**
+- [Maw of the Dragonlord](<https://www.wowhead.com/cata/item=77196/maw-of-the-dragonlord>) (403) (MS) -- received on **Sunday, 2025-05-11**
+- [Shoulders of the Corrupted Protector](<https://www.wowhead.com/cata/item=78175/shoulders-of-the-corrupted-protector>) (397) (OS) -- received on **Sunday, 2025-05-11**
 
-Snedcharos (+1 MS):
-- [Curled Twilight Claw](<https://www.wowhead.com/cata/item=78013/curled-twilight-claw>) (397) (MS) -- received on **Wednesday, 2025-05-07**
+Axcelli (+2 MS):
+- [Interrogator's Bloody Footpads](<https://www.wowhead.com/cata/item=78402/interrogators-bloody-footpads>) (410) (MS) -- received on **Sunday, 2025-05-11**
+- [Gauntlets of the Corrupted Vanquisher](<https://www.wowhead.com/cata/item=78173/gauntlets-of-the-corrupted-vanquisher>) (397) (MS) -- received on **Sunday, 2025-05-11**
 
-Miadog (+0 MS):
-- [Leggings of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78181/leggings-of-the-corrupted-conqueror>) (397) (OS) -- received on **Wednesday, 2025-05-07**
-- [Gauntlets of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78183/gauntlets-of-the-corrupted-conqueror>) (397) (OS) -- received on **Wednesday, 2025-05-07**
+Baskerfield (+2 MS):
+- [Graveheart Bracers](<https://www.wowhead.com/cata/item=77258/graveheart-bracers>) (397) (MS) -- received on **Sunday, 2025-05-11**
+- [Blackhorn's Mighty Bulwark](<https://www.wowhead.com/cata/item=77226/blackhorns-mighty-bulwark>) (397) (MS) -- received on **Sunday, 2025-05-11**
+- [Waistguard of Bleeding Bone](<https://www.wowhead.com/cata/item=78888/waistguard-of-bleeding-bone>) (397) (OS) -- received on **Sunday, 2025-05-11**
 
-Disenchanted items:
-- [Runescriven Demon Collar](<https://www.wowhead.com/cata/item=77250/runescriven-demon-collar>) (397) -- disenchanted on **Wednesday, 2025-05-07**
+Miadog (+2 MS):
+- [Maw of the Dragonlord](<https://www.wowhead.com/cata/item=77196/maw-of-the-dragonlord>) (403) (MS) -- received on **Sunday, 2025-05-11**
+- [Maw of the Dragonlord](<https://www.wowhead.com/cata/item=77196/maw-of-the-dragonlord>) (403) (MS) -- received on **Sunday, 2025-05-11**
+- [Leggings of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78181/leggings-of-the-corrupted-conqueror>) (397) (OS) -- received on Wednesday, 2025-05-07
+- [Gauntlets of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78183/gauntlets-of-the-corrupted-conqueror>) (397) (OS) -- received on Wednesday, 2025-05-07
 
+Angelofruin (+1 MS):
