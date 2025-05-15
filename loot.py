@@ -401,7 +401,6 @@ def award_loot(players, item_match):
 
     player_matches = []
     for p in players:
-        if p._attendance == False: continue
         if name in p.alias.lower(): 
             player_matches.append(p)
 
@@ -414,6 +413,20 @@ def award_loot(players, item_match):
         player = player_matches[0]
 
     elif len(player_matches) > 1:
+        # If there's multiple matches, first try and see if one or more of them are already attending. 
+        # If so, we should remove all of the non-attending players from the list.
+        attending_matches = []
+        for p in player_matches:
+            if p._attendance == True: 
+                attending_matches.append(p)
+
+        if len(attending_matches) == 1:
+            # We'll select this match, and then move on.
+            player = attending_matches[0]
+
+        elif len(attending_matches) > 1:
+            player_matches = attending_matches
+
         # We'll print all of the matches, and ask them to select one.
         print("Multiple matches found. Please select one of the following:")
         for i in range(len(player_matches)):
@@ -702,7 +715,6 @@ def remove_loot(players):
     player = input("Enter the name of the player who we are removing from: ").lower()
     player_matches = []
     for p in players:
-        if p._attendance == False: continue
         if player in p.alias.lower(): 
             player_matches.append(p)
 
