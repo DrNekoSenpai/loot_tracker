@@ -1,33 +1,37 @@
-# Loot log for **Wednesday, 2025-05-14**:
+# Loot log for **Sunday, 2025-05-25**:
 
-Sighanama (+5 MS):
-- [Sporebeard Gauntlets](<https://www.wowhead.com/cata/item=78362/sporebeard-gauntlets>) (410) (MS) -- received on **Wednesday, 2025-05-14**
-- [Horrifying Horn Arbalest](<https://www.wowhead.com/cata/item=77215/horrifying-horn-arbalest>) (397) (MS) -- received on **Wednesday, 2025-05-14**
-- [Shoulders of the Corrupted Protector](<https://www.wowhead.com/cata/item=78175/shoulders-of-the-corrupted-protector>) (397) (MS) -- received on **Wednesday, 2025-05-14**
-- [Chest of the Corrupted Protector](<https://www.wowhead.com/cata/item=78179/chest-of-the-corrupted-protector>) (397) (MS) -- received on **Wednesday, 2025-05-14**
-- [Crown of the Corrupted Protector](<https://www.wowhead.com/cata/item=78177/crown-of-the-corrupted-protector>) (397) (MS) -- received on **Wednesday, 2025-05-14**
+Prunejuuce (+2 MS):
+- [Blackhorn's Mighty Bulwark](<https://www.wowhead.com/cata/item=77226/blackhorns-mighty-bulwark>) (397) (MS) -- received on **Sunday, 2025-05-25**
+- [Crown of the Corrupted Protector](<https://www.wowhead.com/cata/item=78177/crown-of-the-corrupted-protector>) (397) (MS) -- received on **Sunday, 2025-05-25**
 
-Chunkofrock (+1 MS):
-- [Leggings of the Corrupted Protector](<https://www.wowhead.com/cata/item=78857/leggings-of-the-corrupted-protector>) (410) (MS) -- received on **Wednesday, 2025-05-14**
+Snedcharos (+2 MS):
+- [Souldrinker](<https://www.wowhead.com/cata/item=77193/souldrinker>) (403) (MS) -- received on **Sunday, 2025-05-25**
+- [Souldrinker](<https://www.wowhead.com/cata/item=77193/souldrinker>) (403) (MS) -- received on **Sunday, 2025-05-25**
+- [Graveheart Bracers](<https://www.wowhead.com/cata/item=77258/graveheart-bracers>) (397) (OS) -- received on **Sunday, 2025-05-25**
 
-Phallipally (+1 MS):
-- [Breathstealer Band](<https://www.wowhead.com/cata/item=77230/breathstealer-band>) (397) (MS) -- received on **Wednesday, 2025-05-14**
-- [Sash of Relentless Truth](<https://www.wowhead.com/cata/item=78879/sash-of-relentless-truth>) (397) (OS) -- received on **Wednesday, 2025-05-14**
+Angelofruin (+1 MS):
+- [Reins of the Blazing Drake](<https://www.wowhead.com/cata/item=77067/reins-of-the-blazing-drake>) (85) (MS) -- received on **Sunday, 2025-05-25**
+- [Dragoncarver Belt](<https://www.wowhead.com/cata/item=78885/dragoncarver-belt>) (397) (OS) -- received on **Sunday, 2025-05-25**
+- [Lightning Rod](<https://www.wowhead.com/cata/item=77221/lightning-rod>) (397) (OS) -- received on **Sunday, 2025-05-25**
 
-Shetknight (+1 MS):
-- [Experimental Specimen Slicer](<https://www.wowhead.com/cata/item=78403/experimental-specimen-slicer>) (410) (MS) -- received on **Wednesday, 2025-05-14**
+Axsel (+1 MS):
+- [Chest of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78184/chest-of-the-corrupted-conqueror>) (397) (MS) -- received on **Sunday, 2025-05-25**
 
-Gnoya (+0 MS):
-- [Gauntlets of the Corrupted Conqueror](<https://www.wowhead.com/cata/item=78183/gauntlets-of-the-corrupted-conqueror>) (397) (OS) -- received on **Wednesday, 2025-05-14**
+Flightyknite (+1 MS):
+- [Eye of Unmaking](<https://www.wowhead.com/cata/item=77200/eye-of-unmaking>) (403) (MS) -- received on **Sunday, 2025-05-25**
 
-Snedcharos (+0 MS):
-- [Pillarfoot Greaves](<https://www.wowhead.com/cata/item=78361/pillarfoot-greaves>) (410) (OS) -- received on **Wednesday, 2025-05-14**
-- [Spine of the Thousand Cuts](<https://www.wowhead.com/cata/item=78878/spine-of-the-thousand-cuts>) (397) (OS) -- received on **Wednesday, 2025-05-14**
-- [Ataraxis, Cudgel of the Warmaster](<https://www.wowhead.com/cata/item=77224/ataraxis,-cudgel-of-the-warmaster>) (397) (OS) -- received on **Wednesday, 2025-05-14**
+Halibutfilet (+1 MS):
+- [Interrogator's Bloody Footpads](<https://www.wowhead.com/cata/item=78402/interrogators-bloody-footpads>) (410) (MS) -- received on **Sunday, 2025-05-25**
 
-Spinaldruid (+0 MS):
-- [Ledger of Revolting Rituals](<https://www.wowhead.com/cata/item=77245/ledger-of-revolting-rituals>) (397) (OS) -- received on **Wednesday, 2025-05-14**
+Zguis (+1 MS):
+- [Leggings of the Corrupted Protector](<https://www.wowhead.com/cata/item=78857/leggings-of-the-corrupted-protector>) (410) (MS) -- received on **Sunday, 2025-05-25**
 
-Swiftbladess (+0 MS):
-- [Pattern: Bracers of Flowing Serenity](<https://www.wowhead.com/cata/item=72008/pattern:-bracers-of-flowing-serenity>) (ETC) -- received on **Wednesday, 2025-05-14**
+Chunkofrock (+0 MS):
+- [Gauntlets of the Corrupted Protector](<https://www.wowhead.com/cata/item=78178/gauntlets-of-the-corrupted-protector>) (397) (OS) -- received on **Sunday, 2025-05-25**
+- [Morningstar of Heroic Will](<https://www.wowhead.com/cata/item=77223/morningstar-of-heroic-will>) (397) (OS) -- received on **Sunday, 2025-05-25**
+- [Belt of Shattered Elementium](<https://www.wowhead.com/cata/item=77237/belt-of-shattered-elementium>) (403) (OS) -- received on **Sunday, 2025-05-25**
 
+Disenchanted items:
+- [Rockhide Bracers](<https://www.wowhead.com/cata/item=77270/rockhide-bracers>) (397) -- disenchanted on **Sunday, 2025-05-25**
+- [Mycosynth Wristguards](<https://www.wowhead.com/cata/item=77261/mycosynth-wristguards>) (397) -- disenchanted on **Sunday, 2025-05-25**
+- [Shoulders of the Corrupted Protector](<https://www.wowhead.com/cata/item=78175/shoulders-of-the-corrupted-protector>) (397) -- disenchanted on **Sunday, 2025-05-25**

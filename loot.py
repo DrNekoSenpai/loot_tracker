@@ -427,25 +427,25 @@ def award_loot(players, item_match):
         elif len(attending_matches) > 1:
             player_matches = attending_matches
 
-        # We'll print all of the matches, and ask them to select one.
-        print("Multiple matches found. Please select one of the following:")
-        for i in range(len(player_matches)):
-            print(f"{i+1}. {player_matches[i].alias}")
+            # We'll print all of the matches, and ask them to select one.
+            print("Multiple matches found. Please select one of the following:")
+            for i in range(len(player_matches)):
+                print(f"{i+1}. {player_matches[i].alias}")
 
-        # We'll ask the user to select a number.
-        sel = input("Select a number: ")
-        try:
-            sel = int(sel)
-            if sel < 1 or sel > len(player_matches):
-                print("Invalid integer input.")
+            # We'll ask the user to select a number.
+            sel = input("Select a number: ")
+            try:
+                sel = int(sel)
+                if sel < 1 or sel > len(player_matches):
+                    print("Invalid integer input.")
+                    return players
+                
+            except:
+                print("Invalid non-convertible input.")
                 return players
-            
-        except:
-            print("Invalid non-convertible input.")
-            return players
 
-        # We'll select this match, and then move on.
-        player = player_matches[sel-1]
+            # We'll select this match, and then move on.
+            player = player_matches[sel-1]
 
     if player.name == "_disenchanted":
         print(f"{item_match.name} ({item_match.ilvl}) has been disenchanted.")
