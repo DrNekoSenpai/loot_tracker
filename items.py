@@ -1,242 +1,139 @@
-import requests, os, re, argparse
+import requests, os, re, argparse, html
 from tqdm import tqdm
+from bs4 import BeautifulSoup
 
-parser = argparse.ArgumentParser(description="Scrape item data from WoWHead.")
-parser.add_argument("--force", "-f", action="store_true", help="Force the script to start from the beginning.")
-parser.add_argument("--output", "-o", default="all-items-cata.scsv", help="Output file name.")
-args = parser.parse_args()
+def parse_item_data(html): 
+    out = {}
 
-def armor_subtype(text, base_type): 
-    text = text.lower()
-    base_type = base_type.strip()    
+    # g_items[86321].tooltip_enus = "<table><tr><td><!--nstart--><b class=\"q4\">Gao-Rei, Staff of the Legendary Protector<\/b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->496<\/span><!--bo--><br>Binds when picked up<!--ue--><table width=\"100%\"><tr><td>Two-Hand<\/td><th><!--scstart2:10--><span class=\"q1\">Staff<\/span><!--scend--><\/th><\/tr><\/table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->11,795 - 17,694 Damage<\/span><\/td>\n    <th>Speed <!--spd-->3.30<\/th>\n<\/tr><\/table><!--dps-->(4,468 damage per second)<br><span><!--stat3-->+1,223 Agility<\/span><br><span><!--stat7-->+1,835 Stamina<\/span><!--ebstats--><br><span class=\"q2\">+<!--rtg37-->828 Expertise<\/span><br><span class=\"q2\">+<!--rtg49-->795 Mastery<\/span><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><br \/><br><a href=\"\/mop-classic\/items\/gems?filter=81;5;0\" class=\"socket-hydraulic q0\">Sha-Touched<\/a><!--ps--><br \/><br \/>Durability 120 \/ 120<\/td><\/tr><\/table><table><tr><td>Requires Level <!--rlvl-->90<br><!--rr--><!--itemEffects:0--><span class=\"q\">&quot;Sha-Touched&quot;<\/span><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">73<\/span> <span class=\"moneysilver\">14<\/span> <span class=\"moneycopper\">70<\/span><\/div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Tsulong<\/div><\/td><\/tr><\/table>";
+
+    # g_items[87157].tooltip_enus = "<table><tr><td><!--nstart--><b class=\"q4\">Sunwrought Mail Hauberk<\/b><!--nend--><!--ndstart--><br \/><span style=\"color: #00FF00\">Heroic<\/span><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->509<\/span><!--bo--><br>Binds when picked up<!--ue--><table width=\"100%\"><tr><td>Chest<\/td><th><!--scstart4:3--><span class=\"q1\">Mail<\/span><!--scend--><\/th><\/tr><\/table><!--rf--><span><!--amr-->4210 Armor<\/span><br><span><!--stat3-->+1,220 Agility<\/span><br><span><!--stat7-->+2,071 Stamina<\/span><!--ebstats--><br><span class=\"q2\">+<!--rtg31-->684 Hit<\/span><br><span class=\"q2\">+<!--rtg36-->933 Haste<\/span><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><br \/><br><a href=\"\/mop-classic\/items\/gems?filter=81;2;0\" class=\"socket-red q0\">Red Socket<\/a><br><a href=\"\/mop-classic\/items\/gems?filter=81;3;0\" class=\"socket-yellow q0\">Yellow Socket<\/a><!--ps--><br><!--sb--><span class=\"q0\">Socket Bonus: +<!--ee15:0:90:750:0:0-->120 Agility<\/span><br \/><br \/>Durability 165 \/ 165<\/td><\/tr><\/table><table><tr><td>Requires Level <!--rlvl-->90<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">42<\/span> <span class=\"moneysilver\">47<\/span> <span class=\"moneycopper\">58<\/span><\/div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Tsulong<\/div><\/td><\/tr><\/table>";
+
+    # g_items[89239].tooltip_enus = "<table><tr><td><!--nstart--><b class=\"q4\">Chest of the Shadowy Vanquisher<\/b><!--nend--><!--ndstart--><!--ndend--><span class=\"q whtt-extra whtt-ilvl\"><br>Item Level <!--ilvl-->496<\/span><!--bo--><br>Binds when picked up<!--ue--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"\/mop-classic\/class=4\/rogue\" class=\"c4\">Rogue<\/a>, <a href=\"\/mop-classic\/class=6\/death-knight\" class=\"c6\">Death Knight<\/a>, <a href=\"\/mop-classic\/class=8\/mage\" class=\"c8\">Mage<\/a>, <a href=\"\/mop-classic\/class=11\/druid\" class=\"c11\">Druid<\/a><\/div><\/td><\/tr><\/table><table><tr><td>Requires Level <!--rlvl-->90<!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">50<\/span><\/div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Grand Empress Shek'zeer<\/div><\/td><\/tr><\/table>";
+
+    # 1) category
+    # <tr><td>Two-Hand<\/td><th><!--scstart2:10--><span class=\"q1\">Staff<\/span>
     
-    if "resilience" in text: return f"{base_type} (PvP)"
-    elif "random enchantment" in text: return f"{base_type} (Random)"
-    
-    elif "spirit" in text and "intellect" in text: return f"{base_type} (Intellect w/ Spirit)"
-    elif "dodge" in text or "parry" in text: return f"{base_type} (Tank)"
+    soup = BeautifulSoup(html, 'html.parser')
 
-    elif "hit rating" in text:
-        if "intellect" in text: return f"{base_type} (Intellect w/ Hit)" 
-        elif "agility" in text: return f"{base_type} (Agility w/ Hit)"
-        elif "strength" in text: return f"{base_type} (Strength w/ Hit)"
+    # A list of valid equipment slots to filter the correct <td>
+    valid_slots = {
+        'two-hand', 'one-hand', 'main hand', 'off hand',
+        'chest', 'head', 'legs', 'feet', 'hands',
+        'shoulder', 'waist', 'wrist', 'finger', 'neck', 'back', 'trinket'
+    }
+    armor_types = {
+        'cloth', 'leather', 'mail', 'plate'
+    }
 
-    elif "expertise rating" in text: 
-        if "agility" in text: return f"{base_type} (Agility w/ Expertise)"
-        elif "strength" in text: return f"{base_type} (Strength w/ Expertise)"
-
-    elif "intellect" in text: return f"{base_type} (Intellect)"
-    elif "agility" in text: return f"{base_type} (Agility)"
-    elif "strength" in text: return f"{base_type} (Strength)"
-
-    text = text.lower()
-
-    return f"{base_type}"
-
-def armor_tags(text, base_type): 
-    text = text.lower()
-    base_type = base_type.strip()
-    tags = []
-
-    if "resilience" in text: return ["PvP"]
-    elif "random enchantment" in text: return ["Random"]
-
-    def add_tag(tags, tag, text): 
-        if tag not in tags and tag in text: tags.append(tag)
-        return tags
-    
-    for _ in range(10): 
-        tags = add_tag(tags, "Intellect", text)
-        tags = add_tag(tags, "Spirit", text)
-        tags = add_tag(tags, "Agility", text)
-        tags = add_tag(tags, "Strength", text)
-        tags = add_tag(tags, "Dodge", text)
-        tags = add_tag(tags, "Parry", text)
-        tags = add_tag(tags, "Hit", text)
-        tags = add_tag(tags, "Expertise", text)
-        tags = add_tag(tags, "Haste", text)
-        tags = add_tag(tags, "Crit", text)
-        tags = add_tag(tags, "Mastery", text)
-
-    return tags
-
-def match_category(category:str): 
-    valid_categories = ["ETC", "Head", "Neck", "Shoulder", "Back", "Chest", "Wrist", "Hands", "Waist", "Legs", "Feet", "Ring", "Trinket", "Main-Hand", "Off-Hand", "Two-Hand", "Ranged", "Relic"]
-
-    if re.match(r"(Cloth|Leather|Mail|Plate)", category, re.IGNORECASE): category = category.split(" ")[1]
-    elif re.match(r"(One-Hand|Daggers|Fist Weapons)", category, re.IGNORECASE): category = "Main-Hand"
-    elif re.match(r"(Two-Hand|Staves|Polearms)", category, re.IGNORECASE): category = "Two-Hand"
-    elif re.match(r"(Held In Off-hand|Off hand)", category, re.IGNORECASE): category = "Off-Hand"
-    elif re.match(r"(Bows|Thrown|Crossbows|Guns|Wands)", category, re.IGNORECASE): category = "Ranged"
-    elif re.match(r"Finger", category, re.IGNORECASE): category = "Ring"
-    elif re.match(r"Back", category, re.IGNORECASE): category = "Back"
-    elif re.match(r"Neck", category, re.IGNORECASE): category = "Neck"
-    elif re.match(r"Trinket", category, re.IGNORECASE): category = "Trinket"
-    elif re.match(r"Relic", category, re.IGNORECASE): category = "Relic"
-
-    if category not in valid_categories: category = "ETC"
-
-    return category
-
-if __name__ == "__main__":
-    # Read IDs from file and split based on comma
-    with open("cata-ids.txt", "r", encoding="utf-8") as ids_file:
-        cata_ids = [i.strip() for i in ids_file.read().split(",")]
-
-    # Read items from file and process quotes and concatenations
-    with open("cata-items.txt", "r", encoding="utf-8") as items_file:
-        cata_items = [i.strip() for i in items_file.read().split(",")]
-        i = 0
-        while i < len(cata_items):
-            if '"' in cata_items[i]:
-                cata_items[i] = cata_items[i].replace('"', '') + ", " + cata_items[i+1].replace('"', '')
-                cata_items.pop(i + 1)
-            i += 1
-
-    # Assert that both lists are of the same length
-    assert len(cata_ids) == len(cata_items)
-    print(f"Number of items: {len(cata_items)}")
-
-    # Sort cata_items and cata_ids based on the items; by item name ascending, then by ID ascending
-    cata_items, cata_ids = zip(*sorted(zip(cata_items, cata_ids)))
-
-    tier_set_tokens = [
-        "Chest of the Forlorn Conqueror", 
-        "Chest of the Forlorn Protector",
-        "Chest of the Forlorn Vanquisher",
-        "Mantle of the Forlorn Conqueror",
-        "Mantle of the Forlorn Protector",
-        "Mantle of the Forlorn Vanquisher",
-        "Leggings of the Forlorn Conqueror",
-        "Leggings of the Forlorn Protector",
-        "Leggings of the Forlorn Vanquisher",
-        "Crown of the Forlorn Conqueror",
-        "Crown of the Forlorn Protector",
-        "Crown of the Forlorn Vanquisher",
-        "Shoulders of the Forlorn Conqueror",
-        "Shoulders of the Forlorn Protector",
-        "Shoulders of the Forlorn Vanquisher",
-    ]
-
-    # If the argparse flag is set, start from the beginning
-    if args.force:
-        with open(args.output, "w", encoding="utf-8") as all_items_file:
-            all_items_file.write("ID;Item;Item Level;Classes;Category;Binding;Version\n")
+    if re.search(r"Chest of the Shadowy (Conqueror|Protector|Vanquisher)", html):
+        out['category'] = "Tier Set Token"
 
     else: 
-        if not os.path.exists(args.output):
-            with open(args.output, "w", encoding="utf-8") as all_items_file:
-                all_items_file.write("ID;Item;Item Level;Classes;Category;Binding;Version\n")
+        for table in soup.find_all('table'):
+            tds = table.find_all('td')
+            span = table.find('span', class_='q1')
+            if tds and span:
+                td_text = tds[0].get_text(strip=True)
+                span_text = span.get_text(strip=True)
 
-        else: 
-            # Open the file and figure out where we left off
-            with open(args.output, "r", encoding="utf-8") as all_items_file:
-                lines = all_items_file.readlines()
-                last_item_id = lines[-1].split(";")[0]
-                last_item_index = cata_ids.index(last_item_id)
-                cata_ids = cata_ids[last_item_index + 1:]
-                cata_items = cata_items[last_item_index + 1:]
-
-    ilvl_pattern = re.compile(r"Item Level <!--ilvl-->(\d+)", re.IGNORECASE)
-    binding_pattern = re.compile(r"<br>Binds when (equipped|picked up)", re.IGNORECASE)
-
-    # Search only in this part of the text, beginning with the h1 and ending with the noscript tag
-    item_pattern = re.compile(r"<h1 class=\"heading-size-1\">(.*?)</h1>.*?<noscript>(.*?)</noscript>", re.DOTALL)
-    classes_pattern = re.compile(r'<a href="/cata/class=\d+/.*?" class="c\d+">(.*?)</a>')
-
-    armor_type_pattern = re.compile(r"<span class=\"q1\">(Cloth|Leather|Mail|Plate)<\/span>")
-    category_pattern = re.compile(r'<table width="100%"><tr><td>(.*?)</td>(?:<th>.*<span class="q1">(.*?)</span>)?')
-
-    unique_items = sorted(list(set(cata_items)))
-
-    for item in tqdm(unique_items):
-        item_written = False
-        with open(args.output, "a", encoding="utf-8") as all_items_file:
-            count = cata_items.count(item)
-
-            if count == 1: 
-                # Find the ID of the matching item
-                item_id = cata_ids[cata_items.index(item)]
-                item_url = item.replace(" ", "-").replace(",", "").lower()
-                url = f"https://www.wowhead.com/cata/item={item_id}/{item_url}"
-                difficulty = "Normal"
-                text = requests.get(url).text
-                text = item_pattern.search(text).group(2)
-
-                if ilvl_pattern.search(text): item_level = ilvl_pattern.search(text).group(1)
-                else: item_level = None
-
-                if binding_pattern.search(text): binding = f"Binds when {binding_pattern.search(text).group(1)}" 
-                else: binding = "Binds when picked up"
-
-                category = re.findall(category_pattern, text)[0] if category_pattern.search(text) else "ETC"
-                if category[1] in ["Cloth", "Leather", "Mail", "Plate"]: category = (category[1], category[0])
-                if type(category) is tuple: category = " ".join(category)
-
-                if item in tier_set_tokens: category = "Tier Set Token"
-
-                subcategory = armor_subtype(text, category)
-                if subcategory is not None: 
-                    subcategory = subcategory.replace("  ", " ")
+                if td_text.lower() in valid_slots and span_text.lower() in armor_types:
+                    out['category'] = f"{span_text} {td_text}"
                     
-                if re.match(r"(Plans|Pattern)", item): subcategory = "Plans/Patterns"
+                elif td_text.lower() in valid_slots:
+                    out['category'] = f"{td_text} {span_text}"
 
-                if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
-                else: classes = None
-                        
-                all_items_file.write(f"{item_id};{item};{item_level};{classes};{subcategory};{binding};{difficulty}\n")
-                
-            else: 
-                # Find the IDs of the matching items
-                item_ids = [cata_ids[i] for i, x in enumerate(cata_items) if x == item]
-                item_url = item.replace(" ", "-").replace(",", "").lower()
-                ilvls = []
-                bindings = []
+    print(f"Category: {out.get('category', 'Unknown')}")
 
-                for item_id in item_ids:
-                    url = f"https://www.wowhead.com/cata/item={item_id}/{item_url}"
-                    text = requests.get(url).text
-                    text = item_pattern.search(text).group(2)
+    # Item level
+    out['item_level'] = None
+    ilvl_match = re.search(r'Item Level <!--ilvl-->(\d+)', html)
+    if ilvl_match:
+        out['item_level'] = int(ilvl_match.group(1))
 
-                    if ilvl_pattern.search(text): item_level = ilvl_pattern.search(text).group(1)
-                    else: item_level = None
+    print(f'Item level: {out.get("item_level", "Unknown")}')
 
-                    ilvls.append(item_level)
+    # Classes
+    # <div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"\/mop-classic\/class=4\/rogue\" class=\"c4\">Rogue<\/a>, <a href=\"\/mop-classic\/class=6\/death-knight\" class=\"c6\">Death Knight<\/a>, <a href=\"\/mop-classic\/class=8\/mage\" class=\"c8\">Mage<\/a>, <a href=\"\/mop-classic\/class=11\/druid\" class=\"c11\">Druid<\/a><\/div>
 
-                    if binding_pattern.search(text): binding = f"Binds when {binding_pattern.search(text).group(1)}"
-                    else: binding = "Binds when picked up"
+    out['classes'] = []
+    classes_div = soup.find('div', class_='wowhead-tooltip-item-classes')
+    if classes_div:
+        classes_links = classes_div.find_all('a')
+        for link in classes_links:
+            class_name = link.get_text(strip=True)
+            out['classes'].append(class_name)
 
-                    bindings.append(binding)
+    if not out['classes']: out['classes'] = ['None']
 
-                category = re.findall(category_pattern, text)[0] if category_pattern.search(text) else "ETC"
-                if category[1] in ["Cloth", "Leather", "Mail", "Plate"]: category = (category[1], category[0])
-                if type(category) is tuple: category = " ".join(category)
-                category = category.replace("  ", " ")
-                subcategory = armor_subtype(text, category)
+    print(f'Classes: {", ".join(out.get("classes", []))}')
 
-                if classes_pattern.search(text): classes = ', '.join(classes_pattern.findall(text))
-                else: classes = None
+    return out
 
-                # Sort item_ids, ilvls, and binding by item level in descending order
-                item_ids, ilvls, bindings = zip(*sorted(zip(item_ids, ilvls, bindings), key=lambda x: x[1], reverse=True))
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Scrape item data from WoWHead.")
+    parser.add_argument("--force", "-f", action="store_true")
+    parser.add_argument("--output", "-o", default="all-items-mop.scsv")
+    args = parser.parse_args()
 
-                # Identify unique item levels and sort them in descending order
-                unique_ilvls = sorted(set(ilvls), reverse=True)
+    with open("mop-ids.txt", "r", encoding="utf-8") as ids_file:
+        mop_ids = [i.strip() for i in ids_file.read().split(",")]
 
-                # Create a mapping of item levels to difficulties
-                difficulty_map = {}
-                if len(unique_ilvls) == 1:
-                    difficulty_map[unique_ilvls[0]] = "Normal"
-                elif len(unique_ilvls) == 2:
-                    difficulty_map[unique_ilvls[0]] = "Heroic"
-                    difficulty_map[unique_ilvls[1]] = "Normal"
-                elif len(unique_ilvls) >= 3:
-                    difficulty_map[unique_ilvls[0]] = "Heroic"
-                    difficulty_map[unique_ilvls[1]] = "Normal"
-                    difficulty_map[unique_ilvls[2]] = "LFR"
+    with open("mop-items.txt", "r", encoding="utf-8") as items_file:
+        mop_items = [i.strip() for i in items_file.read().split(",")]
+        i = 0
+        while i < len(mop_items):
+            if '"' in mop_items[i]:
+                mop_items[i] = mop_items[i].replace('"', '') + ", " + mop_items[i+1].replace('"', '')
+                mop_items.pop(i + 1)
+            i += 1
 
-                # Assign difficulties to each item based on the item level
-                difficulties = [difficulty_map[ilvl] for ilvl in ilvls]
+    assert len(mop_ids) == len(mop_items)
+    mop_items, mop_ids = zip(*sorted(zip(mop_items, mop_ids)))
 
-                for i, item_id in enumerate(item_ids):
-                    all_items_file.write(f"{item_id};{item};{ilvls[i]};{classes};{subcategory};{bindings[i]};{difficulties[i]}\n")
+    tier_set_tokens = [
+        "Helm of the Shadowy Conqueror", "Helm of the Shadowy Protector", "Helm of the Shadowy Vanquisher",
+        "Shoulders of the Shadowy Conqueror", "Shoulders of the Shadowy Protector", "Shoulders of the Shadowy Vanquisher",
+        "Chest of the Shadowy Conqueror", "Chest of the Shadowy Protector", "Chest of the Shadowy Vanquisher",
+        "Gauntlets of the Shadowy Conqueror", "Gauntlets of the Shadowy Protector", "Gauntlets of the Shadowy Vanquisher",
+        "Leggings of the Shadowy Conqueror", "Leggings of the Shadowy Protector", "Leggings of the Shadowy Vanquisher",
+    ]
+
+    with open(args.output, "w", encoding="utf-8") as f:
+        f.write("ID;Item;Item Level;Classes;Category;Binding;Stats\n")
+
+    unique_items = sorted(set(mop_items))
+
+    selected_items = [
+        "Chest of the Shadowy Conqueror", "Chest of the Shadowy Protector", "Chest of the Shadowy Vanquisher",
+        "Gao-Rei, Staff of the Legendary Protector", "Sunwrought Mail Hauberk"
+    ]
+
+    for item in unique_items: # tqdm(unique_items):
+        # Debug to print entire HTML
+        if not item in selected_items: continue 
+        if not os.path.exists("./html"): os.makedirs("./html")
+
+        item_indices = [i for i, x in enumerate(mop_items) if x == item]
+        item_ids = [mop_ids[i] for i in item_indices]
+        item_url = item.replace(" ", "-").replace(",", "").lower()
+        item_data = []
+
+        for item_id in item_ids:
+            url = f"https://www.wowhead.com/mop-classic/item={item_id}/{item_url}"
+            item_html = requests.get(url).text
+            # Find line in HTML that contains the following: 
+            # g_items[89237].tooltip_enus, replace 89237 with actual item_id 
+            # Delete everything else in the HTML, we only need to keep this line 
+
+            item_html = re.search(r'g_items\[' + re.escape(item_id) + r'\]\.tooltip_enus\s*=\s*"(.*?)";', item_html, re.DOTALL)
+            if item_html: item_html = item_html.group(1)
+
+            item_html = item_html.replace("\\", "").replace("\\'", "'").replace('\\/', '/')
+            item_html = html.unescape(item_html)
+            
+            print(f"\nProcessing {item} (ID: {item_id})...")
+            parse_item_data(item_html)
+
+            with open(f"./html/{item_id}.html", "w", encoding="utf-8") as html_file:
+                html_file.write(item_html)

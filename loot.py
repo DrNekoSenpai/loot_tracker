@@ -107,9 +107,9 @@ def match_suffix(item_name, base_type):
     elif "mountainbed" in item_name: return armor_subtype("Stamina, Strength, Mastery, Expertise", base_type)
     else: return "Unknown"
 
-with open("all-items-cata.scsv", "r", encoding="utf-8") as cata_file: 
-    cata_items = cata_file.readlines()
-    for ind,item in enumerate(cata_items):
+with open("all-items-mop.scsv", "r", encoding="utf-8") as mop_file: 
+    mop_items = mop_file.readlines()
+    for ind,item in enumerate(mop_items):
         if ind == 0: continue # Header 
         # ID;Item;Item Level;Classes;Category;Bind;Version
         item = item.strip().split(";")
@@ -126,7 +126,7 @@ with open("all-items-cata.scsv", "r", encoding="utf-8") as cata_file:
 def import_pickle(): 
     # Import the pickle file
     try: 
-        with open('players_cata.pickle', 'rb') as f:
+        with open('players_mop.pickle', 'rb') as f:
             players = pickle.load(f)
 
     except FileNotFoundError:
@@ -138,7 +138,7 @@ def import_pickle():
 
 def export_pickle(players):
     # Export the pickle file
-    with open('players_cata.pickle', 'wb') as f:
+    with open('players_mop.pickle', 'wb') as f:
         pickle.dump(players, f)
 
 # We'll import the pickle if the "--force-new" argument is not present.
@@ -624,13 +624,13 @@ def export_loot():
             for l in p._raid_log:
                 if l.roll == "MS":
                     if re.match(r"(Conqueror|Protector|Vanquisher)", l.item.name):
-                        url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                        url = 'https://www.wowhead.com/mop_classic/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                         f.write(f"- [{l.item.name}](<{url}>) (MS) -- received on")
                         day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
                         date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
                         f.write(f" {date_string}\n")
                     else: 
-                        url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                        url = 'https://www.wowhead.com/mop_classic/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                         f.write(f"- [{l.item.name}](<{url}>) ({l.item.ilvl}) (MS) -- received on")
                         day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
                         date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
@@ -639,13 +639,13 @@ def export_loot():
             for l in p._raid_log:
                 if l.roll == "OS":
                     if re.match(r"(Conqueror|Protector|Vanquisher)", l.item.name):
-                        url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                        url = 'https://www.wowhead.com/mop_classic/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                         f.write(f"- [{l.item.name}](<{url}>) (OS) -- received on")
                         day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
                         date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
                         f.write(f" {date_string}\n")
                     else: 
-                        url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                        url = 'https://www.wowhead.com/mop_classic/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                         f.write(f"- [{l.item.name}](<{url}>) ({l.item.ilvl}) (OS) -- received on")
                         day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
                         date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
@@ -653,7 +653,7 @@ def export_loot():
 
             for l in p._raid_log:
                 if l.roll == "ETC":
-                    url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                    url = 'https://www.wowhead.com/mop_classic/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                     f.write(f"- [{l.item.name}](<{url}>) (ETC) -- received on")
                     day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
                     date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
@@ -673,7 +673,7 @@ def export_loot():
                 f.write(f"Disenchanted items:\n")
 
                 for l in p._raid_log:
-                    url = 'https://www.wowhead.com/cata/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
+                    url = 'https://www.wowhead.com/mop_classic/item=' + str(l.item.id) + '/' + l.item.name.replace(' ', '-').replace('\'', '').lower()
                     f.write(f"- [{l.item.name}](<{url}>) ({l.item.ilvl}) -- disenchanted on")
                     day_of_the_week = dates[datetime.strptime(l.date, "%Y-%m-%d").weekday()]
                     date_string = f"{day_of_the_week}, {l.date}" if l.date != last_raid else f"**{day_of_the_week}, {l.date}**"
@@ -831,7 +831,7 @@ def sudo_mode(players):
 
         confirm = input("Are you sure you want to wipe the pickle file? (y/n): ").lower()
         if confirm == "y":
-            os.remove("players_cata.pickle")
+            os.remove("players_mop.pickle")
 
         players = []
         players.append(Player("_disenchanted", "_disenchanted", ""))
