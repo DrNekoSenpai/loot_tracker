@@ -1,1 +1,519 @@
-ID;Item;Item Level;Classes;Category;Binding;Stats
+ID;Item;Item Level;Classes;Category;Binding;Primary Stats;Secondary Stats;Sockets;Socket Bonus
+85986;Amulet of Seven Curses;489;None;Neck;Binds when picked up;Intellect;Hit, Crit;None;None
+87028;Amulet of Seven Curses;502;None;Neck;Binds when picked up;Intellect;Hit, Crit;None;None
+86047;Amulet of the Hidden Kings;489;None;Neck;Binds when picked up;Agility;Expertise, Haste;None;None
+87045;Amulet of the Hidden Kings;502;None;Neck;Binds when picked up;Agility;Expertise, Haste;None;None
+86082;Arrow Breaking Windcloak;489;None;Back;Binds when picked up;Agility;Expertise, Haste;None;None
+87044;Arrow Breaking Windcloak;502;None;Back;Binds when picked up;Agility;Expertise, Haste;None;None
+86203;Articulated Legplates;496;None;Plate Legs;Binds when picked up;Strength;Hit, Parry;Red, Blue;Strength
+86944;Articulated Legplates;509;None;Plate Legs;Binds when picked up;Strength;Hit, Parry;Red, Blue;Strength
+86320;Asani's Uncleansed Sandals;496;None;Leather Feet;Binds when picked up;Intellect;Spirit, Haste;Yellow;Spirit
+87153;Asani's Uncleansed Sandals;509;None;Leather Feet;Binds when picked up;Intellect;Spirit, Haste;Yellow;Spirit
+90514;Asani's Uncleansed Sandals;516;None;Leather Feet;Binds when picked up;Intellect;Spirit, Haste;Yellow;Spirit
+90528;Asani's Uncleansed Sandals;503;None;Leather Feet;Binds when picked up;Intellect;Spirit, Haste;Yellow;Spirit
+86157;Attenuating Bracers;496;None;Cloth Wrist;Binds when picked up;Intellect;Mastery, Haste;None;None
+86948;Attenuating Bracers;509;None;Cloth Wrist;Binds when picked up;Intellect;Mastery, Haste;None;None
+89824;Band of Bursting Novas;489;None;Finger;Binds when picked up;Strength;Dodge, Expertise;None;None
+89824;Band of Bursting Novas;489;None;Finger;Binds when picked up;Strength;Dodge, Expertise;None;None
+89937;Band of Bursting Novas;502;None;Finger;Binds when picked up;Strength;Dodge, Expertise;None;None
+89937;Band of Bursting Novas;502;None;Finger;Binds when picked up;Strength;Dodge, Expertise;None;None
+85922;Beads of the Mogu'shi;489;None;Neck;Binds when picked up;Strength;Dodge, Expertise;None;None
+87016;Beads of the Mogu'shi;502;None;Neck;Binds when picked up;Strength;Dodge, Expertise;None;None
+86326;Belt of Embodied Terror;496;None;Cloth Waist;Binds when picked up;Intellect;Mastery, Spirit;Yellow, Blue;Spirit
+87161;Belt of Embodied Terror;509;None;Cloth Waist;Binds when picked up;Intellect;Mastery, Spirit;Yellow, Blue;Spirit
+86210;Belt of Malleable Amber;496;None;Cloth Waist;Binds when picked up;Intellect;Hit, Haste;Yellow, Blue;Haste
+86981;Belt of Malleable Amber;509;None;Cloth Waist;Binds when picked up;Intellect;Hit, Haste;Yellow, Blue;Haste
+86342;Binder's Chain of Unending Summer;496;None;Mail Waist;Binds when picked up;Intellect;Spirit, Haste;Blue;Spirit
+87183;Binder's Chain of Unending Summer;509;None;Mail Waist;Binds when picked up;Intellect;Spirit, Haste;Blue;Spirit
+86027;Bindings of Ancient Spirits;489;None;Plate Wrist;Binds when picked up;Intellect;Spirit, Haste;None;None
+87043;Bindings of Ancient Spirits;502;None;Plate Wrist;Binds when picked up;Intellect;Spirit, Haste;None;None
+89817;Bonded Soul Bracers;489;None;Plate Wrist;Binds when picked up;Strength;Expertise, Haste;None;None
+89934;Bonded Soul Bracers;502;None;Plate Wrist;Binds when picked up;Strength;Expertise, Haste;None;None
+86176;Bonebreaker Gauntlets;496;None;Leather Hands;Binds when picked up;Agility;Hit, Haste;Blue;Haste
+86964;Bonebreaker Gauntlets;509;None;Leather Hands;Binds when picked up;Agility;Hit, Haste;Blue;Haste
+86167;Boots of the Blowing Wind;496;None;Cloth Feet;Binds when picked up;Intellect;Spirit, Haste;Yellow;Haste
+86959;Boots of the Blowing Wind;509;None;Cloth Feet;Binds when picked up;Intellect;Spirit, Haste;Yellow;Haste
+86153;Boots of the Still Breath;496;None;Leather Feet;Binds when picked up;Agility;Crit, Haste;Yellow;None
+86943;Boots of the Still Breath;509;None;Leather Feet;Binds when picked up;Agility;Crit, Haste;Yellow;None
+86132;Bottle of Infinite Stars;489;None;Trinket;Binds when picked up;None;Mastery, Equip: Agility;None;None
+86132;Bottle of Infinite Stars;489;None;Trinket;Binds when picked up;None;Mastery, Equip: Agility;None;None
+87057;Bottle of Infinite Stars;502;None;Trinket;Binds when picked up;None;Mastery, Equip: Agility;None;None
+87057;Bottle of Infinite Stars;502;None;Trinket;Binds when picked up;None;Mastery, Equip: Agility;None;None
+86127;Bracers of Dark Thoughts;489;None;Leather Wrist;Binds when picked up;Intellect;Spirit, Crit;None;None
+87054;Bracers of Dark Thoughts;502;None;Leather Wrist;Binds when picked up;Intellect;Spirit, Crit;None;None
+86230;Bracers of Defiled Earth;496;None;Plate Wrist;Binds when picked up;Strength;Hit, Mastery;None;None
+87145;Bracers of Defiled Earth;509;None;Plate Wrist;Binds when picked up;Strength;Hit, Mastery;None;None
+90506;Bracers of Defiled Earth;516;None;Plate Wrist;Binds when picked up;Strength;Hit, Mastery;None;None
+90520;Bracers of Defiled Earth;503;None;Plate Wrist;Binds when picked up;Strength;Hit, Mastery;None;None
+85983;Bracers of Six Oxen;489;None;Plate Wrist;Binds when picked up;Strength;Dodge, Parry;None;None
+87025;Bracers of Six Oxen;502;None;Plate Wrist;Binds when picked up;Strength;Dodge, Parry;None;None
+86168;Bracers of Tempestuous Fury;496;None;Mail Wrist;Binds when picked up;Intellect;Spirit, Haste;None;None
+86962;Bracers of Tempestuous Fury;509;None;Mail Wrist;Binds when picked up;Intellect;Spirit, Haste;None;None
+86163;Bracers of Unseen Strikes;496;None;Leather Wrist;Binds when picked up;Agility;Crit, Haste;None;None
+86954;Bracers of Unseen Strikes;509;None;Leather Wrist;Binds when picked up;Agility;Crit, Haste;None;None
+89818;Bracers of Violent Meditation;489;None;Leather Wrist;Binds when picked up;Agility;Hit, Crit;None;None
+89935;Bracers of Violent Meditation;502;None;Leather Wrist;Binds when picked up;Agility;Hit, Crit;None;None
+86076;Breastplate of the Kings' Guard;489;None;Plate Chest;Binds when picked up;Strength;Mastery, Haste;Red, Yellow;Strength
+87048;Breastplate of the Kings' Guard;502;None;Plate Chest;Binds when picked up;Strength;Mastery, Haste;Red, Yellow;Strength
+85979;Cape of Three Lanterns;489;None;Back;Binds when picked up;Intellect;Spirit, Crit;None;None
+87018;Cape of Three Lanterns;502;None;Back;Binds when picked up;Intellect;Spirit, Crit;None;None
+86318;Casque of Expelled Corruption;496;None;Plate Head;Binds when picked up;Intellect;Spirit, Haste;Meta, Yellow;Intellect
+87155;Casque of Expelled Corruption;509;None;Plate Head;Binds when picked up;Intellect;Spirit, Haste;Meta, Yellow;Intellect
+90516;Casque of Expelled Corruption;516;None;Plate Head;Binds when picked up;Intellect;Spirit, Haste;Meta, Yellow;Intellect
+90530;Casque of Expelled Corruption;503;None;Plate Head;Binds when picked up;Intellect;Spirit, Haste;Meta, Yellow;Intellect
+85987;Chain of Shadow;489;None;Mail Waist;Binds when picked up;Intellect;Spirit, Crit;Yellow, Blue;Spirit
+87030;Chain of Shadow;502;None;Mail Waist;Binds when picked up;Intellect;Spirit, Crit;Yellow, Blue;Spirit
+89237;Chest of the Shadowy Conqueror;496;Paladin, Priest, Warlock;Tier Set Token;Binds when picked up;None;None;None;None
+89250;Chest of the Shadowy Conqueror;509;Paladin, Priest, Warlock;Tier Set Token;Binds when picked up;None;None;None;None
+89238;Chest of the Shadowy Protector;496;Warrior, Hunter, Shaman, Monk;Tier Set Token;Binds when picked up;None;None;None;None
+89251;Chest of the Shadowy Protector;509;Warrior, Hunter, Shaman, Monk;Tier Set Token;Binds when picked up;None;None;None;None
+89239;Chest of the Shadowy Vanquisher;496;Rogue, Death Knight, Mage, Druid;Tier Set Token;Binds when picked up;None;None;None;None
+89249;Chest of the Shadowy Vanquisher;509;Rogue, Death Knight, Mage, Druid;Tier Set Token;Binds when picked up;None;None;None;None
+89823;Chestguard of Eternal Vigilance;489;None;Plate Chest;Binds when picked up;Strength;Parry, Expertise;Red, Blue;Strength
+89941;Chestguard of Eternal Vigilance;502;None;Plate Chest;Binds when picked up;Strength;Parry, Expertise;Red, Blue;Strength
+86136;Chestguard of Total Annihilation;489;None;Leather Chest;Binds when picked up;Agility;Crit, Haste;Red, Yellow;Agility
+86136;Chestguard of Total Annihilation;489;None;Leather Chest;Binds when picked up;Agility;Crit, Haste;Red, Yellow;Agility
+87058;Chestguard of Total Annihilation;502;None;Leather Chest;Binds when picked up;Agility;Crit, Haste;Red, Yellow;Agility
+87058;Chestguard of Total Annihilation;502;None;Leather Chest;Binds when picked up;Agility;Crit, Haste;Red, Yellow;Agility
+86158;Chestplate of the Forbidden Tower;496;None;Plate Chest;Binds when picked up;Intellect;Mastery, Spirit;Red, Yellow;Intellect
+86952;Chestplate of the Forbidden Tower;509;None;Plate Chest;Binds when picked up;Intellect;Mastery, Spirit;Red, Yellow;Intellect
+87210;Chimera of Fear;513;None;;Binds when picked up;None;None;None;None
+86166;Choker of the Unleashed Storm;496;None;Neck;Binds when picked up;Agility;Mastery, Crit;None;None
+86953;Choker of the Unleashed Storm;509;None;Neck;Binds when picked up;Agility;Mastery, Crit;None;None
+86038;Circuit of the Frail Soul;489;None;Finger;Binds when picked up;Intellect;Spirit, Crit;None;None
+87040;Circuit of the Frail Soul;502;None;Finger;Binds when picked up;Intellect;Spirit, Crit;None;None
+89768;Claws of Amethyst;489;None;Cloth Hands;Binds when picked up;Intellect;Mastery, Crit;Blue;None
+89931;Claws of Amethyst;502;None;Cloth Hands;Binds when picked up;Intellect;Mastery, Crit;Blue;None
+86226;Claws of Shek'zeer;496;None;One-Hand;Binds when picked up;Agility;Crit, Expertise;None;None
+86988;Claws of Shek'zeer;509;None;One-Hand;Binds when picked up;Agility;Crit, Expertise;None;None
+86316;Cloak of Overwhelming Corruption;496;None;Back;Binds when picked up;Intellect;Mastery, Haste;None;None
+87150;Cloak of Overwhelming Corruption;509;None;Back;Binds when picked up;Intellect;Mastery, Haste;None;None
+90512;Cloak of Overwhelming Corruption;516;None;Back;Binds when picked up;Intellect;Mastery, Haste;None;None
+90526;Cloak of Overwhelming Corruption;503;None;Back;Binds when picked up;Intellect;Mastery, Haste;None;None
+85985;Cloak of Peacock Feathers;489;None;Back;Binds when picked up;Strength;Crit, Expertise;None;None
+87026;Cloak of Peacock Feathers;502;None;Back;Binds when picked up;Strength;Crit, Expertise;None;None
+86202;Cloak of Raining Blades;496;None;Back;Binds when picked up;Strength;Dodge, Mastery;None;None
+86980;Cloak of Raining Blades;509;None;Back;Binds when picked up;Strength;Dodge, Mastery;None;None
+86514;Clutches of Dying Hope;496;None;Leather Hands;Binds when picked up;Intellect;Crit, Haste;Blue;None
+86977;Clutches of Dying Hope;509;None;Leather Hands;Binds when picked up;Intellect;Crit, Haste;Blue;None
+89821;Crown of Keening Stars;489;None;Plate Head;Binds when picked up;Intellect;Spirit, Crit;Meta, Blue;Intellect
+89821;Crown of Keening Stars;489;None;Plate Head;Binds when picked up;Intellect;Spirit, Crit;Meta, Blue;Intellect
+89939;Crown of Keening Stars;502;None;Plate Head;Binds when picked up;Intellect;Spirit, Crit;Meta, Blue;Intellect
+89939;Crown of Keening Stars;502;None;Plate Head;Binds when picked up;Intellect;Spirit, Crit;Meta, Blue;Intellect
+86146;Crown of Opportunistic Strikes;489;None;Leather Head;Binds when picked up;Agility;Crit, Haste;Meta, Red;Agility
+87070;Crown of Opportunistic Strikes;502;None;Leather Head;Binds when picked up;Agility;Crit, Haste;Meta, Red;Agility
+86228;Crown of the Doomed Empress;496;None;Mail Head;Binds when picked up;Agility;Crit, Haste;Meta, Yellow;Agility
+86991;Crown of the Doomed Empress;509;None;Mail Head;Binds when picked up;Agility;Crit, Haste;Meta, Yellow;Agility
+86317;Cuffs of the Corrupted Waters;496;None;Cloth Wrist;Binds when picked up;Intellect;Mastery, Spirit;None;None
+87149;Cuffs of the Corrupted Waters;509;None;Cloth Wrist;Binds when picked up;Intellect;Mastery, Spirit;None;None
+90510;Cuffs of the Corrupted Waters;516;None;Cloth Wrist;Binds when picked up;Intellect;Mastery, Spirit;None;None
+90524;Cuffs of the Corrupted Waters;503;None;Cloth Wrist;Binds when picked up;Intellect;Mastery, Spirit;None;None
+86333;Cuirass of the Animated Protector;496;None;Plate Chest;Binds when picked up;Strength;Dodge, Mastery;Red, Yellow;Strength
+87171;Cuirass of the Animated Protector;509;None;Plate Chest;Binds when picked up;Strength;Dodge, Mastery;Red, Yellow;Strength
+85924;Dagger of the Seven Stars;489;None;One-Hand;Binds when picked up;Agility;Hit, Haste;None;None
+87012;Dagger of the Seven Stars;502;None;One-Hand;Binds when picked up;Agility;Hit, Haste;None;None
+86336;Darkmist Vortex;496;None;Trinket;Binds when picked up;Strength;Equip: Haste;None;None
+87172;Darkmist Vortex;509;None;Trinket;Binds when picked up;Strength;Equip: Haste;None;None
+86192;Darting Damselfly Cuffs;496;None;Cloth Wrist;Binds when equipped;Intellect;Spirit, Haste;None;None
+86325;Daybreak Drape;496;None;Back;Binds when picked up;Strength;Dodge, Parry;None;None
+87159;Daybreak Drape;509;None;Back;Binds when picked up;Strength;Dodge, Parry;None;None
+86232;Deepwater Greatboots;496;None;Plate Feet;Binds when picked up;Strength;Hit, Parry;Yellow;Parry
+87146;Deepwater Greatboots;509;None;Plate Feet;Binds when picked up;Strength;Hit, Parry;Yellow;Parry
+90507;Deepwater Greatboots;516;None;Plate Feet;Binds when picked up;Strength;Hit, Parry;Yellow;Parry
+90521;Deepwater Greatboots;503;None;Plate Feet;Binds when picked up;Strength;Hit, Parry;Yellow;Parry
+86169;Drape of Gathering Clouds;496;None;Back;Binds when picked up;Intellect;Mastery, Spirit;None;None
+86961;Drape of Gathering Clouds;509;None;Back;Binds when picked up;Intellect;Mastery, Spirit;None;None
+86322;Dread Shadow Ring;496;None;Finger;Binds when picked up;Strength;Hit, Crit;None;None
+87158;Dread Shadow Ring;509;None;Finger;Binds when picked up;Strength;Hit, Crit;None;None
+89820;Dreadeye Gaze;489;None;Mail Head;Binds when picked up;Agility;Hit, Haste;Meta, Blue;Agility
+89940;Dreadeye Gaze;502;None;Mail Head;Binds when picked up;Agility;Hit, Haste;Meta, Blue;Agility
+86389;Dreadwoven Leggings of Failure;496;None;Cloth Legs;Binds when picked up;Intellect;Hit, Haste;Red, Blue;Intellect
+87174;Dreadwoven Leggings of Failure;509;None;Cloth Legs;Binds when picked up;Intellect;Hit, Haste;Red, Blue;Intellect
+86130;Elegion, the Fanged Crescent;489;None;One-Hand;Binds when picked up;Strength;Hit, Expertise;None;None
+86130;Elegion, the Fanged Crescent;489;None;One-Hand;Binds when picked up;Strength;Hit, Expertise;None;None
+87062;Elegion, the Fanged Crescent;502;None;One-Hand;Binds when picked up;Strength;Hit, Expertise;None;None
+87062;Elegion, the Fanged Crescent;502;None;One-Hand;Binds when picked up;Strength;Hit, Expertise;None;None
+89825;Enameled Grips of Solemnity;489;None;Mail Hands;Binds when picked up;Intellect;Spirit, Crit;None;None
+89942;Enameled Grips of Solemnity;502;None;Mail Hands;Binds when picked up;Intellect;Spirit, Crit;None;None
+86388;Essence of Terror;496;None;Trinket;Binds when picked up;Intellect;Equip: Haste;None;None
+87175;Essence of Terror;509;None;Trinket;Binds when picked up;Intellect;Equip: Haste;None;None
+85996;Eye of the Ancient Spirit;489;None;Off Hand;Binds when picked up;Intellect;Spirit, Haste;None;None
+87039;Eye of the Ancient Spirit;502;None;Off Hand;Binds when picked up;Intellect;Spirit, Haste;None;None
+89424;Fan of Fiery Winds;489;None;;Binds when picked up;Intellect;Spirit, Haste;None;None
+89425;Fan of Fiery Winds;502;None;;Binds when picked up;Intellect;Spirit, Haste;None;None
+86142;Fang Kung, Spark of Titans;489;None;;Binds when picked up;Agility;Crit, Expertise;None;None
+87069;Fang Kung, Spark of Titans;502;None;;Binds when picked up;Agility;Crit, Expertise;None;None
+89884;Fear-Blackened Leggings;496;None;Leather Legs;Binds when picked up;Intellect;Spirit, Crit;Red, Blue;Intellect
+89948;Fear-Blackened Leggings;509;None;Leather Legs;Binds when picked up;Intellect;Spirit, Crit;Red, Blue;Intellect
+89803;Feng's Ring of Dreams;489;None;Finger;Binds when picked up;Intellect;Mastery, Spirit;None;None
+89933;Feng's Ring of Dreams;502;None;Finger;Binds when picked up;Intellect;Mastery, Spirit;None;None
+89802;Feng's Seal of Binding;489;None;Finger;Binds when picked up;Agility;Mastery, Crit;None;None
+89932;Feng's Seal of Binding;502;None;Finger;Binds when picked up;Agility;Mastery, Crit;None;None
+85993;Fetters of Death;489;None;Mail Waist;Binds when picked up;Agility;Hit, Mastery;Yellow, Blue;Hit
+87034;Fetters of Death;502;None;Mail Waist;Binds when picked up;Agility;Hit, Mastery;Yellow, Blue;Hit
+86156;Fragment of Fear Made Flesh;496;None;Finger;Binds when picked up;Intellect;Hit, Crit;None;None
+86949;Fragment of Fear Made Flesh;509;None;Finger;Binds when picked up;Intellect;Hit, Crit;None;None
+89822;Galaxyfire Girdle;489;None;Cloth Waist;Binds when picked up;Intellect;Spirit, Crit;Yellow;None
+89822;Galaxyfire Girdle;489;None;Cloth Waist;Binds when picked up;Intellect;Spirit, Crit;Yellow;None
+89938;Galaxyfire Girdle;502;None;Cloth Waist;Binds when picked up;Intellect;Spirit, Crit;Yellow;None
+89938;Galaxyfire Girdle;502;None;Cloth Waist;Binds when picked up;Intellect;Spirit, Crit;Yellow;None
+86321;Gao-Rei, Staff of the Legendary Protector;496;None;Two-Hand;Binds when picked up;Agility;Mastery, Expertise;None;None
+87156;Gao-Rei, Staff of the Legendary Protector;509;None;Two-Hand;Binds when picked up;Agility;Mastery, Expertise;None;None
+85994;Gara'kal, Fist of the Spiritbinder;489;None;One-Hand;Binds when picked up;Agility;Mastery, Haste;None;None
+87032;Gara'kal, Fist of the Spiritbinder;502;None;One-Hand;Binds when picked up;Agility;Mastery, Haste;None;None
+89832;Garalon's Graven Carapace;496;None;Plate Chest;Binds when picked up;Strength;Hit, Crit;Red, Yellow;Strength
+89923;Garalon's Graven Carapace;509;None;Plate Chest;Binds when picked up;Strength;Hit, Crit;Red, Yellow;Strength
+86174;Garalon's Hollow Skull;496;None;Plate Head;Binds when picked up;Strength;Dodge, Parry;Meta, Red;None
+86966;Garalon's Hollow Skull;509;None;Plate Head;Binds when picked up;Strength;Dodge, Parry;Meta, Red;None
+86159;Gauntlets of Undesired Gifts;496;None;Leather Hands;Binds when picked up;Intellect;Spirit, Crit;Blue;None
+86950;Gauntlets of Undesired Gifts;509;None;Leather Hands;Binds when picked up;Intellect;Spirit, Crit;Blue;None
+89842;Gauntlets of the Shadow's Caress;496;None;Leather Hands;Binds when picked up;Agility;Crit, Haste;Blue;Haste
+89945;Gauntlets of the Shadow's Caress;509;None;Leather Hands;Binds when picked up;Agility;Crit, Haste;Blue;Haste
+89240;Gauntlets of the Shadowy Conqueror;496;Paladin, Priest, Warlock;Head;Binds when picked up;None;None;None;None
+89256;Gauntlets of the Shadowy Conqueror;509;Paladin, Priest, Warlock;Head;Binds when picked up;None;None;None;None
+89241;Gauntlets of the Shadowy Protector;496;Warrior, Hunter, Shaman, Monk;Head;Binds when picked up;None;None;None;None
+89257;Gauntlets of the Shadowy Protector;509;Warrior, Hunter, Shaman, Monk;Head;Binds when picked up;None;None;None;None
+89242;Gauntlets of the Shadowy Vanquisher;496;Rogue, Death Knight, Mage, Druid;Head;Binds when picked up;None;None;None;None
+89255;Gauntlets of the Shadowy Vanquisher;509;Rogue, Death Knight, Mage, Druid;Head;Binds when picked up;None;None;None;None
+86086;Girdle of Delirious Visions;489;None;Plate Waist;Binds when picked up;Intellect;Spirit, Crit;Yellow, Blue;Spirit
+87056;Girdle of Delirious Visions;502;None;Plate Waist;Binds when picked up;Intellect;Spirit, Crit;Yellow, Blue;Spirit
+86186;Gleaming Moth Cuffs;496;None;Cloth Wrist;Binds when equipped;Intellect;Crit, Haste;None;None
+86161;Gloves of Grasping Claws;496;None;Cloth Hands;Binds when picked up;Intellect;Spirit, Crit;Blue;None
+86947;Gloves of Grasping Claws;509;None;Cloth Hands;Binds when picked up;Intellect;Spirit, Crit;Blue;None
+86179;Grasps of Panic;496;None;Plate Hands;Binds when picked up;Intellect;Spirit, Crit;Blue;None
+86973;Grasps of Panic;509;None;Plate Hands;Binds when picked up;Intellect;Spirit, Crit;Blue;None
+89843;Grasps of Serpentine Might;496;None;Plate Hands;Binds when picked up;Strength;Parry, Expertise;Blue;Parry
+89946;Grasps of Serpentine Might;509;None;Plate Hands;Binds when picked up;Strength;Parry, Expertise;Blue;Parry
+87825;Grips of Terra Cotta;502;None;Mail Hands;Binds when picked up;Agility;Expertise, Haste;Blue;Haste
+87827;Grips of Terra Cotta;489;None;Mail Hands;Binds when picked up;Agility;Expertise, Haste;Blue;Haste
+86175;Grips of the Leviathan;496;None;Mail Hands;Binds when picked up;Agility;Mastery, Haste;Blue;Haste
+86965;Grips of the Leviathan;509;None;Mail Hands;Binds when picked up;Agility;Mastery, Haste;Blue;Haste
+86337;Healer's Belt of Final Winter;496;None;Cloth Waist;Binds when picked up;Intellect;Spirit, Haste;Blue;Spirit
+87178;Healer's Belt of Final Winter;509;None;Cloth Waist;Binds when picked up;Intellect;Spirit, Haste;Blue;Spirit
+85975;Heavenly Jade Greatboots;489;None;Plate Feet;Binds when picked up;Intellect;Crit, Haste;Yellow;Haste
+87021;Heavenly Jade Greatboots;502;None;Plate Feet;Binds when picked up;Intellect;Crit, Haste;Yellow;Haste
+89235;Helm of the Shadowy Conqueror;496;Paladin, Priest, Warlock;Head;Binds when picked up;None;None;None;None
+89259;Helm of the Shadowy Conqueror;509;Paladin, Priest, Warlock;Head;Binds when picked up;None;None;None;None
+89236;Helm of the Shadowy Protector;496;Warrior, Hunter, Shaman, Monk;Head;Binds when picked up;None;None;None;None
+89260;Helm of the Shadowy Protector;509;Warrior, Hunter, Shaman, Monk;Head;Binds when picked up;None;None;None;None
+89234;Helm of the Shadowy Vanquisher;496;Rogue, Death Knight, Mage, Druid;Head;Binds when picked up;None;None;None;None
+89258;Helm of the Shadowy Vanquisher;509;Rogue, Death Knight, Mage, Druid;Head;Binds when picked up;None;None;None;None
+86154;Hisek's Chrysanthemum Cape;496;None;Back;Binds when picked up;Strength;Hit, Haste;None;None
+86945;Hisek's Chrysanthemum Cape;509;None;Back;Binds when picked up;Strength;Hit, Haste;None;None
+86129;Hood of Blind Eyes;489;None;Cloth Head;Binds when picked up;Intellect;Spirit, Crit;Meta, Blue;Intellect
+87051;Hood of Blind Eyes;502;None;Cloth Head;Binds when picked up;Intellect;Spirit, Crit;Meta, Blue;Intellect
+85989;Hood of Cursed Dreams;489;None;Leather Head;Binds when picked up;Intellect;Spirit, Haste;Meta, Yellow;Intellect
+87029;Hood of Cursed Dreams;502;None;Leather Head;Binds when picked up;Intellect;Spirit, Haste;Meta, Yellow;Intellect
+89835;Hood of Dark Dreams;496;None;Mail Head;Binds when picked up;Intellect;Mastery, Haste;Meta, Yellow;Intellect
+89927;Hood of Dark Dreams;509;None;Mail Head;Binds when picked up;Intellect;Mastery, Haste;Meta, Yellow;Intellect
+86151;Hood of Focused Energy;489;None;Cloth Head;Binds when picked up;Intellect;Hit, Haste;Meta, Blue;Intellect
+87073;Hood of Focused Energy;502;None;Cloth Head;Binds when picked up;Intellect;Hit, Haste;Meta, Blue;Intellect
+89831;Hood of Stilled Winds;496;None;Leather Head;Binds when picked up;Intellect;Crit, Haste;Meta, Yellow;Intellect
+89922;Hood of Stilled Winds;509;None;Leather Head;Binds when picked up;Intellect;Crit, Haste;Meta, Yellow;Intellect
+86201;Impaling Treads;496;None;Plate Feet;Binds when picked up;Strength;Hit, Haste;Yellow;Hit
+86979;Impaling Treads;509;None;Plate Feet;Binds when picked up;Strength;Hit, Haste;Yellow;Hit
+85990;Imperial Ghostbinder's Robes;489;None;Cloth Chest;Binds when picked up;Intellect;Mastery, Crit;Red, Yellow;Intellect
+87027;Imperial Ghostbinder's Robes;502;None;Cloth Chest;Binds when picked up;Intellect;Mastery, Crit;Red, Yellow;Intellect
+86188;Inlaid Cricket Bracers;496;None;Plate Wrist;Binds when equipped;Intellect;Mastery, Spirit;None;None
+86338;Invoker's Belt of Final Winter;496;None;Cloth Waist;Binds when picked up;Intellect;Hit, Mastery;Blue;Mastery
+87177;Invoker's Belt of Final Winter;509;None;Cloth Waist;Binds when picked up;Intellect;Hit, Mastery;Blue;Mastery
+86043;Jade Bandit Figurine;489;None;Trinket;Binds when picked up;Agility;Use: Haste;None;None
+86042;Jade Charioteer Figurine;489;None;Trinket;Binds when picked up;Strength;Use: Haste;None;None
+86045;Jade Courtesan Figurine;489;None;Trinket;Binds when picked up;Intellect;Use: Spirit;None;None
+85978;Jade Dust Leggings;489;None;Cloth Legs;Binds when picked up;Intellect;Mastery, Spirit;Red, Blue;Intellect
+87017;Jade Dust Leggings;502;None;Cloth Legs;Binds when picked up;Intellect;Mastery, Spirit;Red, Blue;Intellect
+86044;Jade Magistrate Figurine;489;None;Trinket;Binds when picked up;Intellect;Use: Crit;None;None
+86046;Jade Warlord Figurine;489;None;Trinket;Binds when picked up;Stamina;Use: Mastery;None;None
+86189;Jagged Hornet Bracers;496;None;Mail Wrist;Binds when equipped;Agility;Hit, Mastery;None;None
+86145;Jang-xi's Devastating Legplates;489;None;Plate Legs;Binds when picked up;Strength;Hit, Haste;Red, Blue;Strength
+87071;Jang-xi's Devastating Legplates;502;None;Plate Legs;Binds when picked up;Strength;Hit, Haste;Red, Blue;Strength
+85925;Jasper Clawfeet;489;None;Plate Feet;Binds when picked up;Strength;Mastery, Crit;Yellow;None
+87015;Jasper Clawfeet;502;None;Plate Feet;Binds when picked up;Strength;Mastery, Crit;Yellow;None
+86335;Jin'ya, Orb of the Waterspeaker;496;None;Two-Hand;Binds when picked up;Intellect;Crit, Haste;None;None
+87170;Jin'ya, Orb of the Waterspeaker;509;None;Two-Hand;Binds when picked up;Intellect;Crit, Haste;None;None
+86234;Kaolan's Withering Necklace;496;None;Neck;Binds when picked up;Strength;Dodge, Parry;None;None
+87148;Kaolan's Withering Necklace;509;None;Neck;Binds when picked up;Strength;Dodge, Parry;None;None
+90509;Kaolan's Withering Necklace;516;None;Neck;Binds when picked up;Strength;Dodge, Parry;None;None
+90523;Kaolan's Withering Necklace;503;None;Neck;Binds when picked up;Strength;Dodge, Parry;None;None
+90738;Kaz'tik's Stormseizer Gauntlets;496;None;Mail Hands;Binds when picked up;Intellect;Spirit, Crit;None;None
+90740;Kaz'tik's Stormseizer Gauntlets;509;None;Mail Hands;Binds when picked up;Intellect;Spirit, Crit;None;None
+86387;Kilrak, Jaws of Terror;496;None;One-Hand;Binds when picked up;Strength;Hit, Mastery;None;None
+87173;Kilrak, Jaws of Terror;509;None;One-Hand;Binds when picked up;Strength;Hit, Mastery;None;None
+86205;Korven's Amber-Sealed Beetle;496;None;Neck;Binds when picked up;Intellect;Spirit, Crit;None;None
+86976;Korven's Amber-Sealed Beetle;509;None;Neck;Binds when picked up;Intellect;Spirit, Crit;None;None
+86227;Kri'tak, Imperial Scepter of the Swarm;496;None;One-Hand;Binds when picked up;Intellect;Spirit, Crit;None;None
+86990;Kri'tak, Imperial Scepter of the Swarm;509;None;One-Hand;Binds when picked up;Intellect;Spirit, Crit;None;None
+86173;Legbreaker Greatcloak;496;None;Back;Binds when picked up;Agility;Mastery, Crit;None;None
+86963;Legbreaker Greatcloak;509;None;Back;Binds when picked up;Agility;Mastery, Crit;None;None
+86040;Leggings of Imprisoned Will;489;None;Mail Legs;Binds when picked up;Intellect;Mastery, Spirit;Red, Blue;Intellect
+87042;Leggings of Imprisoned Will;502;None;Mail Legs;Binds when picked up;Intellect;Mastery, Spirit;Red, Blue;Intellect
+86229;Leggings of Shadow Infestation;496;None;Cloth Legs;Binds when picked up;Intellect;Mastery, Crit;Red, Blue;Intellect
+86989;Leggings of Shadow Infestation;509;None;Cloth Legs;Binds when picked up;Intellect;Mastery, Crit;Red, Blue;Intellect
+89243;Leggings of the Shadowy Conqueror;496;Paladin, Priest, Warlock;Head;Binds when picked up;None;None;None;None
+89253;Leggings of the Shadowy Conqueror;509;Paladin, Priest, Warlock;Head;Binds when picked up;None;None;None;None
+89244;Leggings of the Shadowy Protector;496;Warrior, Hunter, Shaman, Monk;Head;Binds when picked up;None;None;None;None
+89254;Leggings of the Shadowy Protector;509;Warrior, Hunter, Shaman, Monk;Head;Binds when picked up;None;None;None;None
+89245;Leggings of the Shadowy Vanquisher;496;Rogue, Death Knight, Mage, Druid;Head;Binds when picked up;None;None;None;None
+89252;Leggings of the Shadowy Vanquisher;509;Rogue, Death Knight, Mage, Druid;Head;Binds when picked up;None;None;None;None
+89841;Legguards of Failing Purification;496;None;Leather Legs;Binds when picked up;Agility;Hit, Mastery;Red, Blue;Agility
+89943;Legguards of Failing Purification;509;None;Leather Legs;Binds when picked up;Agility;Hit, Mastery;Red, Blue;Agility
+90504;Legguards of Failing Purification;516;None;Leather Legs;Binds when picked up;Agility;Hit, Mastery;Red, Blue;Agility
+90518;Legguards of Failing Purification;503;None;Leather Legs;Binds when picked up;Agility;Hit, Mastery;Red, Blue;Agility
+89837;Legplates of Regal Reinforcement;496;None;Plate Legs;Binds when picked up;Strength;Dodge, Parry;Red, Blue;None
+89928;Legplates of Regal Reinforcement;509;None;Plate Legs;Binds when picked up;Strength;Dodge, Parry;Red, Blue;None
+85988;Legplates of Sagacious Shadows;489;None;Plate Legs;Binds when picked up;Intellect;Spirit, Haste;Red, Blue;Intellect
+87031;Legplates of Sagacious Shadows;502;None;Plate Legs;Binds when picked up;Intellect;Spirit, Haste;Red, Blue;Intellect
+86144;Lei Shen's Final Orders;489;None;Trinket;Binds when picked up;None;Haste, Equip: Strength;None;None
+87072;Lei Shen's Final Orders;502;None;Trinket;Binds when picked up;None;Haste, Equip: Strength;None;None
+86133;Light of the Cosmos;489;None;Trinket;Binds when picked up;None;Haste, Equip: Intellect;None;None
+86133;Light of the Cosmos;489;None;Trinket;Binds when picked up;None;Haste, Equip: Intellect;None;None
+87065;Light of the Cosmos;502;None;Trinket;Binds when picked up;None;Haste, Equip: Intellect;None;None
+87065;Light of the Cosmos;502;None;Trinket;Binds when picked up;None;Haste, Equip: Intellect;None;None
+86319;Lightning Prisoner's Boots;496;None;Mail Feet;Binds when picked up;Intellect;Spirit, Haste;Yellow;Spirit
+87154;Lightning Prisoner's Boots;509;None;Mail Feet;Binds when picked up;Intellect;Spirit, Haste;Yellow;Spirit
+90515;Lightning Prisoner's Boots;516;None;Mail Feet;Binds when picked up;Intellect;Spirit, Haste;Yellow;Spirit
+90529;Lightning Prisoner's Boots;503;None;Mail Feet;Binds when picked up;Intellect;Spirit, Haste;Yellow;Spirit
+86328;Loshan, Terror Incarnate;496;None;One-Hand;Binds when picked up;Intellect;Crit, Haste;None;None
+87164;Loshan, Terror Incarnate;509;None;One-Hand;Binds when picked up;Intellect;Crit, Haste;None;None
+86184;Luminescent Firefly Wristguards;496;None;Mail Wrist;Binds when equipped;Intellect;Mastery, Crit;None;None
+86150;Magnetized Leggings;489;None;Leather Legs;Binds when picked up;Intellect;Spirit, Haste;Red, Blue;Intellect
+87077;Magnetized Leggings;502;None;Leather Legs;Binds when picked up;Intellect;Spirit, Haste;Red, Blue;Intellect
+86160;Mail of Screaming Secrets;496;None;Mail Chest;Binds when picked up;Intellect;Mastery, Spirit;Red, Yellow;Intellect
+86951;Mail of Screaming Secrets;509;None;Mail Chest;Binds when picked up;Intellect;Mastery, Spirit;Red, Yellow;Intellect
+86383;Mender's Girdle of Endless Spring;496;None;Plate Waist;Binds when picked up;Intellect;Mastery, Spirit;Blue;Spirit
+87184;Mender's Girdle of Endless Spring;509;None;Plate Waist;Binds when picked up;Intellect;Mastery, Spirit;Blue;Spirit
+86084;Meng's Treads of Insanity;489;None;Mail Feet;Binds when picked up;Intellect;Mastery, Haste;Yellow;Mastery
+87055;Meng's Treads of Insanity;502;None;Mail Feet;Binds when picked up;Intellect;Mastery, Haste;Yellow;Mastery
+89819;Mindshard Drape;489;None;Back;Binds when picked up;Intellect;Mastery, Crit;None;None
+89936;Mindshard Drape;502;None;Back;Binds when picked up;Intellect;Mastery, Crit;None;None
+86214;Monstrous Stompers;496;None;Mail Feet;Binds when picked up;Agility;Crit, Haste;Yellow;Haste
+86985;Monstrous Stompers;509;None;Mail Feet;Binds when picked up;Agility;Crit, Haste;Yellow;Haste
+86177;Necklace of Congealed Weaknesses;496;None;Neck;Binds when picked up;Strength;Mastery, Crit;None;None
+86967;Necklace of Congealed Weaknesses;509;None;Neck;Binds when picked up;Strength;Mastery, Crit;None;None
+85995;Netherrealm Shoulderpads;489;None;Leather Shoulder;Binds when picked up;Agility;Mastery, Expertise;Red;Agility
+87033;Netherrealm Shoulderpads;502;None;Leather Shoulder;Binds when picked up;Agility;Mastery, Expertise;Red;Agility
+85984;Nullification Greathelm;489;None;Plate Head;Binds when picked up;Strength;Crit, Haste;Meta, Blue;None
+87024;Nullification Greathelm;502;None;Plate Head;Binds when picked up;Strength;Crit, Haste;Meta, Blue;None
+86139;Orbital Belt;489;None;Cloth Waist;Binds when picked up;Intellect;Mastery, Haste;Yellow, Blue;Haste
+86139;Orbital Belt;489;None;Cloth Waist;Binds when picked up;Intellect;Mastery, Haste;Yellow, Blue;Haste
+87064;Orbital Belt;502;None;Cloth Waist;Binds when picked up;Intellect;Mastery, Haste;Yellow, Blue;Haste
+87064;Orbital Belt;502;None;Cloth Waist;Binds when picked up;Intellect;Mastery, Haste;Yellow, Blue;Haste
+86200;Painful Thorned Ring;496;None;Finger;Binds when picked up;Agility;Mastery, Expertise;None;None
+86974;Painful Thorned Ring;509;None;Finger;Binds when picked up;Agility;Mastery, Expertise;None;None
+86385;Patroller's Girdle of Endless Spring;496;None;Plate Waist;Binds when picked up;Strength;Hit, Crit;Blue;None
+87186;Patroller's Girdle of Endless Spring;509;None;Plate Waist;Binds when picked up;Strength;Hit, Crit;Blue;None
+86238;Pattern: Chestguard of Nemeses;90;None;Leather Chest;Binds when equipped;Agility;Mastery, Crit;Red, Blue;Mastery
+86272;Pattern: Fists of Lightning;90;None;Leather Hands;Binds when equipped;Intellect;Mastery, Haste;Red;Haste
+86380;Pattern: Imperial Silk Gloves;90;None;Cloth Hands;Binds when equipped;Intellect;Hit, Mastery, Crit;Yellow;Hit
+86381;Pattern: Legacy of the Emperor;90;None;Cloth Chest;Binds when equipped;Intellect;Spirit, Haste;Red, Blue;Spirit
+86279;Pattern: Liferuned Leather Gloves;90;None;Leather Hands;Binds when equipped;Intellect;Spirit, Haste;Red;Spirit
+86280;Pattern: Murderer's Gloves;90;None;Leather Hands;Binds when equipped;Agility;Mastery, Crit;Blue;Agility
+86281;Pattern: Nightfire Robe;90;None;Leather Chest;Binds when equipped;Intellect;Mastery, Spirit;Blue, Blue;Intellect
+86283;Pattern: Raiment of Blood and Bone;90;None;Leather Chest;Binds when equipped;Agility;Mastery, Crit;Red, Yellow;Agility
+86284;Pattern: Raven Lord's Gloves;90;None;Leather Hands;Binds when equipped;Agility;Crit, Haste;Yellow;Agility
+86379;Pattern: Robe of Eternal Rule;90;None;Cloth Chest;Binds when equipped;Intellect;Mastery, Crit;Red, Blue;Intellect
+86297;Pattern: Stormbreaker Chestguard;90;None;Leather Chest;Binds when equipped;Intellect;Crit, Haste;Yellow, Yellow;Haste
+86382;Pattern: Touch of the Light;90;None;Cloth Hands;Binds when equipped;Intellect;Spirit, Haste;Blue;Spirit
+89828;Pauldrons of the Broken Blade;496;None;Plate Shoulder;Binds when picked up;Strength;Hit, Parry;Yellow;None
+89921;Pauldrons of the Broken Blade;509;None;Plate Shoulder;Binds when picked up;Strength;Hit, Parry;Yellow;None
+86187;Pearlescent Butterfly Wristbands;496;None;Leather Wrist;Binds when equipped;Intellect;Mastery, Haste;None;None
+86138;Phasewalker Striders;489;None;Leather Feet;Binds when picked up;Intellect;Spirit, Crit;Yellow;Spirit
+86138;Phasewalker Striders;489;None;Leather Feet;Binds when picked up;Intellect;Spirit, Crit;Yellow;Spirit
+87067;Phasewalker Striders;502;None;Leather Feet;Binds when picked up;Intellect;Spirit, Crit;Yellow;Spirit
+87067;Phasewalker Striders;502;None;Leather Feet;Binds when picked up;Intellect;Spirit, Crit;Yellow;Spirit
+89827;Pheromone-Coated Choker;496;None;Neck;Binds when picked up;Agility;Mastery, Haste;None;None
+89917;Pheromone-Coated Choker;509;None;Neck;Binds when picked up;Agility;Mastery, Haste;None;None
+87411;Plans: Bloodforged Warfists;90;None;Plate Hands;Binds when equipped;Strength;Hit, Crit;Yellow;Strength
+87412;Plans: Chestplate of Limitless Faith;90;None;Plate Chest;Binds when equipped;Intellect;Spirit, Haste;Yellow, Yellow;Intellect
+87409;Plans: Gauntlets of Battle Command;90;None;Plate Hands;Binds when equipped;Strength;Mastery, Parry;Red;Parry
+87413;Plans: Gauntlets of Unbound Devotion;90;None;Plate Hands;Binds when equipped;Intellect;Spirit, Haste;Blue;Spirit
+87410;Plans: Ornate Battleplate of the Master;90;None;Plate Chest;Binds when equipped;Strength;Mastery, Expertise;Blue, Blue;Strength
+87408;Plans: Unyielding Bloodplate;90;None;Plate Chest;Binds when equipped;Strength;Dodge, Mastery;Blue, Blue;None
+86191;Plated Locust Bracers;496;None;Plate Wrist;Binds when equipped;Strength;Crit, Haste;None;None
+86384;Protector's Girdle of Endless Spring;496;None;Plate Waist;Binds when picked up;Strength;Dodge, Expertise;Blue;Dodge
+87185;Protector's Girdle of Endless Spring;509;None;Plate Waist;Binds when picked up;Strength;Dodge, Expertise;Blue;Dodge
+86147;Qin-xi's Polarizing Seal;489;None;Trinket;Binds when picked up;None;Spirit, Equip: Intellect;None;None
+87075;Qin-xi's Polarizing Seal;502;None;Trinket;Binds when picked up;None;Spirit, Equip: Intellect;None;None
+86343;Ranger's Chain of Unending Summer;496;None;Mail Waist;Binds when picked up;Agility;Expertise, Haste;Blue;Haste
+87182;Ranger's Chain of Unending Summer;509;None;Mail Waist;Binds when picked up;Agility;Expertise, Haste;Blue;Haste
+86231;Regail's Band of the Endless;496;None;Finger;Binds when picked up;Agility;Crit, Haste;None;None
+87144;Regail's Band of the Endless;509;None;Finger;Binds when picked up;Agility;Crit, Haste;None;None
+90503;Regail's Band of the Endless;516;None;Finger;Binds when picked up;Agility;Crit, Haste;None;None
+90517;Regail's Band of the Endless;503;None;Finger;Binds when picked up;Agility;Crit, Haste;None;None
+86390;Regail's Crackling Dagger;496;None;One-Hand;Binds when picked up;Intellect;Mastery, Crit;Blue;None
+87152;Regail's Crackling Dagger;509;None;One-Hand;Binds when picked up;Intellect;Mastery, Crit;Blue;None
+90513;Regail's Crackling Dagger;516;None;One-Hand;Binds when picked up;Intellect;Mastery, Crit;Blue;None
+90527;Regail's Crackling Dagger;503;None;One-Hand;Binds when picked up;Intellect;Mastery, Crit;Blue;None
+87777;Reins of the Astral Cloud Serpent;90;None;;Binds when picked up;None;None;None;None
+87777;Reins of the Astral Cloud Serpent;90;None;;Binds when picked up;None;None;None;None
+86162;Ring of the Bladed Tempest;496;None;Finger;Binds when picked up;Strength;Expertise, Haste;None;None
+86957;Ring of the Bladed Tempest;509;None;Finger;Binds when picked up;Strength;Expertise, Haste;None;None
+86172;Ring of the Shattered Shell;496;None;Finger;Binds when picked up;Strength;Dodge, Mastery;None;None
+86968;Ring of the Shattered Shell;509;None;Finger;Binds when picked up;Strength;Dodge, Mastery;None;None
+86180;Robes of Eighty Lights;496;None;Leather Chest;Binds when picked up;Intellect;Mastery, Spirit;Red, Yellow;Intellect
+86972;Robes of Eighty Lights;509;None;Leather Chest;Binds when picked up;Intellect;Mastery, Spirit;Red, Yellow;Intellect
+89887;Robes of Pinioned Eyes;496;None;Cloth Chest;Binds when picked up;Intellect;Mastery, Spirit;Blue, Yellow;Intellect
+89949;Robes of Pinioned Eyes;509;None;Cloth Chest;Binds when picked up;Intellect;Mastery, Spirit;Blue, Yellow;Intellect
+86513;Robes of Torn Nightmares;496;None;Cloth Chest;Binds when picked up;Intellect;Spirit, Crit;Red, Yellow;Intellect
+86975;Robes of Torn Nightmares;509;None;Cloth Chest;Binds when picked up;Intellect;Spirit, Crit;Red, Yellow;Intellect
+86334;Robes of the Unknown Fear;496;None;Cloth Chest;Binds when picked up;Intellect;Hit, Mastery;Red, Yellow;Intellect
+87169;Robes of the Unknown Fear;509;None;Cloth Chest;Binds when picked up;Intellect;Hit, Mastery;Red, Yellow;Intellect
+89767;Ruby-Linked Girdle;489;None;Cloth Waist;Binds when picked up;Intellect;Hit, Mastery;Yellow;Hit
+89930;Ruby-Linked Girdle;502;None;Cloth Waist;Binds when picked up;Intellect;Hit, Mastery;Yellow;Hit
+86330;Sandals of the Blackest Night;496;None;Cloth Feet;Binds when picked up;Intellect;Mastery, Haste;Yellow;Mastery
+87162;Sandals of the Blackest Night;509;None;Cloth Feet;Binds when picked up;Intellect;Mastery, Haste;Yellow;Mastery
+85997;Sandals of the Severed Soul;489;None;Cloth Feet;Binds when picked up;Intellect;Spirit, Crit;Yellow;Spirit
+87037;Sandals of the Severed Soul;502;None;Cloth Feet;Binds when picked up;Intellect;Spirit, Crit;Yellow;Spirit
+86178;Sandals of the Unbidden;496;None;Cloth Feet;Binds when picked up;Intellect;Hit, Mastery;Yellow;Hit
+86969;Sandals of the Unbidden;509;None;Cloth Feet;Binds when picked up;Intellect;Hit, Mastery;Yellow;Hit
+89829;Scent-Soaked Sandals;496;None;Cloth Feet;Binds when picked up;Intellect;Mastery, Spirit;Yellow;Spirit
+89918;Scent-Soaked Sandals;509;None;Cloth Feet;Binds when picked up;Intellect;Mastery, Spirit;Yellow;Spirit
+86219;Scimitar of Seven Stars;496;None;One-Hand;Binds when picked up;Strength;Hit, Mastery;Blue;Mastery
+86987;Scimitar of Seven Stars;509;None;One-Hand;Binds when picked up;Strength;Hit, Mastery;Blue;Mastery
+86071;Screaming Tiger, Qiang's Unbreakable Polearm;489;None;Two-Hand;Binds when picked up;Agility;Mastery, Haste;None;None
+87046;Screaming Tiger, Qiang's Unbreakable Polearm;502;None;Two-Hand;Binds when picked up;Agility;Mastery, Haste;None;None
+86211;Seal of the Profane;496;None;Finger;Binds when picked up;Intellect;Mastery, Spirit;None;None
+86982;Seal of the Profane;509;None;Finger;Binds when picked up;Intellect;Mastery, Spirit;None;None
+86190;Serrated Wasp Bracers;496;None;Plate Wrist;Binds when equipped;Strength;Dodge, Expertise;None;None
+86233;Shackle of Eversparks;496;None;Neck;Binds when picked up;Strength;Hit, Expertise;None;None
+87147;Shackle of Eversparks;509;None;Neck;Binds when picked up;Strength;Hit, Expertise;None;None
+90508;Shackle of Eversparks;516;None;Neck;Binds when picked up;Strength;Hit, Expertise;None;None
+90522;Shackle of Eversparks;503;None;Neck;Binds when picked up;Strength;Hit, Expertise;None;None
+89836;Shadow Heart Spaulders;496;None;Leather Shoulder;Binds when picked up;Agility;Crit, Haste;Red;Agility
+89926;Shadow Heart Spaulders;509;None;Leather Shoulder;Binds when picked up;Agility;Crit, Haste;Red;Agility
+89839;Shadowgrip Girdle;496;None;Mail Waist;Binds when picked up;Agility;Crit, Haste;Yellow, Blue;Haste
+89951;Shadowgrip Girdle;509;None;Mail Waist;Binds when picked up;Agility;Crit, Haste;Yellow, Blue;Haste
+86041;Shadowsummoner Spaulders;489;None;Cloth Shoulder;Binds when picked up;Intellect;Crit, Haste;Red;Intellect
+87038;Shadowsummoner Spaulders;502;None;Cloth Shoulder;Binds when picked up;Intellect;Crit, Haste;Red;Intellect
+86386;Shin'ka, Execution of Dominion;496;None;Two-Hand;Binds when picked up;Strength;Mastery, Crit;None;None
+87176;Shin'ka, Execution of Dominion;509;None;Two-Hand;Binds when picked up;Strength;Mastery, Crit;None;None
+86183;Shining Cicada Bracers;496;None;Cloth Wrist;Binds when equipped;Intellect;Hit, Crit;None;None
+86080;Shoulderguards of the Unflanked;489;None;Plate Shoulder;Binds when picked up;Strength;Hit, Parry;Red;None
+87049;Shoulderguards of the Unflanked;502;None;Plate Shoulder;Binds when picked up;Strength;Hit, Parry;Red;None
+86213;Shoulderpads of Misshapen Life;496;None;Plate Shoulder;Binds when picked up;Strength;Mastery, Crit;Red;Strength
+86986;Shoulderpads of Misshapen Life;509;None;Plate Shoulder;Binds when picked up;Strength;Mastery, Crit;Red;Strength
+89883;Shoulderpads of Twisted Fate;496;None;Cloth Shoulder;Binds when picked up;Intellect;Hit, Haste;Yellow;Intellect
+89947;Shoulderpads of Twisted Fate;509;None;Cloth Shoulder;Binds when picked up;Intellect;Hit, Haste;Yellow;Intellect
+86141;Shoulders of Empyreal Focus;489;None;Mail Shoulder;Binds when picked up;Intellect;Spirit, Haste;Red;Intellect
+86141;Shoulders of Empyreal Focus;489;None;Mail Shoulder;Binds when picked up;Intellect;Spirit, Haste;Red;Intellect
+87068;Shoulders of Empyreal Focus;502;None;Mail Shoulder;Binds when picked up;Intellect;Spirit, Haste;Red;Intellect
+87068;Shoulders of Empyreal Focus;502;None;Mail Shoulder;Binds when picked up;Intellect;Spirit, Haste;Red;Intellect
+89833;Shoulders of Foaming Fluids;496;None;Cloth Shoulder;Binds when picked up;Intellect;Spirit, Haste;Yellow;Intellect
+89924;Shoulders of Foaming Fluids;509;None;Cloth Shoulder;Binds when picked up;Intellect;Spirit, Haste;Yellow;Intellect
+89246;Shoulders of the Shadowy Conqueror;496;Paladin, Priest, Warlock;Shoulder;Binds when picked up;None;None;None;None
+89262;Shoulders of the Shadowy Conqueror;509;Paladin, Priest, Warlock;Shoulder;Binds when picked up;None;None;None;None
+89247;Shoulders of the Shadowy Protector;496;Warrior, Hunter, Shaman, Monk;Shoulder;Binds when picked up;None;None;None;None
+89263;Shoulders of the Shadowy Protector;509;Warrior, Hunter, Shaman, Monk;Shoulder;Binds when picked up;None;None;None;None
+89248;Shoulders of the Shadowy Vanquisher;496;Rogue, Death Knight, Mage, Druid;Shoulder;Binds when picked up;None;None;None;None
+89261;Shoulders of the Shadowy Vanquisher;509;Rogue, Death Knight, Mage, Druid;Shoulder;Binds when picked up;None;None;None;None
+85976;Sixteen-Fanged Crown;489;None;Mail Head;Binds when picked up;Intellect;Spirit, Haste;Meta, Blue;Intellect
+87020;Sixteen-Fanged Crown;502;None;Mail Head;Binds when picked up;Intellect;Spirit, Haste;Meta, Blue;Intellect
+86185;Smooth Beetle Wristbands;496;None;Leather Wrist;Binds when equipped;Agility;Mastery, Expertise;None;None
+86329;Sollerets of Instability;496;None;Plate Feet;Binds when picked up;Intellect;Mastery, Spirit;Yellow;Spirit
+87165;Sollerets of Instability;509;None;Plate Feet;Binds when picked up;Intellect;Mastery, Spirit;Yellow;Spirit
+85992;Sollerets of Spirit Splitting;489;None;Plate Feet;Binds when picked up;Strength;Dodge, Mastery;Yellow;Dodge
+87035;Sollerets of Spirit Splitting;502;None;Plate Feet;Binds when picked up;Strength;Dodge, Mastery;Yellow;Dodge
+86339;Sorcerer's Belt of Final Winter;496;None;Cloth Waist;Binds when picked up;Intellect;Crit, Haste;Blue;Haste
+87179;Sorcerer's Belt of Final Winter;509;None;Cloth Waist;Binds when picked up;Intellect;Crit, Haste;Blue;Haste
+85991;Soulgrasp Choker;489;None;Neck;Binds when picked up;Strength;Hit, Haste;None;None
+87036;Soulgrasp Choker;502;None;Neck;Binds when picked up;Strength;Hit, Haste;None;None
+86039;Spaulders of the Divided Mind;489;None;Leather Shoulder;Binds when picked up;Intellect;Mastery, Spirit;Red;Intellect
+87041;Spaulders of the Divided Mind;502;None;Leather Shoulder;Binds when picked up;Intellect;Mastery, Spirit;Red;Intellect
+86149;Spaulders of the Emperor's Rage;489;None;Plate Shoulder;Binds when picked up;Intellect;Spirit, Haste;Red;Intellect
+87078;Spaulders of the Emperor's Rage;502;None;Plate Shoulder;Binds when picked up;Intellect;Spirit, Haste;Red;Intellect
+86327;Spirits of the Sun;496;None;Trinket;Binds when picked up;Intellect;Equip: Spirit;None;None
+87163;Spirits of the Sun;509;None;Trinket;Binds when picked up;Intellect;Equip: Spirit;None;None
+86391;Spiritsever;496;None;One-Hand;Binds when picked up;Agility;Mastery, Expertise;None;None
+87166;Spiritsever;509;None;One-Hand;Binds when picked up;Agility;Mastery, Expertise;None;None
+86341;Stalker's Cord of Eternal Autumn;496;None;Leather Waist;Binds when picked up;Agility;Hit, Crit;Blue;None
+87180;Stalker's Cord of Eternal Autumn;509;None;Leather Waist;Binds when picked up;Agility;Hit, Crit;Blue;None
+86134;Star-Stealer Waistguard;489;None;Plate Waist;Binds when picked up;Strength;Dodge, Mastery;Yellow, Blue;Dodge
+87060;Star-Stealer Waistguard;502;None;Plate Waist;Binds when picked up;Strength;Dodge, Mastery;Yellow, Blue;Dodge
+86135;Starcrusher Gauntlets;489;None;Plate Hands;Binds when picked up;Strength;Hit, Haste;Blue;Haste
+86135;Starcrusher Gauntlets;489;None;Plate Hands;Binds when picked up;Strength;Hit, Haste;Blue;Haste
+87059;Starcrusher Gauntlets;502;None;Plate Hands;Binds when picked up;Strength;Hit, Haste;Blue;Haste
+87059;Starcrusher Gauntlets;502;None;Plate Hands;Binds when picked up;Strength;Hit, Haste;Blue;Haste
+86140;Starshatter;489;None;Two-Hand;Binds when picked up;Strength;Crit, Expertise;None;None
+86140;Starshatter;489;None;Two-Hand;Binds when picked up;Strength;Crit, Expertise;None;None
+87061;Starshatter;502;None;Two-Hand;Binds when picked up;Strength;Crit, Expertise;None;None
+87061;Starshatter;502;None;Two-Hand;Binds when picked up;Strength;Crit, Expertise;None;None
+86075;Steelskin, Qiang's Impervious Shield;489;None;Off Hand;Binds when picked up;Strength;Dodge, Parry;None;None
+87050;Steelskin, Qiang's Impervious Shield;502;None;Off Hand;Binds when picked up;Strength;Dodge, Parry;None;None
+85977;Stonebound Cinch;489;None;Leather Waist;Binds when picked up;Intellect;Spirit, Haste;Yellow, Blue;Spirit
+87019;Stonebound Cinch;502;None;Leather Waist;Binds when picked up;Intellect;Spirit, Haste;Yellow, Blue;Spirit
+89766;Stonefang Chestguard;489;None;Mail Chest;Binds when picked up;Agility;Crit, Expertise;Red, Yellow;Agility
+89929;Stonefang Chestguard;502;None;Mail Chest;Binds when picked up;Agility;Crit, Expertise;Red, Yellow;Agility
+85926;Stoneflesh Leggings;489;None;Leather Legs;Binds when picked up;Agility;Crit, Expertise;Red, Blue;Agility
+87013;Stoneflesh Leggings;502;None;Leather Legs;Binds when picked up;Agility;Crit, Expertise;Red, Blue;Agility
+85923;Stonemaw Armguards;489;None;Mail Wrist;Binds when picked up;Agility;Crit, Haste;None;None
+87014;Stonemaw Armguards;502;None;Mail Wrist;Binds when picked up;Agility;Crit, Haste;None;None
+86182;Stormwake Mistcloak;496;None;Back;Binds when picked up;Intellect;Hit, Crit;None;None
+86971;Stormwake Mistcloak;509;None;Back;Binds when picked up;Intellect;Hit, Crit;None;None
+86323;Stuff of Nightmares;496;None;Trinket;Binds when picked up;None;Mastery, Equip: Dodge;None;None
+87160;Stuff of Nightmares;509;None;Trinket;Binds when picked up;None;Mastery, Equip: Dodge;None;None
+86081;Subetai's Pillaging Leggings;489;None;Mail Legs;Binds when picked up;Agility;Crit, Haste;Red, Blue;Agility
+87047;Subetai's Pillaging Leggings;502;None;Mail Legs;Binds when picked up;Agility;Crit, Haste;Red, Blue;Agility
+86324;Sunwrought Mail Hauberk;496;None;Mail Chest;Binds when picked up;Agility;Hit, Haste;Red, Yellow;Agility
+87157;Sunwrought Mail Hauberk;509;None;Mail Chest;Binds when picked up;Agility;Hit, Haste;Red, Yellow;Agility
+89830;Sword Dancer's Leggings;496;None;Mail Legs;Binds when picked up;Agility;Expertise, Haste;Red, Blue;Agility
+89920;Sword Dancer's Leggings;509;None;Mail Legs;Binds when picked up;Agility;Expertise, Haste;Red, Blue;Agility
+86331;Taoren, the Soul Burner;496;None;;Binds when picked up;Agility;Mastery, Haste;None;None
+87168;Taoren, the Soul Burner;509;None;;Binds when picked up;Agility;Mastery, Haste;None;None
+86332;Terror in the Mists;496;None;Trinket;Binds when picked up;Agility;Equip: Crit;None;None
+87167;Terror in the Mists;509;None;Trinket;Binds when picked up;Agility;Equip: Crit;None;None
+86148;Tihan, Scepter of the Sleeping Emperor;489;None;One-Hand;Binds when picked up;Intellect;Mastery, Spirit;None;None
+87074;Tihan, Scepter of the Sleeping Emperor;502;None;One-Hand;Binds when picked up;Intellect;Mastery, Spirit;None;None
+85982;Tomb Raider's Girdle;489;None;Leather Waist;Binds when picked up;Agility;Expertise, Haste;Yellow, Blue;Expertise
+87022;Tomb Raider's Girdle;502;None;Leather Waist;Binds when picked up;Agility;Expertise, Haste;Yellow, Blue;Expertise
+86137;Torch of the Celestial Spark;489;None;;Binds when picked up;Intellect;Crit, Haste;None;None
+86137;Torch of the Celestial Spark;489;None;;Binds when picked up;Intellect;Crit, Haste;None;None
+87066;Torch of the Celestial Spark;502;None;;Binds when picked up;Intellect;Crit, Haste;None;None
+87066;Torch of the Celestial Spark;502;None;;Binds when picked up;Intellect;Crit, Haste;None;None
+86171;Tornado-Summoning Censer;496;None;;Binds when picked up;Intellect;Hit, Crit;None;None
+86960;Tornado-Summoning Censer;509;None;;Binds when picked up;Intellect;Hit, Crit;None;None
+86212;Treads of Deadly Secretions;496;None;Leather Feet;Binds when picked up;Agility;Mastery, Expertise;Yellow;Expertise
+86984;Treads of Deadly Secretions;509;None;Leather Feet;Binds when picked up;Agility;Mastery, Expertise;Yellow;Expertise
+86170;Twisting Wind Bracers;496;None;Cloth Wrist;Binds when picked up;Intellect;Hit, Haste;None;None
+86958;Twisting Wind Bracers;509;None;Cloth Wrist;Binds when picked up;Intellect;Hit, Haste;None;None
+86217;Un'sok's Amber Scalpel;496;None;One-Hand;Binds when picked up;Intellect;Spirit, Haste;Blue;Haste
+86983;Un'sok's Amber Scalpel;509;None;One-Hand;Binds when picked up;Intellect;Spirit, Haste;Blue;Haste
+86128;Undying Shadow Grips;489;None;Cloth Hands;Binds when picked up;Intellect;Mastery, Haste;Blue;Haste
+87052;Undying Shadow Grips;502;None;Cloth Hands;Binds when picked up;Intellect;Mastery, Haste;Blue;Haste
+89834;Vestments of Steaming Ichor;496;None;Mail Chest;Binds when picked up;Intellect;Spirit, Crit;Blue, Yellow;Intellect
+89925;Vestments of Steaming Ichor;509;None;Mail Chest;Binds when picked up;Intellect;Spirit, Crit;Blue, Yellow;Intellect
+86131;Vial of Dragon's Blood;489;None;Trinket;Binds when picked up;None;Mastery, Equip: Dodge;None;None
+86131;Vial of Dragon's Blood;489;None;Trinket;Binds when picked up;None;Mastery, Equip: Dodge;None;None
+87063;Vial of Dragon's Blood;502;None;Trinket;Binds when picked up;None;Mastery, Equip: Dodge;None;None
+87063;Vial of Dragon's Blood;502;None;Trinket;Binds when picked up;None;Mastery, Equip: Dodge;None;None
+86155;Vizier's Ruby Signet;496;None;Finger;Binds when picked up;Strength;Parry, Expertise;None;None
+86946;Vizier's Ruby Signet;509;None;Finger;Binds when picked up;Strength;Parry, Expertise;None;None
+86164;Waistplate of Overwhelming Assault;496;None;Plate Waist;Binds when picked up;Strength;Mastery, Haste;Yellow, Blue;Haste
+86955;Waistplate of Overwhelming Assault;509;None;Plate Waist;Binds when picked up;Strength;Mastery, Haste;Yellow, Blue;Haste
+89826;Warbelt of Sealed Pods;496;None;Plate Waist;Binds when picked up;Strength;Crit, Expertise;Yellow, Blue;Expertise
+89919;Warbelt of Sealed Pods;509;None;Plate Waist;Binds when picked up;Strength;Crit, Expertise;Yellow, Blue;Expertise
+89885;Waterborne Shoulderguards;496;None;Mail Shoulder;Binds when picked up;Agility;Crit, Expertise;Red;Agility
+89944;Waterborne Shoulderguards;509;None;Mail Shoulder;Binds when picked up;Agility;Crit, Expertise;Red;Agility
+90505;Waterborne Shoulderguards;516;None;Mail Shoulder;Binds when picked up;Agility;Crit, Expertise;Red;Agility
+90519;Waterborne Shoulderguards;503;None;Mail Shoulder;Binds when picked up;Agility;Crit, Expertise;Red;Agility
+86315;Watersoul Signet;496;None;Finger;Binds when picked up;Intellect;Spirit, Haste;None;None
+87151;Watersoul Signet;509;None;Finger;Binds when picked up;Intellect;Spirit, Haste;None;None
+90511;Watersoul Signet;516;None;Finger;Binds when picked up;Intellect;Spirit, Haste;None;None
+90525;Watersoul Signet;503;None;Finger;Binds when picked up;Intellect;Spirit, Haste;None;None
+86340;Weaver's Cord of Eternal Autumn;496;None;Leather Waist;Binds when picked up;Intellect;Mastery, Spirit;Blue;Spirit
+87181;Weaver's Cord of Eternal Autumn;509;None;Leather Waist;Binds when picked up;Intellect;Mastery, Spirit;Blue;Spirit
+85980;Wildfire Worldwalkers;489;None;Mail Feet;Binds when picked up;Agility;Crit, Expertise;Yellow;None
+87023;Wildfire Worldwalkers;502;None;Mail Feet;Binds when picked up;Agility;Crit, Expertise;Yellow;None
+86165;Windblade Talons;496;None;Plate Hands;Binds when picked up;Strength;Dodge, Parry;Blue;Parry
+86956;Windblade Talons;509;None;Plate Hands;Binds when picked up;Strength;Dodge, Parry;Blue;Parry
+86204;Wingslasher Pauldrons;496;None;Mail Shoulder;Binds when picked up;Agility;Mastery, Crit;Red;Agility
+86978;Wingslasher Pauldrons;509;None;Mail Shoulder;Binds when picked up;Agility;Mastery, Crit;Red;Agility
+86152;Worldwaker Cabochon;489;None;Neck;Binds when picked up;Intellect;Crit, Haste;None;None
+87076;Worldwaker Cabochon;502;None;Neck;Binds when picked up;Intellect;Crit, Haste;None;None
+89886;Wrap of Instant Petrification;496;None;Leather Chest;Binds when picked up;Agility;Hit, Crit;Blue, Yellow;Agility
+89950;Wrap of Instant Petrification;509;None;Leather Chest;Binds when picked up;Agility;Hit, Crit;Blue, Yellow;Agility
+86181;Xaril's Hood of Intoxicating Vapors;496;None;Cloth Head;Binds when picked up;Intellect;Mastery, Haste;Meta, Red;Mastery
+86970;Xaril's Hood of Intoxicating Vapors;509;None;Cloth Head;Binds when picked up;Intellect;Mastery, Haste;Meta, Red;Mastery
+86083;Zian's Choker of Coalesced Shadow;489;None;Neck;Binds when picked up;Intellect;Mastery, Spirit;None;None
+87053;Zian's Choker of Coalesced Shadow;502;None;Neck;Binds when picked up;Intellect;Mastery, Spirit;None;None
+87822;Zor'lok's Fizzing Chestguard;509;None;Mail Chest;Binds when picked up;Agility;Mastery, Expertise;Red, Yellow;Agility
+87824;Zor'lok's Fizzing Chestguard;496;None;Mail Chest;Binds when picked up;Agility;Mastery, Expertise;Red, Yellow;Agility

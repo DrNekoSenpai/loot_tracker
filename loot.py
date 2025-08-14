@@ -3,7 +3,6 @@ from typing import List, Union
 from datetime import datetime, timedelta
 from contextlib import redirect_stdout as redirect
 from io import StringIO
-from items import armor_subtype, match_category
 
 parser = argparse.ArgumentParser()
 
@@ -37,9 +36,9 @@ if up_to_date() is False:
     exit(1)
 
 class Item: 
-    def __init__(self, id:int, name:str, ilvl:int, classes:Union[list, str], category:str, binding:str, version:str): 
+    def __init__(self, id:int, name:str, ilvl:int, classes:Union[list, str], category:str, binding:str, primary_stat:str, secondary_stats:Union[list, str], sockets:Union[list, str], socket_bonus:str): 
         """
-        Create a log entry. ID;Item;Item Level;Classes;Category;Bind;Version
+        Create a log entry. ID;Item;Item Level;Classes;Category;Binding;Primary Stats;Secondary Stats;Sockets;Socket Bonus
         """
         self.id = id
         self.name = name
@@ -47,7 +46,10 @@ class Item:
         self.classes = classes 
         self.category = category
         self.binding = binding
-        self.version = version
+        self.primary_stat = primary_stat
+        self.secondary_stats = secondary_stats
+        self.sockets = sockets
+        self.socket_bonus = socket_bonus
 
 class Log: 
     def __init__(self, name, item:Item, roll_type, date:str, note:str = None): 
@@ -66,7 +68,7 @@ class Log:
         self.note = note
 
 class Player: 
-    def __init__(self, name:str, alias:str, pclass:str):
+    def __init__(self, name:str, alias:str, pclass:str): 
         self.name = name
         self.alias = alias
         self._player_class = pclass
@@ -83,35 +85,12 @@ class Player:
 
 all_items = {}
 
-def match_suffix(item_name, base_type): 
-    item_name = item_name.lower()
-    if "fireflash" in item_name: return armor_subtype("Stamina, Intellect, Critical Strike, Haste", base_type)
-    elif "feverflare" in item_name: return armor_subtype("Stamina, Intellect, Haste, Mastery", base_type)
-    elif "faultline" in item_name: return armor_subtype("Stamina, Strength, Haste, Mastery", base_type)
-    elif "landslide" in item_name: return armor_subtype("Stamina, Strength, Hit, Expertise", base_type)
-    elif "earthshaker" in item_name: return armor_subtype("Stamina, Strength, Hit, Critical Strike", base_type)
-    elif "earthfall" in item_name: return armor_subtype("Stamina, Strength, Critical Strike, Haste", base_type)
-    elif "undertow" in item_name: return armor_subtype("Stamina, Intellect, Haste, Spirit", base_type)
-    elif "wavecrest" in item_name: return armor_subtype("Stamina, Intellect, Mastery, Spirit", base_type)
-    elif "earthbreaker" in item_name: return armor_subtype("Stamina, Strength, Critical Strike, Mastery", base_type)
-    elif "wildfire" in item_name: return armor_subtype("Stamina, Intellect, Hit, Critical Strike", base_type)
-    elif "flameblaze" in item_name: return armor_subtype("Stamina, Intellect, Mastery, Hit", base_type)
-    elif "zephyr" in item_name: return armor_subtype("Stamina, Agility, Haste, Mastery", base_type)
-    elif "windstorm" in item_name: return armor_subtype("Stamina, Agility, Critical Strike, Mastery", base_type)
-    elif "stormblast" in item_name: return armor_subtype("Stamina, Agility, Hit, Critical Strike", base_type)
-    elif "galeburst" in item_name: return armor_subtype("Stamina, Agility, Hit, Expertise", base_type)
-    elif "windflurry" in item_name: return armor_subtype("Stamina, Agility, Critical Strike, Haste", base_type)
-    elif "bouldercrag" in item_name: return armor_subtype("Stamina, Strength, Dodge, Parry", base_type)
-    elif "rockslab" in item_name: return armor_subtype("Stamina, Strength, Mastery, Dodge", base_type)
-    elif "bedrock" in item_name: return armor_subtype("Stamina, Strength, Mastery, Parry", base_type)
-    elif "mountainbed" in item_name: return armor_subtype("Stamina, Strength, Mastery, Expertise", base_type)
-    else: return "Unknown"
-
 with open("all-items-mop.scsv", "r", encoding="utf-8") as mop_file: 
     mop_items = mop_file.readlines()
     for ind,item in enumerate(mop_items):
         if ind == 0: continue # Header 
-        # ID;Item;Item Level;Classes;Category;Bind;Version
+        # ID;Item;Item Level;Classes;Category;Binding;Primary Stats;Secondary Stats;Sockets;Socket Bonus
+
         item = item.strip().split(";")
         item_id = int(item[0])
         name = item[1]
@@ -119,9 +98,15 @@ with open("all-items-mop.scsv", "r", encoding="utf-8") as mop_file:
         classes = item[3].split(", ") if "," in item[3] else item[3]
         category = item[4]
         binding = item[5]
-        version = item[6]
+        primary_stat = item[6]
+        secondary_stats = item[7].split(", ") if "," in item[7] else item[7]
+        sockets = item[8].split(", ") if "," in item[8] else item[8]
+        socket_bonus = item[9]
 
-        all_items[item_id] = Item(item_id, name, item_level, classes, category, binding, version)
+        # Create the Item object.
+        item_obj = Item(item_id, name, item_level, classes, category, binding, primary_stat, secondary_stats, sockets, socket_bonus)
+        # Add the item to the all_items dictionary.
+        all_items[item_id] = item_obj
 
 def import_pickle(): 
     # Import the pickle file
@@ -334,23 +319,27 @@ def award_loot_manual(players):
     return award_loot(players, item_match)
 
 def award_loot(players, item_match):
-    if "Random" in item_match.category: 
-        prefix = input("Item subcategory is random. What's the prefix? ").title()
-        item_match.category = match_suffix(prefix, item_match.category)
-        item_match.name = f"{item_match.name} of the {prefix}"
-
-    slot_category = match_category(item_match.category)
-    item_match.category = item_match.category.replace(" (Random)", "")
-
     for p in players: 
         # Skip this person if they're not here.
         if p._attendance == False: continue
 
     print(f"Item: {item_match.name} ({item_match.ilvl}) -- {item_match.category}")
+
+    if item_match.secondary_stats == "None": 
+        print(f"Stats: {item_match.primary_stat}")
+    else: 
+        print(f"Stats: {item_match.primary_stat} + {', '.join(item_match.secondary_stats) if isinstance(item_match.secondary_stats, list) else item_match.secondary_stats}")
+
+    if item_match.sockets != "None":
+        if isinstance(item_match.sockets, list):
+            print(f"Sockets: {', '.join(item_match.sockets)} + Socket bonus: {item_match.socket_bonus}")
+        else:
+            print(f"Sockets: {item_match.sockets} + Socket bonus: {item_match.socket_bonus}")
+
     if item_match.classes != "None": print(f"Classes: {', '.join(item_match.classes)}")
     if item_match.binding != "Binds when picked up": print(f"WARNING: Item binds when equipped.")
 
-    if item_match.category != "ETC" or re.search(r"(Chest|Crown|Gauntlets|Leggings|Shoulders) of the Corrupted (Conqueror|Protector|Vanquisher)", item_match.name):
+    if item_match.category != "ETC" or re.search(r"(Chest|Crown|Gauntlets|Leggings|Shoulders) of the Shadowy (Conqueror|Protector|Vanquisher)", item_match.name):
         ready = input("Ready to announce? (y/n): ").lower()
 
         if ready == "y": 
@@ -368,6 +357,47 @@ def award_loot(players, item_match):
             time.sleep(0.1)
             pyautogui.press("enter")
             time.sleep(0.25)
+
+            pyautogui.write("/")
+            time.sleep(0.1)
+            pyautogui.write("rw")
+            time.sleep(0.1)
+            pyautogui.press("space")
+            time.sleep(0.1)
+
+            if item_match.secondary_stats == "None":
+                pyautogui.write(f"Stats: {item_match.primary_stat}")
+            else: 
+                pyautogui.write(f"Stats: {item_match.primary_stat} + {', '.join(item_match.secondary_stats) if isinstance(item_match.secondary_stats, list) else item_match.secondary_stats}")
+
+            time.sleep(0.1)
+            pyautogui.press("enter")
+            time.sleep(0.25)
+
+            if item_match.sockets != "None":
+                if isinstance(item_match.sockets, list):
+                    pyautogui.write("/")
+                    time.sleep(0.1)
+                    pyautogui.write("rw")
+                    time.sleep(0.1)
+                    pyautogui.press("space")
+                    time.sleep(0.1)
+                    pyautogui.write(f"Sockets: {', '.join(item_match.sockets)} + Socket bonus: {item_match.socket_bonus}")
+                    time.sleep(0.1)
+                    pyautogui.press("enter")
+                    time.sleep(0.25)
+
+                else:
+                    pyautogui.write("/")
+                    time.sleep(0.1)
+                    pyautogui.write("rw")
+                    time.sleep(0.1)
+                    pyautogui.press("space")
+                    time.sleep(0.1)
+                    pyautogui.write(f"Sockets: {item_match.sockets} + Socket bonus: {item_match.socket_bonus}")
+                    time.sleep(0.1)
+                    pyautogui.press("enter")
+                    time.sleep(0.25)
 
             if item_match.classes != "None":
                 pyautogui.write("/")
@@ -464,7 +494,7 @@ def award_loot(players, item_match):
 
         log = Log(player.name, item_match, roll_type, datetime.now().strftime("%Y-%m-%d"))
         player._raid_log.append(log)
-        player._history[slot_category].append(log)
+        player._history["Off-Spec"].append(log)
         print(f"{player.name} has been awarded {item_match.name} ({item_match.ilvl}) as an {roll_type} item.")
 
     elif "Plans/Pattern" in item_match.category:

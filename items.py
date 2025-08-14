@@ -4,19 +4,9 @@ from bs4 import BeautifulSoup
 
 def parse_item_data(html): 
     out = {}
-
-    # g_items[86321].tooltip_enus = "<table><tr><td><!--nstart--><b class=\"q4\">Gao-Rei, Staff of the Legendary Protector<\/b><!--nend--><!--ndstart--><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->496<\/span><!--bo--><br>Binds when picked up<!--ue--><table width=\"100%\"><tr><td>Two-Hand<\/td><th><!--scstart2:10--><span class=\"q1\">Staff<\/span><!--scend--><\/th><\/tr><\/table><!--rf--><table width=\"100%\"><tr>\n    <td><span><!--dmg-->11,795 - 17,694 Damage<\/span><\/td>\n    <th>Speed <!--spd-->3.30<\/th>\n<\/tr><\/table><!--dps-->(4,468 damage per second)<br><span><!--stat3-->+1,223 Agility<\/span><br><span><!--stat7-->+1,835 Stamina<\/span><!--ebstats--><br><span class=\"q2\">+<!--rtg37-->828 Expertise<\/span><br><span class=\"q2\">+<!--rtg49-->795 Mastery<\/span><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><br \/><br><a href=\"\/mop-classic\/items\/gems?filter=81;5;0\" class=\"socket-hydraulic q0\">Sha-Touched<\/a><!--ps--><br \/><br \/>Durability 120 \/ 120<\/td><\/tr><\/table><table><tr><td>Requires Level <!--rlvl-->90<br><!--rr--><!--itemEffects:0--><span class=\"q\">&quot;Sha-Touched&quot;<\/span><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">73<\/span> <span class=\"moneysilver\">14<\/span> <span class=\"moneycopper\">70<\/span><\/div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Tsulong<\/div><\/td><\/tr><\/table>";
-
-    # g_items[87157].tooltip_enus = "<table><tr><td><!--nstart--><b class=\"q4\">Sunwrought Mail Hauberk<\/b><!--nend--><!--ndstart--><br \/><span style=\"color: #00FF00\">Heroic<\/span><!--ndend--><span class=\"q\"><br>Item Level <!--ilvl-->509<\/span><!--bo--><br>Binds when picked up<!--ue--><table width=\"100%\"><tr><td>Chest<\/td><th><!--scstart4:3--><span class=\"q1\">Mail<\/span><!--scend--><\/th><\/tr><\/table><!--rf--><span><!--amr-->4210 Armor<\/span><br><span><!--stat3-->+1,220 Agility<\/span><br><span><!--stat7-->+2,071 Stamina<\/span><!--ebstats--><br><span class=\"q2\">+<!--rtg31-->684 Hit<\/span><br><span class=\"q2\">+<!--rtg36-->933 Haste<\/span><!--egstats--><!--eistats--><!--nameDescStats--><!--rs--><!--e--><br \/><br><a href=\"\/mop-classic\/items\/gems?filter=81;2;0\" class=\"socket-red q0\">Red Socket<\/a><br><a href=\"\/mop-classic\/items\/gems?filter=81;3;0\" class=\"socket-yellow q0\">Yellow Socket<\/a><!--ps--><br><!--sb--><span class=\"q0\">Socket Bonus: +<!--ee15:0:90:750:0:0-->120 Agility<\/span><br \/><br \/>Durability 165 \/ 165<\/td><\/tr><\/table><table><tr><td>Requires Level <!--rlvl-->90<br><!--rr--><!--itemEffects:0--><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">42<\/span> <span class=\"moneysilver\">47<\/span> <span class=\"moneycopper\">58<\/span><\/div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Tsulong<\/div><\/td><\/tr><\/table>";
-
-    # g_items[89239].tooltip_enus = "<table><tr><td><!--nstart--><b class=\"q4\">Chest of the Shadowy Vanquisher<\/b><!--nend--><!--ndstart--><!--ndend--><span class=\"q whtt-extra whtt-ilvl\"><br>Item Level <!--ilvl-->496<\/span><!--bo--><br>Binds when picked up<!--ue--><!--ebstats--><!--egstats--><!--eistats--><!--nameDescStats--><div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"\/mop-classic\/class=4\/rogue\" class=\"c4\">Rogue<\/a>, <a href=\"\/mop-classic\/class=6\/death-knight\" class=\"c6\">Death Knight<\/a>, <a href=\"\/mop-classic\/class=8\/mage\" class=\"c8\">Mage<\/a>, <a href=\"\/mop-classic\/class=11\/druid\" class=\"c11\">Druid<\/a><\/div><\/td><\/tr><\/table><table><tr><td>Requires Level <!--rlvl-->90<!--itemEffects:1--><br><!--pvpEquip--><!--pvpEquip--><div class=\"whtt-sellprice\">Sell Price: <span class=\"moneygold\">50<\/span><\/div><div class=\"whtt-extra whtt-droppedby\">Dropped by: Grand Empress Shek'zeer<\/div><\/td><\/tr><\/table>";
-
-    # 1) category
-    # <tr><td>Two-Hand<\/td><th><!--scstart2:10--><span class=\"q1\">Staff<\/span>
     
     soup = BeautifulSoup(html, 'html.parser')
 
-    # A list of valid equipment slots to filter the correct <td>
     valid_slots = {
         'two-hand', 'one-hand', 'main hand', 'off hand',
         'chest', 'head', 'legs', 'feet', 'hands',
@@ -26,24 +16,24 @@ def parse_item_data(html):
         'cloth', 'leather', 'mail', 'plate'
     }
 
+    out['category'] = ''
+
     if re.search(r"Chest of the Shadowy (Conqueror|Protector|Vanquisher)", html):
         out['category'] = "Tier Set Token"
 
     else: 
-        for table in soup.find_all('table'):
-            tds = table.find_all('td')
-            span = table.find('span', class_='q1')
-            if tds and span:
-                td_text = tds[0].get_text(strip=True)
-                span_text = span.get_text(strip=True)
+        if re.search(r"({})".format('|'.join(armor_types)), html, re.IGNORECASE):
+            armor_match = re.search(r"({})".format('|'.join(armor_types)), html, re.IGNORECASE)
+            if armor_match:
+                out['category'] = f"{armor_match.group(0).strip().title()}"
 
-                if td_text.lower() in valid_slots and span_text.lower() in armor_types:
-                    out['category'] = f"{span_text} {td_text}"
-                    
-                elif td_text.lower() in valid_slots:
-                    out['category'] = f"{td_text} {span_text}"
+        if re.search(r"({})".format('|'.join(valid_slots)), html, re.IGNORECASE):
+            slot_match = re.search(r"({})".format('|'.join(valid_slots)), html, re.IGNORECASE)
+            if slot_match:
+                out['category'] = f"{out['category']} {slot_match.group(0).strip().title()}".strip()
 
-    print(f"Category: {out.get('category', 'Unknown')}")
+    if out['category'] == ' ':
+        out['category'] = 'None'
 
     # Item level
     out['item_level'] = None
@@ -51,10 +41,7 @@ def parse_item_data(html):
     if ilvl_match:
         out['item_level'] = int(ilvl_match.group(1))
 
-    print(f'Item level: {out.get("item_level", "Unknown")}')
-
     # Classes
-    # <div class=\"wowhead-tooltip-item-classes\">Classes: <a href=\"\/mop-classic\/class=4\/rogue\" class=\"c4\">Rogue<\/a>, <a href=\"\/mop-classic\/class=6\/death-knight\" class=\"c6\">Death Knight<\/a>, <a href=\"\/mop-classic\/class=8\/mage\" class=\"c8\">Mage<\/a>, <a href=\"\/mop-classic\/class=11\/druid\" class=\"c11\">Druid<\/a><\/div>
 
     out['classes'] = []
     classes_div = soup.find('div', class_='wowhead-tooltip-item-classes')
@@ -66,7 +53,94 @@ def parse_item_data(html):
 
     if not out['classes']: out['classes'] = ['None']
 
-    print(f'Classes: {", ".join(out.get("classes", []))}')
+    # Primary stat -- Intellect, Agility, Strength 
+
+    out['primary_stats'] = ""
+    
+    if re.search(r"\d+\s+(Intellect|Agility|Strength)", html):
+        stat_match = re.search(r"\d+\s+(Intellect|Agility|Strength)", html)
+        out['primary_stats'] = f"{stat_match.group(1)}"
+
+    if not out['primary_stats']: 
+        stamina_match = re.search(r"\d+\s+Stamina", html)
+
+        # Only list stamina if no other primary stat is found
+        if stamina_match: out['primary_stats'] = "Stamina"
+        else: out['primary_stats'] = 'None'
+
+    # Secondary stats -- Haste, Mastery, Crit, Hit, Expertise, Dodge, Parry, Spirit -- we need to find all stats present
+
+    out['secondary_stats'] = set()
+
+    if re.search(r"\d+\s+(Haste|Mastery|Crit|Hit|Expertise|Dodge|Parry|Spirit)", html, re.IGNORECASE):
+        secondary_stats = re.findall(r"\d+\s+(Haste|Mastery|Crit|Hit|Expertise|Dodge|Parry|Spirit)", html, re.IGNORECASE)
+        for stat in secondary_stats:
+            out['secondary_stats'].add(f"{stat}")
+
+    # Special case: trinket proc/use effects
+
+    if out['category'] == 'Trinket': 
+        use_trinket_match = re.search(r'(Use: .*)', html)
+        if use_trinket_match:
+            use_line = use_trinket_match.group(0)
+
+            use_match = re.search(r'Increases your (Intellect|Agility|Strength|Stamina|Haste|Mastery|Critical Strike|Hit|Expertise|Dodge|Parry|Spirit) by .* for \d+ sec.', use_line, re.IGNORECASE)
+            if use_match:
+                out['secondary_stats'].add(f"Use: {use_match.group(1).title()}")
+
+        proc_trinket_match = re.search(r'(Equip: .*)', html)
+        if proc_trinket_match:
+            stat_line = proc_trinket_match.group(0)
+            # print(f"Stat line: {stat_line}")
+
+            stat_match = re.search(r'chance to .* (Intellect|Agility|Strength|Stamina|Haste|Mastery|Critical Strike|Hit|Expertise|Dodge|Parry|Spirit) for \d+ sec.', stat_line, re.IGNORECASE)
+            if stat_match:
+                out['secondary_stats'].add(f"Equip: {stat_match.group(1).title()}")
+
+    if not out['secondary_stats']: out['secondary_stats'] = ['None']
+    else: 
+        out['secondary_stats'] = list(out['secondary_stats'])
+        # Replace all instances of 'Critical Strike' with 'Crit'
+        out['secondary_stats'] = [stat.replace('Critical Strike', 'Crit') for stat in out['secondary_stats']]
+
+        # If there is a Use or Equip effect in secondary stats, it should be the last item in the list 
+        use_effects = [stat for stat in out['secondary_stats'] if stat.startswith('Use:')]
+        equip_effects = [stat for stat in out['secondary_stats'] if stat.startswith('Equip:')]
+
+        if use_effects:
+            out['secondary_stats'].remove(use_effects[0])
+            out['secondary_stats'].append(use_effects[0])
+
+        if equip_effects:
+            out['secondary_stats'].remove(equip_effects[0])
+            out['secondary_stats'].append(equip_effects[0])
+
+    # Sockets
+
+    out['sockets'] = []
+    # First, search for the socket hrefs
+    socket_links = re.findall(r'<a href="/mop-classic/items/gems\?filter=81;\d+;\d+" class="socket-.*? q0">(.+?) Socket</a>', html)
+    for socket_type in socket_links:
+        out['sockets'].append(socket_type)
+
+    if len(out['sockets']) == 0:
+        out['sockets'] = ['None']
+
+    else: 
+        # If sockets are there, then check for socket bonus. It could be a primary stat or a secondary stat 
+        socket_bonus_match = re.search(r'<span class="q0">Socket Bonus: \+<!--ee\d+:\d+:\d+:\d+:\d+:\d+-->\d+\s+(Intellect|Agility|Strength|Haste|Mastery|Crit|Hit|Expertise|Dodge|Parry|Spirit)</span>', html)
+        if socket_bonus_match:
+            out['socket_bonus'] = socket_bonus_match.group(1)
+
+    if 'socket_bonus' not in out:
+        out['socket_bonus'] = 'None'
+
+    # Binding 
+
+    out['binding'] = 'None'
+    binding_match = re.search(r'Binds when (picked up|equipped)', html)
+    if binding_match:
+        out['binding'] = f"Binds when {binding_match.group(1)}"
 
     return out
 
@@ -74,6 +148,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scrape item data from WoWHead.")
     parser.add_argument("--force", "-f", action="store_true")
     parser.add_argument("--output", "-o", default="all-items-mop.scsv")
+    parser.add_argument("--html", "-t", action="store_true", help="Save HTML files for each item.")
     args = parser.parse_args()
 
     with open("mop-ids.txt", "r", encoding="utf-8") as ids_file:
@@ -100,19 +175,21 @@ if __name__ == "__main__":
     ]
 
     with open(args.output, "w", encoding="utf-8") as f:
-        f.write("ID;Item;Item Level;Classes;Category;Binding;Stats\n")
+        f.write("ID;Item;Item Level;Classes;Category;Binding;Primary Stats;Secondary Stats;Sockets;Socket Bonus\n")
+        # Item: Grasps of Serpentine Might, ID: 89843, Data: {'category': 'Plate Hands', 'item_level': 496, 'classes': ['None'], 'primary_stats': 'Strength', 'secondary_stats': ['Parry', 'Expertise'], 'sockets': ['Blue'], 'socket_bonus': 'Parry', 'binding': False}
 
     unique_items = sorted(set(mop_items))
 
     selected_items = [
-        "Chest of the Shadowy Conqueror", "Chest of the Shadowy Protector", "Chest of the Shadowy Vanquisher",
-        "Gao-Rei, Staff of the Legendary Protector", "Sunwrought Mail Hauberk"
+        # "Arrow Breaking Windcloak"
     ]
 
-    for item in unique_items: # tqdm(unique_items):
+    if not os.path.exists("html"): 
+        os.makedirs("html")
+
+    for item in tqdm(unique_items):
         # Debug to print entire HTML
-        if not item in selected_items: continue 
-        if not os.path.exists("./html"): os.makedirs("./html")
+        if len(selected_items) > 0 and not item in selected_items: continue 
 
         item_indices = [i for i, x in enumerate(mop_items) if x == item]
         item_ids = [mop_ids[i] for i in item_indices]
@@ -132,8 +209,18 @@ if __name__ == "__main__":
             item_html = item_html.replace("\\", "").replace("\\'", "'").replace('\\/', '/')
             item_html = html.unescape(item_html)
             
-            print(f"\nProcessing {item} (ID: {item_id})...")
-            parse_item_data(item_html)
+            # print(f"\nProcessing {item} (ID: {item_id})...")
+            # parse_item_data(item_html)
 
-            with open(f"./html/{item_id}.html", "w", encoding="utf-8") as html_file:
-                html_file.write(item_html)
+            item_data = parse_item_data(item_html)
+            # print(f"Item: {item}, ID: {item_id}, Data: {item_data}")
+            
+            # f.write("ID;Item;Item Level;Classes;Category;Binding;Primary Stats;Secondary Stats;Sockets;Socket Bonus\n")
+            # Item: Grasps of Serpentine Might, ID: 89843, Data: {'category': 'Plate Hands', 'item_level': 496, 'classes': ['None'], 'primary_stats': 'Strength', 'secondary_stats': ['Parry', 'Expertise'], 'sockets': ['Blue'], 'socket_bonus': 'Parry', 'binding': False}
+
+            with open(args.output, "a", encoding="utf-8") as f:
+                f.write(f"{item_id};{item};{item_data['item_level']};{', '.join(item_data['classes'])};{item_data['category']};{item_data['binding']};{item_data['primary_stats']};{', '.join(item_data['secondary_stats'])};{', '.join(item_data['sockets'])};{item_data['socket_bonus']}\n")
+
+            if args.html: 
+                with open(f"./html/{item_id}.html", "w", encoding="utf-8") as html_file:
+                    html_file.write(item_html)
