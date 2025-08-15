@@ -119,18 +119,32 @@ def import_pickle():
         players = []
         players.append(Player("_disenchanted", "_disenchanted", ""))
 
-    return players
+    # Import linked players pickle file 
 
-def export_pickle(players):
+    try: 
+        with open('linked_players_mop.pickle', 'rb') as f:  
+            linked_players = pickle.load(f)
+
+    except FileNotFoundError:
+        print('No linked players pickle file found. Creating a new one.')
+        linked_players = []
+
+    return players, linked_players
+
+def export_pickle(players, linked_players):
     # Export the pickle file
     with open('players_mop.pickle', 'wb') as f:
         pickle.dump(players, f)
 
+    with open('linked_players_mop.pickle', 'wb') as f:
+        pickle.dump(linked_players, f)
+
 # We'll import the pickle if the "--force-new" argument is not present.
 if not args.force_new:
-    players = import_pickle()
+    players, linked_players = import_pickle()
 else:
     players = []
+    linked_players = []
 
     # Create a special player called "_disenchanted", for items that were not awarded to anyone.
     # This is used when no one rolls. 
@@ -1005,6 +1019,9 @@ def sudo_mode(players):
                     file.write(f"{item_id};{item.item.name};{item.item.ilvl};{offspec};{p.name};{item.date}\n")
 
     elif sel == "d": 
+        # Sort list of players alphabetically by name. 
+        players.sort(key=lambda x: x.name)
+
         with open("known-players.scsv", "w", encoding="utf-8") as file: 
             file.write("Name,Alias,Class\n")
             for p in players: 
@@ -1018,6 +1035,155 @@ def export_gargul(players):
         for p in players: 
             if p.name == "_disenchanted": continue
             if p._regular_plusses > 0: file.write(f"{p.name},{p._regular_plusses}\n")
+
+def link_unlink_players(players, linked_players): 
+    pl = input(f"Choose a player to link or unlink: ")
+    if pl == "": return players, linked_players
+
+    print("Linked players:")
+    for links in linked_players:
+        print(f"- {', '.join([p.alias for p in links])}")
+
+    # Find the player in the list of players.
+    player_matches = []
+    for p in players:
+        if pl.lower() in p.alias.lower(): 
+            player_matches.append(p)
+
+    if len(player_matches) == 0:
+        print("No matches found. Please double-check the player name and try again.")
+        return players, linked_players
+    
+    elif len(player_matches) == 1:
+        # We'll select this match, and then move on.
+        player = player_matches[0]
+
+    elif len(player_matches) > 1:
+        # We'll print all of the matches, and ask them to select one.
+        print("Multiple matches found. Please select one of the following:")
+        for i in range(len(player_matches)):
+            print(f"{i+1}. {player_matches[i].alias}")
+
+        # We'll ask the user to select a number.
+        sel = input("Select a number: ")
+        try:
+            sel = int(sel)
+            if sel < 1 or sel > len(player_matches):
+                print("Invalid integer input.")
+                return players, linked_players
+        except:
+            print("Invalid non-convertible input.")
+            return players, linked_players
+        
+        # We'll select this match, and then move on.
+        player = player_matches[sel-1]
+
+    # If the player's already linked, ask if we want to unlink them. 
+    # Ideally, this should never be done unless we linked by accident; this is a failsafe. 
+
+    if player.alias in [p.alias for sublist in linked_players for p in sublist]:
+        confirm = input(f"{player.alias} is already linked to another player. Do you want to unlink them? (y/n): ").lower()
+
+        if confirm == "y":
+            # For simplicity, we're going to remove the entire linked group that contains this player. 
+            # We're going to print this out, and then ask the user to confirm. 
+
+            linked_group = None
+            for group in linked_players:
+                if player in group:
+                    linked_group = group
+                    break
+
+            if linked_group is None:
+                print(f"Could not find linked group for {player.alias}. Aborting.")
+                return players, linked_players
+            
+            print(f"Group found: {', '.join([p.alias for p in linked_group])}")
+            confirm = input("Are you sure you want to unlink this group? (y/n): ").lower()
+            if confirm != "y":
+                print("Aborting.")
+                return players, linked_players
+            
+            # Remove the group from the linked players.
+            linked_players.remove(linked_group)
+            print(f"Unlinked {', '.join([p.alias for p in linked_group])}.")
+            return players, linked_players
+        
+    else: 
+        # Otherwise, we'll ask the user to input the names of other characters they should be linked to. 
+        # For debug purposes, print out all unlinked players except for the one we are linking.
+
+        print("Unlinked players:")
+        unlinked_players = [p.alias for p in players if p.alias not in [p.alias for sublist in linked_players for p in sublist] and p.name != player.name]
+
+        for p in unlinked_players: print(f"- {p}")
+        
+        print("")
+        print("Please input the names of the characters you want to link to this player, separated by commas.")
+
+        characters = input("Characters: ").strip().split(",")
+        characters = [c.strip() for c in characters if c.strip() != ""]
+
+        if len(characters) == 0:
+            print("No characters entered. Aborting.")
+            return players, linked_players
+        
+        # We'll check if the characters entered are valid players.
+        for c in characters:
+            c = c.title()
+            found = False
+
+            for p in players:
+                if p.alias.lower() == c.lower() or p.name.lower() == c.lower():
+                    found = True
+                    break
+
+            if not found:
+                print(f"Player {c} not found. Please check the name and try again.")
+                return players, linked_players
+            
+        proposed_link = [player] + [p for p in players if p.alias.title() in characters or p.name.title() in characters]
+        linked_players.append(proposed_link)
+
+    # Now, we want to check if there are any duplicates in linked players. 
+    # For example, if we have two groups that contain the same player, we want to merge them into one group.
+    # We'll do this by checking if any player in the linked players list is already in another group.
+
+    flattened_group = [p.alias for group in linked_players for p in group]
+    # Check to see if a player appears in this more than once. 
+
+    duplicates = set([p for p in flattened_group if flattened_group.count(p) > 1])
+
+    for dup in duplicates: 
+        # Find and merge all groups that contain this player.
+        groups_to_merge = [group for group in linked_players if dup in [p.alias for p in group]]
+        if len(groups_to_merge) > 1:
+            # Merge the groups into one.
+            merged_group = []
+            for group in groups_to_merge:
+                merged_group += group
+
+            merged_group = list(set(merged_group))  # Remove duplicates
+            linked_players.remove(groups_to_merge[0])
+            for group in groups_to_merge[1:]:
+                linked_players.remove(group)
+
+            linked_players.append(merged_group)
+
+    # Now, we'll print out the list of linked players.
+    print("Linked players:")
+    for group in linked_players:
+        print(f"- {', '.join([p.alias for p in group])}")   
+
+    linked_players = [list(set(group)) for group in linked_players]  # Remove duplicates within each group
+    linked_players = [group for group in linked_players if len(group) > 1]  # Remove empty groups
+
+    # Print remaining unlinked players. 
+    print("Unlinked players:")
+    remaining_unlinked = [p.alias for p in players if p.alias not in [p.alias for sublist in linked_players for p in sublist] and p.name != player.name]
+    for p in remaining_unlinked: print(f"- {p}")
+
+    return players, linked_players
 
 def last_run(): 
     try:
@@ -1059,18 +1225,19 @@ if __name__ == "__main__":
     write_last_run()
 
     while(True): 
-        export_pickle(players)
-        
+        export_pickle(players, linked_players)
+
         print("----------------------------------------")
         print(f"Loot Tracker")
         print("1) Roll off the next piece of loot")
         print("2) Manually roll off loot")
         print("3) Mark attendance")
-        print("4) Export THIS RAID's loot to a file")
-        print("5) Split up loot into paste-sized chunks")
-        print("6) Remove loot, or weekly reset")
-        print("7) Export plusses in Gargul style")
-        print("8) Enter sudo mode")
+        print("4) Link/unlink mains/alts")
+        print("5) Export THIS RAID's loot to a file")
+        print("6) Split up loot into paste-sized chunks")
+        print("7) Remove loot, or weekly reset")
+        print("8) Export plusses in Gargul style")
+        print("9) Enter sudo mode")
 
         print("")
 
@@ -1080,9 +1247,10 @@ if __name__ == "__main__":
         if sel == 1: players = award_loot_auto(players)
         elif sel == 2: players = award_loot_manual(players)
         elif sel == 3: players = mark_attendance(players)
-        elif sel == 4: export_loot()
-        elif sel == 5: paste_loot()
-        elif sel == 6: 
+        elif sel == 4: players, linked_players = link_unlink_players(players, linked_players)
+        elif sel == 5: export_loot()
+        elif sel == 6: paste_loot()
+        elif sel == 7: 
             print("Choose an option: ")
             print("a) Remove one piece of loot from a player")
             print("b) Weekly reset (clear plusses and raid logs, but not history)")
@@ -1091,6 +1259,8 @@ if __name__ == "__main__":
             if sel == "a": remove_loot(players)
             elif sel == "b": players = weekly_reset(players)
             else: print("Invalid option.")
-        elif sel == 7: export_gargul(players)
-        elif sel == 8: players = sudo_mode(players)
+        elif sel == 8: export_gargul(players)
+        elif sel == 9: players = sudo_mode(players)
         else: break
+
+    export_pickle(players, linked_players)
