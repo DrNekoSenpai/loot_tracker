@@ -1,15 +1,29 @@
-# Loot log for **Wednesday, 2025-08-13**:
+# Loot log for Wednesday, 2025-08-13 and **Sunday, 2025-08-17**:
 
-Baskerfield (+1 MS):
-- [Star-Stealer Waistguard](<https://www.wowhead.com/mop_classic/item=86134/star-stealer-waistguard>) (489) (MS) -- received on **Wednesday, 2025-08-13**
-- [Jade Charioteer Figurine](<https://www.wowhead.com/mop_classic/item=86042/jade-charioteer-figurine>) (489) (OS) -- received on **Wednesday, 2025-08-13**
+Baskerfield, Chunkofrock (+1 MS):
+- [Star-Stealer Waistguard](<https://www.wowhead.com/mop_classic/item=86134/star-stealer-waistguard>) (489) (MS) -- distributed to Baskerfield on Wednesday, 2025-08-13
+- [Jade Charioteer Figurine](<https://www.wowhead.com/mop_classic/item=86042/jade-charioteer-figurine>) (489) (OS) -- distributed to Baskerfield on Wednesday, 2025-08-13
+- [Plans: Unyielding Bloodplate](<https://www.wowhead.com/mop_classic/item=87408/plans:-unyielding-bloodplate>) (ETC) -- distributed to Chunkofrock on **Sunday, 2025-08-17**
+
+Gnoya (+2 MS):
+- [Feng's Ring of Dreams](<https://www.wowhead.com/mop_classic/item=89803/fengs-ring-of-dreams>) (489) (MS) -- received on Wednesday, 2025-08-13
+- [Zian's Choker of Coalesced Shadow](<https://www.wowhead.com/mop_classic/item=86083/zians-choker-of-coalesced-shadow>) (489) (MS) -- received on **Sunday, 2025-08-17**
 
 Funkymónky (+1 MS):
-- [Arrow Breaking Windcloak](<https://www.wowhead.com/mop_classic/item=86082/arrow-breaking-windcloak>) (489) (MS) -- received on **Wednesday, 2025-08-13**
+- [Arrow Breaking Windcloak](<https://www.wowhead.com/mop_classic/item=86082/arrow-breaking-windcloak>) (489) (MS) -- received on Wednesday, 2025-08-13
+- [Plans: Gauntlets of Unbound Devotion](<https://www.wowhead.com/mop_classic/item=87413/plans:-gauntlets-of-unbound-devotion>) (ETC) -- received on **Sunday, 2025-08-17**
 
-Gnoya (+1 MS):
-- [Feng's Ring of Dreams](<https://www.wowhead.com/mop_classic/item=89803/fengs-ring-of-dreams>) (489) (MS) -- received on **Wednesday, 2025-08-13**
+Halibutfilet (+1 MS):
+- [Netherrealm Shoulderpads](<https://www.wowhead.com/mop_classic/item=85995/netherrealm-shoulderpads>) (489) (MS) -- received on **Sunday, 2025-08-17**
+
+Shellbornum (+1 MS):
+- [Shoulderguards of the Unflanked](<https://www.wowhead.com/mop_classic/item=86080/shoulderguards-of-the-unflanked>) (489) (MS) -- received on **Sunday, 2025-08-17**
 
 Snedarashi (+1 MS):
-- [Cape of Three Lanterns](<https://www.wowhead.com/mop_classic/item=85979/cape-of-three-lanterns>) (489) (MS) -- received on **Wednesday, 2025-08-13**
+- [Cape of Three Lanterns](<https://www.wowhead.com/mop_classic/item=85979/cape-of-three-lanterns>) (489) (MS) -- received on Wednesday, 2025-08-13
 
+Miadog (+0 MS):
+- [Pattern: Chestguard of Nemeses](<https://www.wowhead.com/mop_classic/item=86238/pattern:-chestguard-of-nemeses>) (ETC) -- received on **Sunday, 2025-08-17**
+
+Disenchanted items:
+- [Bindings of Ancient Spirits](<https://www.wowhead.com/mop_classic/item=86027/bindings-of-ancient-spirits>) (489) -- disenchanted on **Sunday, 2025-08-17**
