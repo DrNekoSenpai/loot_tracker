@@ -537,12 +537,12 @@ def award_loot(players, item_match):
             # If so, we want to also add a plus to those characters.
 
             for group in linked_players:
-                if player.name in [p for p in group]:
+                if player.alias in [p for p in group]:
                     print(f"Found {player.name} in group: {', '.join([p for p in group])}")
                     
                     for linked_player in group:
                         # Find this player in the list of players.
-                        p = next((x for x in players if x.name == linked_player), None)
+                        p = next((x for x in players if x.alias == linked_player), None)
                         if p and p != player:
                             print(f"Adding regular plus to linked player {p.name} ({p.alias})")
                             p._regular_plusses += 1
@@ -1067,12 +1067,12 @@ def sudo_mode(players, linked_players):
                         # If so, we want to also add a plus to those characters.
 
                         for group in linked_players:
-                            if player.name in [p for p in group]:
+                            if player.alias in [p for p in group]:
                                 print(f"Found {player.name} in group: {', '.join([p for p in group])}")
 
                                 for linked_player in group:
                                     # Find this player in the list of players.
-                                    p = next((x for x in players if x.name == linked_player), None)
+                                    p = next((x for x in players if x.alias == linked_player), None)
                                     if p and p != player:
                                         print(f"Adding regular plus to linked player {p.name} ({p.alias})")
                                         p._regular_plusses += 1
