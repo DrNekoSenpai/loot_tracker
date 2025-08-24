@@ -1,15 +1,15 @@
 # Loot log for **Wednesday, 2025-08-20**:
 
-Funkymónky (+2 MS):
-- [Tomb Raider's Girdle](<https://www.wowhead.com/mop_classic/item=85982/tomb-raiders-girdle>) (489) (MS) -- received on **Wednesday, 2025-08-20**
-- [Screaming Tiger, Qiang's Unbreakable Polearm](<https://www.wowhead.com/mop_classic/item=86071/screaming-tiger,-qiangs-unbreakable-polearm>) (489) (MS) -- received on **Wednesday, 2025-08-20**
-
 Sighanama (+2 MS):
 - [Stonefang Chestguard](<https://www.wowhead.com/mop_classic/item=89766/stonefang-chestguard>) (489) (MS) -- received on **Wednesday, 2025-08-20**
 - [Fetters of Death](<https://www.wowhead.com/mop_classic/item=85993/fetters-of-death>) (489) (MS) -- received on **Wednesday, 2025-08-20**
 
 Aeanna (+1 MS):
 - [Spaulders of the Divided Mind](<https://www.wowhead.com/mop_classic/item=86039/spaulders-of-the-divided-mind>) (489) (MS) -- received on **Wednesday, 2025-08-20**
+- [Tomb Raider's Girdle](<https://www.wowhead.com/mop_classic/item=85982/tomb-raiders-girdle>) (489) (OS) -- received on **Wednesday, 2025-08-20**
+
+Funkymónky (+1 MS):
+- [Screaming Tiger, Qiang's Unbreakable Polearm](<https://www.wowhead.com/mop_classic/item=86071/screaming-tiger,-qiangs-unbreakable-polearm>) (489) (MS) -- received on **Wednesday, 2025-08-20**
 
 Pasgghetti (+1 MS):
 - [Undying Shadow Grips](<https://www.wowhead.com/mop_classic/item=86128/undying-shadow-grips>) (489) (MS) -- received on **Wednesday, 2025-08-20**
