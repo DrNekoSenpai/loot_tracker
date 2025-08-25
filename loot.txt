@@ -1,25 +1,36 @@
-# Loot log for **Wednesday, 2025-08-20**:
+# Loot log for Wednesday, 2025-08-20 and **Sunday, 2025-08-24**:
 
 Sighanama (+2 MS):
-- [Stonefang Chestguard](<https://www.wowhead.com/mop_classic/item=89766/stonefang-chestguard>) (489) (MS) -- received on **Wednesday, 2025-08-20**
-- [Fetters of Death](<https://www.wowhead.com/mop_classic/item=85993/fetters-of-death>) (489) (MS) -- received on **Wednesday, 2025-08-20**
+- [Stonefang Chestguard](<https://www.wowhead.com/mop_classic/item=89766/stonefang-chestguard>) (489) (MS) -- received on Wednesday, 2025-08-20
+- [Fetters of Death](<https://www.wowhead.com/mop_classic/item=85993/fetters-of-death>) (489) (MS) -- received on Wednesday, 2025-08-20
 
 Aeanna (+1 MS):
-- [Spaulders of the Divided Mind](<https://www.wowhead.com/mop_classic/item=86039/spaulders-of-the-divided-mind>) (489) (MS) -- received on **Wednesday, 2025-08-20**
-- [Tomb Raider's Girdle](<https://www.wowhead.com/mop_classic/item=85982/tomb-raiders-girdle>) (489) (OS) -- received on **Wednesday, 2025-08-20**
+- [Spaulders of the Divided Mind](<https://www.wowhead.com/mop_classic/item=86039/spaulders-of-the-divided-mind>) (489) (MS) -- received on Wednesday, 2025-08-20
+- [Tomb Raider's Girdle](<https://www.wowhead.com/mop_classic/item=85982/tomb-raiders-girdle>) (489) (OS) -- received on Wednesday, 2025-08-20
+
+Elisesolis (+1 MS):
+- [Lei Shen's Final Orders](<https://www.wowhead.com/mop_classic/item=86144/lei-shens-final-orders>) (489) (MS) -- received on **Sunday, 2025-08-24**
+- [Warbelt of Sealed Pods](<https://www.wowhead.com/mop_classic/item=89826/warbelt-of-sealed-pods>) (496) (OS) -- received on **Sunday, 2025-08-24**
+- [Plans: Gauntlets of Unbound Devotion](<https://www.wowhead.com/mop_classic/item=87413/plans:-gauntlets-of-unbound-devotion>) (ETC) -- received on Wednesday, 2025-08-20
 
 Funkymónky (+1 MS):
-- [Screaming Tiger, Qiang's Unbreakable Polearm](<https://www.wowhead.com/mop_classic/item=86071/screaming-tiger,-qiangs-unbreakable-polearm>) (489) (MS) -- received on **Wednesday, 2025-08-20**
+- [Screaming Tiger, Qiang's Unbreakable Polearm](<https://www.wowhead.com/mop_classic/item=86071/screaming-tiger,-qiangs-unbreakable-polearm>) (489) (MS) -- received on Wednesday, 2025-08-20
+
+Gnoya (+1 MS):
+- [Galaxyfire Girdle](<https://www.wowhead.com/mop_classic/item=89822/galaxyfire-girdle>) (489) (MS) -- received on **Sunday, 2025-08-24**
+
+Halibutfilet (+1 MS):
+- [Chestguard of Total Annihilation](<https://www.wowhead.com/mop_classic/item=86136/chestguard-of-total-annihilation>) (489) (MS) -- received on **Sunday, 2025-08-24**
+
+Miadog (+1 MS):
+- [Gloves of Grasping Claws](<https://www.wowhead.com/mop_classic/item=86161/gloves-of-grasping-claws>) (496) (MS) -- received on **Sunday, 2025-08-24**
+- [Cape of Three Lanterns](<https://www.wowhead.com/mop_classic/item=85979/cape-of-three-lanterns>) (489) (OS) -- received on Wednesday, 2025-08-20
 
 Pasgghetti (+1 MS):
-- [Undying Shadow Grips](<https://www.wowhead.com/mop_classic/item=86128/undying-shadow-grips>) (489) (MS) -- received on **Wednesday, 2025-08-20**
+- [Undying Shadow Grips](<https://www.wowhead.com/mop_classic/item=86128/undying-shadow-grips>) (489) (MS) -- received on Wednesday, 2025-08-20
 
 Snedarashi (+1 MS):
-- [Feng's Ring of Dreams](<https://www.wowhead.com/mop_classic/item=89803/fengs-ring-of-dreams>) (489) (MS) -- received on **Wednesday, 2025-08-20**
+- [Feng's Ring of Dreams](<https://www.wowhead.com/mop_classic/item=89803/fengs-ring-of-dreams>) (489) (MS) -- received on Wednesday, 2025-08-20
 
-Elisesolis (+0 MS):
-- [Plans: Gauntlets of Unbound Devotion](<https://www.wowhead.com/mop_classic/item=87413/plans:-gauntlets-of-unbound-devotion>) (ETC) -- received on **Wednesday, 2025-08-20**
-
-Miadog (+0 MS):
-- [Cape of Three Lanterns](<https://www.wowhead.com/mop_classic/item=85979/cape-of-three-lanterns>) (489) (OS) -- received on **Wednesday, 2025-08-20**
-
+Disenchanted items:
+- [Magnetized Leggings](<https://www.wowhead.com/mop_classic/item=86150/magnetized-leggings>) (489) -- disenchanted on **Sunday, 2025-08-24**
