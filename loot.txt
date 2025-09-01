@@ -1,32 +1,39 @@
-# Loot log for Wednesday, 2025-08-27 and **Friday, 2025-08-29**:
+# Loot log for Wednesday, 2025-08-27; Friday, 2025-08-29; and **Sunday, 2025-08-31**:
 
 Bzorder (+2 MS):
-- [Feng's Ring of Dreams](<https://www.wowhead.com/mop_classic/item=89803/fengs-ring-of-dreams>) (489) (MS) -- received on **Friday, 2025-08-29**
-- [Circuit of the Frail Soul](<https://www.wowhead.com/mop_classic/item=86038/circuit-of-the-frail-soul>) (489) (MS) -- received on **Friday, 2025-08-29**
+- [Feng's Ring of Dreams](<https://www.wowhead.com/mop_classic/item=89803/fengs-ring-of-dreams>) (489) (MS) -- received on Friday, 2025-08-29
+- [Circuit of the Frail Soul](<https://www.wowhead.com/mop_classic/item=86038/circuit-of-the-frail-soul>) (489) (MS) -- received on Friday, 2025-08-29
 
 Halibutfilet (+2 MS):
-- [Dagger of the Seven Stars](<https://www.wowhead.com/mop_classic/item=85924/dagger-of-the-seven-stars>) (489) (MS) -- received on **Friday, 2025-08-29**
-- [Gara'kal, Fist of the Spiritbinder](<https://www.wowhead.com/mop_classic/item=85994/garakal,-fist-of-the-spiritbinder>) (489) (MS) -- received on **Friday, 2025-08-29**
+- [Dagger of the Seven Stars](<https://www.wowhead.com/mop_classic/item=85924/dagger-of-the-seven-stars>) (489) (MS) -- received on Friday, 2025-08-29
+- [Gara'kal, Fist of the Spiritbinder](<https://www.wowhead.com/mop_classic/item=85994/garakal,-fist-of-the-spiritbinder>) (489) (MS) -- received on Friday, 2025-08-29
+
+Snedcharos (+2 MS):
+- [Cloak of Peacock Feathers](<https://www.wowhead.com/mop_classic/item=85985/cloak-of-peacock-feathers>) (489) (MS) -- received on Friday, 2025-08-29
+- [Hisek's Chrysanthemum Cape](<https://www.wowhead.com/mop_classic/item=86154/hiseks-chrysanthemum-cape>) (496) (MS) -- received on **Sunday, 2025-08-31**
 
 Elisesolis (+1 MS):
 - [Breastplate of the Kings' Guard](<https://www.wowhead.com/mop_classic/item=86076/breastplate-of-the-kings-guard>) (489) (MS) -- received on Wednesday, 2025-08-27
 - [Jasper Clawfeet](<https://www.wowhead.com/mop_classic/item=85925/jasper-clawfeet>) (489) (OS) -- received on Wednesday, 2025-08-27
 
+Evilstrain (+1 MS):
+- [Twisting Wind Bracers](<https://www.wowhead.com/mop_classic/item=86170/twisting-wind-bracers>) (496) (MS) -- received on **Sunday, 2025-08-31**
+
 Funkymónky (+1 MS):
-- [Bracers of Violent Meditation](<https://www.wowhead.com/mop_classic/item=89818/bracers-of-violent-meditation>) (489) (MS) -- received on **Friday, 2025-08-29**
+- [Bracers of Violent Meditation](<https://www.wowhead.com/mop_classic/item=89818/bracers-of-violent-meditation>) (489) (MS) -- received on Friday, 2025-08-29
 
 Miatotems (+1 MS):
 - [Circuit of the Frail Soul](<https://www.wowhead.com/mop_classic/item=86038/circuit-of-the-frail-soul>) (489) (MS) -- received on Wednesday, 2025-08-27
 
+Shellbornum (+1 MS):
+- [Pauldrons of the Broken Blade](<https://www.wowhead.com/mop_classic/item=89828/pauldrons-of-the-broken-blade>) (496) (MS) -- received on **Sunday, 2025-08-31**
+
 Sighanama (+1 MS):
 - [Wildfire Worldwalkers](<https://www.wowhead.com/mop_classic/item=85980/wildfire-worldwalkers>) (489) (MS) -- received on Wednesday, 2025-08-27
 
-Snedcharos (+1 MS):
-- [Cloak of Peacock Feathers](<https://www.wowhead.com/mop_classic/item=85985/cloak-of-peacock-feathers>) (489) (MS) -- received on **Friday, 2025-08-29**
-
 Vanthulhu (+1 MS):
-- [Ruby-Linked Girdle](<https://www.wowhead.com/mop_classic/item=89767/ruby-linked-girdle>) (489) (MS) -- received on **Friday, 2025-08-29**
-- [Zian's Choker of Coalesced Shadow](<https://www.wowhead.com/mop_classic/item=86083/zians-choker-of-coalesced-shadow>) (489) (OS) -- received on **Friday, 2025-08-29**
+- [Ruby-Linked Girdle](<https://www.wowhead.com/mop_classic/item=89767/ruby-linked-girdle>) (489) (MS) -- received on Friday, 2025-08-29
+- [Zian's Choker of Coalesced Shadow](<https://www.wowhead.com/mop_classic/item=86083/zians-choker-of-coalesced-shadow>) (489) (OS) -- received on Friday, 2025-08-29
 
 Gnoya (+0 MS):
 - [Cape of Three Lanterns](<https://www.wowhead.com/mop_classic/item=85979/cape-of-three-lanterns>) (489) (OS) -- received on Wednesday, 2025-08-27
@@ -35,3 +42,4 @@ Disenchanted items:
 - [Amulet of Seven Curses](<https://www.wowhead.com/mop_classic/item=85986/amulet-of-seven-curses>) (489) -- disenchanted on Wednesday, 2025-08-27
 - [Fetters of Death](<https://www.wowhead.com/mop_classic/item=85993/fetters-of-death>) (489) -- disenchanted on Wednesday, 2025-08-27
 - [Girdle of Delirious Visions](<https://www.wowhead.com/mop_classic/item=86086/girdle-of-delirious-visions>) (489) -- disenchanted on Wednesday, 2025-08-27
+- [Chestplate of the Forbidden Tower](<https://www.wowhead.com/mop_classic/item=86158/chestplate-of-the-forbidden-tower>) (496) -- disenchanted on **Sunday, 2025-08-31**
