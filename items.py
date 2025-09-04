@@ -72,8 +72,8 @@ def parse_item_data(html):
 
     out['secondary_stats'] = set()
 
-    if re.search(r"\d+\s+(Haste|Mastery|Crit|Hit|Expertise|Dodge|Parry|Spirit)", html, re.IGNORECASE):
-        secondary_stats = re.findall(r"\d+\s+(Haste|Mastery|Crit|Hit|Expertise|Dodge|Parry|Spirit)", html, re.IGNORECASE)
+    if re.search(r"\d+\s+(Haste|Mastery|Critical Strike|Hit|Expertise|Dodge|Parry|Spirit)", html, re.IGNORECASE):
+        secondary_stats = re.findall(r"\d+\s+(Haste|Mastery|Critical Strike|Hit|Expertise|Dodge|Parry|Spirit)", html, re.IGNORECASE)
         for stat in secondary_stats:
             out['secondary_stats'].add(f"{stat}")
 
@@ -84,7 +84,7 @@ def parse_item_data(html):
         if use_trinket_match:
             use_line = use_trinket_match.group(0)
 
-            use_match = re.search(r'Increases your (Intellect|Agility|Strength|Stamina|Haste|Mastery|Critical Strike|Hit|Expertise|Dodge|Parry|Spirit) by .* for \d+ sec.', use_line, re.IGNORECASE)
+            use_match = re.search(r'Increases your (Intellect|Agility|Strength|Stamina|Haste|Mastery|Critical Strike|Hit|Expertise|Dodge|Parry|Spirit|Stamina) by .* for \d+ sec.', use_line, re.IGNORECASE)
             if use_match:
                 out['secondary_stats'].add(f"Use: {use_match.group(1).title()}")
 
@@ -93,7 +93,7 @@ def parse_item_data(html):
             stat_line = proc_trinket_match.group(0)
             # print(f"Stat line: {stat_line}")
 
-            stat_match = re.search(r'chance to .* (Intellect|Agility|Strength|Stamina|Haste|Mastery|Critical Strike|Hit|Expertise|Dodge|Parry|Spirit) for \d+ sec.', stat_line, re.IGNORECASE)
+            stat_match = re.search(r'chance to .* (Intellect|Agility|Strength|Stamina|Haste|Mastery|Critical Strike|Hit|Expertise|Dodge|Parry|Spirit|Stamina) for \d+ sec.', stat_line, re.IGNORECASE)
             if stat_match:
                 out['secondary_stats'].add(f"Equip: {stat_match.group(1).title()}")
 
@@ -128,7 +128,7 @@ def parse_item_data(html):
 
     else: 
         # If sockets are there, then check for socket bonus. It could be a primary stat or a secondary stat 
-        socket_bonus_match = re.search(r'<span class="q0">Socket Bonus: \+<!--ee\d+:\d+:\d+:\d+:\d+:\d+-->\d+\s+(Intellect|Agility|Strength|Haste|Mastery|Crit|Hit|Expertise|Dodge|Parry|Spirit)</span>', html)
+        socket_bonus_match = re.search(r'<span class="q0">Socket Bonus: \+<!--ee\d+:\d+:\d+:\d+:\d+:\d+-->\d+\s+(Intellect|Agility|Strength|Stamina|Haste|Mastery|Critical Strike|Hit|Expertise|Dodge|Parry|Spirit|Stamina)</span>', html)
         if socket_bonus_match:
             out['socket_bonus'] = socket_bonus_match.group(1)
 
