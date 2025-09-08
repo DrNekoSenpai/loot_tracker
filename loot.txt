@@ -1,41 +1,57 @@
-# Loot log for **Wednesday, 2025-09-03**:
+# Loot log for Wednesday, 2025-09-03 and **Sunday, 2025-09-07**:
 
-Miadog (+3 MS):
-- [Fan of Fiery Winds](<https://www.wowhead.com/mop_classic/item=89424/fan-of-fiery-winds>) (489) (MS) -- received on **Wednesday, 2025-09-03**
-- [Hood of Blind Eyes](<https://www.wowhead.com/mop_classic/item=86129/hood-of-blind-eyes>) (489) (MS) -- received on **Wednesday, 2025-09-03**
-- [Jade Magistrate Figurine](<https://www.wowhead.com/mop_classic/item=86044/jade-magistrate-figurine>) (489) (MS) -- received on **Wednesday, 2025-09-03**
+Miadog (+4 MS):
+- [Fan of Fiery Winds](<https://www.wowhead.com/mop_classic/item=89424/fan-of-fiery-winds>) (489) (MS) -- received on Wednesday, 2025-09-03
+- [Hood of Blind Eyes](<https://www.wowhead.com/mop_classic/item=86129/hood-of-blind-eyes>) (489) (MS) -- received on Wednesday, 2025-09-03
+- [Jade Magistrate Figurine](<https://www.wowhead.com/mop_classic/item=86044/jade-magistrate-figurine>) (489) (MS) -- received on Wednesday, 2025-09-03
+- [Scent-Soaked Sandals](<https://www.wowhead.com/mop_classic/item=89829/scent-soaked-sandals>) (496) (MS) -- received on **Sunday, 2025-09-07**
 
 Baskerfield (+2 MS):
-- [Bracers of Six Oxen](<https://www.wowhead.com/mop_classic/item=85983/bracers-of-six-oxen>) (489) (MS) -- received on **Wednesday, 2025-09-03**
-- [Jade Warlord Figurine](<https://www.wowhead.com/mop_classic/item=86046/jade-warlord-figurine>) (489) (MS) -- received on **Wednesday, 2025-09-03**
-- [Jasper Clawfeet](<https://www.wowhead.com/mop_classic/item=85925/jasper-clawfeet>) (489) (OS) -- received on **Wednesday, 2025-09-03**
-- [Screaming Tiger, Qiang's Unbreakable Polearm](<https://www.wowhead.com/mop_classic/item=86071/screaming-tiger,-qiangs-unbreakable-polearm>) (489) (OS) -- received on **Wednesday, 2025-09-03**
+- [Bracers of Six Oxen](<https://www.wowhead.com/mop_classic/item=85983/bracers-of-six-oxen>) (489) (MS) -- received on Wednesday, 2025-09-03
+- [Jade Warlord Figurine](<https://www.wowhead.com/mop_classic/item=86046/jade-warlord-figurine>) (489) (MS) -- received on Wednesday, 2025-09-03
+- [Jasper Clawfeet](<https://www.wowhead.com/mop_classic/item=85925/jasper-clawfeet>) (489) (OS) -- received on Wednesday, 2025-09-03
+- [Screaming Tiger, Qiang's Unbreakable Polearm](<https://www.wowhead.com/mop_classic/item=86071/screaming-tiger,-qiangs-unbreakable-polearm>) (489) (OS) -- received on Wednesday, 2025-09-03
+
+Elisesolis (+2 MS):
+- [Bonded Soul Bracers](<https://www.wowhead.com/mop_classic/item=89817/bonded-soul-bracers>) (489) (MS) -- received on Wednesday, 2025-09-03
+- [Pauldrons of the Broken Blade](<https://www.wowhead.com/mop_classic/item=89828/pauldrons-of-the-broken-blade>) (496) (MS) -- received on **Sunday, 2025-09-07**
+
+Shellbornum (+2 MS):
+- [Starshatter](<https://www.wowhead.com/mop_classic/item=86140/starshatter>) (489) (MS) -- received on Wednesday, 2025-09-03
+- [Vizier's Ruby Signet](<https://www.wowhead.com/mop_classic/item=86155/viziers-ruby-signet>) (496) (MS) -- received on **Sunday, 2025-09-07**
+
+Vangoated (+2 MS):
+- [Bracers of Tempestuous Fury](<https://www.wowhead.com/mop_classic/item=86168/bracers-of-tempestuous-fury>) (496) (MS) -- received on **Sunday, 2025-09-07**
+- [Korven's Amber-Sealed Beetle](<https://www.wowhead.com/mop_classic/item=86205/korvens-amber-sealed-beetle>) (496) (MS) -- received on **Sunday, 2025-09-07**
 
 Zguis (+2 MS):
-- [Wildfire Worldwalkers](<https://www.wowhead.com/mop_classic/item=85980/wildfire-worldwalkers>) (489) (MS) -- received on **Wednesday, 2025-09-03**
-- [Subetai's Pillaging Leggings](<https://www.wowhead.com/mop_classic/item=86081/subetais-pillaging-leggings>) (489) (MS) -- received on **Wednesday, 2025-09-03**
+- [Wildfire Worldwalkers](<https://www.wowhead.com/mop_classic/item=85980/wildfire-worldwalkers>) (489) (MS) -- received on Wednesday, 2025-09-03
+- [Subetai's Pillaging Leggings](<https://www.wowhead.com/mop_classic/item=86081/subetais-pillaging-leggings>) (489) (MS) -- received on Wednesday, 2025-09-03
 
-Elisesolis (+1 MS):
-- [Bonded Soul Bracers](<https://www.wowhead.com/mop_classic/item=89817/bonded-soul-bracers>) (489) (MS) -- received on **Wednesday, 2025-09-03**
+Axsel (+1 MS):
+- [Stormwake Mistcloak](<https://www.wowhead.com/mop_classic/item=86182/stormwake-mistcloak>) (496) (MS) -- received on **Sunday, 2025-09-07**
 
 Gnoya (+1 MS):
-- [Imperial Ghostbinder's Robes](<https://www.wowhead.com/mop_classic/item=85990/imperial-ghostbinders-robes>) (489) (MS) -- received on **Wednesday, 2025-09-03**
+- [Imperial Ghostbinder's Robes](<https://www.wowhead.com/mop_classic/item=85990/imperial-ghostbinders-robes>) (489) (MS) -- received on Wednesday, 2025-09-03
 
-Shellbornum (+1 MS):
-- [Starshatter](<https://www.wowhead.com/mop_classic/item=86140/starshatter>) (489) (MS) -- received on **Wednesday, 2025-09-03**
+Meemeemeemee (+1 MS):
+- [Grips of the Leviathan](<https://www.wowhead.com/mop_classic/item=86175/grips-of-the-leviathan>) (496) (MS) -- received on **Sunday, 2025-09-07**
+
+Snedcharos (+1 MS):
+- [Gauntlets of the Shadowy Vanquisher](<https://www.wowhead.com/mop_classic/item=89242/gauntlets-of-the-shadowy-vanquisher>) (496) (MS) -- received on **Sunday, 2025-09-07**
 
 Swiftbladess (+1 MS):
-- [Bottle of Infinite Stars](<https://www.wowhead.com/mop_classic/item=86132/bottle-of-infinite-stars>) (489) (MS) -- received on **Wednesday, 2025-09-03**
+- [Bottle of Infinite Stars](<https://www.wowhead.com/mop_classic/item=86132/bottle-of-infinite-stars>) (489) (MS) -- received on Wednesday, 2025-09-03
 
 Vanthulhu (+1 MS):
-- [Torch of the Celestial Spark](<https://www.wowhead.com/mop_classic/item=86137/torch-of-the-celestial-spark>) (489) (MS) -- received on **Wednesday, 2025-09-03**
+- [Torch of the Celestial Spark](<https://www.wowhead.com/mop_classic/item=86137/torch-of-the-celestial-spark>) (489) (MS) -- received on Wednesday, 2025-09-03
 
 Kerlashric (+0 MS):
-- [Star-Stealer Waistguard](<https://www.wowhead.com/mop_classic/item=86134/star-stealer-waistguard>) (489) (OS) -- received on **Wednesday, 2025-09-03**
+- [Star-Stealer Waistguard](<https://www.wowhead.com/mop_classic/item=86134/star-stealer-waistguard>) (489) (OS) -- received on Wednesday, 2025-09-03
 
 Disenchanted items:
-- [Bindings of Ancient Spirits](<https://www.wowhead.com/mop_classic/item=86027/bindings-of-ancient-spirits>) (489) -- disenchanted on **Wednesday, 2025-09-03**
-- [Stonebound Cinch](<https://www.wowhead.com/mop_classic/item=85977/stonebound-cinch>) (489) -- disenchanted on **Wednesday, 2025-09-03**
-- [Soulgrasp Choker](<https://www.wowhead.com/mop_classic/item=85991/soulgrasp-choker>) (489) -- disenchanted on **Wednesday, 2025-09-03**
-- [Bindings of Ancient Spirits](<https://www.wowhead.com/mop_classic/item=86027/bindings-of-ancient-spirits>) (489) -- disenchanted on **Wednesday, 2025-09-03**
-- [Zian's Choker of Coalesced Shadow](<https://www.wowhead.com/mop_classic/item=86083/zians-choker-of-coalesced-shadow>) (489) -- disenchanted on **Wednesday, 2025-09-03**
+- [Bindings of Ancient Spirits](<https://www.wowhead.com/mop_classic/item=86027/bindings-of-ancient-spirits>) (489) -- disenchanted on Wednesday, 2025-09-03
+- [Stonebound Cinch](<https://www.wowhead.com/mop_classic/item=85977/stonebound-cinch>) (489) -- disenchanted on Wednesday, 2025-09-03
+- [Soulgrasp Choker](<https://www.wowhead.com/mop_classic/item=85991/soulgrasp-choker>) (489) -- disenchanted on Wednesday, 2025-09-03
+- [Bindings of Ancient Spirits](<https://www.wowhead.com/mop_classic/item=86027/bindings-of-ancient-spirits>) (489) -- disenchanted on Wednesday, 2025-09-03
+- [Zian's Choker of Coalesced Shadow](<https://www.wowhead.com/mop_classic/item=86083/zians-choker-of-coalesced-shadow>) (489) -- disenchanted on Wednesday, 2025-09-03

@@ -177,7 +177,7 @@ def regular_keyboard(input_string):
 
 def award_loot_auto(players):
     horizontal_boundary = 200
-    left, right, up, down = 1720 - horizontal_boundary, 1720 + horizontal_boundary, 6, 53
+    left, right, up, down = 1720 - horizontal_boundary, 1720 + horizontal_boundary, 5, 65
     image = pyautogui.screenshot(region=(left, up, right-left, down-up))
 
     whitelist = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-,:\' "
