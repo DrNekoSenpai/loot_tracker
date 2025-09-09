@@ -794,9 +794,11 @@ def export_loot():
                     f.write(f" {date_string}\n")
 
 def paste_loot():  
-    # Delete all files in "./history"
-    for file in os.listdir("./pastes"):
-        os.remove(f"./pastes/{file}")
+    if not os.path.exists("./pastes"): 
+        os.makedirs("./pastes")
+    else: 
+        for file in os.listdir("./pastes"):
+            os.remove(f"./pastes/{file}")
         
     with open("loot.txt", "r", encoding="utf-8") as file: 
         lines = file.read()
@@ -1078,32 +1080,25 @@ def sudo_mode(players, linked_players):
                                         p._regular_plusses += 1
 
         elif sel == "c": 
+            partial_exports = []
+            for p in players: 
+                for item in p._raid_log: 
+                    item_id = 0
+
+                    for key, value in all_items.items():
+                        if value.name == item.item.name and value.ilvl == item.item.ilvl:
+                            item_id = key
+                            break
+
+                    partial_exports.append((item_id, item.item.name, item.item.ilvl, 1 if item.roll == "OS" else 0, p.name, item.date))
+
+            # Sort partial exports by date (oldest to newest), then by player name (alphabetically)
+            partial_exports.sort(key=lambda x: (x[5], x[4]))
+
             with open(f"partial-export.scsv", "w", encoding="utf-8") as file: 
                 file.write("@ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY\n")
-                for p in players: 
-                    # For each item in their loot log, write out;
-                    # @ID;@ITEM;@ILVL;@OS;@WINNER;@YEAR-@MONTH-@DAY
-                    # 50274;Shadowfrost Shard;0;0;Pastiry;2024-04-24
-                    for item in p._raid_log: 
-                        item_id = 0
-
-                        if re.match(r"Flickering (Cowl|Shoulders|Shoulderpads|Handguards|Wristbands)", item.item.name):
-                            suffix = " ".join(item.item.name.split(" ")[2:])
-                            item_name = item.item.name.replace(f"{suffix}", "").strip()
-
-                            for key, value in all_items.items():
-                                if value.name == item_name:
-                                    item_id = key
-                                    break
-
-                        else: 
-                            for key, value in all_items.items():
-                                if value.name == item.item.name and value.ilvl == item.item.ilvl:
-                                    item_id = key
-                                    break
-
-                        offspec = 1 if item.roll == "OS" else 0
-                        file.write(f"{item_id};{item.item.name};{item.item.ilvl};{offspec};{p.name};{item.date}\n")
+                for entry in partial_exports:
+                    file.write(f"{entry[0]};{entry[1]};{entry[2]};{entry[3]};{entry[4]};{entry[5]}\n")
 
         elif sel == "d": 
             # Sort list of players alphabetically by name. 
