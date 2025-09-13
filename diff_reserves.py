@@ -23,12 +23,45 @@ with open(item_database_file, "r") as f:
 # Snedcharos,DEATHKNIGHT,0,0,0,89249,1
 # Snedcharos,DEATHKNIGHT,0,0,0,89258,1
 
-# We want to write a function that takes players in local_reserves and remote_reserves, and diffs them
-# Priority favors local_reserves -- so if a player reserved different items in local_reserves, we want to copy the format given in remote_reserves and update what they reserved
+# We want to write a function that takes reserves written in remote format, and converts them into local format; overwriting if necessary
 
-# For example, in the example, Snedcharos reserved item 89249 -- Chest of the Shadowy Vanquisher and 89258 -- Helm of the Shadowy Vanquisher
+class remote_reserve: 
+    def __init__(self, line):
+        parts = line.split(",")
 
-# We want to update remote reserve to reflect this, so we change the lines for Snedcharos to: 
+        if len(parts) > 9: # Handle quoted item names
+            self.item_name = ",".join(parts[0:2])  # Remove quotes
+            self.item_id = parts[2]
+            self.player_name = parts[4]
+            self.player_class = parts[5].upper()
+            print(f"Parsed quoted item name: '{self.item_name}', {self.item_id}, {self.player_name}, {self.player_class}")
 
-# "Chest of the Shadowy Vanquisher",89249,,Snedcharos,Deathknight,Frost,,0,"2025-08-28 21:53:33"
-# "Helm of the Shadowy Vanquisher",89258,,Snedcharos,Deathknight,Frost,,0,"2025-08-28 21:53:33"
+        else: 
+            self.item_name = parts[0]
+            self.item_id = parts[1]
+            self.player_name = parts[3]
+            self.player_class = parts[4].upper()
+            print(f"Parsed unquoted item name: '{self.item_name}', {self.item_id}, {self.player_name}, {self.player_class}")
+
+    def to_local_format(self, item_database):
+        return f"{self.player_name},{self.player_class},0,0,0,{self.item_id},1\n"
+
+# Update local reserves, overwriting everything that's there. Keep the header, but nothing else 
+
+def update_reserves(local_file, remote_file, item_database):
+    with open(local_file, "r") as f:
+        local_lines = f.readlines()
+    
+    header = local_lines[0]
+    new_reserves = [header]
+
+    for line in remote_file[1:]:  # Skip header
+        rr = remote_reserve(line)
+        local_line = rr.to_local_format(item_database)
+        if local_line:
+            new_reserves.append(local_line)
+
+    with open(local_file, "w") as f:
+        f.writelines(new_reserves)
+
+update_reserves(local_file, remote_reserves, item_database)
