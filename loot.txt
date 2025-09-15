@@ -1,8 +1,10 @@
 # Loot log for Wednesday, 2025-09-10; Friday, 2025-09-12; Saturday, 2025-09-13; and **Sunday, 2025-09-14**:
 
-Miadog, Miatotems (+2 MS):
+Miadog, Miatotems (+4 MS):
 - [Regail's Crackling Dagger](<https://www.wowhead.com/mop_classic/item=86390/regails-crackling-dagger>) (496) (MS) -- distributed to Miadog on Wednesday, 2025-09-10
 - [Spirits of the Sun](<https://www.wowhead.com/mop_classic/item=86327/spirits-of-the-sun>) (496) (MS) -- distributed to Miadog on Friday, 2025-09-12
+- [Xaril's Hood of Intoxicating Vapors](<https://www.wowhead.com/mop_classic/item=86181/xarils-hood-of-intoxicating-vapors>) (496) (MS) -- distributed to Miadog on **Sunday, 2025-09-14**
+- [Robes of Torn Nightmares](<https://www.wowhead.com/mop_classic/item=86513/robes-of-torn-nightmares>) (496) (MS) -- distributed to Miadog on **Sunday, 2025-09-14**
 - [Jade Courtesan Figurine](<https://www.wowhead.com/mop_classic/item=86045/jade-courtesan-figurine>) (489) (OS) -- distributed to Miatotems on **Sunday, 2025-09-14**
 
 Shellbornum (+3 MS):
@@ -19,17 +21,28 @@ Aeanna (+2 MS):
 - [Phasewalker Striders](<https://www.wowhead.com/mop_classic/item=86138/phasewalker-striders>) (489) (MS) -- received on Saturday, 2025-09-13
 - [Qin-xi's Polarizing Seal](<https://www.wowhead.com/mop_classic/item=86147/qin-xis-polarizing-seal>) (489) (MS) -- received on **Sunday, 2025-09-14**
 
-Axsel (+1 MS):
+Axsel (+2 MS):
 - [Invoker's Belt of Final Winter](<https://www.wowhead.com/mop_classic/item=86338/invokers-belt-of-final-winter>) (496) (MS) -- received on Friday, 2025-09-12
+- [Fragment of Fear Made Flesh](<https://www.wowhead.com/mop_classic/item=86156/fragment-of-fear-made-flesh>) (496) (MS) -- received on **Sunday, 2025-09-14**
 
-Evilstrain (+1 MS):
+Evilstrain (+2 MS):
 - [Cloak of Overwhelming Corruption](<https://www.wowhead.com/mop_classic/item=90526/cloak-of-overwhelming-corruption>) (503) (MS) -- received on Friday, 2025-09-12
+- [Gauntlets of the Shadowy Conqueror](<https://www.wowhead.com/mop_classic/item=89240/gauntlets-of-the-shadowy-conqueror>) (496) (MS) -- received on **Sunday, 2025-09-14**
+
+Baskerfield (+1 MS):
+- [Necklace of Congealed Weaknesses](<https://www.wowhead.com/mop_classic/item=86177/necklace-of-congealed-weaknesses>) (496) (MS) -- received on **Sunday, 2025-09-14**
+
+Elisesolis (+1 MS):
+- [Waistplate of Overwhelming Assault](<https://www.wowhead.com/mop_classic/item=86164/waistplate-of-overwhelming-assault>) (496) (MS) -- received on **Sunday, 2025-09-14**
 
 Gnoya (+1 MS):
 - [Shoulders of the Shadowy Conqueror](<https://www.wowhead.com/mop_classic/item=89246/shoulders-of-the-shadowy-conqueror>) (496) (MS) -- received on Friday, 2025-09-12
 
 Halibutfilet (+1 MS):
 - [Legguards of Failing Purification](<https://www.wowhead.com/mop_classic/item=89841/legguards-of-failing-purification>) (496) (MS) -- received on Wednesday, 2025-09-10
+
+Zguis (+0 MS):
+- [Pheromone-Coated Choker](<https://www.wowhead.com/mop_classic/item=89827/pheromone-coated-choker>) (496) (OS) -- received on **Sunday, 2025-09-14**
 
 Disenchanted items:
 - [Jade Dust Leggings](<https://www.wowhead.com/mop_classic/item=85978/jade-dust-leggings>) (489) -- disenchanted on Saturday, 2025-09-13
@@ -38,3 +51,4 @@ Disenchanted items:
 - [Bindings of Ancient Spirits](<https://www.wowhead.com/mop_classic/item=86027/bindings-of-ancient-spirits>) (489) -- disenchanted on Saturday, 2025-09-13
 - [Meng's Treads of Insanity](<https://www.wowhead.com/mop_classic/item=86084/mengs-treads-of-insanity>) (489) -- disenchanted on Saturday, 2025-09-13
 - [Screaming Tiger, Qiang's Unbreakable Polearm](<https://www.wowhead.com/mop_classic/item=86071/screaming-tiger,-qiangs-unbreakable-polearm>) (489) -- disenchanted on Saturday, 2025-09-13
+- [Hood of Stilled Winds](<https://www.wowhead.com/mop_classic/item=89831/hood-of-stilled-winds>) (496) -- disenchanted on **Sunday, 2025-09-14**
