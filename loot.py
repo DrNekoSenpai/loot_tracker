@@ -891,6 +891,20 @@ def remove_loot(players):
     # We'll check if the item was won through a main-spec roll. If so, we'll decrement regular plusses. 
     if player._raid_log[sel-1].roll == "MS":
         player._regular_plusses -= 1
+
+        # Check if this character has any other characters linked to them.
+        # If so, we want to also remove a plus from those characters. 
+
+        for group in linked_players:
+            if player.alias in [p for p in group]:
+                print(f"Found {player.name} in group: {', '.join([p for p in group])}")
+
+                for linked_player in group:
+                    # Find this player in the list of players.
+                    p = next((x for x in players if x.alias == linked_player), None)
+                    if p and p != player:
+                        print(f"Removing regular plus from linked player {p.name} ({p.alias})")
+                        p._regular_plusses -= 1
     
     # Remove the item from the player's log.
     item = player._raid_log[sel-1]
