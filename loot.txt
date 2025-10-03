@@ -1,23 +1,21 @@
 # Loot log for **Wednesday, 2025-10-01**:
 
-Vanthulhu (+3 MS):
+Vanthulhu (+4 MS):
 - [Tornado-Summoning Censer](<https://www.wowhead.com/mop_classic/item=86171/tornado-summoning-censer>) (496) (MS) -- received on **Wednesday, 2025-10-01**
 - [Robes of Torn Nightmares](<https://www.wowhead.com/mop_classic/item=86513/robes-of-torn-nightmares>) (496) (MS) -- received on **Wednesday, 2025-10-01**
+- [Gauntlets of the Shadowy Conqueror](<https://www.wowhead.com/mop_classic/item=89240/gauntlets-of-the-shadowy-conqueror>) (496) (MS) -- received on **Wednesday, 2025-10-01**
 - [Gleaming Moth Cuffs](<https://www.wowhead.com/mop_classic/item=86186/gleaming-moth-cuffs>) (496) (MS) -- received on **Wednesday, 2025-10-01**
 
 Evilstrain (+1 MS):
 - [Fragment of Fear Made Flesh](<https://www.wowhead.com/mop_classic/item=86156/fragment-of-fear-made-flesh>) (496) (MS) -- received on **Wednesday, 2025-10-01**
-
-Miadog (+1 MS):
-- [Gauntlets of the Shadowy Conqueror](<https://www.wowhead.com/mop_classic/item=89240/gauntlets-of-the-shadowy-conqueror>) (496) (MS) -- received on **Wednesday, 2025-10-01**
-
-Shellbornum (+1 MS):
-- [Hisek's Chrysanthemum Cape](<https://www.wowhead.com/mop_classic/item=86154/hiseks-chrysanthemum-cape>) (496) (MS) -- received on **Wednesday, 2025-10-01**
-- [Waistplate of Overwhelming Assault](<https://www.wowhead.com/mop_classic/item=86164/waistplate-of-overwhelming-assault>) (496) (OS) -- received on **Wednesday, 2025-10-01**
 
 Chunkofrock (+0 MS):
 - [Stormwake Mistcloak](<https://www.wowhead.com/mop_classic/item=86182/stormwake-mistcloak>) (496) (OS) -- received on **Wednesday, 2025-10-01**
 
 Funkymónky (+0 MS):
 - [Bonebreaker Gauntlets](<https://www.wowhead.com/mop_classic/item=86176/bonebreaker-gauntlets>) (496) (OS) -- received on **Wednesday, 2025-10-01**
+
+Shellbornum (+0 MS):
+- [Hisek's Chrysanthemum Cape](<https://www.wowhead.com/mop_classic/item=86154/hiseks-chrysanthemum-cape>) (496) (OS) -- received on **Wednesday, 2025-10-01**
+- [Waistplate of Overwhelming Assault](<https://www.wowhead.com/mop_classic/item=86164/waistplate-of-overwhelming-assault>) (496) (OS) -- received on **Wednesday, 2025-10-01**
 
